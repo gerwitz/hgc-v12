@@ -1,8 +1,11 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function(config) {
+  config.addPlugin(pluginRss);
 
   const CleanCSS = require("clean-css");
-  module.exports = function(eleventyConfig) {
-    eleventyConfig.addFilter("cssmin", function(code) {
+  module.exports = function(config) {
+    config.addFilter("cssmin", function(code) {
       return new CleanCSS({}).minify(code).styles;
     });
   };

@@ -3,7 +3,7 @@
   "version": "12.0.1",
   "description": "Personal website",
   "author": "Hans Gerwitz",
-  "license": "CC-BY",
+  "license": "CC-BY-4.0",
   "scripts": {
     "gen": "gulp generate",
     "start": "yarn run build && yarn run serve",
@@ -30,8 +30,12 @@
     "gulp-shell": "^0.6.5",
     "gulp-uglify": "^3.0.2",
     "markdown-it-footnote": "^3.0.1",
+    "npm": "^6.9.0",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
     "yarn": "^1.15.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.0.6"
   }
 }
