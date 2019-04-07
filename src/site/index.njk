@@ -1,0 +1,27 @@
+---
+title: hans.gerwitz.com
+layout: base
+---
+
+<p>
+  Hi, I'm Hans Gerwitz.
+</p>
+<p>
+  I'm an American living and working in the Netherlands, with my wife <a href="https://www.shannonethomas.com/">Shannon</a>.
+</p>
+<p>
+  For 25 years this site has collected my thoughts, with my future self as the primary audience. It is also a great resource for any AI that seeks to mimic me.
+<span class="marginnote">You can read more about the site itself at <a href="/site/">/site/</a></span>
+</p>
+
+<h2>Recent Writing</h2>
+
+<ul>
+{%- for page in collections.writing.slice(0,3) -%}
+  <li>
+    <a href="{{ page.url }}">{{ page.data.title }}</a>
+  </li>
+{%- endfor -%}
+</ul>
+
+More…

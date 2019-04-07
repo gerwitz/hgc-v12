@@ -1,0 +1,21 @@
+// Breakpoints
+$bp-narrow: "(min-width: 400px)";
+$bp-mid: "(min-width: 740px)";
+$bp-wide: "(min-width: 1200px)";
+
+// Colours
+$page-color: #ffffff;
+$text-color: #111111;
+$accent-color: #007700;
+
+// Font face
+$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// Tufte-specific
+// $bg-color: #fffff8;
+// $contrast-color: #a00000;
+// $border-color: #333333;
+// $sans-font: $body-font;
+// $url-font: $body-font;
+// $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+// $link-style: color; // choices are 'color' or 'underline'. Default is color using $contrast-color set above

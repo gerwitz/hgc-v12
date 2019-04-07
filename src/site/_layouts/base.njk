@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {# secondary css (created by "styles" task) #}
+    <link rel="stylesheet" href="/css/secondary.css" />
+    <title>{{ title }} - hans.gerwitz.com</title>
+
+    {# critical css (created by "styles" task) #}
+    <style>{% include "inline/critical.css" %}</style>
+
+    {# aggregated javascript (created by "scripts" task) #}
+    <script src="/js/scripts.js"></script>
+  </head>
+  <body class="{{ bodyClass }}">
+    <div class="main-container">
+      {% include "header.njk" %}
+    
+      <div class="inner-container">
+
+        {% block content %}
+        {{ content | safe }}
+        {% endblock %}
+
+        {% include "footer.njk" %}
+      </div>
+    </div>
+  </body>
+</html>

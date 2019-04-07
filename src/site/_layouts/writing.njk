@@ -1,0 +1,12 @@
+---
+layout: base
+bodyClass: writing
+permalink: "/{{ page.date | dateFormat('path') }}/{{ page.fileSlug }}.html"
+---
+
+<article>
+    <h1>{{ title }}</h1>
+
+    {{ content | safe }}
+
+</article>

@@ -1,0 +1,12 @@
+@import '_variables';
+
+@import '_tufte';
+
+::-moz-selection {
+  background-color: $accent-color;
+  color: $page-color;
+}
+::selection {
+  background-color: $accent-color;
+  color: $page-color;
+}
