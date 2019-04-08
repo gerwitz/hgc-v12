@@ -13,6 +13,9 @@ module.exports = function(config) {
   // Add a date formatter filter to Nunjucks
   config.addFilter("dateFormat", require("./filters/dates.js") );
   config.addFilter("timestamp", require("./filters/timestamp.js") );
+  config.addFilter("limit", function(array, limit) {
+    return array.slice(0, limit);
+  });
 
   // manually configure markdown-it
   let markdownIt = require("markdown-it");
