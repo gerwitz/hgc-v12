@@ -1,0 +1,14 @@
+---
+layout: base
+bodyClass: note
+oldpermalink: "/{{ page.date | dateFormat('path') }}/{{ page.flieSlug }}.html"
+permalink: "/{{ page.date | dateFormat('path') }}/{{ page.inputPath | replace('src/site/notes/', '', 1) | replace (r/[0-9][0-9][0-9][0-9]\\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-/, '') | replace(r/\\.\\w+$/, '') }}.html"
+---
+
+<article>
+
+    {{ content | safe }}
+
+    -- {{ page.date | dateFormat }}
+
+</article>
