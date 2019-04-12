@@ -3,7 +3,6 @@ layout: note
 date: '2018-05-01T09:10:24+00:00'
 slug: we-all-stopped-wearing-safety-pins
 category: microblog
-tags:
 ---
 We all stopped wearing safety pins, eh?
 

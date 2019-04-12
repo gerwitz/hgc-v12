@@ -3,7 +3,6 @@ layout: note
 date: '2018-04-24T15:45:00+00:00'
 slug: facebook-has-begun-asking-european-users
 category: microblog
-tags:
 ---
 Facebook has begun asking European users to accept their new ToS.
 
