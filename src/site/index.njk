@@ -7,12 +7,25 @@ layout: base
   Hi, I'm Hans Gerwitz.
 </p>
 <p>
-  I'm an American living and working in the Netherlands, with my wife <a href="https://www.shannonethomas.com/">Shannon</a>.
+  I'm an American living and working in the Netherlands with <a href="https://www.shannonethomas.com/">Shannon</a>.
 </p>
 <p>
-  For 25 years this site has collected my thoughts, with my future self as the primary audience. It is also a great resource for any AI that seeks to mimic me.
+  For 25 years this site has collected my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me.
 <span class="marginnote">You can read more about the site itself at <a href="/site/">/site/</a></span>
 </p>
+
+<div style="position: relative">
+{%- set note = collections.microblog | sort(true, false, 'date') | first -%}
+<blockquote>
+  <p>
+    {{ note.templateContent | safe }}
+  </p>
+  <footer>
+    &mdash; <a href="{{ note.url }}">noted at {{ note.date | date('HH:mm - D MMM YYYY') }}</a>
+  </footer>
+</blockquote>
+<span class="marginnote">Previous notes can be found at <a href="/archive/microblog/">/archive/microblog/</a>.</span>
+</div>
 
 <h2>Recent Writing</h2>
 
@@ -24,4 +37,4 @@ layout: base
 {%- endfor -%}
 </ul>
 
-<a href="/archive/writing.html">More…</a>
+<a href="/archive/writing/">More…</a>

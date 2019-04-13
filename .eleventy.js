@@ -12,6 +12,7 @@ module.exports = function(config) {
 
   // template filters
   config.addFilter("date", require("./filters/date.js") );
+  config.addFilter("hostname", require("./filters/hostname.js") );
   config.addFilter("limit", require("./filters/limit.js") );
 
   // manually configure markdown-it
@@ -19,6 +20,7 @@ module.exports = function(config) {
   let markdownItFootnote = require("markdown-it-footnote");
   let options = {
     html: true,
+    linkify: true,
     typographer: true,
     quotes: '“”‘’'
   };

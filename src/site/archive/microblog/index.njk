@@ -1,0 +1,29 @@
+---
+title: Notes
+layout: page
+pagination:
+  data: collections.microblog
+  size: 6
+  reverse: true
+permalink: archive/microblog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber }}/{% endif %}/index.html
+---
+
+{% if pagination.pageNumber > 0 %}
+<a href="{{ pagination.previousPageHref }}">Newer notes</a>
+{% endif %}
+
+{% for note in pagination.items %}
+<blockquote>
+  <p>
+    {{ note.templateContent | safe }}
+  </p>
+  <footer>
+    &mdash; <a href="{{ note.url }}">noted at {{ note.date | date('HH:mm - D MMM YYYY') }}</a>
+  </footer>
+</blockquote>
+
+{% endfor %}
+
+{% if pagination.nextPageHref %}
+<a href="{{ pagination.nextPageHref }}">Older notes</a>
+{% endif %}

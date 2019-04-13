@@ -1,13 +1,24 @@
 ---
 layout: base
 bodyClass: note
-spermalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.inputPath | replace('src/site/notes/', '', 1) | replace (r/[0-9][0-9][0-9][0-9]\\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-/, '') | replace(r/\\.\\w+$/, '') }}.html"
+permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.inputPath | replace('src/site/notes/', '', 1) | replace (r/[0-9][0-9][0-9][0-9]\\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-/, '') | replace(r/\\.\\w+$/, '') }}.html"
+renderData:
+  title: {{ typeof date }}
 ---
+
+<!--
+renderData.title: {{ renderData.title }}
+-->
 
 <article>
 
+<blockquote>
+  <header>
+    {{ page.date | date('HH:mm - D MMM YYYY') }}:
+  </header>
+  <p>
     {{ content | safe }}
-
-    -- {{ page.date | date('HH:mm - D MMM YYYY') }}
+  </p>
+</blockquote>
 
 </article>

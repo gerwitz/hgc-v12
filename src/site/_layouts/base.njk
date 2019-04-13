@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {# secondary css (created by "styles" task) #}
     <link rel="stylesheet" href="/css/secondary.css" />
-    <title>{{ title }} - hans.gerwitz.com</title>
+    <title>{{ title or (renderData and renderData.title) }} - hans.gerwitz.com</title>
 
     <!-- RSS feeds -->
     <link rel="alternate" type="application/rss+xml" href="/feed/microblog.rss" title="Notes from Hans Gerwitz">
@@ -13,9 +13,6 @@
 
     {# critical css (created by "styles" task) #}
     <style>{% include "inline/critical.css" %}</style>
-
-    {# aggregated javascript (created by "scripts" task) #}
-    <script src="/js/scripts.js"></script>
   </head>
   <body class="{{ bodyClass }}">
     <div class="main-container">
