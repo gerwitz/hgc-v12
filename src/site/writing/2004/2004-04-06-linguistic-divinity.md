@@ -8,7 +8,7 @@ writing-tags:
 
 I don't normally care much for the blogosphere quiz memes, but this one is an actual test:
 
-> ![Grammar God](/assets/2004-04-06-linguistic-divinity/1080162080_cturesgod3.jpg) 
+> ![Grammar God](/media/2004-04-06-linguistic-divinity/1080162080_cturesgod3.jpg) 
 >
 > You are a **GRAMMAR GOD**!  
 >

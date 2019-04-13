@@ -12,11 +12,11 @@ writing-tags:
 
 The influence of Apple design on Nintendo is undeniable in this icon that appears upon successful registration of a product serial number on [my.nintendo.com][1].
 
-![my_nintendo.gif](/assets/2007-01-02-inspiration/my_nintendo.gif)
+![my_nintendo.gif](/media/2007-01-02-inspiration/my_nintendo.gif)
 
 Compare this to the user icon that I believe first appeared in System 7, but was prevalent in AppleShare and Mac OS 8.
 
-![8_user.gif](/assets/2007-01-02-inspiration/8_user.gif)
+![8_user.gif](/media/2007-01-02-inspiration/8_user.gif)
 
 And countless observers have commented on the [Ivian][4] feel to the DS lite.  Now if they'd just get more formal and let us play DS games on our iPod, or use the [Wii][5] as an ["iTV"][6].
 

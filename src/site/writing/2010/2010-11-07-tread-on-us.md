@@ -14,7 +14,7 @@ This flag's symbolism can be traced back to 1775, where it was used by the first
 
 Of course, there are any number of American flags that could serve this purpose, but they needed a new one since the Stars and Stripes are now sullied by association with representatives that were elected by their fellow countrymen, and a President who is clearly a descendant of post-Mayflower immigrants.  What better symbol for their  anger than the snake?
 
-[![Join, or Die.](/assets/2010-11-07-tread-on-us/joindie-300x207.jpg)][5] Except the use of the snake to represent the US was popularized by Benjamin Franklin, starting 20 years before those Marines, as a call  for unity.  Every political movement in this country has claimed the ancestral support of our founding fathers, but I don't think Ben would support any of the divisive rhetoric of our age.
+[![Join, or Die.](/media/2010-11-07-tread-on-us/joindie-300x207.jpg)][5] Except the use of the snake to represent the US was popularized by Benjamin Franklin, starting 20 years before those Marines, as a call  for unity.  Every political movement in this country has claimed the ancestral support of our founding fathers, but I don't think Ben would support any of the divisive rhetoric of our age.
 
    [1]: http://www.inc.com/magazine/20050201/case-study.html
    [2]: http://www.google.com/search?q=gadsden+flag&tbs=shop:1

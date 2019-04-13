@@ -25,7 +25,7 @@ Those [helpers](https://en.wikipedia.org/wiki/Companions_of_Saint_Nicholas) grew
 
 Since Saint Nicholas was introduced to the Dutch by their Spanish occupiers, there has been some confusion about origins: Nick himself was assumed to be Spanish (or at least have come by way of Spain) and his dark companions to be Moorish servants. In 1850, these assumptions were set in a [popular book](http://www.stnicholascenter.org/pages/zwarte-piet/) and eventually Dutch people were joyously celebrating with cookies and gifts while dancing in the streets dressed as Sinterklaas and black-faced Zwarte Piet.
 
-![Zwarte Piet licensed CC BY-SA via <https://commons.wikimedia.org/wiki/File:Zwartepiet.png>](/assets/2013-12-26-blackface/zwartepiet.png)
+![Zwarte Piet licensed CC BY-SA via <https://commons.wikimedia.org/wiki/File:Zwartepiet.png>](/media/2013-12-26-blackface/zwartepiet.png)
 
 Thanks to the global weight of American culture the Dutch now have also have Santa Claus visiting a score of nights later at Christmas. This complicates a popular re-imagining of Piet as blackened by the soot of climbing down chimneys, because eveyone knows modern [Santa is white](http://ideas.time.com/2013/12/18/jesus-wasnt-white-but-santa-definitely-is/). He must be, after all, as Washington Irving established him as a jolly pipe-smoking caricature of the Dutch in 18th century New York.
 

@@ -22,7 +22,7 @@ The most promising product out there was (naturally) from an Italian company nam
 
 Vespa [announced hybrids][9] that would be a decent compromise for me and look great, but there's no timetable for public sale in Italy, much less the US.  
 
-![Oxygen Lepton](/assets/2007-02-09-electric-oxygen/lepton.thumbnail.jpg)
+![Oxygen Lepton](/media/2007-02-09-electric-oxygen/lepton.thumbnail.jpg)
 
 So, what did I do?  Decided to wait until spring.  Then a fellow St. Louisian with an interest in EVs sent me an email letting me know about a recovered discussion forum.  So I visited to see if there'd been any news, and found a fellow asking if an Oxygen Lepton he'd seen on eBay was a good buy.  A few had responded, naturally encouraging him to buy.  So I took advantage of my [fat intertubes][12] and [sniped][13] it.
 

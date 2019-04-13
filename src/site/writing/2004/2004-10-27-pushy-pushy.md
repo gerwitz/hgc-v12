@@ -8,7 +8,7 @@ writing-tags:
 - fave
 ---
 
-![midvale](/assets/2004-10-27-pushy-pushy/midvale.jpg)
+![midvale](/media/2004-10-27-pushy-pushy/midvale.jpg)
 
 While there are wonderful [efforts afoot to improve the efficiency of RSS][2], I've seen a lot of discussion lately about how the polling model RSS is based on is doomed to collapse under its own weight.  Increasingly, I run across predictions that the pull model of syndication will inevitably be replaced by a more scalable push.
 

@@ -6,7 +6,7 @@ writing-tags:
 - politics
 ---
 
-![slate test](/assets/2004-07-16-slate-red-or-blue/slate_redblue.jpg)
+![slate test](/media/2004-07-16-slate-red-or-blue/slate_redblue.jpg)
 
 Once again, I am declared average.  This time, by [Slate's Red or Blue quiz][2].  I guess this makes me an [outraged moderate][3].
 

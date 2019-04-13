@@ -10,7 +10,7 @@ writing-tags:
 
 In February of 2007, when the "FAIL" meme was still fresh, I had a gift made for my [PM Director][1] so she could denote inadequate requirements documentation.
 
-![FAIL stamp](/assets/2011-03-07-fail-stamp/FAIL-stamp-300x224.jpg)
+![FAIL stamp](/media/2011-03-07-fail-stamp/FAIL-stamp-300x224.jpg)
 
 I eventually posted a [picture on flickr][3].  It was shortly used by [TechCrunch][4] and gradually found its way to dozens of sites, including [Grist][5], [GigaOm][6], [ZDNet][7], [Mother Jones][8], and [Lifehacker][9].  It even inspired Facebook groups from [Kansas][10] to [England][11].
 

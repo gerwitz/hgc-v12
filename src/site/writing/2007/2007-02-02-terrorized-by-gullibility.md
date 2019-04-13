@@ -9,7 +9,7 @@ writing-tags:
 - news
 ---
 
-![terrorist_moonite.jpg](/assets/2007-02-02-terrorized-by-gullibility/terrorist_moonite.jpg)
+![terrorist_moonite.jpg](/media/2007-02-02-terrorized-by-gullibility/terrorist_moonite.jpg)
 
 > Public safety officials are all working together. There is no time for anyone to panic. We believe we have the situation in hand. Go about your business.
 

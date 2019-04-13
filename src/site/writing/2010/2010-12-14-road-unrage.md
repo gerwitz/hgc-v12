@@ -10,7 +10,7 @@ writing-tags:
 
 Work recently gave me the opportunity to spend a night in Dehli and four in Bangalore.  Unfortunately, I spent most of the time in transport, posh hotels, or (not-so-posh) offices.  I did get one evening stroll in with a [dutchman][1] on the streets of Domlur, Bangalore.
 
-![moo.](/assets/2010-12-14-road-unrage/L1030604-300x168.jpg)
+![moo.](/media/2010-12-14-road-unrage/L1030604-300x168.jpg)
 
 This photo from a side street captures our experience pretty well—far more grit and disorder than our Western eyes are accustomed to—but misses the essence of the heavily car-trafficed roads.  Lane discipline is nonexistent, all manner of vehicles intermingle with pedestrians, stops and starts are sudden and seemingly random, and horns beep incessantly.  My colleague's [video clip from our commute][3] only begins to convey chaos.  Most Westerners find it unsettling, to say the least.
 

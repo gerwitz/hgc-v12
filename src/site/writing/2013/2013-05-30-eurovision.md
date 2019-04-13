@@ -21,7 +21,7 @@ This got me curious about this social network of nations. Not surprisingly, ther
 
 In the past, I have found some success using physical network simulations to find clusters and patterns in the implicit social network of project assignments. Indeed this has previously been done with Eurovision voting by [Jens Finnas][jens]. But I wanted to play with the event I'd just witnessed, and so scraped this year's [data][] from Wikipedia and built a graph, which you can [play with here][network].
 
-[![network screenshot](/assets/2013-05-30-eurovision/network.png)][network]
+[![network screenshot](/media/2013-05-30-eurovision/network.png)][network]
 
 [jens]: http://jensfinnas.com/dataist/eurovision.html
 [data]: http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2013#Final_2
@@ -32,6 +32,6 @@ I did not find this technique as useful as it has been in the past with much lar
 
 I intend to keep experimenting, and have begun with a [simple matrix view][matrix] and will try different physical simulations.
 
-[![matrix screenshot](/assets/2013-05-30-eurovision/matrix.png)][matrix]
+[![matrix screenshot](/media/2013-05-30-eurovision/matrix.png)][matrix]
 
 [matrix]: /projects/eurovision-2013/matrix.html

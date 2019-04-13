@@ -9,7 +9,7 @@ writing-tags:
 - fave
 ---
 
-![The monkey still has a gun!](/assets/2004-11-04-the-red-scare/kid_sinister.jpg)
+![The monkey still has a gun!](/media/2004-11-04-the-red-scare/kid_sinister.jpg)
 The people of my city were powerless to stop the [destruction of their history][2], and just [turned down][3] a chance to [finally take fate into our own hands][4] because we were [told][5] change is [evil][6].  Pecuniae obediunt omnia.
 
 My state, meanwhile, has chosen to [prioritize highway construction][7].  And most of my time zone participated in the red tide of ["values"][8] and fear that [saturated rural America][9].

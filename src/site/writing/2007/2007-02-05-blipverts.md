@@ -10,7 +10,7 @@ writing-tags:
 - mind
 ---
 
-[![Channel 23](/assets/2007-02-05-blipverts/episode_11_2.jpg)][2]
+[![Channel 23](/media/2007-02-05-blipverts/episode_11_2.jpg)][2]
 
 Lunch group brainstorm of the day:
 - Superbowl advertising is as much about hype as about the actual 30 seconds of actual exposure.
