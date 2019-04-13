@@ -1,6 +1,8 @@
 ---
 layout: base
 bodyClass: writing
+breadcrumbs:
+    - writing/
 permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
 ---
 
@@ -8,11 +10,11 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
     <div style="position: relative">
         <h1>{{ title }}</h1>
         <span class="marginnote">
-            This was
+            Posted
             {% if external -%}
-                posted to <a href="{{external}}">{{ external | hostname }}</a> on
+                to <a href="{{external}}">{{ external | hostname }}</a> on
             {%- else %}
-                posted here 
+                here 
             {%- endif %}
             <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }}</time>.
         </span>

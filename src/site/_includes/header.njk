@@ -1,7 +1,10 @@
 <header>
-  <div class="sidebar-container">
+  <div class="breadcrumb">
     {% if page.fileSlug != '' %}
-      <a class="site-title" href="/">hans.gerwitz.com</a>
+      <a class="site-title" href="/">hans.gerwitz.com{{ "/" if breadcrumbs }}</a>
+      {% for crumb in breadcrumbs %}
+        <a href="/{{ breadcrumbs | join("/") }}">{{ crumb }}</a>
+      {% endfor %}
     {% endif %}
   </div>
 </header>

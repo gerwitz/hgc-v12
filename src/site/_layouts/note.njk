@@ -2,6 +2,8 @@
 layout: base
 bodyClass: note
 permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.inputPath | replace('src/site/notes/', '', 1) | replace (r/[0-9][0-9][0-9][0-9]\\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-/, '') | replace(r/\\.\\w+$/, '') }}.html"
+breadcrumbs:
+  - microblog/
 renderData:
   title: {{ typeof date }}
 ---
@@ -12,10 +14,8 @@ renderData.title: {{ renderData.title }}
 
 <article>
 
+<time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY [at] HH:mm') }}</time>:
 <blockquote>
-  <header>
-    {{ page.date | date('HH:mm - D MMM YYYY') }}:
-  </header>
   <p>
     {{ content | safe }}
   </p>

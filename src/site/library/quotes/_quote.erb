@@ -1,0 +1,23 @@
+<%
+  # Correct markup here is difficult to establish.
+  # The W3C allows attribution within a blockquote, but also includes figure/caption in their many, many examples.
+  # WHAT-WG insists the blockquote is only the quoted content.
+  # Some wonks argue for <footer> attribution, but implementation is rare.
+  # ALA settled on this approach in 2013: http://alistapart.com/blog/post/more-thoughts-about-blockquotes-than-are-strictly-required
+
+  if quote.date
+    date = EDTF.parse(quote.date.to_s)
+  end
+%>
+<figure class="quote">
+<blockquote>
+  <%= Tilt['markdown'].new {quote.quote}.render %><%# will wrap in P %>
+</blockquote>
+<figcaption>
+  <%= "#{quote.who}" if quote.who %><%= ", " if quote.who && quote.source %>
+  <% if quote.source %>
+    <cite><%= escape_html(quote.source) %></cite>
+  <% end %>
+  <%= ", #{date.humanize}" if date %>
+</figcaption>
+</figure>

@@ -1,0 +1,13 @@
+---
+title: Commonplaces
+---
+<%# See data/quotes.yaml for contents. %>
+
+<section>
+  <%
+    quotes = data.quotes
+    quotes.each do |q|
+  %>
+  <%= partial('quote', object: q) %>
+  <% end %>
+</section>
