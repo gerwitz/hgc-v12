@@ -3,32 +3,30 @@ title: hans.gerwitz.com
 layout: base
 ---
 
+<h1>hans.gerwitz.com</h1>
+<section>
 <p>
   Hi, I'm Hans Gerwitz.
 </p>
 <p>
   I'm a geek at heart pretending to be a businessman. My wife <a href="https://www.shannonethomas.com/">Shannon</a> and I are Americans living in the Netherlands. If you're here to learn more about me, try <a href="/about/">/about/</a> or <a href="/history/">/history/</a>.
 </p>
+{% set note = collections.microblog | sort(true, false, 'date') | first -%}
 <p>
-  For 25 years this site has collected my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me.
   <span class="marginnote">You can read more about the site itself at <a href="/site/">/site/</a></span>
+  For 25 years this site has collected my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me. I keep random things under <a href="/library/">/library/</a>, store writings in <a href="/writing/">/writing/</a>, and post notes to <a href="/microblog/">/microblog/</a>. Here's the latest one, from <a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a>:
 </p>
-
-<div style="position: relative">
-{%- set note = collections.microblog | sort(true, false, 'date') | first -%}
 <blockquote>
   <p>
     {{ note.templateContent | safe }}
   </p>
-  <footer>
-    &mdash; <a href="{{ note.url }}">{{ note.date | date('HH:mm - D MMM YYYY') }}</a>
-  </footer>
 </blockquote>
-<span class="marginnote">Previous notes can be found at <a href="/microblog/">/microblog/</a>.</span>
-</div>
+</section>
 
+<section>
 <h2>Recent Writing</h2>
 
+<div style="position: relative">
 <ul>
 {%- for page in collections.writing | reverse | limit(3) -%}
   <li>
@@ -36,5 +34,6 @@ layout: base
   </li>
 {%- endfor -%}
 </ul>
-
-<a href="/writing/">More…</a>
+<span class="marginnote">The full archive is at <a href="/writing/">/writing/</a>.</span>
+</div>
+</section>
