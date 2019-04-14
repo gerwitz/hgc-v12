@@ -6,7 +6,7 @@ old_url: http://hans.gerwitz.com/library/stuff/lemond.html
 For Christmas 2003 I got my first road bike, a lightly-used 53 cm [2002 Tete de Course][2] from [LeMond][3].  (LeMond is part of the Trek family, but remains an independent shop, a boutique of sorts that seems to have an unusual amount of cred in St. Louis.)
 
    [2]: http://www.roadbikereview.com/2002+Road+Bike/LeMond+Bicycles+Tete+de+Course/PRD_101436_4229crx.aspx
-   [3]: http://www.lemondbikes.com/
+   [3]: https://en.wikipedia.org/wiki/LeMond_Racing_Cycles
 
 I had decided on titanium because I was tired of the creaks of my aluminum [Trek][4], and was scared of road harshness with stiff aluminum, coming from a suspension mountain bike.  Steel was out simply because I didn't want to fear rust; carbon fiber is too fragile for someone who's used to a frame that can take serious abuse.
 
