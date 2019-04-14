@@ -1,0 +1,582 @@
+# types: [life, home, school, geek, work, car]
+-
+  date: 1974-03 #09
+  geo: [38.63295, -90.31108] # St. Mary's Hospital
+  type: life
+  link: https://www.wikitree.com/genealogy/Gerwitz-Family-Tree-222
+  text:
+    Born
+-
+  date: 1974
+  geo: [38.748699, -90.301602] # 145 N. Clay
+  type: home
+  text:
+    Moved to Ferguson, MO
+-
+  date: 1976
+  type: life
+  text:
+    First word was "clock"
+-
+  date: 1978
+  type: school
+  geo: [38.727461, -90.305067] # Cool Valley
+  text:
+    Began preschool tutoring
+-
+  date: 1978-10 #09
+  type: life
+  text:
+    Brother Kurt born
+-
+  date: 1978
+  type: life
+  text:
+    Started wearing glasses and eye patches to treat amblyopia
+-
+  date: 1979
+  type: school
+  geo: [38.749066, -90.298306] # 140 North Elizabeth
+  link: https://www.pinterest.com/pin/520236194428927724/
+  text:
+    Started kindergarten at Sts. John and James
+-
+  date: 1980
+  type: life
+  text:
+    Started first grade
+    # without friend Zachary
+-
+  date: 1980
+  type: life
+  geo: [38.716432, -90.241466] # Riverview Dr. (needs review)
+  text:
+    Dad sold Riverview Pharmacy
+    # and started work in financial services
+-
+  date: 1982-03 #01
+  type: life
+  text:
+    Got to stop wearing glasses (for now)
+-
+  date: 1985
+  type: school
+  geo: [38.79315, -89.99792]
+  text:
+    Soccer and computer camp at SIUE, learned Applesoft BASIC on Apple IIe
+-
+  date: 1985
+  type: geek
+  text:
+    Family bought Apple IIe
+    # enhanced! with color display!
+-
+  date: 1986-03
+  type: geek
+  link: https://hans.gerwitz.com/2015/04/21/mad-tony.html
+  text:
+    Uncle "Mad" Tony gifted me with a 1200bps modem, started using BBSes
+    # initially with pseudonym "Maxwell Smart", soon switched to "SAMHAIN NIVHWVS"
+-
+  date: 1987
+  type: school
+  geo: [38.628274, -90.266872]
+  text:
+    Upward Bound summer school at SLUH
+    # befriended Juniors (Gabe?), played a lot of chess with John Alan?
+-
+  date: 1987-11 #26
+  type: life
+  text:
+    Grandparents (maternal) accident
+    # grandma died shortly after
+-
+  date: 1988-08
+  type: school
+  geo: [38.628274, -90.266872]
+  text:
+    Started school at SLUH
+-
+  date: 1988
+  type: home
+  geo: [38.649619, -90.269483] # 5154 Westminster
+  text:
+    Moved to Central West End in the city
+-
+  date: 1988
+  type: work
+  geo: [38.640384, -90.261517] # 4579 Laclede
+  text:
+    Started first job at Mail Boxes, Etc.
+-
+  date: 1989-06
+  type: life
+  text:
+    Jesuit summer camp with survival training
+-
+  date: 1989
+  type: life
+  text:
+    Back to wearing glasses (this time near-sighted)
+-
+  date: 1990
+  type: geek
+  text:
+    Established first internet email address
+    # "wupost.wustl.edu!sempco!hgerwitz"
+-
+  date: 1991-04
+  confidence: low
+  type: home
+  geo: [38.589677, -90.251807]
+  text:
+    Moved in with Colleen in South City
+-
+  date: 1991
+  type: school
+  text:
+    Told by SLUH I was not invited back while not living with parents
+    # tried Crossroads
+-
+  date: 1991
+  confidence: low
+  type: life
+  geo: [38.506229, -90.384860] # Hyland Center at St. Anthony's
+  text:
+    Involuntarily admitted to psych center with some really troubled "peers"
+-
+  date: 1991
+  type: home
+  text:
+    Moved into Colleen's car
+    # K-wagon
+-
+  date: 1992
+  confidence: low
+  type: home
+  geo: [38.644896, -90.254460] # 4433 Pershing
+  text:
+    Moved into crack house apartments in CWE
+-
+  date: 1992
+  type: life
+  text:
+    Married Colleen
+    # handfasting first
+-
+  date: 1992
+  type: life
+  text:
+    Parents separated
+    # slowly
+-
+  date: 1992-07
+  type: home
+  geo: [38.649619, -90.269483] # Westminster
+  text:
+    Evicted, moved in with mom
+    # moved into Westminster with Colleen, hiding from dad
+-
+  date: 1992
+  confidence: low
+  type: work
+  text:
+    Laid off from MBE
+-
+  date: 1992
+  type: work
+  text:
+    Sporadic temp assignments
+-
+  date: 1992
+  type: school
+  text:
+    Took GED
+-
+  date: 1992-11
+  type: home
+  geo: [38.603409, -90.248333] # Arsenal
+  text:
+    Moved into Tower Grove apartment
+    # miserable heat in summer
+    # Because Mom sold the house, moved to Creve Coeur
+-
+  date: 1993
+  type: work
+  text:
+    Good temp stint in marketing analysis at SBC
+-
+  date: 1993
+  type: home
+  geo: [38.707371, -90.363589] # Midland Blvd
+  text:
+    Moved into Airstream trailer
+    # at Colleen's parents in Overland
+-
+  date: 1993
+  type: car
+  text:
+    Bought 1983 Buick Skyhawk
+    # white, under $1000
+-
+  date: 1993
+  type: work
+  geo: [38.630660, -90.236414]
+  text:
+    Started work at SJI
+    # carrying bike down the stairs to count coupons
+-
+  date: 1993
+  type: school
+  geo: [38.636046, -90.232697] # Ritter Hall
+  text:
+    Began classes at SLU
+    # no entrence exam, only SAT scores
+-
+  date: 1993-10 #01
+  type: life
+  geo: [38.642466, -90.257940] # Lindell and Taylor
+  text:
+    Serious auto accident
+-
+  date: 1993-11
+  type: car
+  text:
+    Bought 1985 Honda Civic wagon
+    # blue, so much glass
+-
+  date: 1993
+  type: home
+  geo: [38.627213, -90.261645] # 1117 S. Taylor
+  text:
+    Moved to Forest Park Southwest
+    # nice neighbor downstairs, terrible neighborhood
+-
+  date: 1994-01
+  type: school
+  text:
+    Restarted SLU after medical cancellation
+-
+  date: 1994
+  type: geek
+  text:
+    Posted first webpage
+  link: http://www.nyx.net/~hgerwitz/
+-
+  date: 1994
+  type: work
+  text:
+    Started working at SLU (student lab manager)
+-
+  date: 1994
+  type: car
+  text:
+    Bought 1984 Honda Accord from dad
+    # the car I had learned to drive in
+-
+  date: 1995
+  type: work
+  geo: [38.6502, -90.3383] # Downtown Clayton
+  text:
+    Started more part-time work, with Apple Partners as IT assistant
+    # built ERP and communication system with Lotus 1-2-3 and NeXTstep scripts
+-
+  date: 1995
+  type: geek
+  text:
+    Discovered PHP/FI and decided dynamic web pages were the future
+-
+  date: 1995
+  confidence: low
+  type: home
+  geo: [38.644844, -90.257619] # 327 N Taylor
+  text:
+    Moved into nice apartment in CWE
+-
+  date: 1995-08
+  type: work
+  geo: [38.681749, -90.370990] # 1400 N. Price
+  text:
+    Started third part-time job, with Hermann Marketing as help desk tech
+    # built ERP and communication system with Lotus 1-2-3 and NeXTstep scripts
+-
+  date: 1996-01
+  type: work
+  text:
+    Started full-time work at Hermann Marketing as programmer analyst, left other jobs
+    # and started taking evening classes
+-
+  date: 1996-03
+  type: work
+  text:
+    Started web development consulting (phobia)
+  link: https://web.archive.org/web/19961219154047/http://phobia.com/
+    # $75 for a three-page site, then $30/month for hosting
+    # and email to fax gateway with a fancy modem
+-
+  date: 1996
+  type: car
+  text:
+    Bought 1986 Nissan 200SX
+    # silver
+-
+  date: 1996
+  type: home
+  geo: [38.644844, -90.257619] # 327 N Taylor
+  text:
+    Moved into bigger apartment in same building
+    # and moved massive self-built shelving
+-
+  date: 1996-09
+  type: work
+  geo: [38.636046, -90.232697] # Ritter Hall
+  text:
+    Started work at SLU as technology analyst
+    # old job, new status, no more tuition
+-
+  date: 1997
+  type: home
+  geo: [38.653256, -90.280386] # 5530 Delmar
+  text:
+    Moved to Delmar
+    # on the diving line
+-
+  date: 1997-07
+  type: car
+  text:
+    Bought 1996 Mazda Miata
+    # starlight blue M edition, "Vicki"
+-
+  date: 1998-08
+  type: school
+  text:
+    Graduated from SLU
+    # magna cum laude
+-
+  date: 1999-01
+  type: work
+  text:
+    Stopped consulting and hosting
+    # transfered accounts
+-
+  date: 1999-03
+  type: work
+  geo: [38.667506, -90.437830] # Craig Rd
+  text:
+    Started at Quatrix as developer, quickly promoted to tech director
+    # learned ASP from a book the week before starting
+-
+  date: 1999-05
+  type: life
+  text:
+    "Hard drive crash with insufficient backups: history before this is less clear"
+-
+  date: 1999-11
+  type: home
+  geo: [38.606751, -90.235772] # 2623 Virginia
+  text:
+    Bought house and moved to Tower Grove South
+    # using loan program that encouraged middle class purchase in poor census tracts
+-
+  date: 2000-06 #25
+  type: life
+  text:
+    Got serious about cycling, first Tour de Cure team
+-
+  date: 2002-02 #08
+  type: life
+  text:
+    Colleen leaves
+    # overnight surprise
+-
+  date: 2002
+  type: life
+  text:
+    Dad diagnosed with terminal cancer
+-
+  date: 2002-05
+  type: work
+  geo: [38.668734, -90.439938] # 11605 Studt Ave
+  text:
+    Promoted to VP at Envision after merger
+-
+  date: 2002-05
+  type: life
+  text:
+    Finalized divorce
+-
+  date: 2002-07 #22
+  type: home
+  geo: [38.330187, -90.806966] # 338 Wild Turkey Ln, Robertsville
+  text:
+    Moved to friend's "spare" house (after selling mine)
+    # Andrew Hoog
+-
+  date: 2002-10 #26
+  type: home
+  geo: [38.632606, -90.197337] # 703 N 13th St
+  text:
+    Bought loft and moved to Downtown
+-
+  date: 2003-12
+  type: life
+  link: https://hans.gerwitz.com/library/things/lemond.html
+  text:
+    Bought road bike
+-
+  date: 2005-07 #11
+  type: life
+  text:
+    Dad died
+-
+  date: 2005-11
+  type: work
+  geo: [38.630466, -90.188853] # 555 Washington Ave
+  text:
+    Joined infūz as VP of tech
+-
+  date: 2006
+  type: car
+  text:
+    Sold Miata to Kurt
+-
+  date: 2007
+  type: life
+  text:
+    Broke off engagement
+-
+  date: 2007-08
+  type: life
+  text:
+    Started dating Shannon 😍
+-
+  date: 2007-08 #27
+  type: car
+  text:
+    Bought 2006 Mazda Miata
+    # black, "Selene", for $23k
+-
+  date: 2008-06
+  type: home
+  geo: [47.619794, -122.322031] # 130 Harvard Ave apt 502
+  text:
+    Moved to Seattle
+    # shea followed on June 19
+-
+  date: 2008-06
+  type: work
+  geo: [47.611281, -122.336521] # 413 Pine St
+  text:
+    Started at frog design
+    # initially on Dexter, but moved Downtown shortly after
+-
+  date: 2009-03
+  type: life
+  link: https://hans.gerwitz.com/2009/02/23/bus-driver-appreciation-day.html
+  text:
+    Declared Bus/Transit Driver Appreciation Day
+-
+  date: 2009-08
+  type: home
+  geo: [47.626132, -122.322781] # 737A Harvard Ave E
+  text:
+    Bought house and moved to Capitol Hill
+-
+  date: 2009-08 #23
+  type: life
+  geo: [47.602003, -122.331738] # Smith Tower
+  text:
+    Married Shannon
+-
+  date: 2010-03 #30
+  type: home
+  geo: [48.161610, 11.568313] # Hohenzollernplatz
+  text:
+    Moved to Munich for 4 months
+-
+  date: 2012-11
+  type: home
+  geo: [52.362422, 4.901851] # Prinsengracht 880
+  text:
+    Moved to Amsterdam, for two year stint with frog
+-
+  date: 2013-02
+  type: life
+  text:
+    Shea moved to Amsterdam
+-
+  date: 2013-03
+  type: work
+  text:
+    Left frog to stay in Amsterdam
+    # downsizes, we leave rather than return to US
+-
+  date: 2013-04
+  type: work
+  text:
+    Registered The Artificial with Shannon
+    # as technique to get Dutch residency with Shannon
+-
+  date: 2013-05 #01
+  type: home
+  geo: [52.390381, 4.883940] # Nova Zemblastraat 12-A
+  text:
+    Moved to Spaarndammerbuurt
+-
+  date: 2013-06
+  type: work
+  geo: [52.366023, 4.890183] # Herengract 477
+  text:
+    Started working at AKQA
+    # as freelance strategist
+-
+  date: 2013-10 #01
+  type: home
+  geo: [52.385756, 4.886770] # Prinseneiland 79-M
+  text:
+    Moved to Prinseneiland
+-
+  date: 2013-10
+  type: work
+  geo: [52.386926, 4.883070] # Houtmankade 70-hs
+  text:
+    Joined The Artificial full time
+    # turned down long-term work at AKQA
+-
+  date: 2015-05
+  type: work
+  geo: [52.371384, 4.886312] # Herengracht 266
+  text:
+    Moved The Artificial to the Herengracht
+-
+  date: 2016-06
+  type: home
+  geo: [52.366203, 4.871753] # Bilderdijkkade 97-4V
+  text:
+    Bought house and moved to Oud West
+-
+  date: 2017-01 #24
+  type: life
+  text:
+    Shea died
+  link: https://hans.gerwitz.com/2017/01/26/shea.html
+-
+  date: 2017-05 #13
+  type: life
+  text:
+    Thunder moved in
+-
+  date: 2017-11 #19
+  type: life
+  text:
+    Fog moved in
+-
+  date: 2018-06 #18
+  type: work
+  text:
+    Announced end of The Artificial studio
+-
+  date: 2018-08 #01
+  type: work
+  text:
+    Started at Philips
