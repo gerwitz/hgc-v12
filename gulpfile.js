@@ -20,9 +20,8 @@ gulp.task('generate', shell.task('eleventy'));
   compile the assets to the correct destination
 */
 gulp.task('assets', gulp.parallel(
-  'images',
-  'styles'
-//  'scripts'
+  'styles',
+  'meta'
 ));
 
 /*

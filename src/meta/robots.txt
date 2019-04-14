@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hans.gerwitz.com/sitemap.xml

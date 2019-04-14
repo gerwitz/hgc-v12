@@ -46,6 +46,10 @@ module.exports = function(config) {
     markdownTemplateEngine: "njk",
 
     passthroughFileCopy: true // unhandled types above will be simply copied
+
+    // I'd like to do this, but the default behavior is weird (see https://github.com/11ty/eleventy/issues/214 )
+    // eleventyConfig.addPassthroughCopy("_meta", "/");
+    // so, for now, see the gulp "meta" task
   };
 
 };

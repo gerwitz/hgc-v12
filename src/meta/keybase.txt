@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/gerwitz
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://hans.gerwitz.com
+  * I am gerwitz (https://keybase.io/gerwitz) on keybase.
+  * I have a public key ASBhvQzzFAfo5zWwyK-DMMmtgLpvKkImit9kRJUAkDeKAQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010191e5dd7cbd857a7144852e3110773dd41c6c4d0683297a66bd93546b4c35f5890a",
+      "host": "keybase.io",
+      "kid": "012061bd0cf31407e8e735b0c8af8330c9ad80ba6f2a42268adf6444950090378a010a",
+      "uid": "de4ff4d389947d48cb2d98edd11afe19",
+      "username": "gerwitz"
+    },
+    "merkle_root": {
+      "ctime": 1517428551,
+      "hash": "d859fa0e567677e8dd10a04f2db0d6ba7ad9bef2f56694e7f3bd48226488af648edeac867513176421e8f8eecdeae99c8165ed08d969d026bed0855e19708670",
+      "hash_meta": "d325a196a1267b60ac373194f622523eb23a5f611c9e164f6ee7f1a2f4e8ede6",
+      "seqno": 2012321
+    },
+    "service": {
+      "hostname": "hans.gerwitz.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.39"
+  },
+  "ctime": 1517428563,
+  "expire_in": 504576000,
+  "prev": "77edac31ae80a7338fbb02eac42ad8b17ba8c5e793aaf05165bbdcaad755fd68",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgYb0M8xQH6Oc1sMivgzDJrYC6bypCJorfZESVAJA3igEKp3BheWxvYWTFA0h7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxOTFlNWRkN2NiZDg1N2E3MTQ0ODUyZTMxMTA3NzNkZDQxYzZjNGQwNjgzMjk3YTY2YmQ5MzU0NmI0YzM1ZjU4OTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNjFiZDBjZjMxNDA3ZThlNzM1YjBjOGFmODMzMGM5YWQ4MGJhNmYyYTQyMjY4YWRmNjQ0NDk1MDA5MDM3OGEwMTBhIiwidWlkIjoiZGU0ZmY0ZDM4OTk0N2Q0OGNiMmQ5OGVkZDExYWZlMTkiLCJ1c2VybmFtZSI6ImdlcndpdHoifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MTc0Mjg1NTEsImhhc2giOiJkODU5ZmEwZTU2NzY3N2U4ZGQxMGEwNGYyZGIwZDZiYTdhZDliZWYyZjU2Njk0ZTdmM2JkNDgyMjY0ODhhZjY0OGVkZWFjODY3NTEzMTc2NDIxZThmOGVlY2RlYWU5OWM4MTY1ZWQwOGQ5NjlkMDI2YmVkMDg1NWUxOTcwODY3MCIsImhhc2hfbWV0YSI6ImQzMjVhMTk2YTEyNjdiNjBhYzM3MzE5NGY2MjI1MjNlYjIzYTVmNjExYzllMTY0ZjZlZTdmMWEyZjRlOGVkZTYiLCJzZXFubyI6MjAxMjMyMX0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJoYW5zLmdlcndpdHouY29tIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzkifSwiY3RpbWUiOjE1MTc0Mjg1NjMsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiNzdlZGFjMzFhZTgwYTczMzhmYmIwMmVhYzQyYWQ4YjE3YmE4YzVlNzkzYWFmMDUxNjViYmRjYWFkNzU1ZmQ2OCIsInNlcW5vIjoxNSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBqZK92vQSYrVFlwfQ9xWVR+SaNdnb3Ny75yyxOOOjBN4dJRwOC0/Shy+wprHYoLMRyF5VGxIwXw9cAoE5nGEkIqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgdWJOZ59b+iWeDLq8TsFgJkNHw0fPu3nBjp3pbo+jcyujdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/gerwitz
+
+==================================================================
