@@ -16,9 +16,7 @@ renderData.title: {{ renderData.title }}
 
 <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY [at] HH:mm') }}</time>:
 <blockquote>
-  <p>
-    {{ content | safe }}
-  </p>
+  {{ content | safe }}
 </blockquote>
 
 </article>
