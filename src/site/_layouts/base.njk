@@ -3,13 +3,46 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {# secondary css (created by "styles" task) #}
-    <link rel="stylesheet" href="/css/secondary.css" />
-    <title>{{ title or (renderData and renderData.title) }} - hans.gerwitz.com</title>
+
+    <!-- favicon, etc. -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#00852B">
+    <meta name="msapplication-TileColor" content="#00852B">
+    <meta name="theme-color" content="#00852B">
+
+    <!-- webmentions -->
+    <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention">
 
     <!-- RSS feeds -->
     <link rel="alternate" type="application/rss+xml" href="/feed/microblog.rss" title="Notes from Hans Gerwitz">
     <link rel="alternate" type="application/rss+xml" href="/feed/writing.rss" title="Writings of Hans Gerwitz">
+
+    {% if external %}
+    <link rel="canonical" href="{{ external }}">
+    {% else %}
+    {# http://www.thesempost.com/using-rel-canonical-on-all-pages-for-duplicate-content-protection/ #}
+    <link rel="canonical" href="{{ page.url | absoluteUrl('https://hans.gerwitz.com/') }}">
+    {% endif %}
+
+    <!-- Twitter summary card -->
+    <meta property="twitter:creator:id" content="521">
+    <meta property="twitter:title" content="{{ title }}">
+{#    <meta property="twitter:description" content="<%= abstract %>"> #}
+
+    <!-- Facebook OpenGraph -->
+    <meta property="og:site_name" content="hans.gerwitz.com">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:title" content="{{ title }}">
+{#    <meta property="og:description" content="<%= abstract %>"> #}
+    <meta property="og:image" content="/favicon/tree.png">
+
+    {# secondary css (created by "styles" task) #}
+    <link rel="stylesheet" href="/css/secondary.css" />
+    <title>{{ title or (renderData and renderData.title) }} - hans.gerwitz.com</title>
 
     {# critical css (created by "styles" task) #}
     <style>{% include "inline/critical.css" %}</style>
@@ -27,5 +60,18 @@
         {% include "footer.njk" %}
       </div>
     </div>
+
+    <!-- Google Analytics (async) -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-271475-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
   </body>
 </html>
