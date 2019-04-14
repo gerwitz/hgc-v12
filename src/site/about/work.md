@@ -1,5 +1,6 @@
 ---
 title: Professional Experience
+layout: page
 ---
 
 I am a geek enamored of technology's possibilities, but I thrive on working together with smart and empathetic people to contribute to human culture.
@@ -14,6 +15,8 @@ Building large-scale enterprise software systems, I found beauty in their archit
 
 In the nascent world of interactive marketing, I arguably wasted some years in the pursuit of quantified human behavior. It was no mistake, of course, to work with incredibly diverse people and gain a more holistic view of running a business.
 
-Since 2008, I've enjoyed leading teams and projects in leadership roles across disciplines, finding patterns of success in disparate industries throughout the world. The tools of designing for futures both near and far have become second nature.
+Starting in 2008, I focused on innovation consulting. It took many years for me to be comfortable saying that with a straight face, but eventually I owned it. I enjoyed leading teams and projects in leadership roles across disciplines, finding patterns of success in disparate industries throughout the world. The tools of designing for futures both near and far became second nature.
 
-Most recently, I've shifted scale dramatically downward in favor of focus and passion with [The Artificial](https://theartificial.com/).
+In 2014, I shifted scale dramatically downward in favor of focus and passion as a co-founder, but amazingly the scope of our work remained large. I learned more about *owning* a business.
+
+…and now this needs updating before it's re-linked.

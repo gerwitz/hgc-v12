@@ -9,12 +9,12 @@ layout: base
   Hi, I'm Hans Gerwitz.
 </p>
 <p>
-  I'm a geek at heart pretending to be a businessman. My wife <a href="https://www.shannonethomas.com/">Shannon</a> and I are Americans living in the Netherlands. If you're here to learn more about me, try <a href="/about/">/about/</a> or <a href="/history/">/history/</a>.
+  If you're here to learn about me, start at <a href="/about/">/about</a><!-- or <a href="/history/">/history</a> -->.
 </p>
 {% set note = collections.microblog | sort(true, false, 'date') | first -%}
 <p>
-  <span class="marginnote">You can read more about the site itself at <a href="/site/">/site/</a></span>
-  For 25 years this site has collected my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me. I keep random things under <a href="/library/">/library/</a>, store writings in <a href="/writing/">/writing/</a>, and post notes to <a href="/microblog/">/microblog/</a>. Here's the latest one, from <a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a>:
+  <span class="marginnote">You can read more about the site itself at <a href="/site/">/site</a></span>
+  For 25 years this site has collected my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me. I <!-- keep random things under <a href="/library/">/library</a>, --> store writings in <a href="/writing/">/writing</a>, and post notes to <a href="/microblog/">/microblog</a>. Here's the latest one, from <a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a>:
 </p>
 <blockquote>
   <p>

@@ -3,17 +3,12 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = function(config) {
   config.addPlugin(pluginRss); // used only for absoluting URLs
 
-  const CleanCSS = require("clean-css");
-  module.exports = function(config) {
-    config.addFilter("cssmin", function(code) {
-      return new CleanCSS({}).minify(code).styles;
-    });
-  };
-
   // template filters
+  config.addFilter("cssmin", require("./filters/cssmin.js") );
   config.addFilter("date", require("./filters/date.js") );
   config.addFilter("hostname", require("./filters/hostname.js") );
   config.addFilter("limit", require("./filters/limit.js") );
+  config.addFilter("parents", require("./filters/parents.js") );
 
   // manually configure markdown-it
   let markdownIt = require("markdown-it");

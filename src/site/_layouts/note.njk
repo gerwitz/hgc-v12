@@ -3,7 +3,7 @@ layout: base
 bodyClass: note
 permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.inputPath | replace('src/site/notes/', '', 1) | replace (r/[0-9][0-9][0-9][0-9]\\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-/, '') | replace(r/\\.\\w+$/, '') }}.html"
 breadcrumbs:
-  - microblog/
+  - microblog
 renderData:
   title: {{ typeof date }}
 ---
