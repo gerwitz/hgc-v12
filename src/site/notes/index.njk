@@ -7,6 +7,7 @@ pagination:
   size: 6
   reverse: true
 permalink: /microblog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber }}/{% endif %}/index.html
+eleventyExcludeFromCollections: true
 ---
 
 {% if pagination.pageNumber > 0 %}
