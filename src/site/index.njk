@@ -14,7 +14,7 @@ layout: base
 {% set note = collections.microblog | sort(true, false, 'date') | first -%}
 <p>
   <span class="marginnote">You can read more about the site itself at <a href="/site/">/site</a></span>
-  For 25 years this site has collected my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me. I <!-- keep random things under <a href="/library/">/library</a>, --> store writings in <a href="/writing/">/writing</a>, and post notes to <a href="/microblog/">/microblog</a>. Here's the latest one, from <a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a>:
+  For 25 years this site has collected my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me. I <!-- keep random things under <a href="/library/">/library</a>, --> post writing to <a href="/writing/">/writing</a>, and save short notes to <a href="/microblog/">/microblog</a>. Here's the latest one, from <a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a>:
 </p>
 <blockquote>
   <p>
@@ -34,6 +34,6 @@ layout: base
   </li>
 {%- endfor -%}
 </ul>
-<span class="marginnote">The full archive is at <a href="/writing/">/writing/</a>.</span>
+<span class="marginnote">The full archive is at <a href="/writing/">/writing</a>.</span>
 </div>
 </section>
