@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>{{ title or (renderData and renderData.title) }} - hans.gerwitz.com</title>
+
     <!-- favicon, etc. -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -42,7 +44,9 @@
 
     {# secondary css (created by "styles" task) #}
     <link rel="stylesheet" href="/css/secondary.css" />
-    <title>{{ title or (renderData and renderData.title) }} - hans.gerwitz.com</title>
+
+    {# print css #}
+    <link rel="stylesheet" href="https://unpkg.com/gutenberg-css@0.4/dist/themes/oldstyle.min.css" media="print">
 
     {# critical css (created by "styles" task) #}
     <style>{% include "inline/critical.css" %}</style>
