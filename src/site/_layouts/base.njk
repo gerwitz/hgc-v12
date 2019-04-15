@@ -46,6 +46,8 @@
 
     {# critical css (created by "styles" task) #}
     <style>{% include "inline/critical.css" %}</style>
+
+    {{ headtags | safe }}
   </head>
   <body class="{{ bodyClass }}">
     <div class="main-container">
