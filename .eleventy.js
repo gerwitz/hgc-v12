@@ -42,7 +42,8 @@ module.exports = function(config) {
       "html",
       "njk",
       "md",
-      "gif", "jpg", "jpeg", "png"
+      "gif", "jpg", "jpeg", "png",
+      "pde", "js" // for /projects/fur/
     ],
 
     // always Nunjuk so we can use dynamic permalinks in the template
