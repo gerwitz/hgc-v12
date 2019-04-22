@@ -456,7 +456,7 @@
     # to meet Will & Gina
 -
   tripit: 856785
-  date: 2009-04
+  date: 2008-04
   nights: 0
   modes: [air]
   geo: [30.27032,-97.74243] # frog TX
@@ -464,7 +464,7 @@
     Austin, TX for final frog interview
 -
   tripit: 842689
-  date: 2009-05 #01
+  date: 2008-05 #01
   nights: 3
   modes: [air]
   geo: [36.10248,-115.17149] # MGM Grand
@@ -2142,3 +2142,39 @@
   geo: [50.945143,6.961302] # Cologne Mariott
   title:
   	Cologne Christmas markets # with Shannon, Natalia, Abe & Campbell, Mafer & Sebas, et al
+-
+  tripit: 247207645
+  date: 2019-01 #18
+  nights: 2
+  modes: [rail]
+  geo: [51.054086, 3.721502] # 1898 The Post (tower)
+  title:
+    Gent for Shannon's birthday # with Shannon
+-
+  tripit: 246617407
+  date: 2019-02 #22
+  nights: 13
+  modes: [air]
+  title:
+    Mardi Gras and Mom
+  destinations:
+    -
+      nights: 3
+      geo: [29.948329, -90.072007] # Ace Hotel
+      title: New Orleans for Freret
+    -
+      nights: 2
+      geo: [26.433019, -82.049825] # Sundial
+      title: Sanibel Island with Mom
+    -
+      nights: 7
+      geo: [29.948329, -90.072007] # Ace Hotel
+      title: New Orleans for the rest of Mardi Gras
+-
+  tripit: 257117963
+  date: 2019-03 #24
+  nights: 5
+  modes: [air]
+  geo: [13.0008998,77.5723711] # Sheraton
+  title:
+    Bangelore for work
