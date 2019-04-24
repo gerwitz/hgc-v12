@@ -36,14 +36,15 @@ subtitle: We all have our own special Hell
 
 ## Seventh
 
-- Drivers who threaten vulnerable roadway users
+- The profiteers of internet-scale ignorance and hate (Susan Wojcicki, Mark Zuckerberg)
 - Donald Trump
+- Drivers who threaten vulnerable roadway users
 
 ## Eigth
 
-- Roger Severino
+- The Trump svengalis (Steven Miller, Steve Bannon)
 - Members of the Westboro Baptist Church
 
 ## Ninth
 
-- The men who will trade the United States federation and its role in global peace and justice for personal gain or religious spite (Mitch McConnell, Orin Hatch, et al)
+- The men with power who will trade the United States federation and its role in global peace and justice for personal gain or religious spite (Mitch McConnell, Orin Hatch, Lindsey Graham, Roger Severino, et al)
