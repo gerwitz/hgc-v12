@@ -15,7 +15,7 @@ eleventyExcludeFromCollections: true
 {% endif %}
 
 {% for note in pagination.items %}
-<a href="{{ note.url }}">{{ page.date | date('MMMM Do, YYYY [at] HH:mm') }}</a>:
+<a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY [at] HH:mm') }}</a>:
 <blockquote>
   {{ note.templateContent | safe }}
 </blockquote>

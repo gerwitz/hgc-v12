@@ -1,0 +1,4 @@
+/feed/microblog.rss      /notes/feed.rss         301
+/feed/writing.rss        /writing/feed.rss       301
+
+/library/records/        /history/records/       301
