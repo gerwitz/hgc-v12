@@ -51,6 +51,16 @@
     {# critical css (created by "styles" task) #}
     <style>{% include "inline/critical.css" %}</style>
 
+    <script type="application/json" class="js-hypothesis-config">
+      {
+        theme: "clean",
+        branding: {
+          accentColor: "#007700"
+        }
+      }
+    </script>
+    <script src="https://hypothes.is/embed.js" async></script>
+
     {{ headtags | safe }}
   </head>
   <body class="{{ bodyClass }}">
