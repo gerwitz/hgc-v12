@@ -28,8 +28,6 @@ Some content is added to the repo with [Micropub](https://micropub.net/) via [Si
 
 ## Surveillance
 
-An external script is loaded from [Hypothesis](https://hypothes.is/) for highlighting and annotations. Check out their [privacy policy](https://web.hypothes.is/privacy/) for details.
-
 <span class="marginnote">![listener](rat-mic.png)</span>
 [Google Analytics](https://www.google.com/analytics/) is used for usage tracking and may drop a cookie on you. I've set my account to [not share tracking data][ua], but you have no way to validate that and I have no way to confirm that Google honors this setting. I hope to replace this with direct log analysis.
 
