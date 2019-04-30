@@ -10,5 +10,5 @@ Topics the algorithmic demons of Twitter have deemed relevant to me:
 - Technology VC
 - United Nations
 
-Is anyone tracking these, ontologically, as [@ alexismadrigal](https://twitter.com/alexismadrigal) did with Netflix?
+Is anyone tracking these, ontologically, as [@alexismadrigal](https://twitter.com/alexismadrigal) did with Netflix?
 
