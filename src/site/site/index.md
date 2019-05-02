@@ -31,6 +31,8 @@ Some content is added to the repo with [Micropub](https://micropub.net/) via [Si
 <span class="marginnote">![listener](rat-mic.png)</span>
 [Google Analytics](https://www.google.com/analytics/) is used for usage tracking and may drop a cookie on you. I've set my account to [not share tracking data][ua], but you have no way to validate that and I have no way to confirm that Google honors this setting. I hope to replace this with direct log analysis.
 
+[instant.page](https://instant.page/) is loaded from their server. I review each version before updating and they are hosting from the static GitHub Pages servers, so there shouldn't be any tracking. Still, this is an "attack surface" and they don't yet publish a privacy policy.
+
 <!--
 Other external resources are referenced, including [Twitter's][twttr] scripts for explicit pop-ups and jQuery from [their CDN][jquery]. On the [homepage](/) a [Flickr][] script is loaded which insists on loading a Yahoo geolocation script as well as requested assets. None of these should be using this to track you, but my control is limited so YMMV.
 
