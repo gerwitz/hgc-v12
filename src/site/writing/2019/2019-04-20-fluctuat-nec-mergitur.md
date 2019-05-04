@@ -1,5 +1,5 @@
 ---
-title: Fluctuât nec mergitur
+title: Fluctuât Nec Mergitur
 categories:
 - culture
 writing-tags: [paris, history, future, climate]
