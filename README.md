@@ -4,8 +4,7 @@
 
 Source files are in `/src` and site is built to `/dist`.
 
-To set up, from the root directory: `npm install`
+To set up, from the root directory: `gulp build`
+To test: `gulp dev`
 
-To test: `npm run serve`
-
-Sass pipeline and other gulp inspiration copied from [EleventyOne](https://github.com/philhawksworth/eleventyone).
+Sass pipeline inspired by [Phil Hawksworth](https://www.hawksworx.com/blog/keeping-sass-simple-and-speedy-on-eleventy/).

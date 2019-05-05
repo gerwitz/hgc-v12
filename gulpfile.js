@@ -12,7 +12,7 @@ require('require-dir')('./gulp-tasks');
 /*
  Run our static site generator to build the pages
 */
-gulp.task('generate', shell.task('eleventy'));
+gulp.task('generate', shell.task('npx eleventy'));
 
 
 /*
@@ -24,20 +24,18 @@ gulp.task('assets', gulp.parallel(
 ));
 
 /*
-  Let's build, without getting data from online sources
-*/
-gulp.task('build:local', gulp.series(
-  'clean-build',
-  'generate',
-  'assets'
-));
-
-
-/*
   Let's get the data we need and then build.
 */
 gulp.task('build', gulp.series(
   // 'get:data',
-  'generate',
-  'assets'
+  'assets', // this goes first because it writes to site/_includes
+  'generate'
 ));
+
+gulp.task('dev', gulp.parallel(
+  'build',
+  'serve',
+  'watch'
+));
+
+gulp.task('default', gulp.series('dev'));

@@ -21,7 +21,7 @@ The rubrication glyph and favicon is [LEGO part #2435][tree]. As a child was fas
 [unicode]: https://unicode-table.com/en/1F332/
 
 ## Colophon
-
+BLAH
 The content of the site is in a [git repository](https://github.com/gerwitz/hgc-v12/). When the repository is pushed to GitHub, [Netlify](https://www.netlify.com/) runs [Eleventy](https://www.11ty.io/) to generate static HTML and host it.
 
 Some content is added to the repo with [Micropub](https://micropub.net/) via [Sitewriter](https://sitewriter.net/).
