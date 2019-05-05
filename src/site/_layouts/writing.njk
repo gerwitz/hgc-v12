@@ -24,5 +24,7 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
 
 </article>
 
-<div id="commento"></div>
+<p>If you'd like to dicuss this, <a href="#commento" onclick="document.getElementById('commento').className='';">open the comment thread here</a> or <a href="/about/#contact">contact me</a>.
+
+<div id="commento" class="hidden"></div>
 <script defer src="https://cdn.commento.io/js/commento.js"></script>
