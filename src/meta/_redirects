@@ -2,3 +2,6 @@
 /feed/writing.rss        /writing/feed.rss       301
 
 /library/records/        /history/records/       301
+
+# Redirect default Netlify subdomain to primary domain
+https://hgc-v12.netlify.com/* https://hans.gerwitz.com/:splat 301!
