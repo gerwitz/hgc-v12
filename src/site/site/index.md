@@ -21,7 +21,7 @@ The rubrication glyph and favicon is [LEGO part #2435][tree]. As a child was fas
 [unicode]: https://unicode-table.com/en/1F332/
 
 ## Colophon
-BLAH
+
 The content of the site is in a [git repository](https://github.com/gerwitz/hgc-v12/). When the repository is pushed to GitHub, [Netlify](https://www.netlify.com/) runs [Eleventy](https://www.11ty.io/) to generate static HTML and host it.
 
 Some content is added to the repo with [Micropub](https://micropub.net/) via [Sitewriter](https://sitewriter.net/).
@@ -30,6 +30,8 @@ Some content is added to the repo with [Micropub](https://micropub.net/) via [Si
 
 <span class="marginnote">![listener](rat-mic.png)</span>
 [Google Analytics](https://www.google.com/analytics/) is used for usage tracking and may drop a cookie on you. I've set my account to [not share tracking data][ua], but you have no way to validate that and I have no way to confirm that Google honors this setting. I hope to replace this with direct log analysis.
+
+[Commento](https://commento.io/)'s cloud service is used for in-page comments. Here's [their privacy policy](https://commento.io/privacy).
 
 [instant.page](https://instant.page/) is loaded from their server. I review each version before updating and they are hosting from the static GitHub Pages servers, so there shouldn't be any tracking. Still, this is an "attack surface" and they don't yet publish a privacy policy.
 
