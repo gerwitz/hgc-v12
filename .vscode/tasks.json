@@ -6,15 +6,20 @@
         {
             "type": "gulp",
             "task": "serve",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "group": "build"
         },
         {
             "type": "gulp",
             "task": "build",
             "problemMatcher": []
+        },
+        {
+            "type": "gulp",
+            "task": "dev",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
