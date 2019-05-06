@@ -16,11 +16,11 @@
     "url": "https://github.com/gerwitz/hans.gerwitz.com"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.8.0",
+    "@11ty/eleventy": "^0.8.3",
     "clean-css": "^4.2.1",
     "concurrent-transform": "^1.0.0",
     "gravatar": "^1.6.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.1",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-image-resize": "^0.13.0",
