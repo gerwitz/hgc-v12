@@ -1,0 +1,126 @@
+---
+title: Search
+layout: page
+eleventyExcludeFromCollections: true
+---
+
+<form id="search" action="https://www.google.com/search" method="get">
+  <input type="hidden" name="q" id="site" value="site:https://hans.gerwitz.com">
+  <input type="text" name="q" id="query">
+  <button type="submit" class="submit">Search with Google</button>
+</form>
+
+<section class="search-results">
+  <h1 class="entry-title">Search results</h1>
+  <div id="results">
+    &#8230;
+  </div>
+</section>
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+  // only good for n < 100
+  function ordinal(n) {
+    var sfx = ["th","st","nd","rd"];
+    return n + (sfx[(n-20)%10] || sfx[n] || sfx[0]);
+  }
+
+  var monthNames = new Array("January","February","March","April","May"," June","July","August","September","October","November","December");
+  function monthName(n) {
+    return(monthNames[n]);
+  }
+
+  var resultsEl = document.getElementById('results');
+  function display(html) {
+    results.innerHtml = html;
+  }
+
+  // hijack the form away from Google
+  function takeForm() {
+    var form = document.querySelector('#search');
+    var siteParam = form.querySelector('#site');
+    var button = form.querySelector('.submit');
+
+    if (siteParam) {
+      form.removeChild(siteParam);
+    }
+    button.textContent = 'Search';
+    form.action = '?';
+    form.onSubmit = doSearch();
+  }
+
+  var lunrIndex;
+  var lunrMap;
+
+  function executeSearch(data, query) {
+//    console.log('data',data);
+    lunrIndex = lunr.Index.load(data.index);
+    lunrMap = data.map;
+    console.log('map', lunrMap);
+    var results = lunrIndex.search(query);
+    console.log('Found ' + results.length + ' results', results);
+    if (results.length > 0) {
+    var list = '<ol class="article-list">';
+      results.forEach(function(result, index) {
+        page = lunrMap[Number(result.ref)];
+        console.log('Result reference '+result.ref, page);
+        list += '<li><a href="'+page.url+'">' +
+          '<span class="title">'+page.title+'<\/span>' +
+          '<\/a><\/li>';
+      });
+      list += '<\/ol>';
+      display(list);
+    }
+    else {
+      display('No results, sorry.');
+    }
+  console.timeEnd('bloop');
+  }
+
+  function fetchIndex(query) {
+    display('Loading&#8230;');
+    var request = new XMLHttpRequest();
+    request.open('GET', '/search/lunr.json', true);
+
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        // Success!
+        var data = JSON.parse(request.responseText);
+        executeSearch(data, query)
+      } else {
+        display('<span class="error">Unable to download index ('+request.status+').</span>');
+      }
+    };
+
+    request.onerror = function() {
+      display('<span class="error">Unable to download index.</span>');
+    };
+
+    request.send();
+  }
+
+  // parse querystring value
+  function paramValue(query_param) {
+    var results = new RegExp('[\\?&]' + query_param + '=([^&#]*)').exec(window.location.href);
+    return results ? results[1] : false;
+  }
+
+  function doSearch() {
+    var query = paramValue('q');
+    if (query) {
+      fetchIndex(query);
+    }
+  }
+
+  function ready() {
+    takeForm();
+    doSearch();
+  }
+
+  // when document is loaded, go!
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+    ready();
+  } else {
+    document.addEventListener('DOMContentLoaded', ready);
+  }
+</script>
