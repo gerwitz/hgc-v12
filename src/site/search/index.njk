@@ -4,7 +4,7 @@ layout: page
 eleventyExcludeFromCollections: true
 ---
 
-<form id="search" action="https://www.google.com/search" method="get">
+<form id="search-form" action="https://www.google.com/search" method="get">
   <input type="hidden" name="q" id="site" value="site:https://hans.gerwitz.com">
   <input type="text" name="q" id="query">
   <button type="submit" class="submit">Search with Google</button>
@@ -37,7 +37,7 @@ eleventyExcludeFromCollections: true
 
   // hijack the form away from Google
   function takeForm() {
-    var form = document.querySelector('#search');
+    var form = document.querySelector('#search-form');
     var siteParam = form.querySelector('#site');
     var button = form.querySelector('.submit');
 

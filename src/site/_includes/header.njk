@@ -10,4 +10,12 @@
       {% endfor %}
     {% endif %}
   </div>
+  <div class="search">
+    <form method="get" action="/search/">
+      <input id="search" type="search" autosave="site-search" placeholder="search" name="q">
+      <label for="search">
+          <svg xmlns="http://www.w3.org/2000/svg" height="13" viewBox="0 0 12 13" version="1"><g stroke-width="2" stroke="#000000" fill="none"><path d="M11.29 11.71l-4-4"/><circle cx="5" cy="5" r="4"/></g></svg>
+        </label>
+    </form>
+  </div>
 </header>

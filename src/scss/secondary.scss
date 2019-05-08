@@ -10,3 +10,14 @@
   background-color: $accent-color;
   color: $page-color;
 }
+
+header {
+  .breadcrumb {
+    float: left;
+    width: 55%;
+  }
+  .search {
+    float: right;
+    margin-right: 24px;
+  }
+}
