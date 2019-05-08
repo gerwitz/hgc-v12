@@ -1,4 +1,4 @@
-// from https://github.com/bradleytaunt/ET-Jekyll
+// based on https://github.com/bradleytaunt/ET-Jekyll
 
 /**************************************
     $CLEANUP / VARIABLES
@@ -31,19 +31,6 @@ table {
 /**************************************/
 /*p*/.subtitle {
     font-size: 1.8rem;
-    font-style: italic;
-}
-
-/*p*/.sans {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-    letter-spacing: .03em;
-}
-
-/*span*/.caps {
-    font-variant: small-caps;
-}
-
-/*span*/.italics {
     font-style: italic;
 }
 
@@ -119,46 +106,6 @@ table {
 }
 
 /**************************************
-    $NAVIGATION
-/**************************************/
-nav {
-    margin-top: 1rem;
-
-    .menu-icon {
-        cursor: pointer;
-        display: none;
-        text-decoration: underline;
-    }
-
-    .menu-btn {
-        display: none;
-    }
-
-    .menu-btn:checked ~ .site-nav {
-        display: block;
-    }
-
-    ul.site-nav {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            display: inline-block;
-            margin: 0 1.5rem 0 0;
-        }
-
-        a,a:visited {
-            text-decoration: none;
-
-            &:hover {
-                color: rgb(220, 40, 40);
-            }
-        }
-    }
-}
-
-/**************************************
     $MEDIA QUERIES - TABLET
 /**************************************/
 @media #{$media-tablet} {
@@ -170,28 +117,6 @@ nav {
     .inner-container {
         padding-top: 2rem;
         width: 100%;
-    }
-
-    nav {
-
-        .menu-icon {
-            display: inline-block;
-        }
-
-        ul.site-nav {
-            display: none;
-
-            li {
-                display: block;
-                margin: 1rem 0;
-                width: 100%;
-
-                a,a:visited {
-                    display: block;
-                    width: 100%;
-                }
-            }
-        }
     }
 
     /*span*/.marginnote,
