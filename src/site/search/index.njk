@@ -10,11 +10,9 @@ eleventyExcludeFromCollections: true
   <button type="submit" class="submit">Search with Google</button>
 </form>
 
-<section class="search-results">
-  <h1 class="entry-title">Search results</h1>
-  <div id="results">
-    &#8230;
-  </div>
+<section id="search-results">
+  <p class="message"></p>
+  <div class="results"></div>
 </section>
 
 <script src="https://unpkg.com/lunr/lunr.js"></script>
@@ -30,9 +28,11 @@ eleventyExcludeFromCollections: true
     return(monthNames[n]);
   }
 
-  var resultsEl = document.getElementById('results');
-  function display(html) {
-    results.innerHtml = html;
+  var messageEl = document.querySelector('#search-results .message');
+  var resultsEl = document.querySelector('#search-results .results');
+  function display(message, results) {
+    messageEl.innerHTML = message;
+    resultsEl.innerHTML = results;
   }
 
   // hijack the form away from Google
@@ -53,7 +53,6 @@ eleventyExcludeFromCollections: true
   var lunrMap;
 
   function executeSearch(data, query) {
-//    console.log('data',data);
     lunrIndex = lunr.Index.load(data.index);
     lunrMap = data.map;
     console.log('map', lunrMap);
@@ -69,12 +68,11 @@ eleventyExcludeFromCollections: true
           '<\/a><\/li>';
       });
       list += '<\/ol>';
-      display(list);
+      display(results.length+' results:', list);
     }
     else {
       display('No results, sorry.');
     }
-  console.timeEnd('bloop');
   }
 
   function fetchIndex(query) {
@@ -106,6 +104,7 @@ eleventyExcludeFromCollections: true
   }
 
   function doSearch() {
+    display('', '');
     var query = paramValue('q');
     if (query) {
       fetchIndex(query);
