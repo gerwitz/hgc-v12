@@ -3,13 +3,15 @@ title: About This Site
 layout: page
 ---
 
-This is a personal website, primarily for my own recollection. Think of it as my book of shadows, with over {{ collections.all | length | round(-1) }} pages so far.
+This is a personal website that collects my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me.
+
+Think of it as my book of shadows, with over {{ collections.all | length | round(-1) }} pages so far.
 
 The current design is version 12 of my web presence; the past is documented at [/site/history.html](history.html).
 
 ## Design
 
-The site map is deliberately simple, with light navigation. Most visitors (and myself) enter via page links or search.
+The site map is deliberately simple, with light navigation. Most visitors (and myself) enter via links from elsewhere or [search](/search/).
 
 Page layout is based on [Tufte CSS](https://edwardtufte.github.io/tufte-css/), using widely available system fonts.
 
