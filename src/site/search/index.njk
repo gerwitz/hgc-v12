@@ -4,10 +4,9 @@ layout: page
 eleventyExcludeFromCollections: true
 ---
 
-<form id="search-form" action="https://www.google.com/search" method="get">
-  <input type="hidden" name="q" id="site" value="site:https://hans.gerwitz.com">
+<form id="search-form" action="?" method="get">
   <input type="text" name="q" id="query">
-  <button type="submit" class="submit">Search with Google</button>
+  <button type="submit" class="submit">Search</button>
 </form>
 
 <section id="search-results">
@@ -35,20 +34,6 @@ eleventyExcludeFromCollections: true
     resultsEl.innerHTML = results;
   }
 
-  // hijack the form away from Google
-  function takeForm() {
-    var form = document.querySelector('#search-form');
-    var siteParam = form.querySelector('#site');
-    var button = form.querySelector('.submit');
-
-    if (siteParam) {
-      form.removeChild(siteParam);
-    }
-    button.textContent = 'Search';
-    form.action = '?';
-    form.onSubmit = doSearch();
-  }
-
   var lunrIndex;
   var lunrMap;
 
@@ -71,12 +56,12 @@ eleventyExcludeFromCollections: true
       display(results.length+' results:', list);
     }
     else {
-      display('No results, sorry.');
+      display('No results, sorry.', '');
     }
   }
 
   function fetchIndex(query) {
-    display('Loading&#8230;');
+    display('Loading','&#8230;');
     var request = new XMLHttpRequest();
     request.open('GET', '/search/lunr.json', true);
 
@@ -86,12 +71,12 @@ eleventyExcludeFromCollections: true
         var data = JSON.parse(request.responseText);
         executeSearch(data, query)
       } else {
-        display('<span class="error">Unable to download index ('+request.status+').</span>');
+        display('<span class="error">Unable to download index ('+request.status+').</span>', '');
       }
     };
 
     request.onerror = function() {
-      display('<span class="error">Unable to download index.</span>');
+      display('<span class="error">Unable to download index.</span>', '');
     };
 
     request.send();
@@ -103,17 +88,12 @@ eleventyExcludeFromCollections: true
     return results ? results[1] : false;
   }
 
-  function doSearch() {
+  function ready() {
     display('', '');
     var query = paramValue('q');
     if (query) {
       fetchIndex(query);
     }
-  }
-
-  function ready() {
-    takeForm();
-    doSearch();
   }
 
   // when document is loaded, go!

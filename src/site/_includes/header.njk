@@ -1,6 +1,6 @@
 <header>
   <div class="breadcrumb">
-    {% if page.fileSlug != '' %}
+    {% if page.url != '/' %}
       <a class="site-title" href="/">hans.gerwitz.com</a>
       {% if not breadcrumbs %}
         {% set breadcrumbs = page.url | parents %}
@@ -10,6 +10,7 @@
       {% endfor %}
     {% endif %}
   </div>
+  {% if page.url != '/search/' %}
   <div class="search">
     <form method="get" action="/search/">
       <input id="search" type="search" autosave="site-search" placeholder="search" name="q">
@@ -18,4 +19,5 @@
         </label>
     </form>
   </div>
+  {% endif %}
 </header>
