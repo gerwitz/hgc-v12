@@ -22,32 +22,29 @@ headtags: |
 
 <h1>hans.gerwitz.com</h1>
 <section>
-<p>
-  Hi, I'm Hans Gerwitz. If you're here to learn about me, start at <a href="/about/">/about</a><!-- or <a href="/history/">/history</a> -->.
-</p>
-{% set note = collections.microblog | sort(true, false, 'date') | first -%}
-<p>
-  <span class="marginnote">You can read more about the site itself at <a href="/site/">/site</a></span>
-  This site collects my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me. I periodically <!-- keep random things under <a href="/library/">/library</a>, --> post to <a href="/writing/">/writing</a>, and save short notes to <a href="/microblog/">/microblog</a>.
-</p><p>
-  Here's the latest, from <a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a>:
-</p>
-<blockquote>
-  {{ note.templateContent | safe }}
-</blockquote>
-</section>
-
-<section>
-<h2>Recent Writing</h2>
-
-<div style="position: relative">
-<ul>
-{%- for page in collections.writing | reverse | limit(5) -%}
-  <li>
-    <a href="{{ page.url }}">{{ page.data.title }}</a>
-  </li>
-{%- endfor -%}
-</ul>
-<span class="marginnote">The full archive is at <a href="/writing/">/writing</a>.</span>
-</div>
+  <p>
+    Hi, I'm Hans Gerwitz.
+  </p>
+  <p>
+    You can learn more about me at <a href="/about/">/about</a>.
+    <span class="marginnote">Or read more about this site at <a href="/site/">/site</a></span>
+  </p>
+  <p>
+    <a href="/writing/">/writing</a> is where essays and blog posts accumulate.
+  </p>
+  <p>
+    <a href="/now/">/now</a> holds a running journal of sorts.
+  </p>
+  <p>
+    <a href="/library/">/library</a> will confuse anyone who enters.
+  </p>
+  <p>
+    <a href="/microblog/">/microblog</a> is a stream of notes. Here's the latest:
+  <p>
+  <span class="marginnote">These are also copied to <a href="http://micro.blog/gerwitz" rel="me">Micro.blog</a> and <a href="https://twitter.com/gerwitz" rel="me">Twitter</a>.</span>
+  {% set note = collections.microblog | sort(true, false, 'date') | first -%}
+  <blockquote>
+    {{ note.templateContent | safe }}
+    <footer><a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a></footer>
+  </blockquote>
 </section>
