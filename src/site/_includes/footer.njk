@@ -1,13 +1,15 @@
 <footer class="bottom-footer">
-  <a {{ 'href="/"' | safe if page.url != '/' }}>
+{% if page.url != '/' %}
+  <a href="/">
     {% tree 48 %}
   </a>
   <p>
     <a href="/about/">Hans Gerwitz</a> is an American emigrant.
   </p>
+{% endif %}
 {% if page.url != '/site/' %}
   <p>
-    <span class="mini-note">This content is licensed CC-BY-4.0. Learn more at <a href="/site/">/site</a>.</span> 
+    <span class="mini-note">This content is licensed CC-BY-4.0. Learn more at <a href="/site/">/site</a>.</span>
   </p>
 {% endif %}
 </footer>
