@@ -3,13 +3,15 @@ $bp-narrow: "(min-width: 400px)";
 $bp-mid: "(min-width: 740px)";
 $bp-wide: "(min-width: 1200px)";
 
-// Colours
-$page-color: #ffffff;
-$text-color: #111111;
-$accent-color: #007700;
+// Colors
+$page-color: hsl(0, 0%, 99%);
+$text-color: hsl(138, 100%, 5%);
+$accent-color: hsl(140, 100%, 25%); // lego tree #00852B
 
 // Font face
-$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$body-font: Georgia, Times, Times New Roman, serif;
+$sans-font: Helvetica Neue, Helvetica, Arial, sans-serif;
+$url-font: "Lucida Console", Monaco, monospace;
 
 // Tufte-specific
 // $bg-color: #fffff8;

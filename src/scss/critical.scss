@@ -20,8 +20,7 @@
     background: $page-color;
     color: $text-color;
     counter-reset: sidenote-counter;
-    // font: v1.3rem/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-family: Georgia,Times,Times New Roman,serif;
+    font-family: $body-font;
     font-size: v1.3rem;
     line-height: 1.5;
     height: 100%;
@@ -29,8 +28,7 @@
   }
 
   h1,h2,h3,h4,h5,h6 {
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    // font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-family: $sans-font;
     font-weight: normal;
     line-height: 1;
     margin: 0;
@@ -45,8 +43,28 @@
     margin-bottom: 2rem;
   }
 
-  a,a:visited,a:hover {
-    color: #111;
+  a {
+    color: $text-color;
+  }
+
+  a.internal {
+    font-family: $url-font;
+    text-decoration: none;
+    display: inline-block;
+    border: 1.5px solid $accent-color;
+    font-size: smaller;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    padding-top: 0.2em;
+  }
+
+  a:hover {
+    color: $page-color;
+    background-color: $accent-color;
+  }
+  a:hover.graphic {
+    color: $page-color;
+    background-color: inherit;
   }
 
   blockquote {

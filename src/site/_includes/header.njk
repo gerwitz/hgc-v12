@@ -1,12 +1,12 @@
 <header>
   <div class="breadcrumb">
     {% if page.url != '/' %}
-      <a class="site-title" href="/">hans.gerwitz.com</a>
+      <a class="site-title internal" href="/">hans.gerwitz.com</a>
       {% if not breadcrumbs %}
         {% set breadcrumbs = page.url | parents %}
       {% endif %}
       {% for crumb in breadcrumbs %}
-        <a href="/{{ breadcrumbs | join("/") }}">/{{ crumb }}</a>
+        <a href="/{{ breadcrumbs | join("/") }}" class="internal">/{{ crumb }}</a>
       {% endfor %}
     {% endif %}
   </div>
