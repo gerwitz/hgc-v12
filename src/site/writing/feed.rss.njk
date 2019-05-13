@@ -4,6 +4,7 @@ eleventyExcludeFromCollections: true
 feedmeta:
   title: hans.gerwitz.com blog
   url: https://hans.gerwitz.com/
+layout:
 ---
 {%- set feed = collections.writing | sort(true, false, 'date') -%}
 <?xml version="1.0" encoding="utf-8"?>
