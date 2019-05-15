@@ -41,14 +41,11 @@ eleventyExcludeFromCollections: true
   function executeSearch(data) {
     lunrIndex = lunr.Index.load(data.index);
     lunrMap = data.map;
-    console.log('map', lunrMap);
     var results = lunrIndex.search(currentQuery);
-    console.log('Found ' + results.length + ' results', results);
     if (results.length > 0) {
     var list = '<ol class="article-list">';
       results.forEach(function(result, index) {
         page = lunrMap[Number(result.ref)];
-        console.log('Result reference '+result.ref, page);
         list += '<li><a href="'+page.url+'">' +
           '<span class="title">'+page.title+'<\/span>' +
           '<\/a><\/li>';
@@ -77,9 +74,8 @@ eleventyExcludeFromCollections: true
 
   function updateProgress(e) {
     if (e.lengthComputable) {
-      var percentComplete = Math.round(e.loaded / e.total * 100);
-      display('Loading', percentComplete + '%');
-      console.log(e.loaded +'/'+ e.total +'='+ percentComplete);
+      var percentComplete = e.loaded / e.total * 100;
+      display('Loading', MAth.round(percentComplete) + '%');
     } else {
       display('Loading', '&#8230;&#8230;');
     }
