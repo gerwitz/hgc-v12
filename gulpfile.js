@@ -12,7 +12,7 @@ require('require-dir')('./gulp-tasks');
 /*
  Run our static site generator to build the pages
 */
-gulp.task('generate', shell.task('npx eleventy'));
+gulp.task('generate', shell.task('DEBUG=*Error* npx eleventy'));
 
 
 /*
