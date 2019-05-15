@@ -36,12 +36,13 @@ eleventyExcludeFromCollections: true
 
   var lunrIndex;
   var lunrMap;
+  var currentQuery;
 
-  function executeSearch(data, query) {
+  function executeSearch(data) {
     lunrIndex = lunr.Index.load(data.index);
     lunrMap = data.map;
     console.log('map', lunrMap);
-    var results = lunrIndex.search(query);
+    var results = lunrIndex.search(currentQuery);
     console.log('Found ' + results.length + ' results', results);
     if (results.length > 0) {
     var list = '<ol class="article-list">';
@@ -60,26 +61,43 @@ eleventyExcludeFromCollections: true
     }
   }
 
-  function fetchIndex(query) {
+  function fetchIndex() {
     display('Loading','&#8230;');
+
     var request = new XMLHttpRequest();
+
+    request.addEventListener("progress", updateProgress);
+    request.addEventListener("load", transferComplete);
+    request.addEventListener("error", transferFailed);
+
     request.open('GET', '/search/lunr.json', true);
 
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) {
-        // Success!
-        var data = JSON.parse(request.responseText);
-        executeSearch(data, query)
-      } else {
-        display('<span class="error">Unable to download index ('+request.status+').</span>', '');
-      }
-    };
-
-    request.onerror = function() {
-      display('<span class="error">Unable to download index.</span>', '');
-    };
-
     request.send();
+  }
+
+  function updateProgress(e) {
+    if (e.lengthComputable) {
+      var percentComplete = Math.round(e.loaded / e.total * 100);
+      display('Loading', percentComplete + '%');
+      console.log(e.loaded +'/'+ e.total +'='+ percentComplete);
+    } else {
+      display('Loading', '&#8230;&#8230;');
+    }
+  }
+
+  function transferFailed() {
+    display('<span class="error">Unable to download index.</span>', '');
+  }
+
+  function transferComplete(e) {
+    var request = e.currentTarget;
+    if (request.status >= 200 && request.status < 400) {
+      // Success!
+      var data = JSON.parse(request.responseText);
+      executeSearch(data)
+    } else {
+      display('<span class="error">Unable to download index.</span>', 'Error '+request.status);
+    }
   }
 
   // parse querystring value
@@ -90,8 +108,8 @@ eleventyExcludeFromCollections: true
 
   function ready() {
     display('', '');
-    var query = paramValue('q');
-    if (query) {
+    if (paramValue('q')) {
+      currentQuery = paramValue('q');
       fetchIndex(query);
     }
   }
