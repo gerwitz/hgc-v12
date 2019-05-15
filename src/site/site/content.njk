@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
         </th>
     </tr>
 </thead><tbody>
-{%- for page in collections.all %}
+{%- for page in collections.content %}
     <tr>
         <td>
             <a href="{{ page.url }}">{{ page.url }}</a>
