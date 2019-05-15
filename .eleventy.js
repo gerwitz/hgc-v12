@@ -1,6 +1,19 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(config) {
+
+  config.addCollection("content", function(all) {
+    return all.getFilteredByGlob([
+      // "**/*.md",
+      "src/site/about/**/*",
+      "src/site/library/**/*",
+      "src/site/notes/**/*",
+      "src/site/site/**/*",
+      "src/site/weeks/**/*",
+      "src/site/writing/**/*"
+    ]);
+  });
+
   config.addPlugin(pluginRss); // used only for absoluting URLs
 
   // template filters

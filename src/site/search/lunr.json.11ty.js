@@ -10,29 +10,37 @@ class LunrIndex {
   }
 
   render(data) {
-    var pages = data.collections.writing;
+    var pages = data.collections.content;
 
-    var idx = lunr(function () {
-      this.ref('ref');
-      this.field('title');
-      this.field('content');
+    var builder = new lunr.Builder
+    builder.pipeline.add(
+      lunr.trimmer,
+      lunr.stopWordFilter,
+      lunr.stemmer
+    )
+    builder.searchPipeline.add(
+      lunr.stemmer
+    )
 
-      pages.forEach(function (page, index) {
-        this.add(
-          {
-            ref: index,
-            title: page.title,
-            content: page.templateContent
-          }
-        )
-      }, this);
+    builder.ref('ref');
+    builder.field('title');
+    builder.field('content');
+
+    pages.forEach(function (doc, index) {
+      builder.add({
+        ref: index,
+        title: doc.data.title,
+        content: doc.templateContent
+      });
     });
 
+    var idx = builder.build()
+
     var docMap = {};
-    pages.forEach(function (page, index) {
+    pages.forEach(function (doc, index) {
       docMap[index] = {
-        url: page.url,
-        title: page.data.title
+        url: doc.url,
+        title: doc.data.title
       };
     });
 
