@@ -44,27 +44,7 @@
   }
 
   a {
-    color: $text-color;
-  }
-
-  a.internal {
-    font-family: $url-font;
-    text-decoration: none;
-    display: inline-block;
-    border: 1.5px solid $accent-color;
-    font-size: smaller;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    padding-top: 0.2em;
-  }
-
-  a:hover {
-    color: $page-color;
-    background-color: $accent-color;
-  }
-  a:hover.graphic {
-    color: $page-color;
-    background-color: inherit;
+    color: inherit;
   }
 
   blockquote {
@@ -72,7 +52,6 @@
   }
 
   blockquote footer {
-    font-size: 1.1rem;
     text-align: right;
   }
 
