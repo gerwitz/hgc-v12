@@ -79,16 +79,17 @@ a {
 
 a.internal  {
   font-family: $sans-font;
-  text-decoration: none;
-  display: inline-block;
-  border: 2px solid $accent-color;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  // text-decoration: none;
+  // display: inline-block;
+  // border: 2px solid $accent-color;
+  // padding-left: 0.5rem;
+  // padding-right: 0.5rem;
 }
 a.internal::before {
+  content: '/';
   color: $accent-color;
   font-weight: bold;
-  content: '/';
+  text-decoration: none;
 }
 a.internal:hover::before {
   color: $page-color;

@@ -24,19 +24,20 @@ headtags: |
 <section>
   <p>
     You can learn more about me at <a href="/about/" class="internal">about</a>.
-    <span class="marginnote">Or read more about this site at <a href="/site/" class="internal">site</a></span>
+    <span class="marginnote">Or read more about this place at <a href="/site/" class="internal">site</a></span>
   </p>
   <p>
     <a href="/writing/" class="internal">writing</a> is where essays and blog posts accumulate.
   </p>
   <p>
-    I keep a journal of sorts under <a href="/weeks/" class="internal">weeks<a/> and the latest entry is at <a href="/now/" class="internal">now</a>.
+    I keep a journal of sorts under <a href="/weeks/" class="internal">weeks</a>.
+    {# <span class="marginnote">The most recent entry is also at <a href="/now/" class="internal">now</a>.</span> #}
   </p>
   <p>
     <a href="/library/" class="internal">library</a> is a labyrinth of random things.
   </p>
   <p>
-    I tweet via <a href="/microblog/" class="internal">microblog</a>. Here's the latest:
+    I post short notes to <a href="/microblog/" class="internal">microblog</a>. Here's the latest one:
   <p>
   <span class="marginnote">These are also copied to <a href="http://micro.blog/gerwitz" rel="me">Micro.blog</a> and <a href="https://twitter.com/gerwitz" rel="me">Twitter</a>.</span>
   {% set note = collections.microblog | sort(true, false, 'date') | first -%}
