@@ -15,7 +15,7 @@ The site map is deliberately simple, with light navigation. Most visitors (and m
 
 Page layout is based on [Tufte CSS](https://edwardtufte.github.io/tufte-css/), using widely available system fonts.
 
-The rubrication glyph and favicon is [LEGO part #2435][tree]. As a child was fascinated with the larger version as a manufactured object. I also spent a lot of time in forests and many of my friends were trees. (I used to use the [Unicode tree glyph][unicode] as a logo of sorts, but it has been lost to creeping emojification.)
+The favicon is [LEGO part #2435][tree]. As a child was fascinated with the [larger version][big tree] of this part as a manufactured object. I also spent a lot of time in forests and many of my friends were trees. (I used to use the [Unicode tree glyph][unicode] as a logo of sorts, but it has been lost to creeping emojification.)
 <span class="marginnote">{% tree 99 %}</span>
 
 [tree]: https://www.bricklink.com/v2/catalog/catalogitem.page?P=2435

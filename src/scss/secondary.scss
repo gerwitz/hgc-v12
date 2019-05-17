@@ -12,6 +12,8 @@
 }
 
 header {
+  font-size: 1rem;
+
   .breadcrumb {
     float: left;
     width: 55%;
@@ -20,30 +22,76 @@ header {
     float: right;
     margin-right: 24px;
   }
+
+  .site-title {
+    svg * {
+      fill: $accent-color;
+    }
+    color: $text-color;
+    font-family: $sans-font;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding-top: 5px;
+    // padding-bottom: 2px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: -0.5rem;
+  }
+
+  a.site-title:hover {
+    background-color: $accent-color;
+    color: $page-color;
+    svg * {
+      fill: $page-color;
+    }
+  }
+
+  .breadcrumb a.internal, .search a.internal {
+    border: none;
+    padding-top: 5px;
+    display: block;
+    float: left;
+    // margin-left: 8px;
+  }
+  .search a {
+    color: $page-color;
+    &::before {
+      color: $page-color;
+    }
+    svg * {
+      stroke: $text-color;
+    }
+    &:hover svg * {
+      stroke: $page-color;
+    }
+  }
+
 }
+
+
 
 a {
   text-decoration: underline;
   text-decoration-color: $accent-color;
 }
 
-a.internal, a.site-title {
+a.internal  {
   font-family: $sans-font;
   text-decoration: none;
   display: inline-block;
-  border: 1.5px solid $accent-color;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  border: 2px solid $accent-color;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 a.internal::before {
   color: $accent-color;
   font-weight: bold;
   content: '/';
 }
-a.site-title {
-  font-weight: bold;
-  color: $accent-color;
-  border-color: transparent;
+a.internal:hover::before {
+  color: $page-color;
 }
 
 a:hover {
