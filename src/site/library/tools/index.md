@@ -1,6 +1,5 @@
 ---
 title: Tools
-old_url: http://hans.gerwitz.com/library/stuff.html
 ---
 
 <!--

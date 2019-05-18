@@ -1,0 +1,14 @@
+---
+title: Lists
+subtitle: The Celestial Emporium of Benevolent Knowledge
+---
+
+<ul>
+{% for page in collections.all %}
+    {% if page.url.startsWith("/library/lists") %}
+
+        <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+
+    {% endif %}
+{% endfor %}
+</ul>

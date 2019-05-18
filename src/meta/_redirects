@@ -1,7 +1,9 @@
-/feed/microblog.rss      /notes/feed.rss         301
-/feed/writing.rss        /writing/feed.rss       301
+/feed/microblog.rss         /notes/feed.rss             301
+/feed/writing.rss           /writing/feed.rss           301
 
-/library/records/        /history/records/       301
+/library/records/*          /about/history/appearances/:splat       301
+/projects/*                 /library/projects/:splat    301
+/using/*                    /library/tools/:splat       301
 
 # Redirect default Netlify subdomain to primary domain
 https://hgc-v12.netlify.com/* https://hans.gerwitz.com/:splat 301!
