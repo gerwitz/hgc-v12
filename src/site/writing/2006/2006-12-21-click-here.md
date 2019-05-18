@@ -2,7 +2,7 @@
 title: Click Here
 categories:
 - personal
-writing-tags:
+content-tags:
 - marketing
 - me
 ---

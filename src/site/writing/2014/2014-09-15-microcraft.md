@@ -3,7 +3,7 @@ title: Microsoft and Minecraft
 abstract: Let's hope Microsoft doesn't Bungie Minecraft.
 categories:
 - work
-writing-tags:
+content-tags:
 - gaming
 - business
 - microsoft

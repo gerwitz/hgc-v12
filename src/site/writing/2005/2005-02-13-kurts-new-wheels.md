@@ -2,7 +2,7 @@
 title: Kurt's new wheels
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

@@ -2,7 +2,7 @@
 title: Let Them Deem Us Mad
 categories:
 - culture
-writing-tags: [quote, ambition, building]
+content-tags: [quote, ambition, building]
 ---
 
 In a [piece about St. John the Divine as an accretive building](https://theprepared.org/features/2019/4/28/building-a-cathedral) on The Prepared, this amazing quote from the resolution to construct the cathedral of Seville in 1401 appears:

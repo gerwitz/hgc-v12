@@ -2,7 +2,7 @@
 title: Predictions
 categories:
 - culture
-writing-tags:
+content-tags:
 - politics
 ---
 

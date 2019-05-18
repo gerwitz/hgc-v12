@@ -2,7 +2,7 @@
 title: Reconnecting to the Church
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

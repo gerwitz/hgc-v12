@@ -2,7 +2,7 @@
 title: They are a menace-
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

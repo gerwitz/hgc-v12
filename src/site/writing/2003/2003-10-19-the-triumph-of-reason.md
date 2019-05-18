@@ -2,7 +2,7 @@
 title: The triumph of reason
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

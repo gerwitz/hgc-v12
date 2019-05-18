@@ -2,7 +2,7 @@
 title: Law of the land
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

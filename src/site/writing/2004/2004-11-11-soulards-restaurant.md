@@ -2,7 +2,7 @@
 title: Soulard's Restaurant
 categories:
 - culture
-writing-tags:
+content-tags:
 - stlouis
 ---
 

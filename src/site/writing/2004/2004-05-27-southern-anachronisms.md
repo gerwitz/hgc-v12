@@ -2,7 +2,7 @@
 title: Southern anachronisms
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

@@ -2,7 +2,7 @@
 title: Thanatos drive
 categories:
 - personal
-writing-tags:
+content-tags:
 - driving
 ---
 

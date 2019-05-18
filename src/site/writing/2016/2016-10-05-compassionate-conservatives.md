@@ -3,7 +3,7 @@ title: To My Compassionate Conservative Friends
 abstract: "Please talk to me."
 categories:
 - culture
-writing-tags:
+content-tags:
 - trump
 - politics
 external: http://safelyignored.com/compassionate-conservatives

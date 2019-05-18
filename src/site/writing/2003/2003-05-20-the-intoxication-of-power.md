@@ -3,7 +3,7 @@ title: The intoxication of power
 abstract: Imagine what it's like to be a part of it.
 categories:
 - culture
-writing-tags:
+content-tags:
 - politics
 ---
 

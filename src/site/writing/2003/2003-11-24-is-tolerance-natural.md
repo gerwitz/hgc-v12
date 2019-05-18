@@ -2,7 +2,7 @@
 title: Is tolerance natural
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

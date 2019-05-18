@@ -2,7 +2,7 @@
 title: Shale - The Next Struts
 categories:
 - work
-writing-tags:
+content-tags:
 - technology
 - java
 - programming

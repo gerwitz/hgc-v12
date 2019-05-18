@@ -2,7 +2,7 @@
 title: Sushi on wheels
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

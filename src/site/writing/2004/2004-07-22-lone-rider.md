@@ -2,7 +2,7 @@
 title: Lone rider
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

@@ -2,7 +2,7 @@
 title: Fulfillment
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 - charity
 ---

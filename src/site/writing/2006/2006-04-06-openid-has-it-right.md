@@ -2,7 +2,7 @@
 title: OpenID has it right
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 
@@ -10,7 +10,7 @@ There has been much ado over the last year about identity.  Most of the early pl
 
 So, I was very excited in January of 2005 to see [LID][4].  I set out to make my site compliant.  I started by writing a server, as I needed a LID URL for testing.  It quickly became apparent, though, that reusing an already-dynamic URL would require I modify existing request-handling code.  At that time, I was using [SnipSnap][5] and the project was dormant and not very extensible, so sharing my work would require forking the codebase.
 
-It is ridiculous, I concluded, that I should even have such a dilemma, why can't I just reference the LID server URL from my published, friendly one?  So I queried [Johannes Ernst][6]: 
+It is ridiculous, I concluded, that I should even have such a dilemma, why can't I just reference the LID server URL from my published, friendly one?  So I queried [Johannes Ernst][6]:
 
    [1]: http://en.wikipedia.org/wiki/Microsoft_Passport
    [2]: http://www.sxip.com/
@@ -23,7 +23,7 @@ It is ridiculous, I concluded, that I should even have such a dilemma, why can't
 
  He responded by pointing me to a [rationalization of using your "real" URL][7] which didn't really answer my question, ignored my acknowledgement of same, and made it clear he just didn't see why I might be annoyed that his spec basically asserts "we hereby claim a set of querystring parameters in the name of NetMesh!"
 
-So, I just lost interest and decided to give the market more time to find a solution.  A year later, and along comes [OpenID][8], which has this to say about LID: 
+So, I just lost interest and decided to give the market more time to find a solution.  A year later, and along comes [OpenID][8], which has this to say about LID:
 
    [7]: http://netmesh.info/jernst/Digital_Identity/dave-kearns-question.html
    [8]: http://openid.net/

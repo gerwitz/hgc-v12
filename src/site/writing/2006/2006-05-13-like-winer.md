@@ -2,7 +2,7 @@
 title: Like Winer
 categories:
 - personal
-writing-tags:
+content-tags:
 - aside
 ---
 

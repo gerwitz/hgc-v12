@@ -2,7 +2,7 @@
 title: Chocolate Chips
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -3,7 +3,7 @@ title: Vintage Hans
 categories:
 - meta
 - personal
-writing-tags:
+content-tags:
 - history
 ---
 

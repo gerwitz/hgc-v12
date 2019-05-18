@@ -2,7 +2,7 @@
 title: ad:tech Chicago
 categories:
 - work
-writing-tags:
+content-tags:
 - business
 - marketing
 - web

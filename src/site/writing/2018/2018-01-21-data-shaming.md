@@ -3,7 +3,7 @@ title: Data Shaming
 abstract: Maybe we need a little less privacy.
 categories:
 - culture
-writing-tags:
+content-tags:
 - data
 - environment
 - behavior

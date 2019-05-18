@@ -2,7 +2,7 @@
 title: Persistance of data
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - tech
 - quote

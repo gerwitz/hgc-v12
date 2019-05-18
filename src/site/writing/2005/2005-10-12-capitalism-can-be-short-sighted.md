@@ -2,7 +2,7 @@
 title: Capitalism can be short-sighted
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

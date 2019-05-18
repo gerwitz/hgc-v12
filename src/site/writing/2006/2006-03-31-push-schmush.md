@@ -2,7 +2,7 @@
 title: Push, schmush
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

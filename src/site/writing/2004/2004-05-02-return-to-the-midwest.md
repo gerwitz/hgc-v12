@@ -2,7 +2,7 @@
 title: Return to the midwest
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

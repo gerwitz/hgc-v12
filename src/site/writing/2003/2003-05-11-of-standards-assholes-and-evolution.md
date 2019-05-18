@@ -3,7 +3,7 @@ title: Of standards, assholes, and evolution
 abstract: Standards imply agreement, which is disagreeable.
 categories:
 - work
-writing-tags:
+content-tags:
 - technology
 - web
 - fave

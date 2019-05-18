@@ -4,7 +4,7 @@ abstract: A year later
 categories:
 - work
 - personal
-writing-tags:
+content-tags:
 - business
 comments: off
 ---

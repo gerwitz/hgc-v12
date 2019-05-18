@@ -2,7 +2,7 @@
 title: Still worth it
 categories:
 - personal
-writing-tags:
+content-tags:
 - me
 ---
 

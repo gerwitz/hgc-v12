@@ -2,7 +2,7 @@
 title: Community ether
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -2,7 +2,7 @@
 title: Last day in London
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

@@ -2,9 +2,9 @@
 title: The Reasonable Trump Administration
 categories:
 - culture
-writing-tags: [usa, politics, news, trump]
+content-tags: [usa, politics, news, trump]
 ---
- 
+
 Twice a day, the White House publishes a news summary via email, with the current edition on their website, under the banner of [_West Wing Reads_](https://www.whitehouse.gov/westwingreads/).
 
 The content of these would surprise many critics of Trump. They are well-written with a professional tone and the content is well-curated. They often link to Fox News or other partisan publications, but generally only to thoughtful, well-crafted articles. Many are editorials that support the administration’s positions, but also popular are succinct, factual reports. As I write this, the current leading reference is [_Border agents just apprehended convicted child molesters and an MS-13 member at the Texas border where there's no barrier_](https://www.washingtonexaminer.com/opinion/border-agents-just-apprehended-convicted-child-molesters-and-an-ms-13-member-at-the-texas-border-where-theres-no-barrier) in the Washington Examiner.

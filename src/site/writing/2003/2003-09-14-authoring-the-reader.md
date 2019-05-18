@@ -2,7 +2,7 @@
 title: Authoring the reader
 categories:
 - culture
-writing-tags:
+content-tags:
 - book
 - writing
 ---

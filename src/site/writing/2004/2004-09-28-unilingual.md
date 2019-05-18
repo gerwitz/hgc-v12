@@ -2,7 +2,7 @@
 title: Unilingual
 categories:
 - personal
-writing-tags:
+content-tags:
 - language
 - learning
 ---

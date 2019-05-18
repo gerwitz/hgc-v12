@@ -2,7 +2,7 @@
 title: Bank Holiday
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

@@ -3,7 +3,7 @@ title: My work here is done
 categories:
 - work
 - culture
-writing-tags:
+content-tags:
 - apple
 - commerce
 ---

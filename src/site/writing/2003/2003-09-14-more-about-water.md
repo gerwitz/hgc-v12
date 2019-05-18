@@ -2,7 +2,7 @@
 title: More about water
 categories:
 - culture
-writing-tags:
+content-tags:
 - travel
 - sustainability
 - landuse

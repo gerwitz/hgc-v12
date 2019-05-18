@@ -2,7 +2,7 @@
 title: St- Louis cycling events
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 - stlouis
 ---

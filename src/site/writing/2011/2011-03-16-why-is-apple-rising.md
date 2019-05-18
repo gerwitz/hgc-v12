@@ -3,7 +3,7 @@ title: Why is Apple rising?
 categories:
 - work
 - culture
-writing-tags:
+content-tags:
 - design
 - technology
 ---

@@ -2,7 +2,7 @@
 title: Steve's dream, realized
 categories:
 - work
-writing-tags:
+content-tags:
 - technology
 - software
 ---

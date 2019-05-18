@@ -2,7 +2,7 @@
 title: Communal mythic experience
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

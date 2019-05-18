@@ -2,7 +2,7 @@
 title: microschema
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - programming
 - web

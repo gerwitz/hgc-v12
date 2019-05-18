@@ -2,7 +2,7 @@
 title: Classname of the day
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - programming
 - funny

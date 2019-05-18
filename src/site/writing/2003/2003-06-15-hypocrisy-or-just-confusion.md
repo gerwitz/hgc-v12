@@ -2,7 +2,7 @@
 title: Hypocrisy or just confusion
 categories:
 - culture
-writing-tags:
+content-tags:
 - stlouis
 ---
 

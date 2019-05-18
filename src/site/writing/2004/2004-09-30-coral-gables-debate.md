@@ -2,7 +2,7 @@
 title: Coral Gables debate
 categories:
 - culture
-writing-tags:
+content-tags:
 - politics
 - bush
 ---

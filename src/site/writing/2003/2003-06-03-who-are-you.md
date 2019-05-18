@@ -4,7 +4,7 @@ abstract: '...it appears naive to consider "you" as a wrinkly grapefruit of neur
   tissue'
 categories:
 - culture
-writing-tags:
+content-tags:
 - philosophy
 - self
 - psychology

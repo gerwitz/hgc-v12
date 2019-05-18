@@ -2,7 +2,7 @@
 title: That's not Jordan's business, it's ours
 categories:
 - culture
-writing-tags:
+content-tags:
 - history
 - politics
 ---

@@ -2,7 +2,7 @@
 title: I'll show you mine...
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

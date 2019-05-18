@@ -2,7 +2,7 @@
 title: Freedom v. Liberty
 categories:
 - culture
-writing-tags:
+content-tags:
 - language
 - politics
 - visualization

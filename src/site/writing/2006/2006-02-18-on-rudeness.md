@@ -2,7 +2,7 @@
 title: On Rudeness
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

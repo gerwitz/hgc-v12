@@ -2,7 +2,7 @@
 title: On to the Continent
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

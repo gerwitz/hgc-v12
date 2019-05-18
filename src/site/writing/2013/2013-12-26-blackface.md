@@ -4,7 +4,7 @@ abstract: The Dutch wear blackface in imitation of winter storms, or ravens, or 
   servents, or chimney soot.
 categories:
 - culture
-writing-tags:
+content-tags:
 - race
 - christmas
 - amsterdam

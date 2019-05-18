@@ -2,7 +2,7 @@
 title: Back in the saddle
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

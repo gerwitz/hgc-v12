@@ -1,6 +1,6 @@
 ---
 title: Adobe on the cluetrain
-writing-tags:
+content-tags:
 - cluetrain
 - marketing
 - socialmedia

@@ -2,7 +2,7 @@
 title: Tibetan Tea
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

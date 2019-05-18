@@ -2,7 +2,7 @@
 title: Memetic dreams
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -2,7 +2,7 @@
 title: Merriweather and William
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

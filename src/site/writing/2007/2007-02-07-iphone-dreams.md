@@ -2,7 +2,7 @@
 title: iPhone dreams
 categories:
 - work
-writing-tags:
+content-tags:
 - design
 - technology
 - apple

@@ -2,7 +2,7 @@
 title: FAIL stamp
 categories:
 - personal
-writing-tags:
+content-tags:
 - FAIL
 - media
 - popular

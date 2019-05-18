@@ -2,7 +2,7 @@
 title: Traffic as shallow leads
 categories:
 - work
-writing-tags:
+content-tags:
 - business
 ---
 

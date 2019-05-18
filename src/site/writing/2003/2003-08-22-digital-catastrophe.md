@@ -2,7 +2,7 @@
 title: Digital catastrophe
 categories:
 - personal
-writing-tags:
+content-tags:
 - technology
 - crash
 ---

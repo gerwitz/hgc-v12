@@ -3,7 +3,7 @@ title: Temporal Binding
 abstract: There is no clock.
 categories:
 - culture
-writing-tags:
+content-tags:
 - mind
 - networks
 - waves
@@ -18,7 +18,7 @@ Today I learned [bats are able to ignore clutter by sending out harmonic sonar](
 
 [tech]: And also because we may [design better radar](https://news.brown.edu/articles/2014/08/sonar) by mimicking this technique.
 
-This is interesting[^tech] because it supports the neurology model of temporal binding, 
+This is interesting[^tech] because it supports the neurology model of temporal binding,
 oscillatory synchronization, which posits that oscillatory gamma synchronisation influences sensory perception. This model may be useful in understanding attention, as well as providing some insights into both [epilepsy](http://link.springer.com/article/10.1007/BF03178284) and [autism](http://www.citeulike.org/user/sam1001/article/2478210).
 
 I like to imagine a world of computing technology that was based on this sort of emergant synchronization rather than the explicit clock beats of modern digital computers.

@@ -3,7 +3,7 @@ title: What We Need For Wearable Computing…
 abstract: Interviewed by Julia Kaganskiy
 categories:
 - Work
-writing-tags:
+content-tags:
 - ui
 - design
 - wearable

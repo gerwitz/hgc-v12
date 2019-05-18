@@ -2,7 +2,7 @@
 title: Fluctuât Nec Mergitur
 categories:
 - culture
-writing-tags: [paris, history, future, climate]
+content-tags: [paris, history, future, climate]
 ---
 
 The fire at Notre-Dame elicited a variety of reactions in the moment.

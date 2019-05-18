@@ -3,7 +3,7 @@ title: Immortality
 abstract: '...it''s pleasurable to cast a line into the future, no matter how tenuously.'
 categories:
 - culture
-writing-tags:
+content-tags:
 - quote
 - book
 - psychology

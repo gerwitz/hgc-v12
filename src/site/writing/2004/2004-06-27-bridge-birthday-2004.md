@@ -2,7 +2,7 @@
 title: Bridge Birthday 2004
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

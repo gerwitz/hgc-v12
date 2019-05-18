@@ -1,7 +1,7 @@
 ---
 title: Freedom From Speech
 categories: [culture]
-writing-tags:
+content-tags:
 - netherlands
 - society
 - rights

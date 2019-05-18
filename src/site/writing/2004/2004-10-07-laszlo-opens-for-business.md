@@ -2,7 +2,7 @@
 title: Laszlo opens for business
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

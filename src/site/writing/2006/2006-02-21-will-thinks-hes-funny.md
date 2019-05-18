@@ -2,7 +2,7 @@
 title: Will thinks he's funny
 categories:
 - personal
-writing-tags:
+content-tags:
 - friends
 ---
 

@@ -2,7 +2,7 @@
 title: Snazzlefoop
 categories:
 - culture
-writing-tags:
+content-tags:
 - aside
 - language
 - funny

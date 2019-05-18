@@ -2,7 +2,7 @@
 title: Tour de Fat
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

@@ -2,7 +2,7 @@
 title: Grandpa Charles, King of the Franks
 categories:
 - personal
-writing-tags:
+content-tags:
 - family
 - genealogy
 - history

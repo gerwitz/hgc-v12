@@ -4,7 +4,7 @@ abstract: The grass is greener out west.
 categories:
 - culture
 - personal
-writing-tags:
+content-tags:
 - seattle
 ---
 
@@ -17,7 +17,7 @@ The "Asian-Nordic" character of Seattleites replaces the false friendliness of s
 
 The vibe of the city is a delightful blend of no-nonsense professionalism without any unnecessary rush or panic.  It's difficult to compare to other cities, but is something like a cross between Chicago and New Orleans.  My own driving (which is rare, now) has shifted from hurried to relaxed and defensive to comfortable as I unconsciously adapt to the pervasive attitude around me.
 
-Most importantly, I feel at home in ways I never could in the town where I grew up.  
+Most importantly, I feel at home in ways I never could in the town where I grew up.
 
 Previously I had to explain my diet as "vegetarian plus fish," here being pescetarian (or vegetarian) is quite mainstream.  As are cycling, hiking, and any other activity that promotes health or a lifestyle in touch with the outdoors.  The aforementioned fearlessness towards fellow citizens extends to the natural world.  Gardens are much more popular than lawns, because it would be silly to use municipal water to keep grasses unnaturally green through summer, and embarrassing to spend energy and time running a lawnmower.  It's easy to maintain a reverence for nature when large bodies of water and mountain peaks are typical features of the horizon.
 

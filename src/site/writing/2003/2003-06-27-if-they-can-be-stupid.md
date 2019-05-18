@@ -2,7 +2,7 @@
 title: If they can be stupid...
 categories:
 - culture
-writing-tags:
+content-tags:
 - stlouis
 - environment
 ---

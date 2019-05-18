@@ -2,7 +2,7 @@
 title: Art vs. Design
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - design
 - quote

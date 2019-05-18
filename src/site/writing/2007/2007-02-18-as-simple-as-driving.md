@@ -2,7 +2,7 @@
 title: As simple as driving
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - design
 - driving

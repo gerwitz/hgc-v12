@@ -2,7 +2,7 @@
 title: Reibadailty would hadrly be aftcfeed
 categories:
 - culture
-writing-tags:
+content-tags:
 - language
 - perception
 - psychology

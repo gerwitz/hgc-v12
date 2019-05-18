@@ -2,7 +2,7 @@
 title: Open minds
 categories:
 - culture
-writing-tags:
+content-tags:
 - mind
 - memory
 - fave

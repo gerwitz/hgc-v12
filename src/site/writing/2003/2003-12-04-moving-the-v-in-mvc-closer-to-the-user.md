@@ -2,7 +2,7 @@
 title: Moving the V in MVC closer to the user
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

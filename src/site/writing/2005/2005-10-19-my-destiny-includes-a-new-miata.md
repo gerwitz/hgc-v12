@@ -2,7 +2,7 @@
 title: My destiny includes a new Miata
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

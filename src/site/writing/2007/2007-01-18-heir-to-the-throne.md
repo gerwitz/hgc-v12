@@ -2,7 +2,7 @@
 title: Heir to the throne
 categories:
 - work
-writing-tags:
+content-tags:
 - tech
 - design
 - quote

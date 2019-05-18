@@ -2,7 +2,7 @@
 title: My brain made me do it-
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -2,7 +2,7 @@
 title: Metadata context
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 
@@ -23,13 +23,13 @@ I wonder, though, how to best represent these maps for the purposes of transform
 Users will drive a need for a way to consistently describe format maps, as integration initiatives continue to capture a larger portion of IT budgets.  People will realize how much intellectual capital is embodied by these mappings and won't want to be tied to a translation vendor.
 
 Perhaps a sort of XPath pairing in a Schematron-ish document, with keyword value substitution.  My example above might look like:
-	
-		
-		
-	
-	
-		
-		
-	
+
+
+
+
+
+
+
+
 
 For business analysts to make any sense of this, we need graphical tools.  Contivo has one, middleware vendors have theirs, but I don't know of an interchangeable "document mapping" language.  Reverse-engineering generated XSLT is too unwieldy, because there are too many ways to describe location, so different tools will generate wildly different sheets for the same map.

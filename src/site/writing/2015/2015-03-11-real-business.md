@@ -4,7 +4,7 @@ abstract: Maturity means never having to adapt.
 categories:
 - work
 - culture
-writing-tags:
+content-tags:
 - business
 - technology
 - apple

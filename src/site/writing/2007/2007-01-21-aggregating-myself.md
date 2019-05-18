@@ -2,7 +2,7 @@
 title: Aggregating myself
 categories:
 - meta
-writing-tags:
+content-tags:
 - meta
 ---
 

@@ -2,7 +2,7 @@
 title: Applied thought
 categories:
 - work
-writing-tags:
+content-tags:
 - technology
 - Design
 - stuff

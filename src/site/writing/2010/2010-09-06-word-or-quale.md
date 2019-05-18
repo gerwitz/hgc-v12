@@ -3,7 +3,7 @@ title: Which came first, the word or the quale?
 abstract: Do our thoughts constrain our words, or vice-versa?
 categories:
 - culture
-writing-tags:
+content-tags:
 - psychology
 - communication
 - language

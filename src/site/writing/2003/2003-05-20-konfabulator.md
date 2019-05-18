@@ -2,7 +2,7 @@
 title: Konfabulator
 categories:
 - work
-writing-tags:
+content-tags:
 - widgets
 ---
 

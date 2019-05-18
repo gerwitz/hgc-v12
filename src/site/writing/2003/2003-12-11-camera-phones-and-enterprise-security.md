@@ -2,7 +2,7 @@
 title: Camera phones and enterprise security
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

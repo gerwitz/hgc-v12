@@ -2,7 +2,7 @@
 title: Google Wars
 categories:
 - personal
-writing-tags:
+content-tags:
 - funny
 ---
 

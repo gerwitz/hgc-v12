@@ -2,7 +2,7 @@
 title: Smell this
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

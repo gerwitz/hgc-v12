@@ -3,7 +3,7 @@ title: Dreyfus's learning ladder
 categories:
 - work
 - culture
-writing-tags:
+content-tags:
 - business
 - learning
 - mind

@@ -2,11 +2,11 @@
 title: The industry catches up to WebObjects
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 
-As part of an excellent [http://dobbse.net/thinair/2003/09/000140.html][1], Eric Dobbs presents his [http://dobbse.net/thinair/2003/10/000150.html][2].  
+As part of an excellent [http://dobbse.net/thinair/2003/09/000140.html][1], Eric Dobbs presents his [http://dobbse.net/thinair/2003/10/000150.html][2].
 
    [1]: http://dobbse.net/thinair/2003/09/000140.html
    [2]: http://dobbse.net/thinair/2003/10/000150.html

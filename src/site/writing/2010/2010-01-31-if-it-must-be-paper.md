@@ -3,7 +3,7 @@ title: If it must be paper...
 abstract: The recent boarding pass redesign meme fails to actually redesign.
 categories:
 - work
-writing-tags:
+content-tags:
 - design
 - visualization
 - ia
@@ -13,7 +13,7 @@ In December I enjoyed a piece in McSweeney's [San Francisco Panorama][1] wherein
 
 Chip's work seems to have garnered little attention, but Tyler's generated a [wave of reactions][4], included misguided accommodation of thermal printing and some genuine insights into [information hierarchy][5] and many visual improvements.  I'm particularly fond of Julian Montoya's vertical layout.
 
-But none of them added anything beyond boarding time (which many passes already display).  Where are the guides to whether my seat is on the left or the right of the plane?  Or a mini-map to my gate letting me know where the nearest Starbucks is?  
+But none of them added anything beyond boarding time (which many passes already display).  Where are the guides to whether my seat is on the left or the right of the plane?  Or a mini-map to my gate letting me know where the nearest Starbucks is?
 
 These have all been graphic designs (with the exception of J. Jason Smith's [prose version][6]).  No one has gone back and questioned the function of the thing or, really, the emotional desires of its users (in what frog would call discovery).
 

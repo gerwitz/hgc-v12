@@ -2,7 +2,7 @@
 title: Ordinary People
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

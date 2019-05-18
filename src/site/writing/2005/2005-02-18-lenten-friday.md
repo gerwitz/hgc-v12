@@ -2,7 +2,7 @@
 title: Lenten Friday
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

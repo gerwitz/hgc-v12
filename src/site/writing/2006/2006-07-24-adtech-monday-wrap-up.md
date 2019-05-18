@@ -2,7 +2,7 @@
 title: ad:tech Monday wrap-??up
 categories:
 - work
-writing-tags:
+content-tags:
 - business
 - marketing
 - web

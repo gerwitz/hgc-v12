@@ -2,7 +2,7 @@
 title: The Return of the King
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

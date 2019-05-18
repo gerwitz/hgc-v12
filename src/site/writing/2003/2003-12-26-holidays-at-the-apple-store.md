@@ -2,7 +2,7 @@
 title: Holidays at the Apple Store
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -2,7 +2,7 @@
 title: Big-footed philosophy
 categories:
 - culture
-writing-tags:
+content-tags:
 - arguement
 - communication
 ---

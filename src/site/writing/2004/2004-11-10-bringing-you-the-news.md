@@ -2,7 +2,7 @@
 title: Bringing you the news
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

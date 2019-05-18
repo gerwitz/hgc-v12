@@ -2,7 +2,7 @@
 title: Election day observations
 categories:
 - culture
-writing-tags:
+content-tags:
 - Design
 - politics
 - stlouis

@@ -2,7 +2,7 @@
 title: Color diet
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

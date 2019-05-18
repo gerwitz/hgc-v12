@@ -2,7 +2,7 @@
 title: Craftsmanship
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

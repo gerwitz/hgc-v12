@@ -2,7 +2,7 @@
 title: Open means choice
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - quote
 - business

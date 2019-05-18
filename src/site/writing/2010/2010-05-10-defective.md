@@ -5,7 +5,7 @@ abstract: I experienced my first anesthetic in under the blinding glare of an op
   his assistant.
 categories:
 - personal
-writing-tags:
+content-tags:
 - medicine
 - health
 - extropy
@@ -29,6 +29,6 @@ The ordeal wasn't that harrowing, really, and I left with an epoxy-rebuilt tooth
 
 I've now crossed a line.  Rather than "repaired", I feel I have been augmented via the introduction of synthetic material.  My new bit of molar is superior in many ways to the original, so I wonder why I don't have more replaced.  Perhaps I can have a sensor-laden molar installed that can report on the timing and composition of my food intake.
 
-The state of medical augmentation technology is quite impressive, with artificial bones and organs commonplace.  With an increasing appreciation for self-measurement, how long must we wait before sensors are developed for voluntary implantation?  Will sports regulators allow a simple blood sugar sensor, which could be a valuable training tool but also a safety device?  How will they confirm that you don't have a VOMax-boosting oxygenator woven into a lung?    
+The state of medical augmentation technology is quite impressive, with artificial bones and organs commonplace.  With an increasing appreciation for self-measurement, how long must we wait before sensors are developed for voluntary implantation?  Will sports regulators allow a simple blood sugar sensor, which could be a valuable training tool but also a safety device?  How will they confirm that you don't have a VOMax-boosting oxygenator woven into a lung?
 
 Now that I've accepted a man-made improvement to my physical self, I'm eager for more.

@@ -2,7 +2,7 @@
 title: The Gerwitz Memorial Grove
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

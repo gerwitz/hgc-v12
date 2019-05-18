@@ -2,7 +2,7 @@
 title: Expert Panel
 categories:
 - work
-writing-tags:
+content-tags:
 - business
 - technology
 - java

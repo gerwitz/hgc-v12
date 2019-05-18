@@ -2,7 +2,7 @@
 title: Cute girls and tension
 categories:
 - personal
-writing-tags:
+content-tags:
 - bias
 ---
 

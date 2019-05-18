@@ -2,7 +2,7 @@
 title: Distant family
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

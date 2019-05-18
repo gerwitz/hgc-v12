@@ -2,7 +2,7 @@
 title: Phonetic nightmares
 categories:
 - meta
-writing-tags:
+content-tags:
 - programming
 ---
 

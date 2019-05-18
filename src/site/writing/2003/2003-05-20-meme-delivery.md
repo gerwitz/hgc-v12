@@ -3,7 +3,7 @@ title: Meme delivery
 abstract: I judge messages by the effort put into generating them.
 categories:
 - culture
-writing-tags:
+content-tags:
 - communication
 ---
 

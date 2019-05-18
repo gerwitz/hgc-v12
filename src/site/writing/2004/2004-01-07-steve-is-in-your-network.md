@@ -2,7 +2,7 @@
 title: Steve is in your network
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

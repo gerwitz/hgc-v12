@@ -2,7 +2,7 @@
 title: Those other limbs
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

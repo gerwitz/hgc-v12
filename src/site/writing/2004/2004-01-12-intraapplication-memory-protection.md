@@ -2,7 +2,7 @@
 title: Intraapplication memory protection
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

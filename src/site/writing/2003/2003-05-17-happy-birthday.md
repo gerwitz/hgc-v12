@@ -2,7 +2,7 @@
 title: Happy Birthday!
 categories:
 - personal
-writing-tags:
+content-tags:
 - birthday
 ---
 

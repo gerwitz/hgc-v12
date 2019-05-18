@@ -2,7 +2,7 @@
 title: Welcome to the light-
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

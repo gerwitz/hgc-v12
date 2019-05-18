@@ -3,7 +3,7 @@ title: Name That Blue
 abstract: A cheatsheet
 categories:
 - work
-writing-tags:
+content-tags:
 - design
 - brand
 - fun

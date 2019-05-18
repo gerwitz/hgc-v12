@@ -2,7 +2,7 @@
 title: The pot, on tint-
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

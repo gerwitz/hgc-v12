@@ -2,7 +2,7 @@
 title: A maze of twisty passages, all alike-
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

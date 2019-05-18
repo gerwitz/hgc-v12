@@ -2,7 +2,7 @@
 title: Get her done
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

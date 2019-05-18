@@ -2,7 +2,7 @@
 title: Masturbation tax
 categories:
 - culture
-writing-tags:
+content-tags:
 - politics
 - funny
 ---

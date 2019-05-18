@@ -3,7 +3,7 @@ title: Personal LAN
 abstract: Shouldn't technology be user-centered?
 categories:
 - work
-writing-tags:
+content-tags:
 - apple
 - idea
 - technology

@@ -2,7 +2,7 @@
 title: Semantics and context
 categories:
 - work
-writing-tags:
+content-tags:
 - semantic
 - data
 - web

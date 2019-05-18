@@ -2,7 +2,7 @@
 title: Getting here
 categories:
 - meta
-writing-tags:
+content-tags:
 - urls
 ---
 

@@ -2,7 +2,7 @@
 title: Electric Oxygen
 categories:
 - personal
-writing-tags:
+content-tags:
 - culture
 - scooter
 - shopping
@@ -20,7 +20,7 @@ It turns out that there are quite a few models of all-electric scooter out there
 
 The most promising product out there was (naturally) from an Italian company named [Oxygen][7].  Their Lepton scooter got [rave reviews][8] but their US sales network was a failure and after making a few thousand the company modified it for commercial markets where they can make more money but it's less attractive for me.  They're awfully expensive compared to gas scooters and I just couldn't talk myself into spending that much sight unseen.
 
-Vespa [announced hybrids][9] that would be a decent compromise for me and look great, but there's no timetable for public sale in Italy, much less the US.  
+Vespa [announced hybrids][9] that would be a decent compromise for me and look great, but there's no timetable for public sale in Italy, much less the US.
 
 ![Oxygen Lepton](/media/2007-02-09-electric-oxygen/lepton.thumbnail.jpg)
 

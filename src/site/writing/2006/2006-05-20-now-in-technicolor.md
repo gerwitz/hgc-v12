@@ -2,7 +2,7 @@
 title: Now in Technicolor
 categories:
 - personal
-writing-tags:
+content-tags:
 - aside
 ---
 

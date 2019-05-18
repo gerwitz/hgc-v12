@@ -2,7 +2,7 @@
 title: London arrival
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

@@ -2,7 +2,7 @@
 title: Impending doom
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 - charity
 ---

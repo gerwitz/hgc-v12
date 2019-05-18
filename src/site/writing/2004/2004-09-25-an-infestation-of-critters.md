@@ -2,7 +2,7 @@
 title: An Infestation of Critters
 categories:
 - personal
-writing-tags:
+content-tags:
 - cat
 ---
 

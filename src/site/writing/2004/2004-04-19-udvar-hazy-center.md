@@ -2,7 +2,7 @@
 title: Udvar-Hazy Center
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

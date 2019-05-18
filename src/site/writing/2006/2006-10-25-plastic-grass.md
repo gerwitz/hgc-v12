@@ -1,6 +1,6 @@
 ---
 title: Plastic grass
-writing-tags:
+content-tags:
 - marketing
 - media
 ---

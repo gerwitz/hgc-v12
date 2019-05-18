@@ -2,7 +2,7 @@
 title: Discrete weather
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - design
 - funny

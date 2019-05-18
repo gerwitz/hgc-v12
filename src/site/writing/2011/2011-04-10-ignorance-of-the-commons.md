@@ -2,7 +2,7 @@
 title: Ignorance of the commons
 categories:
 - culture
-writing-tags:
+content-tags:
 - politics
 - rant
 ---

@@ -2,7 +2,7 @@
 title: Tete de Course
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

@@ -3,7 +3,7 @@ title: Bus Driver Appreciation Day
 abstract: Wherein I propose March 18th as Bus Driver Appreciation Day.
 categories:
 - culture
-writing-tags:
+content-tags:
 - seattle
 - transportation
 - urban

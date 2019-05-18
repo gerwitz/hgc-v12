@@ -2,7 +2,7 @@
 title: Real-world AdSense
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

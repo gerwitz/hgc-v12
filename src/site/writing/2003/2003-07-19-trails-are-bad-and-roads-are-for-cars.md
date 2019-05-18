@@ -2,7 +2,7 @@
 title: Trails are bad, and roads are for cars-
 categories:
 - culture
-writing-tags:
+content-tags:
 - cycling
 - transportation
 - landuse

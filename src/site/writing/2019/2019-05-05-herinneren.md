@@ -2,7 +2,7 @@
 title: Mokum’s Broken Heart
 date: 2019-05-05
 categories: [culture]
-writing-tags:
+content-tags:
 - netherlands
 - amsterdam
 - war
@@ -22,6 +22,6 @@ This bridge connects to the Jodenbuurt, the Jewish quarter that was mostly demol
 
 In February of 1941, the relative calm of occupied Amsterdam came to an abrupt end. First, some fascist asshole went into this neighborhood against orders and picked a fight, which he lost. The Nazis responded by closing off the neighborhood, including raising the Magere Brug. Eventually the Germans picked another fight and lost, then retaliated by deporting 425 Jewish men.[^423] The city responded with a [general strike](https://www.worldjewishcongress.org/en/news/amsterdam-marks-anniversary-of-1941-general-strike-in-support-of-jews-2-4-2016) and any sense of "we can live with this" was gone.
 
-[^423]: They eventually ended up in concentration camps. Only 2 survived. 
+[^423]: They eventually ended up in concentration camps. Only 2 survived.
 
 Yesterday during the ceremonies the Magere Brug was raised to remind us of those events.

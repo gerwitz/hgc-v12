@@ -2,7 +2,7 @@
 title: Metrorail
 categories:
 - personal
-writing-tags:
+content-tags:
 - transportation
 - urban
 - travel

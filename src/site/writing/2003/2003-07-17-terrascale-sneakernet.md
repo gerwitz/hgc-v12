@@ -2,7 +2,7 @@
 title: TerraScale SneakerNet
 categories:
 - work
-writing-tags:
+content-tags:
 - date
 - network
 ---

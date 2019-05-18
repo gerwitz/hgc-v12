@@ -2,7 +2,7 @@
 title: In costume
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

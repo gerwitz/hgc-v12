@@ -2,7 +2,7 @@
 title: Zabriskie abandons
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

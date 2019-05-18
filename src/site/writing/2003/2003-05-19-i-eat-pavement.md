@@ -2,7 +2,7 @@
 title: I eat pavement
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

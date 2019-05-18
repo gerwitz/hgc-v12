@@ -2,7 +2,7 @@
 title: A London (and Oxford) Weekday
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

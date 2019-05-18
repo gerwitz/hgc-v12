@@ -2,7 +2,7 @@
 title: Rendered with ink
 categories:
 - personal
-writing-tags:
+content-tags:
 - business
 - media
 - personal

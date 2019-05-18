@@ -2,7 +2,7 @@
 title: Annie's Frozen Custard
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

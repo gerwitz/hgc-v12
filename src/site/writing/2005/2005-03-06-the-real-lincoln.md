@@ -2,7 +2,7 @@
 title: The Real Lincoln
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

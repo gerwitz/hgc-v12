@@ -2,7 +2,7 @@
 title: Google is the new Netscape
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

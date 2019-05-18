@@ -2,7 +2,7 @@
 title: IronEye SQL
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - programming
 - database

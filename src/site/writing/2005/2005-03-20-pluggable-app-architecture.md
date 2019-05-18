@@ -2,7 +2,7 @@
 title: Pluggable App Architecture
 categories:
 - work
-writing-tags:
+content-tags:
 - technology
 - java
 - programming

@@ -2,7 +2,7 @@
 title: Girl Steamer
 categories:
 - culture
-writing-tags:
+content-tags:
 - sport
 - gender
 - stlouis

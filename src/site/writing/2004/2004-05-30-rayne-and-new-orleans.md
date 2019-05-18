@@ -2,7 +2,7 @@
 title: Rayne and New Orleans
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

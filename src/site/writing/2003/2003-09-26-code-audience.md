@@ -2,7 +2,7 @@
 title: Code audience
 categories:
 - work
-writing-tags:
+content-tags:
 - programming
 - fave
 ---

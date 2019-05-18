@@ -3,7 +3,7 @@ title: Two Ton Boa
 categories:
 - culture
 - personal
-writing-tags:
+content-tags:
 - aside
 - music
 ---

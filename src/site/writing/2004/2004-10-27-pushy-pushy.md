@@ -2,7 +2,7 @@
 title: Pushy, pushy
 categories:
 - work
-writing-tags:
+content-tags:
 - technology
 - web
 - fave

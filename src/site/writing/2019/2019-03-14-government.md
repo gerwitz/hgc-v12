@@ -2,7 +2,7 @@
 title: How to Government
 categories:
 - culture
-writing-tags: [netherlands, politics, climate, environment]
+content-tags: [netherlands, politics, climate, environment]
 ---
 
 Ours is a neoliberal society that treats economic growth as a moral virtue. So the government has been slow to extend environmental protections to the large-scale and long-term problem of climate change.

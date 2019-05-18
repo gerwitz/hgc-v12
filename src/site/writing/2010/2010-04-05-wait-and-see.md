@@ -4,7 +4,7 @@ abstract: '"''We never say never, but we have no current plans'' to develop a ve
   of Office for the Apple iPad"'
 categories:
 - work
-writing-tags:
+content-tags:
 - business
 ---
 

@@ -2,7 +2,7 @@
 title: Slideware
 categories:
 - work
-writing-tags:
+content-tags:
 - communication
 - design
 ---

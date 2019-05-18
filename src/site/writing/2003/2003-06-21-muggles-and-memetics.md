@@ -2,7 +2,7 @@
 title: Muggles and Memetics
 categories:
 - personal
-writing-tags:
+content-tags:
 - book
 ---
 

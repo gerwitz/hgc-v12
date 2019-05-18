@@ -2,7 +2,7 @@
 title: Herding Racehorses and Racing Sheep
 categories:
 - work
-writing-tags:
+content-tags:
 - business
 - mind
 - programming

@@ -3,7 +3,7 @@ title: Word of the day
 abstract: But you can just call me...
 categories:
 - culture
-writing-tags:
+content-tags:
 - language
 - aside
 ---

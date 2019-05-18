@@ -2,7 +2,7 @@
 title: I wanna be like Lance
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

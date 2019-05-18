@@ -3,7 +3,7 @@ title: Planes rather than trains
 abstract: Amtrak FAIL
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

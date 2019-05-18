@@ -2,7 +2,7 @@
 title: Build your card
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - design
 - marketing

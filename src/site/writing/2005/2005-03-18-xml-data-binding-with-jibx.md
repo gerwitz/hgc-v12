@@ -2,7 +2,7 @@
 title: XML Data Binding with JiBX
 categories:
 - work
-writing-tags:
+content-tags:
 - technology
 - java
 - programming

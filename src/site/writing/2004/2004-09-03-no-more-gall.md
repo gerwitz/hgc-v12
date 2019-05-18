@@ -2,7 +2,7 @@
 title: No more gall
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -2,7 +2,7 @@
 title: Memespeed
 categories:
 - meta
-writing-tags:
+content-tags:
 - meta
 ---
 

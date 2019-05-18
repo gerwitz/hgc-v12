@@ -2,7 +2,7 @@
 title: Receivers
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

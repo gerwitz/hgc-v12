@@ -2,7 +2,7 @@
 title: Suffering
 categories:
 - culture
-writing-tags:
+content-tags:
 - cycling
 - inspiration
 ---

@@ -2,7 +2,7 @@
 title: Edward comes home
 categories:
 - personal
-writing-tags:
+content-tags:
 - driving
 ---
 

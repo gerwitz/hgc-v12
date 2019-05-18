@@ -4,7 +4,7 @@ abstract: 8.8 million lines of code!
 categories:
 - work
 - culture
-writing-tags:
+content-tags:
 - web
 - standards
 - humor

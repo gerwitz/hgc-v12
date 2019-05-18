@@ -3,7 +3,7 @@ title: Social Turing tests
 categories:
 - culture
 - personal
-writing-tags:
+content-tags:
 - idea
 - justice
 - mind

@@ -2,7 +2,7 @@
 title: Public works
 categories:
 - culture
-writing-tags:
+content-tags:
 - politics
 - quote
 - security

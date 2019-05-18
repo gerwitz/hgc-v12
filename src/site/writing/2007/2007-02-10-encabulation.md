@@ -4,7 +4,7 @@ abstract: We're not good enough at software to poke fun at ourselves yet.
 categories:
 - work
 - culture
-writing-tags:
+content-tags:
 - technology
 - funny
 - history
@@ -12,7 +12,7 @@ writing-tags:
 - ★
 ---
 
-[Ryan][1] shared this technical video spoof:  
+[Ryan][1] shared this technical video spoof:
 
 <iframe width="420" height="315" src="https://www.youtube-nocookie.com/embed/TuhYd9L_d7w?rel=0" frameborder="0" allowfullscreen></iframe>
 

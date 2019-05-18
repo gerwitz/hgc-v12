@@ -3,7 +3,7 @@ title: Inevitability
 categories:
 - personal
 - culture
-writing-tags:
+content-tags:
 - philosophy
 - film
 ---

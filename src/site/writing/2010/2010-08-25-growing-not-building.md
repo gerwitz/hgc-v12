@@ -2,7 +2,7 @@
 title: More like growing
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - tech
 - quote

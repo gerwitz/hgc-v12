@@ -2,7 +2,7 @@
 title: Did your vote count
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

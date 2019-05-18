@@ -2,7 +2,7 @@
 title: Hoobellatoo - Experiential Auction
 categories:
 - culture
-writing-tags:
+content-tags:
 - aside
 - stlouis
 ---

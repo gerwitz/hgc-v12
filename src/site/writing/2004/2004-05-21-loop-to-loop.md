@@ -2,7 +2,7 @@
 title: Loop to loop
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

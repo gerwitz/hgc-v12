@@ -2,7 +2,7 @@
 title: Small World
 categories:
 - personal
-writing-tags: [india, travel]
+content-tags: [india, travel]
 ---
 
 Last week in Bangalore, I had dinner three nights in a row with friends from the area. One I originally met in Bangalore, one in Seattle, one in Munich. Flying home, I just ran into an American friend from Amsterdam who is returning from Dubai.

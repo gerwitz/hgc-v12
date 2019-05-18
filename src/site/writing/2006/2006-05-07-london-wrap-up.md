@@ -2,13 +2,13 @@
 title: London wrap-up
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 
 ### Impressions
 
-Central London is clean, approachable, and the locals are more polite and friendly than you could imagine.  Not sure I could stay, though, with smoking being so prevalent and most socializing centered around drinking at pubs.  
+Central London is clean, approachable, and the locals are more polite and friendly than you could imagine.  Not sure I could stay, though, with smoking being so prevalent and most socializing centered around drinking at pubs.
 
 
 ### Highlights

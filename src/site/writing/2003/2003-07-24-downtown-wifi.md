@@ -2,7 +2,7 @@
 title: Downtown WiFi
 categories:
 - culture
-writing-tags:
+content-tags:
 - stlouis
 ---
 

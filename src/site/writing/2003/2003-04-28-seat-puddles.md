@@ -2,7 +2,7 @@
 title: Seat puddles
 categories:
 - personal
-writing-tags:
+content-tags:
 - miata
 ---
 

@@ -2,7 +2,7 @@
 title: SpamBayes at work
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

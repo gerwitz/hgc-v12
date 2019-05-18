@@ -2,7 +2,7 @@
 title: Message about media
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - media
 - business

@@ -2,7 +2,7 @@
 title: Feature logjam
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

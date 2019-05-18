@@ -2,7 +2,7 @@
 title: Rainy days and paper apes
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

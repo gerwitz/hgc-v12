@@ -3,7 +3,7 @@ title: Google bomb
 abstract: Please try again in a minute or so.
 categories:
 - work
-writing-tags:
+content-tags:
 - google
 - aside
 ---

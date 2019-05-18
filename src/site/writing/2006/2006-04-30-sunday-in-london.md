@@ -2,7 +2,7 @@
 title: Sunday in London
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

@@ -2,7 +2,7 @@
 title: PersonCode
 categories:
 - work
-writing-tags:
+content-tags:
 - technology
 - web
 ---

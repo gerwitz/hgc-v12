@@ -2,7 +2,7 @@
 title: Social market crash
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

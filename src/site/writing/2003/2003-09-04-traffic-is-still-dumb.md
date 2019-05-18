@@ -2,7 +2,7 @@
 title: Traffic is still dumb
 categories:
 - culture
-writing-tags:
+content-tags:
 - stlouis
 - transportation
 ---

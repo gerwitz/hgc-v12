@@ -2,7 +2,7 @@
 title: The Red Scare
 categories:
 - culture
-writing-tags:
+content-tags:
 - politics
 - bush
 - usa

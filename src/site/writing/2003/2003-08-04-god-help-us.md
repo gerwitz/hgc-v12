@@ -2,7 +2,7 @@
 title: God help us
 categories:
 - culture
-writing-tags:
+content-tags:
 - politics
 ---
 

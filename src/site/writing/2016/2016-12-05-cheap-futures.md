@@ -3,7 +3,7 @@ title: Cheap Futures
 abstract: "Shallow thinking richly presented"
 categories:
 - work
-writing-tags:
+content-tags:
 - futures
 - design
 external: http://safelyignored.com/cheap-futures

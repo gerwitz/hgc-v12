@@ -2,7 +2,7 @@
 title: James Raymond Noggle
 categories:
 - personal
-writing-tags:
+content-tags:
 - aside
 - friends
 ---

@@ -2,7 +2,7 @@
 title: doubleplusparty
 categories:
 - personal
-writing-tags:
+content-tags:
 - party
 ---
 

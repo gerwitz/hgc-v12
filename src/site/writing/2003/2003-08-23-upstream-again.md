@@ -2,7 +2,7 @@
 title: Upstream again
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

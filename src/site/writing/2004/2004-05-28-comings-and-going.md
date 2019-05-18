@@ -2,7 +2,7 @@
 title: Comings and Going
 categories:
 - personal
-writing-tags:
+content-tags:
 - travel
 ---
 

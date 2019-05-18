@@ -1,6 +1,6 @@
 ---
 title: Free, natural feedback
-writing-tags:
+content-tags:
 - marketing
 ---
 

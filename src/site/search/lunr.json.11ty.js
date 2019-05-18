@@ -24,12 +24,14 @@ class LunrIndex {
 
     builder.ref('ref');
     builder.field('title');
+    builder.field('tags');
     builder.field('content');
 
     pages.forEach(function (doc, index) {
       builder.add({
         ref: index,
         title: doc.data.title,
+        tags: doc.data["content-tags"],
         content: doc.templateContent
       });
     });

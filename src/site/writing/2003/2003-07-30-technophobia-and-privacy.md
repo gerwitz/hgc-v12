@@ -2,7 +2,7 @@
 title: Technophobia and privacy
 categories:
 - work
-writing-tags:
+content-tags:
 - identity
 - technology
 - retail

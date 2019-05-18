@@ -2,7 +2,7 @@
 title: So dark the con of man
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -2,7 +2,7 @@
 title: Piggers are number one
 categories:
 - culture
-writing-tags:
+content-tags:
 - aside
 - quote
 - funny

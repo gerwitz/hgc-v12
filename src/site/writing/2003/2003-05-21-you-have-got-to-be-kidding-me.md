@@ -2,7 +2,7 @@
 title: You have got to be kidding me
 categories:
 - culture
-writing-tags:
+content-tags:
 - driving
 - politics
 ---

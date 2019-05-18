@@ -2,7 +2,7 @@
 title: Meat-based web services
 categories:
 - work
-writing-tags:
+content-tags:
 - business
 - technology
 - software

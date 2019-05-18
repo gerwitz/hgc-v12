@@ -2,7 +2,7 @@
 title: Gateway Software Symposium 2005
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -2,7 +2,7 @@
 title: Subsidized indulgence
 categories:
 - culture
-writing-tags:
+content-tags:
 - fave
 - politics
 - transportation

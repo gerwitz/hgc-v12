@@ -2,7 +2,7 @@
 title: For the record
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

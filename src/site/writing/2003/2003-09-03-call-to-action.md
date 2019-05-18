@@ -2,7 +2,7 @@
 title: Call to action
 categories:
 - culture
-writing-tags:
+content-tags:
 - cycling
 - transportation
 ---

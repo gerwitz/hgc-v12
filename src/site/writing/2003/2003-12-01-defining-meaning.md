@@ -2,7 +2,7 @@
 title: Defining meaning
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

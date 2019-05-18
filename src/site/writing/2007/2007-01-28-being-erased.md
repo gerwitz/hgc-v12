@@ -2,7 +2,7 @@
 title: Being erased
 categories:
 - personal
-writing-tags:
+content-tags:
 - history
 - me
 - net

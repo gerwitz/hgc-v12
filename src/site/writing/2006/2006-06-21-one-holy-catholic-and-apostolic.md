@@ -2,7 +2,7 @@
 title: One holy, catholic, and apostolic…
 categories:
 - culture
-writing-tags:
+content-tags:
 - culture
 - globalism
 - religion

@@ -2,11 +2,11 @@
 title: Indistinguishable from magic
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 
-Since the latest 
+Since the latest
 
 link: link needs a name and a url as argument
 

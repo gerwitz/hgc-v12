@@ -2,7 +2,7 @@
 title: Follow the money
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -3,7 +3,7 @@ title: Blipverts
 categories:
 - work
 - culture
-writing-tags:
+content-tags:
 - advertising
 - idea
 - marketing

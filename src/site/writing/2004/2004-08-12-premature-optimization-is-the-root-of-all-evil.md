@@ -4,7 +4,7 @@ abstract: The history of a popular quote seems to lead from Knuth to Hoare to Di
 categories:
 - culture
 - work
-writing-tags:
+content-tags:
 - history
 - programming
 - popular
@@ -20,11 +20,11 @@ writing-tags:
 Hoare, however, did not claim it when I queried him in January of 2004:
 
 > Dear Hans,
-> 
+>
 > I'm sorry I have no recollection how this quotation came about.? I might have attributed it to Edsger Dijkstra.
-> 
+>
 > I think it would be fair for you assume it is common culture or folklore.
-> 
+>
 > Tony.
 
 [Bruce Eckel][5] also [credits Dijkstra][6].  Now **that** would be ironic, since the widely-attributed first use by Knuth was written as a rebuttal to Dijkstra's _[Go To Statement Considered Harmful][7]_.

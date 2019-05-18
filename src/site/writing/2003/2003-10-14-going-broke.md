@@ -2,7 +2,7 @@
 title: Going broke
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

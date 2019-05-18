@@ -3,7 +3,7 @@ title: Propping up Adsense
 abstract: Google's soft spot
 categories:
 - work
-writing-tags:
+content-tags:
 - google
 - business
 - advertising

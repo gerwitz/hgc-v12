@@ -2,15 +2,15 @@
 title: Morbid friends
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 
-Surfing 
+Surfing
 
 link: link needs a name and a url as argument
 
-this evening (have to update after a bookstore run), I noticed that 7th in my list of 
+this evening (have to update after a bookstore run), I noticed that 7th in my list of
 
 link: link needs a name and a url as argument
 

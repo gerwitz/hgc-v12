@@ -2,7 +2,7 @@
 title: Fun, smart and sensual young woman
 categories:
 - culture
-writing-tags:
+content-tags:
 - funny
 ---
 

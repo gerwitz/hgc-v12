@@ -2,7 +2,7 @@
 title: The Meaning of Life
 categories:
 - personal
-writing-tags:
+content-tags:
 - me
 - media
 - personal

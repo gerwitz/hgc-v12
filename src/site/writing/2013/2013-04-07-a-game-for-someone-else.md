@@ -3,7 +3,7 @@ title: Time and Value
 abstract: A game for someone else.
 categories:
 - culture
-writing-tags:
+content-tags:
 - gaming
 - time
 external: http://safelyignored.com/a-game-for-someone-else/

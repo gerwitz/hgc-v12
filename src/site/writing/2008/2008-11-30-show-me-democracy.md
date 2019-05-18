@@ -4,7 +4,7 @@ abstract: So what if one state casts 11 electoral votes based on uneven distribu
   of election resources?
 categories:
 - culture
-writing-tags:
+content-tags:
 - government
 - politics
 - stlouis

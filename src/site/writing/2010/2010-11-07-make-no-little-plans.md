@@ -2,7 +2,7 @@
 title: Make no little plans
 categories:
 - work
-writing-tags:
+content-tags:
 - aside
 - quotes
 - design

@@ -4,7 +4,7 @@ abstract: plausibility via superstructures of technical complication
 categories:
 - culture
 - work
-writing-tags:
+content-tags:
 - design
 - quote
 - urban

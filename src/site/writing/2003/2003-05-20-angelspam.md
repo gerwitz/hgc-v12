@@ -3,7 +3,7 @@ title: Angelspam
 abstract: A neologism for well-intentioned forwards.
 categories:
 - culture
-writing-tags:
+content-tags:
 - spam
 ---
 

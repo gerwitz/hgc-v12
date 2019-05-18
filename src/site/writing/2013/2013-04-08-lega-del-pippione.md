@@ -3,7 +3,7 @@ title: Galileo vs. the League of Pigeons
 abstract: Don't let the pigeons keep you down.
 categories:
 - culture
-writing-tags:
+content-tags:
 - history
 - science
 external: https://medium.com/history-repeats/7ee3bcf10e4c
@@ -19,7 +19,7 @@ If you live near Kansas, this likely sounds familiar.
 
 Galileo also made a political error in accommodating Pope Urban VIII's arguments by use of Simplicio, the straw-man advocate for Ptolemaic geocentrism in _Dialogue_. But Simplicio was not a stand-in for Church authority, for the character was already present in the text and represents many Aristotelian perspectives beyond geocentrism.
 
-It is from the original inspiration for Simplicio we can draw a modern lesson. "The pigeon" Lodovico delle Colombe was a staunch defender of existing models of nature, including not only an immobile Earth, but also a perfectly spherical moon (all heavenly bodies must be pure) and buoyancy based on form. Galileo was a figure of controversy because he dared to question the way people were raised to understand the world, presenting alternative views that align with observed measurements. 
+It is from the original inspiration for Simplicio we can draw a modern lesson. "The pigeon" Lodovico delle Colombe was a staunch defender of existing models of nature, including not only an immobile Earth, but also a perfectly spherical moon (all heavenly bodies must be pure) and buoyancy based on form. Galileo was a figure of controversy because he dared to question the way people were raised to understand the world, presenting alternative views that align with observed measurements.
 
 When Pope John Paul II famously apologized to Galileo in 1992, he summed up this faux pax:
 > [Galileo] rejected the suggestion made to him to present the Copernican system as a hypothesis, inasmuch as it had not been confirmed by irrefutable proof.

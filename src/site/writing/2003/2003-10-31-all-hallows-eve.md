@@ -2,7 +2,7 @@
 title: All Hallow's Eve
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

@@ -2,7 +2,7 @@
 title: Biorythms
 categories:
 - culture
-writing-tags:
+content-tags:
 - stlouis
 ---
 

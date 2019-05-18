@@ -2,7 +2,7 @@
 title: Fatherless
 categories:
 - personal
-writing-tags:
+content-tags:
 - tagless
 ---
 

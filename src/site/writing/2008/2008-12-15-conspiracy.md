@@ -3,7 +3,7 @@ title: Conspiracy
 abstract: Making excuses for RIM--why it's good that the Storm sucks.
 categories:
 - work
-writing-tags:
+content-tags:
 - business
 - mobile
 - technology

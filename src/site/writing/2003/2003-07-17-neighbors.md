@@ -2,7 +2,7 @@
 title: Neighbors
 categories:
 - personal
-writing-tags:
+content-tags:
 - sin
 ---
 

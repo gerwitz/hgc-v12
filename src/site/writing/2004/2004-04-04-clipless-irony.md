@@ -2,7 +2,7 @@
 title: Clipless irony
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

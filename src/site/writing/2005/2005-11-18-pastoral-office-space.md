@@ -2,7 +2,7 @@
 title: Pastoral office space
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

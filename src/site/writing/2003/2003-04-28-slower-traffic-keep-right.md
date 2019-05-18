@@ -2,7 +2,7 @@
 title: Slower traffic keep right
 categories:
 - culture
-writing-tags:
+content-tags:
 - driving
 - rant
 - stlouis

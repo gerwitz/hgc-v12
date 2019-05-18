@@ -2,7 +2,7 @@
 title: Shaking the winter blahs
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

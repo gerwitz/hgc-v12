@@ -2,7 +2,7 @@
 title: How did we syndicate our blogs before computers?
 categories:
 - meta
-writing-tags:
+content-tags:
 - feed
 ---
 

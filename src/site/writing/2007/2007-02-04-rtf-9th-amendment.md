@@ -2,7 +2,7 @@
 title: RTF 9th Amendment
 categories:
 - culture
-writing-tags:
+content-tags:
 - government
 - politics
 ---

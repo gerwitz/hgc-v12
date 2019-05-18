@@ -3,7 +3,7 @@ title: Apple Glasses
 abstract: Not yet, but I expect hints
 categories:
 - work
-writing-tags:
+content-tags:
 - tech
 - ar
 - apple

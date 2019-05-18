@@ -1,6 +1,6 @@
 ---
 title: Irony of the day
-writing-tags:
+content-tags:
 - language
 - marketing
 ---

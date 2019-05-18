@@ -2,7 +2,7 @@
 title: Technology adoption
 categories:
 - work
-writing-tags:
+content-tags:
 - technology
 - positioning
 ---

@@ -2,7 +2,7 @@
 title: Healthy starving
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

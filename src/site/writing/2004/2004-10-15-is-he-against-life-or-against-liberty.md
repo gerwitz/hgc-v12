@@ -2,7 +2,7 @@
 title: Is he against life, or against liberty?
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

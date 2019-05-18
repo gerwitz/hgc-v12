@@ -2,7 +2,7 @@
 title: Just like the last time
 categories:
 - work
-writing-tags:
+content-tags:
 - business
 - apple
 - mobile
@@ -21,7 +21,7 @@ What's most troublesome about this sort of analogy, though, is the framing.  Amo
 
 Today's market is quite different.  Many consumers are choosing a device based on its own features and perceive the carrier as a service provider.  Each carrier is struggling to preserve its status as a direct marketer of handsets, and they have all failed to establish themselves as a credible provider of services beyond wireless data and, for now, voice communications.[^3]
 
-Device choice is leading consumer choice[^4] and arguably the most compelling feature is application platform.  Which is why I don't advise much attention to analysts that are veterans of the telecom industry, who have only managed to add "OS" to their box of phone features.  Listen, rather, to those who see platforms and understand, for example, that the Amazon app store is a platform that has some cross-benefit with Google's but should not be simply confounded as "Android".  
+Device choice is leading consumer choice[^4] and arguably the most compelling feature is application platform.  Which is why I don't advise much attention to analysts that are veterans of the telecom industry, who have only managed to add "OS" to their box of phone features.  Listen, rather, to those who see platforms and understand, for example, that the Amazon app store is a platform that has some cross-benefit with Google's but should not be simply confounded as "Android".
 
 Except even these voices are lazy and want to believe this market will be a repeat of the Mac vs. Wintel history, or the iPod vs. everyone else history.  Better to just remain suspicious of historical analogies.
 

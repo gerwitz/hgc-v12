@@ -2,7 +2,7 @@
 title: Why we ride---
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

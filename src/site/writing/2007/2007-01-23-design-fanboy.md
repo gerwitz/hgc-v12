@@ -2,7 +2,7 @@
 title: Design fanboy
 categories:
 - work
-writing-tags:
+content-tags:
 - apple
 - technology
 - design

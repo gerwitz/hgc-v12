@@ -2,7 +2,7 @@
 title: Implicit assertions
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

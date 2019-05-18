@@ -2,7 +2,7 @@
 title: Bittersweet AJaX
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

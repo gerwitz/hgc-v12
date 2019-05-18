@@ -2,7 +2,7 @@
 title: Les Misrables
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

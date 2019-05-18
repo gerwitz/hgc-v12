@@ -2,7 +2,7 @@
 title: Four more years
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

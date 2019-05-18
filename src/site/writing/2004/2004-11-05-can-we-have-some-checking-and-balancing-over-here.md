@@ -2,7 +2,7 @@
 title: Seeking checks and balances
 categories:
 - culture
-writing-tags:
+content-tags:
 - politics
 - bush
 ---

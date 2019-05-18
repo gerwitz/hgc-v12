@@ -2,7 +2,7 @@
 title: Hindsight isn't always 20*20
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

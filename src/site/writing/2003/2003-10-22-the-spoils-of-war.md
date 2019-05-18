@@ -2,7 +2,7 @@
 title: The spoils of war
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 ---
 

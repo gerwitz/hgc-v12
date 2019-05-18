@@ -3,7 +3,7 @@ title: Road unrage
 categories:
 - culture
 - personal
-writing-tags:
+content-tags:
 - india
 - travel
 ---

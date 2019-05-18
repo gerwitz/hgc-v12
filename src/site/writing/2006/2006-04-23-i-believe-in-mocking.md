@@ -2,7 +2,7 @@
 title: I believe in mocking
 categories:
 - culture
-writing-tags:
+content-tags:
 - philosophy
 - language
 - naturalism

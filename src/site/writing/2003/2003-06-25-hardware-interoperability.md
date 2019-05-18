@@ -2,7 +2,7 @@
 title: Hardware interoperability
 categories:
 - personal
-writing-tags:
+content-tags:
 - technology
 ---
 

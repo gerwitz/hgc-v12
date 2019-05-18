@@ -2,7 +2,7 @@
 title: Keep Digging
 categories:
 - work
-writing-tags:
+content-tags:
 - code
 - business
 - technology

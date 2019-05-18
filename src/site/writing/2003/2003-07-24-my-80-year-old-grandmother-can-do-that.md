@@ -2,7 +2,7 @@
 title: My 80-year-old grandmother can do that
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

@@ -2,17 +2,17 @@
 title: She said yes.
 categories:
 - personal
-writing-tags:
+content-tags:
 - me
 ---
 
-I'm pretty sure that everyone who cares has already been told in person, so now it's time to blog the proposal.  
+I'm pretty sure that everyone who cares has already been told in person, so now it's time to blog the proposal.
 
 
 ### The girl
 
 
-[Kristan][1] and I have been together for quite a while.  We courted cautiously at first, but once we got past being shy moved quickly and have lived together for 4 years now.  Long before that others had commented that we'd make a natural couple; they were right.  It probably seemed inevitable to many that we'd get married some day, but we had postponed even talking about it until after she graduated.  I started seriously questioning myself after that ceremony, a year ago, to clear any doubt and to prepare a memorable moment.  
+[Kristan][1] and I have been together for quite a while.  We courted cautiously at first, but once we got past being shy moved quickly and have lived together for 4 years now.  Long before that others had commented that we'd make a natural couple; they were right.  It probably seemed inevitable to many that we'd get married some day, but we had postponed even talking about it until after she graduated.  I started seriously questioning myself after that ceremony, a year ago, to clear any doubt and to prepare a memorable moment.
 
 
    [1]: http://taxcat.blogspot.com/
@@ -26,7 +26,7 @@ Then I remembered she's even more introverted than me, and embarrassment isn't r
 
 So this winter as we made plans to visit Europe for a post-tax-season holiday and narrowed the destination to London, I suggested it'd be a great chance to take the Chunnel train and briefly see Paris.  Ever since I visited in 2002 I've wanted to revisit the City of Light with her.  Meanwhile, I had already months saving and months more shopping for the right ring.
 
-Keeping the secret was very difficult, not only logistically, but emotionally; my natural inclination is to share anything of importance with her, and this certainly is important.  I barely stopped myself from telling stories like [Amex][2] hunting for a street artist to capture the moment in Monmartre.  Trying not to look nervous carrying the ring through security checkpoints for several days and across two international borders wasn't easy, either.  
+Keeping the secret was very difficult, not only logistically, but emotionally; my natural inclination is to share anything of importance with her, and this certainly is important.  I barely stopped myself from telling stories like [Amex][2] hunting for a street artist to capture the moment in Monmartre.  Trying not to look nervous carrying the ring through security checkpoints for several days and across two international borders wasn't easy, either.
 
 
    [2]: https://www124.americanexpress.com/cards/platinum/concierge.jsp
@@ -36,7 +36,7 @@ Keeping the secret was very difficult, not only logistically, but emotionally; m
 
 When we got to Sacre Coeur on [May 5th][3], it became clear that was not the best place after all.  The crowds would have meant either embarrassing her or trying to be subtle, and the aggressive nature of Monmartre's artists had her a bit frazzled.  So, I postponed.
 
-Eventually we found ourselves by the Seine and Kristan agreed to by suggestion we descend from the bustle of the city and stroll along the right bank to a pedestrian bridge ([Pont des Arts][4]) to await the sunset.  
+Eventually we found ourselves by the Seine and Kristan agreed to by suggestion we descend from the bustle of the city and stroll along the right bank to a pedestrian bridge ([Pont des Arts][4]) to await the sunset.
 
 
    [3]: /2006/05/05/paris-in-the-springtime.html
@@ -61,7 +61,7 @@ She said yes.
 
 
 
-Some time later a couple strolled by and we asked them to take our picture.  
+Some time later a couple strolled by and we asked them to take our picture.
 
 
 ### The ring

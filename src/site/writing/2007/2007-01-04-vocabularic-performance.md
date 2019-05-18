@@ -2,7 +2,7 @@
 title: Vocabularic performance
 categories:
 - culture
-writing-tags:
+content-tags:
 - language
 ---
 

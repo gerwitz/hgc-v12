@@ -2,7 +2,7 @@
 title: Squirrel terrorism
 categories:
 - personal
-writing-tags:
+content-tags:
 - cycling
 ---
 

@@ -2,7 +2,7 @@
 title: Iron Barley
 categories:
 - culture
-writing-tags:
+content-tags:
 - stlouis
 ---
 

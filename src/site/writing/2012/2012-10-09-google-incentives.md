@@ -4,7 +4,7 @@ abstract: Advertising compromises search.
 categories:
 - work
 - culture
-writing-tags:
+content-tags:
 - business
 - advertising
 - government
@@ -15,7 +15,7 @@ external: http://safelyignored.com/google-incentives
 > Google’s mission is to organize the world’s information and make it universally accessible and useful.
 > <footer>[Google](http://www.google.com/about/company/)</footer>
 
-Google didn't mean to be an advertising company. But the Google Search Appliance debuted at nearly the same time AdWords shifted to a pay-per-click model and ad revenue quickly eclipsed it and all other sources. So the firm was only three years old when "don't be evil" [began to fall prey][evil] to capitalist reality. By now, the noble and "open" attributes of their brand have been widely [discredited]. 
+Google didn't mean to be an advertising company. But the Google Search Appliance debuted at nearly the same time AdWords shifted to a pay-per-click model and ad revenue quickly eclipsed it and all other sources. So the firm was only three years old when "don't be evil" [began to fall prey][evil] to capitalist reality. By now, the noble and "open" attributes of their brand have been widely [discredited].
 
 [evil]: http://www.wired.com/wired/archive/11.01/google.html
 [discredited]: http://johnaugust.com/2011/on-google-and-evil

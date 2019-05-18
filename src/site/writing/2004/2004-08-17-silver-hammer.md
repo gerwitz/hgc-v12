@@ -2,7 +2,7 @@
 title: Silver Hammer
 categories:
 - uncategorized
-writing-tags:
+content-tags:
 - tagless
 - uncategorized
 ---
