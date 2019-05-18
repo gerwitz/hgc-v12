@@ -5,7 +5,7 @@ subtitle: The Celestial Emporium of Benevolent Knowledge
 
 <ul>
 {% for page in collections.all %}
-    {% if page.url.startsWith("/library/lists") %}
+    {% if page.url.startsWith("/library/lists") and page.url != "/library/lists/" %}
 
         <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
 
