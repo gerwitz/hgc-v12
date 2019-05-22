@@ -33,6 +33,7 @@ subtitle: We all have our own special Hell
 ## Sixth
 
 - People who don't vote
+- Jim Humble and Kerri Rivera
 
 ## Seventh
 
