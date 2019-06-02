@@ -48,7 +48,7 @@ header {
     }
   }
 
-  .breadcrumb a.internal, .search a.internal {
+  .breadcrumb a.internal, .search a {
     border: none;
     padding-top: 5px;
     display: block;
@@ -56,6 +56,7 @@ header {
     // margin-left: 8px;
   }
   .search a {
+    // padding-top: 15px;
     color: $page-color;
     &::before {
       color: $page-color;
@@ -105,5 +106,5 @@ a:hover {
 }
 a:hover.graphic {
   color: $page-color;
-  background-color: inherit;
+  background-color: $accent-color;
 }
