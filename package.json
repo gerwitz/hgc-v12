@@ -20,7 +20,7 @@
     "clean-css": "^4.2.1",
     "concurrent-transform": "^1.0.0",
     "gravatar": "^1.6.0",
-    "gulp": "^4.0.1",
+    "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-image-resize": "^0.13.0",
@@ -30,10 +30,11 @@
     "gulp-shell": "^0.6.5",
     "gulp-uglify": "^3.0.2",
     "markdown-it-footnote": "^3.0.1",
+    "markdown-it-sidenote": "gerwitz/markdown-it-sidenote",
     "npm": "^6.9.0",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
-    "yarn": "^1.15.2"
+    "yarn": "^1.16.0"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-rss": "^1.0.6",

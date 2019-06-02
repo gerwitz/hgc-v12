@@ -43,14 +43,14 @@ module.exports = function(config) {
 
   // manually configure markdown-it
   let markdownIt = require("markdown-it");
-  let markdownItFootnote = require("markdown-it-footnote");
+  let markdownItSidenote = require("markdown-it-sidenote");
   let options = {
     html: true,
     linkify: true,
     typographer: true,
     quotes: '“”‘’'
   };
-  let markdownLib = markdownIt(options).use(markdownItFootnote);
+  let markdownLib = markdownIt(options).use(markdownItSidenote);
   config.setLibrary("md", markdownLib);
 
   return {
