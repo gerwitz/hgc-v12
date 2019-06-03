@@ -34,7 +34,7 @@
     margin: 0;
     margin-bottom: 2rem;
   }
-  h1 { font-size: 2.2rem; font-style: normal; margin-top: 2.6rem; }
+  h1 { font-size: 2.2rem; font-style: normal; }
   h2 { font-size: 1.7rem; margin-top: 4.2rem; }
   h3 { font-size: 1.3rem; margin-top: 2.6rem; }
 
@@ -51,6 +51,9 @@
     margin: 2rem 0 2rem 4rem;
     footer {
       text-align: right;
+      &::before {
+        content: '— ';
+      }
     }
     p + footer {
       margin-top: -1.5rem; // because p has a margin-bottom of 2rem
@@ -87,4 +90,8 @@
 
   header .breadcrumb {
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  }
+
+  .inner-container {
+    margin-top: 2.6rem;
   }

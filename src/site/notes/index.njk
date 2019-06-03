@@ -11,19 +11,20 @@ eleventyExcludeFromCollections: true
 ---
 
 {% if pagination.pageNumber > 0 %}
-<a href="{{ pagination.previousPageHref }}">Newer notes</a>
+<div class="pagination">
+  <a href="{{ pagination.previousPageHref }}">Newer notes</a>
+</div>
 {% endif %}
 
 {% for note in pagination.items %}
-<a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY [at] HH:mm') }}</a>:
 <blockquote>
   {{ note.templateContent | safe }}
+  <footer><a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a></footer>
 </blockquote>
-
-<br>
-
 {% endfor %}
 
 {% if pagination.nextPageHref %}
-<a href="{{ pagination.nextPageHref }}">Older notes</a>
+<div class="pagination">
+  <a href="{{ pagination.nextPageHref }}">Older notes</a>
+</div>
 {% endif %}

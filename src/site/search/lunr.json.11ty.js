@@ -1,4 +1,5 @@
 var lunr = require('lunr');
+var moment = require("moment");
 
 class LunrIndex {
 
@@ -42,7 +43,7 @@ class LunrIndex {
     pages.forEach(function (doc, index) {
       docMap[index] = {
         url: doc.url,
-        title: doc.data.title
+        title: doc.data.title || "Note from " + moment(doc.date).format('MMMM Do, YYYY')
       };
     });
 
