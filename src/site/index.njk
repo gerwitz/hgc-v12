@@ -39,16 +39,19 @@ headtags: |
     <a href="/library/" class="internal">library</a> is a labyrinth of random things.
   </p>
   <p>
-    I post short notes to <a href="/microblog/" class="internal">microblog</a>. Here's the latest one:
-  <p>
+    I post short notes to <a href="/microblog/" class="internal">microblog</a>. Here are a few recent ones:
   <span class="marginnote">These are also copied to <a href="http://micro.blog/gerwitz" rel="me">Micro.blog</a> and <a href="https://twitter.com/gerwitz" rel="me">Twitter</a>.</span>
-  {% set note = collections.microblog | sort(true, false, 'date') | first -%}
+  <p>
+  {% set notes = collections.microblog | sort(true, false, 'date') | limit(3) -%}
+  {% for note in notes %}
   <blockquote>
     {{ note.templateContent | safe }}
     <footer><a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a></footer>
   </blockquote>
+  {% endfor %}
 </section>
 
+<!-- this is here only because indieweb tools expect my home URL to have a microformat profile -->
 <div hidden class="h-card vcard" style="display: none;">
   <img src="https://hans.gerwitz.com/about/avatars/munch.jpg" alt="avatar photo" class="photo u-photo"/>
   <a class="url u-url fn p-name" href="https://hans.gerwitz.com/">Hans Gerwitz</a>
