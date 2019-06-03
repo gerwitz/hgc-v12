@@ -51,6 +51,9 @@ header {
   .breadcrumb a.internal, .search a {
     border: none;
     padding-top: 5px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0;
     display: block;
     float: left;
     // margin-left: 8px;
@@ -76,6 +79,13 @@ header {
 a {
   text-decoration: underline;
   text-decoration-color: $accent-color;
+
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+
+  position: relative; // for box-shadow on :hover
 }
 
 a.internal  {
@@ -99,6 +109,7 @@ a.internal:hover::before {
 a:hover {
   color: $page-color;
   background-color: $accent-color;
+  box-shadow: 0 0 0.5rem 0.5rem $page-color;
   &.site-title {
     color: $page-color;
     border-color: $accent-color;
