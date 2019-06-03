@@ -33,7 +33,6 @@ Some content is added to the repo with [Micropub](https://micropub.net/) via [Si
 <span class="marginnote">![listener](rat-mic.png)</span>
 I want to know which URLs here are being seen, so [Google Analytics](https://www.google.com/analytics/) will see you and drop a cookie. I've set my account to [not share tracking data](https://support.google.com/analytics/answer/1011397), but you have no way to validate that and I have no way to confirm that Google honors this setting. I also set the cookie to limit to gerwitz.com and configured the client script to [anonymize IP](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#anonymizeIp). (I hope to eventually replace this with direct log analysis.)
 
-[Commento](https://commento.io/)'s cloud service is used for in-page comments. Here's [their privacy policy](https://commento.io/privacy).
 
 Although not intended for tracking, any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp] So note that [instant.page](https://instant.page/) is loaded from their server. I review each version before updating and they are hosting from the static GitHub Pages servers, so there shouldn't be any tracking. Still, this is an "attack surface" and they don't yet publish a privacy policy. Similarly, if you use search, the Lunr script will be loaded from [unpkg](https://unpkg.com/).
 

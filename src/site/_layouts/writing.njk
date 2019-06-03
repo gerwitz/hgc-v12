@@ -14,7 +14,7 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
             {% if external -%}
                 to <a href="{{external}}">{{ external | hostname }}</a> on
             {%- else %}
-                here 
+                here
             {%- endif %}
             <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }}</time>.
         </span>
@@ -23,10 +23,3 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
     {{ content | safe }}
 
 </article>
-
-<hr class="discussion-sep">
-
-<p>If you'd like to dicuss this, <a href="#commento" onclick="document.getElementById('commento').className='';">open the comment thread here</a> or <a href="/about/#contact">contact me</a>.
-
-<div id="commento" class="hidden"></div>
-<script defer src="https://cdn.commento.io/js/commento.js"></script>
