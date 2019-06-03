@@ -90,11 +90,6 @@ a {
 
 a.internal  {
   font-family: $sans-font;
-  // text-decoration: none;
-  // display: inline-block;
-  // border: 2px solid $accent-color;
-  // padding-left: 0.5rem;
-  // padding-right: 0.5rem;
 }
 a.internal::before {
   content: '/';
@@ -112,10 +107,13 @@ a:hover {
   box-shadow: 0 0 0.5rem 0.5rem $page-color;
   &.site-title {
     color: $page-color;
-    border-color: $accent-color;
   }
 }
+
+a.graphic {
+  display: inline-block;
+}
+
 a:hover.graphic {
-  color: $page-color;
-  background-color: $accent-color;
+  border-color: $accent-color;
 }

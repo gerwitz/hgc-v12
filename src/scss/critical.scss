@@ -49,10 +49,12 @@
 
   blockquote {
     margin: 2rem 0 2rem 4rem;
-  }
-
-  blockquote footer {
-    text-align: right;
+    footer {
+      text-align: right;
+    }
+    p + footer {
+      margin-top: -1.5rem; // because p has a margin-bottom of 2rem
+    }
   }
 
   figure {
