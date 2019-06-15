@@ -29,6 +29,7 @@ Important
 * [Ida Craddock](https://en.wikipedia.org/wiki/Ida_Craddock)
 * [Ida Tarbell](http://en.wikipedia.org/wiki/Ida_Tarbell): heroine of the fourth estate
 * [Ida Wells](https://www.nytimes.com/interactive/2018/obituaries/overlooked-ida-b-wells.html): another heroine of the fourth estate
+* [Greta Thunberg](https://twitter.com/GretaThunberg/): humanity's conscience
 
 Worth reading
 
