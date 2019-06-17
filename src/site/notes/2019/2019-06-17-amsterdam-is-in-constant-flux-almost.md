@@ -1,5 +1,5 @@
 ---
-date: 2019-06-17T14:46:43+00:00
+date: 2019-06-17T14:52:05+00:00
 slug: amsterdam-is-in-constant-flux-almost
 ---
 Amsterdam is in constant flux. Almost 3% of the city’s population is coming or going each year, and the balance shifts dramatically.
