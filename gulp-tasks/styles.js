@@ -8,18 +8,11 @@ var sass    = require("gulp-sass");
 gulp.task('styles', function(done) {
 
   // included CSS
-  gulp.src(project.buildSrc + '/scss/secondary.scss')
+  gulp.src(project.buildSrc + '/scss/style.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(gulp.dest(project.buildDest+ '/css'));
-
-  // inlined CSS
-  gulp.src(project.buildSrc + '/scss/critical.scss')
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }).on('error', sass.logError))
-    .pipe(gulp.dest(project.buildSrc+ '/site/_includes/inline'));
 
   done();
 });
