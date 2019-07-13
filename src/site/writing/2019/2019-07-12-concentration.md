@@ -1,15 +1,16 @@
 ---
 title: Concentration
 subtitle: Wie die Pilze nach dem Regen
+categories:
+- culture
+content-tags: [politics, oppression, natherlands, usa]
 ---
 
 In 1938, the Netherlands saw an influx of Jewish refugees, who were migrating to escape rising antisemitism in Germany. In 1939, [Camp Westerbork](https://kampwesterbork.nl/) began welcoming these families with a place to live.[^mandatory] By all accounts it was meant to be hospitable and was, with reasonable space and facilities. It was also, by definition, a concentration camp.
 
 [^mandatory]: It’s not clear to me whether residence was voluntary or compelled.
 
-In 1942, the occupying Nazis conveniently adopted the camp as a _Durchgangslager_ for housing deportees before shipping them off to _Vernichtungslager_ to be executed.[^frank]
-
-[^frank]: Anne Frank was one of the many Amsterdammers interned at Westerbork before being shipped on the last train to Auschwitz.
+In 1942, the occupying Nazis conveniently adopted the camp as a _Durchgangslager_ for housing deportees (including Anne Frank) before shipping them off to _Vernichtungslager_ to be executed.
 
 Even under Nazi rule and repurposed as the “foyer to hell”, Camp Westerbork remained an orderly place with adequate healthcare and schooling.
 
