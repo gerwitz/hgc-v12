@@ -2,6 +2,12 @@
 title: Principia
 ---
 
+What is this? It's not [life rules](https://www.ribbonfarm.com/2018/02/15/make-your-own-rules/). Maybe it's a manifesto, but I'm concerned more with beliefs than intentions or outcomes.
+
+I think it's a documentation of my personal ideology.
+
+--
+
 My understanding of the world is a house of cards made of beliefs. Some trivial ones are base on my experience with reality, most of them are _a priori_, the higher up the deductive stack the less effort it takes for me to modify them.
 
 Near the bottom of the stack, though, are some slow-moving beliefs that represent, to me, truths.
@@ -10,7 +16,7 @@ For now, this is a scratchpad of thoughts that I hope to distill into a list of 
 
 --
 
-The universe is consistent and therefore understandable. As individuals, our capacity to model the world is insufficient for understanding very much of it. Yet working together and across time we are able to build and test models that help us reach larger scales and greater detail. 
+The universe is consistent and therefore understandable. As individuals, our capacity to model the world is insufficient for understanding very much of it. Yet working together and across time we are able to build and test models that help us reach larger scales and greater detail.
 
 At any given time in history, [some of those models are wrong](/library/bad-ideas/) and we will never have a complete understanding because the universe includes ourselves and our culture.
 
