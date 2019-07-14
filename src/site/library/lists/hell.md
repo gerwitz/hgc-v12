@@ -40,6 +40,7 @@ subtitle: We all have our own special Hell
 - The profiteers of internet-scale ignorance and hate (Susan Wojcicki, Mark Zuckerberg)
 - Donald Trump
 - Drivers who threaten vulnerable roadway users
+- Andrew Wakefield
 
 ## Eigth
 
