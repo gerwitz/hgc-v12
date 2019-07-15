@@ -2,12 +2,12 @@
 title: Junkspace
 categories:
 - culture
-content-tags: [design, architecture]
+content-tags: [design, architecture, quotes]
 ---
 
 Rem Koolhaas's 2001 [_Junkspace_](https://oma.eu/publications/junkspace) is very quotable diatribe, lamenting the state of architecture. It reads as a warning to anyone building "design systems".
 
-Here are some noteworthy quips:
+Here are some choice quips:
 
 > Architects could never explain space; Junkspace is our punishment for their mystifications.
 
