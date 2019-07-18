@@ -23,6 +23,7 @@ module.exports = function(config) {
   config.addFilter("hostname", require("./filters/hostname.js") );
   config.addFilter("limit", require("./filters/limit.js") );
   config.addFilter("parents", require("./filters/parents.js") );
+  config.addFilter("weeklink", require("./filters/weeklink.js") );
 
   // 🌲
   config.addShortcode("tree", function(height) {
