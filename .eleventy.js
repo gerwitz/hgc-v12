@@ -4,6 +4,8 @@ const moment = require("moment");
 module.exports = function(config) {
   var inputPath = "src/site";
 
+  config.setDataDeepMerge(true);
+
   config.addCollection("content", function(all) {
     return all.getFilteredByGlob([
       // "**/*.md",

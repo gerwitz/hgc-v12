@@ -10,10 +10,10 @@ eleventyExcludeFromCollections: true
             URL
         </th>
         <th>
-            Date
+            Kind
         </th>
         <th>
-            Commento
+            Date
         </th>
     </tr>
 </thead><tbody>
@@ -23,16 +23,14 @@ eleventyExcludeFromCollections: true
             <a href="{{ page.url }}">{{ page.url }}</a>
         </td>
         <td>
-            {{ page.date | date("iso8601") }}
+            {{ page.data.layout }}
         </td>
         <td>
-            <a href="https://hans.gerwitz.com{{ page.url }}#commento"></a>
+            {{ page.date | date("iso8601") }}
         </td>
     </tr>
 {%- endfor %}
 </tbody></table>
-
-<script src="https://cdn.commento.io/js/count.js"></script>
 
 <script>
 // http://www.kryogenix.org/code/browser/sorttable/

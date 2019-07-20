@@ -41,9 +41,23 @@ class LunrIndex {
 
     var docMap = {};
     pages.forEach(function (doc, index) {
+      var title = 'Dataless';
+      switch(doc.data.layout) {
+        case 'note':
+          title = 'Note from ' + moment(doc.date).format('MMMM Do, YYYY');
+          break;
+        case 'week':
+          title = 'Week ' + doc.fileSlug;
+          break;
+        case 'writing':
+          title = doc.data.title + ' (' + moment(doc.date).format('MMMM Do, YYYY') + ')';
+          break;
+        default:
+          title = doc.data.title || 'Untitled';
+      }
       docMap[index] = {
         url: doc.url,
-        title: doc.data.title || "Note from " + moment(doc.date).format('MMMM Do, YYYY')
+        title: title
       };
     });
 
