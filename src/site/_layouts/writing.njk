@@ -16,7 +16,7 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
             {%- else %}
                 here
             {%- endif %}
-            <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }}</time>.
+            <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('nice') }}</time> (week {{ page.date | weeklink | safe }}).
         </span>
     </div>
 

@@ -1,0 +1,19 @@
+---
+layout: base
+bodyClass: week
+breadcrumbs:
+    - weeks
+permalink: "/weeks/{{ page.fileSlug }}.html"
+---
+
+<article>
+    <div style="position: relative">
+        <h1>Week {{ page.fileSlug }}</h1>
+        <span class="marginnote">
+            Started {{ page.fileSlug | weekstart | date('nice') }}.
+        </span>
+    </div>
+
+    {{ content | safe }}
+
+</article>

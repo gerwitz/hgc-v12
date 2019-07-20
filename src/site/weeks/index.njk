@@ -1,0 +1,16 @@
+---
+title: Weeks
+layout: page
+tags:
+eleventyExcludeFromCollections: true
+---
+
+This is a journal, not yet linked from anywhere. It's presently here only so I can search for entries and experiment with a more holistic archive.
+
+<ul>
+{%- for page in collections.weeks | reverse -%}
+  <li>
+    <a href="{{ page.url }}">Week {{ page.fileSlug }} ({{ page.date | date('nice') }})</a>
+  </li>
+{%- endfor -%}
+</ul>
