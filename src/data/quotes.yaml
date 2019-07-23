@@ -350,5 +350,15 @@
   who: Donald Trump
   who-url: https://www.newyorker.com/news/amy-davidson/donald-trump-and-the-central-park-five
   source: Daily News
-  soruce-url: https://en.wikipedia.org/wiki/File:Trump_Bring_Back_Death_Penalty_ad_1989.jpg
+  source-url: https://en.wikipedia.org/wiki/File:Trump_Bring_Back_Death_Penalty_ad_1989.jpg
   date: 1989-05-01
+  tags: [hate, society]
+-
+  quote: |
+    It doesn’t concern me because many people agree with me.
+  who: Donald Trump
+  source: White House press event
+  source-url: https://www.reuters.com/article/us-usa-trump-democrats/trump-tells-democratic-congresswomen-to-go-back-to-fix-countries-they-came-from-idUSKCN1U90H7
+  date: 2019-07-14
+  tags: [hate, society]
+  
