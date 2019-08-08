@@ -1,6 +1,7 @@
 ---
 title: Elementary Lessons
 subtitle: Things I wish I'd learned in elementary school
+epitaph: is a slow learner
 ---
 
 In the US heartland there is a popular book with a central list of 16 lessons that are often reprinted as posters: _[All I Really Need to Know I Learned in Kindergarten](https://www.goodreads.com/book/show/34760.All_I_Really_Need_to_Know_I_Learned_in_Kindergarten)_.

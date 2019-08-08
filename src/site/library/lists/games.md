@@ -1,6 +1,7 @@
 ---
 title: Timepass
 subtitle: A hall of fame for games that have wasted substantial time
+epitaph: does not always use his time wisely
 ---
 
 * Two Dots

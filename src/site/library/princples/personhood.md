@@ -1,7 +1,6 @@
 ---
 layout: page
 old_url: http://hans.gerwitz.com/library/thoughts/personhood.html
-slug: personhood
 title: Personhood
 ---
 

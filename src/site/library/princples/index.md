@@ -1,10 +1,11 @@
 ---
-title: Principia
+title: Life stance
+epitaph: believes in a few things
 ---
 
-What is this? It's not [life rules](https://www.ribbonfarm.com/2018/02/15/make-your-own-rules/). Maybe it's a manifesto, but I'm concerned more with beliefs than intentions or outcomes.
+This is an attempt to document my personal ideology. That is, the beliefs I hold most strongly.
 
-I think it's a documentation of my personal ideology.
+If you squint, you might make out a life stance, statement of principles, of even infer [life rules](https://www.ribbonfarm.com/2018/02/15/make-your-own-rules/). I like to see it as a proto-manifesto.
 
 --
 
