@@ -4,6 +4,7 @@ categories:
 - culture
 content-tags:
 - funny
+- aside
 ---
 
 Cheerleader, exotic dancer, and aerobics instructor seeks a special guy to spend her nights with.  Just as soon as she's done doing her time for [2nd degree murder][1].

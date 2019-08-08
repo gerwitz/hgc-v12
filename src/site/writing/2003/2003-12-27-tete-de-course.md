@@ -4,6 +4,7 @@ categories:
 - personal
 content-tags:
 - cycling
+- aside
 ---
 
 [Merry][1] [Christmas][2] to me!

@@ -4,6 +4,7 @@ categories:
 - culture
 content-tags:
 - politics
+- aside
 ---
 
 "Bush...may feel free if he wins a second term to realign his foreign policy more closely to the harder-edged, conservative view exemplified by Vice President Cheney and Defense Secretary Donald H. Rumsfeld..."

@@ -1,9 +1,10 @@
 ---
 title: Camera phones and enterprise security
 categories:
-- uncategorized
+- work
+- culture
 content-tags:
-- tagless
+- security
 ---
 
 The META Group, among others, is warning that [camera phones pose a security threat to

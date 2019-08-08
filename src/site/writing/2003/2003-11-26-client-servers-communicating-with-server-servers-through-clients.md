@@ -2,9 +2,10 @@
 title: "NRS: a proto-RIA"
 abstract: Client servers communicating with server servers through clients
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- web
+- architecture
 ---
 
 Adam Bosworth has been discussing his vision of a disconnected browser, a client of web services that enables offline operations and synchronizes with server applications when connected.  His latest [discussion][1] brought to mind an application I wrote shortly after joining my [present company][2] in 1999.
@@ -15,7 +16,7 @@ Adam Bosworth has been discussing his vision of a disconnected browser, a client
 This particular application was an SFA tool used by sales personnel to track details of their customer interactions, for aggregate management reporting and peer review.  The client's goal included an identical user interface regardless of whether using the web application from any random corporate workstation, or on a laptop disconnected from any network.
 
 The deployment constraints of their IT department, though, made this an interesting endeavor.  No new DLLs could be deployed, the only concession we received was an agreement to install PWS (a minimal install of IIS that included the ASP libraries) on the laptops.  No COM components.  No ActiveX controls.
-We could count on MS Access on the laptops, but had no way to even send an HTTP request to the server (remember, this is 1999 no SOAP, no XML-RPC, why on earth would a server want to **generate** an HTTP request?)
+We could count on MS Access on the laptops, but had no way to even send an HTTP request to the server (remember, this is 1999: no SOAP, no XML-RPC, why on earth would a server want to **generate** an HTTP request?)
 
 This was also my first large-scale ASP project, so I learned all sorts of things about handling errors, enforcing contracts, and simply designing a large application when constrained to a platform that seemed built to prevent these things in the name of "ease of development."  That's a story for another time.
 

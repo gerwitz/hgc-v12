@@ -10,8 +10,7 @@ The elusive business meeting actually occurred, no thanks to mischievous email s
 
 There's something about the Pacific Northwest that seems well suited to the pursuit of beauty.  The land certainly contributes, but so does the culture.  I appears people are simply enjoying life more than they seem to be in other regions.  Here in Portland, the locals are so friendly and quick to engage in conversation that visiting evokes a sense of having just joined the community.  Or a cult, depending upon how aloof you're feeling.
 
-I went to visit [Todai][1] on the recommendation of my new cultmates, but realized when I got there I simply wasn't hungry enough to pig out on sushi quite yet.  So I thought I'd go catch the last installment of [The
-Matrix][2].  The mall cinema, like the one near the hotel and all others I've noticed, is not running it.  Do they say something nasty about Oregon in that movie?  I chose to watch [The Human Stain][3] based only on timing and poster imagery.  It was a well constructed, stirring film, if a bit drawn out.  Speaking of beauty, [Kristen Belvins][4] had a minor, fleeting role, but a face like that is bound to be cast again and fill out that IMDB profile.
+I went to visit [Todai][1] on the recommendation of my new cultmates, but realized when I got there I simply wasn't hungry enough to pig out on sushi quite yet.  So I thought I'd go catch the last installment of [The Matrix][2].  The mall cinema, like the one near the hotel and all others I've noticed, is not running it.  Do they say something nasty about Oregon in that movie?  I chose to watch [The Human Stain][3] based only on timing and poster imagery.  It was a well constructed, stirring film, if a bit drawn out.  Speaking of beauty, [Kristen Belvins][4] had a minor, fleeting role, but a face like that is bound to be cast again and fill out that IMDB profile.
 
    [1]: http://www.todai.com/Locations/oregon.htm
    [2]: http://whatisthematrix.warnerbros.com/

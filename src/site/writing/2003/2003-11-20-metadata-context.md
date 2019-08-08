@@ -1,13 +1,12 @@
 ---
 title: Metadata context
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- data
 ---
 
-I've been participating in an [industry
-association][1] committee that is evaluating data exchange standards.  Part of this process is mapping representative documents to potential standards (this week, [OAGIS][2] and [UDEF][3]).  Naturally, this is being done by filling in an existing Excel worksheet with a row for each data element.
+I've been participating in an [industry association][1] committee that is evaluating data exchange standards.  Part of this process is mapping representative documents to potential standards (this week, [OAGIS][2] and [UDEF][3]).  Naturally, this is being done by filling in an existing Excel worksheet with a row for each data element.
 
    [1]: http://www.aia-aerospace.org/
    [2]: http://www.openapplications.org/
@@ -24,12 +23,15 @@ Users will drive a need for a way to consistently describe format maps, as integ
 
 Perhaps a sort of XPath pairing in a Schematron-ish document, with keyword value substitution.  My example above might look like:
 
-
-
-
-
-
-
-
+````xml
+<element name="Shipper Name">
+<source select="//item[@ID='$id']/shippingParty/contactName" />
+<destination select="//shipment[/line/@itemID='$id']/parties[@type='shipper']/name" />
+</element>
+<element name="Shipper Mailing Address State">
+<source select="//item[@ID='$id']/shippingLocation/mailingState" />
+<destination select="//shipment[/line/@itemID='$id']/parties[@type='shipper']/mailingAddress/StateCode" />
+</element>
+````
 
 For business analysts to make any sense of this, we need graphical tools.  Contivo has one, middleware vendors have theirs, but I don't know of an interchangeable "document mapping" language.  Reverse-engineering generated XSLT is too unwieldy, because there are too many ways to describe location, so different tools will generate wildly different sheets for the same map.

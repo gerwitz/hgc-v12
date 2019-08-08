@@ -1,9 +1,11 @@
 ---
-title: They are a menace-
+title: They are a menace
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- tolerance
+- society
+- diversity
 ---
 
 They must be dangerous if they are not us.  This little [rant against tolerance][1] rests on a cynical premise: any form of [difference in belief or practice][2] must involve a dominance relationship, involving the strong deciding whether to tolerate the weak.  Tolerance is not reserved for the society that dominates the tolerated; rather, it may be freely offered to those that do not threaten.

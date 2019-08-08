@@ -5,10 +5,10 @@ categories:
 content-tags:
 - politics
 - funny
+- usa
 ---
 
-"[I'm
-going to be taxed if I masturbate!  Holy moly!  How's that for invasive
+"[I'm going to be taxed if I masturbate!  Holy moly!  How's that for invasive
 government?][1]"
 
    [1]: http://www.polstate.com/archives/002529.html

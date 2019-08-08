@@ -5,6 +5,7 @@ categories:
 content-tags:
 - funny
 - google
+- aside
 ---
 
 [This][1] [doesn't work][2], but [this][3] does.

@@ -1,9 +1,10 @@
 ---
 title: SpamBayes at work
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- email
+- aside
 ---
 
 "Emails classified this session: **1036** spam, **217** ham, **109** unsure."

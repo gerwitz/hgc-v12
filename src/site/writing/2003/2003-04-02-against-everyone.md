@@ -6,6 +6,7 @@ categories:
 content-tags:
 - politics
 - war
+epitaph: is almost a pacifist
 ---
 
 Posted by moi at [insteadofwar.org][1]:

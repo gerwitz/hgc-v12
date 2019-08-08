@@ -1,9 +1,10 @@
 ---
 title: Mortality
 categories:
-- uncategorized
+- personal
 content-tags:
-- tagless
+- family
+- cancer
 ---
 
 Today I finally got my father to share the details of his condition with me.  There are several ways in which cancer in [measured][1], and on practically every one he rates the most severe score possible.  There's nothing they can do but delay the inevitable degradation of his immune system.

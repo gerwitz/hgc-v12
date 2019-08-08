@@ -6,9 +6,7 @@ content-tags:
 - cycling
 ---
 
-Heather seems to be [convinced][1] that road racing is [dangerous][2].  [I
-have no][3] [idea what][4] [gave
-her][5] [that idea][6].
+Heather seems to be [convinced][1] that road racing is [dangerous][2].  [I have no][3] [idea what][4] [gave her][5] [that idea][6].
 
    [1]: http://angelweaving.blogspot.com/2003_08_31_angelweaving_archive.html#106246930937747701
    [2]: http://www.pbase.com/image/2326718/medium

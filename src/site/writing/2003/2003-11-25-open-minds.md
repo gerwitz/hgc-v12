@@ -5,11 +5,12 @@ categories:
 content-tags:
 - mind
 - memory
-- fave
+- learning
+- diversity
+epitaph: forgets a lot
 ---
 
-The provocative bigfoot ponders [why being open minded might be an impediment to
-learning][1].  He's clearly trying to provoke me, but I'm too weak to resist.
+The provocative bigfoot ponders [why being open minded might be an impediment to learning][1].  He's clearly trying to provoke me, but I'm too weak to resist.
 
    [1]: http://www.greeblie.com/theyeti/arch/014267.html
 

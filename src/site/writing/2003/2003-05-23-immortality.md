@@ -9,8 +9,7 @@ content-tags:
 - psychology
 ---
 
-Before moving _[A
-Soldier of the Great War][1]_ from the bedside shelf to the "library," I want to log at least one memorable passage:
+Before moving _[A Soldier of the Great War][1]_ from the bedside shelf to the "library," I want to log at least one memorable passage:
 
    [1]: http://allconsuming.net/item.cgi?isbn=0151836000
 

@@ -4,7 +4,7 @@ categories:
 - work
 content-tags:
 - technology
-- positioning
+- design
 ---
 
 I've seen a few news items lately about "wireless power" in the form of surface pads (imagine a large mousepad) that use induction to transfer energy to devices placed on their surface.  Thus far, I have not seen the point--is a pad really that much more convenient than a dock for an iPod, PDA, camera, or phone?

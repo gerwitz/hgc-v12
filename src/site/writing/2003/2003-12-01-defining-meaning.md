@@ -1,15 +1,16 @@
 ---
 title: Defining meaning
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- xml
+- data
 ---
 
 After my pondering on [preserving context][1] when describing document formats with semantic metadata, [Paul Brown][2] pointed me to the [Charteris
 Integration Toolkit][3].  Their marketing literature defines the costs of data integration in 8 points, which I would simplify into two categories: point-to-point scaling problems, including _n_(_n_-1) complexity, and semantic context.  The former is handily solved by a [canonical data model][4], but they point out that many field-to-field mapping tools fall short in considering context.
 
-   [1]: http://phobia.com/C1831483079/E973137839/
+   [1]: /2003/11/20/metadata-context.html
    [2]: http://blog.fivesight.com/prb/
    [3]: http://www.charteris.com/XMLToolkit/
    [4]: http://www.enterpriseintegrationpatterns.com/CanonicalDataModel.html
@@ -22,6 +23,6 @@ Archive][7]) is an [introductory paper][8].  Still, MDL looks like a great start
    [7]: http://archive.org/
    [8]: http://xml.coverpages.org/MDLWhitePaper.pdf
 
-Upcontent about MDL][9].  Good stuff.
+Update: Alternative navigation on the Charteris site leads to public content about MDL][9].  Good stuff.
 
    [9]: http://www.charteris.com/XMLToolkit/MDL.asp

@@ -1,9 +1,9 @@
 ---
-title: Welcome to the light-
+title: Welcome to the light
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- apple
 ---
 
 [Mike][1], [Charlie][2], [Chad][3], [James][4], [Paul][5], [Mitch][6], [Simon][7], [Anthony][8], and [Dann][9] have switched.  Resistance is futile.

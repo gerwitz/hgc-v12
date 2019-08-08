@@ -4,11 +4,9 @@ categories:
 - work
 content-tags:
 - programming
-- fave
 ---
 
-I just ran across a great essay from Bruce Eckel in reaction to a summit he attended: [The Ideal
-Programmer][1].  He makes several great points, but his first is why I'm noting it here.
+I just ran across a great essay from Bruce Eckel in reaction to a summit he attended: [The Ideal Programmer][1].  He makes several great points, but his first is why I'm noting it here.
 
    [1]: http://mindview.net/WebLog/log-0038
 

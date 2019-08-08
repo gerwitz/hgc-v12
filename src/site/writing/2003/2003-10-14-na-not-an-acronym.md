@@ -1,9 +1,10 @@
 ---
 title: NA (Not an Acronym)
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- history
+- branding
 ---
 
 Silly [Brian][1], the NT in Windows NT only stands for "New Technology" if you're in the marketing department of Microsoft.  NT was slang for [N-Ten][2], the code name for the Intel's next big processor (circa 1988), which the OS was originally intended for.  Sometime after it became Windows NT, some MBA decided it should stand for [New Technology][3].  While it's been suggested that it was chosen because WNT is a character-by-character increment of [VMS][4], which is the grandfather of [Redmond's modern OS][5], I'm not buying it because it was originally named OS/2 NT.

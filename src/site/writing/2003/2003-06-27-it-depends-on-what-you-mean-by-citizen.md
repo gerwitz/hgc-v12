@@ -5,10 +5,10 @@ categories:
 content-tags:
 - media
 - politics
+- aside
 ---
 
-[Media walk on Ashcroft's
-leash][1].
+[Media walk on Ashcroft's leash][1].
 
    [1]: http://web.archive.org/web/20030704030559/http://www.miami.com/mld/miamiherald/news/opinion/6170775.htm
 

@@ -5,6 +5,7 @@ categories:
 - personal
 content-tags:
 - history
+epitaph: has been online for a while
 ---
 
 The [Internet Archive][1] has a record of my first webpage, circa [May 13th,

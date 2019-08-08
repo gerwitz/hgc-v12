@@ -6,7 +6,9 @@ content-tags:
 - ux
 - design
 - semantic
-- fave
+- web
+- data
+- indieweb
 ---
 
 Great quote from [Shelley Powers][1]: "Technology driven for the sake of technology and not the people using the technology will never been anything more than a minor nuisance at best, and a disliked, and unused or incorrectly used technology at worst."

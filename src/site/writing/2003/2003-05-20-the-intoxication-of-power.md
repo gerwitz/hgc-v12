@@ -5,6 +5,7 @@ categories:
 - culture
 content-tags:
 - politics
+- aside
 ---
 
 Isn't anyone else disturbed that [the world considers us infantile][1]?

@@ -7,7 +7,6 @@ content-tags:
 - apple
 - idea
 - technology
-- fave
 - future
 ---
 

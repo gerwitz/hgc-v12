@@ -4,6 +4,7 @@ categories:
 - culture
 content-tags:
 - funny
+- aside
 ---
 
 Now you can [purchase money][http://www.usmint.gov/]!  My favorite value: [$20 worth of quarters for only $32][2].

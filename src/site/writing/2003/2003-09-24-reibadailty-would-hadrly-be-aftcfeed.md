@@ -8,8 +8,7 @@ content-tags:
 - psychology
 ---
 
-I usually refrain from copying viral blogsphere memes, but it took me a while to hunt down anything meaningful about [this
-one][1] so I'm noting it here.  The supposedly self-evident truth is that word recognition is not based on shape or sequence as usually assumed, but rather mere letter content and the first and last letters.  Several [tools][2] are available online to demonstrate this.
+I usually refrain from copying viral blogsphere memes, but it took me a while to hunt down anything meaningful about [this one][1] so I'm noting it here.  The supposedly self-evident truth is that word recognition is not based on shape or sequence as usually assumed, but rather mere letter content and the first and last letters.  Several [tools][2] are available online to demonstrate this.
 
    [1]: http://www.bisso.com/ujg_archives/000227.html
    [2]: http://www.aardvarkbusiness.net/tool/

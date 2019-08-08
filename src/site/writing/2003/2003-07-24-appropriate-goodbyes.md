@@ -4,6 +4,7 @@ categories:
 - personal
 content-tags:
 - death
+- aside
 ---
 
 We should all be so blessed as to [inspire a poet][1].

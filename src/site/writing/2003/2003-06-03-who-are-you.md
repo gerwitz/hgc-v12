@@ -1,7 +1,6 @@
 ---
 title: Who are you
-abstract: '...it appears naive to consider "you" as a wrinkly grapefruit of neural
-  tissue'
+abstract: '...it appears naive to consider "you" as a wrinkly grapefruit of neural tissue'
 categories:
 - culture
 content-tags:
@@ -10,8 +9,7 @@ content-tags:
 - psychology
 ---
 
-I progress slowly through _[Freedom
-Evolves][1]_ as bedside reading.  Still fighting the common resistance to determinism Dennett calls incompatiblism, he now demonstrates that the naturalist Robert Kane's hope of introducing an indeterminate element into decision making is based on defining a container where the indeterminism can act.  Dennett carries this approach to the conclusion of a small pearl that grants free will: "If you make yourself really small, you can externalize virtually everything." (p122)  He then draws the inevitable comparison to the Cartesian ghost in the machine, and asserts that your mind, your consciousness, your identity includes your entire brain.
+I progress slowly through _[Freedom Evolves][1]_ as bedside reading.  Still fighting the common resistance to determinism Dennett calls incompatiblism, he now demonstrates that the naturalist Robert Kane's hope of introducing an indeterminate element into decision making is based on defining a container where the indeterminism can act.  Dennett carries this approach to the conclusion of a small pearl that grants free will: "If you make yourself really small, you can externalize virtually everything." (p122)  He then draws the inevitable comparison to the Cartesian ghost in the machine, and asserts that your mind, your consciousness, your identity includes your entire brain.
 
    [1]: http://allconsuming.net/item.cgi?isbn=0670031860
 

@@ -1,5 +1,6 @@
 ---
 title: Quirks
+epitaph: is flawed
 ---
 
 # Stereoblindness

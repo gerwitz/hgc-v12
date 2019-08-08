@@ -4,6 +4,7 @@ categories:
 - culture
 content-tags:
 - stlouis
+- food
 ---
 
 Thanks to repeated praises on the [StLouIST][1] when it opened in June, we finally visited Tom Coghill's [Iron Barley][2] tonight.  All the reviews were accurate, this is the sort of neighborhood atmosphere and genuine cuisine that Applebee's mocks.  It's great to experience a smokey restaurant where the smoke comes not from cigarettes but the hickory and apple chips being used to prepare food.

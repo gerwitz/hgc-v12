@@ -1,9 +1,9 @@
 ---
 title: The spoils of war
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- aside
 ---
 
 Why should [Halliburton][1] have all the fun?  You, too, can [make][2] [money][3] [fast][4]!

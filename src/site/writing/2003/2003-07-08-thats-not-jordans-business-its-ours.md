@@ -5,6 +5,7 @@ categories:
 content-tags:
 - history
 - politics
+- aside
 ---
 
 In 1982, the [US delegation fought][1] to prevent the Old City of Jerusalem being placed on the [UNESCO List of World Heritage in Danger][2].  Why?

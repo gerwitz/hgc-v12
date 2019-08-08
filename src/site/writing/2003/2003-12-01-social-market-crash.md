@@ -1,9 +1,10 @@
 ---
 title: Social market crash
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- web
+- indieweb
 ---
 
 BlogShares is [gone][1].  I never paid it much attention, but thought it was a fascinating experiment.  Let's hope [Seyed][2] comes back with a [FOAF][3]-enabled [social

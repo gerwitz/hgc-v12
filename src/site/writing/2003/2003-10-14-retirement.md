@@ -1,9 +1,9 @@
 ---
 title: Retirement
 categories:
-- uncategorized
+- meta
 content-tags:
-- tagless
+- advertising
 ---
 
 A week ago, I started an experiment by including [BlogSnob][1] (a reciprocal link network) and [MarketBanker][2] (an advertising network akin to Google's AdSense but not as [stupid][3]) text banners under "Sponsored Links" on the left.  I was curious about two things: how many click outs will I get from what I suspect to be a plethora of accidental visitors, and how many click ins would I get from my own placed link.

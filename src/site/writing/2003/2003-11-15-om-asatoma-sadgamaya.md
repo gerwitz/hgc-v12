@@ -8,9 +8,11 @@ content-tags:
 - mind
 - philosophy
 - popular
+- consciousness
+epitaph: over-analyzes things
 ---
 
-There has been a lot of whining about _[The Matrix Revolutions][1]_.  Even those that appreciate the action complain that this was a weak resolution for a [philosophically][2] [compelling][3] story Of course, these [whiners][4] are missing the point.
+There has been a lot of whining about _[The Matrix Revolutions][1]_.  Even those that appreciate the action complain that this was a weak resolution for a [philosophically][2] [compelling][3] story.  Of course, these [whiners][4] are missing the point.
 
 In May, I [speculated][5] that "human choice empowers us" was looking to be the cheap resolution in store. Now that this prediction has come true, I must bow to the Brothers Wachowski and their treatment of determinism and free will.
 

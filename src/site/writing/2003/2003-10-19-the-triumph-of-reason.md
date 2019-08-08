@@ -1,9 +1,9 @@
 ---
 title: The triumph of reason
 categories:
-- uncategorized
+- personal
 content-tags:
-- tagless
+- debate
 ---
 
 [Trey Givens][1] has helped restore my faith in reasoned online debate with his [commitment to intellectual integrity][2].  Bravo, and to reuse his own phrase: word to your mother.

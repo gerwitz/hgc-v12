@@ -4,6 +4,7 @@ categories:
 - personal
 content-tags:
 - driving
+- aside
 ---
 
 Unseasonably [warm weather today][1] meant I got one last day of driving [topless][2], while listening to my extensive playlist of nothing but [Carol of the Bells][3].

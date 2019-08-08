@@ -1,9 +1,9 @@
 ---
 title: Simple stuff
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- consumption
 ---
 
 While talking to the mystic brother who is taking up a lifestyle that includes (among other [inconceivable sacrifices][1]) a commitment to the adage of living simply, I took note of my new [wastebasket][2].  I admitted to a friend that it costs as much as feeding a family of four on a budget for weeks.  Perhaps I should feel guilty about this.
@@ -17,21 +17,10 @@ Of course, I've decided not to.  First off, I have been hoping to get one for a 
 
 The padre-in-training has a habit of distilling his policies to four- or five-step decision processes.  He's got enough "five steps for making moral decisions" and "four steps to living healthy" to start his own self-help franchise.  Naturally, he asked me to present my process for buying stuff as such, so here's a stab at what I've been asking myself:
 
-
-
-
   * Will I use this regularly (weekly)?
-
-
   * How durable will it be?  If I replace it, will it continue being useful to someone else, or end up as landfill?
-
-
   * Is the design thoughtful enough that I'm going to be pleased every time I use it?
-
-
   * How much space does it consume?
-
-
   * Is the price inflated because of some elite brand status that I won't benefit from?
 
 By the time I'm done answering all that, I usually find I don't need whatever I was considering.  It's not a grudging self discipline, either after **thinking** about purchases, I just rarely have any enthusiasm left for buying.  If I still actually want something, then I'll get it, even if it takes a year.

@@ -4,6 +4,7 @@ categories:
 - personal
 content-tags:
 - funny
+- seo
 ---
 
 I must fight the [temptation][1] to register brianjnoggleisacheesehead.com.

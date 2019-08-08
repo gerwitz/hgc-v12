@@ -1,9 +1,10 @@
 ---
 title: Moving the V in MVC closer to the user
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- architecture
+- web
 ---
 
 I've been preaching that [this][1] is what the future will look like for years, ever since the first time I saw a simple Flash app that dynamically included server data.  I've always meant to learn Flash, but it's been so "movie" oriented that I never could get enthused.  Finally, Flash gets application (I'm sorry, "Rich \[Internet\] \[Client|Application\]") oriented.

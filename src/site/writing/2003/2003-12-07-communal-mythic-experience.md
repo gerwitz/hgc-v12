@@ -1,13 +1,14 @@
 ---
 title: Communal mythic experience
 categories:
-- uncategorized
+- personal
+- culture
 content-tags:
-- tagless
+- sublime
+- experience
 ---
 
-Last Tuesday, we went to the [New
-Cathedral][1] for the annual [benefit][2] Holiday Brass Concert that packs the pews of this rather large space.  The large but silent audience and beautifully orchestrated music creates one of those sublime experiences of [ritual][3] that feels like a connection to something larger than your conscious self.  Depending on who you talk to, you're closer to God, each other, or your some part of your subconscious mind.  Whatever it is, though, I believe it holds appeal for everyone.
+Last Tuesday, we went to the [New Cathedral][1] for the annual [benefit][2] Holiday Brass Concert that packs the pews of this rather large space.  The large but silent audience and beautifully orchestrated music creates one of those sublime experiences of [ritual][3] that feels like a connection to something larger than your conscious self.  Depending on who you talk to, you're closer to God, each other, or your some part of your subconscious mind.  Whatever it is, though, I believe it holds appeal for everyone.
 
    [1]: http://www.cathedralstl.org/
    [2]: http://iwbc-online.org/

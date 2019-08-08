@@ -1,21 +1,17 @@
 ---
 title: The Return of the King
 categories:
-- uncategorized
+- personal
 content-tags:
-- tagless
+- entertainment
 ---
 
-I played hooky yesterday to watch the [last
-installment][1] of the [Lord of the Rings
-movies][2].
+I played hooky yesterday to watch the [last installment][1] of the [Lord of the Rings movies][2].
 
    [1]: http://www.imdb.com/title/tt0167260/
    [2]: http://www.lordoftherings.net/
 
-Now, I viewed the [Matrix
-series][3] with a critical eye, looking for philosophical themes and analyzing every character and plot turn.  This enabled me to enjoy the [last
-one][4], while many others were disappointed.
+Now, I viewed the [Matrix series][3] with a critical eye, looking for philosophical themes and analyzing every character and plot turn.  This enabled me to enjoy the [last one][4], while many others were disappointed.
 
    [3]: http://www.whatisthematrix.com/
    [4]: http://imdb.com/title/tt0242653/

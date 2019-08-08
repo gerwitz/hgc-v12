@@ -1,9 +1,12 @@
 ---
 title: Is tolerance natural
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- tolerance
+- society
+- psychology
+- diversity
 ---
 
 Besides erecting up a [straw man][1] who believes in utopia, the pseudononymous Yeti asserts that [tolerance is not natural][2].  This is understandable: sociobiology, evolutionary psychology, selfish gene theory, and other attempts to understand human nature indicate this on the surface: it is only in our interest to permit the existence of others who are our kin.  This is exactly the viewpoint I was countering when I ruffled feathers [asserting][3] that difference need not threaten.

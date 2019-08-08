@@ -6,6 +6,8 @@ content-tags:
 - identity
 - technology
 - retail
+- privacy
+- data
 ---
 
 This morning in Starbucks while discussing the [Starbucks

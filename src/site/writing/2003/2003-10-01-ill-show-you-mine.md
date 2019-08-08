@@ -1,13 +1,13 @@
 ---
 title: I'll show you mine...
 categories:
-- uncategorized
+- personal
 content-tags:
-- tagless
+- tools
+- mac
 ---
 
-I'm giving in to the [latest fad][1] and sharing [my
-Dock][2].
+I'm giving in to the [latest fad][1] and sharing [my Dock][2].
 
    [1]: http://www.kottke.org/03/10/031001your_dock_if.html
    [2]: http://phobia.com/space/Journal/Technology/I%27ll+show+you+mine.../dock-2003-10-01.jpg

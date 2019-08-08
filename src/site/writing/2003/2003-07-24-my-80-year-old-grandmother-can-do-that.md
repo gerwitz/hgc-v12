@@ -4,6 +4,7 @@ categories:
 - personal
 content-tags:
 - cycling
+- aside
 ---
 
 John McCoy [answers][1] the question "What's so special about Lance Armstrong and those other guys?"  Found by [Heather][2].

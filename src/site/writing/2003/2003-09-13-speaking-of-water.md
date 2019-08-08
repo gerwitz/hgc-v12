@@ -6,6 +6,7 @@ content-tags:
 - health
 - medicine
 - food
+- drugs
 ---
 
 Heather has wondered [what's so bad about NICOwater?][1]  Well, nothing, really.

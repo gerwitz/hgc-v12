@@ -6,8 +6,7 @@ content-tags:
 - marketing
 ---
 
-Just yesterday I was amused to note a television commercial (yah, Kristan was watching TV faster than the TiVo could keep up) from the [Las
-Vegas Convention and Visitors Authority][1] that was certainly more in line with the traditional view of that city.  That is, not the whitewashed "family friendly" Just-Like-Disney-With-Slots view that they tried on for the last few years.  Apparently, this was part of a new ad campaign that gets [edgy enough][2] that a few networks will only show the spots in late night.
+Just yesterday I was amused to note a television commercial (yah, Kristan was watching TV faster than the TiVo could keep up) from the [Las Vegas Convention and Visitors Authority][1] that was certainly more in line with the traditional view of that city.  That is, not the whitewashed "family friendly" Just-Like-Disney-With-Slots view that they tried on for the last few years.  Apparently, this was part of a new ad campaign that gets [edgy enough][2] that a few networks will only show the spots in late night.
 
    [1]: http://www.vegasfreedom.com/
    [2]: http://www.reviewjournal.com/lvrj_home/2003/Jan-15-Wed-2003/business/20427758.html

@@ -1,13 +1,13 @@
 ---
 title: The Gerwitz Memorial Grove
 categories:
-- uncategorized
+- personal
 content-tags:
-- tagless
+- trees
+- nature
 ---
 
-Two weeks ago I went on a [Sierra
-Club][1] "hike" through [Belfontaine cemetery][2].  One can't help but consider what kind of physical legacy when encountering the beautiful Judge monument and Busch memorial.
+Two weeks ago I went on a [Sierra Club][1] "hike" through [Belfontaine cemetery][2].  One can't help but consider what kind of physical legacy when encountering the beautiful Judge monument and Busch memorial.
 
    [1]: http://missouri.sierraclub.org/emg/
    [2]: http://www.bellefontainecemetery.com/

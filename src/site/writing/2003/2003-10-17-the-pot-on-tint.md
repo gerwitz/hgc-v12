@@ -1,13 +1,14 @@
 ---
-title: The pot, on tint-
+title: The pot, on tint
 categories:
-- uncategorized
+- work
+- culture
 content-tags:
-- tagless
+- oss
+- microsoft
 ---
 
-Heather offers [link-love][1] to an article that [rants
-about Wired][2].  I agree completely about the poor journalism, I let my subscription lapse in 2001, after faithfully reading every issue from the beginning for years.  The quality of writing had sunk to the level of local weekly fishwrappers.
+Heather offers [link-love][1] to an article that [rants about Wired][2].  I agree completely about the poor journalism, I let my subscription lapse in 2001, after faithfully reading every issue from the beginning for years.  The quality of writing had sunk to the level of local weekly fishwrappers.
 
    [1]: http://angelweave.mu.nu/archives/004816.html
    [2]: http://www.treygivens.com/archives/000075.php

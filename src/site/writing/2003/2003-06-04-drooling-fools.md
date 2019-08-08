@@ -4,6 +4,7 @@ categories:
 - personal
 content-tags:
 - music
+- aside
 ---
 
 [Heather][1] puts on her jealous wife hat and disses [Jewel][2].  Nonetheless, my More Of That rating remains intact.

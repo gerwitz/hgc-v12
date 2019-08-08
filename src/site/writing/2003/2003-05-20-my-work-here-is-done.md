@@ -6,6 +6,7 @@ categories:
 content-tags:
 - apple
 - commerce
+- aside
 ---
 
 [Trojan horse][1].  'nuff said.

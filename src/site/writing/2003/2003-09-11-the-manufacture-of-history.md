@@ -12,6 +12,6 @@ Great quote from a [great article][1]: "Richard Drew is no stranger to history; 
 
    [1]: http://www.esquire.com/features/articles/2003/030903_mfe_falling_1.html
 
-Thanks to [Tanya][2] for bringing attention to one of the most compelling image from the events of 2001-09-11.
+Thanks to [Tanya][2] for bringing attention to one of the most compelling imageS from the events of 2001-09-11.
 
    [2]: http://www.redsugar.com/oldmuse/002759.html

@@ -1,9 +1,9 @@
 ---
 title: Going broke
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- childless
 ---
 
 This [Salon article on the leading cause of bankruptcy][1] is another good reason to join [VHEMT][2].

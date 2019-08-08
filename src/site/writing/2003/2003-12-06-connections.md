@@ -1,14 +1,17 @@
 ---
 title: Connections
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- project
+- personality
+- data
+- psychology
 ---
 
 [This][1] isn't the first time I've wondered about correlation of surveys.  One of my crazy if-only-I-could-retire-now ideas has been a site like [Emode][2] or [Quizilla][3], with all results data (anonymously) evaluated for reliability and correlation with each other and demographics.
 
-   [1]: http://phobia.com/C2142514717/E595300049/
+   [1]: https://web.archive.org/web/20040114000132/http://homepage.mac.com/phobia/C2142514717/E595300049/index.html
    [2]: http://www.emode.com/tests/
    [3]: http://quizilla.com/
 
