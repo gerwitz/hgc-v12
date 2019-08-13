@@ -71,3 +71,11 @@ Several MBTI tests have rated me an INTp, although I've never taken the official
 2019-05-21 
 
 https://bigfive-test.com/result/5ce3ef4afbef970069f7b14f
+
+--
+
+2019-07
+
+https://www.16personalities.com/profiles/fc306cffbbbef
+
+--
