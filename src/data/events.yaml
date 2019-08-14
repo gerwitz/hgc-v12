@@ -347,6 +347,11 @@
     Bought 1996 Mazda Miata
     # starlight blue M edition, "Vicki"
 -
+  date: 1998-02 #25
+  type: life
+  text:
+    Gave up meat and became pescetarian
+-
   date: 1998-08
   type: school
   text:
@@ -580,3 +585,8 @@
   type: work
   text:
     Started at Philips
+-
+  date: 2019-07 #16
+  type: life
+  text:
+    Sterilization
