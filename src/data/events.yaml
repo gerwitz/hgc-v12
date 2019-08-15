@@ -138,8 +138,7 @@
     Told by SLUH I was not invited back while not living with parents
     # tried Crossroads
 -
-  date: 1991
-  confidence: low
+  date: 1991-04
   type: life
   geo: [38.506229, -90.384860] # Hyland Center at St. Anthony's
   text:
@@ -158,7 +157,7 @@
   text:
     Moved into crack house apartments in CWE
 -
-  date: 1992
+  date: 1992-03
   type: life
   text:
     Married Colleen
