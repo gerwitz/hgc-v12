@@ -3,6 +3,10 @@ title: Quirks
 epitaph: is flawed
 ---
 
+I am remarkably average. Generally, I fit the measurements of the archetypical Caucasian man that most of the world is design to accomodate. It's really quite convenient.
+
+But of course I deviate from "normal" in a few ways. My feet are shorter than average. I'm nearsighted and suffer from hayfever. Here are a few of my other deviations:
+
 # Stereoblindness
 
 I was born with hereditary comitant exotropic strabismus, which causes amblyopia or "lazy eye". This basically means my eyes are misaligned so they didn't work together. Left untreated, one eye would become so dominant the other might stop working (this happened to my grandfather).[^lazy] I was treated in my early school years and developed full vision in both eyes. This involved wearing eye patches, which was not cool and probably contributed substantially to my social status as an outcast nerd.
@@ -23,3 +27,4 @@ I sometimes wonder if my difficulty learning new faces[^faces] is related to thi
 
 [^faces]: I guess I have a touch of [prosopamnesia](https://en.wikipedia.org/wiki/Prosopamnesia).
 
+Related, I think, I have very poor episodic memory. I don't believe I would be diagnosed with [SDAM](http://levinelab.ca/memory.html) but it can feel like it in contrast to Shannon's strong episodic memory and nearly eidetic visualization of same.
