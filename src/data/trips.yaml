@@ -382,6 +382,7 @@
   date: 2007-04 #20
   nights: 3
   modes: [air]
+  geo: [35.46683, -97.51396] # Renaissance
   title:
     Oklahoma City to visit Stephanie # with Kristan
 -
@@ -425,7 +426,7 @@
   date: 2008-02 #09
   nights: 1
   modes: [air, rail]
-  geo: [39.0833964, -94.5829858]
+  geo: [39.08340, -94.58299]
   title:
     Kansas City with Shannon
     # missed outbound rail, so took a plane
@@ -434,7 +435,7 @@
   date: 2008-03 #19
   nights: 0
   modes: [air]
-  geo: [41.8922894, -87.6246558] # Mariott
+  geo: [41.89229, -87.62465] # Mariott
   title:
     Chicago to speak at IAB
 -
@@ -442,7 +443,7 @@
   date: 2008-04 #06
   nights: 1
   modes: [air]
-  geo: [47.629150, -122.341899] # 1100 Dexter Ave N
+  geo: [47.62915, -122.34190] # 1100 Dexter Ave N
   title:
     Interviewed with frog design in Seattle
 -
@@ -528,7 +529,7 @@
   date: 2008-08 #28
   nights: 3
   modes: [air]
-  geo: [38.632614, -90.197348] # loft
+  geo: [38.63261, -90.19735] # loft
   title:
     "St. Louis for Frank's birthday"
 -
@@ -536,7 +537,7 @@
   date: 2008-09 #02
   nights: 2
   modes: [air]
-  geo: [33.8474422, -84.3698608]
+  geo: [33.84744, -84.36986]
   title:
     Atlanta for work
 -
@@ -560,7 +561,7 @@
   date: 2008-09 #19
   nights: 2
   modes: [air, car]
-  geo: [47.671421, -113.255450] # arbitrary
+  geo: [47.67142, -113.25545] # arbitrary
   title:
     Glacier National Park with the Lames
 -
@@ -750,7 +751,7 @@
       title: Santorini and Oia (and hot springs)
     -
       nights: 2 # 1 at sea
-      geo: [40.8401413,14.2522602] # Naples
+      geo: [40.84014,14.25226] # Naples
       title: Pompeii and Mt. Vesuvius
 -
   tripit: 2864925
@@ -773,7 +774,7 @@
   date: 2009-11 #14
   nights: 2
   modes: [air]
-  geo: [37.7755394,-122.4083939] # W
+  geo: [37.77554,-122.40839] # W
   title:
     San Francisco for work
 -
@@ -781,7 +782,7 @@
   date: 2009-11 #18
   nights: 1
   modes: [air]
-  geo: [37.7755394,-122.4083939] # W
+  geo: [37.77554,-122.40839] # W
   title:
     San Francisco for work
 -
@@ -829,7 +830,7 @@
   date: 2010-01 #14
   nights: 3
   modes: [air]
-  geo: [36.1219832,-115.1714063] # Venetian
+  geo: [36.12198,-115.17140] # Venetian
   title:
     Las Vegas for wedding # Anna and James, with Shannon
 -
@@ -837,7 +838,7 @@
   date: 2010-01 #19
   nights: 1
   modes: [air]
-  geo: [37.7876416,-122.4083227] # Westin St. Francis
+  geo: [37.78764,-122.40832] # Westin St. Francis
   title:
     San Francisco for work
 -
@@ -853,7 +854,7 @@
   date: 2010-02 #
   nights: 2
   modes: [air]
-  geo: [38.6548843,-90.2824402] # Moonrise Hotel
+  geo: [38.65488,-90.28244] # Moonrise Hotel
   title:
     Valentine in St. Louis # with Shannon
 -
@@ -892,7 +893,7 @@
   date: 2010-04 #12
   nights: 9
   modes: [air]
-  geo: [51.5064201,-0.12721] # The Royal Park
+  geo: [51.50642,-0.12721] # The Royal Park
   title:
     London for work # with Shannon
 -
@@ -900,7 +901,7 @@
   date: 2010-04 #29
   nights: 1
   modes: [air]
-  geo: [51.5141563,-0.181693] # Park Grand Paddington
+  geo: [51.51416,-0.18169] # Park Grand Paddington
   title:
     London for work
 -
@@ -908,7 +909,7 @@
   date: 2010-05 #10
   nights: 0
   modes: [air]
-  geo: [51.5064201,-0.12721] # Vodafone Paddington
+  geo: [51.50642,-0.12721] # Vodafone Paddington
   title:
     London for work
 -
@@ -940,7 +941,7 @@
   date: 2010-06 #12
   nights: 3
   modes: [air]
-  geo: [52.3726238,4.8833701] # Hotel Pulitzer
+  geo: [52.37262,4.88337] # Hotel Pulitzer
   title:
     Amsterdam # with Shannon
 -
@@ -948,7 +949,7 @@
   date: 2010-06 #17
   nights: 2
   modes: [air]
-  geo: [51.5064201,-0.12721] # Thistle Marble ARch
+  geo: [51.50642,-0.12721] # Thistle Marble ARch
   title:
     London for work # with Shannon
 -
@@ -1025,11 +1026,11 @@
   destinations:
     -
       nights: 3
-      geo: [28.504287, 77.097421] # Hotel Leela
+      geo: [28.50429, 77.09742] # Hotel Leela
       title: Gurgaon (Delhi)
     -
       nights: 4
-      geo: [12.960713, 77.648480] # The Leela Palace
+      geo: [12.96071, 77.64848] # The Leela Palace
       title: Bangelore
 -
   tripit: 10802127
@@ -1041,7 +1042,7 @@
   destinations:
     -
       nights: 5
-      geo: [40.507734,-88.959926] # Bloomington-Normal Marriott
+      geo: [40.50774,-88.95993] # Bloomington-Normal Marriott
       title: Pontiac (via Chicago) to visit Lames
     -
       nights: 4
@@ -1095,7 +1096,7 @@
   date: 2011-05 #30
   nights: 3
   modes: [air]
-  geo: [48.8632889,2.366508] # Murano Resort
+  geo: [48.86329,2.36651] # Murano Resort
   title:
     Paris for work
 -
@@ -1119,7 +1120,7 @@
   date: 2011-07 #11
   nights: 3
   modes: [air]
-  geo: [33.2892776,-111.8916833] # Courtyard Fashion Center
+  geo: [33.28928,-111.89168] # Courtyard Fashion Center
   title:
     Phoenix for work
 -
@@ -1135,7 +1136,7 @@
   date: 2011-08 #24
   nights: 1
   modes: [air]
-  geo: [33.2892776,-111.8916833] # Courtyard Fashion Center
+  geo: [33.28928,-111.89168] # Courtyard Fashion Center
   title:
     Phoenix for work
 -
@@ -1151,7 +1152,7 @@
   date: 2011-09 #19
   nights: 0
   modes: [air]
-  geo: [33.310970, -111.932351] # Intel
+  geo: [33.31097, -111.93235] # Intel
   title:
     Phoenix for work
 -
@@ -1159,7 +1160,7 @@
   date: 2011-10 #10
   nights: 0
   modes: [air]
-  geo: [33.310970, -111.932351] # Intel
+  geo: [33.31097, -111.93235] # Intel
   title:
     Phoenix for work
 -
@@ -1175,7 +1176,7 @@
   date: 2011-10 #24
   nights: 1
   modes: [air]
-  geo: [33.2892776,-111.8916833] # Courtyard Fashion Center
+  geo: [33.28928,-111.89169] # Courtyard Fashion Center
   title:
     Phoenix for work
 -
@@ -1191,7 +1192,7 @@
   date: 2011-11 #04
   nights: 2
   modes: [air]
-  geo: [36.109823,-115.176047] # The Cosmopolitan
+  geo: [36.10982,-115.17605] # The Cosmopolitan
   title:
     "Las Vegas for friends' wedding" # with Shannon
 -
@@ -1223,7 +1224,7 @@
   date: 2011-12 #01
   nights: 1
   modes: [air]
-  geo: [33.413698,-111.925685] # Four Points by Sheraton
+  geo: [33.41370,-111.92569] # Four Points by Sheraton
   title:
     Phoenix for work
 -
@@ -1247,7 +1248,7 @@
   date: 2012-01 #09
   nights: 0
   modes: [air]
-  geo: [37.3886,-121.9634277] # Intel
+  geo: [37.3886,-121.96343] # Intel
   title:
     San Jose for work # with Shannon
 -
@@ -1263,7 +1264,7 @@
   date: 2012-01 #25
   nights: 2
   modes: [air]
-  geo: [33.847186,-118.395375] # Portofino
+  geo: [33.84719,-118.39538] # Portofino
   title:
     Los Angeles for work # with Shannon
 -
@@ -1351,7 +1352,7 @@
   date: 2012-06 #18
   nights: 2
   modes: [air]
-  geo: [33.266495,-111.9926509] # Sheraton
+  geo: [33.26650,-111.99265] # Sheraton
   title:
     Phoenix for work # with Dan
 -
@@ -1367,7 +1368,7 @@
   date: 2012-07 #16
   nights: 2
   modes: [air]
-  geo: [37.7876416,-122.4083227] # Westin St. Francis
+  geo: [37.78764,-122.40832] # Westin St. Francis
   title:
     San Francisco for work # alone
 -
@@ -1375,7 +1376,7 @@
   date: 2012-07 #24
   nights: 0
   modes: [air]
-  geo: [44.974041, -93.275503] # Target
+  geo: [44.97404, -93.27550] # Target
   title:
     Minneapolis for work # alone
 -
@@ -1431,7 +1432,7 @@
   date: 2012-11 #08
   nights: 0
   modes: [air]
-  geo: [45.546901, -122.912347] # Intel Hillsboro
+  geo: [45.54690, -122.91234] # Intel Hillsboro
   title:
     Portland for work # alone
 -
@@ -1439,7 +1440,7 @@
   date: 2012-11 #15
   nights: 0
   modes: [air]
-  geo: [52.3657899,4.89326] # The Albus
+  geo: [52.36579,4.89326] # The Albus
   title:
     Moving to Amsterdam # with Shannon
 -
@@ -1447,7 +1448,7 @@
   date: 2012-11 #17
   nights: 15
   modes: [air]
-  geo: [19.134402, 72.901250] # Renaissance
+  geo: [19.13440, 72.90125] # Renaissance
   title:
     Mumbai for work
 -
@@ -1472,7 +1473,7 @@
       title: Edwardsville, IL
     -
       nights: 1
-      geo: [40.507734,-88.959926] # Bloomington-Normal Marriott
+      geo: [40.50773,-88.95993] # Bloomington-Normal Marriott
       title: Pontiac, IL
     -
       nights: 1
@@ -1500,7 +1501,7 @@
   date: 2013-02 #04
   nights: 4
   modes: [air]
-  geo: [19.134402, 72.901250] # Renaissance
+  geo: [19.13440, 72.90125] # Renaissance
   title:
     Mumbai for work
 -
@@ -1508,7 +1509,7 @@
   date: 2013-02 #18
   nights: 5
   modes: [air]
-  geo: [19.134402, 72.901250] # Renaissance
+  geo: [19.134402, 72.90125] # Renaissance
   title:
     Mumbai for work
 -
@@ -1532,7 +1533,7 @@
   date: 2013-03 #13
   nights: 3
   modes: [air]
-  geo: [19.134402, 72.901250] # Renaissance
+  geo: [19.13440, 72.90125] # Renaissance
   title:
     Mumbai for work
 -
@@ -1540,7 +1541,7 @@
   date: 2013-03 #21
   nights: 3
   modes: [air]
-  geo: [44.80688,20.4737699] # Metropol Palace
+  geo: [44.80688,20.47377] # Metropol Palace
   title:
     Belgrade for Resonate # with Shannon
 -
@@ -1556,7 +1557,7 @@
   date: 2013-06 #
   nights: 0
   modes: [air]
-  geo: [51.7536011,-0.3373] # humanLearning
+  geo: [51.75360,-0.3373] # humanLearning
   title:
     London-ish for work # with Shannon
 -
@@ -1596,7 +1597,7 @@
   date: 2013-07 #25
   nights: 0
   modes: [air]
-  geo: [50.132122, 8.577382] # DT
+  geo: [50.13212, 8.57738] # DT
   title:
     Frankfurt for work # alone
 -
@@ -1612,7 +1613,7 @@
   date: 2013-10 #04
   nights: 3
   modes: [air]
-  geo: [32.4397697,35.0482903] # apartment
+  geo: [32.43977,35.04829] # apartment
   title:
     "Berlin for friends' birthdays" # with Shannon
 -
@@ -1620,7 +1621,7 @@
   date: 2013-10 #24
   nights: 6
   modes: [air]
-  geo: [35.7061005,139.7838287] # Hotel MyStays
+  geo: [35.70610,139.78383] # Hotel MyStays
   title:
     Tokyo for Halloween # with Shannon and Gwenny
 -
@@ -1637,7 +1638,7 @@
       title: Chicago
     -
       nights: 1
-      geo: [40.507734,-88.959926] # Bloomington-Normal Marriott
+      geo: [40.50773,-88.95992] # Bloomington-Normal Marriott
       title: Pontiac, IL
     -
       nights: 3
@@ -1673,7 +1674,7 @@
       title: Pontiac, IL
     -
       nights: 4
-      geo: [38.6306439,-90.1903326] # Embassy Suites
+      geo: [38.63064,-90.19033] # Embassy Suites
       title: St. Louis
     -
       nights: 1
@@ -1684,7 +1685,7 @@
   date: 2014-04 #02
   nights: 4
   modes: [air]
-  geo: [44.2329712,20.7979584] # apartment
+  geo: [44.23297,20.79796] # apartment
   title:
     Belgrade for Resonate # with Shannon, Jo, Carol
 -
@@ -1692,7 +1693,7 @@
   date: 2014-04 #23
   nights: 1
   modes: [rail]
-  geo: [51.4402721,5.4738373] # Art Hotel
+  geo: [51.44027,5.47384] # Art Hotel
   title:
     Eindhoven for work # with Shannon
 -
@@ -1700,7 +1701,7 @@
   date: 2014-05 #05
   nights: 5
   modes: [air]
-  geo: [47.7926923,-122.2156468] # Hilton Garden Inn
+  geo: [47.79269,-122.21565] # Hilton Garden Inn
   title:
     Seattle for work # alone
 -
@@ -1708,7 +1709,7 @@
   date: 2014-06 #01
   nights: 4
   modes: [air]
-  geo: [47.7926923,-122.2156468] # Hilton Garden Inn
+  geo: [47.79270,-122.21565] # Hilton Garden Inn
   title:
     Seattle for work # alone
 -
@@ -1752,7 +1753,7 @@
   date: 2014-09 #04
   nights: 3
   modes: [air]
-  geo: [50.8248672,-0.138943] # myhotel
+  geo: [50.82487,-0.13894] # myhotel
   title:
     Brighton for dConstruct # with Shannon
 -
@@ -1792,7 +1793,7 @@
   date: 2015-01 #23
   nights: 2
   modes: [rail]
-  geo: [49.61146,6.1335499] # Hotel Par Beaux-Arts
+  geo: [49.61146,6.13355] # Hotel Par Beaux-Arts
   title:
     "Luxmbourg for Shannon's birthday" # with Shannon
 -
@@ -1825,11 +1826,11 @@
       title: Chicago
     -
       nights: 5
-      geo: [38.630032,-90.192163] # Magnolia Hotel
+      geo: [38.63003,-90.19216] # Magnolia Hotel
       title: St. Louis
     -
       nights: 4
-      geo: [40.726037, -73.991624] # Bowery Hotel
+      geo: [40.72604, -73.99162] # Bowery Hotel
       title: NYC for holiday
 -
   tripit: 159989539
@@ -1844,7 +1845,7 @@
   date: 2015-12 #05
   nights: 8
   modes: [air]
-  geo: [47.7926923,-122.2156468] # Hilton Garden Inn
+  geo: [47.79269,-122.21565] # Hilton Garden Inn
   title:
     Seattle for work # with Shannon
 -
@@ -1881,7 +1882,7 @@
       title: Fort Myers, FL to visit Mom
     -
       nights: 5
-      geo: [18.1069927,-63.0579185] # Bleu Emeraude
+      geo: [18.10699,-63.05792] # Bleu Emeraude
       title: Saint Martin to relax
 -
   tripit: 172532563
@@ -1904,7 +1905,7 @@
   date: 2016-08 #24
   nights: 4
   modes: [air]
-  geo: [47.4838499,19.0526899] # Danubius Hotel Gellért
+  geo: [47.48385,19.05269] # Danubius Hotel Gellért
   title:
     Budapest holiday # with Shannon
 -
@@ -1918,12 +1919,12 @@
     -
       date: 2016-10-23
       nights: 1
-      geo: [28.555091,77.084419] # Holiday Inn Express
+      geo: [28.55509,77.08442] # Holiday Inn Express
       title: Slept in airport hotel, stuck in security limbo
     -
       date: 2016-10-24
       nights: 1
-      geo: [27.722946,85.361879] # Happiness Guest House
+      geo: [27.72295,85.36188] # Happiness Guest House
       title: Kathmandu to visit orphanage
     -
       date: 2016-10-25
@@ -1943,7 +1944,7 @@
     -
       date: 2016-10-28
       nights: 1
-      geo: [28.530705,83.878109] # ABC
+      geo: [28.53071,83.87811] # ABC
       title: Annapurna Base Camp
     -
       date: 2016-10-29
@@ -1958,19 +1959,19 @@
     -
       date: 2016-10-31
       nights: 2
-      geo: [28.204372,83.962713] # Mount Kailash Resort
+      geo: [28.20437,83.96271] # Mount Kailash Resort
       title:
     -
       date: 2016-11-02
       nights: 1
-      geo: [27.722946,85.361879] # Happiness Guest House
+      geo: [27.72295,85.36188] # Happiness Guest House
       title: Kathmandu and orphanage
 -
   tripit: 180892146
   date: 2016-11 #06
   nights: 7
   modes: [air]
-  geo: [38.7244699,-9.14775] # apartment
+  geo: [38.72447,-9.14775] # apartment
   title:
     Lisbon for Web Summit # with Shannon, Carol, Ariane, Natalia, Parizad
 -
@@ -1998,7 +1999,7 @@
   date: 2017-04 #18
   nights: 5
   modes: [air]
-  geo: [44.80688,20.4737699] # Metropol Palace
+  geo: [44.80688,20.47377] # Metropol Palace
   title:
     Belgrade for Resonate # with Shannon, Carol, Ariane, Natalia, Parizad
 -
@@ -2022,42 +2023,50 @@
   date: 2017-08 #05
   nights: 1
   modes: [rail]
-  geo: [51.910911,4.497103] # Pincoffs
+  geo: [51.91091,4.49710] # Pincoffs
   title:
     Rotterdam to find the in-laws # with Shannon, Joan, Charles
 -
+  tripit: 203464964
   date: 2017-09 #23
   nights: 7
   modes: [air]
+  geo: [47.61369,-122.33819] # Westin
   title:
     Seattle for work # with Shannon, Natalia
 -
+  tripit: 203052778
   date: 2017-10 #15
   nights: 26
   modes: [air, car]
   title:
-    Around the world
+    Around the world # with Shannon
   destinations:
     -
       nights: 6
+      geo: [18.92192, 72.83344] # Taj Mahal Palace
       title: Mumbai
     -
       nights: 6
+      geo: [22.27973, 114.17951] # Mira Moon
       title: Hong Kong
     -
       nights: 6
+      geo: [47.60739,-122.33363] # W
       title: Seattle
     -
       nights: 1
-      title: "Somewhere, Missouri"
+      geo: [38.50750, -90.68045] # Holiday Inn Six Flags
+      title: "Missouri for family wedding"
     -
       nights: 5
+      geo: [38.7985,-89.9533] # Edwardsville
       title: "Edwardsville (and Pontiac)"
 -
   date: 2017-12 #07
   nights: 2
   modes: [rail]
-  geo: [48.866787, 2.276541]
+  geo: [48.86679, 2.27654]
   title:
     Disneyland Paris for office party # with Shannon, Ariane, Natalia, Natalie, Kamila, Manjari
 -
@@ -2069,12 +2078,12 @@
   destinations:
     -
       nights: 1
-      geo: [51.899458, 0.891116] # city center, but really Haus Reinhardt
+      geo: [51.89946, 0.89112] # city center, but really Haus Reinhardt
       title:
         Colchester
     -
       nights: 1
-      geo: [51.509747, -0.196728] # The Laslett
+      geo: [51.50975, -0.19673] # The Laslett
       title:
         London
 -
@@ -2107,7 +2116,7 @@
   date: 2018-08 # 22
   nights: 1
   modes: [rail]
-  geo: [52.5153811,6.0954878] # De Librije
+  geo: [52.51538,6.09549] # De Librije
   title:
     Zwolle for anniversary dinner # with Shannon
 -
@@ -2115,7 +2124,7 @@
   date: 2018-08 # 26
   nights: 5
   modes: [air]
-  geo: [13.0008998,77.5723711] # Sheraton
+  geo: [13.00090,77.57237] # Sheraton
   title:
     Bangelore for work
 -
@@ -2123,7 +2132,7 @@
   date: 2018-10 # 27
   nights: 3
   modes: [air]
-  geo: [50.080086,14.4224653] # ICON Hotel
+  geo: [50.08009,14.42247] # ICON Hotel
   title:
     Prague for Firebase Summit # with Shannon
 -
@@ -2131,7 +2140,7 @@
   date: 2018-11 # 21
   nights: 4
   modes: [air]
-  geo: [43.7736808,11.2552349] # Palazzo Niccolini al Duomo
+  geo: [43.77368,11.25523] # Palazzo Niccolini al Duomo
   title:
     Florence thanksgiving # with Shannon, Bobby, Allison, et al
 -
@@ -2139,15 +2148,15 @@
   date: 2018-12 #14
   nights: 2
   modes: [rail]
-  geo: [50.945143,6.961302] # Cologne Mariott
+  geo: [50.94514,6.96130] # Cologne Mariott
   title:
-  	Cologne Christmas markets # with Shannon, Natalia, Abe & Campbell, Mafer & Sebas, et al
+    Cologne Christmas markets # with Shannon, Natalia, Abe & Campbell, Mafer & Sebas, et al
 -
   tripit: 247207645
   date: 2019-01 #18
   nights: 2
   modes: [rail]
-  geo: [51.054086, 3.721502] # 1898 The Post (tower)
+  geo: [51.05409, 3.72150] # 1898 The Post (tower)
   title:
     Gent for Shannon's birthday # with Shannon
 -
@@ -2156,25 +2165,57 @@
   nights: 13
   modes: [air]
   title:
-    Mardi Gras and Mom
+    Mardi Gras and Mom # with Shannon
   destinations:
     -
       nights: 3
-      geo: [29.948329, -90.072007] # Ace Hotel
+      geo: [29.94833, -90.07201] # Ace Hotel
       title: New Orleans for Freret
     -
       nights: 2
-      geo: [26.433019, -82.049825] # Sundial
+      geo: [26.43302, -82.04983] # Sundial
       title: Sanibel Island with Mom
     -
       nights: 7
-      geo: [29.948329, -90.072007] # Ace Hotel
+      geo: [29.94833, -90.07201] # Ace Hotel
       title: New Orleans for the rest of Mardi Gras
 -
   tripit: 257117963
   date: 2019-03 #24
   nights: 5
   modes: [air]
-  geo: [13.0008998,77.5723711] # Sheraton
+  geo: [13.00090,77.57237] # Sheraton
   title:
     Bangelore for work
+-
+  tripit: 260354355
+  date: 2019-05 #25
+  nights: 14
+  modes: [air, rail]
+  title:
+    Midwest for Julian and Eyeo # with Shannon
+  destinations:
+    -
+      nights: 2
+      geo: [41.87973,-87.63314] # W Loop
+      title: Chicago
+    -
+      nights: 2
+      geo: [38.62928,-90.20747] # Union Station
+      title: St. Louis to visit Julian
+    -
+      nights: 5
+      geo: [38.7985,-89.9533] # Edwardsville
+      title: Edwardsville, IL to visit Lames
+    -
+      nights: 4
+      geo: [44.97049, -93.27710]
+      title: Eyeo in Minneapolis
+-
+  tripit: 265134047
+  date: 2019-07 #05
+  nights: 2
+  modes: [rail]
+  geo: [52.49910, 13.39981] # Hotel the YARD
+  title:
+    Joining the ladies in Berlin # with Shannon, Joan
