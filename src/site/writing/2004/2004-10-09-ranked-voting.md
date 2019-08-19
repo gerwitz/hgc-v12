@@ -5,6 +5,7 @@ categories:
 content-tags:
 - government
 - politics
+- voting
 ---
 
 [Ranked voting systems][1] permit the voter to select multiple candidates, indicating an order of preference.

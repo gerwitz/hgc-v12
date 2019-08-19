@@ -1,9 +1,10 @@
 ---
 title: Secure Email
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- email
+- security
 ---
 
 Blacklisting spammers would be quite effective, if it wasn't so easy for them to [forge the sender][1].  I've been encouraging friends to [sign][2] their messages with S/MIME, in a sort of grassroots effort to work around the primary weakness of the net's email infrastructure (SMTP's blind trust of the From: header) that enables spam.

@@ -1,7 +1,7 @@
 ---
 title: Translucent cement
 categories:
-- work
+- personal
 content-tags:
 - idea
 - technology

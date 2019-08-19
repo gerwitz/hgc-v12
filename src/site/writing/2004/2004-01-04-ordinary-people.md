@@ -1,14 +1,16 @@
 ---
 title: Ordinary People
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- code
+- development
+- design
 ---
 
-Great quote from [Tim Bray on the "View Source
-Lesson"][1]:
-	"At this point, the RDF evangelists pipe up and say ?Well, Ordinary People (tm) don't have to look at the source, there will be tools to sort all that out.? Sorry, I just don't believe that. If, in 1994, you'd needed DreamWeaver or equivalent to write for the Web, there wouldn't be a Web today."
+Great quote from [Tim Bray on the "View Source Lesson"][1]:
+
+> At this point, the RDF evangelists pipe up and say "Well, Ordinary People (tm) don't have to look at the source, there will be tools to sort all that out." Sorry, I just don't believe that. If, in 1994, you'd needed DreamWeaver or equivalent to write for the Web, there wouldn't be a Web today."
 
    [1]: http://www.tbray.org/ongoing/When/200x/2003/05/21/RDFNet
 

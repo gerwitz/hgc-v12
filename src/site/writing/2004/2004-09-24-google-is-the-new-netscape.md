@@ -1,9 +1,11 @@
 ---
 title: Google is the new Netscape
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- web
+- google
+- fave
 ---
 
 Jason Kottke has added [his 2][1] to Anil Dash's [assertion][2] that Google could/should/might release a web browser.

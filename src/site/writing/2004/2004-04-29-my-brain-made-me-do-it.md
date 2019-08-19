@@ -1,9 +1,10 @@
 ---
-title: My brain made me do it-
+title: My brain made me do it
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- psychology
+- addiction
 ---
 
 Heather [rants about addiction inflation][1].  She seems to fear the trend towards attributing behavior to the phenotype.

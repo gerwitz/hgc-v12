@@ -1,9 +1,10 @@
 ---
 title: Linguistic divinity
 categories:
-- uncategorized
+- personal
 content-tags:
-- tagless
+- measurement
+- language
 ---
 
 I don't normally care much for the blogosphere quiz memes, but this one is an actual test:

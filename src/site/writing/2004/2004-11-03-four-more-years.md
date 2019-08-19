@@ -1,21 +1,18 @@
 ---
 title: Four more years
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- politics
+- usa
+- bush
 ---
 
 I'd previously come up with several reasons to root for Bush today:
 
-
-
-
   * This administration deserves to be the one that deals with the results of their policies for the past four years.  _Ignoring the impact of four more years of these policies, of course..._
 
-
   * The innate human morbid curiosity that causes us to watch with nearly eager anticipation when hurricanes are heading towards populous areas.  Fewer slow news days!
-
 
   * Tough love: this generation clearly needs to make some really stupid mistakes of its own, since it clearly is not going to learn from prior history alone.
 

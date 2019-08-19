@@ -1,9 +1,12 @@
 ---
 title: Is he against life, or against liberty?
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- politics
+- usa
+- abortion
+- bush
 ---
 
 I've been amazed to learn how many people intend to vote for [Bush][1] only because he's against [abortion][2].

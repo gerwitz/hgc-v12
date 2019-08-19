@@ -1,9 +1,10 @@
 ---
-title: Why we ride---
+title: Why we ride
 categories:
-- uncategorized
+- personal
 content-tags:
-- tagless
+- cycling
+- charity
 ---
 
 It's [that time of year][1] again.  A week from now, I and some friends will be riding in the [MS 150][2], a benefit ride for the National Multiple Sclerosis Society.  Over two days (Saturday, Sept 11 and Sunday, Sept 12) we will ride 150 miles.  Some of us are aiming for 200.

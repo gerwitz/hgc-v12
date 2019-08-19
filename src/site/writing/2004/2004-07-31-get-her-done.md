@@ -1,9 +1,10 @@
 ---
 title: Get her done
 categories:
-- uncategorized
+- personal
 content-tags:
-- tagless
+- family
+- rednecks
 ---
 
 Kurt and I joined Kristan & her family for a float trip on the Huzzah River, from Bass' River Resort.  Quite distinct from the tranquil Meramec rides of my youth, the river was **packed** with people.

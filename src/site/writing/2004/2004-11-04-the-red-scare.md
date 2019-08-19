@@ -2,10 +2,12 @@
 title: The Red Scare
 categories:
 - culture
+- personal
 content-tags:
 - politics
 - bush
 - usa
+- migration
 - fave
 ---
 

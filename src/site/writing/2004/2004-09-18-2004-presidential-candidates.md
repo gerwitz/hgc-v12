@@ -12,7 +12,6 @@ This is a fun one.
 
 My [SelectSmart.com][1] matches:
 
-
    [1]: http://www.selectsmart.com/PRESIDENT/president.php
 
 CandidatePartyMatch
@@ -48,5 +47,5 @@ Constitution Party
 
 But Kerry gets the vote I'm casting [against Bush][2], since we don't have [ranked voting][3] in Missouri.
 
-   [2]: https://hans.gerwitz.com/2004/08/07/the-case-against-w.html
+   [2]: /2004/08/07/the-case-against-w.html
    [3]: http://hans.gerwitz.com/xwiki/bin/Main/ranked+voting

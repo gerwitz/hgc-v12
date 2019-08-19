@@ -1,9 +1,9 @@
 ---
 title: Rainy days and paper apes
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- origami
 ---
 
 As Saturday's weather did not invite cycling, I amused myself by building a paper sculpture of a [Sumatran Orangutan][1], courtesy of [Yamaha Motor Co][2].  The results were satisfying, considering I found only a dull razor blade and a glue stick to work with.

@@ -1,9 +1,9 @@
 ---
 title: Flynn, meet Moore
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- aside
 ---
 
 Why can't the [Flynn effect][1] look more like [Moore's Law][2]?

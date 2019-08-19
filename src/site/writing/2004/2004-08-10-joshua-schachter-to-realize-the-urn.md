@@ -1,9 +1,10 @@
 ---
 title: Joshua Schachter to realize the URN
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- web
+- data
 ---
 
 Between [GeoURL][1], [Loaf][2], and [del.icio.us][3], [Joshua Schachter][4] seems to be a one-man show making the Semantic Web happen.
