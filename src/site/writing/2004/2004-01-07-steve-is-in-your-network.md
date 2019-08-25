@@ -1,9 +1,10 @@
 ---
 title: Steve is in your network
 categories:
-- uncategorized
+- personal
 content-tags:
-- tagless
+- apple
+- linkedin
 ---
 
 A recent invitation to [LinkedIn][1] reminded me of the world of social network software, so I visited [Friendster][2]  as well.  Amusingly, the random connection highlighted on login was [Woz][3], from only 2 degrees of separation.  I don't think that gives me the right to borrow a [Segway][4], though.

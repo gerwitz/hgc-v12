@@ -7,9 +7,7 @@ content-tags:
 - bush
 ---
 
-For all their preparation, the Republicans seem to have briefed [W][1] with only two memes:
-
-   [1]: /library/etc/w.html
+For all their preparation, the Republicans seem to have briefed W with only two memes:
 
   * I am the Commander in Chief.  _Bow before me_
   * Changing your position is a sign of weakness.  _Real men don't learn from their mistakes._

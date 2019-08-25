@@ -1,9 +1,11 @@
 ---
 title: Lost Century
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- stlouis
+- architecture
+- history
 ---
 
 A sad time for St. Louis, as a [historic landmark][1] has fallen prey to the [wrecking ball][2] of [profit][3].

@@ -3,6 +3,7 @@ title: Let there be light
 categories:
 - culture
 content-tags:
+- quote
 - politics
 - bush
 ---

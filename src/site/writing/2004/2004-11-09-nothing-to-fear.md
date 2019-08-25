@@ -1,9 +1,10 @@
 ---
 title: Nothing to fear
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- quote
+- aside
 ---
 
 > The objective of securing the safety of Americans from crime and terror has been achieved

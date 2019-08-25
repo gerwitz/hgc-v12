@@ -1,13 +1,14 @@
 ---
 title: Oh, did we forget to mention
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- government
+- economy
+- usa
 ---
 
 John Stewart shall not want for material the next four years.
-
 
 > The Republican-controlled Congress put off dealing with the debt ceiling before adjourning in October, preferring not to force members to vote on the politically sensitive issue of adding to the national debt before the November elections.
 >

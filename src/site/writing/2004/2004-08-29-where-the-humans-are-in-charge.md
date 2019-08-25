@@ -1,9 +1,10 @@
 ---
 title: Where the humans are in charge
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- aside
+- technology
 ---
 
 >

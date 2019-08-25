@@ -4,6 +4,8 @@ categories:
 - culture
 content-tags:
 - politics
+- usa
+- bush
 ---
 
 Perhaps I can mollify Mr. Noggle over my "ad homenim" equating of Hulk smashing with [asshole behavior][1] with an acknowledgment.

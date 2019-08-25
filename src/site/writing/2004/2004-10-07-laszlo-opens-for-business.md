@@ -1,9 +1,9 @@
 ---
 title: Laszlo opens for business
 categories:
-- uncategorized
+- work
 content-tags:
-- tagless
+- web
 ---
 
 I am giddy about this [news][1]: [Laszlo is now Open Source][2].  I haven't used Laszlo, but the demos and documentation smell a lot like [Flex][3].  I've been excited about [Flash as an application view layer][4] for a while, but have seen serious resistance to adoption for business reasons ("Macromedia?  Like, the Dreamweaver and ColdFusion people?").

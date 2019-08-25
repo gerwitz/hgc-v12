@@ -1,9 +1,9 @@
 ---
 title: Color diet
 categories:
-- uncategorized
+- culture
 content-tags:
-- tagless
+- diet
 ---
 
 Since I am a fan of [eating whatever I want][1], I sometimes have to wonder at the success of those who restrict themselves to low fat or low carb diets.  Christopher Genoves has an explanation: any restricted diet has a [calorie advantage][2].  He also explains why the low carb diets are so popular:
