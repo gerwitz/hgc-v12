@@ -2219,3 +2219,11 @@
   geo: [52.49910, 13.39981] # Hotel the YARD
   title:
     Joining the ladies in Berlin # with Shannon, Joan
+-
+  tripit: 275852847
+  date: 2019-08 #21
+  nights: 4
+  modes: [air, rail]
+  geo: [47.37116, 8.54186] # Storchen Zürich
+  title:
+    Zürich and Pizol for tenth anniversary # with Shannon
