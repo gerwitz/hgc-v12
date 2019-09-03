@@ -16,29 +16,30 @@
     "url": "https://github.com/gerwitz/hans.gerwitz.com"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy": "^0.9.0",
     "clean-css": "^4.2.1",
     "concurrent-transform": "^1.0.0",
     "gravatar": "^1.6.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
-    "gulp-image-resize": "^0.13.0",
+    "gulp-image-resize": "^0.13.1",
     "gulp-rename": "^1.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-serve": "^1.4.0",
     "gulp-shell": "^0.6.5",
     "gulp-uglify": "^3.0.2",
     "markdown-it-footnote": "^3.0.1",
-    "markdown-it-sidenote": "gerwitz/markdown-it-sidenote",
-    "npm": "^6.9.0",
+    "markdown-it-sidenote": "github:gerwitz/markdown-it-sidenote",
+    "npm": "^6.11.2",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
-    "yarn": "^1.16.0"
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
-    "@11ty/eleventy-plugin-rss": "^1.0.6",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
     "lunr": "^2.3.6",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "sass": "^1.23.0-module.beta.1"
   }
 }
