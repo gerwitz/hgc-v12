@@ -6,9 +6,15 @@ Culture imbues us with ideas and mental models that help us make sense of the wo
 
 I am fascinated by the memes that are widespread despite being dangerously wrong. Even if we overcome our cognitive biases, our ideologies will sometimes lead us astray.
 
-- Duality (especially Cartesian)
+- Duality (especially Cartesian mind/body but also Platonic theory of form)
 
-- [Zero-sum](https://www.nytimes.com/2019/06/15/opinion/sunday/schools-testing-ranking.html)
+- pure separation/distinction (yet, "difference" for digitalization is so valuable)
+
+- [Zero-sum social measures](https://www.nytimes.com/2019/06/15/opinion/sunday/schools-testing-ranking.html)
+
+- eternity
+
+- limitless resources (broadacre) and manifest destiny
 
 - [The invisible hand](https://aeon.co/ideas/how-adam-smith-became-a-surprising-hero-to-conservative-economists)
 
