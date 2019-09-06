@@ -28,3 +28,16 @@ Everything is connected, nothing of noteworthy complexity can be clearly defined
 Morally good choices are those that respect the safety and thriving of persons and the complex ecosystems that allow them to exist.
 
 We are products of our culture as much as we are of our biology. Our culture, then, is an ecosystem that deserves moral respect.
+
+---
+
+I think of ideologies as branded collections of principles, so learning about how these clusters have evolved and are labeled helps me think about my own core beliefs.
+
+I presently consider myself a (philosophical) materialist, a deep ecologist and thus environmentalist and thus a vegetarian, a communalist (in the Bookchin sense),.
+
+Deep Ecologist means I find value in complex "living" things for their own sake. I believe humanity's understanding of the systems we are a part of is too constrained for us to have confidence that we can safely modify them. So, it's best to aim to limit our footprint.
+
+Communalist is very related but in the social sphere. I believe human cooperation does not scale well, so it is best for us to focus on peace and prosperity in local contexts and then between contexts, rather than define and enforce shared rules for everyone, everywhere.
+
+---
+
