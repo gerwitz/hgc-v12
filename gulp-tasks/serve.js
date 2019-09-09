@@ -1,11 +1,9 @@
-var project = require('./_project.js');
-var gulp    = require('gulp');
-var serve   = require('gulp-serve');
+const gulp    = require('gulp');
+const shell   = require('gulp-shell');
 
 /*
  local webserver for development
 */
-gulp.task('serve', serve({
-  root: [project.buildDest],
-  port: 8008,
-}));
+gulp.task('serve',
+  shell.task('npx @11ty/eleventy --serve --port=8008')
+);

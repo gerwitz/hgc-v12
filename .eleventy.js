@@ -2,19 +2,19 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const moment = require("moment");
 
 module.exports = function(config) {
-  var inputPath = "src/site";
+  var inputPath = "src";
 
   config.setDataDeepMerge(true);
 
   config.addCollection("content", function(all) {
     return all.getFilteredByGlob([
       // "**/*.md",
-      "src/site/about/**/*",
-      "src/site/library/**/*",
-      "src/site/notes/**/*",
-      "src/site/site/**/*",
-      "src/site/weeks/**/*",
-      "src/site/writing/**/*"
+      "src/about/**/*",
+      "src/library/**/*",
+      "src/notes/**/*",
+      "src/site/**/*",
+      "src/weeks/**/*",
+      "src/writing/**/*"
     ]);
   });
 
@@ -96,19 +96,22 @@ module.exports = function(config) {
   let markdownLib = markdownIt(options).use(markdownItSidenote);
   config.setLibrary("md", markdownLib);
 
+  config.addPassthroughCopy({"src/_meta": "/"});
+
   return {
     dir: {
       input: inputPath,
-      output: "dist",
-      includes: "_includes",
-      layouts: "_layouts"
+      output: "_site",
+      includes: "/_includes",
+      layouts: "/_layouts"
     },
     templateFormats : [
       "html",
       "njk",
       "md",
+      "js",
       "gif", "jpg", "jpeg", "png",
-      "pde", "js" // for /projects/fur/
+      "pde" // for /projects/fur/
     ],
 
     // always Nunjuk so we can use dynamic permalinks in the template
