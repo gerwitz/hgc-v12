@@ -12,6 +12,8 @@ I am fascinated by the memes that are widespread despite being dangerously wrong
 
 - [Zero-sum social measures](https://www.nytimes.com/2019/06/15/opinion/sunday/schools-testing-ranking.html)
 
+- Pure [meritocracy](https://www.theatlantic.com/magazine/archive/2019/09/meritocracys-miserable-winners/594760/)
+
 - eternity
 
 - limitless resources (broadacre) and manifest destiny
