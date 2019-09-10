@@ -4,9 +4,7 @@
 
 [![Website Archivability Testing](http://archiveready.com/img/archiveready-badge.png)](http://archiveready.com/check?url=https://hans.gerwitz.com/)
 
-Source files are in `/src` and site is built to `/dist`.
+Source files are in `/src` and site is built to `/_site`.
 
 To set up, from the root directory: `gulp build`
-To test: `gulp dev`
-
-Sass pipeline inspired by [Phil Hawksworth](https://www.hawksworx.com/blog/keeping-sass-simple-and-speedy-on-eleventy/).
+To test: `gulp serve`
