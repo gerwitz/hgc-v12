@@ -9,64 +9,66 @@ This is who I expect to meet on my tour of the circles of Hell.
 ## First
 <!-- Limbo -->
 
-- Tailgating pedestrians
-- Officemates who fail to push in their chair
-- Fietsers who park their bicycle laterally across the footpath
+- Those who fail to push in their chair
+- Those who park their bicycle laterally across the footpath
 
 ## Second
 <!-- Lust -->
 
-- Umbrella-wielders that take all the room under an awning
-- Aggressive slowpokes: Those who insist on being in front at a stoplight, but are slow to move onward
+- Those who confuse their pleasure for rightousness
 
 ## Third
 <!-- Gluttony -->
 
-- Carnivores
-- Tailgating cyclists
 - Those who carry on a loud conversation across passers by, raising their voices to overcome the obstacle of others' heads
+- Those who consume flesh
 
 ## Fourth
 <!-- Greed -->
 
-- Dogwalkers with long leashes that span the path
-- Carnivores who gloat about their consumption
+- Those who needlessly take more room than others[^big]
+- Those who disclaim the behavior of their pets or children
+- Those who insist on being in front, yet are slow to move onward
+
+[^big]: E.g. manspreaders, long-leash dog walkers, urban golf umbrella carriers
 
 ## Fifth
 <!-- Anger -->
 
-- Tailgating drivers
-- Dog owners that allow their pet to soil sidewalks
+- Those who willfully encroach[^encroach]
+
+[^encroach]: E.g. tailgating drivers
 
 ## Sixth
 <!-- Heresy -->
 
-- People who don't vote
-- Jim Humble and Kerri Rivera
-- White supremecists[^nazis]
+- Those who hold opinions but do not vote
+- Those who seek fame with dangerous falsehoods[^quack]
+- Those who consume flesh yet claim to be environmentalists
 
-[^nazis]: Steve Miller
+[^quack] E.g. Andrew Wakefield, Jim Humble, Kerri Rivera
 
 ## Seventh
 <!-- Violence -->
 
 - The profiteers of internet-scale ignorance and hate[^media]
-  Donald Trump
-- Drivers who threaten vulnerable roadway users
-- Andrew Wakefield
+- Those who threaten the vulnerable carelessly[^drivers]
+- Those who preach that different is dangerous[^nazis]
 
-[^media]:  Susan Wojcicki, Mark Zuckerberg
+[^media]:  E.g. Susan Wojcicki, Mark Zuckerberg
+[^drivers]: E.g. a large proportion of American motorists
+[^nazis]: E.g. Steve Miller, Donald Trump, members of the Westboro Baptist Church
 
 ## Eighth
 <!-- Fraud -->
 
-- The Trump svengalis (, Steve Bannon)
-- Members of the Westboro Baptist Church
+- Those who use power for personal gain or (religious) spite[^spite]
+
+[^spite]: E.g. Mitch McConnell, Orin Hatch, Lindsey Graham, Roger Severino, the Kochs
 
 ## Ninth
 <!-- Treachery -->
 
-- The men with power who will trade the United States federation and its role in global peace and justice for personal gain or religious spite (Mitch McConnell, Orin Hatch, Lindsey Graham, Roger Severino, et al)
-- Those who fight to maintain an antisocial status quo with no cause but the preservation of the power they enjoy. [^statusquo]
+- Those who use the power of storytelling to please power to the detriment of society[^svengali]
 
-[^statusquo]: E.g. Steve Bannon, [Chris Rufo](https://www.wsj.com/articles/new-left-urbanists-want-to-remake-your-city-11566512564)
+[^svengali]: E.g. [Aleksandr Dugin](https://en.wikipedia.org/wiki/Aleksandr_Dugin), Steve Bannon, [Chris Rufo](https://www.wsj.com/articles/new-left-urbanists-want-to-remake-your-city-11566512564)
