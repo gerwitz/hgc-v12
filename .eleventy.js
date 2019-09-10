@@ -6,8 +6,8 @@ module.exports = function(config) {
 
   config.setDataDeepMerge(true);
 
-  config.addCollection("content", function(all) {
-    return all.getFilteredByGlob([
+  config.addCollection("content", function(collection) {
+    return collection.getFilteredByGlob([
       // "**/*.md",
       "src/about/**/*",
       "src/library/**/*",
@@ -17,6 +17,25 @@ module.exports = function(config) {
       "src/writing/**/*"
     ]);
   });
+
+  config.addCollection("microblog", function(collection) {
+    var writing = collection.getFilteredByTag('writing');
+    var notes = collection.getFilteredByTag('notes');
+
+    var headlines = writing.map(function(item) {
+      return {
+        inputPath: item.inputPath,
+        fileSlug: item.fileSlug,
+        outputPath: item.outputPath,
+        url: item.url,
+        date: item.date,
+        templateContent: '<a href="'+item.url+'">'+item.data.title+'</a>'
+        // no data
+      }
+    });
+
+    return notes.concat(headlines);
+  })
 
   // weeks
   // const genesis = moment([1974, 2, 9]).startOf('isoWeek');

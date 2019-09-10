@@ -1,6 +1,3 @@
-/feed/microblog.rss         /notes/feed.rss             301
-/feed/writing.rss           /writing/feed.rss           301
-
 /library/records/*          /about/history/appearances/:splat       301
 /projects/*                 /library/projects/:splat    301
 /using/*                    /library/tools/:splat       301

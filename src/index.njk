@@ -38,10 +38,10 @@ headtags: |
     <a href="/library/" class="internal">library</a> is a labyrinth of random things.
   </p>
   <p>
-    I post short notes to <a href="/microblog/" class="internal">microblog</a>. Here are a few recent ones:
+    I have a microblog at <a href="/notes/" class="internal">notes</a>. Here are a few recent ones:
   <span class="marginnote">These are also copied to <a href="http://micro.blog/gerwitz" rel="me">Micro.blog</a> and <a href="https://twitter.com/gerwitz" rel="me">Twitter</a>.</span>
   <p>
-  {% set notes = collections.microblog | sort(true, false, 'date') | limit(3) -%}
+  {% set notes = collections.notes | sort(true, false, 'date') | limit(3) -%}
   {% for note in notes %}
   <blockquote>
     {{ note.templateContent | safe }}
