@@ -3,3 +3,7 @@
   command = "gulp build"
   publish = "_site"
   NODE_ENV = "8.9.0"
+[build.processing.css]
+  minify = true
+[build.processing.images]
+  compress = true
