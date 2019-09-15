@@ -109,7 +109,7 @@ module.exports = function(config) {
   config.addFilter("limit", require("./filters/limit.js") );
   config.addFilter("parents", require("./filters/parents.js") );
   config.addFilter("weeklink", require("./filters/weeklink.js") );
-  // config.addFilter("weeknum", require("./filters/weeknum.js") );
+  config.addFilter("weekrange", require("./filters/weekrange.js") );
   config.addFilter("weekstart", require("./filters/weekstart.js") );
 
   // 🌲

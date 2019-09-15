@@ -10,7 +10,7 @@ breadcrumbs:
     <div style="position: relative">
         <h1>{{ renderData.title }}</h1>
         <span class="marginnote">
-            Started {{ renderData.weeknum | weekstart | date('nice') }}.
+            [{{ renderData.weeknum }}] Including {{ renderData.weeknum | weekrange }}
         </span>
     </div>
 

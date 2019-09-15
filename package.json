@@ -31,7 +31,7 @@
     "gulp-uglify": "^3.0.2",
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-sidenote": "github:gerwitz/markdown-it-sidenote",
-    "npm": "^6.11.2",
+    "npm": "^6.11.3",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
     "yarn": "^1.17.3"
@@ -40,6 +40,7 @@
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "lunr": "^2.3.6",
     "moment": "^2.24.0",
-    "sass": "^1.23.0-module.beta.1"
+    "sass": "^1.23.0-module.beta.1",
+    "twix": "^1.3.0"
   }
 }
