@@ -1,0 +1,14 @@
+---
+pagination:
+  data: collections.weeks
+  size: 1
+  alias: week
+layout: week
+renderData:
+  weeknum: "{{ week.fileSlug }}"
+  title: "Week {{ week.fileSlug }}"
+eleventyExcludeFromCollections: true
+permalink: "/weeks/{{ week.fileSlug }}/"
+---
+
+{{ week.templateContent | safe }}

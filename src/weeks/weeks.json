@@ -1,4 +1,4 @@
 {
-  "layout" : "week",
-  "tags" : "weeks"
+  "permalink": false,
+  "tags" : "weeknotes"
 }

@@ -2,15 +2,32 @@
 title: Weeks
 layout: page
 tags:
+pagination:
+  data: collections.weeks
+  size: 52
+  reverse: true
+permalink: /weeks/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber }}/{% endif %}index.html
 eleventyExcludeFromCollections: true
 ---
 
 This is a journal, not yet linked from anywhere. It's presently here only so I can search for entries and experiment with a more holistic archive.
 
-<ul>
-{%- for page in collections.weeks | reverse -%}
+{% if pagination.pageNumber > 0 %}
+<div class="pagination">
+  <a href="{{ pagination.previousPageHref }}">Newer</a>
+</div>
+{% endif %}
+
+<ol>
+{% for week in pagination.items %}
   <li>
-    <a href="{{ page.url }}">Week {{ page.fileSlug }} ({{ page.date | date('nice') }})</a>
+    <a href="{{ week.url }}">Week {{ week.fileSlug }} ({{ week.fileSlug | weekstart | date('nice') }})</a>
   </li>
-{%- endfor -%}
-</ul>
+{% endfor %}
+</ol>
+
+{% if pagination.nextPageHref %}
+<div class="pagination">
+  <a href="{{ pagination.nextPageHref }}">Older</a>
+</div>
+{% endif %}

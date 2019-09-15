@@ -18,6 +18,32 @@ module.exports = function(config) {
     ]);
   });
 
+  config.addCollection("weeks", function(collection) {
+    var weeknotes = collection.getFilteredByTag('weeknotes');
+    var current = 2375;
+
+    var emptyWeeks = new Map();
+    for (var i = 0; i <= current; i++) {
+      emptyWeeks.set(i, {
+        fileSlug: i.toString(),
+        // outputPath: '_site/weeks/'+i+'/index.html',
+        url: '/weeks/'+i+'/',
+        // layout: 'week',
+        templateContent: 'No notes this week.'
+      });
+    }
+
+    var populatedWeeks = weeknotes.reduce(function(map, item) {
+      // item.outputPath = '_site/weeks/'+item.fileSlug+'/index.html';
+      item.url = item.filePathStem + '/.';
+      // item.layout = 'week';
+      map.set(1*item.fileSlug, item);
+      return map;
+    }, emptyWeeks);
+
+    return Array.from(populatedWeeks.values());
+  });
+
   config.addCollection("microblog", function(collection) {
     var writing = collection.getFilteredByTag('writing');
     var notes = collection.getFilteredByTag('notes');
