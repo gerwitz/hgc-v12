@@ -1,11 +1,28 @@
+const NunjucksLib = require("nunjucks");
 const moment = require("moment");
+require("twix");
 
 module.exports = function(date, format) {
+  var theDate = moment(date);
   if( format === 'iso8601' ) {
-    return moment(date).toISOString();
+    return theDate.toISOString();
   } else if( format === 'nice' ) {
-    return moment(date).format('MMMM Do, YYYY');
+    var formatted = '<time datetime="' + theDate.toISOString() + '"';
+    // if (kwargs.class) {
+    //   formatted +' class="' + kwargs.class + '"';
+    // }
+    formatted += '>' + theDate.format('MMMM Do, YYYY') + '</time>';
+    return new NunjucksLib.runtime.SafeString(formatted);
+  } else if( format === 'weekstarted' ) {
+    var end = moment(theDate).add(6, 'days');
+    var range = theDate.twix(end, {allDay: true});
+    var formatted = '<time datetime="' + theDate.format('YYYY[W]WW') + '"';
+    // if (kwargs.class) {
+    //   formatted +' class="' + kwargs.class + '"';
+    // }
+    formatted += '>' + range.format({hideTime: true, monthFormat: 'MMMM', dayFormat: 'Do', implicitYear: false}) + '</time>';
+    return new NunjucksLib.runtime.SafeString(formatted);
   } else {
-    return moment(date).format(format);
+    return theDate.format(format);
   }
 }

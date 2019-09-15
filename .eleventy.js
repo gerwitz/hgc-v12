@@ -29,7 +29,7 @@ module.exports = function(config) {
         // outputPath: '_site/weeks/'+i+'/index.html',
         url: '/weeks/'+i+'/',
         // layout: 'week',
-        templateContent: 'No notes this week.'
+        templateContent: '<p>No notes this week.</p>'
       });
     }
 
@@ -63,41 +63,6 @@ module.exports = function(config) {
     return notes.concat(headlines);
   })
 
-  // weeks
-  // const genesis = moment([1974, 2, 9]).startOf('isoWeek');
-  // const thisweek = moment().startOf('isoWeek');
-  // const current = thisweek.diff(genesis, 'weeks');
-
-  // config.addCollection('weeks', function(all) {
-  //   console.log('start');
-  //   var weeks = [];
-  //   var weeknote = null;
-  //   for (var i = 0; i <= current; i++) {
-  //     console.log('week '+i);
-
-  //     weeknoteArray = all.weeks.getFilteredByGlob('./site/weeks/'+i+'.md');
-  //     if (weeknoteArray.length) {
-  //       weeks.push(weeknoteArray[0]);
-  //       console.log(' ✓');
-  //     } else {
-  //       weeks.push({
-  //         template: null,
-  //         // inputPath: `./src/site/weeks/'+i+'.md`,
-  //         inputPath: null,
-  //         fileSlug: i,
-  //         outputPath: 'weeks/'+i+'.html',
-  //         url: '/weeks/'+i+'.html',
-  //         // date: item.date,
-  //         data: {},
-  //         templateContent: null
-  //       });
-  //     }
-  //   }
-  //   console.log('done');
-  //   // return weeks;
-  //   return [];
-  // });
-
   // plugins
   config.addPlugin(pluginRss); // used only for absoluting URLs
 
@@ -109,7 +74,6 @@ module.exports = function(config) {
   config.addFilter("limit", require("./filters/limit.js") );
   config.addFilter("parents", require("./filters/parents.js") );
   config.addFilter("weeklink", require("./filters/weeklink.js") );
-  config.addFilter("weekrange", require("./filters/weekrange.js") );
   config.addFilter("weekstart", require("./filters/weekstart.js") );
 
   // 🌲

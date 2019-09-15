@@ -5,16 +5,18 @@ breadcrumbs:
     - weeks
 ---
 
-<article>
+<article class="h-entry">
 
-    <div style="position: relative">
-        <h1>{{ renderData.title }}</h1>
-        <span class="marginnote">
-            [{{ renderData.weeknum }}] Including {{ renderData.weeknum | weekrange }}
-        </span>
+    <div>
+        <h1 class="p-name">{{ renderData.title }}</h1>
+        <div class="metadata">
+            {{ renderData.weeknum | weekstart | date('weekstarted') }}
+        </div>
     </div>
 
-    {{ content | safe }}
+    <div class="content">
+        {{ content | safe }}
+    </div>
 
     {% if steps %}
         🚶🏻‍{{ steps }} steps
