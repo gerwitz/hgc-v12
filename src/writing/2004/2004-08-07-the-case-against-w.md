@@ -11,7 +11,7 @@ content-tags:
 [Ron Reagan's renown Esquire article][1] doesn't say anything new, but neatly sums up why I'll be voting **against [Bush][2]** at least as much as **for John Kerry**.  [Ryan][3] pointed out that recent punditry treats as an assumption it is "wrong" to vote for Kerry because he is not Bush.  I don't think this is correct: voting is a choice between candidates, not an objective judgment of a person.  Kerry may not be everything I could possibly want in a president, but _relative to Bush_ he can almost do no wrong.
 
    [1]: http://www.esquire.com/features/articles/2004/040729_mfe_reagan_1.html
-   [2]: /library/etc/w.html
+   [2]: /etc/w/
    [3]: http://nopaper.net/
 
 **UPDATE:** Barlow has written a great essay on why we need to support Kerry, even if he's not Prom King material:

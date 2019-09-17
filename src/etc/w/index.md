@@ -6,7 +6,7 @@ title: George W. Bush
 ---
 
 ![Presidency for Dummies][2]
-This page, created during the 2004 Presidential election campaign, serves as a repository of notes I refer back to when I'm asked "Why do you think Bush has been such a bad President?"  
+This page, created during the 2004 Presidential election campaign, serves as a repository of notes I refer back to when I'm asked "Why do you think Bush has been such a bad President?"
 See also [George's resume][4], [100 Facts and 1 Opinion][5].
 
    [2]: Presidency_for_Dummies.jpg "Presidency for Dummies"

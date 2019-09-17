@@ -10,8 +10,10 @@ module.exports = function(config) {
     return collection.getFilteredByGlob([
       // "**/*.md",
       "src/about/**/*",
-      "src/library/**/*",
+      "src/etc/**/*",
+      "src/lists/**/*",
       "src/notes/**/*",
+      "src/projects/**/*",
       "src/site/**/*",
       "src/weeks/**/*",
       "src/writing/**/*"

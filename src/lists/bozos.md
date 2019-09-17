@@ -6,6 +6,7 @@ title: Cretins
 
 Everybody needs somebody to despise.
 
+This should either be folded into Hell, or they should cross-reference.
 
 * [Louis Gohmert](http://en.wikipedia.org/wiki/Louie_Gohmert)
 
