@@ -1,6 +1,6 @@
 # modes: car, air, boat, rail, bus, foot
 # evntually a "from" should allow linking from explicit "home"
-# 1991–2002 is hardest to account for, I know I'm missing Hannibal, Nashville, Chicago
+# 1991–1996 is hardest to account for, I know I'm missing Hannibal, Nashville, Chicago
 -
   date: 1976
   modes: [air]
@@ -1949,8 +1949,8 @@
     -
       date: 2016-10-29
       nights: 1
-      geo: [28.45682,83.85678] #
-      title: Bamboo
+      geo: [28.45682,83.85678] # Bamboo Lodge
+      title: Ghandruk
     -
       date: 2016-10-30
       nights: 1
