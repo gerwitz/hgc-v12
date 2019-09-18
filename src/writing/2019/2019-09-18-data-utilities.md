@@ -1,9 +1,14 @@
 ---
-published: false
-title: Our Data Utilities
+title: Data Utilities
 categories:
-- unknown
+- culture
 content-tags:
+- data
+- business
+- government
+- facebook
+- google
+- amazon
 ---
 
 There are increasing calls to "break up" the big tech companies, from left-leaning politicians that distrust accumulation of power as well as thoughtful Santa Clarians who worry about the [lack of oxygen](https://mattstoller.substack.com/p/how-monopolies-broke-the-federal) for the capital ecosystem.
