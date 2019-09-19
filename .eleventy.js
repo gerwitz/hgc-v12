@@ -50,19 +50,35 @@ module.exports = function(config) {
     var writing = collection.getFilteredByTag('writing');
     var notes = collection.getFilteredByTag('notes');
 
-    var headlines = writing.map(function(item) {
-      return {
-        inputPath: item.inputPath,
-        fileSlug: item.fileSlug,
-        outputPath: item.outputPath,
-        url: item.url,
-        date: item.date,
-        templateContent: '<a href="'+item.url+'">'+item.data.title+'</a>'
-        // no data
-      }
-    });
+    var headlines = writing
+      .filter(function(item) {
+        return !(item.published == false);
+      })
+      .map(function(item) {
+        return {
+          inputPath: item.inputPath,
+          fileSlug: item.fileSlug,
+          outputPath: item.outputPath,
+          url: item.url,
+          date: item.date,
+          templateContent: '<a href="'+item.url+'">'+item.data.title+'</a>'
+          // no data
+        }
+      });
 
-    return notes.concat(headlines);
+    // console.log(writing[0]);
+    // console.log(notes[0]);
+
+    var full = notes
+      // .concat(headlines.slice(0,3));
+      .concat(headlines);
+    
+    full.sort(function(a, b) {
+        console.log('📅', a.date, b.date, a.date < b.date);
+        return (a.date - b.date);
+      });
+
+    return full;
   })
 
   // plugins
