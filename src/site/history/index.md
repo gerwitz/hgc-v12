@@ -18,6 +18,6 @@ Ringing in 2007, I sold the domain name and [moved to a new hostname](/2007/01/2
 Wordpress served me well enough, but when I was [fireballed](http://daringfireball.net/linked/2010/08/31/gerwitz) in 2010 it just couldn't handle the load (on memory) and my site spent most of the day unable to respond. Caching and optimizing made me comfortable for a while, but that Ruby itch finally got too strong. So in 2012 I went back to static[^JAMstack], first with [nanoc](/2012/02/20/reset.html) and later to [Middleman](http://www.middlemanapp.com/), which had a stronger community and I deployed for many projects at The Artificial.
 [^JAMstack]: Before static was [cool again](https://jamstack.org/).
 
-In 2018, I built Sitewriter to take back control over my "tweets", adding the [/microblog](/microblog/) section. Then in 2019, frustration with bit rot for Ruby projects and mothballing the agency's projects motivated me to reset to the setup described at [/site](/site/).
+In 2018, I built Sitewriter to take back control over my "tweets", adding the [/notes](/notes/) section. Then in 2019, frustration with bit rot for Ruby projects and mothballing the agency's projects motivated me to reset to the setup described at [/site](/site/).
 
 <!-- Even more information about the history of this site might be found in [meta posts](/writing/categories/meta.html). -->
