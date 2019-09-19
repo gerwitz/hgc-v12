@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 
 <form id="search-form" action="?" method="get">
   <label for="query"><svg xmlns="http://www.w3.org/2000/svg" height="13" viewBox="0 0 12 13" version="1"><g stroke-width="2" stroke="#000000" fill="none"><path d="M11.29 11.71l-4-4"/><circle cx="5" cy="5" r="4"/></g></svg></label>
-  <input type="search" name="q" id="query">
+  <input type="search" name="q" id="query" autofocus>
   <button type="submit" class="submit">Search</button>
 </form>
 
@@ -49,7 +49,11 @@ eleventyExcludeFromCollections: true
         page = lunrMap[Number(result.ref)];
         list += '<li><a href="'+page.url+'">' +
           '<span class="title">'+page.title+'<\/span>' +
-          '<\/a><\/li>';
+          '<\/a>';
+        if (page.meta) {
+          list += ' <span class="meta">('+page.meta+')<\/span>';
+        }
+        list += '<\/li>';
       });
       list += '<\/ol>';
       display(results.length+' results:', list);

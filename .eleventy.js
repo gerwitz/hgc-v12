@@ -22,23 +22,25 @@ module.exports = function(config) {
 
   config.addCollection("weeks", function(collection) {
     var weeknotes = collection.getFilteredByTag('weeknotes');
-    var current = 2375;
+    const genesis = moment([1974, 2, 4]); // == moment([1974, 2, 9]).startOf('isoWeek');
+    var current = moment().diff(genesis, 'weeks');
 
     var emptyWeeks = new Map();
-    for (var i = 0; i <= current; i++) {
+    for (var i = 0; i < current; i++) {
       emptyWeeks.set(i, {
         fileSlug: i.toString(),
-        // outputPath: '_site/weeks/'+i+'/index.html',
         url: '/weeks/'+i+'/',
-        // layout: 'week',
-        templateContent: '<p>No notes this week.</p>'
+        templateContent: '<p>No notes for this week.</p>'
       });
     }
+    emptyWeeks.set(current, {
+      fileSlug: current.toString(),
+      url: '/weeks/'+current+'/',
+      templateContent: '<p>No notes yet.</p>'
+    });
 
     var populatedWeeks = weeknotes.reduce(function(map, item) {
-      // item.outputPath = '_site/weeks/'+item.fileSlug+'/index.html';
       item.url = item.filePathStem + '/.';
-      // item.layout = 'week';
       map.set(1*item.fileSlug, item);
       return map;
     }, emptyWeeks);

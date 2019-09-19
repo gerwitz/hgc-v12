@@ -21,7 +21,7 @@ This is a journal, not yet linked from anywhere. It's presently here only so I c
 <ol>
 {% for week in pagination.items %}
   <li>
-    <a href="{{ week.url }}">Week {{ week.fileSlug }} ({{ week.fileSlug | weekstart | date('nice') }})</a>
+    <a href="{{ week.url }}">Week {{ week.fileSlug }}</a> ({{ week.fileSlug | weekstart | date('nice') }})
   </li>
 {% endfor %}
 </ol>

@@ -42,6 +42,7 @@ class LunrIndex {
     var docMap = {};
     pages.forEach(function (doc, index) {
       var title = 'Dataless';
+      var meta = false;
       switch(doc.data.layout) {
         case 'note':
           title = 'Note from ' + moment(doc.date).format('MMMM Do, YYYY');
@@ -50,14 +51,16 @@ class LunrIndex {
           title = 'Week ' + doc.fileSlug;
           break;
         case 'writing':
-          title = doc.data.title + ' (' + moment(doc.date).format('MMMM Do, YYYY') + ')';
+          title = doc.data.title
+          meta = moment(doc.date).format('MMMM Do, YYYY');
           break;
         default:
           title = doc.data.title || 'Untitled';
       }
       docMap[index] = {
         url: doc.url,
-        title: title
+        title: title,
+        meta: meta
       };
     });
 

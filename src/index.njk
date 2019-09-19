@@ -17,35 +17,24 @@ headtags: |
   <link rel="authorization_endpoint" href="https://indieauth.com/auth">
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
   <link rel="micropub" href="https://sitewriter.net/hans.gerwitz.com/micropub">
+eleventyExcludeFromCollections: true
 ---
 
-<h1>Hans Gerwitz</h1>
 <section>
   <p>
-    You can learn more about me at <a href="/about/" class="internal">about</a>.
-    <span class="marginnote">Or read more about this place at <a href="/site/" class="internal">site</a></span>
+    Hello! This is the personal site of <a href="/about/" rel="me">Hans Gerwitz</a>.
   </p>
-  <p>
-    <a href="/writing/" class="internal">writing</a> is where essays and blog posts accumulate.
+  <p>    
+    You can browse from <a href="/sitemap/" class="internal">sitemap</a> or use <a href="/search/" class="internal">search</a>. The easiest way to keep in touch is to <a href="https://twitter.com/intent/user?user_id=521" rel="me" target="_blank">follow me on Twitter</a>.
   </p>
-<!--
-  <p>
-    I keep a journal of sorts under <a href="/weeks/" class="internal">weeks</a>.
-    {# <span class="marginnote">The most recent entry is also at <a href="/now/" class="internal">now</a>.</span> #}
-  </p>
-  <p>
-    <a href="/lists/" class="internal">lists</a> is a labyrinth of random things.
-  </p>
--->
-  <p>
-    I have a microblog at <a href="/notes/" class="internal">notes</a>. Here are a few recent ones:
-  <span class="marginnote">These are also copied to <a href="http://micro.blog/gerwitz" rel="me">Micro.blog</a> and <a href="https://twitter.com/gerwitz" rel="me">Twitter</a>.</span>
-  <p>
-  {% set notes = collections.notes | sort(true, false, 'date') | limit(3) -%}
-  {% for note in notes %}
+  <h2>
+    Recent Posts
+  </h2>
+  {% set posts = collections.microblog | sort(true, false, 'date') | limit(9) -%}
+  {% for post in posts %}
   <blockquote>
-    {{ note.templateContent | safe }}
-    <footer><a href="{{ note.url }}">{{ note.date | date('MMMM Do, YYYY') }}</a></footer>
+    {{ post.templateContent | safe }}
+    <footer><a href="{{ post.url }}">{{ post.date | date('MMMM Do, YYYY') }}</a></footer>
   </blockquote>
   {% endfor %}
 </section>
