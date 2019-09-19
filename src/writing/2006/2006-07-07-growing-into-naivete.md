@@ -11,12 +11,10 @@ content-tags:
 
 > George W. Knox, director of the [National Gang Crime Research Center][1], said he has trained hundreds of police officials in how to cull intelligence on gang membership, rivalries, territory and lingo from these Web pages.
 
-"In order to understand any subculture, be it al Qaeda, witches, devil worshippers or gangs, you have to be able to know their own language," Knox said.
-
    [1]: http://www.ngcrc.com/
 
-
-Associated Press, [Street gangs get Web-savvy][2]
+> "In order to understand any subculture, be it al Qaeda, witches, devil worshippers or gangs, you have to be able to know their own language," Knox said.
+> - Associated Press, [Street gangs get Web-savvy][2]
 
 During [high school][3], I knew a good number of witches, mostly adherents of "eclectic" [Wicca][4], [oft-misunderstood][5] as evil merely for not being Christian.  Of course, they were actually the most harmless and loving teenagers you could hope to find, but we did wear a lot of black, and could sometimes even be found engaging in small rituals honoring nature, without a copy of the Bible in sight to lend legitimacy.
 

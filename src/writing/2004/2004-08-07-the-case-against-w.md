@@ -17,6 +17,6 @@ content-tags:
 **UPDATE:** Barlow has written a great essay on why we need to support Kerry, even if he's not Prom King material:
 
 > Between his ill-conceived military adventures and the billions his tax cuts have diverted into the pockets of his friends, Bush has created a deficit that may ultimately bring down the world's economy.
-> <footer>[John Perry Barlow][4]</footer>
+> - [John Perry Barlow][4]
 
    [4]: http://barlow.typepad.com/barlowfriendz/2004/10/supporting_kerr.html

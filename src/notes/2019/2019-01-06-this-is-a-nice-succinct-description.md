@@ -7,6 +7,5 @@ category: microblog
 This is a nice, succinct description of successful tool UX design:
 
 > Rational experimentation tends to lead to success.
-
-https://www.zoesmith.io/2019-01-04/i-love-my-mac/
+> - https://www.zoesmith.io/2019-01-04/i-love-my-mac/
 

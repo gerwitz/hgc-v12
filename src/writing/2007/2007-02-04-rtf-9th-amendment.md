@@ -8,7 +8,7 @@ content-tags:
 ---
 
 > ...the Constitution doesn't say every individual in the United States or every citizen is hereby granted or assured the right to habeas.
-> <footer>[Attorney General Alberto Gonzales at the Senate Judiciary Committee][1] (transcript not available online, see coverage by the [San Francisco Chronicle][2] and [Los Angeles Times][3])</footer>
+> - [Attorney General Alberto Gonzales at the Senate Judiciary Committee][1] (transcript not available online, see coverage by the [San Francisco Chronicle][2] and [Los Angeles Times][3])
 
    [1]: http://judiciary.senate.gov/testimony.cfm?id=2473&wit_id=3936
    [2]: http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2007/01/24/MNGDONO11O1.DTL

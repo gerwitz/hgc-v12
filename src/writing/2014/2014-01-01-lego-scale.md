@@ -15,4 +15,5 @@ There isn't an applicable ISO standard, and the prevailing wisdom seems to vary 
 Since studs are [spaced at 7.985 mm](http://www.lugnet.com/~330/FAQ/Build/dimensions), that translates to roughly **350 mm** in the minifig world.
 
 This means the LEGO magazine's 4 by 6 stud cell is 4.6 by 6.9 ft, not as big as Greg's 6 ft by 8 ft estimate. [Set 4636](http://creative.lego.com/en-us/Products/4636.aspx)'s 3 by 4 stud cell offers less than 14 square feet, which isn't even enough for a holding cell in [Texas](http://www.tcjs.state.tx.us/index.php?linkID=212), where
+
 > Cells shall be constructed to house from one to 24 minifigs and shall contain not less than 40 square feet of floor space for the first minifig and 18 square feet of floor space for each additional minifig to be confined.

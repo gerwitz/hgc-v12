@@ -13,7 +13,7 @@ external: http://safelyignored.com/google-incentives
 ---
 
 > Google’s mission is to organize the world’s information and make it universally accessible and useful.
-> <footer>[Google](http://www.google.com/about/company/)</footer>
+> - [Google](http://www.google.com/about/company/)
 
 Google didn't mean to be an advertising company. But the Google Search Appliance debuted at nearly the same time AdWords shifted to a pay-per-click model and ad revenue quickly eclipsed it and all other sources. So the firm was only three years old when "don't be evil" [began to fall prey][evil] to capitalist reality. By now, the noble and "open" attributes of their brand have been widely [discredited].
 
@@ -29,7 +29,7 @@ Advertising is still a "star" rather than a "cash cow" (in [BCG terms][bcg]), so
 [android]: http://www.tightwind.net/2011/01/android-isnt-about-building-a-mobile-platform/
 
 > In general, it could be argued from the consumer point of view that the better the search engine is, the fewer advertisements will be needed for the consumer to find what they want. This of course erodes the advertising supported business model of the existing search engines. However, there will always be money from advertisers who want a customer to switch products, or have something that is genuinely new. But we believe the issue of advertising causes enough mixed incentives that it is crucial to have a competitive search engine that is transparent and in the academic realm.
-> <footer>Sergey Brin and Larry Page, <a href="http://infolab.stanford.edu/~backrub/google.html"><cite>The Anatomy of a Large-Scale Hypertextual Web Search Engine</cite></a>, April 1998</footer>
+> - Sergey Brin and Larry Page, [The Anatomy of a Large-Scale Hypertextual Web Search Engine](http://infolab.stanford.edu/~backrub/google.html), April 1998
 
 Brin and Page were probably right. After all, Wikipedia thrives, Internet Archive is [indexing the dominant broadcast media of our culture][iatv], and the Library of Congress is [archiving our tweets][tweets]. This may be wishful thinking in today's climate of [market anarchism][], but we might be better served by a search engine run as a public service, with SEO spam declared a felony and advertisers dependent on adding value atop open APIs.
 

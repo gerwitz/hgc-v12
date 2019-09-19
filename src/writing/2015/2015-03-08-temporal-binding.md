@@ -26,4 +26,4 @@ I like to imagine a world of computing technology that was based on this sort of
 In yet another instance of psychologist-neurologist semantic clashing, psychology also uses the term "temporal binding" in relation to perception, but at a much higher level regarding our judgements about causation and our relative sense of time. So learning about bat sonar also taught me about this research:
 
 > if people believe that they (or someone or something else) are in charge, the time appears to pass faster.
-> -- Marc Buehner, [quoted by the APS](http://www.psychologicalscience.org/index.php/news/releases/causation-warps-our-perception-of-time.html)
+> - Marc Buehner, [quoted by the APS](http://www.psychologicalscience.org/index.php/news/releases/causation-warps-our-perception-of-time.html)

@@ -11,7 +11,7 @@ content-tags:
 ---
 
 > Five years ago, the Motorola Razr was the top-selling phone.  Imagine trying to sell 6 million of them today.
-> <footer>[Jonathan Chaplin, quoted in the WSJ][1]</footer>
+> - [Jonathan Chaplin, quoted in the WSJ][1]
 
 This feels like a fair comparison.  At its height in 2006, the RAZR held a 22% market share.  The iPhone has recently been estimated at 27% among smartphones.[^1]
 

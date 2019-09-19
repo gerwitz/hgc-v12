@@ -15,7 +15,7 @@ Another great presentation from [Eitan Suez][1] full of live demonstrations. [Na
    [2]: http://www.nakedobjects.org/
 
 > If anything at all, perfection is finally attained not when there is no longer anything to add but when there is no longer anything to take away, when a body has been stripped down to its nakedness.
-> <footer>Antoine de Saint-Exupry</footer>
+> - Antoine de Saint-Exupry
 
 Overall, I was disappointed by Naked Objects. It made for a slick demo of rapid interface generation, but so does Visual Studio, or Access for that matter.
 

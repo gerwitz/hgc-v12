@@ -17,7 +17,7 @@ I don't normally care much for the blogosphere quiz memes, but this one is an ac
 >
 > Congratulations and thank you!
 >
-> <footer>[How grammatically sound are you?][2]</footer>
+> - [How grammatically sound are you?][2]
 
    [2]: http://quizilla.com/users/BaalObsidian/quizzes/How%20grammatically%20sound%20are%20you%3F/
 

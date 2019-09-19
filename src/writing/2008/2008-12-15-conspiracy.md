@@ -11,7 +11,7 @@ content-tags:
 ---
 
 > "Watching someone writing an email on a Storm is like watching an antelope trying to open a packet of cigarettes."
-> <footer>[Stephen Fry][1]</footer>
+>  - [Stephen Fry][1]
 
    [1]: http://www.stephenfry.com/2008/12/11/gee-one-bold-storm-coming-up/
 

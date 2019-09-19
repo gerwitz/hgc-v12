@@ -30,7 +30,7 @@ Rather than presenting 4 distinct proposals for public feedback, the design team
 
 
 > I agree we need to figure some way to bring people down to the river and make things more attractiive, but i feel like the cobblestone landing is a HUGE part of St. Louis' historic legacy.
-> <footer>[Source][3]
+> - [Steve Patterson][3]
 
    [3]: http://www.urbanstl.com/viewtopic.php?p=14107#14107
 
@@ -48,17 +48,17 @@ The levee between the Poplar Street and Eads bridges is not St. Louis's riverfro
 Because we cannot modify the park, this aspect of our river denial has not been openly discussed.  But being powerless to change it doesn't mean it's not a problem; just look at the skyline from Eads Bridge just over the levee and it's striking how far away St. Louis really is from the Mississippi.
 
 > The primary intent for this project is to  position this Riverfront as a nationally recognized destination showcasing the Mississippi River and the St. Louis Region.
-> <footer>[Source][5]</footer>
+> - [Great Rivers][5]
 
    [5]: http://www.greatrivers.info/Projects/PDFs/RiverfrontInformation.pdf
 
 > For me the biggest priority is not to make some pretty pattern on the ground as seen from the Arch. The best thing we can do is reconnect our downtown with the river.
-> <footer>[Steve Patterson, July 1st, 2005][6]</footer>
+> - [Steve Patterson, July 1st, 2005][6]
 
    [6]: http://www.urbanreviewstl.com/archives/000209.php
 
 > The idea that the riverfront must be this world class design seems more like something for the trophy case than sound urban planning.
-> <footer>[Steve Patterson, October 14th, 2005][7]</footer>
+> - [Steve Patterson, October 14th, 2005][7]
 
    [7]: http://www.urbanreviewstl.com/archives/000293.php
 
@@ -70,7 +70,7 @@ Three intertwined goals should be guiding this process:
 ### Preserve the historical significance of the levee
 
 > Shouldn't our history be acknowledged in these proposals?
-> <footer>[Source][8]</footer>
+> - [framer][8]
 
    [8]: http://www.urbanstl.com/viewtopic.php?p=14114#14114
 

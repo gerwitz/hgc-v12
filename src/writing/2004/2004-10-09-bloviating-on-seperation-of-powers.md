@@ -31,7 +31,7 @@ As it stands, though, we appear perilously close to a transition from apathy to 
 >
 > These nations have progressed through the following sequence: from bondage to spiritual faith, from spiritual faith to great courage, from courage to liberty, from liberty to abundance, from abundance to selfishness, from selfishness to complacency, from complacency to apathy, from apathy to dependency, from dependency back to bondage.
 >
-> <footer>[Alexander Fraser Tytler?][4]</footer>
+> - [Alexander Fraser Tytler?][4]
 
    [4]: http://www.snopes.com/politics/quotes/tyler.asp
 

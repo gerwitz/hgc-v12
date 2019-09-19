@@ -11,7 +11,7 @@ content-tags:
 In a characteristically insightful article, analyst Horace Dediu proposes the reversal of Apple and Microsoft's fortunes is due to a shift in market priorities.
 
 > Apple has maintained its attention steadfastly on products while Microsoft has maintained unwavering focus on the distribution and control over value chains. During the 1990s one strategy worked and the other didn’t. During the following decade they changed places. The locus of the two strategies did not change. What seems to have changed is what the market values.
-> <footer>[Horace Dediu][1], <cite>[Who's knifing what?][2]</cite>, [Asymco][3], 15 March 2011</footer>
+> - [Horace Dediu][1], [Who's knifing what?][2], [Asymco][3], 15 March 2011
 
 I'm not sure I agree that Microsoft focuses on distribution control more than product development.  Distribution is important, of course: Apple has always sold to people while Microsoft sold to businesses, and the locus of technology purchase decisions has changed.  This could suggest that market values aren't shifting as much as the consumer market has surpassed the business market, and changed the flow of influence.  "I'll use Windows at home because I have to at work" was replaced with "I want to use an iPad, please support me at work."
 
