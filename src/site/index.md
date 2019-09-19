@@ -1,5 +1,5 @@
 ---
-title: About This Site
+title: This Site
 layout: page
 ---
 

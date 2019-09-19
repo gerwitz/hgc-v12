@@ -1,5 +1,5 @@
 ---
-title: The circles of Hell
+title: The Circles of Hell
 subtitle: We all have our own special Hell
 epitaph: holds a grudge
 ---

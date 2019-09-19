@@ -1,6 +1,5 @@
 ---
-title: Concentration
-subtitle: Wie die Pilze nach dem Regen
+title: Wie die Pilze nach dem Regen
 categories:
 - culture
 content-tags: [politics, oppression, natherlands, usa]
