@@ -66,15 +66,10 @@ module.exports = function(config) {
         }
       });
 
-    // console.log(writing[0]);
-    // console.log(notes[0]);
-
     var full = notes
-      // .concat(headlines.slice(0,3));
       .concat(headlines);
     
     full.sort(function(a, b) {
-        console.log('📅', a.date, b.date, a.date < b.date);
         return (a.date - b.date);
       });
 
