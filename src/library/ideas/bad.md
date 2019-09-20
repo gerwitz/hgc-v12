@@ -25,3 +25,5 @@ I am fascinated by the memes that are widespread despite being dangerously wrong
 - [Knowledge and eyewitness recall](https://aeon.co/essays/knowledge-is-a-stone-age-concept-were-better-off-without-it)
 
 - "Potential" as a moral good (the potential of the white boy in college accused of rape, the sacred life of an "unborn baby" embryo or fetus, the limited potential of "savages" in not-fully-industrialized societies)
+
+- Financialization - abstracting economic activity from the allocation of capital
