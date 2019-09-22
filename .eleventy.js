@@ -120,7 +120,7 @@ module.exports = function(config) {
   let markdownLib = markdownIt(options).use(markdownItSidenote);
   config.setLibrary("md", markdownLib);
 
-  config.addPassthroughCopy({inputPath+"/_meta": "/"});
+  config.addPassthroughCopy({"/_meta": "/"});
 
   return {
     dir: {
