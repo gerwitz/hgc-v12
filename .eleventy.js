@@ -70,7 +70,7 @@ module.exports = function(config) {
 
     var full = notes
       .concat(headlines);
-    
+
     full.sort(function(a, b) {
         return (a.date - b.date);
       });
@@ -120,7 +120,7 @@ module.exports = function(config) {
   let markdownLib = markdownIt(options).use(markdownItSidenote);
   config.setLibrary("md", markdownLib);
 
-  config.addPassthroughCopy({"src/_meta": "/"});
+  config.addPassthroughCopy({inputPath+"/_meta": "/"});
 
   return {
     dir: {
