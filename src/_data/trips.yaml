@@ -1,6 +1,6 @@
 # modes: car, air, boat, rail, bus, foot
 # evntually a "from" should allow linking from explicit "home"
-# 1991–1996 is hardest to account for, I know I'm missing Hannibal, Nashville, Chicago
+# 1991–1996 is hardest to account for, and I think I'm missing trips to Nashville, Chicago, New Orleans
 -
   date: 1976
   modes: [air]
@@ -103,6 +103,12 @@
   modes: [car]
   title:
     Chicago road trip, Blue Man Group # with Colleen
+-
+  date: 1998-08 #08
+  nights: 1
+  modes: [car]
+  title:
+    Hannibal road trip # with Colleen
 -
   date: 2000-05
   nights: 1
