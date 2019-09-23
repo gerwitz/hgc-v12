@@ -34,7 +34,7 @@
     "npm": "^6.11.3",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
-    "yarn": "^1.17.3"
+    "yarn": "^1.18.0"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-rss": "^1.0.7",

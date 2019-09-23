@@ -1,5 +1,4 @@
 [build]
-  Functions = "functions"
   command = "gulp build"
   publish = "_site"
   NODE_ENV = "8.9.0"
