@@ -85,6 +85,7 @@ module.exports = function(config) {
   config.addFilter("cssmin", require("./filters/cssmin.js") );
   config.addFilter("date", require("./filters/date.js") );
   config.addFilter("hostname", require("./filters/hostname.js") );
+  config.addFilter("inweek", require("./filters/inweek.js") );
   config.addFilter("json", require("./filters/json.js") );
   config.addFilter("limit", require("./filters/limit.js") );
   config.addFilter("parents", require("./filters/parents.js") );
