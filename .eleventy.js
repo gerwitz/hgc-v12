@@ -40,7 +40,7 @@ module.exports = function(config) {
     });
 
     var populatedWeeks = weeknotes.reduce(function(map, item) {
-      item.url = item.filePathStem + '/.';
+      item.url = '/weeks/'+item.fileSlug + '/.';
       map.set(1*item.fileSlug, item);
       return map;
     }, emptyWeeks);
