@@ -1,9 +1,12 @@
 ---
-published: false
 title: Signing Away Our Health Data
 categories:
-- unknown
+- culture
+- work
 content-tags:
+- privacy
+- health
+- data
 ---
 
 > Even if companies are transparent with their data policies, most people don’t bother reading them, especially when they’re in the middle of a mental health crisis.
