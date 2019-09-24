@@ -1,11 +1,11 @@
 ---
 layout: page
 old_url: http://hans.gerwitz.com/library/etc/w.html
-slug: w
 title: George W. Bush
 ---
 
 ![Presidency for Dummies][2]
+
 This page, created during the 2004 Presidential election campaign, serves as a repository of notes I refer back to when I'm asked "Why do you think Bush has been such a bad President?"
 See also [George's resume][4], [100 Facts and 1 Opinion][5].
 
@@ -32,18 +32,17 @@ See also [George's resume][4], [100 Facts and 1 Opinion][5].
 
   * silver-bullet focus on tax cuts
 
->
-**$5.6tr** Projected national surplus forecast by the end of the decade when Bush took office in 2001.
-**$7.22tr** US national debt by mid-2004.
-...
-**87** Percentage of American families in April 2004 who say they have felt no benefit from Bush's tax cuts.
-**39** Percentage of tax cuts that will go to the top 1 per cent of American families when fully phased in.
-**49** Percentage of Americans in April 2004 who found that their taxes had actually gone up since Bush took office.
-...
-**$30,858** Amount Bush himself saved in taxes in 2003.
-[The Independent][8]
+> **$5.6tr** Projected national surplus forecast by the end of the decade when Bush took office in 2001.
+> **$7.22tr** US national debt by mid-2004.
+> ...
+> **87** Percentage of American families in April 2004 who say they have felt no benefit from Bush's tax cuts.
+> **39** Percentage of tax cuts that will go to the top 1 per cent of American families when fully phased in.
+> **49** Percentage of Americans in April 2004 who found that their taxes had actually gone up since Bush took office.
+> ...
+> **$30,858** Amount Bush himself saved in taxes in 2003.
+> - [The Independent][independent]
 
-   [8]: http://news.independent.co.uk/world/americas/story.jsp?story=557746
+[independent]: http://news.independent.co.uk/world/americas/story.jsp?story=557746
 
 ### distaste for democracy
 
@@ -88,38 +87,30 @@ See also [George's resume][4], [100 Facts and 1 Opinion][5].
 
    [16]: http://www.snopes.com/quotes/goering.htm
 
-**1** Number of Bush administration public statements on National security issued between 20 January 2001 and 10 September 2001 that mentioned al-Qa'ida.
-**104** Number of Bush administration public statements on National security and defence in the same period that mentioned Iraq or Saddam Hussein.
-...
-**0** Number of times Bush mentioned Osama bin Laden in his three State of the Union addresses.
-**73** Number of times that Bush mentioned terrorism or terrorists in his three State of the Union addresses.
-**83** Number of times Bush mentioned Saddam, Iraq, or regime (as in change) in his three State of the Union addresses.
-...
-**0** Number of memorial services for the returned dead that Bush has attended since the beginning of the war.
-[The Independent][17]
-
-   [17]: http://news.independent.co.uk/world/americas/story.jsp?story=557746
+> **1** Number of Bush administration public statements on National security issued between 20 January 2001 and 10 September 2001 that mentioned al-Qa'ida.
+> **104** Number of Bush administration public statements on National security and defence in the same period that mentioned Iraq or Saddam Hussein.
+> ...
+> **0** Number of times Bush mentioned Osama bin Laden in his three State of the Union addresses.
+> **73** Number of times that Bush mentioned terrorism or terrorists in his three State of the Union addresses.
+> **83** Number of times Bush mentioned Saddam, Iraq, or regime (as in change) in his three State of the Union addresses.
+> ...
+> **0** Number of memorial services for the returned dead that Bush has attended since the beginning of the war.
+> - [The Independent][independent]
 
 ### squandering of natural resources
 
->
-**50** Percentage decline in Environmental Protection Agency enforcement actions against polluters under Bush's watch.
-**34** Percentage decline in criminal penalties for environmental crimes since Bush took office.
-**50** Percentage decline in civil penalties for environmental crimes since Bush took office.
-**$6.1m** Amount the EPA historically valued each human life when conducting economic analyses of proposed regulations.
-**$3.7m** Amount the EPA valued each human life when conducting analyses of proposed regulations during the Bush administration.
-[The Independent][18]
-
-   [18]: http://news.independent.co.uk/world/americas/story.jsp?story=557746
+> **50** Percentage decline in Environmental Protection Agency enforcement actions against polluters under Bush's watch.
+> **34** Percentage decline in criminal penalties for environmental crimes since Bush took office.
+> **50** Percentage decline in civil penalties for environmental crimes since Bush took office.
+> **$6.1m** Amount the EPA historically valued each human life when conducting economic analyses of proposed regulations.
+> **$3.7m** Amount the EPA valued each human life when conducting analyses of proposed regulations during the Bush administration.
+> - [The Independent][independent]
 
 ### MIA
 
->
-**28** Number of vacation days Bush took in August 2001, the month he received a 6 August Presidential Daily Briefing headed "Osama bin Laden Determined to Strike US Targets."
-**500** Number of days Bush has spent all or part of his time away from the White House at his ranch in Crawford, Texas, his parents' retreat in Kennebunkport, Maine, or Camp David as of 1 April 2004.
-[The Independent][19]
-
-   [19]: http://news.independent.co.uk/world/americas/story.jsp?story=557746
+> **28** Number of vacation days Bush took in August 2001, the month he received a 6 August Presidential Daily Briefing headed "Osama bin Laden Determined to Strike US Targets."
+> **500** Number of days Bush has spent all or part of his time away from the White House at his ranch in Crawford, Texas, his parents' retreat in Kennebunkport, Maine, or Camp David as of 1 April 2004.
+> - [The Independent][independent]
 
 ### single party dominance
 
