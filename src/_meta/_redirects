@@ -1,6 +1,0 @@
-/library/records/*          /about/history/appearances/:splat       301
-/library/projects/*         /projects/:splat            301
-/using/*                    /library/tools/:splat       301
-
-# Redirect default Netlify subdomain to primary domain
-https://hgc-v12.netlify.com/* https://hans.gerwitz.com/:splat 301!
