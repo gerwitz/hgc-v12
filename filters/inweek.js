@@ -7,9 +7,6 @@ const genesis = moment([1974, 2, 4]); // == moment([1974, 2, 9]).startOf('isoWee
 module.exports = function(list, weeknum) {
     const start = moment(genesis).add(weeknum, 'weeks');
     const end = moment(start).add(6, 'days');
-    if (weeknum > 2370) {
-        console.log(start, end);
-    }
     return list.filter(item => {
         const date = moment(item.date);
         return date.isBetween(start, end, 'days', '[]');
