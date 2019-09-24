@@ -9,7 +9,7 @@ content-tags:
 - rights
 ---
 
-As part of a [beautiful search for civil discourse](https://buster.substack.com/p/an-alternative-to-zingers), Buster Benson and BJ Campbell are engaged in a public conversation about gun control. Yesterday, BJ surfaced some [really interesting research into gun law effectiveness](http://www.bu.edu/articles/2019/state-gun-laws-that-reduce-gun-deaths/) that he sums up well:
+As part of a [beautiful search for civil discourse](https://buster.substack.com/p/an-alternative-to-zingers), Buster Benson and BJ Campbell are engaged in a public conversation about gun control. Yesterday, BJ surfaced some [really interesting research into gun law effectiveness](http://www.bu.edu/articles/2019/state-gun-laws-that-reduce-gun-deaths/) that he [sums up](https://letter.wiki/conversation/129#letter_541) well:
 
 > the NRA's "_guns don't kill people, people kill people_" rhetoric actually turns out to be not only very clean, it turns out to be _scientifically correct_. In particular, _violent people kill people_.
 
