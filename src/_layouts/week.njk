@@ -15,11 +15,27 @@ breadcrumbs:
     </div>
 
     <div class="content">
-        {{ content | safe }}
+        <div class="weeknotes">
+            {{ content | safe }}
+        </div>
+        
+        {% for note in collections.notes | inweek(renderData.weeknum) %}
+        {% if loop.first %}
+          <h2>Notes</h2>
+        {% endif %}
+          <blockquote>
+            {{ note.templateContent | safe }}
+            <footer><a href="{{ note
+            .url }}">{{ note.date | date('MMMM Do, YYYY') }}</a></footer>
+          </blockquote>
+        {% else %}
+          <!-- No notes -->
+        {% endfor %}
+
     </div>
 
     {% if steps %}
-        🚶🏻‍{{ steps }} steps
+        Data test: 🚶🏻‍{{ steps }} steps
     {% endif %}
 
 </article>

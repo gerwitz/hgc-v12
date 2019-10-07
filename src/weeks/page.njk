@@ -13,17 +13,6 @@ permalink: "/weeks/{{ week.fileSlug }}/"
 
 {{ week.templateContent | safe }}
 
-<h2>Notes</h2>
-{% for note in collections.notes | inweek(week.fileSlug) %}
-<blockquote>
-  {{ note.templateContent | safe }}
-  <footer><a href="{{ note
-  .url }}">{{ note.date | date('MMMM Do, YYYY') }}</a> (week {{ note.date | weeklink | safe }})</footer>
-</blockquote>
-{% else %}
-  No notes.
-{% endfor %}
-
 <h2>Writing</h2>
 <ul>
 {% for post in collections.writing | inweek(week.fileSlug) %}
