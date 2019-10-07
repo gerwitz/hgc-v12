@@ -18,19 +18,6 @@ breadcrumbs:
         <div class="weeknotes">
             {{ content | safe }}
         </div>
-        
-        {% for note in collections.notes | inweek(renderData.weeknum) %}
-        {% if loop.first %}
-          <h2>{{ loop.length }} Notes</h2>
-        {% endif %}
-          <blockquote>
-            {{ note.templateContent | safe }}
-            <footer><a href="{{ note
-            .url }}">{{ note.date | date('MMMM Do, YYYY') }}</a></footer>
-          </blockquote>
-        {% else %}
-          <!-- No notes -->
-        {% endfor %}
 
         {% for post in collections.writing | inweek(renderData.weeknum) %}
         {% if loop.first %}
@@ -47,6 +34,19 @@ breadcrumbs:
           <!-- No writing -->
         {% endfor %}
         </ul>
+        
+        {% for note in collections.notes | inweek(renderData.weeknum) %}
+        {% if loop.first %}
+          <h2>{{ loop.length }} Notes</h2>
+        {% endif %}
+          <blockquote>
+            {{ note.templateContent | safe }}
+            <footer><a href="{{ note
+            .url }}">{{ note.date | date('MMMM Do, YYYY') }}</a></footer>
+          </blockquote>
+        {% else %}
+          <!-- No notes -->
+        {% endfor %}
 
     </div>
 
