@@ -21,7 +21,7 @@ breadcrumbs:
         
         {% for note in collections.notes | inweek(renderData.weeknum) %}
         {% if loop.first %}
-          <h2>Notes</h2>
+          <h2>{{ loop.length }} Notes</h2>
         {% endif %}
           <blockquote>
             {{ note.templateContent | safe }}
@@ -31,6 +31,22 @@ breadcrumbs:
         {% else %}
           <!-- No notes -->
         {% endfor %}
+
+        {% for post in collections.writing | inweek(renderData.weeknum) %}
+        {% if loop.first %}
+          <h2>Writing</h2>
+          <ul>
+        {% endif %}
+            <li>
+              <a href="{{ post.url }}">{{ post.data.title }}</a>
+            </li>
+        {% if loop.last %}
+          </ul>
+        {% endif %}
+        {% else %}
+          <!-- No writing -->
+        {% endfor %}
+        </ul>
 
     </div>
 
