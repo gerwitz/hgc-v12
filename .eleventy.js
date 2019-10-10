@@ -30,13 +30,13 @@ module.exports = function(config) {
       emptyWeeks.set(i, {
         fileSlug: i.toString(),
         url: '/weeks/'+i+'/',
-        templateContent: '<p>No notes for this week.</p>'
+        templateContent: '<p>There are no notes for this week.</p>'
       });
     }
     emptyWeeks.set(current, {
       fileSlug: current.toString(),
       url: '/weeks/'+current+'/',
-      templateContent: '<p>No notes yet.</p>'
+      templateContent: '<p>This week has not concluded.</p>'
     });
 
     var populatedWeeks = weeknotes.reduce(function(map, item) {
