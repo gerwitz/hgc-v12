@@ -4,9 +4,9 @@ subtitle: Things I wish I'd learned in elementary school
 epitaph: is a slow learner
 ---
 
-In the US heartland there is a popular book with a central list of 16 lessons that are often reprinted as posters: _[All I Really Need to Know I Learned in Kindergarten](https://www.goodreads.com/book/show/34760.All_I_Really_Need_to_Know_I_Learned_in_Kindergarten)_.
+In the US heartland there is a popular book with a feel-good list of lessons that are often reprinted as posters: _[All I Really Need to Know I Learned in Kindergarten](https://www.goodreads.com/book/show/34760.All_I_Really_Need_to_Know_I_Learned_in_Kindergarten)_.
 
-Everyone must have gone to a better kindergaren than I did, because there are many things I wish I'd learned much earlier in life:
+Everyone must have gone to a better kindergarten than I did, because there are many things I wish I'd learned much earlier in life:
 
 - how to properly brush my teeth
 - fundamental attribution error
