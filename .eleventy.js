@@ -1,82 +1,14 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const moment = require("moment");
 
 module.exports = function(config) {
   var inputPath = "src";
 
   config.setDataDeepMerge(true);
 
-  config.addCollection("content", function(collection) {
-    return collection.getFilteredByGlob([
-      // "**/*.md",
-      "src/about/**/*",
-      "src/etc/**/*",
-      "src/lists/**/*",
-      "src/notes/**/*",
-      "src/projects/**/*",
-      "src/site/**/*",
-      "src/weeks/**/*",
-      "src/writing/**/*"
-    ]);
-  });
-
-  config.addCollection("weeks", function(collection) {
-    var weeknotes = collection.getFilteredByTag('weeknotes');
-    const genesis = moment([1974, 2, 4]); // == moment([1974, 2, 9]).startOf('isoWeek');
-    var current = moment().diff(genesis, 'weeks');
-
-    var emptyWeeks = new Map();
-    for (var i = 0; i < current; i++) {
-      emptyWeeks.set(i, {
-        fileSlug: i.toString(),
-        url: '/weeks/'+i+'/',
-        templateContent: '<p>There are no notes for this week.</p>'
-      });
-    }
-    emptyWeeks.set(current, {
-      fileSlug: current.toString(),
-      url: '/weeks/'+current+'/',
-      templateContent: '<p>This week has not concluded.</p>'
-    });
-
-    var populatedWeeks = weeknotes.reduce(function(map, item) {
-      item.url = '/weeks/'+item.fileSlug + '/.';
-      map.set(1*item.fileSlug, item);
-      return map;
-    }, emptyWeeks);
-
-    return Array.from(populatedWeeks.values());
-  });
-
-  config.addCollection("microblog", function(collection) {
-    var writing = collection.getFilteredByTag('writing');
-    var notes = collection.getFilteredByTag('notes');
-
-    var headlines = writing
-      .filter(function(item) {
-        return !(item.published == false);
-      })
-      .map(function(item) {
-        return {
-          inputPath: item.inputPath,
-          fileSlug: item.fileSlug,
-          outputPath: item.outputPath,
-          url: item.url,
-          date: item.date,
-          templateContent: '<a href="'+item.url+'">'+item.data.title+'</a>'
-          // no data
-        }
-      });
-
-    var full = notes
-      .concat(headlines);
-
-    full.sort(function(a, b) {
-        return (a.date - b.date);
-      });
-
-    return full;
-  })
+  // custom collections
+  config.addCollection("content", require("./collections/content.js") );
+  config.addCollection("weeks", require("./collections/weeks.js") );
+  config.addCollection("microblog", require("./collections/microblog.js") );
 
   // plugins
   config.addPlugin(pluginRss); // used only for absoluting URLs
