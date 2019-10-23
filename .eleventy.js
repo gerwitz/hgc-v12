@@ -10,6 +10,9 @@ module.exports = function(config) {
   config.addCollection("weeks", require("./collections/weeks.js") );
   config.addCollection("microblog", require("./collections/microblog.js") );
 
+  config.addCollection("notesByWeek", require("./collections/notesByWeek.js") );
+  config.addCollection("writingByWeek", require("./collections/writingByWeek.js") );
+
   // plugins
   config.addPlugin(pluginRss); // used only for absoluting URLs
 
@@ -17,7 +20,6 @@ module.exports = function(config) {
   config.addFilter("cssmin", require("./filters/cssmin.js") );
   config.addFilter("date", require("./filters/date.js") );
   config.addFilter("hostname", require("./filters/hostname.js") );
-  config.addFilter("inweek", require("./filters/inweek.js") );
   config.addFilter("json", require("./filters/json.js") );
   config.addFilter("limit", require("./filters/limit.js") );
   config.addFilter("parents", require("./filters/parents.js") );
