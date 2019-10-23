@@ -8,7 +8,7 @@ breadcrumbs:
 
 <article>
 
-Noted on <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY [at] HH:mm') }}</time>:
+Noted on <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY [at] HH:mm') }}</time> (week {{ page.date | weeklink }}):
 <blockquote>
   {{ content | safe }}
 </blockquote>
