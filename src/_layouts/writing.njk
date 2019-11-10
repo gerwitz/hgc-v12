@@ -9,7 +9,7 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
 <article>
     <div style="position: relative">
         <h1>{{ title }}</h1>
-        <span class="marginnote">
+        <div class="meta">
             Posted
             {% if external -%}
                 to <a href="{{external}}">{{ external | hostname }}</a> on
@@ -17,7 +17,7 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
                 here
             {%- endif %}
             <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('nice') }}</time> (week {{ page.date | weeklink }}).
-        </span>
+        </div>
     </div>
 
     {{ content | safe }}

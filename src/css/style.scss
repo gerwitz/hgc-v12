@@ -170,6 +170,10 @@ header {
 
 .bottom-footer {
   border-top: solid 1px $text-color;
+
+  .mini-note {
+    font-family: $sans-font;
+  }
 }
 
 // links
