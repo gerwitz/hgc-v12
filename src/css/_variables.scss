@@ -5,13 +5,16 @@ $bp-wide: "(min-width: 1200px)";
 
 // Colors
 $page-color: hsl(0, 0%, 99%);
-$text-color: hsl(138, 100%, 5%);
+$text-color: hsl(0, 0%, 5%);
+$meta-color: hsl(0, 0%, 50%);
 $accent-color: hsl(140, 100%, 25%); // lego tree #00852B
 
 // Font face
-$body-font: Georgia, Times, Times New Roman, serif;
-$sans-font: Helvetica Neue, Helvetica, Arial, sans-serif;
-$url-font: "Lucida Console", Monaco, monospace;
+$body-font: 'IBM Plex Serif', 'Georgia', Times, serif;
+// $sans-font: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
+$sans-font: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+$title-font: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+// $url-font: "Lucida Console", Monaco, monospace;
 
 // Tufte-specific
 // $bg-color: #fffff8;

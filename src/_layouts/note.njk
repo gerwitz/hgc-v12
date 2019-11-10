@@ -3,14 +3,17 @@ layout: base
 bodyClass: note
 permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.inputPath | replace('src/notes/', '', 1) | replace (r/[0-9][0-9][0-9][0-9]\\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-/, '') | replace(r/\\.\\w+$/, '') }}.html"
 breadcrumbs:
-  - microblog
+  - notes
 ---
 
 <article>
 
-Noted on <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY [at] HH:mm') }}</time> (week {{ page.date | weeklink }}):
-<blockquote>
+<div class="meta">
+Noted on <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY [at] HH:mm') }}</time> (week {{ page.date | weeklink }})
+</div>
+
+<div class="content">
   {{ content | safe }}
-</blockquote>
+<div>
 
 </article>

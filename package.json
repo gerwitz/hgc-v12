@@ -29,18 +29,18 @@
     "gulp-serve": "^1.4.0",
     "gulp-shell": "^0.6.5",
     "gulp-uglify": "^3.0.2",
-    "markdown-it-footnote": "^3.0.1",
+    "markdown-it-attribution": "^0.1.1",
     "markdown-it-sidenote": "github:gerwitz/markdown-it-sidenote",
-    "npm": "^6.11.3",
+    "npm": "^6.13.0",
     "pump": "^3.0.0",
     "require-dir": "^1.0.0",
-    "yarn": "^1.18.0"
+    "yarn": "^1.19.1"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-rss": "^1.0.7",
-    "lunr": "^2.3.6",
+    "lunr": "^2.3.8",
     "moment": "^2.24.0",
-    "sass": "^1.23.0-module.beta.1",
+    "sass": "^1.23.3",
     "twix": "^1.3.0"
   }
 }

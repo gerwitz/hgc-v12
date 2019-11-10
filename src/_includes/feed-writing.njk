@@ -1,0 +1,8 @@
+<div class="feed-item writing">
+  <div class="writing-headline">
+    {{ item.templateContent | safe }}
+  </div>
+  <div class="meta">
+    <a href="{{ item.url }}">{{ item.date | date('MMMM Do, YYYY') }}</a>
+  </div>
+</div>

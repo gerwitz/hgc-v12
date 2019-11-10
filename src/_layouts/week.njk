@@ -35,15 +35,11 @@ breadcrumbs:
         {% endfor %}
         </ul>
 
-        {% for note in collections.notesByWeek[renderData.weeknum] %}
+        {% for item in collections.notesByWeek[renderData.weeknum] %}
         {% if loop.first %}
           <h2>{{ loop.length }} Notes</h2>
         {% endif %}
-          <blockquote>
-            {{ note.templateContent | safe }}
-            <footer><a href="{{ note
-            .url }}">{{ note.date | date('MMMM Do, YYYY') }}</a></footer>
-          </blockquote>
+          {% include "feed-note.njk" %}
         {% else %}
           <!-- No notes -->
         {% endfor %}

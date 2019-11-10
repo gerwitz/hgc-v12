@@ -30,8 +30,8 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: $sans-font;
-  font-weight: normal;
+  font-family: $title-font;
+  font-weight:700;
   line-height: 1;
   margin: 0;
   margin-bottom: 2rem;
@@ -49,17 +49,23 @@ a {
   color: inherit;
 }
 
-blockquote {
-  margin: 2rem 0 2rem 4rem;
-  footer {
+.c-blockquote {
+  padding-left: 1em;
+  border-left: 0.2em solid;
+  border-color: $meta-color;
+
+  blockquote {
+    margin: 0;
+  }
+  figcaption {
     text-align: right;
     &::before {
       content: '— ';
     }
   }
-  p + footer {
-    margin-top: -1.5rem; // because p has a margin-bottom of 2rem
-  }
+  // p + footer {
+  //   margin-top: -1.5rem; // because p has a margin-bottom of 2rem
+  // }
 }
 
 figure {
@@ -116,7 +122,7 @@ header {
       fill: $accent-color;
     }
     color: $text-color;
-    font-family: $sans-font;
+    font-family: $title-font;
     font-weight: bold;
     text-decoration: none;
     display: block;
@@ -180,7 +186,8 @@ a {
 }
 
 a.internal  {
-  font-family: $sans-font;
+  font-family: $title-font;
+  font-weight: 700;
 }
 a.internal::before {
   content: '/';
@@ -207,6 +214,39 @@ a.sticker {
 
 a:hover.sticker {
   border-color: $accent-color;
+}
+
+// feed lists
+.feed-item {
+  margin-top: 2.6rem;
+
+  *:first-child *:last-child {
+    margin-bottom: 0;
+  }
+
+  .meta {
+    text-align: right;
+  }
+}
+
+// metadata
+.meta {
+  margin-bottom: 1rem;
+
+  font-family: $sans-font;
+  color: $meta-color;
+
+  a {
+    text-decoration-color: $meta-color;
+  }
+}
+
+// feed links
+.writing-headline {
+  font-size: 1.3rem;
+
+  font-family: $title-font;
+  font-weight: 700;
 }
 
 // sugar

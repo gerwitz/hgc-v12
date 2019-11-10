@@ -10,13 +10,14 @@ module.exports = function(collection) {
     })
     .map(function(item) {
       return {
+        type: 'post',
         inputPath: item.inputPath,
         fileSlug: item.fileSlug,
         outputPath: item.outputPath,
         url: item.url,
         date: item.date,
+        title: item.data.title,
         templateContent: '<a href="'+item.url+'">'+item.data.title+'</a>'
-        // no data
       }
     });
 

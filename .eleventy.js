@@ -46,13 +46,16 @@ module.exports = function(config) {
   // manually configure markdown-it
   let markdownIt = require("markdown-it");
   let markdownItSidenote = require("markdown-it-sidenote");
+  let markdownItAttribution = require("markdown-it-attribution");
   let options = {
     html: true,
     linkify: true,
     typographer: true,
     quotes: '“”‘’'
   };
-  let markdownLib = markdownIt(options).use(markdownItSidenote);
+  let markdownLib = markdownIt(options)
+    .use(markdownItSidenote)
+    .use(markdownItAttribution);
   config.setLibrary("md", markdownLib);
 
   config.addPassthroughCopy({"src/_meta": "/"});

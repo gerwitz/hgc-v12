@@ -16,13 +16,11 @@ eleventyExcludeFromCollections: true
 </div>
 {% endif %}
 
-{% for note in pagination.items %}
-<blockquote>
-  {{ note.templateContent | safe }}
-  <footer><a href="{{ note
-  .url }}">{{ note.date | date('MMMM Do, YYYY') }}</a> (week {{ note.date | weeklink | safe }})</footer>
-</blockquote>
+<div class="feed">
+{% for item in pagination.items %}
+  {% include "feed-note.njk" %}
 {% endfor %}
+</div>
 
 {% if pagination.nextPageHref %}
 <div class="pagination">
