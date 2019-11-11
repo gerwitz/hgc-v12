@@ -34,14 +34,7 @@ eleventyExcludeFromCollections: true
   {% set items = collections.microblog | sort(true, false, 'date') | limit(16) -%}
   {% for item in items %}
     {% if item.type == 'post' %}
-    <div class="feed-item post">
-      <div class="meta">
-        {{ item.date | date('MMMM Do') }}
-      </div>
-      <div class="post-headline">
-        <a href="{{ item.url }}">{{ item.title | safe }}</a>
-      </div>
-    </div>
+      {% include "feed-writing.njk" %}
     {% else %}
       {% include "feed-note.njk" %}
     {% endif %}

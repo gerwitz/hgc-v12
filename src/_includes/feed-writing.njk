@@ -3,6 +3,6 @@
     {{ item.templateContent | safe }}
   </div>
   <div class="meta">
-    <a href="{{ item.url }}">{{ item.date | date('MMMM Do, YYYY') }}</a>
+    {{ item.date | date('MMMM Do, YYYY') }}
   </div>
 </div>
