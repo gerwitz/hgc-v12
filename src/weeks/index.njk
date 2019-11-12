@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
 </p>
 {% else %}
 <div class="pagination">
-  <a href="{{ pagination.href.previous }}">Newer</a> | <a href="{{ pagination.href.first }}">Current</a>
+  <a href="{{ pagination.previousPageHref }}">Newer</a> | <a href="{{ pagination.firstPageHref }}">Current</a>
 </div>
 {% endif %}
 
@@ -29,8 +29,8 @@ eleventyExcludeFromCollections: true
 {% endfor %}
 </ol>
 
-{% if pagination.href.next %}
+{% if pagination.nextPageHref %}
 <div class="pagination">
-  <a href="{{ pagination.href.next }}">Older</a> | <a href="{{ pagination.href.last }}">First</a>
+  <a href="{{ pagination.nextPageHref }}">Older</a> | <a href="{{ pagination.lastPageHref }}">First</a>
 </div>
 {% endif %}
