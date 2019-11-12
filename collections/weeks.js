@@ -29,7 +29,7 @@ module.exports = function(collection) {
   populatedWeeks.set(current, {
     fileSlug: current.toString(),
     url: '/weeks/'+current+'/',
-    templateContent: '<p>This week has not concluded. Maybe you want <a href="/weeks/'+(current-1)+'/">last week</a>.</p>'
+    templateContent: '<p>It was still '+moment().format('dddd')+' of this week when the site was last published. Maybe you want <a href="/weeks/'+(current-1)+'/">last week</a>?</p>'
   });
 
   return Array.from(populatedWeeks.values());
