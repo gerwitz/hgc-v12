@@ -21,4 +21,16 @@ Navigation and URL structure match as closely as is reasonable.
 
 "Static page" URLs are "pretty" and end with `/`.
 
-"Dated content" URLs (e.g. under `/writing` and `/notes`) end with `title-slug.html`.
+"Dated content" URLs (e.g. posts and notes) are named `{iso-date}-{slug}.html`. Organization into folders such as years is arbitrary and only for ease management.
+
+## Content
+
+`/weeks` contains journal entries that will be included in the weekly archive URLs.
+
+`/writing` contains **posts** that include a title and publication date. They are published to dated URLs. Often they are PESOS (manually).
+
+`/notes` contains short **notes** that are identified primarily by publication time. They are published to dated URLs. They are generally tweet-length, but there is no formal limits on their content. They are usually posted via Sitewriter. They are POSSE to Micro.blog and Twitter (via an RSS feed).
+
+`/media` contains attachments to dated content (posts and notes), often uploaded via Sitewriter.
+
+Almost everything else is a **page** meant to be permanent and fit within some sort of topic hierarchy.
