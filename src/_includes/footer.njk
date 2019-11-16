@@ -1,10 +1,14 @@
 <footer class="bottom-footer">
-{% if (page.url != '/') and (page.url != '/about/') %}
-  <p>
-    <a href="/about/">Hans Gerwitz</a> is an American emigrant.
-  </p>
-{% endif %}
-{% if page.url != '/site/' %}
+{% if page.url == '/site/' %}
+  <div class="stealthisbutton">
+    <img class="80x15" width="80" height="15" src="data:image/gif;base64,R0lGODdhUAAPAPEAAGZmZv///wCFKg0NDSwAAAAAUAAPAEACjYSPqcvtD08Ioloxw9B8bz59oJeR3TlmYYmChmqp8kzX9o3jb873/k/bAYfE4kR4wbBIHqZMBEqJTNDpUtM8AijJmPELDkTG5LJ5EU6rM8KJcg33tSkz6mpUHTT395OeX/IhyCK2BVOnh8U0uMT3t+IUVXUVOfdGiZKFF5LIaIdH5UloGVfKM2eaegNQAAA7" alt="80x50 button" />
+  </div>
+{% else %}
+  {% if (page.url != '/') and (page.url != '/about/') %}
+    <p>
+      <a href="/about/">Hans Gerwitz</a> is an American emigrant.
+    </p>
+  {% endif %}
   <p>
     <span class="mini-note">The contents of hans.gerwitz.com are licensed CC-BY-4.0. Learn more at <a href="/site/" class="internal">site</a>.</span>
   </p>
