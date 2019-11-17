@@ -31,7 +31,7 @@ eleventyExcludeFromCollections: true
     Recently
   </h2>
   <div class="feed">
-  {% set items = collections.microblog | sort(true, false, 'date') | limit(16) -%}
+  {% set items = collections.microblog | sort(true, false, 'date') | limit(3) -%}
   {% for item in items %}
     {% if item.type == 'post' %}
       {% include "feed-writing.njk" %}
