@@ -10,11 +10,14 @@ permalink: /weeks/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumbe
 eleventyExcludeFromCollections: true
 ---
 
-This is an experimental journal of sorts, so I can search for entries and experiment with a more holistic archive.
 
-{% if pagination.pageNumber > 0 %}
+{% if pagination.pageNumber == 0 %}
+<p>
+  This is an experimental journal of sorts, so I can search for entries and experiment with a more holistic archive. I started keeping weekly notes in week 2185 and wrote about <a href="/2019/10/10/sennight.html">why I like weeks</a> in week 2379.
+</p>
+{% else %}
 <div class="pagination">
-  <a href="{{ pagination.previousPageHref }}">Newer</a>
+  <a href="{{ pagination.firstPageHref }}">Current</a> | <a href="{{ pagination.previousPageHref }}">Newer</a>
 </div>
 {% endif %}
 
@@ -28,6 +31,6 @@ This is an experimental journal of sorts, so I can search for entries and experi
 
 {% if pagination.nextPageHref %}
 <div class="pagination">
-  <a href="{{ pagination.nextPageHref }}">Older</a>
+  <a href="{{ pagination.nextPageHref }}">Older</a> | <a href="{{ pagination.lastPageHref }}">First</a>
 </div>
 {% endif %}
