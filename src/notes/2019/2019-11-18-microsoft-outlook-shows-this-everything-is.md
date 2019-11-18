@@ -6,4 +6,4 @@ Microsoft Outlook shows this everything-is-fine status indicator that never expi
 
 I'm pretty sure "don't lie to the user” is a basic law of UX.
 
-![](https://hans.gerwitz.com/media/2019-11/18-104413-image._3cf4.mov)
+![All folders are up-to-date](https://hans.gerwitz.com/media/2019-11/18-104510-outlook._21bd.png)
