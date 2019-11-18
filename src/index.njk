@@ -22,16 +22,19 @@ eleventyExcludeFromCollections: true
 
 <section>
   <p>
-    Hello! This is the personal site of <a href="/about/" rel="me">Hans Gerwitz</a>.
+    Hello! This is the personal site of Hans Gerwitz.
   </p>
   <p>
-    You can browse from <a href="/sitemap/" class="internal">sitemap</a> or use <a href="/search/" class="internal">search</a>. The easiest way to keep in touch is to <a href="https://twitter.com/intent/user?user_id=521" rel="me" target="_blank">follow me on Twitter</a>.
+    The easiest way to keep in touch is to <a href="https://twitter.com/intent/user?user_id=521" rel="me" target="_blank">follow me on Twitter</a> but there are a lot of other options at <a href="/about/" class="internal">about</a>.
   </p>
-  <h2>
-    Recently
-  </h2>
+  <p>
+    If you're curious about what I've collected here, you can browse from <a href="/sitemap/" class="internal">sitemap</a> or use <a href="/search/" class="internal">search</a>. 
+  </p>
+  <p>
+    Below are a few recent postings:
+  </p>
   <div class="feed">
-  {% set items = collections.microblog | sort(true, false, 'date') | limit(3) -%}
+  {% set items = collections.microblog | sort(true, false, 'date') | limit(6) -%}
   {% for item in items %}
     {% if item.type == 'post' %}
       {% include "feed-writing.njk" %}
