@@ -30,7 +30,6 @@ Some content is added to the repo with [Micropub](https://micropub.net/) via [Si
 
 ## Surveillance
 
-<span class="marginnote">![listener](rat-mic.png)</span>
 Although not intended for tracking, any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp] So note that fonts are served via Google Fonts, which should [not drop any cookies](https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users). Also [instant.page](https://instant.page/) is loaded from their server. I review each version before updating and they are hosting from the static GitHub Pages servers, so there shouldn't be any tracking. Still, this is an "attack surface" and they don't yet publish a privacy policy. Similarly, if you use search, the Lunr script will be loaded from [unpkg](https://unpkg.com/).
 
 [^itp]: Your exposure depends on how [privacy-mature](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) your browser is, of course.
