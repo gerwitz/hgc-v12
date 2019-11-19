@@ -6,6 +6,7 @@ content-tags:
 - analytics
 ---
 
+<span class="marginnote"><img src="/media/2019-11/rat-mic.png"></span>
 When I migrated this site to [Wordpress in 2006](/2006/04/09/wordpress-it-is.html) I also enabled Google Analytics to track who was linking to me and which pages were popular.
 
 13 years later, it's time to accept that I don't actually care. As long as I keep [URLs consistent](https://www.w3.org/Provider/Style/URI.html) incoming links are safe. In the early twenty-aughts I cared about the popularity of my "content" but social media formalized that attention-seeking and gradually killed my interest in it.

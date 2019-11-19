@@ -13,9 +13,9 @@ The current design is version 12 of my web presence; the past is documented at [
 
 The site map is deliberately simple, with light navigation. Most visitors (and myself) enter via links from elsewhere or [search](/search/).
 
-Page layout is based on [Tufte CSS](https://edwardtufte.github.io/tufte-css/), using widely available system fonts.
+Page layout is based on [Tufte CSS](https://edwardtufte.github.io/tufte-css/). Type is set using [IBM PLex](https://github.com/IBM/plex/) Sans and Serif.
 
-The favicon is [LEGO part #2435][tree]. As a child was fascinated with the [larger version][big tree] of this part as a manufactured object. I also spent a lot of time in forests and many of my friends were trees. (I used to use the [Unicode tree glyph][unicode] as a logo of sorts, but it has been lost to creeping emojification.)
+The favicon and navigation glyph is [LEGO part #2435][tree]. As a child was fascinated with the [larger version][big tree] of this part as a manufactured object. I also spent a lot of time in forests and many of my friends were trees. (I used to use the [Unicode tree glyph][unicode] as a logo of sorts, but it has been lost to creeping emojification.)
 <span class="marginnote">{% tree 99 %}</span>
 
 [tree]: https://www.bricklink.com/v2/catalog/catalogitem.page?P=2435
@@ -30,7 +30,6 @@ Some content is added to the repo with [Micropub](https://micropub.net/) via [Si
 
 ## Surveillance
 
-<span class="marginnote">![listener](rat-mic.png)</span>
 Although not intended for tracking, any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp] So note that fonts are served via Google Fonts, which should [not drop any cookies](https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users). Also [instant.page](https://instant.page/) is loaded from their server. I review each version before updating and they are hosting from the static GitHub Pages servers, so there shouldn't be any tracking. Still, this is an "attack surface" and they don't yet publish a privacy policy. Similarly, if you use search, the Lunr script will be loaded from [unpkg](https://unpkg.com/).
 
 [^itp]: Your exposure depends on how [privacy-mature](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) your browser is, of course.
@@ -38,5 +37,7 @@ Although not intended for tracking, any resource loaded from another site create
 ## Rights
 
 All original work on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">hans.gerwitz.com</span> is licensed by <a xmlns:cc="http://creativecommons.org/ns#" href="https://hans.gerwitz.com/" property="cc:attributionName" rel="cc:attributionURL">Hans Gerwitz</a> under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+## &c.
 
 [The literals are commended to favor](http://www.languagehat.com/archives/004068.php). To contact me, look to [/about](/about/#contact).
