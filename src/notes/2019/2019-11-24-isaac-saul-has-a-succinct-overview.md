@@ -4,5 +4,5 @@ slug: isaac-saul-has-a-succinct-overview
 ---
 Isaac Saul has a succinct overview of the impeachment process, and his take on what it means is perfectly in line with mine: https://tangle.substack.com/p/you-asked-for-it-an-impeachment-overview
 
-TLDR - nothing matters ¯\_(ツ)_/¯
+TLDR - nothing matters ¯\\_(ツ)_/¯
 
