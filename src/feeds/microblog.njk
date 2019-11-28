@@ -12,20 +12,22 @@ eleventyExcludeFromCollections: true
 
 {% if pagination.pageNumber > 0 %}
 <div class="pagination">
-  <a href="{{ pagination.previousPageHref }}">Newer notes</a>
+  <a href="{{ pagination.previousPageHref }}">Newer entries</a>
 </div>
 {% endif %}
 
-{% for note in pagination.items %}
-<blockquote>
-  {{ note.templateContent | safe }}
-  <footer><a href="{{ note
-  .url }}">{{ note.date | date('MMMM Do, YYYY') }}</a> (week {{ note.date | weeklink | safe }})</footer>
-</blockquote>
-{% endfor %}
+<div class="feed">
+  {% for item in pagination.items %}
+    {% if item.type == 'post' %}
+      {% include "feed-writing.njk" %}
+    {% else %}
+      {% include "feed-note.njk" %}
+    {% endif %}
+  {% endfor %}
+  </div
 
 {% if pagination.nextPageHref %}
 <div class="pagination">
-  <a href="{{ pagination.nextPageHref }}">Older notes</a>
+  <a href="{{ pagination.nextPageHref }}">Older entries</a>
 </div>
 {% endif %}
