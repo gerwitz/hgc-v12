@@ -1,5 +1,7 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
+const nbspFilter = require('eleventy-nbsp-filter');
+
 module.exports = function(config) {
   var inputPath = "src";
 
@@ -26,6 +28,10 @@ module.exports = function(config) {
   config.addFilter("parents", require("./filters/parents.js") );
   config.addFilter("weeklink", require("./filters/weeklink.js") );
   config.addFilter("weekstart", require("./filters/weekstart.js") );
+
+  const numberOfWordsToJoin = 2;
+  const maxLength = 12;
+  config.addFilter('nbsp', nbspFilter(numberOfWordsToJoin, maxLength));
 
   // 🌲
   config.addShortcode("tree", function(height) {
