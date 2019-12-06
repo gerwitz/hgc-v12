@@ -14,4 +14,4 @@ A researcher from the National Institute on Aging has demonstrated that a low-ca
 
 This initially seems contrary to my habit of [eating whatever my body asks for][2], but applies nicely to the masochism of cycling.  I clearly need to learn to reduce my caloric intake in the off-season, though.
 
-   [2]: /library/thoughts/fitness.html
+   [2]: /library/principles/fitness/

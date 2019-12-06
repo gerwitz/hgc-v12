@@ -21,7 +21,7 @@ Most recently, I've taken an opportunity to support the fascinating team at Damn
 I already pay for John Gruber's [Linked List][6] and I'm sure someday I'll be paying for a movie from Ze Frank.  I've already bought T-shirts from each (and from [Calico Monkey][7])... and in every case I feel like I'm bartering with a friend, not just purchasing product.  This is clearly the future of publishing.
 
    [1]: http://www.fergusonlibrary.org/
-   [2]: 2007-01-30/bunny.jpg
+   [2]: /media/2007-01-30-rendered-with-ink/bunny.jpg
    [3]: http://www.freakash.net/books/comics/bunny.html
    [4]: http://www.frozenreality.co.uk/comic/bunny/
    [5]: http://www.damninteresting.com/?p=789

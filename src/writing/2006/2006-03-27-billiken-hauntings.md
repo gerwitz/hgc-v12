@@ -10,7 +10,7 @@ I've spent most of my academic life surrounded by Billikens, at [University][1] 
 
    [1]: http://www.slu.edu/readstory/more/699
    [2]: http://www.sluh.org/billiken.cfm
-   [3]: /xwiki/bin/download/Main/Billiken+hauntings/PICT1893.JPG
+   [3]: /media/2006-03-27-billiken-hauntings/PICT1893.JPG
 
 Researching a new digital camera, I was quite surprised to find him (even labeled) the centerpiece of a [demonstration picture in Japan][4].  Wikipedia is kind enough to explain: naturally Billiken is [enshrined throughout Japan][5].  Of course, the best summary of Billiken's life is found at a [toy museum in Arkansas][6].
 

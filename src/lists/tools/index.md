@@ -49,7 +49,7 @@ This site's stack:
 
 ## Cycling
 
-[LeMond Tete de Course](lemond.html)
+[LeMond Tete de Course](./lemond/)
 
 [Strava](https://www.strava.com/athletes/692260)
 

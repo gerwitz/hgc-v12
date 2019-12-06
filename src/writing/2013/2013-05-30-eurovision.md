@@ -26,7 +26,7 @@ In the past, I have found some success using physical network simulations to fin
 [jens]: http://jensfinnas.com/dataist/eurovision.html
 [data]: http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2013#Final_2
 
-[network]: /projects/eurovision-2013/network.html
+[network]: /projects/eurovision-2013/network/
 
 I did not find this technique as useful as it has been in the past with much larger data sets. Perhaps this is because weighted links don't apply well to the simulation of links (I settled on a consistent link size, but linearly increased the strength with vote value). Maybe this data set it just too interconnected, it certainly is moreso than my previous work, and filtering out the low-value votes helped expose some structure. Try increasing the minimum to 12 points (the highest vote) and watch the Netherlands and their friend Belgium float away together.
 
@@ -34,4 +34,4 @@ I intend to keep experimenting, and have begun with a [simple matrix view][matri
 
 [![matrix screenshot](/media/2013-05-30-eurovision/matrix.png)][matrix]
 
-[matrix]: /projects/eurovision-2013/matrix.html
+[matrix]: /projects/eurovision-2013/matrix/

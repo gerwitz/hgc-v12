@@ -5,7 +5,7 @@ subtitle: Clues for where to go Hansspotting
 ---
 
 - 2008: [iAB Chicago](http://featuresblogs.chicagotribune.com/eric2_0/2008/03/social-networki.html)
-- 2011: [Seattle Interactive Conference](sic-2011.html): bloviating about future consumer culture
+- 2011: [Seattle Interactive Conference](./sic-2011/): bloviating about future consumer culture
 - 2011: [MobileNorthwest](http://www.infoworld.com/article/2621680/html5/html5-not-yet-solving-mobile-dev-issues.html) (where I was apparently ["exceptionally intelligent and insightful"](http://whatsyourideaoftomorrow.blogspot.nl/2011/05/mobile-norhwest-conf-teleca-presented.html))
 - 2014: [Knowit Experienceit](https://www.knowit.no/events/?eventtype=11858): mini-keynote on balancing Brand and UX
 - 2017: [Let's Fix Things podcast](https://raftcollective.com/podcast/) episodes on [data fears] (http://www.stitcher.com/podcast/raft-collective/lets-fix-things/e/lets-fix-things-33-were-still-paranoid-but-thats-ok-with-49320407) and [amusing ourselves to death](http://www.stitcher.com/podcast/raft-collective/lets-fix-things/e/lets-fix-things-36-walking-into-the-burning-building-of-convenience-49563906)

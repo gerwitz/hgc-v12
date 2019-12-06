@@ -9,7 +9,7 @@ content-tags:
 Since I am a fan of [eating whatever I want][1], I sometimes have to wonder at the success of those who restrict themselves to low fat or low carb diets.  Christopher Genoves has an explanation: any restricted diet has a [calorie advantage][2].  He also explains why the low carb diets are so popular:
 
 
-   [1]: /library/thoughts/fitness.html
+   [1]: /library/principles/fitness/
    [2]: http://signalplusnoise.com/archives/000409.html
 
 > Holding to the no-carb line gives one few outs, either at the vending machine or the cupboard. (Those low carb bars are not only disgusting but outrageously expensive.)

@@ -9,10 +9,9 @@ content-tags:
 - bush
 ---
 
-I've been amazed to learn how many people intend to vote for [Bush][1] only because he's against [abortion][2].
+I've been amazed to learn how many people intend to vote for [Bush][1] only because he's against [abortion](/library/principles/abortion/).
 
    [1]: /etc/w/
-   [2]: /library/thoughts/abortion.html
 
 How did this become an executive branch issue?  It is a **fundamental** problem that we don't have a legal definition of "life."
 

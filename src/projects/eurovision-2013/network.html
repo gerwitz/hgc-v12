@@ -58,7 +58,7 @@ title: Eurovision 2013 Finals Network
 		-1px -1px 1px #FFF,
 		-1px  1px 1px #FFF;
 }
-	
+
 .node text.hidden {
 	display:	none;
 }
@@ -117,7 +117,7 @@ var config = {
 	"labelsHidden": false
 };
 config.stop = function() { force.stop(); };
-config.start = function() { 
+config.start = function() {
 	console.log("starting with config ", this)
 	force.start();
 };
@@ -129,7 +129,7 @@ config.nuke = function() {
 	svg.selectAll().remove();
 	svg = makePanel();
 	force = makeLayout();
-	makeItHappen("eurovision-2013-final.json");
+	makeItHappen("../eurovision-2013-final.json");
 }
 function buildControls(config) {
 	var gui = new dat.GUI({ autoPlace: false });
@@ -169,16 +169,16 @@ function makeLayout() {
 		.gravity(function() { return config["gravity"]; })
 		.charge(function() { return config["charge"]; })
 		// strength is linear to votes
-		.linkStrength(function(l) { 
+		.linkStrength(function(l) {
 			return (l.value/12) * config["strength"];
 		})
-		.linkDistance(config["distance"]) 
+		.linkDistance(config["distance"])
 		// // distance is inversely linear to votes
-		// .linkDistance(function(l) { 
+		// .linkDistance(function(l) {
 		// 	return (12/l.value) * forceConfig["distance"];
 		// })
 	    .size([config["width"], config["height"]]);
-		
+
 	return force;
 }
 
@@ -201,7 +201,7 @@ function buildLayout(graph) {
   var nodes = graph.nodes.slice(),
       links = [],
       bilinks = [];
-  
+
   projectNodes(nodes, width, height);
 
   // build intermediate nodes for curvy links
@@ -243,7 +243,7 @@ function buildLayout(graph) {
   	.text(function(b) { return b[4]; });
 
   link.exit().remove();
-  
+
   // configure nodes
   var node = svg.selectAll(".node")
       .data(graph.nodes);
@@ -255,13 +255,13 @@ function buildLayout(graph) {
   		.attr("r", nodeRadius)
   	    .classed("fixed", function(d) { d.fixed })
   	    .on("click", nodeClick);
-		
+
   	  node.append("text")
   	  	.attr("dx", nodeRadius * 2)
   	    .attr("dy", ".35em")
   	    .text(function(d) { return d.name })
   	    .classed("hidden", config["labelsHidden"] );
-		
+
   // every tick, redraw curvy link and move nodes
   force.on("tick", function() {
     link.attr("d", function(d) {
@@ -277,7 +277,7 @@ function buildLayout(graph) {
       return "translate(" + d.x + "," + d.y + ")";
     });
   });
-  
+
   return force;
 }
 

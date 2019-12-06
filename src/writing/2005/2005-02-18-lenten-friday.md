@@ -12,4 +12,4 @@ As I sat idly in the passenger seat on the way home after [Constantine][1] (not 
 
 That's only funny since it's been [7 years since I ate meat][2], anyway.
 
-   [2]: /library/thoughts/pescetarianism.html
+   [2]: /library/principles/vegetarianism/

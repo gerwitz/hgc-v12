@@ -31,4 +31,4 @@ content-tags:
 
 
 
-   [4]: /library/stuff/esl401.html
+   [4]: /history/homes/esl401/

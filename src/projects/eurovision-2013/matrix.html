@@ -7,7 +7,7 @@ title: Eurovision 2013 Finals Matrix
 <svg id="matrix" />
 
 <p>
-	This is a matrix view of the voting graph, inspired by (and largely copied from) <a href="http://bost.ocks.org/mike/miserables/">Mike Bostock's adjacency matrix</a>.	
+	This is a matrix view of the voting graph, inspired by (and largely copied from) <a href="http://bost.ocks.org/mike/miserables/">Mike Bostock's adjacency matrix</a>.
 </p><p>
 	Currently, sorts are available for number of "friends" (other countries that cast any vote for you) and for total score. Additional data such as wealth and population might also be interesting. Also highlights for the big votes (8, 10, 12 points) or even filters to reduce the noise of small votes might make this more useful for exploration.
 </p><p>
@@ -82,7 +82,7 @@ var svg = d3.select(config["selector"])
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("eurovision-2013-final.json", function(graph) {
+d3.json("../eurovision-2013-final.json", function(graph) {
   var matrix = [],
       nodes = graph.nodes,
       n = nodes.length;
@@ -104,7 +104,7 @@ d3.json("eurovision-2013-final.json", function(graph) {
     nodes[link.target].friends += (link.value > 0);
     nodes[link.target].score += link.value;
   });
-  
+
   // Precompute the orders.
   var orders = {
     name: d3.range(n).sort(function(a, b) { return d3.ascending(nodes[a].name, nodes[b].name); }),
