@@ -80,7 +80,8 @@ module.exports = function(config) {
       "njk",
       "md",
       "js",
-      "gif", "jpg", "jpeg", "png",
+      "gif", "jpg", "jpeg", "png", "svg",
+      "pdf", "json",
       "pde" // for /projects/fur/
     ],
 
