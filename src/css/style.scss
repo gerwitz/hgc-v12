@@ -235,6 +235,14 @@ a:hover.sticker {
   border-color: $accent-color;
 }
 
+dl {
+  margin-top: 3.9rem;
+  margin-bottom: 3.9rem;
+}
+dd {
+  margin-bottom: 1.6rem;
+}
+
 // feed lists
 .feed-item {
   margin-top: 3.9rem;

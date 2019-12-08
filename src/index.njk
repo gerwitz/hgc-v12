@@ -20,19 +20,16 @@ headtags: |
 eleventyExcludeFromCollections: true
 ---
 
+<h1>Hans Gerwitz</h1>
+
 <section>
   <p>
-    Hello! This is the personal site of Hans Gerwitz.
+    Hello! If you're looking for me, you probably want to <a href="https://twitter.com/intent/user?user_id=521" rel="me" target="_blank">follow @gerwitz on Twitter</a> or find another option at <a href="/about/" class="internal">about</a>.
   </p>
   <p>
-    The easiest way to keep in touch is to <a href="https://twitter.com/intent/user?user_id=521" rel="me" target="_blank">follow me on Twitter</a> but there are a lot of other options listed at <a href="/about/" class="internal">about</a>.
+    This personal site started in 1994 but started growing as a blog only in 2003. Today, there are {{ collections.content | length }} pages you can <a href="/search/" class="internal">search</a> or browse via <a href="/sitemap/" class="internal">sitemap</a>.
   </p>
-  <p>
-    If you're curious about what I've collected here, you can browse from <a href="/sitemap/" class="internal">sitemap</a> or use <a href="/search/" class="internal">search</a>. 
-  </p>
-  <p>
-    Here are a few recent postings:
-  </p>
+
   <div class="feed">
   {% set items = collections.microblog | sort(true, false, 'date') | limit(6) -%}
   {% for item in items %}
