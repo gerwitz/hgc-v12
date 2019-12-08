@@ -31,6 +31,7 @@
     "gulp-shell": "^0.6.5",
     "gulp-uglify": "^3.0.2",
     "markdown-it-attribution": "^0.1.1",
+    "markdown-it-implicit-figures": "^0.9.0",
     "markdown-it-sidenote": "github:gerwitz/markdown-it-sidenote",
     "npm": "^6.13.2",
     "pump": "^3.0.0",

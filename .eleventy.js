@@ -54,6 +54,7 @@ module.exports = function(config) {
   let markdownIt = require("markdown-it");
   let markdownItSidenote = require("markdown-it-sidenote");
   let markdownItAttribution = require("markdown-it-attribution");
+  let markdownItImplicitFigures = require('markdown-it-implicit-figures');
   let options = {
     html: true,
     linkify: true,
@@ -62,7 +63,11 @@ module.exports = function(config) {
   };
   let markdownLib = markdownIt(options)
     .use(markdownItSidenote)
-    .use(markdownItAttribution);
+    .use(markdownItAttribution)
+    .use(markdownItImplicitFigures, {
+      dataType: true,
+      figcaption: true
+    });
   config.setLibrary("md", markdownLib);
 
   config.addPassthroughCopy({"src/_meta": "/"});
