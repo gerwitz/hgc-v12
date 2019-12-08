@@ -8,9 +8,7 @@ For Christmas 2003 I got my first road bike, a lightly-used 53 cm [2002 Tete de 
    [2]: http://www.roadbikereview.com/2002+Road+Bike/LeMond+Bicycles+Tete+de+Course/PRD_101436_4229crx.aspx
    [3]: https://en.wikipedia.org/wiki/LeMond_Racing_Cycles
 
-I had decided on titanium because I was tired of the creaks of my aluminum [Trek][4], and was scared of road harshness with stiff aluminum, coming from a suspension mountain bike.  Steel was out simply because I didn't want to fear rust; carbon fiber is too fragile for someone who's used to a frame that can take serious abuse.
-
-   [4]: trek.html
+I had decided on titanium because I was tired of the creaks of my aluminum Trek 8500, and was scared of road harshness with stiff aluminum, coming from a suspension mountain bike.  Steel was out simply because I didn't want to fear rust; carbon fiber is too fragile for someone who's used to a frame that can take serious abuse.
 
 The Victoire seemed to be a sweet spot in price/performance, so I was looking for one of these from 2002.  In 2003, LeMond had a (thankfully short-lived) clownish paint scheme, and the 2004 was too new to find used and integrated carbon fiber outside the "classic" line.  As luck would have it, my Tete de Course popped up as a classified ad for far too little money, but was being consigned through a reputable local bike shop in Ohio.
 

@@ -15,4 +15,4 @@ content-tags:
 
 Now, Marek Sieczkowski has published an interview with me about it in [Komunikacja Publiczna](http://www.kzkgop.com.pl/publikacje/wydania/2/w-104-32014-komunikacja-32014.html). This is the quarterly magazine of the KZK GOP, which addresses transportation within Poland's Upper Silesian Industrial Region, which lies at the junction of Poland, the Czech Republic, and Slovakia.
 
-I have to use a translator to read it, but hopefully [this](/media/08-27-komunikacja/KP3-2014.pdf) will help establish the holiday here in Europe.
+I have to use a translator to read it, but hopefully [this](/media/2014-08-27-komunikacja/KP3-2014.pdf) will help establish the holiday here in Europe.
