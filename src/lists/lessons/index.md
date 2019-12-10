@@ -19,3 +19,4 @@ Everyone must have gone to a better kindergarten than I did, because there are m
 - subsidiarity
 - basic systems thinking and the limits of reductionism
 - that being an introvert is acceptable
+- [how color actually works](https://youtu.be/NVhA18_dmg0)
