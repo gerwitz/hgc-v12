@@ -40,4 +40,6 @@ All original work on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:t
 
 ## &c.
 
+[This site is designed to last](https://jeffhuang.com/designed_to_last/) and is [archive ready](http://archiveready.com/check?url=https://hans.gerwitz.com/).
+
 [The literals are commended to favor](http://www.languagehat.com/archives/004068.php). To contact me, look to [/about](/about/#contact).
