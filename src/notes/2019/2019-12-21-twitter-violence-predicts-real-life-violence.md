@@ -1,5 +1,5 @@
 ---
-date: 2019-12-21T16:03:22+01:00
+date: 2019-12-21T16:12:46+01:00
 slug: twitter-violence-predicts-real-life-violence
 ---
 Twitter violence predicts real life violence. https://doi.org/c9qh
