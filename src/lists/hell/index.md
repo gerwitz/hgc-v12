@@ -73,4 +73,4 @@ This is who I expect to meet on my tour of the circles of Hell.
 - Those who use the power of storytelling to please power to the detriment of society[^svengali]
 
 [^patriots]: E.g. [Mike Vanderboegh](https://en.wikipedia.org/wiki/3_Percenters), [Elmer Stewart Rhodes](https://www.splcenter.org/fighting-hate/extremist-files/individual/elmer-stewart-rhodes-0)
-[^svengali]: E.g. [Aleksandr Dugin](https://en.wikipedia.org/wiki/Aleksandr_Dugin), Steve Bannon, [Chris Rufo](https://www.wsj.com/articles/new-left-urbanists-want-to-remake-your-city-11566512564)
+[^svengali]: E.g. [Aleksandr Dugin](https://en.wikipedia.org/wiki/Aleksandr_Dugin), Steve Bannon, [Chris Rufo](https://www.wsj.com/articles/new-left-urbanists-want-to-remake-your-city-11566512564), [Much of Fox News](https://www.wired.com/story/fox-news-is-now-a-threat-to-national-security/)
