@@ -575,6 +575,11 @@
   text:
     Fog moved in
 -
+  date: 2018-03 #06
+  type: life
+  text:
+    First surgery (angiolipoma)
+-
   date: 2018-06 #18
   type: work
   text:
@@ -586,7 +591,7 @@
     Started at Philips
 -
   date: 2019-06 #10
-  type: life
+  type: home
   text:
     Sold Seattle house
 -
@@ -594,6 +599,11 @@
   type: life
   text:
     Vasectomy
+-
+  date: 2019-12 #30
+  type: home
+  text:
+    Sole St. Louis loft
 -
   date: 2019-01 #01
   type: work
