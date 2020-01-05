@@ -2215,7 +2215,7 @@
       title: Edwardsville, IL to visit Lames
     -
       nights: 4
-      geo: [44.97049, -93.27710]
+      geo: [44.97049, -93.27710] # Millenium
       title: Eyeo in Minneapolis
 -
   tripit: 265134047
@@ -2233,3 +2233,37 @@
   geo: [47.37116, 8.54186] # Storchen Zürich
   title:
     Zürich and Pizol for tenth anniversary # with Shannon
+-
+  tripit: 292898921
+  date: 2019-11 #22
+  nights: 2
+  modes: [rail]
+  geo: [51.22352, 6.78661] # me and all
+  title:
+    Düsseldorf weihnachtsmarkts # with Shannon, Natalia, Abdul, Aahd
+-
+  tripit: 282579003
+  date: 2020-01 #18
+  nights: 9
+  modes: [air, rail]
+  title: Coronation
+  destinations:
+    -
+      nights: 1
+      geo: [41.87973,-87.63314] # W Loop
+      title: Chicago
+    -
+      nights: 3
+      geo: [38.7985,-89.9533] # Edwardsville
+      title: Edwardsville, IL to visit Lames
+    -
+      nights: 4
+      geo: [29.95074, -90.07204] # Stay Alfred Factors Row
+      title: New Orleans for Shannon birthday and Freret ball
+-
+  tripit: 293866650
+  date: 2020-02 #13
+  nights: 9
+  modes: [air]
+  geo: [29.95074, -90.07204] # Stay Alfred Factors Row
+  title: Freret XI
