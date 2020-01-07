@@ -1,0 +1,16 @@
+---
+title: "Phoenix for work 5"
+date: 2011-10-24
+geo: [33.28928,-111.89169]
+tripit: 22923101
+nights: 1
+modes: ["air"]
+destinations:
+  -
+    title: "Phoenix for work 5"
+    nights: 1
+    location: "Courtyard Fashion Center"
+    geo: [33.28928,-111.89169]
+---
+
+

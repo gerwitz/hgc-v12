@@ -1,0 +1,31 @@
+---
+layout: base
+bodyClass: trip
+breadcrumbs:
+    - travel
+    - history
+---
+
+<article class="h-entry">
+
+  <div>
+    <h1 class="p-name">{{ title }}</h1>
+    <div class="meta">
+      {{ page.nights }} night{{ "s" if page.nights > 1 }} starting <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} (week {{ page.date | weeklink }}) at {{ page.date | date('HH:mm') }}</time>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="trip">
+      {{ content | safe }}
+    </div>
+    <ol>
+    {% for dest in page.destinations %}
+      <li>
+        {{ dest.title }} ({{ dest.nights }} (night{{ "s" if dest.nights > 1 }})
+      </li>
+    {% endfor %}
+    </ol>
+  </div>
+
+</article>

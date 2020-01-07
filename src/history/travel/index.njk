@@ -1,0 +1,18 @@
+---
+title: Travelogue
+layout: page
+tags:
+eleventyExcludeFromCollections: true
+---
+
+<p>
+  Every time I remember sleeping away from home or otherwise making a travel reservation:
+</p>
+
+<ul>
+{% for trip in collections.trips %}
+  <li>
+    {{ trip.date | date('MMMM Do, YYYY') }}: <a href="{{trip.url}}">{{trip.title}}</a>
+  </li>
+{% endfor %}
+</ul>
