@@ -6,7 +6,7 @@ pagination:
   data: collections.weeks
   size: 52
   reverse: true
-permalink: /weeks/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber }}/{% endif %}index.html
+permalink: /weeks/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 eleventyExcludeFromCollections: true
 ---
 
@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
 </p>
 {% else %}
 <div class="pagination">
-  <a href="{{ pagination.firstPageHref }}">Current</a> | <a href="{{ pagination.previousPageHref }}">Newer</a>
+  <a href="{{ pagination.href.first }}">Current</a> | <a href="{{ pagination.href.previous }}">Newer</a>
 </div>
 {% endif %}
 
@@ -29,8 +29,8 @@ eleventyExcludeFromCollections: true
 {% endfor %}
 </ol>
 
-{% if pagination.nextPageHref %}
+{% if pagination.href.next %}
 <div class="pagination">
-  <a href="{{ pagination.nextPageHref }}">Older</a> | <a href="{{ pagination.lastPageHref }}">First</a>
+  <a href="{{ pagination.href.next }}">Older</a> | <a href="{{ pagination.href.last }}">First</a>
 </div>
 {% endif %}

@@ -6,13 +6,13 @@ pagination:
   data: collections.microblog
   size: 6
   reverse: true
-permalink: /microblog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber }}/{% endif %}/index.html
+permalink: /microblog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}/index.html
 eleventyExcludeFromCollections: true
 ---
 
 {% if pagination.pageNumber > 0 %}
 <div class="pagination">
-  <a href="{{ pagination.previousPageHref }}">Newer entries</a>
+  <a href="{{ pagination.href.previous }}">Newer entries</a>
 </div>
 {% endif %}
 
@@ -26,8 +26,8 @@ eleventyExcludeFromCollections: true
   {% endfor %}
   </div
 
-{% if pagination.nextPageHref %}
+{% if pagination.href.next %}
 <div class="pagination">
-  <a href="{{ pagination.nextPageHref }}">Older entries</a>
+  <a href="{{ pagination.href.next }}">Older entries</a>
 </div>
 {% endif %}

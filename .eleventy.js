@@ -2,39 +2,43 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 const nbspFilter = require('eleventy-nbsp-filter');
 
-module.exports = function(config) {
+module.exports = function(eleventyConfig) {
   var inputPath = "src";
 
-  config.setDataDeepMerge(true);
+  eleventyConfig.setQuietMode(true);
+
+  eleventyConfig.addWatchTarget("./src/scss/");
+
+  eleventyConfig.setDataDeepMerge(true);
 
   // custom collections
-  config.addCollection("content", require("./collections/content.js") );
-  config.addCollection("weeks", require("./collections/weeks.js") );
-  config.addCollection("microblog", require("./collections/microblog.js") );
+  eleventyConfig.addCollection("content", require("./collections/content.js") );
+  eleventyConfig.addCollection("weeks", require("./collections/weeks.js") );
+  eleventyConfig.addCollection("microblog", require("./collections/microblog.js") );
 
-  config.addCollection("notesByWeek", require("./collections/notesByWeek.js") );
-  config.addCollection("writingByWeek", require("./collections/writingByWeek.js") );
+  eleventyConfig.addCollection("notesByWeek", require("./collections/notesByWeek.js") );
+  eleventyConfig.addCollection("writingByWeek", require("./collections/writingByWeek.js") );
 
   // plugins
-  config.addPlugin(pluginRss); // used only for absoluting URLs
+  eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
 
   // template filters
-  config.addFilter("cssmin", require("./filters/cssmin.js") );
-  config.addFilter("date", require("./filters/date.js") );
-  config.addFilter("hostname", require("./filters/hostname.js") );
-  config.addFilter("json", require("./filters/json.js") );
-  config.addFilter("limit", require("./filters/limit.js") );
-  config.addFilter("moonforweek", require("./filters/moonforweek.js") );
-  config.addFilter("parents", require("./filters/parents.js") );
-  config.addFilter("weeklink", require("./filters/weeklink.js") );
-  config.addFilter("weekstart", require("./filters/weekstart.js") );
+  eleventyConfig.addFilter("cssmin", require("./filters/cssmin.js") );
+  eleventyConfig.addFilter("date", require("./filters/date.js") );
+  eleventyConfig.addFilter("hostname", require("./filters/hostname.js") );
+  eleventyConfig.addFilter("json", require("./filters/json.js") );
+  eleventyConfig.addFilter("limit", require("./filters/limit.js") );
+  eleventyConfig.addFilter("moonforweek", require("./filters/moonforweek.js") );
+  eleventyConfig.addFilter("parents", require("./filters/parents.js") );
+  eleventyConfig.addFilter("weeklink", require("./filters/weeklink.js") );
+  eleventyConfig.addFilter("weekstart", require("./filters/weekstart.js") );
 
   const numberOfWordsToJoin = 2;
   const maxLength = 12;
-  config.addFilter('nbsp', nbspFilter(numberOfWordsToJoin, maxLength));
+  eleventyConfig.addFilter('nbsp', nbspFilter(numberOfWordsToJoin, maxLength));
 
   // 🌲
-  config.addShortcode("tree", function(height) {
+  eleventyConfig.addShortcode("tree", function(height) {
     var heightAttr = '';
     if (height) {
       heightAttr = 'height="' + height + '" ';
@@ -42,7 +46,7 @@ module.exports = function(config) {
     return '<svg ' + heightAttr + 'viewbox="0 0 128 198" xmlns="http://www.w3.org/2000/svg"><path d="M112 198v-8c0-4-4-8-8-8H84c-4 0-8-4-8-8v-12h52l-4-12H75v-12h45l-4-12H75v-12h37l-4-12H75V90h29l-4-12H75V66h21l-4-12H75V42h13l-4-12H74V18h2V6c0-4-6-6-12-6S52 2 52 6v12h2v12H44l-4 12h13v12H36l-4 12h21v12H28l-4 12h29v12H20l-4 12h37v12H12l-4 12h45v12H4l-4 12h52v12c0 4-4 8-8 8H24c-4 0-8 4-8 8v8h96" fill="#00852B" fill-rule="evenodd"/></svg>';
   });
 
-  config.addShortcode("children", function(collections, path) {
+  eleventyConfig.addShortcode("children", function(collections, path) {
     let glob = inputPath + path + '/*';
     let list = collections
       .getFilteredByGlob(glob)
@@ -68,10 +72,10 @@ module.exports = function(config) {
       dataType: true,
       figcaption: true
     });
-  config.setLibrary("md", markdownLib);
+  eleventyConfig.setLibrary("md", markdownLib);
 
-  config.addPassthroughCopy({"src/_meta": "/"});
-  config.addPassthroughCopy({"src/_meta/favicon": "/favicon"});
+  eleventyConfig.addPassthroughCopy({"src/_meta": "/"});
+  eleventyConfig.addPassthroughCopy({"src/_meta/favicon": "/favicon"});
 
   return {
     dir: {

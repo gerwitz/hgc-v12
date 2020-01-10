@@ -6,13 +6,13 @@ pagination:
   data: collections.notes
   size: 6
   reverse: true
-permalink: /notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber }}/{% endif %}/index.html
+permalink: /notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}/index.html
 eleventyExcludeFromCollections: true
 ---
 
 {% if pagination.pageNumber > 0 %}
 <div class="pagination">
-  <a href="{{ pagination.previousPageHref }}">Newer notes</a>
+  <a href="{{ pagination.href.previous }}">Newer notes</a>
 </div>
 {% endif %}
 
@@ -22,8 +22,8 @@ eleventyExcludeFromCollections: true
 {% endfor %}
 </div>
 
-{% if pagination.nextPageHref %}
+{% if pagination.href.next %}
 <div class="pagination">
-  <a href="{{ pagination.nextPageHref }}">Older notes</a>
+  <a href="{{ pagination.href.next }}">Older notes</a>
 </div>
 {% endif %}
