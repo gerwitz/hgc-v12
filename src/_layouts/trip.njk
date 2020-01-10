@@ -2,8 +2,8 @@
 layout: base
 bodyClass: trip
 breadcrumbs:
-    - travel
     - history
+    - travel
 ---
 
 <article class="h-entry">
@@ -11,7 +11,7 @@ breadcrumbs:
   <div>
     <h1 class="p-name">{{ title }}</h1>
     <div class="meta">
-      {{ page.nights }} night{{ "s" if page.nights > 1 }} starting <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} (week {{ page.date | weeklink }}) at {{ page.date | date('HH:mm') }}</time>
+      {{ nights | int }} night{{ "s" if nights != 1 }} starting <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} (week {{ page.date | weeklink }})</time>
     </div>
   </div>
 
@@ -19,10 +19,24 @@ breadcrumbs:
     <div class="trip">
       {{ content | safe }}
     </div>
+
+    <h2>Stays</h2>
     <ol>
-    {% for dest in page.destinations %}
+    {% for dest in destinations %}
       <li>
-        {{ dest.title }} ({{ dest.nights }} (night{{ "s" if dest.nights > 1 }})
+        {% if loop.length > 1 %}
+          {{ dest.nights | int }} night{{ "s" if dest.nights != 1 }} at
+        {% endif %}
+        {% if dest.geo %}
+          {% set mapurl = "http://maps.google.com/maps?z=14&t=h&q=loc:"+dest.geo[0] +"+"+ dest.geo[1] %}
+          {% if dest.location %}
+            {{ dest.location }}
+          {% else %}
+            {{ dest.geo | string }}
+          {% endif %}
+        {% else %}
+          {{ dest.title }}
+        {% endif %}
       </li>
     {% endfor %}
     </ol>

@@ -1,5 +1,5 @@
 ---
-title: "San Jose for work 2"
+title: "San Jose for work"
 date: 2012-02-09
 geo: [37.40269,-121.91112]
 tripit: 30420305

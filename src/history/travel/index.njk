@@ -10,9 +10,9 @@ eleventyExcludeFromCollections: true
 </p>
 
 <ul>
-{% for trip in collections.trips %}
+{% for trip in collections.trips | reverse %}
   <li>
-    {{ trip.date | date('MMMM Do, YYYY') }}: <a href="{{trip.url}}">{{trip.title}}</a>
+    {{ trip.date | date('MMMM Do, YYYY') }}: <a href="{{ trip.url }}">{{ trip.data.title }}</a>
   </li>
 {% endfor %}
 </ul>

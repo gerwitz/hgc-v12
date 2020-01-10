@@ -1,16 +1,15 @@
 ---
-title: "Hannibal road trip"
+title: "Hannibal "
 date: 1998-08-08
-geo: 
-tripit: 
+geo:
 nights: 1
 modes: ["car"]
 destinations:
   -
-    title: "Hannibal road trip"
+    title: "Hannibal"
     nights: 1
     location: ""
-    geo: 
+    geo:
 ---
 
-with Colleen
+Road trip with Colleen

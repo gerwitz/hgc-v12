@@ -1,21 +1,20 @@
 ---
-title: "Florida to visit Mom for Christmas"
+title: "Florida"
 date: 2000-12-15
-geo: 
-tripit: 
+geo:
 nights: 9
 modes: ["air","car"]
 destinations:
   -
     title: "Flew to Orlando"
-    nights: 
+    nights:
     location: ""
-    geo: 
+    geo:
   -
-    title: "Drove to Fort Myers"
-    nights: 
+    title: "Fort Myers"
+    nights:
     location: "Fort Myers"
     geo: [26.5537,-81.8393]
 ---
 
-with Colleen
+Visiting mom for Christmas, with Colleen

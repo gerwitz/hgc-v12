@@ -1,16 +1,15 @@
 ---
-title: "Chicago road trip, Blue Man Group"
+title: "Chicago"
 date: 1997-06-15
-geo: 
-tripit: 
+geo:
 nights: 2
 modes: ["car"]
 destinations:
   -
-    title: "Chicago road trip, Blue Man Group"
+    title: "Chicago"
     nights: 2
     location: ""
-    geo: 
+    geo:
 ---
 
-with Colleen
+Road trip to see Blue Man Group with Colleen

@@ -1,5 +1,5 @@
 ---
-title: "Camping trip"
+title: "Madison County"
 date: 2000-05-27
 geo: []
 tripit:
@@ -7,10 +7,10 @@ nights: 1
 modes: ["car"]
 destinations:
   -
-    title: "Camping trip"
+    title: ""
     nights: 1
     location: "Lower Rock Creek"
     geo: []
 ---
 
-with Colleen et al, part of Belden C. Lane's class based on his book "Landscapes of the Sacred" https://sites.google.com/a/slu.edu/beldenlane/ https://www.alltrails.com/trail/us/missouri/lower-rock-creek-trail
+Group camping trip with Colleen et al, as part of [Belden C. Lane](https://sites.google.com/a/slu.edu/beldenlane/)'s class based on his book "[Landscapes of the Sacred](https://www.alltrails.com/trail/us/missouri/lower-rock-creek-trail)"

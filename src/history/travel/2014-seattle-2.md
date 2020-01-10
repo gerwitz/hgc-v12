@@ -1,5 +1,5 @@
 ---
-title: "Seattle for work 2"
+title: "Seattle for work"
 date: 2014-06-01
 geo: [47.7927,-122.21565]
 tripit: 122736768

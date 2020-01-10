@@ -1,19 +1,19 @@
 ---
 title: "Regrouping with Mom"
 date: 2002-03-28
-geo: 
-tripit: 
+geo:
+tripit:
 nights: 5
 modes: ["air","car"]
 destinations:
   -
     title: "Met Kurt in Tampa"
-    nights: 
+    nights:
     location: ""
-    geo: 
+    geo:
   -
     title: "Drove to Fort Myers"
-    nights: 
+    nights:
     location: "Fort Myers"
     geo: [26.5537,-81.8393]
 ---

@@ -1,16 +1,15 @@
 ---
-title: "Houston, TX with Mom and Kurt"
+title: "Houston"
 date: 1979-08-01
 geo: [29.78598,-95.8244]
-tripit:
 nights:
 modes: ["air"]
 destinations:
   -
-    title: "Houston, TX with Mom and Kurt"
+    title: "Diane W"
     nights:
     location: "Katy, TX"
     geo: [29.78598,-95.8244]
 ---
 
-visiting Diane W
+Visiting Mom's friend Diane, with her and Kurt.

@@ -1,8 +1,7 @@
 ---
-title: "Family trip to Virginia"
+title: "New England"
 date: 1986-08-01
 geo:
-tripit:
 nights:
 modes: ["car"]
 destinations:
@@ -16,6 +15,11 @@ destinations:
     nights:
     location: "Colonial Williamsburg"
     geo: [37.279215,-76.69876]
+  -
+    title: "Washington DC"
+    nights:
+    location: "Ron aand Ann"
+    geo: [38.888122,-77.019912]
 ---
 
-
+Joined Dad work conference in Virginia, then drove onward to Washington DC, stayed with Kuhlman relatives
