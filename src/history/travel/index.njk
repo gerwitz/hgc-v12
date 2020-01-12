@@ -6,13 +6,27 @@ eleventyExcludeFromCollections: true
 ---
 
 <p>
-  Every time I remember sleeping away from home or otherwise making a travel reservation:
+  Every time I remember sleeping away from home or otherwise making a travel reservation.
 </p>
 
-<ul>
+<section class="timeline">
+{% set lastYear = 0 %}
+<ol>
 {% for trip in collections.trips | reverse %}
-  <li>
-    {{ trip.date | date('MMMM Do, YYYY') }}: <a href="{{ trip.url }}">{{ trip.data.title }}</a>
+  {% set year = trip.date | date('YYYY') %}
+  <li class="timeline-entry shown" data-year="{{ year }}" data-type="trip">
+    <time datetime="{{ trip.date | date('iso8601') }}" data-year="{{ year }}" class="year{{ ' first' if (year != lastYear) }}">
+      {{ year }}
+    </time>
+    <div>
+      <a href="{{ trip.url }}">{{ trip.data.title }}</a>
+      <div class="meta">
+        <time datetime="{{ trip.date | date('iso8601') }}">{{ trip.date | date('nice') }}</time>
+      </div>
+    </div>
   </li>
+  {% set lastYear = year %}
 {% endfor %}
-</ul>
+</ol>
+
+</section>

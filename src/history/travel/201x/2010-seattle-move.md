@@ -23,7 +23,7 @@ destinations:
   -
     title: "new home"
     nights: 0
-    location "Harvard Ave house"
+    location: "Harvard Ave house"
     geo: [47.62615,-122.32282]
 ---
 

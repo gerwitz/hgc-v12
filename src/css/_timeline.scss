@@ -1,0 +1,100 @@
+@import "_variables";
+
+$timelineLeft: 100px;
+$timelineLine: 4px;
+$timelineDot: 24px;
+$timelinePadding: 48px;
+
+.timeline {
+  .toggles input {
+    -webkit-transform: translateZ(0);
+  }
+  ol {
+    list-style-type: none;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: $timelineDot/2;
+      left: -$timelineLine*2;
+      width: $timelineLine;
+      height: 100%;
+      background-color: $text-color;
+      // border-left: solid $timelineLine $text-color;
+    }
+    margin-left: $timelineLeft;
+    padding-left: $timelinePadding;
+
+    li {
+      position: relative;
+      width: 100%;
+
+      time {
+        position: absolute;
+        width: $timelineLeft - $timelinePadding;
+        left: -$timelineLeft - $timelineLine - $timelinePadding;
+
+        text-align: right;
+        padding-right: $timelinePadding;
+
+        opacity: 0.0;
+        transition: opacity .5s ease-in;
+        &.first {
+          opacity: 1.0;
+        }
+      }
+
+      &:before {
+        content: "";
+        display: block;
+
+        position: absolute;
+        width: $timelineDot - ($timelineLine * 2);
+        height: $timelineDot - ($timelineLine * 2);
+        left: -$timelinePadding - ($timelineLine/2) - ($timelineDot/2);
+        margin-top: -($timelineDot/2);
+        top: 50%;
+
+        border: $timelineLine solid $text-color;
+        border-radius: 50%;
+        background-color: $page-color;
+        transition: background-color .5s ease-in;
+      }
+
+      &:hover:before {
+        background-color: $text-color;
+        transition: background-color .5s ease-out;
+      }
+
+      p {
+        display: inline;
+      }
+
+      .map-link {
+        opacity: 0.0;
+        transition: opacity .5s ease-in;
+      }
+
+      &:hover .map-link {
+        opacity: 1.0;
+        transition: opacity .5s ease-out;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline;
+
+        // .map-preview {
+        //   position: absolute;
+        //   right: 0px;
+
+        //   opacity: 0.0;
+        // }
+        // &:hover .map-preview {
+        //   opacity: 1.0;
+        // }
+      }
+    }
+  }
+}
