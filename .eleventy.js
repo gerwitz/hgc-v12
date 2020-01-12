@@ -74,6 +74,15 @@ module.exports = function(eleventyConfig) {
     });
   eleventyConfig.setLibrary("md", markdownLib);
 
+  eleventyConfig.addPassthroughCopy("src/**/*.gif");
+  eleventyConfig.addPassthroughCopy("src/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/**/*.jpeg");
+  eleventyConfig.addPassthroughCopy("src/**/*.png");
+  eleventyConfig.addPassthroughCopy("src/**/*.svg");
+  eleventyConfig.addPassthroughCopy("src/**/*.pdf");
+  eleventyConfig.addPassthroughCopy("src/projects/**/*.js");
+  eleventyConfig.addPassthroughCopy("src/projects/**/*.pde");
+  eleventyConfig.addPassthroughCopy("src/projects/**/*.json");
   eleventyConfig.addPassthroughCopy({"src/_meta": "/"});
   eleventyConfig.addPassthroughCopy({"src/_meta/favicon": "/favicon"});
 
@@ -87,11 +96,7 @@ module.exports = function(eleventyConfig) {
     templateFormats : [
       "html",
       "njk",
-      "md",
-      "js",
-      "gif", "jpg", "jpeg", "png", "svg",
-      "pdf", "json",
-      "pde" // for /projects/fur/
+      "md"
     ],
 
     // always Nunjuk so we can use dynamic permalinks in the template
