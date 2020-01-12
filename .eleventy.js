@@ -7,7 +7,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setQuietMode(true);
 
-  eleventyConfig.addWatchTarget("./src/scss/");
+  eleventyConfig.addWatchTarget("./src/css/");
 
   eleventyConfig.setDataDeepMerge(true);
 
@@ -96,7 +96,8 @@ module.exports = function(eleventyConfig) {
     templateFormats : [
       "html",
       "njk",
-      "md"
+      "md",
+      "11ty.js"
     ],
 
     // always Nunjuk so we can use dynamic permalinks in the template
