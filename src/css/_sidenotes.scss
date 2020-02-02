@@ -2,6 +2,13 @@ body {
   counter-reset: sidenote-counter;
 }
 
+.marginnote,
+.sidenote {
+  font-family: $sans-font;
+  font-size: 80%;
+  line-height: 1.3rem;
+}
+
 // unnumbered margin notes
 
 /*span*/.marginnote {
@@ -17,60 +24,74 @@ body {
 
 label.sidenote-number {
   counter-increment: sidenote-counter;
-
   &:after {
     content: counter(sidenote-counter);
     font-family: $sans-font;
     font-size: 80%;
-    left: 0.1rem;
     position: relative;
-    top: -0.5rem;
+    top: -0.1rem;
     vertical-align: baseline;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+
+    background-color: $meta-color;
+    color: $page-color;
+    text-align: center;
+    border-radius: 50%;
   }
 }
+
+// hide the checkbox
 
 input.sidenote-trigger {
   display: none;
 }
 
-
-
-// popover only for mobile
+// popover on mobile
 
 @media #{$bp-narrow} {
 
-  label.sidenote {
-  }
-
+  // replace number with star
   label.sidenote-number {
     cursor: pointer;
+    &:after {
+      content: '+';
+    }
   }
 
-  label.sidenote {
+  input.sidenote-trigger + label {
     display: none;
+
+    border-top: solid 1px $accent-color;
+    border-bottom: solid 1px $accent-color;
+    padding: .5em 1em;
+    cursor: pointer;
+
+    .sidenote {
+      overflow: scroll;
+      max-height: 0;
+      @include transition(max-height 1s ease-out);
+    }
   }
 
-  input.sidenote-trigger:checked + label + .sidenote {
-    display: inline-block;
-    padding: .5em 1em;
-    position: absolute;
-    top: 2em;
-    border: 1px solid black;
-    border-radius: 2px;
-    background: white;
+  input.sidenote-trigger:checked + label {
+    display: block;
 
-    cursor: pointer;
+    .sidenote {
+      max-height: 500px;
+      @include transition(max-height 1s ease-out);
+    }
   }
 }
 
-// notes wide (tabletish)
+// margin notes otherwise
 
 @media #{$bp-mid} {
 
   /*span*/.marginnote,
   /*label*/.sidenote {
-    font-size: 80%;
-    line-height: 1.3rem;
     position: absolute;
     right: -60%;
     top: 0;
@@ -78,11 +99,23 @@ input.sidenote-trigger {
   }
 
   .sidenote:before {
-    content: counter(sidenote-counter) " ";
+    content: counter(sidenote-counter);
     font-family: $sans-font;
+    font-size: 80%;
+    // left: -2rem;
     position: relative;
-    top: -0.5rem;
+    top: -0.1rem;
     vertical-align: baseline;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-left: -1.25rem;
+    margin-right: 0.25rem;
+
+    background-color: $meta-color;
+    color: $page-color;
+    text-align: center;
+    border-radius: 50%;
+
   }
 
 }
