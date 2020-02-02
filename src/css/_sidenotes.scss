@@ -1,0 +1,88 @@
+body {
+  counter-reset: sidenote-counter;
+}
+
+// unnumbered margin notes
+
+/*span*/.marginnote {
+  display: block;
+  margin-top: 1rem;
+  position: relative;
+  right: auto;
+  top: auto;
+  width: 100%;
+}
+
+// inline reference number
+
+label.sidenote-number {
+  counter-increment: sidenote-counter;
+
+  &:after {
+    content: counter(sidenote-counter);
+    font-family: $sans-font;
+    font-size: 80%;
+    left: 0.1rem;
+    position: relative;
+    top: -0.5rem;
+    vertical-align: baseline;
+  }
+}
+
+input.sidenote-trigger {
+  display: none;
+}
+
+
+
+// popover only for mobile
+
+@media #{$bp-narrow} {
+
+  label.sidenote {
+  }
+
+  label.sidenote-number {
+    cursor: pointer;
+  }
+
+  label.sidenote {
+    display: none;
+  }
+
+  input.sidenote-trigger:checked + label + .sidenote {
+    display: inline-block;
+    padding: .5em 1em;
+    position: absolute;
+    top: 2em;
+    border: 1px solid black;
+    border-radius: 2px;
+    background: white;
+
+    cursor: pointer;
+  }
+}
+
+// notes wide (tabletish)
+
+@media #{$bp-mid} {
+
+  /*span*/.marginnote,
+  /*label*/.sidenote {
+    font-size: 80%;
+    line-height: 1.3rem;
+    position: absolute;
+    right: -60%;
+    top: 0;
+    width: 50%;
+  }
+
+  .sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-family: $sans-font;
+    position: relative;
+    top: -0.5rem;
+    vertical-align: baseline;
+  }
+
+}

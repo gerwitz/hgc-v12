@@ -4,7 +4,6 @@
     $CLEANUP / VARIABLES
 /**************************************/
 @charset "UTF-8";
-$media-tablet : '(max-width: 850px)';
 
 /**************************************
     $DEFAULT ELEMENTS
@@ -34,39 +33,6 @@ table {
     font-style: italic;
 }
 
-/*span*/.marginnote,
-/*span*/.sidenote {
-    font-size: 80%;
-    line-height: 1.3rem;
-    position: absolute;
-    right: -60%;
-    top: 0;
-    width: 50%;
-}
-
-/*span*/.sidenote {
-    &:before {
-        content: counter(sidenote-counter) " ";
-        font-family: et-book-roman-old-style;
-        position: relative;
-        top: -0.5rem;
-        vertical-align: baseline;
-    }
-}
-
-/*span*/.sidenote-number {
-    counter-increment: sidenote-counter;
-
-    &:after {
-        content: counter(sidenote-counter);
-        font-family: et-book-roman-old-style;
-        font-size: 80%;
-        left: 0.1rem;
-        position: relative;
-        top: -0.5rem;
-        vertical-align: baseline;
-    }
-}
 
 /*span*/.mini-note {
     display: block;
@@ -90,15 +56,14 @@ table {
 /**************************************
     $CONTAINERS
 /**************************************/
+
 .main-container {
-    max-width: 1400px;
-    padding: 2rem 0 4rem 8rem;
-    width: 100%;
+    padding: 1.5rem;
 }
 
 .inner-container {
     padding-top: 2rem;
-    width: 55%;
+    width: 100%;
 }
 
 .bottom-footer {
@@ -106,27 +71,19 @@ table {
 }
 
 /**************************************
-    $MEDIA QUERIES - TABLET
+    $MEDIA QUERIES - TABLET AND BIGGER
 /**************************************/
-@media #{$media-tablet} {
+@media #{$bp-mid} {
 
     .main-container {
-        padding: 1.5rem;
+        max-width: 1400px;
+        padding: 2rem 0 4rem 8rem;
+        width: 100%;
     }
 
     .inner-container {
         padding-top: 2rem;
-        width: 100%;
-    }
-
-    /*span*/.marginnote,
-    /*span*/.sidenote {
-        display: block;
-        margin-top: 1rem;
-        position: relative;
-        right: auto;
-        top: auto;
-        width: 100%;
+        width: 55%;
     }
 
 }
