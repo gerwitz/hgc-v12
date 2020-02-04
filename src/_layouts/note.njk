@@ -1,7 +1,7 @@
 ---
 layout: base
 bodyClass: note
-permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.inputPath | replace('src/notes/', '', 1) | replace (r/[0-9][0-9][0-9][0-9]\\/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-/, '') | replace(r/\\.\\w+$/, '') }}.html"
+permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
 breadcrumbs:
   - notes
 ---
