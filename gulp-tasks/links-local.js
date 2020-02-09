@@ -9,7 +9,7 @@ gulp.task('links-internal',
   ' --skip .rss' +
   ' --skip _site/library' +
   ' --skip _site/now' +
-  ' --skip _site/using' +
+  ' --skip _site/uses' +
   ' --skip JavaScript' +
   ' | tap-spot')
 );
