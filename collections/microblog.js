@@ -6,7 +6,7 @@ module.exports = function(collection) {
 
   var headlines = writing
     .filter(function(item) {
-      return !(item.published == false);
+      return !(item.data.excludeFromFeed);
     })
     .map(function(item) {
       return {

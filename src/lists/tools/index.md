@@ -7,7 +7,31 @@ title: Toolkit
   https://aaronparecki.com/life-stack/
  -->
 
-## Personal Kit
+## Digital
+
+This site's stack:
+- [Eleventy](https://www.11ty.dev/) to build
+- [Netlify](https://www.netlify.com/) to serve
+- [Sitewriter](https://sitewriter.net/) to post, indyweb-style
+
+[Visual Code Studio](https://code.visualstudio.com/)
+
+[1Password](https://1password.com/)
+
+[iA Writer](https://ia.net/writer)
+
+[Working Copy](https://workingcopyapp.com/)
+
+## Hardware
+
+You may notice a theme.
+
+- 13" MacBooks (one for home, one for work)
+- 11" iPad Pro is increasingly my go-to at both work and home.
+
+- Airpods Pro
+
+## Carry Kit
 
 ### Wallet
 
@@ -23,29 +47,13 @@ Apple Watch (Series 4)
 
 ### Headphones
 
-Both Airpods and Powerbeats Pro
+Commuting and calls: Airpods Pro
+Sport cycling: Powerbeats Pro
+Inflight plugins: [Urbanears Kransen](https://headfonics.com/2013/11/the-kransen-iem-by-urbanears/) (sadly discontinued)
 
 ### Belt
 
-A found a [Bison belt](https://bisondesigns.com/products/30mm-catch-and-release&#8482;-gun-metal-buckle) at REI that's made of stretchy webbing. This makes it pizza-compatible.
-
-
-## Work
-
-MacBook (13")
-
-iPad Pro (11") is increasingly my go-to workstation.
-
-
-## Digital
-
-This site's stack:
-- Eleventy
-- Netlify
-- Sitewriter
-
-1Password
-
+I found a [Bison belt](https://bisondesigns.com/products/30mm-catch-and-release&#8482;-gun-metal-buckle) at REI that's made of stretchy webbing. This makes it both vegetarian and pizza-night-compatible.
 
 ## Cycling
 
