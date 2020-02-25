@@ -29,3 +29,5 @@ I am fascinated by the memes that are widespread despite being dangerously wrong
 - Financialization - abstracting economic activity from the allocation of capital
 
 - [Average](https://99percentinvisible.org/episode/on-average/)
+
+- Individualism
