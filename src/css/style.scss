@@ -83,6 +83,19 @@ figure {
   margin: 0;
   padding: 0;
   position: relative;
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+}
+figcaption {
+  font-family: $sans-font;
+  font-size: 80%;
+  line-height: 1.3rem;
+
+  text-align: center;
+  padding: 0.5rem;
 }
 
 hr {
