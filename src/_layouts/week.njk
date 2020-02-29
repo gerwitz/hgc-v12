@@ -11,6 +11,16 @@ breadcrumbs:
         <h1 class="p-name">{{ renderData.title }}</h1>
         <div class="meta">
             {{ renderData.weeknum | weekstart | date('weekstarted') }}
+
+            {% if renderData.weeknum == 0 %}
+              (<a href="../1">Next</a>)
+            {% else %}
+              (<a href="../{{ renderData.weeknum | int - 1 }}">Previous</a>
+              {%- if not renderData.current %}
+              |
+              <a href="../{{ renderData.weeknum | int + 1 }}">Next</a>
+              {%- endif %})
+            {% endif %}
         </div>
     </div>
 
@@ -37,7 +47,7 @@ breadcrumbs:
 
         {% for item in collections.notesByWeek[renderData.weeknum] %}
         {% if loop.first %}
-          <h2>{{ loop.length }} Notes</h2>
+          <h2>{{ loop.length }} Note{{ "s" if loop.length > 1 }}</h2>
         {% endif %}
           {% include "feed-note.njk" %}
         {% else %}
