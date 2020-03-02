@@ -6,10 +6,9 @@ pagination:
   data: collections.weeks
   size: 52
   reverse: true
-permalink: /weeks/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+permalink: /weeks{% if pagination.pageNumber > 0 %}/page-{{ pagination.pageNumber + 1 }}{% endif %}/
 eleventyExcludeFromCollections: true
 ---
-
 
 {% if pagination.pageNumber == 0 %}
 <p>
