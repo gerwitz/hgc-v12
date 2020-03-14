@@ -1,12 +1,12 @@
 ---
 permalink: "_redirects"
 ---
-/library/records/*          /history/appearances/:splat     301
-/library/projects/*         /projects/:splat                301
-/uses/*                     /lists/tools/:splat           301
+/library/records/*          /history/appearances/:splat       301
+/library/projects/*         /projects/:splat                  301
+/uses/*                     /lists/tools/:splat               301
 
 {% set thisweek = collections.weeks[collections.weeks.length - 2] %}
-/now                        {{ thisweek.url }}               302
+/now                        {{ thisweek.url }}                302
 
 # Redirect default Netlify subdomain to primary domain
 https://hgc-v12.netlify.com/* https://hans.gerwitz.com/:splat 301!
