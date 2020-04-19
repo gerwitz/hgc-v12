@@ -1,0 +1,9 @@
+---
+title:
+date: 2017-11-19
+week: 2280
+type: life
+---
+
+Fog moved in
+

@@ -1,7 +1,9 @@
 ---
 title: Born
-event-date: 1974-03-09
-geo: [38.63295, -90.31108] # St. Mary's Hospital
+date: 1974-03-09
+week: 0
+location: St. Mary's Hospital
+geo: [38.63295, -90.31108]
 type: life
 ---
 

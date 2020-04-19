@@ -1,6 +1,8 @@
 ---
 title: King Freret IX
-event-date: 2020-02-15
+date: 2020-02-15
+week: 2397
+location: New Orleans
 geo: [29.94847,-90.07094]
 type: life
 ---
