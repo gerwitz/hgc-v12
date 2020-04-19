@@ -1,1 +1,33 @@
+---
+title: Travelogue
+layout: page
+tags:
+eleventyExcludeFromCollections: true
+---
 {# types: [life, home, school, geek, work, car] #}
+
+<p>
+  All the events (work in progress)
+</p>
+
+<section class="timeline">
+{% set lastYear = 0 %}
+<ol>
+{% for event in collections.events | reverse %}
+  {% set year = event.date | date('YYYY') %}
+  <li class="timeline-entry shown" data-year="{{ year }}" data-type="event">
+    <time datetime="{{ event.date | date('iso8601') }}" data-year="{{ year }}" class="year{{ ' first' if (year != lastYear) }}">
+      {{ year }}
+    </time>
+    <div>
+      <a href="{{ event.url }}">{{ event.data.title }}</a>
+      <div class="meta">
+        <time datetime="{{ event.date | date('iso8601') }}">{{ event.date | date('nice') }}</time>
+      </div>
+    </div>
+  </li>
+  {% set lastYear = year %}
+{% endfor %}
+</ol>
+
+</section>
