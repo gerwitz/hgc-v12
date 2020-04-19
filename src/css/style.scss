@@ -289,6 +289,16 @@ dd {
   font-weight: 700;
 }
 
+// weeks list
+body.weeks-index {
+  ol {
+    padding-left: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
 // sugar
 ::-moz-selection {
   background-color: $accent-color;
