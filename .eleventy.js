@@ -31,6 +31,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("moonforweek", require("./filters/moonforweek.js") );
   eleventyConfig.addFilter("parents", require("./filters/parents.js") );
   eleventyConfig.addFilter("weeklink", require("./filters/weeklink.js") );
+  eleventyConfig.addFilter("weeknum", require("./filters/weeknum.js") );
   eleventyConfig.addFilter("weekstart", require("./filters/weekstart.js") );
 
   const numberOfWordsToJoin = 2;
