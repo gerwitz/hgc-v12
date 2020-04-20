@@ -1,7 +1,7 @@
 ---
 title:
-date: 1986-03-01
-week: 625
+date: 1986-03-09
+week: 626
 type: geek
 ---
 
