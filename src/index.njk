@@ -24,22 +24,14 @@ eleventyExcludeFromCollections: true
 
 <section>
   <p>
-    Hello! If you're looking for me, you probably want to <a href="https://twitter.com/intent/user?user_id=521" rel="me" target="_blank">follow @gerwitz on Twitter</a> or find another option at <a href="/about/" class="internal">about</a>.
+    Hans works as Global Head of Design Systems for <a href="https:/design.philips.com/">Philips Design</a> and is an American emigrant living in Amsterdam.
   </p>
   <p>
-    This site is a personal archive I've been building since 1994. You can <a href="/search/" class="internal">search</a> or browse via <a href="/sitemap/" class="internal">sitemap</a>.
+    You can learn more about him at <a href="/about/" class="internal">about</a> or simply <a href="https://twitter.com/intent/user?user_id=521" rel="me" target="_blank">follow @gerwitz on Twitter</a>.
   </p>
-
-  <div class="feed">
-  {% set items = collections.microblog | sort(true, false, 'date') | limit(6) -%}
-  {% for item in items %}
-    {% if item.type == 'post' %}
-      {% include "feed-writing.njk" %}
-    {% else %}
-      {% include "feed-note.njk" %}
-    {% endif %}
-  {% endfor %}
-</div>
+  <p>
+    This site is an extensive personal archive, accessible by <a href="/search/" class="internal">search</a> or browsable via <a href="/sitemap/" class="internal">sitemap</a>.
+  </p>
 </section>
 
 <!-- this is here only because indieweb tools expect my home URL to have a microformat profile -->
