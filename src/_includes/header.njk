@@ -1,7 +1,7 @@
 <header>
   <div class="breadcrumb">
     {% if page.url != '/' %}
-      <a class="site-title" href="/">{%- tree 18 -%}&nbsp;&nbsp;hans.gerwitz.com</a>
+      <a class="site-title" href="/">{% tree 18 %}&nbsp;&nbsp;hans.gerwitz.com</a>
       {% if not breadcrumbs %}
         {% set breadcrumbs = page.url | parents %}
       {% endif %}
@@ -11,7 +11,7 @@
         <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
       {% endfor %}
     {% else %}
-      <span class="site-title">{% tree 66 %}
+      <a class="site-title" href="/sitemap/">{% tree 66 %}</a>
     {% endif %}
   </div>
   {% if page.url != '/search/' %}

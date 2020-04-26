@@ -4,19 +4,22 @@ layout: page
 eleventyExcludeFromCollections: true
 ---
 
-Here are a few streams on this site. <!-- You might prefer other options at <a href="/follow/" class="internal">follow</a> -->
+Streams available from this site. <!-- You might prefer other options at <a href="/follow/" class="internal">follow</a> -->
 
-<h2>RSS feeds</h2>
+<h2>RSS Feeds</h2>
 <ul>
   <li>
-    <a href="microblog.rss">Notes RSS feed</a>
+    <a href="all-posts.rss">Aggregate</a>
   </li>
   <li>
-    <a href="writing.rss">Artiflces RSS feed</a>
+    <a href="notes.rss">Notes-only</a>
+  </li>
+  <li>
+    <a href="writing.rss">Articles-only</a>
   </li>
 </ul>
 
-<h2>
+<h2>Recent Posts</h2>
 <div class="feed">
 {% set items = collections.microblog | sort(true, false, 'date') | limit(6) -%}
 {% for item in items %}

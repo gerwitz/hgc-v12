@@ -21,6 +21,7 @@ layout:
     {%- for post in feed -%}
     {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(feedmeta.url) }}{% endset -%}
     <item>
+      <title>{{ post.title }}</title>
       <link>{{ absolutePostUrl }}</link>
       <guid>{{ absolutePostUrl }}</guid>
       <pubDate>{{ post.date | date('ddd, DD MMM YYYY HH:mm:ss ZZ') }}</pubDate>
