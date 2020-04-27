@@ -9,3 +9,4 @@ Fictional characters I identify with.
 - [Dale Cooper](https://twinpeaks.fandom.com/wiki/Dale_Cooper)
 - [Jay Gatsby](https://en.wikipedia.org/wiki/Jay_Gatsby)
 - [Camille Preaker](https://gillianflynn.fandom.com/wiki/Camille_Preaker)
+- [Patricia Westerford](https://en.wikipedia.org/wiki/The_Overstory)
