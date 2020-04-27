@@ -12,8 +12,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // custom collections
-  eleventyConfig.addCollection("content", require("./collections/content.js") );
   eleventyConfig.addCollection("weeks", require("./collections/weeks.js") );
+  eleventyConfig.addCollection("posts", require("./collections/posts.js") );
   eleventyConfig.addCollection("microblog", require("./collections/microblog.js") );
 
   eleventyConfig.addCollection("notesByWeek", require("./collections/notesByWeek.js") );

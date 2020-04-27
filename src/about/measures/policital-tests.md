@@ -2,7 +2,7 @@
 title: Political Tests
 categories:
 - personal
-tags:
+content-tags:
 - politics
 - quantself
 ---

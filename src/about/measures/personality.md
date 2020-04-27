@@ -2,7 +2,7 @@
 title: Personality Tests
 categories:
 - personal
-tags:
+content-tags:
 - personality
 - quantself
 ---
@@ -13,7 +13,7 @@ tags:
 > Rationality 70/100
 > Constructiveness 80/100
 > Leadership 88/100
-> 
+>
 > You are an **[SRCL][1]**-Sober Rational Constructive Leader. This makes you an **Ayn Rand ideal**. Taggart? Roark? Galt? You are all of these. You were born to lead. You may not be particularly exciting, but you have a strange charisma-born of intellect and personal drive-that people begin to notice when they have been around you a while. You don't like to compromise, but you recognize when you have to.
 
 [1]: http://hokev.brinkster.net/quiz/default.asp?quiz=Better%2BPersonality&page=6&ws=0&lf=100&cd=100&re=100&key=show
@@ -68,7 +68,7 @@ Several MBTI tests have rated me an INTp, although I've never taken the official
 
 --
 
-2019-05-21 
+2019-05-21
 
 https://bigfive-test.com/result/5ce3ef4afbef970069f7b14f
 

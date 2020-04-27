@@ -11,7 +11,7 @@ class LunrIndex {
   }
 
   render(data) {
-    var pages = data.collections.content;
+    var pages = data.collections.searchable;
 
     var builder = new lunr.Builder
     builder.pipeline.add(

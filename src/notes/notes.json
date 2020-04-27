@@ -1,4 +1,4 @@
 {
   "layout" : "note",
-  "tags" : "notes"
+  "tags" : ["notes", "searchable"]
 }

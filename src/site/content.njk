@@ -1,32 +1,38 @@
 ---
-title: Everything
+title: Searchable Pages
 layout: page
 eleventyExcludeFromCollections: true
 ---
 
 <table class="sortable"><thead>
-    <tr>
-        <th>
-            URL
-        </th>
-        <th>
-            Kind
-        </th>
-        <th>
-            Date
-        </th>
-    </tr>
+  <tr>
+    <th>
+      URL
+    </th>
+    <th>
+      Title
+    </th>
+    <th>
+      Tags
+    </th>
+    <th>
+      Date
+    </th>
+  </tr>
 </thead><tbody>
-{%- for page in collections.content %}
+{%- for page in collections.searchable %}
     <tr>
         <td>
             <a href="{{ page.url }}">{{ page.url }}</a>
         </td>
         <td>
-            {{ page.data.layout }}
+            {{ page.data.title }}
         </td>
         <td>
-            {{ page.date | date("iso8601") }}
+            {{ page.data.tags }}
+        </td>
+        <td>
+            {{ page.date | date("YYYY-MM-DD") }}
         </td>
     </tr>
 {%- endfor %}

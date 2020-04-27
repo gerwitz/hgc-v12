@@ -1,13 +1,7 @@
-// searchable things
+// all posts
 
 module.exports = function(collection) {
   return collection.getFilteredByTags(
-    "about",
-    "history",
-    "lists",
     "notes",
-    "projects",
-    "site",
-    "weeks",
     "writing");
 };

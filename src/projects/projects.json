@@ -1,4 +1,4 @@
 {
-    "tags" : "projects",
-    "layout" : "page"
+    "layout" : "page",
+    "tags" : ["projects", "searchable"]
 }

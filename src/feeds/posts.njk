@@ -1,9 +1,9 @@
 ---
 title: All Posts
 layout: page
-tags:
+override:tags: []
 pagination:
-  data: collections.microblog
+  data: collections.posts
   size: 6
   reverse: true
 permalink: /microblog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}/index.html
