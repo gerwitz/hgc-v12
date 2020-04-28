@@ -1,5 +1,5 @@
 ---
-title: Travelogue
+title: Timeline
 layout: page
 override:tags: []
 eleventyExcludeFromCollections: true
@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
   All the events (work in progress)
 </p>
 
-<section class="timeline">
+<section class="timeline reverse">
 {% set lastYear = 0 %}
 <ol>
 {% for event in collections.events | reverse %}

@@ -97,4 +97,8 @@ $timelinePadding: 48px;
       }
     }
   }
+  // reverse gets the extra line at top
+  &.reverse ol::before {
+    top: -$timelineDot/2;
+  }
 }

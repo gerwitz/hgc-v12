@@ -1,0 +1,25 @@
+---
+layout: base
+bodyClass: trip
+permalink: "/history/events/{{ page.fileSlug }}/index.html"
+breadcrumbs:
+    - history
+    - events
+---
+
+<article class="h-entry">
+
+  <div>
+    <h1 class="p-name">{{ title }}</h1>
+    <div class="meta">
+      <time datetime="{{ date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} (week {{ week | weeklink }})</time>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="event">
+      {{ content | safe }}
+    </div>
+  </div>
+
+</article>
