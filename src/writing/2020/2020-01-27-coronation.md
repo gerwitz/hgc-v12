@@ -1,5 +1,5 @@
 ---
-title: “All Hail Freret IX”
+title: "All Hail Freret IX"
 categories:
 - personal
 content-tags:
