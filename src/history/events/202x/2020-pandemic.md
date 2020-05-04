@@ -1,5 +1,5 @@
 ---
-title: COVID-19 Lockdown
+title: COVID-19 Isolation
 date: 2020-03-12
 week: 2401
 location: Amsterdam
