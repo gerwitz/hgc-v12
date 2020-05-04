@@ -12,3 +12,6 @@ We were aware of COVID-19 in January but in an abstract "like SARS or H1N1" way.
 By the 10th, I didn't travel to the south. The area was beginning to isolate and our offices there were advising WFH. Instead, I went to the local office, and that was my last day at an office before the isolation measures were applied here. We still had our Dutch tutor visit on Wednesday, and Shannon went out on Thursday.
 
 Then we stopped going outside except for very early walks and grocery trips, alone.
+
+Relaated posts:
+- [COVID-19: Life So Far](/2020/05/04/covid-life.html)
