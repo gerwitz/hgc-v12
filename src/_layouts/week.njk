@@ -25,11 +25,28 @@ breadcrumbs:
     </div>
 
     <div class="content">
+
         <div class="weeknotes">
             {{ content | safe }}
         </div>
 
-        {% for post in collections.writingByWeek[renderData.weeknum] %}
+        {% for event in collections.weeklyEvents[renderData.weeknum] %}
+        {% if loop.first %}
+          <h2>Event{{ "s" if loop.length > 1 }}</h2>
+          <ul>
+        {% endif %}
+            <li>
+              <a href="{{ event.url }}">{{ event.data.title }}</a>
+            </li>
+        {% if loop.last %}
+          </ul>
+        {% endif %}
+        {% else %}
+          <!-- No events -->
+        {% endfor %}
+        </ul>
+
+        {% for post in collections.weeklyWriting[renderData.weeknum] %}
         {% if loop.first %}
           <h2>Writing</h2>
           <ul>
@@ -45,7 +62,7 @@ breadcrumbs:
         {% endfor %}
         </ul>
 
-        {% for item in collections.notesByWeek[renderData.weeknum] %}
+        {% for item in collections.weeklyNotes[renderData.weeknum] %}
         {% if loop.first %}
           <h2>{{ loop.length }} Note{{ "s" if loop.length > 1 }}</h2>
         {% endif %}

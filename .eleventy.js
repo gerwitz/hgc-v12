@@ -15,8 +15,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("weeks", require("./collections/weeks.js") );
   eleventyConfig.addCollection("posts", require("./collections/posts.js") );
 
-  eleventyConfig.addCollection("notesByWeek", require("./collections/notesByWeek.js") );
-  eleventyConfig.addCollection("writingByWeek", require("./collections/writingByWeek.js") );
+  eleventyConfig.addCollection("weeklyNotes", require("./collections/weeklyNotes.js") );
+  eleventyConfig.addCollection("weeklyWriting", require("./collections/weeklyWriting.js") );
+  eleventyConfig.addCollection("weeklyEvents", require("./collections/weeklyEvents.js") );
 
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
