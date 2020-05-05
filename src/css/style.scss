@@ -226,11 +226,13 @@ a {
   position: relative; // for box-shadow on :hover
 }
 
-a.internal  {
+.internal  {
   font-family: $title-font;
+}
+a.internal  {
   font-weight: 700;
 }
-a.internal::before {
+.internal::before {
   content: '/';
   color: $accent-color;
   font-weight: bold;
@@ -263,6 +265,7 @@ dl {
 }
 dd {
   margin-bottom: 1.6rem;
+  padding-left: 4rem;
 }
 
 // feed lists
