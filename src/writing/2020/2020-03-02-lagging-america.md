@@ -6,7 +6,6 @@ content-tags:
 - usa
 - infrastructure
 - kvetch
-excludeFromFeed: true
 ---
 
 Returning to the United States comes with some "reverse" culture shock. The brashness of commercial messaging, size of vehicles, size of people, prioritization of cars, and other aspects of life that seemed normal living with them 8 years ago now seem startling. It takes longer and longer to reacclimatize.
