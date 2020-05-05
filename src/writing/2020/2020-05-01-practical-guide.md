@@ -11,6 +11,8 @@ content-tags:
 external: https://linkedin.com/pulse/author-hans-gerwitz
 ---
 
+![The Practical Guide to Experience Design](/media/2020-04/practical-guide.jpg)
+
 Shannon E. Thomas has published _[The Practical Guide to Experience Design](https://practical.guide/)_ and I am excited. I may be biased because we've been partners for years, but let me explain why I believe _this_ book by _this_ person is important.
 
 I first met Shannon when she joined the interactive marketing agency where I worked. She was a fine arts major hired for her talent and efficiency with graphic design, but it was quickly apparent to our development and operations teams that she was their ally. They had finally found someone in the creative department they could depend on for organization and thoughtful UI design.
