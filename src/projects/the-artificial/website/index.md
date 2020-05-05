@@ -1,10 +1,10 @@
 ---
-date: '2014-01-16'
+date: 2014-01-16
 layout: page
 title: theartificial.com
 ---
 
-When The Artificial grew up enough to start recruiting, we built a serious website with case studies and all that. Originally we used theartificial.nl, and registered theartificial.us with ambitions to also have a Seattle presence someday. Eventually we bought theartificial.com and transitioned to that.
+When The Artificial grew up enough to start recruiting, we built a serious website with case studies and all that. Originally we used `theartificial.nl`, and registered `theartificial.us` with ambitions to also have a Seattle presence someday. Eventually we bought `theartificial.com` and transitioned to that.
 
 Shaannon designed it and did some prototyping, and I implemented it with [Middleman](http://middlemanapp.com/). It grew with more than [1600 commits](https://github.com/TheArtificial/theartificial.nl/graphs/contributors?from=2014-01-12&to=2018-08-31) from 10 people of varying skills, largely designers writing blog posts.
 
