@@ -14,15 +14,15 @@ Over time, that page became first more extensive, and eventually more structured
 - We look for meaningful stories to connect our knowledge together.
 - We move too quickly.
 
-I will probably spend my entire life toying with such grand unifying theories of cognition, myself. For the purpose of avoiding these traps, though, I find it most useful to focus on two of them: [Confirmation Bias](http://skepdic.com/confirmbias.html) and [Fundamental Attribution Error](https://www.oxfordbibliographies.com/view/document/obo-9780199828340/obo-9780199828340-0114.xml).
+I will probably spend my entire life toying with such grand unifying theories of cognition, myself. For the purpose of avoiding these traps, though, I find it most useful to focus on two of them: [Confirmation Bias](https://www.theatlantic.com/magazine/archive/2018/09/cognitive-bias/565775/) and [Fundamental Attribution Error](https://www.oxfordbibliographies.com/view/document/obo-9780199828340/obo-9780199828340-0114.xml).
 
-Here's a collection of other named traps that I find particularly meaningful:
+Here, though, is a broad collection of other named traps that I find particularly meaningful:
 
 **Fundamental attribution error**
 We attribute behavior to personal characteristics that is a result of situations.
 _I would have handled that better because I'm more forgiving._
 
-**Confirmation bias**
+**[Confirmation bias](http://skepdic.com/confirmbias.html)**
 We are more likely to seek and notice observations that confirm our existing beliefs.
 _Every time there's a full moon, I notice more cats outside._
 See also [choice-supportive bias](https://en.wikipedia.org/wiki/Choice-supportive_bias).
@@ -92,7 +92,6 @@ See also [Hanlon's razor](https://en.wikipedia.org/wiki/Hanlon%27s_razor).
 
 **Scarcity**
 https://en.wikipedia.org/wiki/Scarcity_heuristic
-
 
 **[Self-serving bias](http://psychology.wikia.com/wiki/Self-serving_bias)**
 We tend to take more responsibility for success than failure.
