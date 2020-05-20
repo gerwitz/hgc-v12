@@ -9,6 +9,7 @@ People I find funny.
 - [Wanda Sykes](https://www.instagram.com/IamWandaSykes/)
 - [Mike Birbiglia](https://www.birbigs.com/)
 - [Tig Notaro](https://tignation.com/)
+- [Reggie Watts](https://en.wikipedia.org/wiki/Reggie_Watts)
 - [Trevor Noah](https://twitter.com/trevornoah)
 - [Kumail Nanjiani](https://twitter.com/kumailn)
 - [Amy Schumer](https://twitter.com/amyschumer)
