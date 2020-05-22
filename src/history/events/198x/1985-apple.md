@@ -3,6 +3,7 @@ title: Home Computer
 date: 1985-12-25
 week: 616
 type: geek
+epitaph: has always been a geek
 ---
 
 Sometime around Christmas my parents bought an [Apple IIe Enhanced](https://apple2history.org/history/ah07/) with ColorMonitor IIe, DuoDrive double 5.25” floppy drive, and a Brother daisy-wheel printer. My mother used it with AppleWorks to write for school (she was attending UMSL for a Masters in English). Of course it also meant I could play with it.
