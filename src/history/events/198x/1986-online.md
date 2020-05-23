@@ -20,4 +20,4 @@ Everyone in the BBS community used aliases even for mundane social interaction. 
 
 It was many years later that I found that the Washington University library had an open dial-in Gopher client and allowed me to create a UUCP account for ARPANET email (my first email address was `wupost.wustl.edu!sempco!hgerwitz`). I could also browse to a UMich space that included a menu item for telnet to [Nyx](http://www.nyx.net/) at the University of Denver. Nyx offered free shell accounts and NSFNET was well established, so my attention gradually shifted from BBSes to the Internet.
  
-By the time I [left home in 1991](/history/events/1991-emancipation) being online was so important to me that I scavenged an old VT100 dumb terminal and acoustic-coupler modem so I could dial in.
+By the time I [left home in 1991](/history/events/1991-left-home/) being online was so important to me that I scavenged an old VT100 dumb terminal and acoustic-coupler modem so I could dial in.

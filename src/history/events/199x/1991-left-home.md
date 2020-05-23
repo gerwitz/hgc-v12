@@ -6,7 +6,7 @@ geo: [38.589677,-90.251807]
 type: home
 ---
 
-Maybe one of the most defining events of my life was moving out of my parents’ house when I was only 16.
+Maybe one of the most defining events of my life was moving out of my parents’ house when I was 16.
 
 They had grown increasingly unhappy with how much time I was spending with Colleen, who was 4 years older. They were right to worry, but didn’t act together. They attempted to control me through disjointed and blunt measures like curfew and taking away the phone line I was paying for myself. The unusual freedom and decision participation I’d experienced most of my childhood was abruptly replaced with inconsistent application of authority.
 
