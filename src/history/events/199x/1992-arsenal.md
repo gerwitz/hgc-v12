@@ -1,5 +1,5 @@
 ---
-title: Moved to Tower Grove
+title: Tower Grove
 date: 1992-11-01
 week: 973
 location: Arsenal
