@@ -63,8 +63,10 @@ This is who I expect to meet on my tour of the circles of Hell.
 <!-- Fraud -->
 
 - Those who use power for personal gain or (religious) spite[^spite]
+- Those who work to provide the preachers of the 7th circle platforms to spread their message.[^statusquo]
 
 [^spite]: E.g. Mitch McConnell, Orin Hatch, Lindsey Graham, Roger Severino, the Kochs
+[^statusquo]: E.g. Joel Kaplan, Mikki Willis
 
 ## Ninth
 <!-- Treachery -->
