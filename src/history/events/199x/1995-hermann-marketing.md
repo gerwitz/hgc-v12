@@ -13,6 +13,6 @@ I started as a lackey helping trace unmapped network lines through ceilings and 
 
 I worked there almost every moment I wasn’t in class during business hours; I arranged my class schedule to optimize. Apple Partners let me continue my work with them on weekends and I worked in the computer labs in the evenings. I wore a tie to Hermann Marketing on Monday through Thursday.
 
-In 1996 I would join the programming team full-time.[^VMS] I quit Apple Partners and the lab work at SLU, and prioritized work over classes by taking as many evening classes as I could.
+At the start of 1996 I would join the programming team full-time.[^VMS] I quit Apple Partners and the lab work at SLU, and prioritized work over classes by taking as many evening classes as I could.
 
 [^VMS]: We worked in IDML on VMS. It was slightly more modern than COBOL, maybe, but more obscure.

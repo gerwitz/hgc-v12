@@ -12,3 +12,5 @@ After Colleen was injured falling through a rotten porch stair that we’d alrea
 [^suit]: only for a few months of rent, which they settled for
 
 It was the first time I really felt like I had my own home, and I put a lot of effort into building shelving and other low-cost improvements.
+
+After not even a year, this building (the Marjeanette) was purchased by a new landlord who was impressed during inspection by how we’d improved our apartment. So they offered us a low-cost upgrade to a much bigger 2-bedroom. It was a big project to move an entertainment center I had built, but was worth the luxury of having an extra room.
