@@ -11,4 +11,4 @@ A schoolmate, Andrew, who had also worked with the university CIS department rec
 
 I enjoyed the freedom to do some [cutting edge work](/2003/11/26/client-servers-communicating-with-server-servers-through-clients.html) but my technical legacy was probably our “Foundation” template framework I created for managing large codebases that was apparently in production use at one bank and a logistics company for 20 years.
 
-My soft-skills experience working at SLU proved surprisingly applicable. I was quickly promoted, replaced Andrew when he moved on and then inheriting a peer company’s team when we merged (and Quatrix became Envision). Before long I was Vice President in a fairly large regional firm, with a big office, with purple hair.
+My soft-skills experience working at SLU proved surprisingly applicable. I was quickly promoted, replaced Andrew when he moved on. I somehow found myself being a director with a big desk, shocking many clients with my purple hair.
