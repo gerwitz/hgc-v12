@@ -10,3 +10,5 @@ Having replaced walking across campus with late-night coding sessions fueled by 
 I intended to start small and signed up for a different ride earlier in the year, the Tour de Cure for diabetes. I started asking friends if they would sponsor me and a few were interested in joining, and before long I had a large team, had the company sponsor us with jerseys, and was leading training rides.
 
 I don’t know how it all escalated so quickly, but was quite proud to raise a lot of funds for charity and help a lot of my colleagues stay fit. I kept the team going even when I changed employers, and collected a lot of those century medals before I left Missouri.
+
+In 2004 I [upgraded to a racing bike](/2004/01/02/new-ride.html).
