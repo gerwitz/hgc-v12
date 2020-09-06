@@ -20,3 +20,4 @@ It was extra surreal to be start experiencing this in the afterglow of [Mardi Gr
 Related posts:
 - [COVID-19: Life So Far](/2020/05/04/covid-life.html)
 - [COVID-19: Working from Home](/2020/05/04/covid-work.html)
+- [COVID-19: Resenting the Zorgeloss](/2020/05/20/covid-amsterdam.html)
