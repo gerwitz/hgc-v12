@@ -1,17 +1,17 @@
 ---
-title: “COVID-19: Resenting the Zorgeloos”
+title: "COVID-19: Resenting the Zorgeloos"
 categories:
 - personal
 - life
 content-tags:
 - covid
-— amsterdam
+- amsterdam
 - netherlands
-—--
+---
 
 The Netherlands was slower than I would have liked to shut things down, and [did not close very aggressively](https://www.bbc.com/news/world-europe-52135814) compared to other nations. It’s been working, though: Dutch citizens are more socially responsible than most westerners so the , and thanks to some rapid building, ICU capacity was never exceeded.
 
-The curve was flattened. Trust in the government is [high](https://www.ioresearch.nl/actueel/io-zetelpeiling-vvd-wint-9-zetels-dankzij-aanpak-coronacrisis/). They present the [science behind the strategy](https://www.rivm.nl/en/novel-coronavirus-covid-19), opposition parties are [showing solidarity](https://twitter.com/jesseklaver/status/1239218229077331969). There is plenty of room for questions, though, as they sometimes cite “the science” without explaining why their science differs from that of neighbors. Why are they so certain that schools aren’t a serious source of spreading? Why so much certainty that masks are counterproductive, when it looks like virologists are making decisions about sociology?
+The curve was flattened. Trust in the government is [high](https://www.ioresearch.nl/actueel/io-zetelpeiling-vvd-wint-9-zetels-dankzij-aanpak-coronacrisis/). They present the [science behind the strategy](https://www.rivm.nl/en/novel-coronavirus-covid-19), opposition parties are [showing solidarity](https://twitter.com/jesseklaver/status/1239218229077331969). There is plenty of room for questions, though, as they sometimes cite "the science" without explaining why their science differs from that of neighbors. Why are they so certain that schools aren’t a serious source of spreading? Why so much certainty that masks are counterproductive, when it looks like virologists are making decisions about sociology?
 
 There were a few weeks where the politicians were being too obtuse about criteria for relaxing containment measures. They have now presented a plan, though, and it seems to fall in the middle of discontent from citizens that wish it was more aggressive or more careful.
 
