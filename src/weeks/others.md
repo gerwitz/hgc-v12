@@ -1,5 +1,6 @@
 ---
 title: Other Weeknotes
+override:tags: []
 ---
 
 - [Compendium of Medium-based weeknotes](https://weeknot.es/)
