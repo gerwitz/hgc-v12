@@ -1,7 +1,10 @@
 ---
 title: Other Weeknotes
+layout: page
 override:tags: []
 ---
+
+Some inspiring examples of weeknotes from around the web:
 
 - [Compendium of Medium-based weeknotes](https://weeknot.es/)
 - [Mark Boulton](https://markboulton.co.uk/journal/category/weeknote/)
