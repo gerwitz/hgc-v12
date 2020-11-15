@@ -12,6 +12,7 @@ Inspiring
 * Steve Jobs: an inspiration since I was 10
 * [Charles Marohn](http://www.strongtowns.org/journal/2010/11/22/confessions-of-a-recovering-engineer.html)
 * [Connie Picciotto](http://www.washingtonpost.com/sf/feature/wp/2013/05/02/connie-picciotto-has-kept-vigil-near-the-white-house-for-32-years-why-and-at-what-cost/)
+* Laungi Bhuiya
 
 Important
 
