@@ -14,7 +14,7 @@ The [February 24th introduction](https://www.francetvinfo.fr/culture/musique/jaz
 
 <figure><iframe width="560" height="315" src="//embedftv-a.akamaihd.net/443e6fae73b2f3acd42c880b3dab3981" frameborder="0" scrolling="no" allowfullscreen></iframe><figcaption><a href="https://translate.google.com/?tl=en&text=L%27esprit%20de%20la%20Nouvelle-Orl%C3%A9ans%20souffle%20d%C3%A9j%C3%A0%20sur%20sa%20majest%C3%A9%20et%20sa%20valisons.%20La%20f%C3%AAte%20va%20pouvoir%20d%C3%A9coller.#view=home&op=translate&sl=auto&tl=en&text=L'esprit%20de%20la%20Nouvelle-Orl%C3%A9ans%20souffle%20d%C3%A9j%C3%A0%20sur%20sa%20majest%C3%A9%20et%20sa%20valisons.%20La%20f%C3%AAte%20va%20pouvoir%20d%C3%A9coller.">L'esprit de la Nouvelle-Orléans souffle déjà sur sa majesté et sa valisons. La fête va pouvoir décoller.</a></figcaption></figure>
 
-The [second segment](https://www.francetvinfo.fr/monde/usa/mardi-gras-une-tradition-francaise-exportee-a-la-nouvelle-orleans_3840989.html) gets into some neighborhoods, history, and Bobby gaving a tour of our floats.
+The [second segment](https://www.francetvinfo.fr/monde/usa/mardi-gras-une-tradition-francaise-exportee-a-la-nouvelle-orleans_3840989.html) gets into some neighborhoods, history, and Bobby giving a tour of our floats.
 
 <figure><iframe width="560" height="315" src="//embedftv-a.akamaihd.net/1cb3d4a4ca56b1a8a8aa94974fec4312" frameborder="0" scrolling="no" allowfullscreen></iframe></figure>
 
