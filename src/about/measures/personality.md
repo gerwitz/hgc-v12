@@ -79,3 +79,23 @@ https://bigfive-test.com/result/5ce3ef4afbef970069f7b14f
 https://www.16personalities.com/profiles/fc306cffbbbef
 
 --
+
+2020-12 light vs dark triad
+
+Faith in humanity: believing in the fundamental goodness of humans
+Your score in this facet is greater than the average by 13.8%.
+
+Humanism: valuing the dignity and worth of each human being
+Your score in this facet is greater than the average by 13.6%.
+
+Kantianism: treating people as ends in themselves, not means to an end
+Your score in this facet is greater than the average by 0.1%.
+
+Narcissism: Entitled self-importance
+Your score in this facet is greater than the average by 6.2%.
+
+Psychopathy: Callousness and cynicism
+Your score in this facet is lower than the average by 32.5%.
+
+Machiavellianism: Strategic exploitation and deceit
+Your score in this facet is greater than the average by 7.75%.
