@@ -2,6 +2,9 @@
 title: Prinseneiland to Houtmankade, October 2013 to March 2015
 ---
 
+## morning path via Centraal Starbucks
+
+## reverse journey
 Walked from Prinseneiland, over <a href="http://www.bruggenvanamsterdam.nl/prinseneiland_hoek_galgenstraat.htm">bridge 321</a> and under the tracks towards the Haarlemmerplein. We watched them install a new fountain in the plaza that's popular for kids to play in.
 
 Crossed under the <a href="https://nl.wikipedia.org/wiki/Haarlemmerpoort_(Amsterdam)">Haarlemmerpoort</a>

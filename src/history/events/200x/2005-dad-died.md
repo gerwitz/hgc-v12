@@ -1,9 +1,12 @@
 ---
-title:
+title: Dad Died
 date: 2005-07-11
 week: 1636
 type: life
 ---
 
-Dad died
+My father managed to survive 3 years after diagnosis, much longer than expected. He stayed well long enough to take Kurt and I to [Germany](/history/travel/2002-europe/) and [Italy](/history/travel/2004-italy/).
 
+It felt like fate that he passed before having to watch Katrina devastate the city he loved.
+
+I expect revisiting [my thoughts from that day](/2005/07/11/fatherless.html) will always be hard.

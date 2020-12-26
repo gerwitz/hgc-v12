@@ -1,5 +1,5 @@
 ---
-title:
+title: infūz
 date: 2005-11-01
 week: 1652
 location: 555 Washington Ave
