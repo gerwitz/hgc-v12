@@ -2,7 +2,7 @@
 date: 2021-01-16T16:23:25+01:00
 slug: a-storyline-from-the-first-5
 ---
-A storyline from the first 5 episodes of _Mister Rogers' Neighborhood_, which seems quite relevant a half-century later, as [summarized on Wikipedia](https://en.wikipedia.org/wiki/Mister_Rogers'_Neighborhood_(season_1))
+A storyline from the first 5 episodes of _Mister Rogers' Neighborhood_, which seems quite relevant a half-century later, as [summarized on Wikipedia](https://en.wikipedia.org/wiki/Mister_Rogers'_Neighborhood_(season_1)):
 
 > Lady Elaine's changes to the geography of the Neighborhood of Make-Believe worry King Friday, who begins to impose new rules and restrictions in Make-Believe, and builds a wall.
 
