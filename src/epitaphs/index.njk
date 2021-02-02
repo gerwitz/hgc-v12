@@ -1,0 +1,15 @@
+---
+title: Epitaphs
+layout: page
+override:tags: []
+permalink: /epitaphs/index.html
+eleventyExcludeFromCollections: true
+---
+
+<ul>
+{%- for page in collections.epitaphs -%}
+  <li>
+    Hans <a href="{{ page.url }}">{{ page.data.epitaph }}</a>.
+  </li>
+{%- endfor -%}
+</ul>
