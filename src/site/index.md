@@ -5,7 +5,9 @@ layout: page
 
 This is a personal website that collects my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me.
 
-Think of it as my book of shadows, with over {{ collections.all | length | round(-1) }} pages so far.
+Think of it as my book of shadows, commonplace book, [digital garden](https://maggieappleton.com/garden-history), or [thought resevoir](http://interconnected.org/home/2021/02/10/reservoirs) with over {{ collections.all | length | round(-1) }} pages so far.[^blog]
+
+[^blog]: Like [Joel Hooks](https://joelhooks.com/digital-garden), I don't like to think of it as a blog.
 
 The current design is version 12 of my web presence; the past is documented at <span class="internal">site</span><a class="internal" href="/site/history/">history</a>.
 
