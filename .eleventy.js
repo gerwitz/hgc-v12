@@ -19,6 +19,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("weeklyWriting", require("./collections/weeklyWriting.js") );
   eleventyConfig.addCollection("weeklyEvents", require("./collections/weeklyEvents.js") );
 
+  eleventyConfig.addCollection("epitaphs", require("./collections/epitaphs.js") );
+
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
 

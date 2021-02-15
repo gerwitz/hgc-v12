@@ -3,7 +3,7 @@ title: Exemplars
 subtitle: People who inspire
 ---
 
-Inspiring
+## Inspiring
 
 * [Jim Gilliam](http://www.jimgilliam.com/) (like [Ze Frank](http://www.zefrank.com/) with a cause)
 * [Michael Phillips](http://www.lithiumcreations.com/about-the-author/)
@@ -13,8 +13,9 @@ Inspiring
 * [Charles Marohn](http://www.strongtowns.org/journal/2010/11/22/confessions-of-a-recovering-engineer.html)
 * [Connie Picciotto](http://www.washingtonpost.com/sf/feature/wp/2013/05/02/connie-picciotto-has-kept-vigil-near-the-white-house-for-32-years-why-and-at-what-cost/)
 * Laungi Bhuiya
+* [Katalin Karikó](https://www.theguardian.com/science/2020/nov/21/covid-vaccine-technology-pioneer-i-never-doubted-it-would-work): gave up personal progress for science progress
 
-Important
+## Important
 
 * Alan Turing: gave us general purpose computing
 * Grace Hopper: added the abstraction layer of programming
@@ -32,7 +33,7 @@ Important
 * [Ida Wells](https://www.nytimes.com/interactive/2018/obituaries/overlooked-ida-b-wells.html): another heroine of the fourth estate
 * [Greta Thunberg](https://twitter.com/GretaThunberg/): humanity's conscience
 
-Worth reading
+## Worth reading
 
 * [Zeynep Tufekci](https://twitter.com/zeynep)
 * Daniel Dennett
