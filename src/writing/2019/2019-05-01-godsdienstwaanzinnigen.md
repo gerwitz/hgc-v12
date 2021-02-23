@@ -25,4 +25,4 @@ Here, the resulting paradox of tolerance is easily resolved.[^paradox] All peopl
 
 [^paradox]: As [Karl Popper would have it](https://en.m.wikipedia.org/wiki/Paradox_of_tolerance#Tolerance_and_freedom_of_speech).
 
-So I’ve come to agree with the European approach on hate speech now that I’ve lived with the results of both apoproaches. So it pleases me greatly that our mayor and others were successful in [denying Steven Anderson entry to the Netherlands](https://beta.parool.nl/nederland/haatprediker-anderson-legt-zich-neer-bij-inreisverbod~b80f8f37/).
+So I’ve come to agree with the European approach on hate speech now that I’ve lived with the results of both models. So it pleases me greatly that our mayor and others were successful in [denying Steven Anderson entry to the Netherlands](https://beta.parool.nl/nederland/haatprediker-anderson-legt-zich-neer-bij-inreisverbod~b80f8f37/).
