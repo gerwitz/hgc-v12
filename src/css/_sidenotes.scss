@@ -29,7 +29,7 @@ label.sidenote-number:after,
 .sidenote:before {
   content: counter(sidenote-counter);
   font-family: $sans-font;
-  font-weight: 600;
+  font-weight: $bold-font-weight;
   font-size: 0.5rem;
   position: relative;
   top: -0.5rem;

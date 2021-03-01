@@ -15,7 +15,7 @@ The current design is version 12 of my web presence; the past is documented at <
 
 The site map is deliberately simple, with light navigation. Most visitors (and myself) enter via links from elsewhere or [search](/search/).
 
-Page layout is based on [Tufte CSS](https://edwardtufte.github.io/tufte-css/). Type is set using [IBM Plex](https://github.com/IBM/plex/) Sans and Serif.
+Page layout is based on [Tufte CSS](https://edwardtufte.github.io/tufte-css/). Type is set using Adobe's [Source Sans Pro](https://github.com/adobe-fonts/source-sans), designed by Paul D. Hunt, using Google's Latin-optimized build of version 1.4.
 
 The logo glyph is [LEGO part #2435][tree]. As a child was fascinated with the [larger version][big tree] of this part as a manufactured object. I also spent a lot of time in forests and many of my friends were trees. (I used to use the [Unicode tree glyph][unicode] as a logo of sorts, but it has been lost to creeping emojification.)
 <span class="marginnote">{% tree 99 %}</span>

@@ -11,9 +11,13 @@ $meta-color: hsl(0, 0%, 50%);
 $accent-color: hsl(140, 100%, 25%); // lego tree #00852B
 
 // Font
-$body-font: 'IBM Plex Serif', 'Georgia', Times, serif;
-$sans-font: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-$title-font: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+$body-font: 'Source Sans Pro', sans-serif;
+$sans-font: 'Source Sans Pro', sans-serif;
+$title-font: 'Source Sans Pro', sans-serif;
+
+$regular-font-weight: 400;
+$bold-font-weight: 700;
+$title-font-weight: 700;
 
 // transitions
 @mixin transition($args...) {
