@@ -45,10 +45,10 @@
     <link rel="stylesheet" href="/css/style.css">
 
 {# preload fonts, instead of waiting for CSS to request them #}
-{# crossorigin is only present because Google insists #}
-    <link rel=“preload” href=“/css/fonts/source-sans-pro-v14-latin-700.woff2” as=“font” type=“font/woff2” crossorigin>
-    <link rel=“preload” href=“/css/fonts/source-sans-pro-v14-latin-regular.woff2” as=“font” type=“font/woff2” crossorigin>
-    <link rel=“preload” href=“/css/fonts/source-sans-pro-v14-latin-italic.woff2” as=“font” type=“font/woff2” crossorigin>
+{# crossorigin is only present because Lighthouse insists #}
+    <link rel="preload" href="/css/fonts/source-sans-pro-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/css/fonts/source-sans-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/css/fonts/source-sans-pro-v14-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
 
     {{ headtags | safe }}
   </head>
