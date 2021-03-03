@@ -7,7 +7,6 @@
     src: local(''),
          url('/css/fonts/source-sans-pro-v14-latin-regular.woff2') format('woff2'),
          url('/css/fonts/source-sans-pro-v14-latin-regular.woff') format('woff');
-    font-display: swap;
 }
 
 @font-face {
@@ -17,7 +16,6 @@
     src: local(''),
          url('/css/fonts/source-sans-pro-v14-latin-italic.woff2') format('woff2'),
          url('/css/fonts/source-sans-pro-v14-latin-italic.woff') format('woff');
-    font-display: swap;
 }
 
 @font-face {
@@ -27,5 +25,4 @@
     src: local(''),
          url('/css/fonts/source-sans-pro-v14-latin-700.woff2') format('woff2'),
          url('/css/fonts/source-sans-pro-v14-latin-700.woff') format('woff');
-    font-display: swap;
 }
