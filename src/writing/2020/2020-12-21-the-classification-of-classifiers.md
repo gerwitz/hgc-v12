@@ -1,9 +1,11 @@
 ---
-published: false
 title: The classification of classifiers
 categories:
-- unknown
+- work
 content-tags:
+- data
+- government
+- algorithm
 ---
 
 
@@ -25,4 +27,3 @@ This includes architecture overview, source code, and performance measurement.
 
 **Risks**
 > Risks related to the system and its use and their management methods.
-
