@@ -1,5 +1,5 @@
 ---
-title: “COVID-19: Ungoverned“
+title: "COVID-19: Ungoverned"
 categories:
 - personal
 - culture
