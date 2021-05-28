@@ -9,3 +9,7 @@ Registered The Artificial with Shannon
 <!--
   as technique to get Dutch residency with Shannon
 -->
+
+
+[how we stayed anyway](/2018/06/07/the-artificial-genesis.html).
+
