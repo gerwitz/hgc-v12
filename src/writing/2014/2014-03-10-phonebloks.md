@@ -7,7 +7,7 @@ content-tags:
 - phone
 - technology
 - manufacturing
-external: http://safelyignored.com/phonebloks
+external: https://safelyignored.com/phonebloks
 ---
 Back in September, a design student posted [a design fiction video](http://youtu.be/oDAw7vW7H0c) of Phonebloks, a modular phone platform. It got a lot of attention, but I counted myself among numerous skeptics of the design, given how much size and weight would be added and the unrealistic sizing of the imagined modules.
 

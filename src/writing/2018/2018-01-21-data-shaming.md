@@ -7,7 +7,7 @@ content-tags:
 - data
 - environment
 - behavior
-external: http://safelyignored.com/data-shame
+external: https://safelyignored.com/data-shame
 ---
 
 You've probably heard that Cape Town, South Africa, is in danger of becoming the world's first major city (in modern times) to run out of water.

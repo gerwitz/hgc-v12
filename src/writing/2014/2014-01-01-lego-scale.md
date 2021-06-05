@@ -5,7 +5,7 @@ categories:
 - culture
 content-tags:
 - lego
-external: http://safelyignored.com/lego-scale
+external: https://safelyignored.com/lego-scale
 ---
 
 [Greg J. Smith](http://serialconsign.com/) recently [tweeted about a LEGO jail cell](https://twitter.com/gr3gjsmith/status/417855073318735872) and estimated it's measure at a ratio that didn't quite match, so my curiosity was piqued.

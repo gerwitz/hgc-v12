@@ -7,7 +7,7 @@ content-tags:
 - 3dp
 - law
 - diy
-external: http://safelyignored.com/disrupt-it-yourself/
+external: https://safelyignored.com/disrupt-it-yourself/
 ---
 
 Technophiles have been hand-wringing a bit lately over the rise of Defense Distributed, who have [successfully tested](http://defdist.tumblr.com/post/49768758853/the-liberator) a (mostly) printed firearm. Here's a [representative reaction](https://twitter.com/AnneMiltenburg/status/331352685909532672) from my Twitter feed:

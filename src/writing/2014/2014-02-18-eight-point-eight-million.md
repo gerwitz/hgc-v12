@@ -8,7 +8,7 @@ content-tags:
 - web
 - standards
 - humor
-external: http://safelyignored.com/open-committee
+external: https://safelyignored.com/open-committee
 ---
 
 Nevermind Netflix, the best drama shows these days are on the W3C mail ists. Recent episodes of [www-style](http://lists.w3.org/Archives/Public/www-style/2014Feb/0130.html) are gems, where characters like [Maciej](https://twitter.com/othermaciej) (Apple), [Tab](https://twitter.com/tabatkins) (Google), and [Boris](https://twitter.com/bz_moz) battle over the evolution of CSS, with Apple backing Adobe's proposed [Regions](http://alistapart.com/blog/post/css-regions-considered-harmful), and Google pushing aggressively for [Shadow DOM](http://www.inserthtml.com/2013/09/web-components/).

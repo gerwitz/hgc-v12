@@ -6,7 +6,7 @@ categories:
 content-tags:
 - trump
 - politics
-external: http://safelyignored.com/compassionate-conservatives
+external: https://safelyignored.com/compassionate-conservatives
 ---
 
 Please talk to me.

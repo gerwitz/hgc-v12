@@ -7,7 +7,7 @@ content-tags:
 - business
 - tech
 - google
-external: http://safelyignored.com/why-google-bought-motorola
+external: https://safelyignored.com/why-google-bought-motorola
 ---
 
 It is obvious that Google purchased Motorola to establish a stake in mobile handset production to ensure Android's future and consumption of Google services. So obvious it makes me curious about alternate explanations.

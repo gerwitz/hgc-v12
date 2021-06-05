@@ -6,7 +6,7 @@ categories:
 content-tags:
 - futures
 - design
-external: http://safelyignored.com/cheap-futures
+external: https://safelyignored.com/cheap-futures
 ---
 
 At ThingsCon last week, Shannon and I participated in a [speculative fiction workshop](https://2016.thingscon.nl/sessions/thingclash-chronicles-speculative-frictions-in-the-plausible-near-now/) that resulted in a number of short stories with design morals.

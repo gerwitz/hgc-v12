@@ -6,7 +6,7 @@ categories:
 content-tags:
 - gaming
 - time
-external: http://safelyignored.com/a-game-for-someone-else/
+external: https://safelyignored.com/a-game-for-someone-else/
 ---
 
 Jason Rohrer has received a bit of [attention][] lately for _A Game for Someone_, which is interesting because it was algorithmically evolved by a focus group of AI agents. He won a GDC award, though, for his interpretation of the theme of "Humanity's Last Game". In order to deliver his creation to the future, he encased it in a time capsule and obscured the location.

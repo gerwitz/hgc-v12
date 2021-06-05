@@ -9,14 +9,14 @@ content-tags:
 - society
 - government
 - history
-external: https://medium.com/history-repeats/25d694a035ce
+external: httpss://medium.com/history-repeats/25d694a035ce
 ---
 
 > What about advertising’s role in financing such a project?
 
 20 years ago I was on the Internet [worrying](https://groups.google.com/d/msg/alt.cyberpunk.tech/4PIqeX5baJI/cw1D7r1FFccJ) about how we might integrate commercial interests into the "information highway" as it became mainstream.
 
-Today we lament the loss of that era's breathless optimism, and its poster children have [become the industrialists they once feared](http://safelyignored.com/google-incentives), raising capitalist defenses rather than cooperating.
+Today we lament the loss of that era's breathless optimism, and its poster children have [become the industrialists they once feared](https://safelyignored.com/google-incentives), raising capitalist defenses rather than cooperating.
 
 Anil Dash blames us for [not trying hard enough](http://dashes.com/anil/2013/04/harvard.html).
 
