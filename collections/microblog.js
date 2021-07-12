@@ -17,16 +17,18 @@ module.exports = function(collection) {
         url: item.url,
         date: item.date,
         title: item.data.title,
-        templateContent: 'New post: <a href="'+item.url+'">'+item.data.title+'</a>'
+        templateContent: '<a href="'+item.url+'">'+item.data.title+'</a>'
       }
     });
 
   var full = notes
     .concat(headlines);
 
+  // most recent first
   full.sort(function(a, b) {
       return (a.date - b.date);
     });
 
-  return full;
+  // top 50 only
+  return full.slice(0, 50);
 };
