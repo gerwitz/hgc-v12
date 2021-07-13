@@ -26,7 +26,7 @@ module.exports = function(collection) {
 
   // most recent first
   full.sort(function(a, b) {
-      return (a.date - b.date);
+      return (b.date - a.date);
     });
 
   // top 50 only
