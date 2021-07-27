@@ -1,5 +1,5 @@
 ---
-date: 2021-07-27T19:14:17+02:00
+date: 2021-07-27T19:14:18+02:00
 slug: competitive-cycling-is-a-cerebral-sport
 ---
 Competitive cycling is a cerebral sport where strategy can make all the difference.
