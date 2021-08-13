@@ -1,5 +1,5 @@
 ---
-date: 2021-08-13T20:26:46+02:00
+date: 2021-08-13T20:26:49+02:00
 slug: i-ve-recently-discovered-david-rutledge
 ---
 I've recently discovered David Rutledge's _The Philosopher's Zone_ and am bingeing on it.
