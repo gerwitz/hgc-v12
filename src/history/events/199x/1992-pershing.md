@@ -1,5 +1,5 @@
 ---
-title: Crack House
+title: Moved into crack house
 date: 1992-01-01
 week: 930
 location: 4433 Pershing

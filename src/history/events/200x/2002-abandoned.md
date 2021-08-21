@@ -1,5 +1,5 @@
 ---
-title: Colleen Left
+title: Colleen left
 date: 2002-02-08
 week: 1457
 type: life

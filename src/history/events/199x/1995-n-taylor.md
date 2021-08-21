@@ -1,5 +1,5 @@
 ---
-title: CWE Again
+title: Moved to CWE again
 date: 1995-09-01
 week: 1121
 location: 327 N Taylor

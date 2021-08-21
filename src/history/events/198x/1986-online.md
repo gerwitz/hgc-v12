@@ -1,5 +1,5 @@
 ---
-title: Online
+title: Began online life
 date: 1986-03-09
 week: 626
 type: geek

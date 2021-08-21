@@ -1,5 +1,5 @@
 ---
-title: Computer Camp
+title: Learned computers at summer camp
 date: 1985-07-01
 week: 591
 geo: [38.79315,-89.99792]

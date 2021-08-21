@@ -1,5 +1,5 @@
 ---
-title: DeBaliever
+title: Moved to DeBaliever
 date: 1997-01-01
 week: 1191
 location: 5530 Delmar

@@ -1,5 +1,5 @@
 ---
-title: Started Preschool
+title: Started preschool
 date: 1978-01-01
 week: 199
 location: Cool Valley

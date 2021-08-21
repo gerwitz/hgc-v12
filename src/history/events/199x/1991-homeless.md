@@ -1,5 +1,5 @@
 ---
-title: Homeless
+title: Lived homeless
 date: 1991-05-01
 week: 895
 type: home

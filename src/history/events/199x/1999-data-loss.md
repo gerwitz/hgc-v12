@@ -1,5 +1,5 @@
 ---
-title: Digital Apocalypse
+title: Experience a digital apocalypse
 date: 1999-05-01
 week: 1312
 type: life

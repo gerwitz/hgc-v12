@@ -1,5 +1,5 @@
 ---
-title: Camp Ekon
+title: Survived summer camp
 date: 1989-06-01
 week: 795
 type: life

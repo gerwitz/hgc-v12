@@ -1,5 +1,5 @@
 ---
-title: Wedding
+title: Married Shannon
 date: 2009-08-23
 week: 1850
 location: Smith Tower

@@ -1,5 +1,5 @@
 ---
-title: "Shannon's First Book"
+title: Shannon published her first book
 date: 2020-04-30
 week: 2408
 location: Amsterdam

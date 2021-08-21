@@ -1,5 +1,5 @@
 ---
-title: Upward Bound
+title: Attended Upward Bound
 date: 1987-07-01
 week: 695
 geo: [38.628274,-90.266872]

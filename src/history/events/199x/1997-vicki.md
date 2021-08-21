@@ -1,5 +1,5 @@
 ---
-title: Miata
+title: Bought Miata
 date: 1997-07-01
 week: 1217
 type: car

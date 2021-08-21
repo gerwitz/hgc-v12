@@ -1,5 +1,5 @@
 ---
-title: Meatless
+title: Stopped eating meat
 date: 1998-02-25
 week: 1251
 type: life

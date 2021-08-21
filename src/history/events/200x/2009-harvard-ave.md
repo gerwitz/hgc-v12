@@ -1,5 +1,5 @@
 ---
-title: North Capitol Hill
+title: Moved to North Capitol Hill
 date: 2009-08-15
 week: 1849
 location: 737A Harvard Ave E

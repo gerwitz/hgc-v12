@@ -1,5 +1,5 @@
 ---
-title: Management
+title: Became management
 date: 2002-05-01
 week: 1469
 location: 11605 Studt Ave

@@ -1,5 +1,5 @@
 ---
-title: Seattle
+title: Moved to Seattle
 date: 2008-06-07
 week: 1787
 location: 130 Harvard Ave apt 502

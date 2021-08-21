@@ -1,5 +1,5 @@
 ---
-title: Skyhawk
+title: Bought Buick Skyhawk
 date: 1993-08-01
 week: 1012
 type: car

@@ -1,5 +1,5 @@
 ---
-title: Layoff
+title: Laid off
 date: 1992-04-01
 week: 943
 type: work

@@ -1,5 +1,5 @@
 ---
-title: Cycling
+title: Picked up cycling
 date: 2000-06-25
 week: 1372
 type: life

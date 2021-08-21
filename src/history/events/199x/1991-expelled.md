@@ -1,5 +1,5 @@
 ---
-title: Expelled
+title: Expelled from school
 date: 1991-07-01
 week: 904
 type: school

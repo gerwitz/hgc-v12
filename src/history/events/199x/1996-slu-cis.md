@@ -1,5 +1,5 @@
 ---
-title: SLU CIS Again
+title: Returned to SLU CIS
 date: 1996-09-01
 week: 1173
 location: Ritter Hall

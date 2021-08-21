@@ -1,5 +1,5 @@
 ---
-title: Phobia Consulting
+title: Started Phobia Consulting
 date: 1996-03-01
 week: 1147
 type: work

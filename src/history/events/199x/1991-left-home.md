@@ -1,5 +1,5 @@
 ---
-title: Left Home
+title: Left home
 date: 1991-03-01
 week: 886
 geo: [38.589677,-90.251807]

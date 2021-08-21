@@ -1,5 +1,5 @@
 ---
-title: Hermann Marketing
+title: Started work at Hermann Marketing
 date: 1995-08-01
 week: 1117
 location: 1400 N. Price

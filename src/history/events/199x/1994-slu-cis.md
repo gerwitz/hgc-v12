@@ -1,5 +1,5 @@
 ---
-title: SLU CIS
+title: Started working for SLU CIS
 date: 1994-05-01
 week: 1051
 type: work

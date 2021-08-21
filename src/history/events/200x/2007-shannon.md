@@ -1,5 +1,5 @@
 ---
-title: Shannon
+title: Dated Shannon
 date: 2007-08-30
 week: 1747
 type: life

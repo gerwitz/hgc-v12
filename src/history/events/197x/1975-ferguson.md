@@ -1,5 +1,5 @@
 ---
-title: Ferguson
+title: Moved to Ferguson
 date: 1975-01-01
 week: 43
 location: 145 N. Clay

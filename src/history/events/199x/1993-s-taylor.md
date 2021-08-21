@@ -1,5 +1,5 @@
 ---
-title: Forest Park Southeast
+title: Moved to Forest Park Southeast
 date: 1993-12-01
 week: 1030
 location: 1117 S. Taylor

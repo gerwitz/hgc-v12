@@ -1,5 +1,5 @@
 ---
-title: The Asylum
+title: Committed to the asylum
 date: 1991-04-01
 week: 891
 location: “Hyland Center at St. Anthony’s”

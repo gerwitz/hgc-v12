@@ -1,5 +1,5 @@
 ---
-title: Civic
+title: Bought Honda Civic
 date: 1993-11-01
 week: 1026
 type: car

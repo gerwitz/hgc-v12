@@ -1,5 +1,5 @@
 ---
-title: Spaarndammerbuurt
+title: Moved to Spaarndammerbuurt
 date: 2013-01-22
 week: 2029
 location: Nova Zemblastraat 12-A

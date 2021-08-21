@@ -1,5 +1,5 @@
 ---
-title: Airstream
+title: Lived in Airstream
 date: 1993-07-15
 week: 1010
 location: W Milton

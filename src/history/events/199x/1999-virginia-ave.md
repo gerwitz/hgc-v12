@@ -1,5 +1,5 @@
 ---
-title: Tower Grove East
+title: Moved to Tower Grove East
 date: 1999-05-15
 week: 1314
 location: 2623 Virginia

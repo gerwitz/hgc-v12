@@ -1,5 +1,5 @@
 ---
-title: 200SX
+title: Bought Nissan
 date: 1996-05-01
 week: 1156
 type: car

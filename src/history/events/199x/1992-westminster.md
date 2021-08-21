@@ -1,5 +1,5 @@
 ---
-title: Mom’s Living Room
+title: Moved into Mom’s living room
 date: 1992-07-01
 week: 956
 location: Westminster

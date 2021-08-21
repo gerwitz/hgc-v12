@@ -1,5 +1,5 @@
 ---
-title: Accident
+title: Got into accident
 date: 1993-10-01
 week: 1021
 location: Lindell and Taylor

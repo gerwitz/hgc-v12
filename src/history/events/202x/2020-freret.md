@@ -1,9 +1,9 @@
 ---
-title: King Freret IX
+title: Reigned as King Freret IX
 date: 2020-02-15
 week: 2397
 location: New Orleans
-geo: [29.94847,-90.07094]
+geo: [29.94847,or-90.07094]
 type: life
 ---
 

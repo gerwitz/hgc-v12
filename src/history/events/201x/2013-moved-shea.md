@@ -1,5 +1,5 @@
 ---
-title: Moved Shea
+title: Moved Shea to Europe
 date: 2013-02-01
 week: 2030
 type: life

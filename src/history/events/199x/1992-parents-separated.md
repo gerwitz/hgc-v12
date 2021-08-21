@@ -1,5 +1,5 @@
 ---
-title: Parents Seperated
+title: Parents seperated
 date: 1992-04-01
 week: 943
 type: life

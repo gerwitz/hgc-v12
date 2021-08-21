@@ -1,5 +1,5 @@
 ---
-title: Quatrix
+title: Started at Quatrix
 date: 1999-03-01
 week: 1304
 location: Craig Rd

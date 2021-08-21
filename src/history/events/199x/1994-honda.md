@@ -1,5 +1,5 @@
 ---
-title: Accord
+title: Bought Honda Accord
 date: 1994-07-01
 week: 1060
 type: car

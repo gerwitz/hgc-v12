@@ -1,5 +1,5 @@
 ---
-title: Pharmacy Sold
+title: Dad sold his pharmacy
 date: 1980-01-01
 week: 304
 location: Riverview Dr.

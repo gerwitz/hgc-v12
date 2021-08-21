@@ -1,5 +1,5 @@
 ---
-title: Moved to CWE
+title: Moved to the Central West End
 date: 1988-10-01
 week: 760
 location: 5154 Westminster

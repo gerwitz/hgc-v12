@@ -1,5 +1,5 @@
 ---
-title: Graduated
+title: Graduated from SLU
 date: 1998-08-01
 week: 1273
 type: school

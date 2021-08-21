@@ -1,5 +1,5 @@
 ---
-title: Home Computer
+title: Got first home computer
 date: 1985-12-25
 week: 616
 type: geek

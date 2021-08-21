@@ -1,5 +1,5 @@
 ---
-title: Amsterdam
+title: Moved to Amsterdam
 date: 2012-11-01
 week: 2017
 location: Prinsengracht 880
