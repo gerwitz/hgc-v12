@@ -1,5 +1,5 @@
 ---
-title: Adobe on the cluetrain
+title: Adobe on the Cluetrain
 content-tags:
 - cluetrain
 - marketing

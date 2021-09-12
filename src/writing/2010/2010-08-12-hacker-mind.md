@@ -1,5 +1,5 @@
 ---
-title: Hacker mind
+title: Hacker Mind
 categories:
 - work
 content-tags:

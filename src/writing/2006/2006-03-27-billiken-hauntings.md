@@ -1,5 +1,5 @@
 ---
-title: Billiken hauntings
+title: Billiken Hauntings
 categories:
 - uncategorized
 content-tags:

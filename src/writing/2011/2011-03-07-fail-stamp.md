@@ -1,5 +1,5 @@
 ---
-title: FAIL stamp
+title: FAIL Stamp
 categories:
 - personal
 content-tags:

@@ -1,5 +1,5 @@
 ---
-title: Capitalism can be short-sighted
+title: Capitalism Can Be Short-Sighted
 categories:
 - uncategorized
 content-tags:

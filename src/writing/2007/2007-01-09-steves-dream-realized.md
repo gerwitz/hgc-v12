@@ -1,5 +1,5 @@
 ---
-title: Steve's dream, realized
+title: Steve's Dream, Realized
 categories:
 - work
 content-tags:

@@ -1,5 +1,5 @@
 ---
-title: Meat-based web services
+title: Meat-Based Web Services
 categories:
 - work
 content-tags:

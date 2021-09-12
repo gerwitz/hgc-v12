@@ -1,17 +1,17 @@
 ---
-title: Progressive charts
+title: Progressive Charts
 categories:
 - work
 content-tags:
 - technology
 - code
 - web
+- aside
 ---
 
 Back in 2001 Tantek Çelik dreamt up a little [polygonal CSS hack][1], using the bevels of borders to create angles in-browser.  Eventually, Lasse Reichstein Nielsen [ made the technique accessible][2].  Back then, I was [thinking about CSS][3] and wanted to try my hand at unobtrusive DHTML.
 
 So I was inspired to implement simple rendering of HTML lists as area charts.  Naturally, once it mostly worked I lost interest, and let it rest assuming someone would have the same idea and take it much farther.
-
 
 But as far as I can call, no one has.  Now Eric Meyer (who helped popularize the slant technique) brought it to mind again with his [CSS bar charts][4] (granted, without resorting to scripting).
 

@@ -1,5 +1,5 @@
 ---
-title: Applied thought
+title: Applied Thought
 categories:
 - work
 content-tags:
@@ -9,7 +9,7 @@ content-tags:
 - thoughts
 ---
 
-In 2005 I briefly anticipated Buro Vormkrijgers's [PongÃ‚Â® Clock][1].  I later forgot about it.
+In 2005 I briefly anticipated Buro Vormkrijgers's [PONG CLOCK][1].  I later forgot about it.
 
 But I just discovered John Maushammer's [Pong Watch][2] and have to have one.  The concept may not be original, but his design is inspired.  The minimalist prototype cases, PIC code that adapts to low battery levels, and aesthetic PCB layout all demonstrate enough perfectionism to ensure a quality build without paralyzing the builder.
 

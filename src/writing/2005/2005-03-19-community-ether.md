@@ -1,5 +1,5 @@
 ---
-title: Community ether
+title: Community Ether
 categories:
 - uncategorized
 content-tags:

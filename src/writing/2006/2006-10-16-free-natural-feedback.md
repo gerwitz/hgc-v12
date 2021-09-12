@@ -1,5 +1,5 @@
 ---
-title: Free, natural feedback
+title: Free, Natural Feedback
 content-tags:
 - marketing
 ---

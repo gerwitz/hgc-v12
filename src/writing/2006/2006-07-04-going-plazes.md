@@ -1,5 +1,5 @@
 ---
-title: Going plazes
+title: Going Plazes
 categories:
 - work
 content-tags:

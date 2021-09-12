@@ -1,5 +1,5 @@
 ---
-title: Just like the last time
+title: Just Like the Last Time
 categories:
 - work
 content-tags:

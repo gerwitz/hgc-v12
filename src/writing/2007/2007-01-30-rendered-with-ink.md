@@ -1,5 +1,5 @@
 ---
-title: Rendered with ink
+title: Rendered With Ink
 categories:
 - personal
 content-tags:

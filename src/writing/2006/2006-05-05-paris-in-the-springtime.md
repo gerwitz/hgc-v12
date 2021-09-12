@@ -1,5 +1,5 @@
 ---
-title: Paris in the springtime
+title: Paris in the Springtime
 categories:
 - personal
 content-tags:

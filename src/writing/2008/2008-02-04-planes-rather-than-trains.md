@@ -1,5 +1,5 @@
 ---
-title: Planes rather than trains
+title: Planes Rather Than Trains
 abstract: Amtrak FAIL
 categories:
 - personal

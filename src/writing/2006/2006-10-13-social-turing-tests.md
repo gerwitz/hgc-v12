@@ -1,5 +1,5 @@
 ---
-title: Social Turing tests
+title: Social Turing Tests
 categories:
 - culture
 - personal

@@ -1,5 +1,5 @@
 ---
-title: Last day in London
+title: Last Day in London
 categories:
 - personal
 content-tags:

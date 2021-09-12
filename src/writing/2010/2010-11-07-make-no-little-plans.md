@@ -1,5 +1,5 @@
 ---
-title: Make no little plans
+title: Make No Little Plans
 categories:
 - work
 content-tags:

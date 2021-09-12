@@ -1,5 +1,5 @@
 ---
-title: I believe in mocking
+title: I Believe in Mocking
 categories:
 - culture
 content-tags:

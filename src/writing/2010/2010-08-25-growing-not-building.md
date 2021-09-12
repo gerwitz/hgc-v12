@@ -1,5 +1,5 @@
 ---
-title: More like growing
+title: More Like Growing
 categories:
 - work
 content-tags:

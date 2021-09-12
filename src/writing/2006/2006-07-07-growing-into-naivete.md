@@ -1,5 +1,5 @@
 ---
-title: Growing into naiveté
+title: Growing Into Naiveté
 categories:
 - culture
 - personal

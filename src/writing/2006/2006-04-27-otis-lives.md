@@ -1,5 +1,5 @@
 ---
-title: Otis lives
+title: Otis Lives
 categories:
 - personal
 content-tags:

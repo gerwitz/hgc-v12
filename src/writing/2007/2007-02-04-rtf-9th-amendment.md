@@ -5,6 +5,7 @@ categories:
 content-tags:
 - government
 - politics
+- aside
 ---
 
 > ...the Constitution doesn't say every individual in the United States or every citizen is hereby granted or assured the right to habeas.
@@ -15,6 +16,6 @@ content-tags:
    [3]: http://www.latimes.com/wireless/avantgo/la-na-habeas30jan30,0,5990377.story
 
 
-The best reaction to this attitude towards habeas corpus I can imagine is [Mark Jaquith's][4]: it wasnÃ¢â‚¬â„¢t long before he went from Ã¢â‚¬Å“pedantic toolÃ¢â‚¬Â to Ã¢â‚¬Å“the reason for the 2nd AmendmentÃ¢â‚¬Â in my mind.
+The best reaction to this attitude towards habeas corpus I can imagine is [Mark Jaquith's][4]: it wasn't long before he went from “pedantic tool" to “the reason for the 2nd Amendment" in my mind.
 
    [4]: http://txfx.net/

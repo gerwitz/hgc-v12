@@ -1,5 +1,5 @@
 ---
-title: microschema
+title: Microschema
 categories:
 - work
 content-tags:

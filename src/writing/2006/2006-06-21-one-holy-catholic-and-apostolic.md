@@ -1,5 +1,5 @@
 ---
-title: One holy, catholic, and apostolic…
+title: One Holy, Catholic, and Apostolic…
 categories:
 - culture
 content-tags:

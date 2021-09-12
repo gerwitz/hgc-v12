@@ -1,9 +1,10 @@
 ---
-title: Managing money, 2006 edition
+title: Managing Money, 2006 Edition
 categories:
 - personal
 content-tags:
 - me
+- finance
 ---
 
 I've reviewed the performance of my investments over 2006, to see what I can learn for this year.  Aside from the loft, whose value is hard to measure until it's actually sold (but indications are rosy), the results are encouraging.

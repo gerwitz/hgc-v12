@@ -1,5 +1,5 @@
 ---
-title: ad:tech Monday wrap-up
+title: ad:tech Monday Wrap-Up
 categories:
 - work
 content-tags:

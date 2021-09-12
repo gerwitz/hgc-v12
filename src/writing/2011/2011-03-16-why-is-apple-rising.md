@@ -1,5 +1,5 @@
 ---
-title: Why is Apple rising?
+title: Why Is Apple Rising?
 categories:
 - work
 - culture

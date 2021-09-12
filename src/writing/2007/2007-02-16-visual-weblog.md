@@ -1,5 +1,5 @@
 ---
-title: Visual weblog
+title: Visual Weblog
 categories:
 - work
 content-tags:

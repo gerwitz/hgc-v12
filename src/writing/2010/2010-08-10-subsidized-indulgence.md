@@ -1,5 +1,5 @@
 ---
-title: Subsidized indulgence
+title: Subsidized Indulgence
 categories:
 - culture
 content-tags:

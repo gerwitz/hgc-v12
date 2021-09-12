@@ -1,5 +1,5 @@
 ---
-title: Tools in the brain-attic
+title: Tools in the Brain-Attic
 abstract: In praise of effective genius heroes.
 categories:
 - culture

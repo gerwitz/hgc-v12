@@ -1,5 +1,5 @@
 ---
-title: Ignorance of the commons
+title: Ignorance of the Commons
 categories:
 - culture
 content-tags:

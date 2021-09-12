@@ -1,5 +1,5 @@
 ---
-title: Clients are students
+title: Clients Are Students
 abstract: "Our obligation to teach"
 categories:
 - work

@@ -1,5 +1,5 @@
 ---
-title: Instant buzz
+title: Instant Buzz
 categories:
 - work
 content-tags:
@@ -8,6 +8,7 @@ content-tags:
 - marketing
 - politics
 - sex
+- aside
 ---
 
 How to create an advertising sensation with a low budget:

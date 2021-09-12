@@ -1,5 +1,5 @@
 ---
-title: This blog is now Safely Ignored
+title: This Blog is Now Safely Ignored
 categories:
 - meta
 content-tags:

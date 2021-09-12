@@ -1,5 +1,5 @@
 ---
-title: The abduction of Samual Gillham
+title: The Abduction of Samual Gillham
 categories:
 - personal
 content-tags:

@@ -1,5 +1,5 @@
 ---
-title: Shared problems
+title: Shared Problems
 categories:
 - culture
 content-tags:

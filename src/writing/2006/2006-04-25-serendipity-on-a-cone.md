@@ -1,5 +1,5 @@
 ---
-title: Serendipity on a cone
+title: Serendipity on a Cone
 categories:
 - personal
 content-tags:

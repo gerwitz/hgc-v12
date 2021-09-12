@@ -1,5 +1,5 @@
 ---
-title: Heir to the throne
+title: Heir to the Throne
 categories:
 - work
 content-tags:

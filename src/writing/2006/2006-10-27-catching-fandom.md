@@ -1,5 +1,5 @@
 ---
-title: Catching fandom
+title: Catching Fandom
 categories:
 - personal
 content-tags:

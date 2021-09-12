@@ -1,5 +1,5 @@
 ---
-title: Plastic grass
+title: Plastic Grass
 content-tags:
 - marketing
 - media

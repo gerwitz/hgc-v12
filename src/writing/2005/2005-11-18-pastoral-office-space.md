@@ -1,5 +1,5 @@
 ---
-title: Pastoral office space
+title: Pastoral Office Space
 categories:
 - uncategorized
 content-tags:

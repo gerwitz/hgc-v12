@@ -1,5 +1,5 @@
 ---
-title: Programming is brain surgery
+title: Programming is Brain Surgery
 categories:
 - work
 content-tags:

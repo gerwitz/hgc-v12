@@ -1,5 +1,5 @@
 ---
-title: Classname of the day
+title: Classname of the Day
 categories:
 - work
 content-tags:

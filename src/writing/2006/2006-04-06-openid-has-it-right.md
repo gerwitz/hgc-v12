@@ -1,5 +1,5 @@
 ---
-title: OpenID has it right
+title: OpenID Has It Right
 categories:
 - uncategorized
 content-tags:

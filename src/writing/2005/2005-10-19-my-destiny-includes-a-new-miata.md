@@ -1,5 +1,5 @@
 ---
-title: My destiny includes a new Miata
+title: My Destiny Includes a New Miata
 categories:
 - uncategorized
 content-tags:

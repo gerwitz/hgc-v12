@@ -1,5 +1,5 @@
 ---
-title: Asking too much for ethics
+title: Asking Too Much for Ethics
 categories:
 - culture
 content-tags:

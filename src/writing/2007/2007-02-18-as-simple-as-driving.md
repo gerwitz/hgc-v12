@@ -1,5 +1,5 @@
 ---
-title: As simple as driving
+title: As Simple as Driving
 categories:
 - work
 content-tags:

@@ -1,5 +1,5 @@
 ---
-title: The classification of classifiers
+title: The Classification of Classifiers
 categories:
 - work
 content-tags:

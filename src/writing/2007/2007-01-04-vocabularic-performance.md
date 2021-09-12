@@ -1,5 +1,5 @@
 ---
-title: Vocabularic performance
+title: Vocabularic Performance
 categories:
 - culture
 content-tags:

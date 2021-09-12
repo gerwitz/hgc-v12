@@ -1,5 +1,5 @@
 ---
-title: Being erased
+title: Being Erased
 categories:
 - personal
 content-tags:

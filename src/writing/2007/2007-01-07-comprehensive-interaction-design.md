@@ -1,5 +1,5 @@
 ---
-title: Comprehensive interaction design
+title: Comprehensive Interaction Design
 content-tags:
 - marketing
 ---

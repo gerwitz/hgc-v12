@@ -1,5 +1,5 @@
 ---
-title: WordPress it is
+title: WordPress It Is
 categories:
 - meta
 - work

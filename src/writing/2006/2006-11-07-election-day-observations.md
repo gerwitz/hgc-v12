@@ -1,5 +1,5 @@
 ---
-title: Election day observations
+title: Election Day Observations
 categories:
 - culture
 content-tags:

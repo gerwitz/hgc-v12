@@ -1,11 +1,12 @@
 ---
-title: Public works
+title: Public Works
 categories:
 - culture
 content-tags:
 - politics
 - quote
 - security
+- aside
 ---
 
 > Once, some time ago, during another time of economic downturn, a president named Roosevelt created a federal program called the Works Progress Administration. It hired unemployed people to construct buildings, dams, roads, river works, ports, bridges and schools. Is there any possibility of a program like that today? Not a dream. That would be "socialism." You can't have the federal government spending our tax dollars to fund public works. But spending them to grope our genitals? Why, that's different. It's a matter of principle.

@@ -1,5 +1,5 @@
 ---
-title: Good UI sighting
+title: Good UI Sighting
 categories:
 - work
 content-tags:

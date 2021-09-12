@@ -1,5 +1,5 @@
 ---
-title: Corporate rights
+title: Corporate Rights
 categories:
 - work
 - culture

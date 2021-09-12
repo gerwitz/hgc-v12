@@ -1,5 +1,5 @@
 ---
-title: Healthy starving
+title: Healthy Starving
 categories:
 - uncategorized
 content-tags:

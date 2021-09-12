@@ -1,5 +1,5 @@
 ---
-title: George Bush is funny
+title: George Bush is Funny
 categories:
 - culture
 content-tags:
@@ -7,6 +7,7 @@ content-tags:
 - language
 - politics
 - video
+- aside
 ---
 
 Bill Poser has asked ["Why the attention to Bush's language?"][1]

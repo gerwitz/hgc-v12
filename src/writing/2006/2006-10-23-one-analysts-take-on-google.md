@@ -1,5 +1,5 @@
 ---
-title: One analyst's take on Google
+title: One Analyst's Take on Google
 categories:
 - culture
 - work

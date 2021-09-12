@@ -1,5 +1,5 @@
 ---
-title: A more realistic desktop metaphor
+title: A More Realistic Desktop Metaphor
 categories:
 - work
 content-tags:

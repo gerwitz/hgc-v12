@@ -1,5 +1,5 @@
 ---
-title: Distant family
+title: Distant Family
 categories:
 - uncategorized
 content-tags:

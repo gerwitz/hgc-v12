@@ -1,5 +1,5 @@
 ---
-title: Message about media
+title: Message About Media
 categories:
 - work
 content-tags:

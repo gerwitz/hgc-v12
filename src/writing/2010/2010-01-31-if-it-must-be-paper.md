@@ -1,5 +1,5 @@
 ---
-title: If it must be paper...
+title: "If It Must Be Paper…"
 abstract: The recent boarding pass redesign meme fails to actually redesign.
 categories:
 - work

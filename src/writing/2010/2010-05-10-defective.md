@@ -1,8 +1,6 @@
 ---
 title: Defective
-abstract: I experienced my first anesthetic in under the blinding glare of an operation
-  lamp with a gruff old doctor taking a needle to my mouth while shouting German to
-  his assistant.
+abstract: "I experienced my first anesthetic in under the blinding glare of an operation lamp with a gruff old doctor taking a needle to my mouth while shouting German to his assistant."
 categories:
 - personal
 content-tags:

@@ -1,5 +1,5 @@
 ---
-title: My thoughts on the iPhone
+title: My Thoughts on the iPhone
 content-tags:
 - marketing
 ---

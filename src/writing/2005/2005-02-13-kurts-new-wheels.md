@@ -1,5 +1,5 @@
 ---
-title: Kurt's new wheels
+title: Kurt's New Wheels
 categories:
 - personal
 content-tags:

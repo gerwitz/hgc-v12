@@ -1,5 +1,5 @@
 ---
-title: London arrival
+title: London Arrival
 categories:
 - personal
 content-tags:

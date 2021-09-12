@@ -1,5 +1,5 @@
 ---
-title: Traffic as shallow leads
+title: Traffic as Shallow Leads
 categories:
 - work
 content-tags:

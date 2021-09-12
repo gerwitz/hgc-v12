@@ -1,5 +1,5 @@
 ---
-title: Propping up Adsense
+title: Propping Up Adsense
 abstract: Google's soft spot
 categories:
 - work

@@ -1,5 +1,5 @@
 ---
-title: Looking back at frog
+title: Looking Back at frog
 abstract: A year later
 categories:
 - work

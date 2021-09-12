@@ -1,5 +1,5 @@
 ---
-title: George's chance
+title: George's Chance
 categories:
 - personal
 content-tags:

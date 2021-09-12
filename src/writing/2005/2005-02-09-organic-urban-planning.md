@@ -1,5 +1,5 @@
 ---
-title: Organic urban planning
+title: Organic Urban Planning
 categories:
 - uncategorized
 content-tags:

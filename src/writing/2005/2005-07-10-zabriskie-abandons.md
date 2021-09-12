@@ -1,5 +1,5 @@
 ---
-title: Zabriskie abandons
+title: Zabriskie Sbandons
 categories:
 - personal
 content-tags:

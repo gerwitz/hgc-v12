@@ -1,5 +1,5 @@
 ---
-title: Dreyfus's learning ladder
+title: Dreyfus's Learning Ladder
 categories:
 - work
 - culture

@@ -1,5 +1,5 @@
 ---
-title: Piggers are number one
+title: Piggers Are Number One
 categories:
 - culture
 content-tags:

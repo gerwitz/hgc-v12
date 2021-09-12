@@ -1,5 +1,5 @@
 ---
-title: A sad day for primates
+title: A Sad Day for Primates
 categories:
 - culture
 - personal

@@ -1,5 +1,5 @@
 ---
-title: Open means choice
+title: Open Means Choice
 categories:
 - work
 content-tags:

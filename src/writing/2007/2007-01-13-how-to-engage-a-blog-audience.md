@@ -1,5 +1,5 @@
 ---
-title: How to engage a blog audience
+title: How to Engage a Blog Audience
 content-tags:
 - marketing
 ---

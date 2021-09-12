@@ -1,5 +1,5 @@
 ---
-title: Seeds of assembly
+title: Seeds of Assembly
 categories:
 - personal
 - culture

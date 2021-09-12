@@ -1,11 +1,11 @@
 ---
-title: City rights
+title: City Rights
 categories:
 - culture
 content-tags:
 - politics
 - urban
-- ★
+- fave
 - popular
 ---
 

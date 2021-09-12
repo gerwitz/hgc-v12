@@ -1,5 +1,5 @@
 ---
-title: Build your card
+title: Build Your Card
 categories:
 - work
 content-tags:

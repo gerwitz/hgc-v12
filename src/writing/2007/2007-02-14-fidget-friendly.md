@@ -1,5 +1,5 @@
 ---
-title: Fidget-friendly
+title: Fidget-Friendly
 categories:
 - work
 content-tags:

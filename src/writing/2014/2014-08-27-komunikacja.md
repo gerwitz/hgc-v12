@@ -1,5 +1,5 @@
 ---
-title: Podziękuj swojemu kierowcy
+title: Podziękuj Swojemu Kierowcy
 abstract: Transit Driver Appreciation Day establishes a Polish presence.
 categories:
 - personal

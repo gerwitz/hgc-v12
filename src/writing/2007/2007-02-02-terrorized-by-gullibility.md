@@ -1,5 +1,5 @@
 ---
-title: Terrorized by gullibility
+title: Terrorized by Gullibility
 categories:
 - culture
 content-tags:

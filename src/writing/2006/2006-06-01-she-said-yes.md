@@ -1,5 +1,5 @@
 ---
-title: She said yes.
+title: She Said Yes.
 categories:
 - personal
 content-tags:

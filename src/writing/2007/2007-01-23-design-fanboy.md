@@ -1,5 +1,5 @@
 ---
-title: Design fanboy
+title: Design Fanboy
 categories:
 - work
 content-tags:

@@ -1,5 +1,5 @@
 ---
-title: Push, schmush
+title: Push, Schmush
 categories:
 - uncategorized
 content-tags:

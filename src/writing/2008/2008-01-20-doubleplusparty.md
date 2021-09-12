@@ -3,6 +3,7 @@ title: doubleplusparty
 categories:
 - personal
 content-tags:
+- aside
 - party
 ---
 

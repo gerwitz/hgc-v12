@@ -1,5 +1,5 @@
 ---
-title: Will thinks he's funny
+title: Will Thinks He's Funny
 categories:
 - personal
 content-tags:
