@@ -1,5 +1,5 @@
 ---
-title: “Munich for twelfth anniversary”
+title: "Munich for twelfth anniversary"
 date: 2021-08-25
 tripit: 305792301
 nights: 4
