@@ -22,4 +22,4 @@ Even though I'm quite an introvert, I'm quite itchy to hang out in person with f
 
 ![Winning _Requiem for a Dream_ cupcakes](/media/2020-05/cupcakes.jpeg)
 
-_This is one of a series of posts about my experience during the [COVID-19 pandemic](/history/events/2020-pandemic/)._
+_This is one of a series of posts about my experience during the [COVID-19 pandemic](/logs/events/2020-pandemic/)._

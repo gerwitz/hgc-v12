@@ -11,4 +11,4 @@ My mother wanted to live in the city, and I’d be going to school there, so we 
 
 I took a private bus to my private school until we moved onto this private street. Then I started walking along Forest Park along the very public Kingshighway.
 
-Popular culture, travel to the city, and a [trip to DC](/history/travel/1986-virginia/) had already made me interested in city life, but moving to a relatively vibrant neighborhood before I could drive really cemented my urban preferences.
+Popular culture, travel to the city, and a [trip to DC](/logs/travel/1986-virginia/) had already made me interested in city life, but moving to a relatively vibrant neighborhood before I could drive really cemented my urban preferences.

@@ -15,4 +15,4 @@ I'm quite fortunate to be employed by a health systems company that is working h
 
 Our department has moved some holidays from Christmas to May and June, giving us a number of long weekends. Somehow I still have so much introvert hangover that I am mostly spending this free time binging on TV and playing classic NES games (while Shannon builds her island in Animal Crossing).
 
-_This is one of a series of posts about my experience during the [COVID-19 pandemic](/history/events/2020-pandemic/)._
+_This is one of a series of posts about my experience during the [COVID-19 pandemic](/logs/events/2020-pandemic/)._

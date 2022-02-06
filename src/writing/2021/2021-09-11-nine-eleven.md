@@ -23,7 +23,7 @@ The next image in my memory is from the park, at least 2 days after the attacks.
 
 I don’t recall much else about the trip.[^colleen] I learned more about the towers themselves on the internet, and back home the news gave updates on the estimates of lives lost. Although in absolute terms more than 17 times as many people died as in the Oklahoma City bombings, considering the relative scale of the cities it felt like a  comparable tragedy from such a geographic and cultural remove.
 
-[^colleen]: The trip must have made quite an impression on Colleen, since she left to go live in the area [5 months later](/history/events/2002-abandoned/).
+[^colleen]: The trip must have made quite an impression on Colleen, since she left to go live in the area [5 months later](/logs/events/2002-abandoned/).
 
 A New Jersey-based client I worked closely with in the trade and logistics industry had lost several friends. Learning that was about as personal as the event got.
 

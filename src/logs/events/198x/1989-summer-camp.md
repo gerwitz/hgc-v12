@@ -5,7 +5,7 @@ week: 795
 type: life
 ---
 
-After freshman year, I attended [Camp Ekon](https://ekon.ca/). It was my [first international trip](/history/travel/1989-ontario/), technically. The middle of a forest just north of the border does not really count.
+After freshman year, I attended [Camp Ekon](https://ekon.ca/). It was my [first international trip](/logs/travel/1989-ontario/), technically. The middle of a forest just north of the border does not really count.
 
 This was a Jesuit camp that included some faith and scripture but really focused on the “men for others” mantra by having campers learn with and support each other. The highlight was a basic survival experience. The leaders took us out in pairs to sites too far apart to find each other, and left us in the woods to get by with two matches[^fire], a knife, some fishing line (we’d carve our own hook), and a potato and orange for each of us. And, most importantly, a sleeping bag.
 

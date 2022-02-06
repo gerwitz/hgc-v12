@@ -13,6 +13,6 @@ We decided to look for opportunities in San Francisco (because economy) and Seat
 
 [^CHS]: Online research would have suggested Belltown, Downtown, or Ballard, but during my second interview visit I explored the city and picked Capitol Hill because it felt right.
 
-I broke a commitment to myself to not cohabitate for a year, but YOLO. We [made an epic road trip of it](/history/travel/2008-seattle-move/) and her parents flew out with her cat, Shea, two weeks later.
+I broke a commitment to myself to not cohabitate for a year, but YOLO. We [made an epic road trip of it](/logs/travel/2008-seattle-move/) and her parents flew out with her cat, Shea, two weeks later.
 
 I was [quite happy](/2008/11/02/the-greening.html) with our new home.

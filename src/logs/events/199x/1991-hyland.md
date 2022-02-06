@@ -7,7 +7,7 @@ geo: [38.506229,-90.38486]
 type: life
 ---
 
-Though I had [moved out](/history/events/1991-left-home/), I was not emancipated. I was still in a private high school my parents were paying for and they were my legal guardians. So when they _expressed their concerns for my well-being_ to the school, the Vice Principal for Discipline[^zinselmeyer] called me in for an interview where I made the critical error of admitting that yes, as a teenage boy, I had entertained the thought of suicide. This was cause to have me involuntarily admitted to a psych ward.
+Though I had [moved out](/logs/events/1991-left-home/), I was not emancipated. I was still in a private high school my parents were paying for and they were my legal guardians. So when they _expressed their concerns for my well-being_ to the school, the Vice Principal for Discipline[^zinselmeyer] called me in for an interview where I made the critical error of admitting that yes, as a teenage boy, I had entertained the thought of suicide. This was cause to have me involuntarily admitted to a psych ward.
 
 [^zinselmeyer]: They later renamed this position to “Dean of Students” but at least with the occupant of the time, that is a euphemism.
 

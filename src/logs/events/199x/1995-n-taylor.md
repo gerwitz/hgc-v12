@@ -7,7 +7,7 @@ geo: [38.644844,-90.257619]
 type: home
 ---
 
-After Colleen was injured falling through a rotten porch stair that we’d already complained about, we sued the landlord[^suit] and found a much nicer place back in the CWE. It was only a block away from the [crack house](/history/events/1992-pershing/) but on the nicer side of a gate and in a care-for building.
+After Colleen was injured falling through a rotten porch stair that we’d already complained about, we sued the landlord[^suit] and found a much nicer place back in the CWE. It was only a block away from the [crack house](/logs/events/1992-pershing/) but on the nicer side of a gate and in a care-for building.
 
 [^suit]: only for a few months of rent, which they settled for
 

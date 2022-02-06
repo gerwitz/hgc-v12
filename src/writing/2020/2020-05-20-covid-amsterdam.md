@@ -23,4 +23,4 @@ In my case, this watching is literal. Living in a hipster party neighborhood I l
 
 I feel like I am paying a regressive social tax.
 
-_This is one of a series of posts about my experience during the [COVID-19 pandemic](/history/events/2020-pandemic/)._
+_This is one of a series of posts about my experience during the [COVID-19 pandemic](/logs/events/2020-pandemic/)._
