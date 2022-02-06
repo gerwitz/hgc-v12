@@ -13,8 +13,11 @@ subtitle: Losing the fight against time
 Found that sitting cross-legged for extended periods causes knee pain
 
 **2018 (age 44)**
-[Had several lipoma tumors surgically removed](/logs/events/2018-angiolipoma/
+[Had several lipoma tumors surgically removed](/logs/events/2018-angiolipoma/)
 and first bifocals
 
+**2019 (age 45)**
+Revive cycling workouts and am keenly aware of how much weaker I am, and how much slower improvement is
+
 **2021 (age 47)**
-Tinnitus frequent enough to be noticabale, and make me aware of just how poor my hearing is
+Tinnitus is frequent enough to be noticeable, and make me aware of just how poor my hearing is
