@@ -54,10 +54,12 @@ This is who I expect to meet on my tour of the circles of Hell.
 - The profiteers of internet-scale ignorance and hate[^media]
 - Those who threaten the vulnerable carelessly[^drivers]
 - Those who preach that different is dangerous[^nazis]
+- Those who advocate for war or destruction[^hawks]
 
 [^media]:  E.g. Susan Wojcicki, Mark Zuckerberg
 [^drivers]: E.g. a large proportion of American motorists
 [^nazis]: E.g. Steve Miller, Donald Trump, members of the Westboro Baptist Church
+[^hawks]: E.g. Steve Bannon, Aleksandr Dugin
 
 ## Eighth
 <!-- Fraud -->
