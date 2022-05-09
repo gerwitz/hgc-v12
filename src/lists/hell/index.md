@@ -52,11 +52,13 @@ This is who I expect to meet on my tour of the circles of Hell.
 <!-- Violence -->
 
 - The profiteers of internet-scale ignorance and hate[^media]
+- The manufacturers of public consent and direct maniuplators of government representatives, supporting the aggregation of power[^lobby]
 - Those who threaten the vulnerable carelessly[^drivers]
 - Those who preach that different is dangerous[^nazis]
 - Those who advocate for war or destruction[^hawks]
 
 [^media]:  E.g. Susan Wojcicki, Mark Zuckerberg
+[^lobby]: Clem Whitaker, Leone Baxter, Edward Bernays
 [^drivers]: E.g. a large proportion of American motorists
 [^nazis]: E.g. Steve Miller, Donald Trump, members of the Westboro Baptist Church
 [^hawks]: E.g. Steve Bannon, Aleksandr Dugin
