@@ -4,6 +4,20 @@ date: 2021-06-13
 tripit: 307109032
 nights: 10
 modes: ["air"]
+flights:
+  -
+    date: 2021-06-13
+    number: VY8364
+    from: AMS
+    to: AGP
+    km: 1881
+  -
+    date: 2021-06-23
+    number: VY8365
+    from: AGP
+    to: AMS
+    km: 1881
+
 destinations:
   -
     title: "Golf Academy condo"
