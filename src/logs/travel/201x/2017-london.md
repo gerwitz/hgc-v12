@@ -4,6 +4,19 @@ date: 2017-12-30
 tripit:
 nights: 2
 modes: ["air","rail","car"]
+flights:
+  -
+    date: 2017-12-30
+    number: KL983
+    from: AMS
+    to: LCY
+    km: 333
+  -
+    date: 2018-01-01
+    number: KL990
+    from: LCY
+    to: AMS
+    km: 333
 destinations:
   -
     title: "Colchester"
