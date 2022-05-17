@@ -4,6 +4,43 @@ date: 2016-10-22
 tripit: 173579266
 nights: 13
 modes: ["air","car","foot"]
+flights:
+  -
+    date: 2016-10-22
+    number: KL871
+    from: AMS
+    to: DEL
+    km: 6362
+  -
+    date: 2016-10-24
+    number: AI213
+    from: DEL
+    to: KTM
+    km: 813
+  -
+    date: 2016-10-25
+    number: U4603
+    from: KTM
+    to: PKR
+    km: 146
+  -
+    date: 2016-11-02
+    number: U4606
+    from: PKR
+    to: KTM
+    km: 146
+  -
+    date: 2016-11-03
+    number: EY291
+    from: KTM
+    to: AUH
+    km: 3079
+  -
+    date: 2016-11-04
+    number: KL450
+    from: AUH
+    to: AMS
+    km: 5190
 destinations:
   -
     title: "Slept in airport hotel, stuck in security limbo"
