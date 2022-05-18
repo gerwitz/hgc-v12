@@ -9,7 +9,7 @@ content-tags:
 - wearable
 - ux
 - interview
-external: http://www.fastcolabs.com/3009431/
+external: https://www.fastcolabs.com/3009431/
 ---
 
 <p>One of the most critical challenges the wearable computing industry will face will be one of user interface design, as we’ve already explored in our <a href="http://www.fastcolabs.com/3008480/wearable-computing-finally-here-its-all-wrong" target="_self">ongoing post</a> chronicling this emerging field. How does wearing something on your body change the nature of your relationship to the device? What sort of new opportunities does it afford to shape the way we communicate with these new gadgets and with one another? How do we engineer more subtle input and output methods for passing information back and forth from the networked device, the cloud, and the physical world which we’re navigating?</p>
