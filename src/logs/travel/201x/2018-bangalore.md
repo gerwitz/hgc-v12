@@ -29,7 +29,7 @@ flights:
     from: CDG
     to: AMS
     km: 398
-  destinations:
+destinations:
   -
     title: "Bangalore for work"
     nights: 5
