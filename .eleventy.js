@@ -88,7 +88,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/projects/**/*.pde");
   eleventyConfig.addPassthroughCopy("src/projects/**/*.json");
   eleventyConfig.addPassthroughCopy({"src/_meta": "/"});
-  eleventyConfig.addPassthroughCopy({"src/_meta/favicon": "/favicon"});
+  // eleventyConfig.addPassthroughCopy({"src/_meta/favicon": "/favicon"});
   eleventyConfig.addPassthroughCopy("src/css/fonts/*");
 
   return {

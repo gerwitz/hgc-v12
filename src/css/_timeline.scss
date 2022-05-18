@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import "_variables";
 
 $timelineLeft: 100px;
@@ -16,7 +18,7 @@ $timelinePadding: 48px;
     &::before {
       content: '';
       position: absolute;
-      top: $timelineDot/2;
+      top: math.div($timelineDot,2);
       left: -$timelineLine*2;
       width: $timelineLine;
       height: 100%;
@@ -52,8 +54,8 @@ $timelinePadding: 48px;
         position: absolute;
         width: $timelineDot - ($timelineLine * 2);
         height: $timelineDot - ($timelineLine * 2);
-        left: -$timelinePadding - ($timelineLine/2) - ($timelineDot/2);
-        margin-top: -($timelineDot/2);
+        left: -$timelinePadding - math.div($timelineLine, 2) - math.div($timelineDot, 2);
+        margin-top: -(math.div($timelineDot, 2));
         top: 50%;
 
         border: $timelineLine solid $text-color;
@@ -99,6 +101,6 @@ $timelinePadding: 48px;
   }
   // reverse gets the extra line at top
   &.reverse ol::before {
-    top: -$timelineDot/2;
+    top: -(math.div($timelineDot, 2));
   }
 }
