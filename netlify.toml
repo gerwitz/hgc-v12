@@ -1,7 +1,7 @@
 [build]
-  command = "gulp build"
+  command = "npx eleventy"
   publish = "_site"
-  NODE_ENV = "8.9.0"
+  NODE_ENV = "16.15.0"
 [build.processing.css]
   minify = true
 [build.processing.images]
