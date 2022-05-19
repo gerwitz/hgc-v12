@@ -4,6 +4,19 @@ date: 2011-03-20
 tripit: 14734611
 nights: 3
 modes: ["air"]
+flights:
+  -
+    date: 2011-03-20
+    number: DL1642
+    from: SEA
+    to: JFK
+    km: 3885
+  -
+    date: 2011-03-23
+    number: DL1843
+    from: JFK
+    to: SEA
+    km: 3885
 destinations:
   -
     title: "New Jersey"
