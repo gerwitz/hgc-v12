@@ -4,6 +4,31 @@ date: 2010-07-12
 tripit: 7493199
 nights: 6
 modes: ["air","rail"]
+flights:
+  -
+    date: 2010-07-12
+    number: AF1723
+    from: MUC
+    to: CDG
+    km: 681
+  -
+    date: 2010-07-15
+    number: VY8034
+    from: ORY
+    to: BCN
+    km: 826
+  -
+    date: 2010-07-18
+    number: AF2101
+    from: MAD
+    to: CDG
+    km: 1061
+  -
+    date: 2010-07-18
+    number: AF306
+    from: CDG
+    to: SEA
+    km: 8047
 destinations:
   -
     title: "Paris for the Louvre"

@@ -4,6 +4,37 @@ date: 2010-11-13
 tripit: 9912475
 nights: 7
 modes: ["air"]
+flights:
+  -
+    date: 2010-11-14
+    number: AA1076
+    from: SEA
+    to: ORD
+    km: 2760
+  -
+    date: 2010-11-14
+    number: AA292
+    from: ORD
+    to: DEL
+    km: 12017
+  -
+    date: 2010-11-16
+    number: 9W811
+    from: DEL
+    to: BLR
+    km: 1708
+  -
+    date: 2010-11-20
+    number: BA118
+    from: BLR
+    to: LHR
+    km: 8042
+  -
+    date: 2010-11-20
+    number: BA49
+    from: LHR
+    to: SEA
+    km: 7699
 destinations:
   -
     title: "Gurgaon (Delhi)"
