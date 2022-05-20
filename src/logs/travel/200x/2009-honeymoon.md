@@ -4,6 +4,31 @@ date: 2009-09-12
 tripit: 1704375
 nights: 17
 modes: ["air","bus","rail","boat"]
+flights:
+  -
+    date: 2009-09-12
+    number: DL30
+    from: SEA
+    to: JFK
+    km: 3885
+  -
+    date: 2009-09-12
+    number: DL186
+    from: JFK
+    to: VCE
+    km: 6664
+  -
+    date: 2009-09-28
+    number: AZ608
+    from: FCO
+    to: JFK
+    km: 6861
+  -
+    date: 2009-09-28
+    number: DL741
+    from: JFK
+    to: SEA
+    km: 3885
 destinations:
   -
     title: "Venice (including Galleria dell’Accademia)"
