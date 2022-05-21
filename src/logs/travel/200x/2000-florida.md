@@ -3,12 +3,20 @@ title: "Florida"
 date: 2000-12-15
 nights: 9
 modes: ["air","car"]
-destinations:
+flights:
   -
-    title: "Flew to Orlando"
-    nights:
-    location: ""
-    geo:
+    date: 2000-12-15
+    number: TW636
+    from: STL
+    to: MCO
+    km: 1419
+  -
+    date: 2000-12-24
+    number: TW173
+    from: MCO
+    to: STL
+    km: 1419
+destinations:
   -
     title: "Fort Myers"
     nights:

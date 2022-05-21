@@ -1,9 +1,21 @@
 ---
 title: "Chicago with Shannon to see Blue Man Group"
 date: 2007-11-02
-tripit:
 nights: 2
 modes: ["air"]
+flights:
+  -
+    date: 2007-11-02
+    number: AA879
+    from: STL
+    to: ORD
+    km: 415
+  -
+    date: 2007-11-04
+    number: AA1953
+    from: ORD
+    to: STL
+    km: 415
 destinations:
   -
     title: "Chicago with Shannon to see Blue Man Group"

@@ -1,7 +1,6 @@
 ---
 title: "Madison County"
 date: 2000-05-27
-tripit:
 nights: 1
 modes: ["car"]
 destinations:

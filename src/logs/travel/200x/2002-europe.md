@@ -1,9 +1,29 @@
 ---
 title: "Hanau and Paris"
 date: 2002-07-25
-tripit:
 nights: 10
-modes: ["air"]
+modes: ["air", "rail"]
+flights:
+  -
+    date: 2002-07-25
+    from: STL
+    to: PHL
+    km: 1306
+  -
+    date: 2002-07-25
+    from: PHL
+    to: FRA
+    km: 6337
+  -
+    date: 2002-08-05
+    from: CDG
+    to: JFK
+    km: 5833
+  -
+    date: 2002-08-06
+    from: JFK
+    to: STL
+    km: 1432
 destinations:
   -
     title: ""

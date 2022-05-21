@@ -1,7 +1,6 @@
 ---
 title: "Columbia, MO for MS 150 ride"
 date: 2005-09-10
-tripit:
 nights: 1
 modes: ["car"]
 destinations:

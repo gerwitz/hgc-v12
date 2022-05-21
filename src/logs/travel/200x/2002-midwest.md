@@ -1,28 +1,36 @@
 ---
 title: "Chicago and Wisconsin"
 date: 2002-06-14
-nights:
+nights: 8
 modes: ["air","rail","car","bus"]
+flights:
+  -
+    date: 2002-06-14
+    number: WN371
+    from: STL
+    to: MDW
+    km: 404
+  -
+    date: 2002-06-22
+    number: WN428
+    from: MDW
+    to: STL
+    km: 404
 destinations:
   -
-    title: ""
-    nights: 2
-    location: "Chicago"
+    title: "Chicago"
+    nights: 3
+    location: "Club Quarters"
     geo:
   -
-    title: ""
+    title: "Milwaukee"
     nights: 1
-    location: "Milwaukee"
+    location: ""
     geo:
   -
-    title: ""
+    title: "Racine"
     nights: 4
-    location: "Racine"
-    geo:
-  -
-    title: ""
-    nights: 1
-    location: "Chicago"
+    location: ""
     geo:
 ---
 
