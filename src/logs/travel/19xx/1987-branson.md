@@ -1,7 +1,7 @@
 ---
 title: "Branson"
 date: 1987-08-01
-nights:
+nights: 2
 modes: ["car"]
 destinations:
   -

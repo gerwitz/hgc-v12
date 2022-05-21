@@ -1,7 +1,7 @@
 ---
 title: "New England"
 date: 1986-08-01
-nights:
+nights: 7
 modes: ["car"]
 destinations:
   -

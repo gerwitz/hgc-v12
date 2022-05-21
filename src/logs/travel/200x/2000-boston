@@ -1,0 +1,26 @@
+---
+title: "Boston business trip"
+date: 2000-02-01
+nights: 1
+modes: ["air"]
+flights:
+  -
+    date: 2000-02-01
+    from: STL
+    to: BOS
+    km: 1680
+  -
+    date: 2000-02-02
+    from: BOS
+    to: STL
+    km: 1680
+destinations:
+  -
+    title: "Boston"
+    nights: 1
+    location: ""
+    geo: [42.3603, -71.0550]
+---
+
+Date uncertain, before Feb 13.
+All I remember is walking aaround Faneuil Hall and dinner with our client and his prospect at a Legal Seafood.

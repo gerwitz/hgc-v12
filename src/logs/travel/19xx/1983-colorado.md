@@ -1,7 +1,7 @@
 ---
 title: "Colorado"
 date: 1983-05-01
-nights:
+nights: 2
 modes: ["car"]
 destinations:
   -
