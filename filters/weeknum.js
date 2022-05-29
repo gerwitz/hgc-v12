@@ -5,5 +5,5 @@ const NunjucksLib = require("nunjucks");
 module.exports = function(date) {
   thisweek = moment(date).startOf('isoWeek');
   weeknum = thisweek.diff(genesis, 'weeks');
-  return weeknum;
+  return this.env.filters.safe(weeknum);
 }
