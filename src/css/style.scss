@@ -64,6 +64,16 @@ header>p {
 p {
   position: relative;
   margin-bottom: 2rem;
+
+  // https://clagnut.com/blog/2395/
+  hyphens: auto;
+
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 2;
+
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 2;
 }
 
 a {
