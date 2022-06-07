@@ -60,7 +60,7 @@ module.exports = function(eleventyConfig) {
 
   // manually configure markdown-it
   let markdownIt = require("markdown-it");
-  let markdownItSidenote = require("markdown-it-sidenote");
+  let markdownItFootnote = require("markdown-it-footnote-here");
   let markdownItAttribution = require("markdown-it-attribution");
   let markdownItImplicitFigures = require('markdown-it-implicit-figures');
   let options = {
@@ -70,12 +70,24 @@ module.exports = function(eleventyConfig) {
     quotes: '“”‘’'
   };
   let markdownLib = markdownIt(options)
-    .use(markdownItSidenote)
+    .use(markdownItFootnote)
     .use(markdownItAttribution)
     .use(markdownItImplicitFigures, {
       dataType: true,
       figcaption: true
     });
+  markdownLib.renderer.rules.footnote_ref = function (tokens, idx, options, env, slf) {
+    var id      = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
+    return '<label class="sidenote-number" role="doc-noteref" id="fnref' + id + '" aria-describedby="fn' + id + '"></label>';
+  }
+
+  markdownLib.renderer.rules.footnote_block_open = () => ('<!-- footnote open -->');
+  markdownLib.renderer.rules.footnote_block_close = () => ('<!-- footnote close -->');
+  markdownLib.renderer.rules.footnote_open = function (tokens, idx, options, env, slf) {
+    var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
+    return '<aside id="fn'+id+'" class="sidenote">';
+  };
+  markdownLib.renderer.rules.footnote_close = () => ('</aside>');
   eleventyConfig.setLibrary("md", markdownLib);
 
   eleventyConfig.addPassthroughCopy("src/**/*.gif");

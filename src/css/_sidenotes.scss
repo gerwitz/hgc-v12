@@ -2,8 +2,25 @@ body {
   counter-reset: sidenote-counter;
 }
 
-.marginnote,
-.sidenote {
+article>p {
+  float: left;
+}
+
+footer {
+  clear: both;
+}
+
+.sidenote, .marginnote {
+  float: right;
+  clear: right;
+  margin-right: -60%;
+  width: 50%;
+  margin-top: 1em; /// to match article > *+*
+  margin-bottom: 1.96rem;
+  font-size: 1.0rem;
+  vertical-align: baseline;
+  position: relative;
+
   font-family: $sans-font;
   font-size: 80%;
   line-height: 1.3rem;
@@ -25,24 +42,33 @@ body {
 label.sidenote-number {
   counter-increment: sidenote-counter;
 }
+label.sidenote-number:after {
+  position: relative;
+  display: inline-block;
+  top: -0.25rem;
+}
 label.sidenote-number:after,
-.sidenote:before {
+.sidenote>p:before {
   content: counter(sidenote-counter);
   font-family: $sans-font;
   font-weight: $bold-font-weight;
+  height: 1rem;
+  line-height: 1rem;
   font-size: 0.5rem;
-  position: relative;
-  top: -0.5rem;
+
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   padding-top: 0;
   padding-bottom: 0.1rem;
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
-
+  margin-top: 0.25rem;
   background-color: $meta-color;
   color: $page-color;
   border-radius: 0.5rem;
+}
+.sidenote>p:before {
+  position: absolute;
+  margin-left: -1.5rem;
+  margin-right: 0.5rem;
 }
 
 // hide the checkbox
@@ -97,18 +123,18 @@ input.sidenote-trigger {
 
 @media #{$bp-mid} {
 
-  /*span*/.marginnote,
-  /*label*/.sidenote {
-    position: absolute;
-    right: -60%;
-    top: 0;
-    width: 50%;
-  }
+  // /*span*/.marginnote,
+  // /*label*/.sidenote {
+  //   position: absolute;
+  //   right: -60%;
+  //   top: 0;
+  //   width: 50%;
+  // }
 
-  .sidenote:before {
-    top: -0.1rem;
-    margin-left: -1rem;
-    margin-right: .2rem;
-  }
+  // .sidenote:before {
+  //   top: -0.1rem;
+  //   margin-left: -1rem;
+  //   margin-right: .2rem;
+  // }
 
 }
