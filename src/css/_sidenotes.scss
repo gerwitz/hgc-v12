@@ -1,6 +1,4 @@
-body {
-  counter-reset: sidenote-counter;
-}
+@import "_variables";
 
 article>p {
   float: left;
@@ -10,12 +8,27 @@ footer {
   clear: both;
 }
 
-.sidenote, .marginnote {
+a.sidenote-ref {
+  // <sup>ish
+  vertical-align: super;
+  font-size: .83em;
+
+  color: $meta-color;
+
+  text-decoration: none;
+  &:hover {
+    color: $accent-color;
+    background-color: inherit;
+    box-shadow: none;
+  }
+}
+
+.sidenote {
   float: right;
   clear: right;
   margin-right: -60%;
   width: 50%;
-  margin-top: 1em; /// to match article > *+*
+  margin-top: 1em; // to match article > *+*
   margin-bottom: 1.96rem;
   font-size: 1.0rem;
   vertical-align: baseline;
@@ -24,117 +37,10 @@ footer {
   font-family: $sans-font;
   font-size: 80%;
   line-height: 1.3rem;
-}
-
-// unnumbered margin notes
-
-/*span*/.marginnote {
-  display: block;
-  margin-top: 1rem;
-  position: relative;
-  right: auto;
-  top: auto;
-  width: 100%;
-}
-
-// inline reference number
-
-label.sidenote-number {
-  counter-increment: sidenote-counter;
-}
-label.sidenote-number:after {
-  position: relative;
-  display: inline-block;
-  top: -0.25rem;
-}
-label.sidenote-number:after,
-.sidenote>p:before {
-  content: counter(sidenote-counter);
-  font-family: $sans-font;
-  font-weight: $bold-font-weight;
-  height: 1rem;
-  line-height: 1rem;
-  font-size: 0.5rem;
-
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  padding-top: 0;
-  padding-bottom: 0.1rem;
-  margin-top: 0.25rem;
-  background-color: $meta-color;
-  color: $page-color;
-  border-radius: 0.5rem;
-}
-.sidenote>p:before {
-  position: absolute;
-  margin-left: -1.5rem;
-  margin-right: 0.5rem;
-}
-
-// hide the checkbox
-
-input.sidenote-trigger {
-  display: none;
-}
-
-// popover on mobile
-
-@media #{$bp-narrow} {
-
-  // replace number with star
-  label.sidenote-number {
-    cursor: pointer;
-    &:after {
-      content: '+';
-    }
+  .sidenote-ref {
+    float: left;
+    margin-left: -1.0rem;
+    color: $meta-color;
   }
-
-  // don't display before the note
-  .sidenote:before {
-    content: none;
-  }
-
-  input.sidenote-trigger + label {
-    display: none;
-
-    border-top: solid 1px $accent-color;
-    border-bottom: solid 1px $accent-color;
-    padding: .5em 1em;
-    cursor: pointer;
-
-    .sidenote {
-      overflow: scroll;
-      max-height: 0;
-      @include transition(max-height 1s ease-out);
-    }
-  }
-
-  input.sidenote-trigger:checked + label {
-    display: block;
-
-    .sidenote {
-      max-height: 500px;
-      @include transition(max-height 1s ease-out);
-    }
-  }
-}
-
-// margin notes otherwise
-
-@media #{$bp-mid} {
-
-  // /*span*/.marginnote,
-  // /*label*/.sidenote {
-  //   position: absolute;
-  //   right: -60%;
-  //   top: 0;
-  //   width: 50%;
-  // }
-
-  // .sidenote:before {
-  //   top: -0.1rem;
-  //   margin-left: -1rem;
-  //   margin-right: .2rem;
-  // }
 
 }

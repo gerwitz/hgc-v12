@@ -77,16 +77,15 @@ module.exports = function(eleventyConfig) {
       figcaption: true
     });
   markdownLib.renderer.rules.footnote_ref = function (tokens, idx, options, env, slf) {
-    var id      = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
-    return '<label class="sidenote-number" role="doc-noteref" id="fnref' + id + '" aria-describedby="fn' + id + '"></label>';
+    var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
+    return '<label for="fn:'+id+'" id="fnref:' + id + '"><a href="#fn:' + id + '" rel="footnote" role="doc-noteref" aria-describedby="fn:' + id + '" class="sidenote-ref">'+id+'</a></label>';
   }
-
   markdownLib.renderer.rules.footnote_block_open = () => ('<!-- footnote open -->');
   markdownLib.renderer.rules.footnote_block_close = () => ('<!-- footnote close -->');
   markdownLib.renderer.rules.footnote_open = function (tokens, idx, options, env, slf) {
     var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
-    return '<aside id="fn'+id+'" class="sidenote">';
-  };
+    return '<aside id="fn:'+id+'" class="sidenote" form-associated="true"><span class="sidenote-ref">'+id+'</span>';
+  }; // footnote token will wrap content in a <p>
   markdownLib.renderer.rules.footnote_close = () => ('</aside>');
   eleventyConfig.setLibrary("md", markdownLib);
 
