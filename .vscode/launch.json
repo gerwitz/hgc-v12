@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+    "name": "11ty",
+    "type": "node",
+    "request": "launch",
+    "program": "${workspaceRoot}/node_modules/.bin/eleventy",
+    "stopOnEntry": false,
+    "args": ["--serve"],
+    "cwd": "${workspaceRoot}",
+    "console": "internalConsole",
+    }
+  ]
+}
