@@ -6,4 +6,3 @@ Some prior art clients:
 - http://www.tw-attac.com/
 - http://swath.net/
 - http://twdata.sourceforge.net/kokua/
--
