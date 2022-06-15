@@ -24,6 +24,7 @@
     "javascript-stringify": "^2.1.0",
     "lunr": "^2.3.9",
     "markdown-it-attribution": "^0.1.4",
+    "markdown-it-deflist": "^2.1.0",
     "markdown-it-footnote-here": "^1.0.3",
     "markdown-it-implicit-figures": "^0.10.0",
     "moment": "^2.29.1",

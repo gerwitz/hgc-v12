@@ -63,6 +63,7 @@ module.exports = function(eleventyConfig) {
   let markdownItFootnote = require("markdown-it-footnote-here");
   let markdownItAttribution = require("markdown-it-attribution");
   let markdownItImplicitFigures = require('markdown-it-implicit-figures');
+  let markdownDeflist = require('markdown-it-deflist');
   let options = {
     html: true,
     linkify: true,
@@ -75,7 +76,8 @@ module.exports = function(eleventyConfig) {
     .use(markdownItImplicitFigures, {
       dataType: true,
       figcaption: true
-    });
+    })
+    .use(markdownDeflist);
   markdownLib.renderer.rules.footnote_ref = function (tokens, idx, options, env, slf) {
     var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
     return '<label for="fn:'+id+'" id="fnref:' + id + '"><a href="#fn:' + id + '" rel="footnote" role="doc-noteref" aria-describedby="fn:' + id + '" class="sidenote-ref">'+id+'</a></label>';
