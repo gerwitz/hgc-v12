@@ -1,16 +1,22 @@
 @import "_variables";
 
-article > p, article > section {
-  float: left;
-}
+// sidenotes are <aside> after the <p> that references them
+// so <p> floats left and <aside> floats right
 
-footer {
+// make room for sidenotes
+article > p {
+  float: left;
+  clear: none;
+}
+// but now we have to prevent everything from collapsing
+article > *, footer {
   clear: both;
 }
 
 a.sidenote-ref {
   // <sup>ish
   vertical-align: super;
+  line-height: 0;
   font-size: .83em;
 
   color: $meta-color;
