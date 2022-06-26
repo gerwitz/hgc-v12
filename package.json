@@ -5,11 +5,8 @@
   "author": "Hans Gerwitz",
   "license": "CC-BY-4.0",
   "scripts": {
-    "gen": "gulp generate",
-    "start": "yarn run build && yarn run serve",
-    "build": "gulp build",
-    "build:local": "gulp build:local",
-    "serve": "gulp watch & gulp serve"
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -20,10 +17,10 @@
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "clean-css": "^5.3.0",
     "eleventy-nbsp-filter": "^0.1.0",
-    "hyperlink": "^5.0.4",
     "javascript-stringify": "^2.1.0",
     "lunr": "^2.3.9",
     "markdown-it-attribution": "^0.1.4",
+    "markdown-it-deflist": "^2.1.0",
     "markdown-it-footnote-here": "^1.0.3",
     "markdown-it-implicit-figures": "^0.10.0",
     "moment": "^2.29.1",
