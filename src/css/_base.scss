@@ -1,0 +1,171 @@
+@import "_variables";
+
+/**************************************
+    $DEFAULT ELEMENTS
+/**************************************/
+
+body {
+  height: 100%;
+  margin: 0;
+}
+.main-header, .main-container, .main-footer {
+  display: grid;
+  grid-template-columns: 1fr min(45rem, 90%) 1fr;
+}
+.pale {
+  grid-column: 2;
+}
+
+
+
+body {
+  background: $page-color;
+  color: $text-color;
+  font-family: $body-font;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+header {
+  font-size: 1rem;
+
+  .breadcrumb {
+    float: left;
+    width: 55%;
+  }
+  .search {
+    float: right;
+    margin-right: 24px;
+  }
+
+  .site-title {
+    svg * {
+      fill: $accent-color;
+    }
+    color: $text-color;
+    font-family: $title-font;
+    font-weight: $title-font-weight;
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding-top: 5px;
+    // padding-bottom: 2px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: -0.5rem;
+  }
+
+  a.site-title:hover {
+    background-color: $accent-color;
+    color: $page-color;
+    svg * {
+      fill: $page-color;
+    }
+  }
+
+  .breadcrumb a.internal, .search a {
+    border: none;
+    padding-top: 5px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0;
+    display: block;
+    float: left;
+    // margin-left: 8px;
+  }
+  .search a {
+    // padding-top: 15px;
+    color: $page-color;
+    &::before {
+      color: $page-color;
+    }
+    svg * {
+      stroke: $text-color;
+    }
+    &:hover svg * {
+      stroke: $page-color;
+    }
+  }
+
+}
+
+.main-container {
+  padding-bottom: 18px;
+}
+
+.main-footer {
+  background-color: $accent-color;
+  color: $page-color;
+
+  padding-top: 18px;
+
+  .search-form {
+    position: relative;
+    float: right;
+    clear: right;
+
+    width: 190px;
+    height: 30px;
+    input {
+      width: 100%;
+      border-radius: 15px;
+      border: none;
+      padding: 0 2px 0 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+    button {
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      height: 26px;
+      width: 26px;
+      z-index: 10;
+      border: none;
+      background: none;
+      svg * {
+        stroke: $accent-color;
+      }
+    }
+  }
+
+  .sitemap {
+    width: 100%;
+    clear: both;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    & > dl {
+      width: 50%;
+      dt  {
+        clear:left;
+        float:left;
+        width: 25%;
+        padding-bottom: 8px;
+      }
+      dd {
+        clear:right;
+        padding-bottom: 8px;
+      }
+    }
+    dl.published {
+      clear: left;
+      float: left;
+    }
+    dl.personal {
+      clear: right;
+      float: right;
+    }
+  }
+
+  .fineprint {
+    clear: both;
+    padding-top: 18px;
+
+    font-size: small;
+    font-style: italic;
+  }
+}

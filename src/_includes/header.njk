@@ -1,21 +1,15 @@
-<header>
-  <div class="breadcrumb">
-    {% if page.url != '/' %}
-      <a class="site-title" href="/" aria-label=“home page”>{% tree 18 %}&nbsp;&nbsp;hans.gerwitz.com</a>
-      {% set crumbPath = '/' %}
-      {% for crumb in eleventyComputed.crumbtrail %}
-        {% if not loop.last %}
-          {% set crumbPath = crumbPath + crumb + '/' %}
-          <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
-        {% endif %}
-      {% endfor %}
-    {% else %}
-      <a class="site-title" href="/sitemap/" aria-label=“site map”>{% tree 66 %}</a>
-    {% endif %}
-  </div>
-  {% if page.url != '/search/' %}
-  <div class="search">
-    <a class="graphic" href="/search/" aria-label="search"><svg xmlns="http://www.w3.org/2000/svg" height="17" viewBox="0 0 12 13"><g stroke-width="2" stroke="#000000" fill="none"><path d="M11.29 11.71l-4-4"/><circle cx="5" cy="5" r="4"/></g></svg></a>
-  </div>
+{# .main-header .pale #}
+<div class="breadcrumb">
+  {% if page.url != '/' %}
+    <a class="site-title" href="/" aria-label=“home page”>{% tree 18 %}&nbsp;&nbsp;hans.gerwitz.com</a>
+    {% set crumbPath = '/' %}
+    {% for crumb in eleventyComputed.crumbtrail %}
+      {% if not loop.last %}
+        {% set crumbPath = crumbPath + crumb + '/' %}
+        <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <a class="site-title" href="/sitemap/" aria-label=“site map”>{% tree 66 %}</a>
   {% endif %}
-</header>
+</div>

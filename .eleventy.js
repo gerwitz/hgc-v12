@@ -64,6 +64,7 @@ module.exports = function(eleventyConfig) {
   let markdownItFootnote = require("markdown-it-footnote-here");
   let markdownItAttribution = require("markdown-it-attribution");
   let markdownItImplicitFigures = require('markdown-it-implicit-figures');
+  let markdownItAnchor = require("markdown-it-anchor");
   let markdownDeflist = require('markdown-it-deflist');
   let options = {
     html: true,
@@ -78,6 +79,7 @@ module.exports = function(eleventyConfig) {
       dataType: true,
       figcaption: true
     })
+    .use(markdownItAnchor)
     .use(markdownDeflist);
   markdownLib.renderer.rules.footnote_ref = function (tokens, idx, options, env, slf) {
     var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);

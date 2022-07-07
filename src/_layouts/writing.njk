@@ -22,4 +22,6 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
 
     {{ content | safe }}
 
+    {% include "signature.njk" %}
+
 </article>
