@@ -4,8 +4,10 @@
       <a class="site-title" href="/" aria-label=“home page”>{% tree 18 %}&nbsp;&nbsp;hans.gerwitz.com</a>
       {% set crumbPath = '/' %}
       {% for crumb in eleventyComputed.crumbtrail %}
-        {% set crumbPath = crumbPath + crumb + '/' %}
-        <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
+        {% if not loop.last %}
+          {% set crumbPath = crumbPath + crumb + '/' %}
+          <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
+        {% endif %}
       {% endfor %}
     {% else %}
       <a class="site-title" href="/sitemap/" aria-label=“site map”>{% tree 66 %}</a>
