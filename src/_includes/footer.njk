@@ -1,5 +1,41 @@
 <footer class="bottom-footer">
-{% if page.url == '/site/' %}
+  {% if (page.url != '/') %}
+
+  <dl>
+
+    <dt><a href="/writing/" class="internal">writing</a></dt>
+    <dd>{{ collections.writing | length }} posts and articles</dd>
+
+    <dt><a href="/notes/" class="internal">notes</a></dt>
+    <dd>{{ collections.notes | length }} short, tweet-like notes</dd>
+
+    <dt><a href="/projects/" class="internal">projects</a></dt>
+    <dd>Selected projects</dd>
+<!--
+    <dt><a href="/ideas/" class="internal">ideas</a></dt>
+    <dd>A few subjects I find important</dd>
+-->
+    <dt><a href="/lists/" class="internal">lists</a></dt>
+    <dd>Lists of whatever else</dd>
+
+    <dt><a href="/about/" class="internal">about</a></dt>
+    <dd>About me</dd>
+
+    <dt><a href="/logs/" class="internal">logs</a></dt>
+    <dd>Personal history</dd>
+
+    <dt><a href="/weeks/" class="internal">weeks</a></dt>
+    <dd>An archive of dated content, by week</dd>
+
+    <dt><a href="/site/" class="internal">site</a></dt>
+    <dd>About this site</dd>
+
+    </dl>
+
+  {% endif %}
+<hr>
+
+  {% if page.url == '/site/' %}
   <div class="stealthisbutton">
     <img class="80x15" width="80" height="15" src="data:image/gif;base64,R0lGODdhUAAPAPEAAGZmZv///wCFKg0NDSwAAAAAUAAPAEACjYSPqcvtD08Ioloxw9B8bz59oJeR3TlmYYmChmqp8kzX9o3jb873/k/bAYfE4kR4wbBIHqZMBEqJTNDpUtM8AijJmPELDkTG5LJ5EU6rM8KJcg33tSkz6mpUHTT395OeX/IhyCK2BVOnh8U0uMT3t+IUVXUVOfdGiZKFF5LIaIdH5UloGVfKM2eaegNQAAA7" alt="80x50 button" />
   </div>

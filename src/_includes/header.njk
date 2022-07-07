@@ -2,11 +2,8 @@
   <div class="breadcrumb">
     {% if page.url != '/' %}
       <a class="site-title" href="/" aria-label=“home page”>{% tree 18 %}&nbsp;&nbsp;hans.gerwitz.com</a>
-      {% if not breadcrumbs %}
-        {% set breadcrumbs = page.url | parents %}
-      {% endif %}
       {% set crumbPath = '/' %}
-      {% for crumb in breadcrumbs %}
+      {% for crumb in eleventyComputed.crumbtrail %}
         {% set crumbPath = crumbPath + crumb + '/' %}
         <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
       {% endfor %}
