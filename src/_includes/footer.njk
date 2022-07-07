@@ -1,45 +1,38 @@
 <footer class="bottom-footer">
   {% if (page.url != '/') %}
-
   <dl>
-
-    <dt><a href="/writing/" class="internal">writing</a></dt>
+    <dt>{{ "writing" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>{{ collections.writing | length }} posts and articles</dd>
 
-    <dt><a href="/notes/" class="internal">notes</a></dt>
+    <dt>{{ "notes" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>{{ collections.notes | length }} short, tweet-like notes</dd>
 
-    <dt><a href="/projects/" class="internal">projects</a></dt>
+    <dt>{{ "projects" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>Selected projects</dd>
 <!--
-    <dt><a href="/ideas/" class="internal">ideas</a></dt>
+    <dt>{{ "ideas" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>A few subjects I find important</dd>
 -->
-    <dt><a href="/lists/" class="internal">lists</a></dt>
+    <dt>{{ "lists" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>Lists of whatever else</dd>
 
-    <dt><a href="/about/" class="internal">about</a></dt>
+    <dt>{{ "about" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>About me</dd>
 
-    <dt><a href="/logs/" class="internal">logs</a></dt>
+    <dt>{{ "logs" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>Personal history</dd>
 
-    <dt><a href="/weeks/" class="internal">weeks</a></dt>
+    <dt>{{ "weeks" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>An archive of dated content, by week</dd>
 
-    <dt><a href="/site/" class="internal">site</a></dt>
+    <dt>{{ "site" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>About this site</dd>
-
-    </dl>
+  </dl>
 
   {% endif %}
-<hr>
 
-  {% if page.url == '/site/' %}
-  <div class="stealthisbutton">
-    <img class="80x15" width="80" height="15" src="data:image/gif;base64,R0lGODdhUAAPAPEAAGZmZv///wCFKg0NDSwAAAAAUAAPAEACjYSPqcvtD08Ioloxw9B8bz59oJeR3TlmYYmChmqp8kzX9o3jb873/k/bAYfE4kR4wbBIHqZMBEqJTNDpUtM8AijJmPELDkTG5LJ5EU6rM8KJcg33tSkz6mpUHTT395OeX/IhyCK2BVOnh8U0uMT3t+IUVXUVOfdGiZKFF5LIaIdH5UloGVfKM2eaegNQAAA7" alt="80x50 button" />
-  </div>
-{% else %}
+  <hr>
+
   {% if (page.url != '/') and (page.url != '/about/') %}
     <p>
       <a href="/about/">Hans Gerwitz</a> is an American emigrant.
@@ -51,5 +44,4 @@
   <div class="mini-note">
     Learn more at <a href="/site/" class="internal">site</a>.
   </div>
-{% endif %}
 </footer>

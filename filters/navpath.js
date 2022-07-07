@@ -1,16 +1,20 @@
-module.exports = function(path, currentPath) {
+const NunjucksLib = require("nunjucks");
 
-  if (currentPath.startsWith(path)) { // we're under this directory
+module.exports = function(path, crumbPath) {
+  var link = '';
+  var crumbs = Array.from(crumbPath);
 
-
+  if (crumbs[0] == path) {     // we are least UNDER this page
+    if (crumbs.length == 1) {  // actually, we're ON this page
+      link = '<span class="internal active">' + path + '</span>';
+    }
+    else {
+      link = '<a class="internal active" href="/' + path + '/">' + path + '</a>';
+    }
+  }
+  else {
+    link = '<a class="internal" href="/' + path + '/">' + path + '</a>';
   }
 
-  var parts = relativeUrl.split('/').filter(path => path); // strips empties
-  if path
-
-
-
-  var paths = relativeUrl.split('/').filter(path => path);
-
-  return paths.slice(0, -1);
+  return new NunjucksLib.runtime.SafeString(link);
 }

@@ -32,6 +32,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("json", require("./filters/json.js") );
   eleventyConfig.addFilter("limit", require("./filters/limit.js") );
   eleventyConfig.addFilter("moonforweek", require("./filters/moonforweek.js") );
+  eleventyConfig.addFilter("navpath", require("./filters/navpath.js") );
   eleventyConfig.addFilter("parents", require("./filters/parents.js") );
   eleventyConfig.addFilter("weeklink", require("./filters/weeklink.js") );
   eleventyConfig.addFilter("weeknum", require("./filters/weeknum.js") );
