@@ -1,15 +1,13 @@
 {# .main-header .pale #}
-<div class="breadcrumb">
-  {% if page.url != '/' %}
-    <a class="site-title" href="/" aria-label=“home page”>{% tree 18 %}&nbsp;&nbsp;hans.gerwitz.com</a>
+<a class="site-title" href="#nav" aria-label=“home page”>{% tree 66 %}</a>
+{% if page.url != '/' %}
+  <div class="breadcrumb">
     {% set crumbPath = '/' %}
-    {% for crumb in eleventyComputed.crumbtrail %}
-      {% if not loop.last %}
-        {% set crumbPath = crumbPath + crumb + '/' %}
-        <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
-      {% endif %}
-    {% endfor %}
-  {% else %}
-    <a class="site-title" href="/sitemap/" aria-label=“site map”>{% tree 66 %}</a>
-  {% endif %}
-</div>
+  {% for crumb in eleventyComputed.crumbtrail %}
+    {% if not loop.last %}
+      {% set crumbPath = crumbPath + crumb + '/' %}
+      <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
+    {% endif %}
+  {% endfor %}
+  </div>
+{% endif %}

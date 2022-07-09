@@ -26,33 +26,29 @@ body {
   line-height: 1.6rem;
 }
 
-header {
+.main-header {
+  padding-top: 32px;
   font-size: 1rem;
 
-  .breadcrumb {
-    float: left;
-    width: 55%;
-  }
-  .search {
-    float: right;
-    margin-right: 24px;
+  * {
+    display: inline-block;
+    bottom: 0;
   }
 
   .site-title {
     svg * {
       fill: $accent-color;
     }
-    color: $text-color;
-    font-family: $title-font;
-    font-weight: $title-font-weight;
-    text-decoration: none;
-    display: block;
-    float: left;
-    padding-top: 5px;
-    // padding-bottom: 2px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin-left: -0.5rem;
+    // color: $text-color;
+    // font-family: $title-font;
+    // font-weight: $title-font-weight;
+    // text-decoration: none;
+    // float: left;
+    // padding-top: 5px;
+    // // padding-bottom: 2px;
+    // padding-left: 0.5rem;
+    // padding-right: 0.5rem;
+    // margin-left: -0.5rem;
   }
 
   a.site-title:hover {
@@ -63,7 +59,7 @@ header {
     }
   }
 
-  .breadcrumb a.internal, .search a {
+  .breadcrumb a.internal {
     border: none;
     padding-top: 5px;
     padding-left: 0.5rem;
@@ -73,24 +69,10 @@ header {
     float: left;
     // margin-left: 8px;
   }
-  .search a {
-    // padding-top: 15px;
-    color: $page-color;
-    &::before {
-      color: $page-color;
-    }
-    svg * {
-      stroke: $text-color;
-    }
-    &:hover svg * {
-      stroke: $page-color;
-    }
-  }
-
 }
 
 .main-container {
-  padding-bottom: 18px;
+
 }
 
 .main-footer {
@@ -98,35 +80,50 @@ header {
   color: $page-color;
 
   padding-top: 18px;
+  margin-top: 50px;
 
-  .search-form {
+  .footer-topnav {
     position: relative;
-    float: right;
-    clear: right;
+    width: 100%;
 
-    width: 190px;
-    height: 30px;
-    input {
-      width: 100%;
-      border-radius: 15px;
-      border: none;
-      padding: 0 2px 0 30px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 5;
+    .homelink {
+      display: inline-block;
+      padding-top: 4px;
     }
-    button {
+
+    svg * {
+      fill: $page-color;
+    }
+
+    .search-form {
       position: absolute;
-      top: 2px;
-      left: 4px;
-      height: 26px;
-      width: 26px;
-      z-index: 10;
-      border: none;
-      background: none;
-      svg * {
-        stroke: $accent-color;
+      bottom: 4px;
+      right: 0;
+
+      width: 190px;
+      height: 30px;
+      input {
+        width: 100%;
+        border-radius: 15px;
+        border: none;
+        padding: 0 2px 0 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+      }
+      button {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        height: 26px;
+        width: 26px;
+        z-index: 10;
+        border: none;
+        background: none;
+        svg * {
+          stroke: $accent-color;
+        }
       }
     }
   }
@@ -143,7 +140,7 @@ header {
       dt  {
         clear:left;
         float:left;
-        width: 25%;
+        min-width: 25%;
         padding-bottom: 8px;
       }
       dd {

@@ -1,13 +1,18 @@
 {# .main-footer .pale #}
 
-{% if page.url != '/search/' %}
-<form action="/search/" method="get">
-  <div class="search-form" role="search">
-    <input type="text" aria-label="Search this site" placeholder="Search this site" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" name="q">
-    <button type="submit" disabled="" aria-label="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" version="1"><g stroke-width="2" fill="none"><path d="M11.29 11.71l-4-4"/><circle cx="5" cy="5" r="4"/></g></svg></button>
-  </div>
-</form>
-{% endif %}
+<div class="footer-topnav">
+
+  <a class="homelink" href="/">{% tree 24 %} hans.gerwitz.com</a>
+
+  {% if page.url != '/search/' %}
+  <form action="/search/" method="get">
+    <div class="search-form" role="search">
+      <input type="text" aria-label="Search this site" placeholder="Search this site" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" name="q">
+      <button type="submit" disabled="" aria-label="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" version="1"><g stroke-width="2" fill="none"><path d="M11.29 11.71l-4-4"/><circle cx="5" cy="5" r="4"/></g></svg></button>
+    </div>
+  </form>
+  {% endif %}
+</div>
 
 <div class="sitemap">
   <dl class="published">
@@ -19,10 +24,10 @@
 
     <dt>{{ "projects" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>Documented projects</dd>
-  <!--
+{#
     <dt>{{ "ideas" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>Opinions on things</dd>
-  -->
+ #}
     <dt>{{ "lists" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>Other lists</dd>
   </dl>
@@ -33,10 +38,10 @@
 
     <dt>{{ "logs" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>Personal history</dd>
-
+{#
     <dt>{{ "weeks" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>Weeknotes</dd>
-
+ #}
     <dt>{{ "site" | navpath(eleventyComputed.crumbtrail) }}</dt>
     <dd>About this site</dd>
   </dl>
