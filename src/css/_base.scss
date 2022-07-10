@@ -149,10 +149,11 @@ body {
         padding-bottom: 8px;
       }
       dd {
-        clear:right;
-        padding-bottom: 8px;
-        @media ($bp-small) {
-          display: none;
+        display: none;
+        @media ($bp-full) {
+          display: inherit;
+          clear:right;
+          padding-bottom: 8px;
         }
       }
     }
