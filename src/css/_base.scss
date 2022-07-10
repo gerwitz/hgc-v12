@@ -140,6 +140,22 @@ body {
     padding-top: 18px;
     padding-bottom: 18px;
 
+    a:hover {
+      color: $accent-color;
+      background-color: $page-color;
+      box-shadow: 0 0 0.5rem 0.5rem $page-color;
+    }
+
+    .internal::before {
+      content: '/';
+      color: $page-color;
+      font-weight: $bold-font-weight;
+      text-decoration: none;
+    }
+    a.internal:hover::before {
+      color: $accent-color;
+    }
+
     & > dl {
       width: 50%;
       dt  {
