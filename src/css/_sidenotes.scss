@@ -54,6 +54,7 @@ a.sidenote-ref {
   }
   @media ($bp-full) {
     float: right;
+    clear: right;
     width: #{100% - $textwidth-sidenotes};
     padding-left: 3rem;
 

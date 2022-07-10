@@ -44,7 +44,7 @@ body {
     // font-weight: $title-font-weight;
     // text-decoration: none;
     // float: left;
-    // padding-top: 5px;
+    padding-top: 5px;
     // // padding-bottom: 2px;
     // padding-left: 0.5rem;
     // padding-right: 0.5rem;
@@ -150,7 +150,7 @@ body {
       }
       dd {
         display: none;
-        @media ($bp-full) {
+        @media ($bp-liminal) {
           display: inherit;
           clear:right;
           padding-bottom: 8px;

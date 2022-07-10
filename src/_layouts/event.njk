@@ -13,11 +13,7 @@ permalink: "/logs/events/{{ page.fileSlug }}/index.html"
     </div>
   </div>
 
-  <div class="content">
-    <div class="event">
-      {{ content | safe }}
-    </div>
-  </div>
+  {{ content | safe }}
 
   {% include "signature.njk" %}
 
