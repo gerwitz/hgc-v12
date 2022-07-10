@@ -30,7 +30,7 @@ body {
   padding-top: 32px;
   font-size: 1rem;
 
-  * {
+  .site-title, .breadcrumb {
     display: inline-block;
     bottom: 0;
   }
@@ -45,7 +45,7 @@ body {
     // text-decoration: none;
     // float: left;
     padding-top: 5px;
-    // // padding-bottom: 2px;
+    // padding-bottom: 2px;
     // padding-left: 0.5rem;
     // padding-right: 0.5rem;
     // margin-left: -0.5rem;
@@ -59,12 +59,12 @@ body {
     }
   }
 
-  .breadcrumb a.internal {
+  .breadcrumb .internal {
     border: none;
-    padding-top: 5px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin: 0;
+    // padding-top: 5px;
+    // padding-left: 0.5rem;
+    // padding-right: 0.5rem;
+    margin-left: 1rem;
     display: block;
     float: left;
     // margin-left: 8px;
@@ -87,6 +87,15 @@ body {
   padding-top: 18px;
   margin-top: 50px;
 
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: $accent-color;
+    background-color: $page-color;
+    box-shadow: none;
+  }
+
   .footer-topnav {
     position: relative;
     width: 100%;
@@ -94,10 +103,14 @@ body {
     .homelink {
       display: inline-block;
       padding-top: 4px;
-    }
+      text-decoration: none;
 
-    svg * {
-      fill: $page-color;
+      svg * {
+        fill: $page-color;
+      }
+      &:hover svg * {
+        fill: $accent-color;
+      }
     }
 
     .search-form {
@@ -139,18 +152,12 @@ body {
 
     padding-top: 18px;
     padding-bottom: 18px;
-
-    a:hover {
-      color: $accent-color;
-      background-color: $page-color;
-      box-shadow: 0 0 0.5rem 0.5rem $page-color;
-    }
+    // border-radius: 8px;
 
     .internal::before {
       content: '/';
       color: $page-color;
       font-weight: $bold-font-weight;
-      text-decoration: none;
     }
     a.internal:hover::before {
       color: $accent-color;

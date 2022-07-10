@@ -1,8 +1,11 @@
+const moment = require("moment");
+
 module.exports = {
   eleventyComputed: {
     crumbtrail: data => {
       if (data.breadcrumbs) {
-        return Array.from(data.breadcrumbs).concat(data.page.fileSlug);
+        // return Array.from(data.breadcrumbs).concat(data.page.fileSlug);
+        return Array.from(data.breadcrumbs).concat(new moment(data.page.date).format("YYYY-MM-DD"));
       }
       else if (data.page.url) {
         return data.page.url.split('/').filter(path => path);

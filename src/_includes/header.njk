@@ -4,7 +4,9 @@
   <div class="breadcrumb">
     {% set crumbPath = '/' %}
   {% for crumb in eleventyComputed.crumbtrail %}
-    {% if not loop.last %}
+    {% if loop.last %}
+      <span class="internal">{{ crumb }}</a>
+    {% else %}
       {% set crumbPath = crumbPath + crumb + '/' %}
       <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
     {% endif %}

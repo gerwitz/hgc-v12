@@ -41,8 +41,8 @@ h1,h2,h3 {
 h1 {
   font-size: 3.5rem;
   line-height: 4rem;
-  margin-top: 4rem;
-  margin-bottom: 1.6rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
 }
 h2 {
   font-size: 1.6875rem;
@@ -52,14 +52,6 @@ h2 {
 }
 h3 {
   font-size: 1.3rem;
-}
-
-// subtitle
-header>p {
-  margin-top: -1.2rem;
-  font-family: $title-font;
-  font-size: 1.6875rem;
-  line-height: 2.4rem;
 }
 
 p {
@@ -175,9 +167,6 @@ a:hover {
   color: $page-color;
   background-color: $accent-color;
   box-shadow: 0 0 0.5rem 0.5rem $page-color;
-  &.site-title {
-    color: $page-color;
-  }
 }
 
 a.sticker {
@@ -224,7 +213,13 @@ dd {
 }
 
 .signature {
+  border-top: solid 1px $accent-color;
+  padding-top: 0.5rem;
+
   font-style: italic;
+  a.internal {
+    font-weight: inherit;
+  }
 }
 
 // feed links

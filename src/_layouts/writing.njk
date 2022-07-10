@@ -7,18 +7,7 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
 ---
 
 <article>
-    <div style="position: relative">
-        <h1>{{ title }}</h1>
-        <div class="meta">
-            Posted
-            {% if external -%}
-                to <a href="{{external}}">{{ external | hostname }}</a> on
-            {%- else %}
-                here on
-            {%- endif %}
-            <time datetime="{{ page.date | date('iso8601') | safe }}">{{ page.date | date('nice') }}</time> (week {{ page.date | weeklink }}).
-        </div>
-    </div>
+    <h1>{{ title }}</h1>
 
     {{ content | safe }}
 

@@ -1,3 +1,7 @@
 <p class="signature">
-  <span rel="author">Hans Gerwitz</span> wrote this in {{ page.date | date('MMMM YYYY') }}. You can learn more about him at <a class="internal" href="/about/">about</a> or <a href="https://twitter.com/intent/user?user_id=521" rel="me noreferrer nofollow" target="_blank">follow him on Twitter</a>.
+  <span rel="author">Hans Gerwitz</span> wrote this
+  {% if external -%}
+  on <a href="{{external}}">{{ external | hostname }}</a>
+  {%- endif %}
+  in {{ page.date | date('YYYY') }} (week {{ page.date | weeklink }}). You can learn more about him at <a class="internal" href="/about/">about</a> or <a href="https://twitter.com/intent/user?user_id=521" rel="me noreferrer nofollow" target="_blank">follow him on Twitter</a>.
 </p>
