@@ -52,38 +52,3 @@ table {
         }
     }
 }
-
-/**************************************
-    $CONTAINERS
-/**************************************/
-
-.main-container {
-    padding: 1.5rem;
-}
-
-.inner-container {
-    padding-top: 2rem;
-    width: 100%;
-}
-
-.bottom-footer {
-    margin-top: 6rem;
-}
-
-/**************************************
-    $MEDIA QUERIES - TABLET AND BIGGER
-/**************************************/
-@media #{$bp-mid} {
-
-    .main-container {
-        max-width: 1400px;
-        padding: 2rem 0 4rem 8rem;
-        width: 100%;
-    }
-
-    .inner-container {
-        padding-top: 2rem;
-        width: 55%;
-    }
-
-}

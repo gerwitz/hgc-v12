@@ -1,19 +1,52 @@
-<footer class="bottom-footer">
-{% if page.url == '/site/' %}
-  <div class="stealthisbutton">
-    <img class="80x15" width="80" height="15" src="data:image/gif;base64,R0lGODdhUAAPAPEAAGZmZv///wCFKg0NDSwAAAAAUAAPAEACjYSPqcvtD08Ioloxw9B8bz59oJeR3TlmYYmChmqp8kzX9o3jb873/k/bAYfE4kR4wbBIHqZMBEqJTNDpUtM8AijJmPELDkTG5LJ5EU6rM8KJcg33tSkz6mpUHTT395OeX/IhyCK2BVOnh8U0uMT3t+IUVXUVOfdGiZKFF5LIaIdH5UloGVfKM2eaegNQAAA7" alt="80x50 button" />
-  </div>
-{% else %}
-  {% if (page.url != '/') and (page.url != '/about/') %}
-    <p>
-      <a href="/about/">Hans Gerwitz</a> is an American emigrant.
-    </p>
+{# .main-footer .pale #}
+
+<div class="footer-topnav">
+
+  <a class="homelink" href="/">{% tree 24 %} hans.gerwitz.com</a>
+
+  {% if page.url != '/search/' %}
+  <form action="/search/" method="get">
+    <div class="search-form" role="search">
+      <input type="text" aria-label="Search this site" placeholder="Search this site" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" name="q">
+      <button type="submit" disabled="" aria-label="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" version="1"><g stroke-width="2" fill="none"><path d="M11.29 11.71l-4-4"/><circle cx="5" cy="5" r="4"/></g></svg></button>
+    </div>
+  </form>
   {% endif %}
-  <div class="mini-note">
-    The contents of hans.gerwitz.com are licensed CC-BY-4.0.
-  </div>
-  <div class="mini-note">
-    Learn more at <a href="/site/" class="internal">site</a>.
-  </div>
-{% endif %}
-</footer>
+</div>
+
+<div class="sitemap">
+  <dl class="published">
+    <dt>{{ "writing" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dd>{{ collections.writing | length }} blog posts</dd>
+
+    <dt>{{ "notes" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dd>{{ collections.notes | length }} short notes</dd>
+
+    <dt>{{ "projects" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dd>Documented projects</dd>
+{#
+    <dt>{{ "ideas" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dd>Opinions on things</dd>
+ #}
+    <dt>{{ "lists" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dd>Other lists</dd>
+  </dl>
+
+  <dl class="personal">
+    <dt>{{ "about" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dd>About me</dd>
+
+    <dt>{{ "logs" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dd>Personal history</dd>
+{#
+    <dt>{{ "weeks" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dd>Weeknotes</dd>
+ #}
+    <dt>{{ "site" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dd>About this site</dd>
+  </dl>
+</div>
+
+<div class="fineprint">
+  The contents of hans.gerwitz.com are <a href="/site/#rights" rel="license">licensed CC-BY-4.0</a>.
+</div>

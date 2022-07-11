@@ -2,6 +2,7 @@
 @import '_reset';
 @import '_fonts';
 
+@import '_base';
 @import '_tufte';
 @import '_timeline';
 @import '_sidenotes';
@@ -40,8 +41,8 @@ h1,h2,h3 {
 h1 {
   font-size: 3.5rem;
   line-height: 4rem;
-  margin-top: 6.4rem;
-  margin-bottom: 1.6rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
 }
 h2 {
   font-size: 1.6875rem;
@@ -53,17 +54,9 @@ h3 {
   font-size: 1.3rem;
 }
 
-// subtitle
-header>p {
-  margin-top: -1.2rem;
-  font-family: $title-font;
-  font-size: 1.6875rem;
-  line-height: 2.4rem;
-}
-
 p {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   // https://clagnut.com/blog/2395/
   hyphens: auto;
@@ -140,90 +133,6 @@ div.hidden {
   display: none;
 }
 
-// site layout
-header .breadcrumb {
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-}
-
-.inner-container {
-  clear: both;
-}
-
-header {
-  font-size: 1rem;
-
-  .breadcrumb {
-    float: left;
-    width: 55%;
-  }
-  .search {
-    float: right;
-    margin-right: 24px;
-  }
-
-  .site-title {
-    svg * {
-      fill: $accent-color;
-    }
-    color: $text-color;
-    font-family: $title-font;
-    font-weight: $title-font-weight;
-    text-decoration: none;
-    display: block;
-    float: left;
-    padding-top: 5px;
-    // padding-bottom: 2px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin-left: -0.5rem;
-  }
-
-  a.site-title:hover {
-    background-color: $accent-color;
-    color: $page-color;
-    svg * {
-      fill: $page-color;
-    }
-  }
-
-  .breadcrumb a.internal, .search a {
-    border: none;
-    padding-top: 5px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin: 0;
-    display: block;
-    float: left;
-    // margin-left: 8px;
-  }
-  .search a {
-    // padding-top: 15px;
-    color: $page-color;
-    &::before {
-      color: $page-color;
-    }
-    svg * {
-      stroke: $text-color;
-    }
-    &:hover svg * {
-      stroke: $page-color;
-    }
-  }
-
-}
-
-.bottom-footer {
-  border-top: solid 1px $text-color;
-
-  .mini-note {
-    font-family: $sans-font;
-  }
-
-  .stealthisbutton {
-    margin-top: 5px;
-    float: right;
-  }
-}
 
 // links
 a {
@@ -258,9 +167,6 @@ a:hover {
   color: $page-color;
   background-color: $accent-color;
   box-shadow: 0 0 0.5rem 0.5rem $page-color;
-  &.site-title {
-    color: $page-color;
-  }
 }
 
 a.sticker {
@@ -271,13 +177,15 @@ a:hover.sticker {
   border-color: $accent-color;
 }
 
-dl {
-  margin-top: 3.9rem;
-  margin-bottom: 3.9rem;
+dt  {
+  clear:left;
+  float:left;
+  min-width: 25%;
+  padding-bottom: 8px;
 }
 dd {
-  margin-bottom: 1.6rem;
-  padding-left: 4rem;
+  clear:right;
+  padding-bottom: 8px;
 }
 
 // feed lists
@@ -301,6 +209,16 @@ dd {
 
   a {
     text-decoration-color: $meta-color;
+  }
+}
+
+.signature {
+  border-top: solid 1px $accent-color;
+  padding-top: 0.5rem;
+
+  font-style: italic;
+  a.internal {
+    font-weight: inherit;
   }
 }
 

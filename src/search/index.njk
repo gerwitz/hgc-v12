@@ -1,13 +1,14 @@
 ---
 title: Search
-layout: page
+layout: index
 eleventyExcludeFromCollections: true
 ---
 
-<form id="search-form" action="?" method="get">
-  <label for="query"><svg xmlns="http://www.w3.org/2000/svg" height="13" viewBox="0 0 12 13" version="1"><g stroke-width="2" stroke="#000000" fill="none"><path d="M11.29 11.71l-4-4"/><circle cx="5" cy="5" r="4"/></g></svg></label>
-  <input type="search" name="q" id="query" autofocus>
-  <button type="submit" class="submit">Search</button>
+<form action="?" method="get">
+  <div class="search-form" role="search">
+    <input type="text" aria-label="Search this site" placeholder="Search this site" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" name="q">
+    <button type="submit" disabled="" aria-label="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" version="1"><g stroke-width="2" stroke="#000000" fill="none"><path d="M11.29 11.71l-4-4"/><circle cx="5" cy="5" r="4"/></g></svg></button>
+  </div>
 </form>
 
 <section id="search-results">
@@ -26,6 +27,11 @@ eleventyExcludeFromCollections: true
   var monthNames = new Array("January","February","March","April","May"," June","July","August","September","October","November","December");
   function monthName(n) {
     return(monthNames[n]);
+  }
+
+  var queryEl = document.querySelector('.search-form input');
+  function updateQuery(query) {
+    queryEl.value = query;
   }
 
   var messageEl = document.querySelector('#search-results .message');
@@ -111,7 +117,8 @@ eleventyExcludeFromCollections: true
     display('', '');
     if (paramValue('q')) {
       currentQuery = paramValue('q');
-      fetchIndex(query);
+      updateQuery(currentQuery);
+      fetchIndex(currentQuery);
     }
   }
 

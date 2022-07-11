@@ -1,8 +1,10 @@
 // Breakpoints
 // $bp-narrow: "(min-width: 400px)";
-$bp-narrow: "(max-width: 739px)";
-$bp-mid: "(min-width: 740px)";
-$bp-wide: "(min-width: 1200px)";
+$pale-size: 768px;
+$textwidth-simple: 80%;
+$textwidth-sidenotes: 66%;
+$bp-liminal: "min-width: #{$pale-size * .80}";
+$bp-full: "min-width: #{$pale-size}";
 
 // Colors
 $page-color: hsl(0, 0%, 99%);

@@ -1,0 +1,200 @@
+@import "_variables";
+
+// BIG GRID
+
+body {
+  height: 100%;
+  margin: 0;
+}
+.main-header, .main-container, .main-footer {
+  display: grid;
+  grid-template-columns: 1fr min($pale-size, 90%) 1fr;
+}
+.pale {
+  grid-column: 2;
+}
+
+// BODY BASICS
+
+body {
+  background: $page-color;
+  color: $text-color;
+  font-family: $body-font;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+// HEADER
+
+.main-header {
+  padding-top: 32px;
+  font-size: 1rem;
+
+  .site-title, .breadcrumb {
+    display: inline-block;
+    bottom: 0;
+  }
+
+  .site-title {
+    svg * {
+      fill: $accent-color;
+    }
+    // color: $text-color;
+    // font-family: $title-font;
+    // font-weight: $title-font-weight;
+    // text-decoration: none;
+    // float: left;
+    padding-top: 5px;
+    // padding-bottom: 2px;
+    // padding-left: 0.5rem;
+    // padding-right: 0.5rem;
+    // margin-left: -0.5rem;
+  }
+
+  a.site-title:hover {
+    background-color: $accent-color;
+    color: $page-color;
+    svg * {
+      fill: $page-color;
+    }
+  }
+
+  .breadcrumb .internal {
+    border: none;
+    // padding-top: 5px;
+    // padding-left: 0.5rem;
+    // padding-right: 0.5rem;
+    margin-left: 1rem;
+    display: block;
+    float: left;
+    // margin-left: 8px;
+  }
+}
+
+// CONTENT
+// mostly defined elsewhere
+
+.main-container {
+
+}
+
+/// FOOTER
+
+.main-footer {
+  background-color: $accent-color;
+  color: $page-color;
+
+  padding-top: 18px;
+  margin-top: 50px;
+
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: $accent-color;
+    background-color: $page-color;
+    box-shadow: none;
+  }
+
+  .footer-topnav {
+    position: relative;
+    width: 100%;
+
+    .homelink {
+      display: inline-block;
+      padding-top: 4px;
+      text-decoration: none;
+
+      svg * {
+        fill: $page-color;
+      }
+      &:hover svg * {
+        fill: $accent-color;
+      }
+    }
+
+    .search-form {
+      position: absolute;
+      bottom: 4px;
+      right: 0;
+
+      width: 190px;
+      height: 30px;
+      input {
+        width: 100%;
+        border-radius: 15px;
+        border: none;
+        padding: 0 2px 0 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+      }
+      button {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        height: 26px;
+        width: 26px;
+        z-index: 10;
+        border: none;
+        background: none;
+        svg * {
+          stroke: $accent-color;
+        }
+      }
+    }
+  }
+
+  .sitemap {
+    width: 100%;
+    clear: both;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+    // border-radius: 8px;
+
+    .internal::before {
+      content: '/';
+      color: $page-color;
+      font-weight: $bold-font-weight;
+    }
+    a.internal:hover::before {
+      color: $accent-color;
+    }
+
+    & > dl {
+      width: 50%;
+      dt  {
+        clear:left;
+        float:left;
+        min-width: 25%;
+        padding-bottom: 8px;
+      }
+      dd {
+        display: none;
+        @media ($bp-liminal) {
+          display: inherit;
+          clear:right;
+          padding-bottom: 8px;
+        }
+      }
+    }
+    dl.published {
+      clear: left;
+      float: left;
+    }
+    dl.personal {
+      clear: right;
+      float: right;
+    }
+  }
+
+  .fineprint {
+    clear: both;
+    padding-top: 18px;
+
+    font-size: small;
+    font-style: italic;
+  }
+}
