@@ -11,9 +11,9 @@
 // basics
 * {
   box-sizing: border-box;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  // text-rendering: optimizeLegibility;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
   font-kerning: auto;
 }
 
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased;
   background: $page-color;
   color: $text-color;
   font-family: $body-font;
