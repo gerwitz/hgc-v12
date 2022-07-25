@@ -37,11 +37,13 @@ Some content is added to the repo with [Micropub](https://micropub.net/) via [Si
 
 ## Surveillance
 
-Although not intended for tracking, any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp] The type is served by rsms.me over CloudFlare's CDN which is known to drop cookies for analytics.
+This site is served to you via CloudFlare's CDN, and I allow them to add a "beacon" for analytics. By [their privacy policy](https://www.cloudflare.com/en-gb/privacypolicy/) they serve as a GDPR data processor. You can read [how they preserve your privacy](https://blog.cloudflare.com/privacy-first-web-analytics/#what-does-privacy-first-mean).
+
+Although not intended for tracking, any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp] The type is served by rsms.me also via CloudFlare's CDN.
 
 [^itp]: Your exposure depends on how [privacy-mature](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) your browser is, of course.
 
-If you use search, the Lunr script is loaded from [unpkg](https://unpkg.com/). [Lunr](https://lunrjs.com/) is open source and has no reason to be log activity. Still, the requests to googleapis.com and unpkg.com are "leak surfaces" so worth disclosing.
+If you use search, the Lunr script is loaded from [unpkg](https://unpkg.com/). [Lunr](https://lunrjs.com/) is open source and has no reason to be log activity. Still, the requests to unpkg.com present a "leak surface" so worth disclosing.
 
 ## Rights
 
