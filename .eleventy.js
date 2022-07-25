@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginMetagen = require('eleventy-plugin-metagen');
 
 const nbspFilter = require('eleventy-nbsp-filter');
 
@@ -24,6 +25,7 @@ module.exports = function(eleventyConfig) {
 
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
+  eleventyConfig.addPlugin(pluginMetagen);
 
   // template filters
   eleventyConfig.addFilter("cssmin", require("./filters/cssmin.js") );
@@ -65,7 +67,7 @@ module.exports = function(eleventyConfig) {
   let markdownItAttribution = require("markdown-it-attribution");
   let markdownItImplicitFigures = require('markdown-it-implicit-figures');
   let markdownItAnchor = require("markdown-it-anchor");
-  let markdownDeflist = require('markdown-it-deflist');
+  let markdownItDeflist = require('markdown-it-deflist');
   let options = {
     html: true,
     linkify: true,
@@ -80,7 +82,8 @@ module.exports = function(eleventyConfig) {
       figcaption: true
     })
     .use(markdownItAnchor)
-    .use(markdownDeflist);
+    .use(markdownItDeflist)
+    .disable(["lheading"]);
   markdownLib.renderer.rules.footnote_ref = function (tokens, idx, options, env, slf) {
     var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
     return '<label for="fn:'+id+'" id="fnref:' + id + '"><a href="#fn:' + id + '" rel="footnote" role="doc-noteref" aria-describedby="fn:' + id + '" class="sidenote-ref">'+id+'</a></label>';

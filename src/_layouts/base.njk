@@ -1,10 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {# metagen will add
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ title or (date + ' hans.gerwitz.com') }}</title>
+      note that `url` will be used for rel=canonical
+      http://www.thesempost.com/using-rel-canonical-on-all-pages-for-duplicate-content-protection/
+    #}
+    {% metagen
+      title=title or (date + ' hans.gerwitz.com'),
+      name="hans.gerwitz.com",
+      description="Personal web site of Hans Gerwitz. Since 1994.",
+      img="/favicon/tree.png",
+      url=external or "https://hans.gerwitz.com" + page.url,
+      locale='en_NL',
+      generator=eleventy.generator,
+      custom=[[
+        "meta","",{name: "twitter:creator:id", content: "521"}
+      ]]
+    %}
 
     <!-- favicon, etc. -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -20,35 +36,9 @@
     <link rel="alternate" type="application/rss+xml" href="https://hans.gerwitz.com/feeds/notes.rss" title="Hans's Notes">
     <link rel="alternate" type="application/rss+xml" href="https://hans.gerwitz.com/feeds/writing.rss" title="Writings of Hans Gerwitz">
 
-    {% if external %}
-    <link rel="canonical" href="{{ external }}">
-    {% else %}
-    {# http://www.thesempost.com/using-rel-canonical-on-all-pages-for-duplicate-content-protection/ #}
-    <link rel="canonical" href="{{ page.url | absoluteUrl('https://hans.gerwitz.com/') }}">
-    {% endif %}
-
-    <!-- Twitter summary card -->
-    <meta property="twitter:creator:id" content="521">
-    <meta property="twitter:title" content="{{ title }}">
-{#    <meta property="twitter:description" content="<%= abstract %>"> #}
-
-    <!-- Facebook OpenGraph -->
-    <meta property="og:site_name" content="hans.gerwitz.com">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="{{ page.url }}">
-    <meta property="og:title" content="{{ title }}">
-{#    <meta property="og:description" content="<%= abstract %>"> #}
-    <meta property="og:image" content="/favicon/tree.png">
-
-    <meta name="Description" content="Personal web site of Hans Gerwitz. Since 1994.">
-
     <link rel="stylesheet" href="/css/style.css">
 
-{# preload fonts, instead of waiting for CSS to request them #}
-{# crossorigin is only present because Lighthouse insists #}
-    {# <link rel="preload" href="/css/fonts/source-sans-pro-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/css/fonts/source-sans-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/css/fonts/source-sans-pro-v14-latin-italic.woff2" as="font" type="font/woff2" crossorigin> #}
+    <link rel="preload" href="/css/fonts/SourceSans3VF-Roman.otf.woff2" as="font" type="font/woff2" crossorigin>
 
     {{ headtags | safe }}
   </head>

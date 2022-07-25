@@ -19,9 +19,9 @@ The current design is version 12 of my web presence; the past is documented at <
 
 The site map is purposefully simple, with light navigation. Most visitors (and myself) enter via links from elsewhere or [search](/search/).
 
-Page layout is based on [Tufte CSS](https://edwardtufte.github.io/tufte-css/). Type is set using [Inter](https://rsms.me/inter/), designed by Rasmus Andersson.
+Page layout was inspired by [Tufte CSS](https://edwardtufte.github.io/tufte-css/). Type is set using [Source Sans](https://github.com/adobe-fonts/source-sans/), designed by Paul D. Hunt and copyrighted by Adobe.
 
-The logo glyph[^logo] is [LEGO part #2435][tree]. As a child I was fascinated with the [larger version][big tree] of this part as a manufactured object. I also spent a lot of time in forests and many of my friends were trees. (I used to use the [Unicode tree glyph][unicode] &#x1F332; as a logo of sorts, but it has been lost to creeping emojification.)
+The logo glyph[^logo] is [LEGO part #2435][tree]. As a child I was fascinated with the [larger version][big tree] of this part as a manufactured object. I also spent a lot of time in forests and many of my friends were trees. (I used to use the [Unicode tree glyph][unicode], <span role="img" aria-label="tree">&#x1F332;&#xFE0E;</span>, as a logo of sorts. Unfortunately, it has been lost to creeping emojification.)
 
 [tree]: https://www.bricklink.com/v2/catalog/catalogitem.page?P=2435
 [big tree]: https://www.bricklink.com/v2/catalog/catalogitem.page?P=3471
@@ -39,11 +39,9 @@ Some content is added to the repo with [Micropub](https://micropub.net/) via [Si
 
 This site is served to you via CloudFlare's CDN, and I allow them to add a "beacon" for analytics. By [their privacy policy](https://www.cloudflare.com/en-gb/privacypolicy/) they serve as a GDPR data processor. You can read [how they preserve your privacy](https://blog.cloudflare.com/privacy-first-web-analytics/#what-does-privacy-first-mean).
 
-Although not intended for tracking, any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp] The type is served by rsms.me also via CloudFlare's CDN.
+Although not intended for tracking, any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp]  If you use search, the Lunr script is loaded from [unpkg](https://unpkg.com/). [Lunr](https://lunrjs.com/) is open source and has no reason to log activity. Still, the requests to unpkg.com present a "leak surface" so worth disclosing.
 
 [^itp]: Your exposure depends on how [privacy-mature](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) your browser is, of course.
-
-If you use search, the Lunr script is loaded from [unpkg](https://unpkg.com/). [Lunr](https://lunrjs.com/) is open source and has no reason to be log activity. Still, the requests to unpkg.com present a "leak surface" so worth disclosing.
 
 ## Rights
 
