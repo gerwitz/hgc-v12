@@ -9,7 +9,7 @@ $bp-full: "min-width: #{$pale-size}";
 // Colors
 $page-color: hsl(0, 0%, 99%);
 $text-color: hsl(0, 0%, 5%);
-$meta-color: hsl(0, 0%, 50%);
+$meta-color: hsl(0, 0%, 5%);
 $accent-color: hsl(140, 100%, 25%); // lego tree #00852B
 
 // Font
@@ -17,6 +17,7 @@ $body-font: 'Source Sans', sans-serif;
 $sans-font: 'Source Sans', sans-serif;
 $title-font: 'Source Sans', sans-serif;
 
+$light-font-weight: 200;
 $regular-font-weight: 400;
 $bold-font-weight: 700;
 $title-font-weight: 700;

@@ -30,6 +30,8 @@ body {
   padding-top: 32px;
   font-size: 1rem;
 
+  font-variant-numeric: lining-nums proportional-nums;
+
   .site-title, .breadcrumb {
     display: inline-block;
     bottom: 0;
@@ -86,6 +88,8 @@ body {
 
   padding-top: 18px;
   margin-top: 50px;
+
+  font-variant-numeric: lining-nums proportional-nums;
 
   a {
     text-decoration: none;
