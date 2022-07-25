@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="1520">
+  <desc>HRC logo</desc>
+  <rect width="1520" height="1520" style="fill:#000099"/>
+  <g style="fill:#ffcc00">
+    <rect width="960" height="340" x="280" y="360"/>
+    <rect width="960" height="340" x="280" y="840"/>
+  </g>
+</svg>
