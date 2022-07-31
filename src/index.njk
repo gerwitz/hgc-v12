@@ -34,7 +34,9 @@ eleventyExcludeFromCollections: true
   <h2>Recently in <a href="/notes/" class="internal">notes</a></h2>
   {% set noteslist = collections.notes | reverse | limit(3) %}
   {% for item in noteslist %}
-    {% include "feed-note.njk" %}
+    <article>
+      {% include "feed-note.njk" %}
+    </article>
   {% endfor %}
 </section>
 

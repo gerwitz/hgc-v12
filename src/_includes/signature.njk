@@ -1,11 +1,11 @@
 <div class="signature">
   <p>
-    <a href="/about/" rel="author" title="Hans Gerwitz">Hans</a> wrote this
+    I (<a href="/about/" rel="author" title="Hans Gerwitz">Hans</a>) posted this
     {% if external -%}
     on <a href="{{external}}">{{ external | hostname }}</a>
     {%- endif %}
-    in {{ page.date | date('YYYY') }} (week {{ page.date | weeklink }}).
+    in {{ page.date | date('MMMM YYYY') }} during week {{ page.date | weeklink }}.
   </p><p>
-    You should <a href="https://twitter.com/intent/user?user_id=521" rel="me noreferrer nofollow" target="_blank">follow him on Twitter</a> or <a href="/follow/">elsewhere</a>.
+    For more, you should <a href="https://twitter.com/intent/user?user_id=521" rel="me noreferrer nofollow" target="_blank">follow me on Twitter</a> or <a href="/follow/">elsewhere</a>.
   </p>
 </div>
