@@ -14,6 +14,6 @@ Some fun I/O hacks led my curiousity to hardware, and after playing with the [op
 
 Mom worked at [Flo Valley](https://stlcc.edu/fv) in the writing lab, and the guys who ran the computer lab would sometimes babysit me while she worked. Their version of babysitting was to introduce me to software cracking; one of them was the author of a very popular low-level disk duplication program. At first I just used the tools they introduced me to to make copies of games and utilities I couldn’t afford. Raised in a Southern-oriented family, I used an ASCII art Confederate flag and “The Rebel” as my signature. As the arms race between pirates and copy protection methods advanced, I progressed in techniques and found myself “debugging” the Disk II firmware.
 
-That machine code is the lowest level of software. Today is generated automatically, usually more than one layer removed from a human programmer. But these primitive systems were hand-crafted, and following an execution thread through such code feels intimate. You appreciate cleverness and get a sense of personality from the author.
+That machine code is the lowest level of software. Today it is generated automatically, usually more than one layer removed from a human programmer. But these primitive systems were hand-crafted, and following an execution thread through such code feels intimate. You appreciate cleverness and get a sense of personality from the author.
 
 The Disk II was created by Steve Wozniak himself and after a few years teaching myself by hacking his system I felt like I knew him.
