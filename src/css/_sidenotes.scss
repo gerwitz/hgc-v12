@@ -4,9 +4,16 @@
 // so <p> floats left and <aside> floats right
 
 // make room for sidenotes
-article > p {
+article p {
   float: left;
-  clear: none;
+  clear: left;
+  width: 100%;
+  @media ($bp-liminal) {
+    width: $textwidth-simple;
+  }
+  @media ($bp-full) {
+    width: $textwidth-sidenotes;
+  }
 }
 // but now we have to prevent everything from collapsing
 article > *, footer {
@@ -21,32 +28,50 @@ a.sidenote-ref {
 
   color: $meta-color;
 
+  pointer-events: inherit;
+  cursor: pointer;
+
   text-decoration: none;
   &:hover {
     color: $accent-color;
     background-color: inherit;
     box-shadow: none;
   }
+
+  @media ($bp-full) {
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 .sidenote {
-  float: right;
-  clear: right;
-  margin-right: -60%;
-  width: 50%;
-  margin-top: 1em; // to match article > *+*
-  margin-bottom: 1.96rem;
-  font-size: 1.0rem;
-  vertical-align: baseline;
   position: relative;
 
+  float: left;
+  width: 100%;
+  @media ($bp-liminal) {
+    width: $textwidth-simple;
+  }
+  @media ($bp-full) {
+    float: right;
+    clear: right;
+    width: #{100% - $textwidth-sidenotes};
+    padding-left: 3rem;
+
+    margin-top: 1em; // to match article > *+*
+    margin-bottom: 1.96rem;
+  }
+
+  font-size: 1.0rem;
+  vertical-align: baseline;
+
   font-family: $sans-font;
-  font-size: 80%;
+  font-size: $textwidth-sidenotes;
   line-height: 1.3rem;
+  padding-left: 1rem;
   .sidenote-ref {
     float: left;
     margin-left: -1.0rem;
     color: $meta-color;
   }
-
 }

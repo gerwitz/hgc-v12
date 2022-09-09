@@ -8,12 +8,10 @@ breadcrumbs:
 
 <article>
 
-<div class="meta">
-Noted on <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} (week {{ page.date | weeklink }}) at {{ page.date | date('HH:mm') }}</time>
-</div>
+  <div class="content">
+    {{ content | safe }}
+  <div>
 
-<div class="content">
-  {{ content | safe }}
-<div>
+  {% include "signature.njk" %}
 
 </article>

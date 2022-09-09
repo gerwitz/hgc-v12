@@ -1,20 +1,23 @@
 // Breakpoints
 // $bp-narrow: "(min-width: 400px)";
-$bp-narrow: "(max-width: 739px)";
-$bp-mid: "(min-width: 740px)";
-$bp-wide: "(min-width: 1200px)";
+$pale-size: 768px;
+$textwidth-simple: 80%;
+$textwidth-sidenotes: 66%;
+$bp-liminal: "min-width: #{$pale-size * .80}";
+$bp-full: "min-width: #{$pale-size}";
 
 // Colors
 $page-color: hsl(0, 0%, 99%);
 $text-color: hsl(0, 0%, 5%);
-$meta-color: hsl(0, 0%, 50%);
+$meta-color: hsl(0, 0%, 5%);
 $accent-color: hsl(140, 100%, 25%); // lego tree #00852B
 
 // Font
-$body-font: 'Source Sans Pro', sans-serif;
-$sans-font: 'Source Sans Pro', sans-serif;
-$title-font: 'Source Sans Pro', sans-serif;
+$body-font: 'Source Sans', sans-serif;
+$sans-font: 'Source Sans', sans-serif;
+$title-font: 'Source Sans', sans-serif;
 
+$light-font-weight: 200;
 $regular-font-weight: 400;
 $bold-font-weight: 700;
 $title-font-weight: 700;

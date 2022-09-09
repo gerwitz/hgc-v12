@@ -1,22 +1,15 @@
-<header>
+{# .main-header .pale #}
+<a class="site-title" href="#nav" aria-label="home page">{% tree 66 %}</a>
+{% if page.url != '/' %}
   <div class="breadcrumb">
-    {% if page.url != '/' %}
-      <a class="site-title" href="/" aria-label=“home page”>{% tree 18 %}&nbsp;&nbsp;hans.gerwitz.com</a>
-      {% if not breadcrumbs %}
-        {% set breadcrumbs = page.url | parents %}
-      {% endif %}
-      {% set crumbPath = '/' %}
-      {% for crumb in breadcrumbs %}
-        {% set crumbPath = crumbPath + crumb + '/' %}
-        <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
-      {% endfor %}
+    {% set crumbPath = '/' %}
+  {% for crumb in eleventyComputed.crumbtrail %}
+    {% if loop.last %}
+      <span class="internal">{{ crumb }}</a>
     {% else %}
-      <a class="site-title" href="/sitemap/" aria-label=“site map”>{% tree 66 %}</a>
+      {% set crumbPath = crumbPath + crumb + '/' %}
+      <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
     {% endif %}
+  {% endfor %}
   </div>
-  {% if page.url != '/search/' %}
-  <div class="search">
-    <a class="graphic" href="/search/" aria-label="search"><svg xmlns="http://www.w3.org/2000/svg" height="17" viewBox="0 0 12 13"><g stroke-width="2" stroke="#000000" fill="none"><path d="M11.29 11.71l-4-4"/><circle cx="5" cy="5" r="4"/></g></svg></a>
-  </div>
-  {% endif %}
-</header>
+{% endif %}

@@ -13,7 +13,8 @@ module.exports = function(collection) {
     emptyWeeks.set(i, {
       fileSlug: i.toString(),
       url: '/weeks/'+i+'/',
-      templateContent: '<p><em>There are no comments for this week.</em></p>'
+      templateContent: '<p><em>There are no comments for this week.</em></p>',
+      breadcrumbs: ['weeks']
     });
   }
 

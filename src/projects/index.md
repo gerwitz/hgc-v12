@@ -1,6 +1,7 @@
 ---
 title: Laboratory
 epitaph: sometimes makes things
+layout: index
 ---
 
 Welcome to my laboratory, home to the finest [braincrack](https://www.youtube.com/watch?v=0sHCQWjTrJ8) including:

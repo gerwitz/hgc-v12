@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginMetagen = require('eleventy-plugin-metagen');
 
 const nbspFilter = require('eleventy-nbsp-filter');
 
@@ -24,6 +25,7 @@ module.exports = function(eleventyConfig) {
 
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
+  eleventyConfig.addPlugin(pluginMetagen);
 
   // template filters
   eleventyConfig.addFilter("cssmin", require("./filters/cssmin.js") );
@@ -32,6 +34,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("json", require("./filters/json.js") );
   eleventyConfig.addFilter("limit", require("./filters/limit.js") );
   eleventyConfig.addFilter("moonforweek", require("./filters/moonforweek.js") );
+  eleventyConfig.addFilter("navpath", require("./filters/navpath.js") );
   eleventyConfig.addFilter("parents", require("./filters/parents.js") );
   eleventyConfig.addFilter("weeklink", require("./filters/weeklink.js") );
   eleventyConfig.addFilter("weeknum", require("./filters/weeknum.js") );
@@ -63,7 +66,8 @@ module.exports = function(eleventyConfig) {
   let markdownItFootnote = require("markdown-it-footnote-here");
   let markdownItAttribution = require("markdown-it-attribution");
   let markdownItImplicitFigures = require('markdown-it-implicit-figures');
-  let markdownDeflist = require('markdown-it-deflist');
+  let markdownItAnchor = require("markdown-it-anchor");
+  let markdownItDeflist = require('markdown-it-deflist');
   let options = {
     html: true,
     linkify: true,
@@ -77,7 +81,9 @@ module.exports = function(eleventyConfig) {
       dataType: true,
       figcaption: true
     })
-    .use(markdownDeflist);
+    .use(markdownItAnchor)
+    .use(markdownItDeflist)
+    .disable(["lheading"]);
   markdownLib.renderer.rules.footnote_ref = function (tokens, idx, options, env, slf) {
     var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
     return '<label for="fn:'+id+'" id="fnref:' + id + '"><a href="#fn:' + id + '" rel="footnote" role="doc-noteref" aria-describedby="fn:' + id + '" class="sidenote-ref">'+id+'</a></label>';

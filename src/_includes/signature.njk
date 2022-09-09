@@ -1,0 +1,11 @@
+<div class="signature">
+  <p>
+    I posted this
+    {% if external -%}
+    on <a href="{{external}}">{{ external | hostname }}</a>
+    {%- endif %}
+    in {{ page.date | date('MMMM YYYY') }} during week {{ page.date | weeklink }}.
+  </p><p>
+    For more, you should <a href="https://twitter.com/intent/user?user_id=521" rel="me noreferrer nofollow" target="_blank">follow me on Twitter</a>.
+  </p>
+</div>

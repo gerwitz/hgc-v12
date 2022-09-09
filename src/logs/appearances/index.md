@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: index
 title: Appearances
 subtitle: Clues for where to go Hansspotting
 ---
