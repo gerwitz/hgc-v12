@@ -12,4 +12,4 @@ destinations:
     geo: [51.22352,6.78661]
 ---
 
-with Shannon, Natalia, Abdul, Aahd
+Feuerzangenbowle with Shannon, Natalia, Abdul, Aahd
