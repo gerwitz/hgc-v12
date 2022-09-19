@@ -2,7 +2,6 @@
 title: "COVID-19: Resenting the Zorgeloos"
 categories:
 - personal
-- life
 content-tags:
 - covid
 - amsterdam
