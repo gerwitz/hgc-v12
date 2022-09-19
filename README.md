@@ -8,8 +8,8 @@
 
 Source files are in `/src` and site is built to `/_site`.
 
-To set up, from the root directory: `gulp build`
-To test: `gulp serve`
+To set up, from the root directory: `npm run build`
+To test: `npm run start`
 
 ## Standards
 
