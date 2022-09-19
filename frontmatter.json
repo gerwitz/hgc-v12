@@ -1,0 +1,88 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
+    },
+    {
+      "name": "week",
+      "pageBundle": false,
+      "previewPath": "weeks",
+      "fields": [
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "11ty",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "weeks",
+      "path": "[[workspace]]/src/weeks",
+      "excludeSubdir": false
+    },
+    {
+      "title": "writing",
+      "path": "[[workspace]]/src/writing"
+    },
+    {
+      "title": "notes",
+      "path": "[[workspace]]/src/notes"
+    }
+  ],
+  "frontMatter.taxonomy.tags": [],
+  "frontMatter.taxonomy.categories": [
+    "culture",
+    "meta",
+    "personal",
+    "uncategorized",
+    "work"
+  ],
+  "frontMatter.dashboard.openOnStart": true
+}

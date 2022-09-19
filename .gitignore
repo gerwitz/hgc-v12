@@ -1,4 +1,5 @@
 /node_modules
 /_site
+/.frontmatter
 .DS_Store
 *.icloud
