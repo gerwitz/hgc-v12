@@ -4,7 +4,8 @@
     {
       "name": "default",
       "pageBundle": false,
-      "previewPath": null,
+      "previewPath": "yyyy/MM/dd/",
+      "slugSuffix": ".html",
       "fields": [
         {
           "title": "Title",
