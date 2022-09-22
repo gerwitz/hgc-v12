@@ -7,7 +7,7 @@ geo: [38.63295, -90.31108]
 type: life
 ---
 
-A bunch of Northern Europeans migrated to North America and started breeding with each other. After a few generations, in St. Louis, Missouri, this led to me.[^genealogy] This made me one of 3,862,334,063 on Earth[^population], including the 3 members of Skylab 4 that had recently returned.
+A bunch of Northern Europeans migrated to North America and started breeding with each other. After a few generations, in St. Louis, Missouri, this led to me.[^genealogy] This made me one of 3,862,334,063 on Earth[^population], including the 3 members of Skylab 4 that had recently returned. At the time, the Earth's atmosphere consisted of 331.48 ppm CO<sub>2</sub>.
 
 [^genealogy]: I collect family tree records on [WikiTree](https://www.wikitree.com/wiki/Gerwitz-222).
 
