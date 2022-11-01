@@ -26,6 +26,7 @@ subtitle: People who inspire
 * Tommy Flowers: inventor of purely-electronic "programmable" computing in the face of skepticism
 * [Edward Snowden](http://en.wikipedia.org/wiki/Edward_Snowden)
 * [John Muir](http://en.wikipedia.org/wiki/John_Muir): defender of wilderness
+* Pauli Murray: moved US towards civil rights
 * [Ruth Bader Ginsburg](https://en.wikipedia.org/wiki/Ruth_Bader_Ginsburg): defender of civil liberty and advocate for open dialogue and diversity
 * [Margaret Sanger](https://en.wikipedia.org/wiki/Margaret_Sanger)
 * [Ida Craddock](https://en.wikipedia.org/wiki/Ida_Craddock)
