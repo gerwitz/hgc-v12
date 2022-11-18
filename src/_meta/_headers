@@ -11,3 +11,5 @@
   X-XSS-Protection: 1
   X-Content-Type-Options: nosniff
   X-Clacks-Overhead: GNU Terry Pratchett
+/.well-known/webfinger
+  Content-Type: application/jrd+json
