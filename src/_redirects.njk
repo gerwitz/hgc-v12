@@ -1,12 +1,16 @@
 ---
 permalink: "_redirects"
 ---
+# historic public URLs
 /library/records/*          /logs/appearances/:splat       301
 /library/projects/*         /projects/:splat                  301
 /uses/*                     /lists/tools/:splat               301
 
 {% set thisweek = collections.weeks[collections.weeks.length - 2] %}
 /now                        {{ thisweek.url }}                302
+
+# Federation via Akkoma
+/.well-known/host-meta*      https://social.gerwitz.com/.well-known/host-meta:splat 301
 
 # Redirect default Netlify subdomain to primary domain
 https://hgc-v12.netlify.com/* https://hans.gerwitz.com/:splat 301!
