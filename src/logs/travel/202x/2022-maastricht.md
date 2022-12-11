@@ -1,7 +1,7 @@
 ---
 title: "Maastricht birthday"
 date: 2022-03-12
-tripit-uuid: fceb97e3-97e5-9000-0001-000012a155f8
+tripit: 312563192
 nights: 1
 modes: ["train"]
 destinations:

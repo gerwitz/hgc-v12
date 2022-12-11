@@ -1,7 +1,7 @@
 ---
 title: "Florence for friends"
 date: 2022-05-25
-tripit-uuid: 63e9ac61-44aa-9000-0001-000012f093db
+tripit: 317756379
 nights: 3
 modes: ["air"]
 flights:

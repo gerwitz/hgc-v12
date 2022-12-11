@@ -1,7 +1,7 @@
 ---
 title: "North Sea Jazz Festival"
-date: 2022-03-12
-tripit-uuid: 95e3cdc2-0aa7-9000-0001-000013124b98
+date: 2022-07-09
+tripit: 319966104
 nights: 1
 modes: ["train"]
 destinations:

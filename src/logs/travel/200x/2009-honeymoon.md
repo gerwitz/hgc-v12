@@ -2,8 +2,9 @@
 title: "Honeymoon!"
 date: 2009-09-12
 tripit: 1704375
+openflights: 47279
 nights: 17
-modes: ["air","bus","rail","boat"]
+modes: ["air","bus","boat"]
 flights:
   -
     date: 2009-09-12
