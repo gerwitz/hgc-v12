@@ -8,7 +8,9 @@ epitaph: grew up online
 
 For my 12th birthday, my godfather [&quot;Mad&quot; Tony](https://hans.gerwitz.com/2015/04/21/mad-tony.html) gifted me with an Applied Engineering DataLink 1200 modem.
 
-I started calling into BBSes regularly, using their message boards, playing turn-based text games, and downloading small files. I found and used recipes for making fireworks with black powder and other simple chemicals around our house. I exchanged tips with others in the copy-protection hacking scene.
+I started calling into BBSes regularly, using their message boards, playing turn-based text games, and downloading small files. I found and used recipes for making fireworks with black powder and other simple chemicals around our house. I exchanged tips with others in the copy-protection hacking scene.[^bbs]
+
+[^bbs]: I had accounts on at least a dozen systems, but most vividly remember The Junk Drawer, The Donut Hole (with more hacking resources), and playing Trade Wars. Later, The Partyline came around with multiple lines, so real-time chat was possible. Mindblowing.
 
 I found [this list of school dialups](http://phrack.org/issues/1/8.html) and with some paper copies of 2600 magazine learned to phrack well enough to make the long-distance calls without my parents or Southwestern Bell noticing while I experimented with hacking into them. I was able to experiment with some early ARPANET telnet and FTP but I didn’t see the point. The telco network and some security holes in BBN’s Telenet already allowed me to access remote systems, and the systems reachable that way were more interesting.[^hacks]
 
