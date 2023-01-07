@@ -34,3 +34,7 @@ Navigation and URL structure match as closely as is reasonable.
 `/media` contains attachments to dated content (posts and notes), often uploaded via Sitewriter.
 
 Almost everything else is a **page** meant to be permanent and fit within some sort of topic hierarchy.
+
+## Implementation notes
+
+Inspired by https://jkc.codes/blog/creating-drafts-in-eleventy/ the dynamic data files in /writing and /notes cause a true `draft` value to exclude pages from collections
