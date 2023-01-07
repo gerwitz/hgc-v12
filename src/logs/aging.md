@@ -20,4 +20,4 @@ and first bifocals
 Revive cycling workouts and am keenly aware of how much weaker I am, and how much slower improvement is
 
 **2021 (age 47)**
-Tinnitus is frequent enough to be noticeable, and make me aware of just how poor my hearing is
+Tinnitus (post-COVID) is frequent enough to be noticeable, and make me aware of just how poor my hearing is
