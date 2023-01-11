@@ -64,7 +64,7 @@ body {
     }
   }
 
-  .breadcrumb .internal {
+  .breadcrumb * {
     border: none;
     // padding-top: 5px;
     // padding-left: 0.5rem;
@@ -81,6 +81,7 @@ body {
 
 .main-container {
   background: $page-color;
+  padding-bottom: 18px;
 }
 
 /// FOOTER

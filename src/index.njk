@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
 ---
 
 <header>
-  <h1>hans.gerwitz.com</h1>
+  <h1>Hans Gerwitz</h1>
 </header>
 
 <section>
@@ -32,6 +32,7 @@ eleventyExcludeFromCollections: true
   <p>
     You can learn more about me at <a href="/about/" class="internal">about</a>, find me elsewhere at <a href="/follow/" class="internal">follow</a>, or <a href="https://social.gerwitz.com/main/ostatus?nickname=hans" rel="me noreferrer nofollow">follow me on the fediverse</a>.
   </p>
+  <!--
   <h2>Recently in <a href="/notes/" class="internal">notes</a></h2>
   {% set noteslist = collections.notes | reverse | limit(3) %}
   {% for item in noteslist %}
@@ -39,6 +40,7 @@ eleventyExcludeFromCollections: true
       {% include "feed-note.njk" %}
     </article>
   {% endfor %}
+  -->
 </section>
 
 <!-- this is here only because indieweb tools expect my home URL to have a microformat profile -->
