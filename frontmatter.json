@@ -4,7 +4,7 @@
     {
       "name": "default",
       "pageBundle": false,
-      "previewPath": "yyyy/MM/dd/",
+      "previewPath": "yyyy/MM/dd",
       "slugSuffix": ".html",
       "fields": [
         {
@@ -22,7 +22,13 @@
           "name": "date",
           "type": "datetime",
           "default": "{{now}}",
-          "isPublishDate": true
+          "isPublishDate": true,
+        },
+        {
+          "title": "Last modified date",
+          "name": "lastmod",
+          "type": "datetime",
+          "isModifiedDate": true
         },
         {
           "title": "Content preview",
@@ -71,13 +77,17 @@
     },
     {
       "title": "writing",
-      "path": "[[workspace]]/src/writing"
+      "path": "[[workspace]]/src/writing",
+      "excludeSubdir": false,
+      "filePrefix": "yyyy-MM-dd",
+      "contentTypes": "writing"
     },
     {
       "title": "notes",
       "path": "[[workspace]]/src/notes"
     }
   ],
+  "frontMatter.taxonomy.alignFilename": true,
   "frontMatter.taxonomy.tags": [],
   "frontMatter.taxonomy.categories": [
     "culture",
