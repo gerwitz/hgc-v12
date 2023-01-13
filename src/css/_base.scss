@@ -84,6 +84,14 @@ body {
   padding-bottom: 18px;
 }
 
+// TODO make a typography file
+section, div {
+  &.emphasis > P {
+    font-size: larger;
+  }
+}
+
+
 /// FOOTER
 
 .main-footer {
