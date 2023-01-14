@@ -3,7 +3,7 @@
 @import '_fonts';
 
 @import '_base';
-@import '_tufte';
+@import '_typography';
 @import '_timeline';
 @import '_sidenotes';
 
@@ -11,18 +11,9 @@
 // basics
 * {
   box-sizing: border-box;
-  // text-rendering: optimizeLegibility;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
   font-kerning: auto;
 }
 
-html {
-  font-family: sans-serif;
-  font-weight: $regular-font-weight;
-  -webkit-text-size-adjust: 100%;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-}
 
 body {
   // -webkit-font-smoothing: antialiased;
@@ -35,27 +26,6 @@ body {
   // margin: 0;
 }
 
-h1,h2,h3 {
-  font-family: $title-font;
-  font-weight: $title-font-weight;
-  font-variant-numeric: lining-nums proportional-nums;
-  font-variant-alternates: stylistic(2);
-}
-h1 {
-  font-size: 3.5rem;
-  line-height: 4rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-h2 {
-  font-size: 1.6875rem;
-  line-height: 2.4rem;
-  margin-top: 4rem;
-  margin-bottom: .8rem;
-}
-h3 {
-  font-size: 1.3rem;
-}
 
 p {
   position: relative;
@@ -74,7 +44,7 @@ a {
   color: inherit;
 }
 
-.c-blockquote {
+FIGURE.quotation {
   padding-left: 1em;
   border-left: 0.2em solid;
   border-color: $meta-color;

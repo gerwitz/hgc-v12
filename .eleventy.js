@@ -76,7 +76,12 @@ module.exports = function(eleventyConfig) {
   };
   let markdownLib = markdownIt(options)
     .use(markdownItFootnote)
-    .use(markdownItAttribution)
+    .use(markdownItAttribution, {
+      classNameContainer: 'quotation',
+      classNameAttribution: '',
+      marker: '--',
+      removeMarker: true
+    })
     .use(markdownItImplicitFigures, {
       dataType: true,
       figcaption: true

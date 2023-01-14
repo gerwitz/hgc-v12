@@ -23,6 +23,8 @@ Navigation and URL structure match as closely as is reasonable.
 
 "Dated content" URLs (e.g. posts and notes) are named `{iso-date}-{slug}.html`. Organization into folders such as years is arbitrary and only for ease management.
 
+Quotes are rendered by [markdown-it-attribution](https://github.com/dweidner/markdown-it-attribution) which renders HTML as `<figure>` elements, à la [ALA](https://alistapart.com/blog/post/more-thoughts-about-blockquotes-than-are-strictly-required/).
+
 ## Content
 
 `/weeks` contains journal entries that will be included in the weekly archive URLs.
