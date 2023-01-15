@@ -8,11 +8,16 @@ $bp-full: "min-width: #{$pale-size}";
 
 // Colors
 $page-color: hsl(0, 0%, 99%);
+$dark-page-color: hsl(140, 7%, 25%);
 $text-color: hsl(0, 0%, 5%);
+$dark-text-color: hsl(0, 0%, 100%);
 $meta-color: hsl(0, 0%, 5%);
-$accent-color: hsl(140, 100%, 25%); // lego tree #00852B
-// or is it #237841 (most often used online)
-// or #458441 or #3D8828 or #058A0B (used as backgrounds on lego.com)
+$accent-color: hsl(140, 100%, 25%); // #00802B
+// initial search found brick databases using #00852B and #00802B
+// later #237841 is more common
+// lego.com uses #458441, #3D8828, and #058A0B for backgrounds
+// #237841 is nice, but a bit dull. #00802B wins
+// (very close to Prismacolor 908 - dark green)
 
 // Font
 $body-font: 'Source Sans', sans-serif;

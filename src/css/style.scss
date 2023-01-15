@@ -7,6 +7,21 @@
 @import '_timeline';
 @import '_sidenotes';
 
+// CSS variables for runtime
+
+:root {
+  --page-color: #{$page-color};
+  --text-color: #{$text-color};
+  --meta-color: #{$meta-color};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-color: #{$dark-page-color};
+    --text-color: #{$dark-text-color};
+    --meta-color: #{$dark-text-color};
+  }
+}
 
 // basics
 * {
@@ -47,7 +62,7 @@ a {
 FIGURE.quotation {
   padding-left: 1em;
   border-left: 0.2em solid;
-  border-color: $meta-color;
+  border-color: var(--meta-color);
 
   blockquote {
     margin: 0;
@@ -108,6 +123,7 @@ div.hidden {
 // links
 a {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
   text-decoration-color: $accent-color;
 
   padding-left: 0.25rem;
@@ -125,10 +141,9 @@ a.internal  {
   font-weight: $bold-font-weight;
 }
 .internal::before {
-  content: '/';
+  content: '\29F8'; // a bigger slash
   color: $accent-color;
   font-weight: $bold-font-weight;
-  text-decoration: none;
 }
 a.internal:hover::before {
   color: $page-color;
@@ -146,6 +161,25 @@ a.sticker {
 
 a:hover.sticker {
   border-color: $accent-color;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  a, a:hover {
+    color: inherit;
+    background-color: inherit;
+    box-shadow: none;
+    text-decoration-color: inherit;
+  }
+  a:hover {
+    text-decoration-thickness: 3px;
+  }
+  .internal::before {
+    color: inherit;
+  }
+    a.internal:hover::before {
+    color: inherit;
+  }
 }
 
 dt  {
@@ -176,18 +210,19 @@ dd {
 .meta {
   font-family: $sans-font;
   font-weight: $light-font-weight;
-  color: $meta-color;
+  color: var(--meta-color);
 
   font-variant-numeric: lining-nums proportional-nums;
 
   a {
-    text-decoration-color: $meta-color;
+    text-decoration-color: var(--meta-color);
   }
 }
 
 .signature {
-  border-top: solid 1px $accent-color;
+  border-top: solid 1px var(--meta-color);
   padding-top: 1.0rem;
+  font-variant-numeric: lining-nums proportional-nums;
 
   font-style: italic;
   a.internal {
