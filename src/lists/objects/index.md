@@ -1,18 +1,20 @@
 ---
-title: Toolkit
+title: Things
 ---
 
 <!--
-
   https://aaronparecki.com/life-stack/
  -->
+
+Stuff I find important enough to reference or recommend:
 
 ## Digital
 
 This site's stack:
 - [Eleventy](https://www.11ty.dev/) to build
 - [Netlify](https://www.netlify.com/) to serve
-- [Sitewriter](https://sitewriter.net/) to post, indyweb-style
+- [IndieKit](https://getindiekit.com/) to post, indyweb-style
+- [Akkoma](https://akkoma.social/) to connect to the social fediverse
 
 [Visual Code Studio](https://code.visualstudio.com/)
 
@@ -24,12 +26,8 @@ This site's stack:
 
 ## Hardware
 
-You may notice a theme.
-
-- 13" MacBooks (one for home, one for work)
+- 2022 M2 MacBook Air (14" M1 MacBook Pro at work)
 - 11" iPad Pro is increasingly my go-to at both work and home.
-
-- Airpods Pro
 
 ## Carry Kit
 
@@ -39,7 +37,7 @@ Around Christmas of 2014, I bought a Framelet from [Matthijs Ariens](https://www
 
 ### Phone
 
-I've been carrying pocket computers for ages, and since 2007 they've been iPhones. Today it's an iPhone 11 Pro.
+I've been carrying pocket computers for ages, and since 2007 they've been iPhones. Today it's an iPhone 13 Pro, which is too big.
 
 ### Watch
 
@@ -57,8 +55,16 @@ I found a [Bison belt](https://bisondesigns.com/products/30mm-catch-and-release&
 
 ## Cycling
 
-[LeMond Tete de Course](./lemond/)
+[Specialized Aethos](./aethos/)
 
 [Strava](https://www.strava.com/athletes/692260)
 
 [VanMoof](https://www.vanmoof.com/en_nl/bikes/standard-step-in)
+
+## Home
+
+[Philips IconiQ](https://ifdesign.com/en/winner-ranking/project/iconiq-wetdry-shaver/180839)
+
+## History
+
+[Boombox](./boombox/)

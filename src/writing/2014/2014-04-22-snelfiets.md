@@ -8,7 +8,8 @@ content-tags:
 - shannon
 ---
 
-On our last trip to Seattle, Shannon and I brought back our [road bikes](/lists/tools/lemond/). Yesterday we finally rode them [out to Zandvoort](http://www.strava.com/activities/142864443).
+On our last trip to Seattle, Shannon and I brought back our [road bikes](/lists/objects
+/lemond/). Yesterday we finally rode them [out to Zandvoort](http://www.strava.com/activities/142864443).
 
 The Dutch tracks are a pleasure to use, and who can complain about riding to the sea? But comparing the elevation profile against my typical Seattle experience makes me worry for the future of my climbing strength.
 

@@ -6,6 +6,6 @@ In 2022 I finally joined the modern era and bought a carbon-framed road bike: a 
 
 I enjoy distinctive style, but was partly attracted to the classic appearance. So I opted for the S-Works frame which in 2022 was the only way to get a subtle colorway. Mine is "Cool Grey/Chameleon Eyris Tint" which means grey with an almost lavendar irredescence if you look closely under sunlight. I would have preferred the brushed silver of the "Founders Edition" but those are made of unobtainium.
 
-I prioritized contact points: [Kaptein Tweewielers built it](https://www.instagram.com/p/Cgn_drUI5d6/) for me with Ultegra components, Mavic Cosmic SL 32 wheels, and Specialized's fanciest saddle and integrated handlebars.
+I prioritized contact points: [Kaptein Tweewielers built it](https://www.instagram.com/p/Cgn_drUI5d6/) for me with 2022 Ultegra Di2 components, Mavic Cosmic SLR 32 wheels, and Specialized's fanciest saddle and integrated handlebars.
 
-According to my bathroom scale, it weighs in at 7.1 kg. I certainly don't need a bike this light, but it feels good to ride and is very convenient to carry.
+According to my bathroom scale, it weighs in at 7.0 kg. I certainly don't need a bike this light, but it feels good to ride and is very convenient to carry.

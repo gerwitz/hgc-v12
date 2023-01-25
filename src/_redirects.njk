@@ -4,7 +4,7 @@ permalink: "_redirects"
 # historic public URLs
 /library/records/*          /logs/appearances/:splat       301
 /library/projects/*         /projects/:splat                  301
-/uses/*                     /lists/tools/:splat               301
+/uses/*                     /lists/objects/:splat               301
 
 {% set thisweek = collections.weeks[collections.weeks.length - 2] %}
 /now                        {{ thisweek.url }}                302
