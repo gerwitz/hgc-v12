@@ -9,7 +9,7 @@ h1,h2,h3 {
   font-family: $title-font;
   font-weight: $title-font-weight;
   font-variant-numeric: lining-nums proportional-nums;
-  font-variant-alternates: stylistic(2);
+  // font-variant-alternates: stylistic(2);
 }
 h1 {
   font-size: 3.5rem;
