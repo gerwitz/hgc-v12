@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self'; style-src 'self' *.cloudfront.net 'unsafe-inline'; font-src 'self' *.cloudfront.net; script-src 'self' unpkg.com 'unsafe-inline'; object-src 'none'; frame-src 'none'; base-uri 'none';
+  Content-Security-Policy: default-src 'self'; style-src 'self' *.cloudfront.net 'unsafe-inline'; font-src 'self' *.cloudfront.net; script-src 'self' unpkg.com 'unsafe-inline'; img-src 'self' *.cloudfront.net; object-src 'none'; frame-src 'none'; base-uri 'none';
   X-Frame-Options: DENY
   X-XSS-Protection: 1
   X-Content-Type-Options: nosniff
