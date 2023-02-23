@@ -13,6 +13,6 @@ This should be an auto-generated, but isn't
 -->
 
 - [Stickers](brands/)
-- [Things](objects/)
+- [Stuff](things/)
 - [Elementary Lessons](lessons/)
 - [The Circles of Hell](hell/)

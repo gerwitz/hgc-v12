@@ -4,7 +4,7 @@
 // so <p> floats left and <aside> floats right
 
 // make room for sidenotes
-article p {
+article p, article ul {
   float: left;
   clear: left;
   width: 100%;
@@ -59,7 +59,7 @@ a.sidenote-ref {
     padding-left: 3rem;
 
     margin-top: 1em; // to match article > *+*
-    margin-bottom: 1.96rem;
+    // margin-bottom: 1.96rem;
   }
 
   font-size: 1.0rem;
@@ -73,5 +73,8 @@ a.sidenote-ref {
     float: left;
     margin-left: -1.0rem;
     color: $meta-color;
+  }
+  P {
+    clear: none;
   }
 }

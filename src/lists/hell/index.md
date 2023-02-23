@@ -46,7 +46,7 @@ This is who I expect to meet on my tour of the circles of Hell.
 - Those who seek fame with dangerous falsehoods[^quack]
 - Those who consume flesh yet claim to be environmentalists
 
-[^quack] E.g. Andrew Wakefield, Jim Humble, Kerri Rivera
+[^quack]: E.g. Andrew Wakefield, Jim Humble, Kerri Rivera
 
 ## Seventh
 <!-- Violence -->

@@ -9,7 +9,7 @@ But of course I deviate from "normal" in a few ways. My feet are shorter than av
 
 # Stereoblindness
 
-I was born with hereditary comitant exotropic strabismus, which causes amblyopia or "lazy eye". This basically means my eyes are misaligned so they didn't work together. Left untreated, one eye would become so dominant the other might stop working (this happened to my grandfather).[^lazy] I was treated in my early school years and developed full vision in both eyes. This involved wearing eye patches, which was not cool and probably contributed substantially to my social status as an outcast nerd.
+I was born with hereditary comitant esotropic strabismus, which causes amblyopia or "lazy eye". This basically means my eyes are misaligned so they didn't work together. Left untreated, one eye would become so dominant the other might stop working (this happened to my grandfather).[^lazy] I was treated in my early school years and developed full vision in both eyes. This involved wearing eye patches, which was not cool and probably contributed substantially to my social status as an outcast nerd.
 
 [^lazy]: My first pediatric optometrist diagnosed correctly but considered the strabismus not worth treating. Fortunately, my mother eventually took me to get a second opinion, and the next doctor found it very important to treat before further damage was done.
 

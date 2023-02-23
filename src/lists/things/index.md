@@ -1,5 +1,5 @@
 ---
-title: Things
+title: Stuff
 ---
 
 <!--
