@@ -1,7 +1,7 @@
 ---
 title: "Belgrade for Resonate"
 date: 2017-04-18
-tripit: 194191653
+tripit: 174521460
 nights: 5
 modes: ["air"]
 flights:

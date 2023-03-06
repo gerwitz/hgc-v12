@@ -16,6 +16,11 @@ flights:
     from: SEA
     to: STL
     km: 2742
+trains:
+  -
+    date: 2005-04-24
+    from: seattle
+    to: vancouver
 destinations:
   -
     title: "Seattle, Victoria, and Vancouver"

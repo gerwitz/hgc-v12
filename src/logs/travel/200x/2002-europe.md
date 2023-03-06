@@ -24,6 +24,11 @@ flights:
     from: JFK
     to: STL
     km: 1432
+trains:
+  -
+    date: 2002-08-01
+    from: frankfurt
+    to: paris-est
 destinations:
   -
     title: ""

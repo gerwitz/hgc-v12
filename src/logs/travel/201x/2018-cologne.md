@@ -4,6 +4,15 @@ date: 2018-12-14
 tripit: 244126805
 nights: 2
 modes: ["rail"]
+trains:
+  -
+    date: 2018-12-14
+    from: amsterdam
+    to: cologne
+  -
+    date: 2018-12-16
+    from: cologne
+    to: amsterdam
 destinations:
   -
     title: "Cologne Christmas markets"

@@ -1,9 +1,9 @@
 ---
 title: "A Southern NYE"
 date: 2017-12-30
-tripit:
+tripit: 208693081
 nights: 2
-modes: ["air","rail","car"]
+modes: ["air","car"]
 flights:
   -
     date: 2017-12-30

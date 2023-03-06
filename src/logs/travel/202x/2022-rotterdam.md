@@ -3,7 +3,7 @@ title: "North Sea Jazz Festival"
 date: 2022-07-09
 tripit: 319966104
 nights: 1
-modes: ["train"]
+modes: ["rail"]
 destinations:
   -
     title: "Rotterdam"

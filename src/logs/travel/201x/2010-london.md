@@ -11,6 +11,19 @@ flights:
     from: MUC
     to: LHR
     km: 940
+trains:
+  -
+    date: 2010-04-21
+    from: london-stpancras
+    to: paris-chessy
+  -
+    date: 2010-04-21
+    from: paris-est
+    to: stuttgart
+  -
+    date: 2010-04-21
+    from: stuttgart
+    to: munich
 destinations:
   -
     title: "London for work"
@@ -21,4 +34,4 @@ destinations:
 
 with Shannon
 
-Return via Eurostar, TGV and two D Bahns (plus metros in London, Paris, Munich) thanks to Eyjafjallajökull volcano
+Return via Eurostar, TGV, and two D Bahns (plus metros in London, Paris, and Munich) thanks to Eyjafjallajökull volcano

@@ -17,6 +17,19 @@ flights:
     from: BGO
     to: AMS
     km: 887
+trains:
+  -
+    date: 2017-05-08
+    from: oslo
+    to: myrdal
+  -
+    date: 2017-05-08
+    from: myrdal
+    to: flam
+  -
+    date: 2017-05-08
+    from: voss
+    to: bergen
 destinations:
   -
     title: "Oslo for Munch"

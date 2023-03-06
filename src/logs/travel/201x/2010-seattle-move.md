@@ -29,6 +29,11 @@ flights:
     from: CDG
     to: SEA
     km: 8047
+trains:
+  -
+    date: 2010-07-16
+    from: barcelona
+    to: madrid
 destinations:
   -
     title: "Paris for the Louvre"

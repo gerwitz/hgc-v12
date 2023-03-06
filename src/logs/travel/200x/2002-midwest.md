@@ -16,6 +16,11 @@ flights:
     from: MDW
     to: STL
     km: 404
+trains:
+  -
+    date: 2002-06-17
+    from: chicago
+    to: milwaukee
 destinations:
   -
     title: "Chicago"

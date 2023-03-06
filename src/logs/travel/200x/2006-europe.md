@@ -29,6 +29,15 @@ flights:
     from: ORD
     to: STL
     km: 415
+trains:
+  -
+    date: 2006-05-03
+    from: london-stpancras
+    to: paris-nord
+  -
+    date: 2006-05-06
+    from: paris-nord
+    to: london-stpancras
 destinations:
   -
     title: "London"
@@ -42,4 +51,4 @@ destinations:
     geo: [48.86645,2.33568]
 ---
 
-with Kristan
+with Kristan, surprised her with Paris leg

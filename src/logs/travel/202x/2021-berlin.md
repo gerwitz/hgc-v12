@@ -3,7 +3,16 @@ title: "Berlin for SHIFTx"
 date: 2021-09-01
 tripit: 309199894
 nights: 4
-modes: ["train", "car"]
+modes: ["rail", "car"]
+trains:
+  -
+    date: 2021-09-01
+    from: amsterdam
+    to: berlin
+  -
+    date: 2021-09-05
+    from: berlin
+    to: amsterdam
 destinations:
   -
     title: "Berlin"
