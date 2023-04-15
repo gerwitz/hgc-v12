@@ -14,6 +14,7 @@ subtitle: People who inspire
 * [Connie Picciotto](http://www.washingtonpost.com/sf/feature/wp/2013/05/02/connie-picciotto-has-kept-vigil-near-the-white-house-for-32-years-why-and-at-what-cost/)
 * Laungi Bhuiya
 * [Katalin Karikó](https://www.theguardian.com/science/2020/nov/21/covid-vaccine-technology-pioneer-i-never-doubted-it-would-work): gave up personal progress for science progress
+* [Oleksandr Kamyshin](https://www.bbc.com/news/world-europe-60755198): businessperson who [stepped up in crisis](https://www.bbc.com/news/world-europe-60755198); I hope I would act similarly but moreso hope I never find out
 
 ## Important
 
