@@ -68,6 +68,16 @@ Several MBTI tests have rated me an INTp, although I've never taken the official
 
 --
 
+2019-01-03 official MBTI test
+https://www.mbtitype.com/mbti/type/intp
+
+Introversion 55
+Intuition 35
+Thinking 41
+Perceiving 17
+
+--
+
 2019-05-21
 
 https://bigfive-test.com/result/5ce3ef4afbef970069f7b14f
@@ -100,3 +110,19 @@ Your score in this facet is lower than the average by 32.5%.
 Machiavellianism: Strategic exploitation and deceit
 Your score in this facet is greater than the average by 7.75%.
 
+--
+
+2023-06
+
+[The Bartle Test of Gamer Psychology](http://matthewbarr.co.uk/bartle/index.php) based on https://mud.co.uk/richard/hcds.htm
+
+You are 100% Explorer
+What Bartle says:
+
+♠ Explorers delight in having the game expose its internal machinations to them. They try progressively esoteric actions in wild, out-of-the-way places, looking for interesting features (ie. bugs) and figuring out how things work. Scoring points may be necessary to enter some next phase of exploration, but it's tedious, and anyone with half a brain can do it. Killing is quicker, and might be a constructive exercise in its own right, but it causes too much hassle in the long run if the deceased return to seek retribution. Socialising can be informative as a source of new ideas to try out, but most of what people say is irrelevant or old hat. The real fun comes only from discovery, and making the most complete set of maps in existence.
+You are also:
+
+47% Socialiser
+40% Achiever
+13% Killer
+This result may be abbreviated as ESAK
