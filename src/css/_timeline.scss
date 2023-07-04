@@ -22,7 +22,7 @@ $timelinePadding: 48px;
       left: -$timelineLine*2;
       width: $timelineLine;
       height: 100%;
-      background-color: $text-color;
+      background: linear-gradient($page-color 0, $text-color 18px, $text-color 100%);
       // border-left: solid $timelineLine $text-color;
     }
     margin-left: $timelineLeft;
@@ -55,7 +55,7 @@ $timelinePadding: 48px;
         width: $timelineDot - ($timelineLine * 2);
         height: $timelineDot - ($timelineLine * 2);
         left: -$timelinePadding - math.div($timelineLine, 2) - math.div($timelineDot, 2);
-        margin-top: -(math.div($timelineDot, 2));
+        margin-top: -(math.div($timelineDot, 2)); // this could be improved to align with text rather than line
         top: 50%;
 
         border: $timelineLine solid $text-color;
