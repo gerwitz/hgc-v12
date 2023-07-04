@@ -13,28 +13,25 @@ permalink: "/logs/travel/{{ page.fileSlug }}/index.html"
     </div>
   </div>
 
-  <div class="content">
-    <div class="trip">
-      {{ content | safe }}
-    </div>
+  <div class="content trip">
+    {{ content | safe }}
 
-    <h2>Stays</h2>
     <ol>
     {% for dest in destinations %}
       <li>
-        {% if loop.length > 1 %}
-          {{ dest.nights | int }} night{{ "s" if dest.nights != 1 }} at
+        {% if dest.nights %}
+          {{ dest.nights | int }} night{{ "s" if (dest.nights > 1) }}
         {% endif %}
         {% if dest.geo %}
+          at
           {% set mapurl = "http://maps.google.com/maps?z=14&t=h&q=loc:"+dest.geo[0] +"+"+ dest.geo[1] %}
           {% if dest.location %}
             {{ dest.location }}
           {% else %}
             {{ dest.geo | string }}
           {% endif %}
-        {% else %}
-          {{ dest.title }}
         {% endif %}
+        in {{ dest.title }}
       </li>
     {% endfor %}
     </ol>
