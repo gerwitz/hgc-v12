@@ -5,73 +5,67 @@ breadcrumbs:
     - weeks
 ---
 
-<article class="h-entry">
+<article class="h-entry weeknotes">
 
-    <div>
-        <h1 class="p-name">{{ renderData.title }}</h1>
-        <div class="meta">
-            {{ renderData.weeknum | weekstart | date('weekstarted') }}
+    <header>
+      <h1 class="p-name">{{ renderData.title }}</h1>
+      <div class="meta">
+        {{ renderData.weeknum | weekstart | date('weekstarted') }}
 
-            {% if renderData.weeknum == 0 %}
-              (<a href="1">Next</a>)
-            {% else %}
-              (<a href="{{ renderData.weeknum | int - 1 }}">Previous</a>
-              {%- if not renderData.current %}
-              |
-              <a href="{{ renderData.weeknum | int + 1 }}">Next</a>
-              {%- endif %})
-            {% endif %}
-        </div>
-    </div>
-
-    <div class="content">
-
-        <div class="weeknotes">
-            {{ content | safe }}
-        </div>
-
-        {% for event in collections.weeklyEvents[renderData.weeknum] %}
-        {% if loop.first %}
-          <h2>Event{{ "s" if loop.length > 1 }}</h2>
-          <ul>
-        {% endif %}
-            <li>
-              <a href="{{ event.url }}">{{ event.data.title }}</a>
-            </li>
-        {% if loop.last %}
-          </ul>
-        {% endif %}
+        {% if renderData.weeknum == 0 %}
+          (<a href="1">Next</a>)
         {% else %}
-          <!-- No events -->
-        {% endfor %}
-        </ul>
-
-        {% for post in collections.weeklyWriting[renderData.weeknum] %}
-        {% if loop.first %}
-          <h2>Writing</h2>
-          <ul>
+          (<a href="{{ renderData.weeknum | int - 1 }}">Previous</a>
+          {%- if not renderData.current %}
+          |
+          <a href="{{ renderData.weeknum | int + 1 }}">Next</a>
+          {%- endif %})
         {% endif %}
-            <li>
-              <a href="{{ post.url }}">{{ post.data.title }}</a>
-            </li>
-        {% if loop.last %}
-          </ul>
-        {% endif %}
-        {% else %}
-          <!-- No writing -->
-        {% endfor %}
-        </ul>
+      </div>
+    </header>
 
-        {% for item in collections.weeklyNotes[renderData.weeknum] %}
-        {% if loop.first %}
-          <h2>{{ loop.length }} Note{{ "s" if loop.length > 1 }}</h2>
-        {% endif %}
-          {% include "feed-note.njk" %}
-        {% else %}
-          <!-- No notes -->
-        {% endfor %}
+    {{ content | safe }}
 
-    </div>
+    {% for event in collections.weeklyEvents[renderData.weeknum] %}
+    {% if loop.first %}
+      <h2>Event{{ "s" if loop.length > 1 }}</h2>
+      <ul>
+    {% endif %}
+        <li>
+          <a href="{{ event.url }}">{{ event.data.title }}</a>
+        </li>
+    {% if loop.last %}
+      </ul>
+    {% endif %}
+    {% else %}
+      <!-- No events -->
+    {% endfor %}
+    </ul>
+
+    {% for post in collections.weeklyWriting[renderData.weeknum] %}
+    {% if loop.first %}
+      <h2>Writing</h2>
+      <ul>
+    {% endif %}
+        <li>
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>
+    {% if loop.last %}
+      </ul>
+    {% endif %}
+    {% else %}
+      <!-- No writing -->
+    {% endfor %}
+    </ul>
+
+    {% for item in collections.weeklyNotes[renderData.weeknum] %}
+    {% if loop.first %}
+      <h2>{{ loop.length }} Note{{ "s" if loop.length > 1 }}</h2>
+    {% endif %}
+      {% include "feed-note.njk" %}
+    {% else %}
+      <!-- No notes -->
+    {% endfor %}
 
     {% if steps %}
         Data test: 🚶🏻‍{{ steps }} steps

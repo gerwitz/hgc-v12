@@ -4,37 +4,35 @@ bodyClass: trip
 permalink: "/logs/travel/{{ page.fileSlug }}/index.html"
 ---
 
-<article class="h-entry">
+<article class="h-entry trip">
 
-  <div>
+  <header>
     <h1 class="p-name">{{ title }}</h1>
     <div class="meta">
       {{ nights | int }} night{{ "s" if nights != 1 }} starting <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} (week {{ page.date | weeklink }})</time>
     </div>
-  </div>
+  </header>
 
-  <div class="content trip">
-    {{ content | safe }}
+  {{ content | safe }}
 
-    <ol>
-    {% for dest in destinations %}
-      <li>
-        {% if dest.nights %}
-          {{ dest.nights | int }} night{{ "s" if (dest.nights > 1) }}
+  <ol>
+  {% for dest in destinations %}
+    <li>
+      {% if dest.nights %}
+        {{ dest.nights | int }} night{{ "s" if (dest.nights > 1) }}
+      {% endif %}
+      {% if dest.geo %}
+        at
+        {% set mapurl = "http://maps.google.com/maps?z=14&t=h&q=loc:"+dest.geo[0] +"+"+ dest.geo[1] %}
+        {% if dest.location %}
+          {{ dest.location }}
+        {% else %}
+          {{ dest.geo | string }}
         {% endif %}
-        {% if dest.geo %}
-          at
-          {% set mapurl = "http://maps.google.com/maps?z=14&t=h&q=loc:"+dest.geo[0] +"+"+ dest.geo[1] %}
-          {% if dest.location %}
-            {{ dest.location }}
-          {% else %}
-            {{ dest.geo | string }}
-          {% endif %}
-        {% endif %}
-        in {{ dest.title }}
-      </li>
-    {% endfor %}
-    </ol>
-  </div>
+      {% endif %}
+      in {{ dest.title }}
+    </li>
+  {% endfor %}
+  </ol>
 
 </article>
