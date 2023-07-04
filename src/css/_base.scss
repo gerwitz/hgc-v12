@@ -4,7 +4,10 @@
 
 body {
   height: 100%;
+  min-height: 100vh;
   margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 .main-header, .main-container, .main-footer {
   display: grid;
