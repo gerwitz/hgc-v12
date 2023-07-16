@@ -21,3 +21,6 @@ Revive cycling workouts and am keenly aware of how much weaker I am, and how muc
 
 **2021 (age 47)**
 Tinnitus (post-COVID) is frequent enough to be noticeable, and make me aware of just how poor my hearing is
+
+**2022 (age 48)**
+[Frozen shoulder](https://en.wikipedia.org/wiki/Adhesive_capsulitis_of_the_shoulder), maybe [SIRVA](https://pubmed.ncbi.nlm.nih.gov/35339304/) but it doesn't matter. Mild arm pain since January (after a shot), then rapid escalation in November. Learned to cope and was able to stop taking ibuprophen in April, broke through plateau in recovering movement in June.
