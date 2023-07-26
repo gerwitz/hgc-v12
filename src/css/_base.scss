@@ -94,6 +94,37 @@ section, div {
   }
 }
 
+/// SEARCH WIDGET
+
+
+.search-form {
+  position: relative;
+  width: 190px;
+  height: 30px;
+  input {
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    padding: 0 2px 0 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  button {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    height: 26px;
+    width: 26px;
+    z-index: 10;
+    border: none;
+    background: none;
+    svg * {
+      stroke: $accent-color;
+    }
+  }
+}
 
 /// FOOTER
 
@@ -142,32 +173,6 @@ section, div {
       &.home {
         right: unset;
         left: 0;
-      }
-
-      width: 190px;
-      height: 30px;
-      input {
-        width: 100%;
-        border-radius: 15px;
-        border: none;
-        padding: 0 2px 0 30px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
-      }
-      button {
-        position: absolute;
-        top: 2px;
-        left: 4px;
-        height: 26px;
-        width: 26px;
-        z-index: 10;
-        border: none;
-        background: none;
-        svg * {
-          stroke: $accent-color;
-        }
       }
     }
   }
