@@ -100,6 +100,7 @@ module.exports = function(eleventyConfig) {
     return '<aside id="fn:'+id+'" class="sidenote" form-associated="true"><span class="sidenote-ref">'+id+'</span>';
   }; // footnote token will wrap content in a <p>
   markdownLib.renderer.rules.footnote_close = () => ('</aside>');
+  markdownLib.linkify.set({ fuzzyLink: false }); // don't turn simple domains into links
   eleventyConfig.setLibrary("md", markdownLib);
 
   eleventyConfig.addPassthroughCopy("src/**/*.gif");
