@@ -17,3 +17,20 @@
   src: url('./fonts/SourceSans3VF-Roman.otf.woff2') format('woff2 supports variations'),
        url('./fonts/SourceSans3VF-Roman.otf.woff2') format('woff2-variations');
 }
+
+@font-face {
+  font-family: 'STIX Two Text';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('./fonts/STIXTwoText.woff2') format(woff2) tech(variations);
+}
+
+@font-face {
+  font-family: 'STIX Two Text';
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('./fonts/STIXTwoText.woff2') format(woff2) tech(variations);
+}
+

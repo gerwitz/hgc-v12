@@ -9,7 +9,7 @@ After too many revisions over so many years, I’m aiming for timeless and true 
 
 Content layout was originally inspired by [Tufte CSS](https://edwardtufte.github.io/tufte-css/). A key feature is the use of sidenotes, which are difficult in CSS. I settled on a simple floats approach similar to [practicaltypography.com](https://practicaltypography.com/page-margins.html) with `<aside>` markup inspired by [Ink and Switch](https://www.inkandswitch.com/capstone/). Using a [tweaked plugin for markdown-it](https://github.com/uyumyuuy/markdown-it-footnote-here), this is done with standard Markdown and results in semantic HTML.
 
-Type is set using [Source Sans](https://github.com/adobe-fonts/source-sans/), designed by Paul D. Hunt, under the SIL Open Font License v1.1.
+Body copy is set in [STIX Two](https://www.stixfonts.org/), a modernization of Donald Knuth's original Computer Modern. Other type is using [Source Sans](https://github.com/adobe-fonts/source-sans/), designed by [Paul D. Hunt](https://www.p22.com/designers_view-Paul_D__Hunt) for Adobe. Both are used under the SIL Open Font License v1.1.
 
 The logo glyph[^logo] is [LEGO part #2435][tree]. As a child I was fascinated with the [larger version][big tree] of this part as a manufactured object. I also spent a lot of time in forests and many of my friends were trees. (I previously used the [Unicode tree glyph][unicode], <span role="img" aria-label="tree">&#x1F332;&#xFE0E;</span> but this simple dingbat has been lost to creeping emojification.)
 

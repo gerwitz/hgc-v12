@@ -29,19 +29,6 @@
   font-kerning: auto;
 }
 
-
-body {
-  // -webkit-font-smoothing: antialiased;
-  // background: $page-color;
-  // color: $text-color;
-  // font-family: $body-font;
-  // font-size: 1rem;
-  // line-height: 1.6rem;
-  // height: 100%;
-  // margin: 0;
-}
-
-
 p {
   position: relative;
   margin-bottom: 1rem;
@@ -89,7 +76,7 @@ figure {
   }
 }
 figcaption {
-  font-family: $sans-font;
+  font-family: $base-font;
   font-size: 80%;
   line-height: 1.3rem;
 
@@ -136,10 +123,11 @@ a {
 
 .internal  {
   font-family: $title-font;
+  padding-top: 3px; // STIX Two otherwise uses entire line height
 }
-a.internal  {
-  font-weight: $bold-font-weight;
-}
+// a.internal  {
+//   font-weight: $bold-font-weight;
+// }
 .internal::before {
   content: '\29F8'; // a bigger slash
   color: $accent-color;
@@ -209,7 +197,7 @@ dd {
 
 // metadata
 .meta {
-  font-family: $sans-font;
+  font-family: $base-font;
   font-weight: $light-font-weight;
   color: var(--meta-color);
 
