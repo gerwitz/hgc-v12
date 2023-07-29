@@ -10,7 +10,7 @@ external: https://www.linkedin.com/posts/gerwitz_design-opensourcesoftware-activ
 
 I have joined [Canonical](https://canonical.com/) as Head of Design. We are a private company that seeks to make open source software available to everyone, best known for the Ubuntu Linux distribution.
 
-_Everyone_ includes enterprise customers that have reliability ad security requirements, hardware vendors who want to ensure compatibility, but also users who want or need an open alternative to proprietary software. This really resonates with me, as it was participation in OSS that connected me to a world larger than my home and set my eyes towards a migratory future that I now live in.
+_Everyone_ includes enterprise customers that have reliability and security requirements, hardware vendors who want to ensure compatibility, but also users who want or need an open alternative to proprietary software. This really resonates with me, as it was participation in OSS that connected me to a world larger than my home and set my eyes towards a migratory future that I now live in.
 
 _Available_ means providing commercial support to those users that require it, but also includes usability. It's in our heritage; Ubuntu came to prominence by making Linux easier to use. Every product team appreciates the need to design strong user experiences, from desktop software and web applications to command-line interfaces and configuration files.
 
