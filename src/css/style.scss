@@ -12,13 +12,15 @@
 :root {
   --page-color: #{$page-color};
   --text-color: #{$text-color};
-  --meta-color: #{$meta-color};
+  --heading-color: #{$heading-color};
+ --meta-color: #{$meta-color};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --page-color: #{$dark-page-color};
     --text-color: #{$dark-text-color};
+    --heading-color: #{$dark-text-color};
     --meta-color: #{$dark-text-color};
   }
 }
@@ -44,6 +46,10 @@ p {
 
 a {
   color: inherit;
+}
+
+h1, h2, h3, h4 {
+  color: var(--heading-color);
 }
 
 FIGURE.quotation {
