@@ -23,6 +23,13 @@ I'm also near-sighted.
 
 Although I haven't been in an MRI scanner for formal diagnosis, I believe I have at least mild [aphantasia](https://en.wikipedia.org/wiki/Aphantasia). This means I am not consciously aware of visualization when I think about or remember visual things. It's not a disability at all, just a deviation from normal. Dustin Grinnell described the experience well in [2016 in _New Scientist_](https://www.newscientist.com/article/2083706-my-minds-eye-is-blind-so-whats-going-on-in-my-brain/).
 
+It's not a formal disorder, so it's not like I'm diagnosed. But in a [University of Wisconsin survey](https://uwmadison.co1.qualtrics.com/jfe/form/SV_3NMm9yyFsNioVhz) I was a bit of an outlier:
+
+- Internal Verbalization: 1.83/10 (2nd percentile)
+- Visual Imagery: 1.6/10 (2nd percentile)
+- Orthographic Imagery: 1.71/10 (12th percentile)
+- Representational Manipulation: 4.63/10 (94th percentile)
+
 I sometimes wonder if my difficulty learning new faces[^faces] is related to this. But our best models of human perception are not refined enough to give me any confidence in this.
 
 [^faces]: I guess I have a touch of [prosopamnesia](https://en.wikipedia.org/wiki/Prosopamnesia).
