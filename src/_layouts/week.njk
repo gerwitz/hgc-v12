@@ -13,12 +13,12 @@ breadcrumbs:
         {{ renderData.weeknum | weekstart | date('weekstarted') }}
 
         {% if renderData.weeknum == 0 %}
-          (<a href="../1">Next</a>)
+          (<a href="/weeks/1/">Next</a>)
         {% else %}
-          (<a href="../{{ renderData.weeknum | int - 1 }}">Previous</a>
+          (<a href="/weeks/{{ renderData.weeknum | int - 1 }}/">Previous</a>
           {%- if not renderData.current %}
           |
-          <a href="../{{ renderData.weeknum | int + 1 }}">Next</a>
+          <a href="/weeks/{{ renderData.weeknum | int + 1 }}/">Next</a>
           {%- endif %})
         {% endif %}
       </div>
