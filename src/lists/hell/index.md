@@ -52,7 +52,7 @@ This is who I expect to meet on my tour of the circles of Hell.
 <!-- Violence -->
 
 - The profiteers of internet-scale ignorance and hate[^media]
-- The manufacturers of public consent and direct maniuplators of government representatives, supporting the aggregation of power[^lobby]
+- The manufacturers of public consent and direct manipulators of government representatives, supporting the aggregation of power[^lobby]
 - Those who threaten the vulnerable carelessly[^drivers]
 - Those who preach that different is dangerous[^nazis]
 - Those who advocate for war or destruction[^hawks]
