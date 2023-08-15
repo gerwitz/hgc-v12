@@ -1,24 +1,26 @@
 ---
 layout: base
 bodyClass: week
-breadcrumbs:
+eleventyComputed:
+  breadcrumbs:
     - weeks
+    - "{{ week.weeknum }}"
 ---
 
 <article class="h-entry weeknotes">
 
     <header>
-      <h1 class="p-name">{{ renderData.title }}</h1>
+      <h1 class="p-name">{{ title }}</h1>
       <div class="meta">
-        {{ renderData.weeknum | weekstart | date('weekstarted') }}
+        {{ week.weeknum | weekstart | date('weekstarted') }}
 
-        {% if renderData.weeknum == 0 %}
+        {% if week.weeknum == 0 %}
           (<a href="/weeks/1/">Next</a>)
         {% else %}
-          (<a href="/weeks/{{ renderData.weeknum | int - 1 }}/">Previous</a>
-          {%- if not renderData.current %}
+          (<a href="/weeks/{{ week.weeknum | int - 1 }}/">Previous</a>
+          {%- if not week.current %}
           |
-          <a href="/weeks/{{ renderData.weeknum | int + 1 }}/">Next</a>
+          <a href="/weeks/{{ week.weeknum | int + 1 }}/">Next</a>
           {%- endif %})
         {% endif %}
       </div>
@@ -26,7 +28,7 @@ breadcrumbs:
 
     {{ content | safe }}
 
-    {% for event in collections.weeklyEvents[renderData.weeknum] %}
+    {% for event in collections.weeklyEvents[week.weeknum] %}
     {% if loop.first %}
       <h2>Event{{ "s" if loop.length > 1 }}</h2>
       <ul>
@@ -42,7 +44,7 @@ breadcrumbs:
     {% endfor %}
     </ul>
 
-    {% for post in collections.weeklyWriting[renderData.weeknum] %}
+    {% for post in collections.weeklyWriting[week.weeknum] %}
     {% if loop.first %}
       <h2>Writing</h2>
       <ul>
@@ -58,7 +60,7 @@ breadcrumbs:
     {% endfor %}
     </ul>
 
-    {% for item in collections.weeklyNotes[renderData.weeknum] %}
+    {% for item in collections.weeklyNotes[week.weeknum] %}
     {% if loop.first %}
       <h2>{{ loop.length }} Note{{ "s" if loop.length > 1 }}</h2>
     {% endif %}

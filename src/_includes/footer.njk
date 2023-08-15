@@ -18,19 +18,19 @@
 
 <div class="sitemap">
   <dl class="published">
-    <dt>{{ "writing" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "writing" | navpath(data.breadcrumbs) }}</dt>
     <dd>{{ collections.writing | length }} blog posts</dd>
 
-    <dt>{{ "notes" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "notes" | navpath(data.breadcrumbs) }}</dt>
     <dd>{{ collections.notes | length }} short notes</dd>
 
-    <dt>{{ "projects" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "projects" | navpath(data.breadcrumbs) }}</dt>
     <dd>Documented projects</dd>
 {#
-    <dt>{{ "ideas" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "ideas" | navpath(data.breadcrumbs) }}</dt>
     <dd>Opinions on things</dd>
  #}
-    <dt>{{ "lists" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "lists" | navpath(data.breadcrumbs) }}</dt>
     <dd>Other lists</dd>
   </dl>
 

@@ -4,12 +4,11 @@ pagination:
   size: 1
   alias: week
 layout: week
-renderData:
-  weeknum: "{{ week.fileSlug }}"
-  title: "Week {{ week.fileSlug }}"
-  current: "{{ week.current }}"
+eleventyComputed:
+  title: "Week {{ week.weeknum }}"
+  date: {{ week.date }}
 eleventyExcludeFromCollections: true
 permalink: "/weeks/{{ week.fileSlug }}/"
 ---
 
-{{ week.templateContent | safe }}
+{{ week.content | safe }}

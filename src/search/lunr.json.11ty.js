@@ -33,7 +33,7 @@ class LunrIndex {
         ref: index,
         title: doc.data.title,
         tags: doc.data["content-tags"],
-        content: doc.templateContent
+        content: doc.content
       });
     });
 

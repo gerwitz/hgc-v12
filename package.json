@@ -13,7 +13,7 @@
     "url": "https://github.com/gerwitz/hgc-12"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "clean-css": "^5.3.0",
     "eleventy-nbsp-filter": "^0.1.0",
