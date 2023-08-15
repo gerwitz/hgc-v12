@@ -2,6 +2,7 @@ const NunjucksLib = require("nunjucks");
 
 module.exports = function(path, crumbPath) {
   var link = '';
+  if (!crumbPath) {crumbPath=""}
   var crumbs = Array.from(crumbPath);
 
   if (crumbs[0] == path) {     // we are least UNDER this page

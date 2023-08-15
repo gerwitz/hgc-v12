@@ -25,7 +25,7 @@ layout:
       <link>{{ absolutePostUrl }}</link>
       <guid>{{ absolutePostUrl }}</guid>
       <pubDate>{{ post.date | date('ddd, DD MMM YYYY HH:mm:ss ZZ') }}</pubDate>
-      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+      <description>{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
     </item>
 
     {% endfor -%}

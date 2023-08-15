@@ -17,7 +17,7 @@ module.exports = function(collection) {
         url: item.url,
         date: item.date,
         title: item.data.title,
-        templateContent: '<a href="'+item.url+'">'+item.data.title+'</a>'
+        content: '<a href="'+item.url+'">'+item.data.title+'</a>'
       }
     });
 

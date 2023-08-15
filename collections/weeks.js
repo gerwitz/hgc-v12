@@ -8,31 +8,33 @@ module.exports = function(collection) {
   var current = moment().diff(genesis, 'weeks');
 
   // create a hashtable of default weeks
-  var emptyWeeks = new Map();
+  var allWeeks = new Map();
   for (var i = 0; i < current; i++) {
-    emptyWeeks.set(i, {
+    allWeeks.set(i, {
+      weeknum: i,
+      date: genesis.add(i, 'weeks'),
       fileSlug: i.toString(),
-      url: '/weeks/'+i+'/',
-      templateContent: '<p><em>There are no comments for this week.</em></p>',
-      breadcrumbs: ['weeks']
+      // url: '/weeks/'+i+'/',
+      content: '<p><em>There are no comments for this week.</em></p>',
     });
   }
 
-  // merge that hashtable with the collection from the filesystem
-  // thanks to https://stackoverflow.com/a/26265095/5610
-  var populatedWeeks = weeknotes.reduce(function(map, item) {
-    item.url = '/weeks/'+item.fileSlug + '/.';
-    map.set(1*item.fileSlug, item);
-    return map;
-  }, emptyWeeks);
+  // overwrite with weeknotes templates
+  for (const template of weeknotes) {
+    var weeknum = 1 * template.fileSlug;
+    // restore weeknum property
+    template.weeknum = weeknum;
+    allWeeks.set(weeknum, template);
+  }
 
   // overwrite current week to hide notes-in-progress
-  populatedWeeks.set(current, {
+  allWeeks.set(current, {
     current: true,
+    weeknum: current,
     fileSlug: current.toString(),
-    url: '/weeks/'+current+'/',
-    templateContent: '<p>It was still '+moment().format('dddd')+' of this week when the site was last published. Maybe you want <a href="/weeks/'+(current-1)+'/">last week</a>?</p>'
+    // url: '/weeks/'+current+'/',
+    content: '<p>It was still '+moment().format('dddd')+' of this week when the site was last published. Maybe you want <a href="/weeks/'+(current-1)+'/">last week</a>?</p>'
   });
 
-  return Array.from(populatedWeeks.values());
+  return Array.from(allWeeks.values());
 };

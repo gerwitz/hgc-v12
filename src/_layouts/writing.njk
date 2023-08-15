@@ -1,8 +1,10 @@
 ---
 layout: base
 bodyClass: writing
-breadcrumbs:
+eleventyComputed:
+  breadcrumbs:
     - writing
+    - "{{ page.date | date('YYYY-MM-DD') }}"
 permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
 ---
 
