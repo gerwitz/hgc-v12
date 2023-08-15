@@ -14,7 +14,6 @@ module.exports = function(collection) {
       weeknum: i,
       date: genesis.add(i, 'weeks'),
       fileSlug: i.toString(),
-      // url: '/weeks/'+i+'/',
       content: '<p><em>There are no comments for this week.</em></p>',
     });
   }
@@ -27,12 +26,13 @@ module.exports = function(collection) {
     allWeeks.set(weeknum, template);
   }
 
+  // TODO: we could proatively weave in other collections, instead of maintaining the awkward weeknum hashmaps
+
   // overwrite current week to hide notes-in-progress
   allWeeks.set(current, {
     current: true,
     weeknum: current,
     fileSlug: current.toString(),
-    // url: '/weeks/'+current+'/',
     content: '<p>It was still '+moment().format('dddd')+' of this week when the site was last published. Maybe you want <a href="/weeks/'+(current-1)+'/">last week</a>?</p>'
   });
 
