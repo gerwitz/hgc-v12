@@ -1,0 +1,32 @@
+---
+title: Dining
+layout: index
+override:tags: []
+eleventyExcludeFromCollections: true
+---
+
+<p>
+  Fancy dinners:
+</p>
+
+<section class="timeline reverse">
+{% set lastYear = 0 %}
+<ol>
+{% for dining in collections.dining | reverse %}
+  {% set year = dining.date | date('YYYY') %}
+  <li class="timeline-entry shown" data-year="{{ year }}" data-type="dining">
+    <time datetime="{{ dining.date | date('iso8601') }}" data-year="{{ year }}" class="year{{ ' first' if (year != lastYear) }}">
+      {{ year }}
+    </time>
+    <div>
+      <a href="{{ dining.data.url }}">{{ dining.data.title }}</a>
+      <div class="meta">
+        <time datetime="{{ dining.date | date('iso8601') }}">{{ dining.date | date('nice') }}</time>
+      </div>
+    </div>
+  </li>
+  {% set lastYear = year %}
+{% endfor %}
+</ol>
+
+</section>
