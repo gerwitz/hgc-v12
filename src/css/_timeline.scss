@@ -22,7 +22,7 @@ $timelinePadding: 48px;
       left: -$timelineLine*2;
       width: $timelineLine;
       height: 100%;
-      background: linear-gradient($page-color 0, $text-color 18px, $text-color 100%);
+      background: linear-gradient(var(--page-color) 0, var(--text-color) 18px, var(--text-color) 100%);
       // border-left: solid $timelineLine $text-color;
     }
     margin-left: $timelineLeft;
@@ -58,14 +58,14 @@ $timelinePadding: 48px;
         margin-top: -(math.div($timelineDot, 2)); // this could be improved to align with text rather than line
         top: 50%;
 
-        border: $timelineLine solid $text-color;
+        border: $timelineLine solid var(--text-color);
         border-radius: 50%;
-        background-color: $page-color;
+        background-color: var(--page-color);
         transition: background-color .5s ease-in;
       }
 
       &:hover:before {
-        background-color: $text-color;
+        background-color: var(--text-color);
         transition: background-color .5s ease-out;
       }
 
