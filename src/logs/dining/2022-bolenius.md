@@ -4,3 +4,5 @@ title: "Bolenius"
 geo: [52.33607, 4.87368]
 url: https://bolenius-restaurant.nl/
 ---
+
+Dinner for our anniversary staycation week
