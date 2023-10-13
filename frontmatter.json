@@ -22,7 +22,7 @@
           "name": "date",
           "type": "datetime",
           "default": "{{now}}",
-          "isPublishDate": true,
+          "isPublishDate": true
         },
         {
           "title": "Last modified date",
@@ -88,13 +88,5 @@
     }
   ],
   "frontMatter.taxonomy.alignFilename": true,
-  "frontMatter.taxonomy.tags": [],
-  "frontMatter.taxonomy.categories": [
-    "culture",
-    "meta",
-    "personal",
-    "uncategorized",
-    "work"
-  ],
   "frontMatter.dashboard.openOnStart": true
 }

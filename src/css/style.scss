@@ -254,6 +254,11 @@ body.weeks-index {
   }
 }
 
+// misc
+a.moon {
+  text-decoration: none;
+}
+
 // sugar
 ::-moz-selection {
   background-color: $accent-color;

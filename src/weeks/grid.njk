@@ -1,0 +1,29 @@
+---
+title: Weeks
+layout: index
+bodyClass: "weeks-index"
+override:tags: []
+permalink: /weeks/grid/
+eleventyExcludeFromCollections: true
+---
+
+{# weeksByYear | json #}
+
+<table style="font-size: 0.5vw;">
+{% for year in weeksByYear.keys() %}
+  <tr>
+    <th>
+      {{ year }}
+    </th>
+  {% for week in weeksByYear.get(year) %}
+    <td>
+      {% if week == null %}
+        &nbsp;
+      {% else %}
+        <a href="/weeks/{{ week }}" class="moon">{{ week | moonforweek }}</a>
+      {% endif %}
+    </td>
+  {% endfor %}
+  </tr>
+{% endfor %}
+</table>

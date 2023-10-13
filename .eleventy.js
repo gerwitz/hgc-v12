@@ -121,7 +121,8 @@ module.exports = function(eleventyConfig) {
       input: inputPath,
       output: "_site",
       includes: "/_includes",
-      layouts: "/_layouts"
+      layouts: "/_layouts",
+      data: "/_data"
     },
     templateFormats : [
       "html",
