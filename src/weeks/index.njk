@@ -24,7 +24,7 @@ eleventyExcludeFromCollections: true
 <ol>
 {% for week in pagination.items %}
   <li>
-    {{ week.fileSlug | moonforweek }} <a href="{{ week.url }}">Week {{ week.fileSlug }}</a> ({{ week.fileSlug | weekstart | date('nice') }})
+    {{ week.fileSlug | moonforweek }} <a href="/weeks/{{ week.fileSlug }}">Week {{ week.fileSlug }}</a> ({{ week.fileSlug | weekstart | date('nice') }})
   </li>
 {% endfor %}
 </ol>
