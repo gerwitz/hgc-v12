@@ -44,6 +44,8 @@ module.exports = function(eleventyConfig) {
   const maxLength = 12;
   eleventyConfig.addFilter('nbsp', nbspFilter(numberOfWordsToJoin, maxLength));
 
+  eleventyConfig.addPairedShortcode("map", require("./shortcodes/map.js") );
+
   // 🌲
   eleventyConfig.addShortcode("tree", function(height) {
     var heightAttr = '';

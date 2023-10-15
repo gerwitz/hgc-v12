@@ -254,6 +254,14 @@ body.weeks-index {
   }
 }
 
+// maps
+svg.map {
+  .pin {
+    fill: $accent-color;
+    stroke: mone;
+  }
+}
+
 // sugar
 ::-moz-selection {
   background-color: $accent-color;
