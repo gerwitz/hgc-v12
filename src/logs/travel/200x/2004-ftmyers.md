@@ -1,7 +1,6 @@
 ---
 title: "Florida for Mom's birthday"
 date: 2004-11-21
-tripit:
 nights: 10
 modes: ["air","car"]
 flights:
@@ -20,14 +19,30 @@ flights:
 destinations:
   -
     title: "Fort Myers"
-    nights:
-    location: "Fort Myers"
+    nights: 3
+    location: "Mom's place"
     geo: [26.5537,-81.8393]
   -
     title: "Key West"
-    nights:
-    location: ""
-    geo:
+    nights: 3
+    location: "somewhere on the key"
+    geo: [24.5553, -81.8043]
+  -
+    title: "Fort Myers"
+    nights: 1
+    location: "Mom's place"
+    geo: [26.5537,-81.8393]
+  -
+    title: "Busch Gardens"
+    nights: 1
+    location: "somewhere near the park"
+    geo: [28.0344, -82.4192]
+  -
+    title: "Fort Myers"
+    nights: 2
+    location: "Mom's place"
+    geo: [26.5537,-81.8393]
 ---
 
-and Busch Gardens, with Kristan
+with Kristan
+Mom and Lou drove us to Key West, we went up to Busch Gardens without them

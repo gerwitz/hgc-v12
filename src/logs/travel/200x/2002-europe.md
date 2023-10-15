@@ -31,15 +31,15 @@ trains:
     to: paris-est
 destinations:
   -
-    title: ""
+    title: "Hanau"
     nights: 6
-    location: "Hanau"
+    location: "Gerwitz home"
     geo: [50.107466,8.899447]
   -
-    title: ""
+    title: "Paris"
     nights: 4
-    location: "Paris"
-    geo:
+    location: "somwhere near Pasteur station"
+    geo: [48.84293, 2.31259]
 ---
 
 After Dad's diagnosis, he took Kurt and I for a Cancer Sucks trip to Europe to meet our distant cousins in Germany and visit Paris.
