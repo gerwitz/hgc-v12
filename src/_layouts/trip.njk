@@ -17,17 +17,9 @@ permalink: "/logs/travel/{{ page.fileSlug }}/index.html"
 
   <div>
     {% map %}
-    [
-    {% for dest in destinations %}
-      {% if dest.geo %}
-        {{ dest.geo | json }}
-        {% if not loop.last %},{% endif %}
-      {% endif %}
-    {% endfor %}
-    ]
+      {{ geojson | json(5) | safe }}
     {% endmap %}
   </div>
-
 
   <ol>
   {% for dest in destinations %}
