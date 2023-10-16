@@ -35,6 +35,8 @@ permalink: "/logs/travel/{{ page.fileSlug }}/index.html"
         {% else %}
           {{ dest.geo | string }}
         {% endif %}
+      {% else %}
+        {{ ("no geo: " + page.inputPath) | log }}
       {% endif %}
       in {{ dest.title }}
     </li>

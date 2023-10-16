@@ -33,6 +33,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("hostname", require("./filters/hostname.js") );
   eleventyConfig.addFilter("json", require("./filters/json.js") );
   eleventyConfig.addFilter("limit", require("./filters/limit.js") );
+  eleventyConfig.addFilter("log", require("./filters/log.js") );
   eleventyConfig.addFilter("moonforweek", require("./filters/moonforweek.js") );
   eleventyConfig.addFilter("navpath", require("./filters/navpath.js") );
   eleventyConfig.addFilter("parents", require("./filters/parents.js") );
