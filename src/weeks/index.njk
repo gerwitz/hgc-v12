@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
 
 {% if pagination.pageNumber == 0 %}
 <p>
-  This is an experimental journal of sorts, so I can search for entries and experiment with a more holistic archive. I started weekly journaling in week 2185 and wrote about <a href="/2019/10/10/sennight.html">why I like weeks</a> in week 2379.
+  This is an experimental journal of sorts, so I can search for entries and experiment with a more holistic archive. I started weekly journaling in week 2185, posting public versions in <a href="/weeks/2317">week 2317</a>, and wrote about <a href="/2019/10/10/sennight.html">why I like weeks</a> in week 2379.
 </p>
 {% else %}
 <div class="pagination">
@@ -24,7 +24,7 @@ eleventyExcludeFromCollections: true
 <ol>
 {% for week in pagination.items %}
   <li>
-    {{ week.fileSlug | moonforweek }} <a href="{{ week.url }}">Week {{ week.fileSlug }}</a> ({{ week.fileSlug | weekstart | date('nice') }})
+    {{ week.fileSlug | moonforweek }} <a href="/weeks/{{ week.fileSlug }}">Week {{ week.fileSlug }}</a> ({{ week.fileSlug | weekstart | date('nice') }})
   </li>
 {% endfor %}
 </ol>

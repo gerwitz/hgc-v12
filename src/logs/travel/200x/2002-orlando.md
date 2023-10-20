@@ -19,9 +19,14 @@ flights:
 destinations:
   -
     title: "Disney World and Kennedy Space Center"
-    nights: 8
-    location: ""
-    geo:
+    nights: 6
+    location: "Disney Music Resort"
+    geo: [28.33973, -81.57281]
+  -
+    title: "Cocoa Beach"
+    nights: 2
+    location: "Best Western Oceanfront Resort"
+    geo: [28.36925, -80.60255]
 ---
 
 Kristan's dream vacation

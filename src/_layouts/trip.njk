@@ -15,6 +15,12 @@ permalink: "/logs/travel/{{ page.fileSlug }}/index.html"
 
   {{ content | safe }}
 
+  <div>
+    {% map %}
+      {{ geojson | json(5) | safe }}
+    {% endmap %}
+  </div>
+
   <ol>
   {% for dest in destinations %}
     <li>
