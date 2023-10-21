@@ -20,8 +20,8 @@ destinations:
   -
     title: "Chicago weekend"
     nights: 2
-    location: ""
-    geo:
+    location: "Holiday Inn City Centre"
+    geo: [41.89279, -87.61980]
 ---
 
 With Kristan, Ryan, Kelly

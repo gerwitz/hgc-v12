@@ -16,10 +16,10 @@ flights:
     km: 2742
 destinations:
   -
-    title: "Portland business trip"
+    title: "Portland"
     nights: 2
-    location: ""
-    geo:
+    location: "Somewhere downtown"
+    geo: [45.52307, -122.68131]
 ---
 
 

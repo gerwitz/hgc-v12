@@ -19,7 +19,7 @@ destinations:
     title: "Boulder for ICWSM"
     nights: 2
     location: "Mariott (Downtown)"
-    geo:
+    geo: [40.01689, -105.26044]
 ---
 
 met @ev

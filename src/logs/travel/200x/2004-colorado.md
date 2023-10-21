@@ -5,10 +5,9 @@ nights: 1
 modes: ["car"]
 destinations:
   -
-    title: "Grand Theft Auto trip to Colorado Springs to steal a car"
+    title: "Salina"
     nights: 1
-    location: ""
-    geo:
+    location: "Somewhere in Kansas"
+    geo: [38.8429, -97.6112]
 ---
-
 

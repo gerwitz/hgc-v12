@@ -1,5 +1,5 @@
 ---
-title: "Milwaukee business trip (consulting to infuz)"
+title: "Racine business trip (consulting to infuz)"
 date: 2003-01-29
 nights: 2
 modes: ["air"]
@@ -18,10 +18,9 @@ flights:
     km: 511
 destinations:
   -
-    title: "Milwaukee business trip (consulting to infuz)"
+    title: "Milwaukee"
     nights: 2
-    location: ""
-    geo:
+    location: "Somewhere in Milwaukee"
+    geo: [43.0416, -87.9101]
 ---
-
 

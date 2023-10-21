@@ -7,8 +7,8 @@ destinations:
   -
     title: "Hannibal"
     nights: 1
-    location: ""
-    geo:
+    location: "Somewhere in Hannibal"
+    geo: [39.7087, -91.3588]
 ---
 
 Road trip with Colleen

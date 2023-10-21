@@ -16,10 +16,9 @@ flights:
     km: 2742
 destinations:
   -
-    title: "Seattle for AIA summit"
+    title: "Bellevue"
     nights: 5
-    location: ""
-    geo:
+    location: "Somewhere on the east side of the lake"
+    geo: [47.6144, -122.1936]
 ---
-
 

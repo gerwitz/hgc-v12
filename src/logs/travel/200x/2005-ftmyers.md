@@ -1,7 +1,7 @@
 ---
 title: "Florida for Christmas with Mom"
 date: 2005-12-20
-nights: 6
+nights: 5
 modes: ["air","car"]
 flights:
   -
@@ -19,12 +19,12 @@ flights:
 destinations:
   -
     title: "Orlando (Sea World, Disney World)"
-    nights:
-    location: ""
-    geo:
+    nights: 2 #20-23
+    location: "Orlando itself, I think"
+    geo: [28.5380, -81.3787]
   -
     title: "Fort Myers"
-    nights:
+    nights: 3 #23-26
     location: "Fort Myers"
     geo: [26.5537,-81.8393]
 ---

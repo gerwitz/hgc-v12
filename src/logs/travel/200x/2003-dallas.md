@@ -18,8 +18,8 @@ destinations:
   -
     title: "Dallas business trip"
     nights: 2
-    location: "Radisson Hotel Dallas North - Richardson "
-    geo:
+    location: "Radisson Hotel Dallas North - Richardson"
+    geo: [32.97466, -96.71808]
 ---
 
 

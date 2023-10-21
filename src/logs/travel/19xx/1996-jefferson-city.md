@@ -7,8 +7,8 @@ destinations:
   -
     title: "Jefferson City"
     nights: 1
-    location: ""
-    geo:
+    location: "Somewhere in Jefferson City"
+    geo: [38.57921, -92.17295]
 ---
 
 Road trip to Ha Ha Tonka State Park and the capitol building with Colleen

@@ -7,8 +7,8 @@ destinations:
   -
     title: "Nashville"
     nights: 1
-    location: ""
-    geo:
+    location: "Somewhere in Nashville"
+    geo: [36.16582, -86.78428]
 ---
 
 Road trip with Colleen

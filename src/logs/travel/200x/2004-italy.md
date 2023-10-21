@@ -27,19 +27,18 @@ flights:
 destinations:
   -
     title: "Venice"
-    nights:
-    location: ""
-    geo:
+    nights: 1
+    location: "Somewhere central"
+    geo: [45.4410, 12.3150]
   -
     title: "Florence"
-    nights:
-    location: ""
-    geo:
+    nights: 1
+    location: "Somewhere in Florence"
+    geo: [43.7691, 11.2558]
   -
     title: "Rome"
-    nights:
-    location: ""
-    geo:
+    nights: 5
+    location: "Somewhere in Rome"
+    geo: [41.8893, 12.4935]
 ---
-
 

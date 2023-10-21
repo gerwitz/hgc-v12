@@ -26,10 +26,9 @@ flights:
     km: 413
 destinations:
   -
-    title: "Raleigh, NC for work"
+    title: "Durham"
     nights: 3
     location: "The Washington Duke Inn"
-    geo:
+    geo: [35.99290, -78.94722]
 ---
-
 
