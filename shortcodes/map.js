@@ -4,13 +4,7 @@ const fs = require('fs');
 
 module.exports = function(input) {
 
-  try {
-    var pins_geojson = JSON.parse(input);
-  }
-  catch (e) {
-    console.log("Error with map JSON", this.page.inputPath, input);
-    return "";
-  }
+  var pins_geojson = input;
 
   const width = 768;
   const height = 300;

@@ -8,24 +8,49 @@ module.exports = {
         features: []
       };
       try {
-        for (const dest of data.destinations) {
-          if (dest.geo) {
-            geojson.features.push({
-              type: "Feature",
-              geometry: {
-                type: "Point",
-                coordinates: [ dest.geo[1], dest.geo[0] ]
-              },
-              properties: {
-                title: dest.title,
-                location: dest.location,
-                nights: dest.nights
+        // dumb hack for index because this is both a "directory data file" and a "template data file"
+        if (data.page.fileSlug == "travel") {
+          // console.log("Index page");
+          // console.log("data ", data.collections);
+          // console.log("Trips ", data.collections.trips);
+          for (const trip of data.collections.trips) {
+            // console.log("trip", trip);
+            for (const dest of trip.data.destinations) {
+              if (dest.geo) {
+                geojson.features.push({
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [ dest.geo[1], dest.geo[0] ]
+                  },
+                  properties: {
+                    title: trip.title,
+                    url: trip.url
+                  }
+                });
               }
-            });
-          }
-        };
-      } catch {
-        console.log("Error in destinations", data.page.inputPath);
+            };
+          };
+        } else {
+          for (const dest of data.destinations) {
+            if (dest.geo) {
+              geojson.features.push({
+                type: "Feature",
+                geometry: {
+                  type: "Point",
+                  coordinates: [ dest.geo[1], dest.geo[0] ]
+                },
+                properties: {
+                  title: dest.title,
+                  location: dest.location,
+                  nights: dest.nights
+                }
+              });
+            }
+          };
+        }
+      } catch(e) {
+        console.log("Error in destinations", data.page.inputPath, e.message);
       }
       return geojson;
     }

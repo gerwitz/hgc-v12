@@ -45,7 +45,8 @@ module.exports = function(eleventyConfig) {
   const maxLength = 12;
   eleventyConfig.addFilter('nbsp', nbspFilter(numberOfWordsToJoin, maxLength));
 
-  eleventyConfig.addPairedShortcode("map", require("./shortcodes/map.js") );
+  // draw a map, given a GeoJSON dictionary
+  eleventyConfig.addShortcode("map", require("./shortcodes/map.js") );
 
   // 🌲
   eleventyConfig.addShortcode("tree", function(height) {
