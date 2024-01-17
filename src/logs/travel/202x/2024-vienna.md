@@ -26,7 +26,7 @@ destinations:
 
 Shannon's friend is moving back to Austria and invited people to celebrate her 30th birthday at the [ZuckerBäckerball](http://www.zuckerbaeckerball.com/).
 
-We planned to take an ÖBB night train, but the German rail workers went on strike and we ended up having to take a flight there. But we returned on the train. I left some thoughts on that in the [/weeks/2601](weeknotes).
+We planned to take an ÖBB night train, but the German rail workers went on strike and we ended up having to take a flight there. But we returned on the train. I left some thoughts on that in the [weeknotes](/weeks/2601).
 
 It was nice to revisit Vienna after 14 years, and we enjoyed a few great meals and museums. The Leopold was a highlight, with good exhibitions in a brilliatly arranged building.
 
