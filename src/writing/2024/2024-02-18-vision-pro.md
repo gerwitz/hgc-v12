@@ -1,5 +1,5 @@
 ---
-title: “First Week with Apple Vision Pro”
+title: "First Week with Apple Vision Pro"
 categories:
 - work
 content-tags:
