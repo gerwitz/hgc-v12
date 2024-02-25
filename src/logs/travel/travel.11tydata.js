@@ -13,6 +13,7 @@ module.exports = {
                 pins.push({
                   where: dest.location + ' in ' + dest.title,
                   latlng: dest.geo,
+                  nights: dest.nights,
                   trip: trip.page.fileSlug,
                   title: trip.data.title,
                   url: trip.url
