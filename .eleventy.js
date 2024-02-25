@@ -47,6 +47,7 @@ module.exports = function(eleventyConfig) {
 
   // draw a map, given a GeoJSON dictionary
   eleventyConfig.addShortcode("map", require("./shortcodes/map.js") );
+  eleventyConfig.addShortcode("hexmap", require("./shortcodes/hexmap.js") );
 
   // 🌲
   eleventyConfig.addShortcode("tree", function(height) {
