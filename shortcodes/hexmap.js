@@ -8,7 +8,7 @@ module.exports = function(input) {
   var pins = input;
 
   const width = 768;
-  const height = 300;
+  const height = 384;
 
   const h3_resolution = 2;
 
@@ -42,7 +42,7 @@ module.exports = function(input) {
       index: cell,
       // geojson: h3ToFeature(cell),
       projected_path: h3ToPath(cell, projection),
-      trips: pins.length
+      trips: pins.map((p) => p.trip)
     })
   );
 
@@ -51,18 +51,14 @@ module.exports = function(input) {
 
   if(hexes) {
     const backhex = svg.append("g")
-    .attr("class", "footprint")
+    .classed("footprint", true)
     .selectAll("path")
     .data(hexes)
     .enter()
     .append("path")
     .classed('h3cell', true)
-    .attr("data-trips", (d) => d.trips)
-    // .attr("d", (d) => pathProjection(d.geojson))
     .attr("d", (d) => d.projected_path)
-    .style("stroke", "#0F0")
-    .style("stroke-width", 1.5)
-    .style("fill", "none")
+    .attr("title", (d) => d.trips)
   }
 
   return body.html();
@@ -90,11 +86,8 @@ function h3ToFeature(h3Index, properties = {}) {
 function h3ToPath(h3Index, projection) {
   const coordinates = h3.cellToBoundary(h3Index);
 
-  console.log(h3Index, " coords: ", coordinates);
-
+  // inspired by https://observablehq.com/d/9dc48b233ed553f4
   let path = `M${coordinates.map((d) => projection([d[1], d[0]])).join("L")}Z`;
-
-  console.log(h3Index, " path: ", path);
 
   return path;
 }

@@ -258,7 +258,11 @@ body.weeks-index {
 svg.map {
   .pin {
     fill: $accent-color;
-    stroke: mone;
+    stroke: none;
+  }
+  .h3cell {
+    fill: $accent-color;
+    stroke: none;
   }
 }
 

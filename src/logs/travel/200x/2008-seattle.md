@@ -34,7 +34,7 @@ destinations:
     title: "Seattle"
     nights: 1
     location: "Pan Pacific"
-    geo: [47.61835, 122.33758]
+    geo: [47.61835, -122.33758]
 ---
 
 Interviewed with frog design in their temporary office at 1100 Dexter Ave N.
