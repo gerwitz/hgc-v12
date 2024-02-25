@@ -42,7 +42,8 @@ module.exports = function(input) {
       index: cell,
       // geojson: h3ToFeature(cell),
       projected_path: h3ToPath(cell, projection),
-      trips: pins.map((p) => p.trip)
+      title: pins.length + " trips",
+      slugs: pins.map((p) => p.trip)
     })
   );
 
@@ -55,10 +56,11 @@ module.exports = function(input) {
     .selectAll("path")
     .data(hexes)
     .enter()
-    .append("path")
-    .classed('h3cell', true)
-    .attr("d", (d) => d.projected_path)
-    .attr("title", (d) => d.trips)
+      .append("path")
+      .classed('h3cell', true)
+      .attr("d", (d) => d.projected_path)
+        .append("title")
+        .text((d) => d.title)
   }
 
   return body.html();
