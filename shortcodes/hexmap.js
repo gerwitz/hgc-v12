@@ -1,3 +1,4 @@
+const corejs = require('core-js');
 const linkedom = require('linkedom');
 const d3 = require('d3');
 const h3 = require('h3-js');
