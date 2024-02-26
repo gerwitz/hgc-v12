@@ -16,6 +16,7 @@
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "clean-css": "^5.3.0",
+    "core-js": "^3.36.0",
     "d3": "^6.7.0",
     "eleventy-nbsp-filter": "^0.1.0",
     "eleventy-plugin-metagen": "^1.7.11",
