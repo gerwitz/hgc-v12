@@ -4,7 +4,7 @@
 // so <p> floats left and <aside> floats right
 
 // make room for sidenotes
-article p, article ul {
+article > p, article > ul {
   float: left;
   clear: left;
   width: 100%;
