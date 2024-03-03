@@ -3,6 +3,9 @@ title: Senescence
 subtitle: Losing the fight against time
 ---
 
+> I did not realize that aging was going to happen to me, personally.
+> -- [Ginny Hogan](https://www.tiktok.com/@ginnyhogan/video/7219643115387309358)
+
 **1988 (age 14)**
 [Glasses to correct near-sightedness](/logs/events/1989-respectacled/)
 
