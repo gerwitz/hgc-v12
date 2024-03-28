@@ -1,7 +1,8 @@
 ---
-title: Notable concerts attended
+title: Memorable Concerts
 ---
 
+* Pixies (Amsterdam)
 * Meute (Amsterdam)
 * She Wants Revenge (Berlin)
 * Macklemore (Amsterdam)
@@ -12,6 +13,7 @@ title: Notable concerts attended
 * The Faint (Seattle)
 * Flaming Lips (Austin)
 * They Might Be Giants (St Louis)
+* Evanescence (St Louis)
 * Switchblade Symphony (St Louis)
 * Explosions in the Sky (St Louis)
 * Belle and Sebastian (St Louis)

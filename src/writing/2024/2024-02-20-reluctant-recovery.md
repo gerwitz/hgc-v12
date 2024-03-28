@@ -1,5 +1,9 @@
 ---
 title: Reluctant Recovery
+categories:
+- personal
+content-tags:
+- health
 ---
 
 It's been 18 months since I [crashed](/2022/09/20/mortal.html) and had an ophthalmologist diagnose that I have physical amblyopia that became a "new" problem when a concussion somehow reset my neurological compensation. At first, I was regularly seeing double, especially when looking downward. Walking down stairs or even stepping off a curb became frightening. When I learned there is now a [routine outpatient surgery](https://www.visioncenter.org/surgery/strabismus/) to correct the dominant underlying cause, I was eager for this fix.
