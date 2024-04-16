@@ -21,4 +21,8 @@ destinations:
     geo: [38.888122,-77.019912]
 ---
 
-Joined Dad work conference in Virginia, then drove onward to Washington DC, stayed with Kuhlman relatives
+Joined Dad work conference in Virginia, then drove onward to Washington DC, stayed with Kuhlman relatives.
+
+I specifically remember enjoying [Tilted Arc](https://greg.org/archive/2024/04/03/the-history-of-tilted-arc-is-long.html) and the major Smithsoneans in DC, and the Jefferson Memorial made a big impression.
+
+My father also took us on a pilgramage to Arlington. For the history of Lee's plantation, not the cemetary.
