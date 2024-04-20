@@ -6,6 +6,7 @@ content-tags:
 - travel
 - sustainability
 - landuse
+epitaph: is an unrepentant umarell
 ---
 
 I write this sitting in the Phoenix airport, where America West has seen fit to deposit me en route to Seattle.  Ah, the glorious efficiencies of the hub-and-spoke model.
