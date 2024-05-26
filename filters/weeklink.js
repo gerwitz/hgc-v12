@@ -9,5 +9,5 @@ module.exports = function(date) {
   } else { // assume it's a number
     weeknum = parseInt(date);
   }
-  return new NunjucksLib.runtime.SafeString('<a href="/weeks/'+weeknum+'/">'+weeknum+'</a>');
+  return new NunjucksLib.runtime.SafeString('<a href="/weeks/'+weeknum+'/" class="weeklink">week '+weeknum+'</a>');
 }

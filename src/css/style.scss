@@ -57,25 +57,29 @@ h1, h2, h3, h4 {
 
 article {
   blockquote {
-    display: inline-block;
     padding-left: 15px;
-    // border-left: 5px solid $accent-color;
     *:last-child {
       margin-bottom: 0;
     }
   }
 }
 
-FIGURE.quotation {
+*:not(figure.quotation)>blockquote {
+  // markdown plugin will create bare blockquotes if there is no citation
+  border-left: 0.3em solid;
+  border-color: var(--accent-color);
+}
+
+figure.quotation {
   padding-left: 1em;
-  border-left: 0.2em solid;
+  border-left: 0.3em solid;
   border-color: var(--accent-color);
 
   blockquote {
     margin: 0;
   }
   figcaption {
-    text-align: right;
+    text-align: left;
     &::before {
       content: '— ';
     }

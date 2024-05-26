@@ -9,7 +9,7 @@ permalink: "/logs/events/{{ page.fileSlug }}/index.html"
   <div>
     <h1 class="p-name">{{ title }}</h1>
     <div class="meta">
-      <time datetime="{{ date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} (week {{ week | weeklink }})</time>
+      <time datetime="{{ date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} ({{ week | weeklink }})</time>
     </div>
   </div>
 

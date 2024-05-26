@@ -9,7 +9,7 @@ permalink: "/logs/travel/{{ page.fileSlug }}/index.html"
   <header>
     <h1 class="p-name">{{ title }}</h1>
     <div class="meta">
-      {{ nights | int }} night{{ "s" if nights != 1 }} starting <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} (week {{ page.date | weeklink }})</time>
+      {{ nights | int }} night{{ "s" if nights != 1 }} starting <time datetime="{{ page.date | date('iso8601') }}">{{ page.date | date('MMMM Do, YYYY') }} ({{ page.date | weeklink }})</time>
     </div>
   </header>
 

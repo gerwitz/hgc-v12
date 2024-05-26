@@ -10,7 +10,11 @@ permalink: /notes/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumbe
 eleventyExcludeFromCollections: true
 ---
 
-{% if pagination.pageNumber > 0 %}
+{% if pagination.pageNumber == 0 %}
+<p>
+  These short posts include "asides" from the my original blogs, a sample of "tweets" from Twitter, and more recently are often syndicated to my Fediverse profile.
+</p>
+{% else %}
 <div class="pagination">
   <a href="{{ pagination.href.previous }}">Newer notes</a>
 </div>
