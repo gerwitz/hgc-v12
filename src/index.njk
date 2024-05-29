@@ -19,6 +19,7 @@ headtags: |
   <link rel="micropub" href="https://indiekit.gerwitz.com/micropub">
   <link rel="authorization_endpoint" href="https://indiekit.gerwitz.com/auth">
   <link rel="token_endpoint" href="https://indiekit.gerwitz.com/auth/token">
+  <link rel="indieauth-metadata" href="https://indiekit.gerwitz.com/.well-known/oauth-authorization-server">
 eleventyExcludeFromCollections: true
 ---
 
@@ -28,12 +29,9 @@ eleventyExcludeFromCollections: true
 
 <section class="emphasis">
   <p>
-    I am an American who now lives in Amsterdam with my partner <a class="url fn" rel="friend spouse" href="https://shannonethomas.com/">Shannon</a> and work as Head of Design for <a class="employer" href="https://www.canonical.com/">Canonical</a>.
+    You can learn about me at <a href="/about/" class="internal">about</a>, browse this site via the links below, or follow me on the fediverse: <a href="https://fedi.gerwitz.com/@hans" rel="me noreferrer nofollow">@hans@gerwitz.com</a>.
   </p>
-  <p>
-    You can learn more about me at <a href="/about/" class="internal">about</a>, find me elsewhere at <a href="/follow/" class="internal">follow</a>, or follow me on the fediverse: <a href="https://fedi.gerwitz.com/@hans" rel="me noreferrer nofollow">@hans@gerwitz.com</a>.
-  </p>
-  <!--
+{#
   <h2>Recently in <a href="/notes/" class="internal">notes</a></h2>
   {% set noteslist = collections.notes | reverse | limit(3) %}
   {% for item in noteslist %}
@@ -41,12 +39,12 @@ eleventyExcludeFromCollections: true
       {% include "feed-note.njk" %}
     </article>
   {% endfor %}
-  -->
+ #}
 </section>
 
 <!-- this is here only because indieweb tools expect my home URL to have a microformat profile -->
 <div hidden class="h-card vcard" style="display: none;">
-  <img src="https://hans.gerwitz.com/about/avatars/munch.jpg" alt="avatar photo" class="photo u-photo" loading="lazy"/>
+  <img src="https://hans.gerwitz.com/about/avatars/munch.jpg" alt="avatar photo" class="photo u-photo" loading="lazy">
   <a class="url u-url fn p-name" href="https://hans.gerwitz.com/">Hans Gerwitz</a>
   <div class="adr">
     <span class="locality">Amsterdam</span>
