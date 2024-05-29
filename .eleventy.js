@@ -73,6 +73,7 @@ module.exports = function(eleventyConfig) {
   let markdownItImplicitFigures = require('markdown-it-implicit-figures');
   let markdownItAnchor = require("markdown-it-anchor");
   let markdownItDeflist = require('markdown-it-deflist');
+  let markdownItLinkAttributes = require('markdown-it-link-attributes');
   let options = {
     html: true,
     linkify: true,
@@ -93,6 +94,24 @@ module.exports = function(eleventyConfig) {
     })
     .use(markdownItAnchor)
     .use(markdownItDeflist)
+    .use(markdownItLinkAttributes, [
+      {
+        matcher(href) {
+          return href.match(/^https?:\/\//);
+        },
+        attrs: {
+          class: "external-link",
+        },
+      },
+      {
+        matcher(href) {
+          return href.match(/^[./](.*)\/$/);
+        },
+        attrs: {
+          class: "index-link",
+        },
+      },
+    ])
     .disable(["lheading"]);
   markdownLib.renderer.rules.footnote_ref = function (tokens, idx, options, env, slf) {
     var id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
