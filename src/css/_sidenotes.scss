@@ -43,6 +43,7 @@ article > p, article > ul {
 .sidenote {
   position: relative;
 
+  padding-top: 0.75em;
   float: left;
   width: 100%;
   @media ($bp-liminal) {
@@ -63,7 +64,7 @@ article > p, article > ul {
 
   font-family: $base-font;
   font-size: $textwidth-sidenotes;
-  line-height: 1.3rem;
+  line-height: 1.0rem;
   padding-left: 1rem;
   .sidenote-ref {
     float: left;

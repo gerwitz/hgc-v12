@@ -11,9 +11,11 @@ This is a personal website that collects my thoughts, with my future self as the
 
 You may think of it as my book of shadows, commonplace book, [digital garden](https://maggieappleton.com/garden-history), or [thought reservoir](http://interconnected.org/home/2021/02/10/reservoirs) with over {{ collections.all | length | round(-2) }} pages so far.[^blog] I treat it as a [worry stone](https://ethanmarcotte.com/wrote/let-a-website-be-a-worry-stone/).
 
-[^blog]: Like [Joel Hooks](https://joelhooks.com/digital-garden), I don't like to call it a blog.
+[^blog]: Like [Joel Hooks](https://joelhooks.com/digital-garden), I no longer like to call it a blog.
 
-The current design is version 12 of my web presence; the past is documented at <span class="internal">site</span><a class="internal" href="/site/history/">history</a> and
+The current [design](/site/design) is version 12 of my web presence; the past is documented at [/site/history](/site/history/).
+
+<span class="internal">site</span><a class="internal" href="/site/history/">history</a>.
 
 ## Colophon
 
