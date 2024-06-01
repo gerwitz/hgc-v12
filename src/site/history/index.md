@@ -5,7 +5,7 @@ layout: page
 
 Though I had profiles on various BBSes and servers as early as 1986, I didn't establish my first web page until 1994 when [Nyx](http://www.nyx.net/history.html) established userpages.[^ncsa] Mine featured my [geek code](http://www.geekcode.com/).
 
-[^ncsa]: Yes, that was before Netscape. I used NCSA Mosaic on Macintosh and Lynx on unix systems.
+[^ncsa]: Yes, that was before Netscape. I used NCSA Mosaic on Macintosh and Lynx on OSF/1 AXP (the Unix on our school's DEC Alpha).
 
 A year later I registered phobia.com, and in 1996 put a site up via a local ISP advertising my web development services.[^phobia] Though gainful employment eventually replaced "phobia consulting", I still used the site as a personal homepage until in 2003 I decided to [call it a blog](/2003/03/14/first-post.html).
 
