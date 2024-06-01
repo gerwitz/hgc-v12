@@ -13,7 +13,7 @@ cmds = ['npm run build']
 cacheDirectories = ['node_modules/.cache']
 
 [phases.install]
-# dependsOn = ['setup']
+dependsOn = ['setup']
 cmds = ['npm ci --omit dev']
 # cacheDirectories = ['/root/.npm']
 # paths = ['/app/node_modules/.bin']
