@@ -22,7 +22,7 @@ destinations:
     title: "Berlin for friends' birthdays"
     nights: 3
     location: "apartment"
-    geo: [32.43977,35.04829]
+    geo: [52.53058, 13.41810]
 ---
 
-with Shannon
+with Shannon, Nick, Asia, Jo, Andy, Joe

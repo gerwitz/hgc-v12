@@ -44,3 +44,13 @@ destinations:
 ---
 
 with Shannon
+
+08 May 2017
+
+| Departure | from | Arrival | to | transport |
+|---|---|---|---|---|
+| 08:25 | Oslo | 12:58 | Myrdal | The Bergen Railway |
+| 13:27 | Myrdal | 14:25 | Flåm | The Flam Railway |
+| 15:15 | Flåm | 17:30	Gudvangen | Fjord cruise |
+| 17:45 | Gudvangen | 19:00	Voss | Bus |
+| 19:38 | Voss | 21:01 | Bergen | The Bergen Railway |
