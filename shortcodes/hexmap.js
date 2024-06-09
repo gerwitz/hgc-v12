@@ -44,7 +44,7 @@ module.exports = function(input) {
       // geojson: h3ToFeature(cell),
       projected_path: h3ToPath(cell, projection),
       nights: pins.reduce((n, {nights}) => n+ nights, 0),
-      title: pins.length + " trips",
+      title: "over " + pins.length + " stays",
       slugs: pins.map((p) => p.trip)
     })
   );
