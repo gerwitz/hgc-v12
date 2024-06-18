@@ -24,6 +24,7 @@ And via written word:
 - Matt Webb
 - Deb Chachra
 - Spencer Wright
-- Hillary Predko
+- [Hillary Predko](https://www.scopeofwork.net/author/hillary/)
 - Robin Sloan
 - Will Larson
+- [Maggie Appleton](https://maggieappleton.com/)
