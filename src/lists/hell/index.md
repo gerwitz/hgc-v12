@@ -36,6 +36,7 @@ This is who I expect to meet on my tour of the circles of Hell.
 <!-- Anger -->
 
 - Those who willfully encroach[^encroach]
+- Eron Gjoni
 
 [^encroach]: E.g. tailgating drivers
 
