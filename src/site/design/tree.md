@@ -26,8 +26,10 @@ I also spent a lot of time in Missouri forests and many of my childhood friends 
 
 So I wanted to keep the tree, but didn't have a unique form.
 
-As a child I was fascinated with the the [original LEGO tree][big tree] as a manufactured object. I enjoyed thinking about the design of the object itself. The way it evoked organic form with a simple construction felt fractal and tickled my interest in complexity theory. I remember, uncharacteristically vividly, my thoughts about the machines for manufacturing them as one of the sparks which ignited my lifelong interest in the creation and maintenance of things and our built environment. It serves nicely as a symbol of **causal complexity**.
+As a child I was fascinated with the the [original LEGO tree][big tree] as a manufactured object. I enjoyed thinking about the design of the object itself. The way it evoked organic form with a simple construction felt fractal and tickled my interest in complexity theory. I remember, uncharacteristically vividly, my thoughts about the machines for manufacturing them as one of the sparks which ignited my lifelong interest in the creation and maintenance of things and our built environment.[^seal] It serves nicely as a symbol of **causal complexity**.
 
 [big tree]: https://www.bricklink.com/v2/catalog/catalogitem.page?P=3471
+
+[^seal]: My LEGO tree is analgeous to [Teddy Roosevelt's seal skull](https://www.theodorerooseveltcenter.org/Blog/Item/A%20Propitious%20Sign%20from%20the%20Ocean) which inspired his conservationism, in turn changing the shape of America. Except, of course, I went on to be a curious nerd rather than change the course of history.
 
 So, there it is. I used the dimensions of part #2435 to draw an outline with the aim to be recognizable to LEGO nerds but also work as just a tree. I've been happy with the result and can imagine using it for the rest of my life as long as no one subverts the imagery.
