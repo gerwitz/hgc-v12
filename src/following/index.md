@@ -6,13 +6,12 @@ tags: [searchable]
 
 Herein, a lightly-curated list of people I follow online.
 
-P0dcasts:
+Podcasts:
 
-- Yascha Mounk
+- John Green
 - Nicole Hemmer
 - Roman Mars
-- Tim Harford
-- Lee VInsel
+- Lee Vinsel
 - Sarah Marshall
 - Michael Hobbes
 - Peter Adamson
@@ -28,3 +27,5 @@ And via written word:
 - Robin Sloan
 - Will Larson
 - [Maggie Appleton](https://maggieappleton.com/)
+- [Erin Kissane](https://erinkissane.com/)
+- [Omar Rizwan](https://omar.website/), Brett Victor, Nicky Case

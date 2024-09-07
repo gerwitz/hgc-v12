@@ -29,8 +29,10 @@ This is who I expect to meet on my tour of the circles of Hell.
 - Those who needlessly take more room than others[^big]
 - Those who disclaim the behavior of their pets or children
 - Those who insist on being in front, yet are slow to move onward
+- Those who construct their social reality to reinforce their sense of derserving the privileges granted to them[^gentry]
 
 [^big]: E.g. manspreaders, long-leash dog walkers, urban golf umbrella carriers
+[^gentry]: There are countless copies of [this guy](https://x.com/marktwaalfhoven)
 
 ## Fifth
 <!-- Anger -->
