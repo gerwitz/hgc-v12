@@ -1,7 +1,7 @@
 ---
 date: 2023-01-07T16:18:44.747+01:00
 syndication:
-  - https://social.gerwitz.com/notice/ARP96F2kG6b3SbJMg4
+  - https://web.archive.org/web/20240923181655/https://social.gerwitz.com/notice/ARP96F2kG6b3SbJMg4
 ---
 When we first got to live in Europe, we landed in a place that was lovely but not quite our vibe. We visited many cities until finding one that felt right for us.
 
