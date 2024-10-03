@@ -43,22 +43,20 @@
     {{ headtags | safe }}
   </head>
   <body class="{{ bodyClass }}">
-    <header class="main-header">
-      <div class="pale">
+    <div class="dexter"></div>
+    <div class="pale">
+      <header class="main-header">
         {% include "header.njk" %}
-      </div>
-    </header>
-    <div class="main-container">
-      <div class="inner-container pale">
+      </header>
+      <div class="main">
         {% block content %}
         {{ content | safe }}
         {% endblock %}
       </div>
-    </div>
-    <footer class="main-footer" id="nav">
-      <div class="pale">
+      <footer class="main-footer" id="nav">
         {% include "footer.njk" %}
+      </footer>
       </div>
-    </footer>
+    <div class="sinister"></div>
   </body>
 </html>

@@ -7,30 +7,58 @@ body {
   min-height: 100vh;
   margin: 0;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-.main-header, .main-container, .main-footer {
-  display: grid;
-  grid-template-columns: 1fr min($pale-size, 90%) 1fr;
+  // grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr min($pale-size, 100%) 1fr;
 }
 .pale {
   grid-column: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-header {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.main {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.main-footer {
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 // BODY BASICS
 
 body {
-  background: $accent-color;
+  background: var(--page-color);
   color: var(--text-color);
   font-family: $base-font;
   font-size: 1rem;
   line-height: 1.6rem;
 }
+.pale {
+  margin-left: 64px;
+  margin-right: 64px;
+}
+.dexter {
+  // left of pale
+  background:
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAAICAYAAABTXhlRAAAAc0lEQVRIDWP8DwQMQMDIyAiiGKDcQc8HOxaJQHc/khSYSS15JnSDR/n4QwCUrMApDJay0JVTK2bINR/dPQPNH01hJMYACyzm0VPScOOjhwu6/9DlcfFHUxiukMEhjlGGoYc8IT66uejq0eWHOn80hZEYgwCzIn4EQLgI5wAAAABJRU5ErkJggg==) right top repeat-y, // gradient to left 2x
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIHWP8DwQMQMDIyAiiGJjAJBIBEgargCrEVAEAbIMIAowlqhMAAAAASUVORK5CYII=) right 76px top repeat; // white/black 2x
+  }
+.sinister {
+  // right of pale
+  background:
+    url(data:image/gif;base64,R0lGODlhTAAIAPABAAAAAP///yH5BAgeAAAALAAAAABMAAgAAAJFBIJpqcexXpyOIgurvls6FoFfw5WZiaXdw7bu24akx8omjOfxeM9izdsBUR0V8XhK2l5Lo7IIRTp11GquGU1at1ztTFUAADs=) left top repeat-y, // gradient to right 2x
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIHWP8DwQMQMDIyAiiGJjAJBIBEgargCrEVAEAbIMIAowlqhMAAAAASUVORK5CYII=) left 76px top repeat; // whilte/black 2x
+}
 
 // HEADER
 
 .main-header {
-  background: var(--page-color);
+
 
   padding-top: 32px;
   font-size: 1rem;
@@ -79,14 +107,6 @@ body {
   }
 }
 
-// CONTENT
-// mostly defined elsewhere
-
-.main-container {
-  background: var(--page-color);
-  padding-bottom: 18px;
-}
-
 // TODO make a typography file
 section, div {
   &.emphasis > P {
@@ -129,22 +149,22 @@ section, div {
 /// FOOTER
 
 .main-footer {
-  background-color: $accent-color;
-  color: $page-color;
+  // background-color: $accent-color;
+  // color: $page-color;
 
   padding-top: 16px;
-  // margin-top: 36px;
+  margin-top: 36px;
 
   font-variant-numeric: lining-nums proportional-nums;
 
-  a {
-    text-decoration: none;
-  }
-  a:hover {
-    color: $accent-color;
-    background-color: $page-color;
-    box-shadow: none;
-  }
+  // a {
+  //   text-decoration: none;
+  // }
+  // a:hover {
+  //   color: $accent-color;
+  //   background-color: $page-color;
+  //   box-shadow: none;
+  // }
 
   .footer-topnav {
     position: relative;
@@ -187,12 +207,12 @@ section, div {
 
     .internal::before {
       content: '/';
-      color: $page-color;
+      // color: $page-color;
       font-weight: $bold-font-weight;
     }
-    a.internal:hover::before {
-      color: $accent-color;
-    }
+    // a.internal:hover::before {
+    //   color: $accent-color;
+    // }
 
     & > dl {
       width: 50%;
