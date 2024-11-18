@@ -1,11 +1,12 @@
 ---
 layout: index
 title: Appearances
-subtitle: Clues for where to go Hansspotting
+subtitle: Introvert nightmare fodder
 ---
 
 When I've embarassed myself most publicly:
 
+- 2024: [Blender Conf](https://www.youtube.com/watch?v=ZsS5vOn9kG4&list=PLa1F2ddGya_-Ymw4YlOjqrdQxiRMJql5x)
 - 2020: [King Freret IX](./mardi-gras-2020/)
 - 2017: [ThingsCon](https://www.thingscon.nl/sessions/ring-ring-whos/): 15 minutes on the design challenges of connected devices in the home
 - 2017: [DarkSide of Design podcast](https://www.raftcollective.com/thinking/dark-side-of-design/) episodes on [death](https://www.stitcher.com/podcast/raft-collective/dark-side-of-design/e/52143426) and [the blockchain](https://www.stitcher.com/podcast/raft-collective/dark-side-of-design/e/52260789)

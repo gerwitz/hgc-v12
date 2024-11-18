@@ -30,6 +30,7 @@ module.exports = function(eleventyConfig) {
   // template filters
   eleventyConfig.addFilter("cssmin", require("./filters/cssmin.js") );
   eleventyConfig.addFilter("date", require("./filters/date.js") );
+  eleventyConfig.addFilter("filterByCategory", require("./filters/filterbycategory.js") );
   eleventyConfig.addFilter("hostname", require("./filters/hostname.js") );
   eleventyConfig.addFilter("json", require("./filters/json.js") );
   eleventyConfig.addFilter("limit", require("./filters/limit.js") );

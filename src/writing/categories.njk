@@ -1,0 +1,30 @@
+---
+title: Category Test
+layout: index
+override:tags: []
+pagination:
+  data: categories
+  size: 1
+  alias: category
+categories:
+  - personal
+  - work
+  - culture
+permalink: "/writing/{{ category | slugify }}/index.html"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: "{{ category }} posts"
+---
+
+<h3>{{category}}</h3>
+
+{% set pages = collections.writing | filterByCategory(category) %}
+{# {% set pages = collections.writing %} #}
+
+<ul>
+{%- for page in pages | reverse -%}
+  <li>
+    <a href="{{ page.url }}">{{ page.data.title }}</a>
+  </li>
+{%- endfor -%}
+</ul>
