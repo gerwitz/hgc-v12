@@ -5,6 +5,8 @@ feedmeta:
   title: hans.gerwitz.com microblog
   url: https://hans.gerwitz.com
 layout:
+eleventyImport:
+  collections: ["notes"]
 ---
 {%- set feed = collections.microblog -%}
 <?xml version="1.0" encoding="utf-8"?>
