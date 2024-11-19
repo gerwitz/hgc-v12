@@ -54,6 +54,11 @@ body {
     url(data:image/gif;base64,R0lGODlhTAAIAPABAAAAAP///yH5BAgeAAAALAAAAABMAAgAAAJFBIJpqcexXpyOIgurvls6FoFfw5WZiaXdw7bu24akx8omjOfxeM9izdsBUR0V8XhK2l5Lo7IIRTp11GquGU1at1ztTFUAADs=) left top repeat-y, // gradient to right 2x
     url(data:image/gif;base64,R0lGODlhBAAEAPAAAAAAAP///yH5BAQKAAAALAAAAAAEAAQAAAIGBBKGqAkFADs=) left 76px top repeat; // black/white 2x
 }
+@media (prefers-color-scheme: dark) {
+  .dexter, .sinister {
+    background: var(--page-color);
+  }
+}
 
 // HEADER
 
