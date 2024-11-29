@@ -46,3 +46,7 @@ subtitle: People who inspire
 * [George Lakoff](http://www.rockridgeinstitute.org/people/lakoff): brings linguistic theory to laypeople in useful ways.  Sometimes oversimplifies, especially about embodied cognition.
 * [Amanda Hess](http://amandahess.org/)
 * Gore Vidal
+
+## Historical
+
+* Thaddeus Stevens
