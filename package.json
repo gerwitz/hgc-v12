@@ -1,6 +1,6 @@
 {
   "name": "hans.gerwitz.com",
-  "version": "12.0.1",
+  "version": "12.0.2",
   "description": "Personal website",
   "author": "Hans Gerwitz",
   "license": "CC-BY-4.0",
@@ -19,7 +19,6 @@
     "core-js": "^3.36.0",
     "d3": "^6.7.0",
     "eleventy-nbsp-filter": "^0.1.0",
-    "eleventy-plugin-metagen": "^1.7.11",
     "h3-js": "^4.1.0",
     "javascript-stringify": "^2.1.0",
     "linkedom": "^0.15.6",

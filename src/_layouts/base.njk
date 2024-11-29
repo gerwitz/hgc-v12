@@ -1,26 +1,33 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {# metagen will add
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      note that `url` will be used for rel=canonical
-      http://www.thesempost.com/using-rel-canonical-on-all-pages-for-duplicate-content-protection/
-    #}
-    {% metagen
-      title=title or 'Untitled',
-      name="hans.gerwitz.com",
-      description="Personal web site of Hans Gerwitz. Since 1994.",
-      img="/favicon/tree.png",
-      url=external or "https://hans.gerwitz.com" + page.url,
-      locale='en_NL',
-      generator=eleventy.generator,
-      custom=[[
-        "meta","",{name: "twitter:creator:id", content: "521"}
-      ]]
-    %}
+    {% set title = title or "Untitled" %}
+    {% set description = description or "Personal web site of Hans Gerwitz. Since 1994." %}
+    {% set url = external or "https://hans.gerwitz.com" + page.url %}
+    {% set image = "/favicon/tree.png" %}
+    <meta name="author" content="Hans Gerwitz">
+    <meta name="description" content="{{ description }}">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:locale" content="en_NL">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ image }}">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@gerwitz">
+    <meta name="twitter:creator:id" content="521">
+    <meta name="twitter:url" content="{{ url }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ image }}">
+    <link rel="canonical" href="{{ url }}">
 
     <!-- favicon, etc. -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">

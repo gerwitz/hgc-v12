@@ -1,5 +1,4 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginMetagen = require('eleventy-plugin-metagen');
 
 const nbspFilter = require('eleventy-nbsp-filter');
 
@@ -25,7 +24,6 @@ module.exports = function(eleventyConfig) {
 
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
-  eleventyConfig.addPlugin(pluginMetagen);
 
   // template filters
   eleventyConfig.addFilter("cssmin", require("./filters/cssmin.js") );
