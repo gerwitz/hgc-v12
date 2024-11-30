@@ -3,6 +3,7 @@ import nbspFilter from "eleventy-nbsp-filter";
 
 import * as collections from "./collections/index.js";
 import * as filters from "./filters/index.js";
+import * as shortcodes from "./shortcodes/index.js";
 
 export default function(eleventyConfig) {
   var inputPath = "src";
@@ -21,7 +22,6 @@ export default function(eleventyConfig) {
     eleventyConfig.addCollection(name, collection);
   }
 
-
   // template filters
   for (const [name, filter] of Object.entries(filters)) {
     eleventyConfig.addCollection(name, filter);
@@ -31,9 +31,10 @@ export default function(eleventyConfig) {
   const maxLength = 12;
   eleventyConfig.addFilter('nbsp', nbspFilter(numberOfWordsToJoin, maxLength));
 
-  // draw a map, given a GeoJSON dictionary
-  eleventyConfig.addShortcode("map", require("./shortcodes/map.js") );
-  eleventyConfig.addShortcode("hexmap", require("./shortcodes/hexmap.js") );
+  // shortcodes
+  for (const [name, filter] of Object.entries(shortcodes)) {
+    eleventyConfig.addCollection(name, filter);
+  }
 
   // 🌲
   eleventyConfig.addShortcode("tree", function(height) {
