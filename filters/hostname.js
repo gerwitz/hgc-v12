@@ -1,6 +1,6 @@
-const URL = require('url');
+import URL from "url";
 
-module.exports = function(url) {
+export const hostname = (url) => {
   var parsedUrl = URL.parse(url);
   return parsedUrl.hostname;
 }

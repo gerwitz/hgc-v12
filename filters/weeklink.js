@@ -1,8 +1,8 @@
-const moment = require("moment");
+import moment from "moment";
 const genesis = moment([1974, 2, 4]); // == moment([1974, 2, 9]).startOf('isoWeek');
-const NunjucksLib = require("nunjucks");
+import NunjucksLib from "nunjucks";
 
-module.exports = function(date) {
+export const weeklink = (date) => {
   if (date instanceof Date) {
     thisweek = moment(date).startOf('isoWeek');
     weeknum = thisweek.diff(genesis, 'weeks');

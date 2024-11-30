@@ -2,6 +2,7 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import nbspFilter from "eleventy-nbsp-filter";
 
 import * as collections from "./collections/index.js";
+import * as filters from "./filters/index.js";
 
 export default function(eleventyConfig) {
   var inputPath = "src";
@@ -12,28 +13,19 @@ export default function(eleventyConfig) {
 
   eleventyConfig.setDataDeepMerge(true);
 
+  // plugins
+  eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
+
   // custom collections
   for (const [name, collection] of Object.entries(collections)) {
     eleventyConfig.addCollection(name, collection);
   }
 
-  // plugins
-  eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
 
   // template filters
-  eleventyConfig.addFilter("cssmin", require("./filters/cssmin.js") );
-  eleventyConfig.addFilter("date", require("./filters/date.js") );
-  eleventyConfig.addFilter("filterByCategory", require("./filters/filterbycategory.js") );
-  eleventyConfig.addFilter("hostname", require("./filters/hostname.js") );
-  eleventyConfig.addFilter("json", require("./filters/json.js") );
-  eleventyConfig.addFilter("limit", require("./filters/limit.js") );
-  eleventyConfig.addFilter("log", require("./filters/log.js") );
-  eleventyConfig.addFilter("moonforweek", require("./filters/moonforweek.js") );
-  eleventyConfig.addFilter("navpath", require("./filters/navpath.js") );
-  eleventyConfig.addFilter("parents", require("./filters/parents.js") );
-  eleventyConfig.addFilter("weeklink", require("./filters/weeklink.js") );
-  eleventyConfig.addFilter("weeknum", require("./filters/weeknum.js") );
-  eleventyConfig.addFilter("weekstart", require("./filters/weekstart.js") );
+  for (const [name, filter] of Object.entries(filters)) {
+    eleventyConfig.addCollection(name, filter);
+  }
 
   const numberOfWordsToJoin = 2;
   const maxLength = 12;
