@@ -1,6 +1,6 @@
 // microblog notes + links to writing
 
-module.exports = function(collection) {
+export const microblog = (collection) => {
   var writing = collection.getFilteredByTag('writing');
   var notes = collection.getFilteredByTag('notes');
 

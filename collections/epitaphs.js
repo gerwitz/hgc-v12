@@ -1,6 +1,6 @@
 // pages with an epitaph
 
-module.exports = function(collection) {
+export const epitaphs = (collection) => {
   var pages = collection.getAll();
   var epitaphs = pages
     .filter(function(item) {

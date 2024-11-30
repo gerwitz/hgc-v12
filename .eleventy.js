@@ -1,8 +1,9 @@
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import nbspFilter from "eleventy-nbsp-filter";
 
-const nbspFilter = require('eleventy-nbsp-filter');
+import * as collections from "./collections/index.js";
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
   var inputPath = "src";
 
   eleventyConfig.setQuietMode(true);
@@ -12,15 +13,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // custom collections
-  eleventyConfig.addCollection("weeks", require("./collections/weeks.js") );
-  eleventyConfig.addCollection("posts", require("./collections/posts.js") );
-  eleventyConfig.addCollection("microblog", require("./collections/microblog.js") );
-
-  eleventyConfig.addCollection("weeklyNotes", require("./collections/weeklyNotes.js") );
-  eleventyConfig.addCollection("weeklyWriting", require("./collections/weeklyWriting.js") );
-  eleventyConfig.addCollection("weeklyEvents", require("./collections/weeklyEvents.js") );
-
-  eleventyConfig.addCollection("epitaphs", require("./collections/epitaphs.js") );
+  for (const [name, collection] of Object.entries(collections)) {
+    eleventyConfig.addCollection(name, collection);
+  }
 
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs

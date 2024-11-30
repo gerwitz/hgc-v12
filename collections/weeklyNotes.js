@@ -1,6 +1,6 @@
-const moment = require("moment");
+import moment from "moment";
 
-module.exports = function(collection) {
+export const weeklyNotes = (collection) => {
   const genesis = moment([1974, 2, 4]); // == moment([1974, 2, 9]).startOf('isoWeek');
   var weeklyNotes = {};
 

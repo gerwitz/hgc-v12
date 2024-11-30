@@ -4,6 +4,7 @@
   "description": "Personal website",
   "author": "Hans Gerwitz",
   "license": "CC-BY-4.0",
+  "type": "module",
   "scripts": {
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve"
