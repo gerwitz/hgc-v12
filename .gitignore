@@ -3,4 +3,3 @@
 /.frontmatter
 .DS_Store
 *.icloud
-src/_data/buildinfo.json

@@ -21,7 +21,6 @@
     "core-js": "^3.36.0",
     "d3": "^6.7.0",
     "eleventy-nbsp-filter": "^0.1.0",
-    "generate-build-info": "^0.0.3",
     "h3-js": "^4.1.0",
     "javascript-stringify": "^2.1.0",
     "linkedom": "^0.15.6",
