@@ -3,7 +3,6 @@
 import moment from "moment";
 
 export const weeks = (collection) => {
-  // module.exports = function(collection) {
   var weeknotes = collection.getFilteredByTag('weeknotes');
   const genesis = moment([1974, 2, 4]); // == moment([1974, 2, 9]).startOf('isoWeek');
   var current = moment().diff(genesis, 'weeks');

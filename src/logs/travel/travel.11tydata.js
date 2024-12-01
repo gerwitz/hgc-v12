@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "layout" : "trip",
   "tags" : ["trips"],
   "eleventyComputed" : {
