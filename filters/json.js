@@ -1,5 +1,5 @@
 // const stringify = require('javascript-stringify').stringify;
 
-module.exports = function(string) {
+export const json = (string) => {
   return JSON.stringify(string, null, "\t");
 }

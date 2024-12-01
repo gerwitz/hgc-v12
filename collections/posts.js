@@ -1,6 +1,6 @@
 // all posts
 
-module.exports = function(collection) {
+export const posts = (collection) => {
   return collection.getFilteredByTags(
     "notes",
     "writing");

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // respect draft frontmatter
   eleventyComputed: {
     eleventyExcludeFromCollections: function(data) {

@@ -1,8 +1,8 @@
-const NunjucksLib = require("nunjucks");
-const moment = require("moment");
-require("twix");
+import NunjucksLib from"nunjucks";
+import moment from "moment";
+import from from "twix";
 
-module.exports = function(date, format) {
+export const date = (date, format) => {
   var theDate = moment(date);
   if( format === 'iso8601' ) {
     return theDate.toISOString();

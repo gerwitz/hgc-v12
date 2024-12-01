@@ -1,8 +1,21 @@
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import nbspFilter from "eleventy-nbsp-filter";
+import eleventySass from "@11tyrocks/eleventy-plugin-sass-lightningcss";
 
-const nbspFilter = require('eleventy-nbsp-filter');
+// import sass from "sass";
+import markdownIt from "markdown-it";
+import markdownItFootnote from "markdown-it-footnote-here";
+import markdownItAttribution from "markdown-it-attribution";
+import markdownItImplicitFigures from 'markdown-it-implicit-figures';
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItDeflist from 'markdown-it-deflist';
+import markdownItLinkAttributes from 'markdown-it-link-attributes';
 
-module.exports = function(eleventyConfig) {
+import * as collections from "./collections/index.js";
+import * as filters from "./filters/index.js";
+import * as shortcodes from "./shortcodes/index.js";
+
+export default function(eleventyConfig) {
   var inputPath = "src";
 
   eleventyConfig.setQuietMode(true);
@@ -11,42 +24,31 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setDataDeepMerge(true);
 
-  // custom collections
-  eleventyConfig.addCollection("weeks", require("./collections/weeks.js") );
-  eleventyConfig.addCollection("posts", require("./collections/posts.js") );
-  eleventyConfig.addCollection("microblog", require("./collections/microblog.js") );
-
-  eleventyConfig.addCollection("weeklyNotes", require("./collections/weeklyNotes.js") );
-  eleventyConfig.addCollection("weeklyWriting", require("./collections/weeklyWriting.js") );
-  eleventyConfig.addCollection("weeklyEvents", require("./collections/weeklyEvents.js") );
-
-  eleventyConfig.addCollection("epitaphs", require("./collections/epitaphs.js") );
-
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
+  eleventyConfig.addPlugin(eleventySass);
+
+  // custom collections
+  for (const [name, collection] of Object.entries(collections)) {
+    console.log("Adding collection: "+name);
+    eleventyConfig.addCollection(name, collection);
+  }
 
   // template filters
-  eleventyConfig.addFilter("cssmin", require("./filters/cssmin.js") );
-  eleventyConfig.addFilter("date", require("./filters/date.js") );
-  eleventyConfig.addFilter("filterByCategory", require("./filters/filterbycategory.js") );
-  eleventyConfig.addFilter("hostname", require("./filters/hostname.js") );
-  eleventyConfig.addFilter("json", require("./filters/json.js") );
-  eleventyConfig.addFilter("limit", require("./filters/limit.js") );
-  eleventyConfig.addFilter("log", require("./filters/log.js") );
-  eleventyConfig.addFilter("moonforweek", require("./filters/moonforweek.js") );
-  eleventyConfig.addFilter("navpath", require("./filters/navpath.js") );
-  eleventyConfig.addFilter("parents", require("./filters/parents.js") );
-  eleventyConfig.addFilter("weeklink", require("./filters/weeklink.js") );
-  eleventyConfig.addFilter("weeknum", require("./filters/weeknum.js") );
-  eleventyConfig.addFilter("weekstart", require("./filters/weekstart.js") );
+  for (const [name, filter] of Object.entries(filters)) {
+    console.log("Adding filter: "+name);
+    eleventyConfig.addFilter(name, filter);
+  }
 
   const numberOfWordsToJoin = 2;
   const maxLength = 12;
   eleventyConfig.addFilter('nbsp', nbspFilter(numberOfWordsToJoin, maxLength));
 
-  // draw a map, given a GeoJSON dictionary
-  eleventyConfig.addShortcode("map", require("./shortcodes/map.js") );
-  eleventyConfig.addShortcode("hexmap", require("./shortcodes/hexmap.js") );
+  // shortcodes
+  for (const [name, filter] of Object.entries(shortcodes)) {
+    console.log("Adding shortcode: "+name);
+    eleventyConfig.addShortcode(name, filter);
+  }
 
   // 🌲
   eleventyConfig.addShortcode("tree", function(height) {
@@ -66,13 +68,6 @@ module.exports = function(eleventyConfig) {
   });
 
   // manually configure markdown-it
-  let markdownIt = require("markdown-it");
-  let markdownItFootnote = require("markdown-it-footnote-here");
-  let markdownItAttribution = require("markdown-it-attribution");
-  let markdownItImplicitFigures = require('markdown-it-implicit-figures');
-  let markdownItAnchor = require("markdown-it-anchor");
-  let markdownItDeflist = require('markdown-it-deflist');
-  let markdownItLinkAttributes = require('markdown-it-link-attributes');
   let options = {
     html: true,
     linkify: true,
@@ -125,6 +120,23 @@ module.exports = function(eleventyConfig) {
   markdownLib.renderer.rules.footnote_close = () => ('</aside>');
   markdownLib.linkify.set({ fuzzyLink: false }); // don't turn simple domains into links
   eleventyConfig.setLibrary("md", markdownLib);
+
+	// eleventyConfig.addTemplateFormats("scss");
+  // // Creates the extension for use
+  // eleventyConfig.addExtension("scss", {
+  //   outputFileExtension: "css", // optional, default: "html"
+
+  //   // `compile` is called once per .scss file in the input directory
+  //   compile: async function (inputContent) {
+  //     let result = sass.compileString(inputContent);
+
+  //     // This is the render function, `data` is the full data cascade
+  //     return async (data) => {
+  //       return result.css;
+  //     };
+  //   },
+  // });
+
 
   eleventyConfig.addPassthroughCopy("src/**/*.gif");
   eleventyConfig.addPassthroughCopy("src/**/*.jpg");

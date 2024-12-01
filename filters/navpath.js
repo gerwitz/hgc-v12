@@ -1,6 +1,6 @@
-const NunjucksLib = require("nunjucks");
+import NunjucksLib from "nunjucks";
 
-module.exports = function(path, crumbPath) {
+export const navpath = (path, crumbPath) => {
   var link = '';
   if (!crumbPath) {crumbPath=""}
   var crumbs = Array.from(crumbPath);

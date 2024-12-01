@@ -1,3 +1,3 @@
-module.exports = function(value) {
+export const log = (value) => {
   console.log(value);
 }

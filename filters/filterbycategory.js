@@ -1,4 +1,4 @@
-module.exports = function(collection, category) {
+export const filterByCategory = (collection, category) => {
 
 	category = category.toLowerCase();
 

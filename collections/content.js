@@ -1,6 +1,6 @@
 // searchable things
 
-module.exports = function(collection) {
+export const content = (collection) => {
   return collection.getFilteredByTags(
     "about",
     "history",

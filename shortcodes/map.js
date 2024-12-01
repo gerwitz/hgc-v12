@@ -1,8 +1,8 @@
-const linkedom = require('linkedom');
-const d3 = require('d3');
-const fs = require('fs');
+import {parseHTML} from "linkedom";
+import d3 from "d3";
+import fs from "fs";
 
-module.exports = function(input) {
+export const map = (input) => {
 
   var pins_geojson = input;
 
@@ -11,7 +11,7 @@ module.exports = function(input) {
   const margin = 120;
   const singleScale = 800;
 
-  let window = linkedom.parseHTML("<html><body></body></html>");
+  let window = parseHTML("<html><body></body></html>");
   let body = d3.select(window.document).select('body');
   const svg = body.append('svg')
     .classed('map', true)

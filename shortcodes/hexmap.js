@@ -1,10 +1,10 @@
-const corejs = require('core-js');
-const linkedom = require('linkedom');
-const d3 = require('d3');
-const h3 = require('h3-js');
-const fs = require('fs');
+import corejs from "core-js";
+import {parseHTML} from "linkedom";
+import d3 from "d3";
+import h3 from "h3-js";
+import fs from "fs";
 
-module.exports = function(input) {
+export const hexmap = (input) => {
 
   var pins = input;
 
@@ -13,7 +13,7 @@ module.exports = function(input) {
 
   const h3_resolution = 2;
 
-  let window = linkedom.parseHTML("<html><body></body></html>");
+  let window = parseHTML("<html><body></body></html>");
   let body = d3.select(window.document).select('body');
   const svg = body.append('svg')
     .classed('map', true)
