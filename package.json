@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "type": "module",
   "scripts": {
-    "build": "gen-build-info src/_data && npx @11ty/eleventy",
+    "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve"
   },
   "repository": {
@@ -21,7 +21,6 @@
     "core-js": "^3.36.0",
     "d3": "^6.7.0",
     "eleventy-nbsp-filter": "^0.1.0",
-    "generate-build-info": "^0.0.3",
     "h3-js": "^4.1.0",
     "javascript-stringify": "^2.1.0",
     "linkedom": "^0.15.6",

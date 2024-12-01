@@ -5,10 +5,7 @@ eleventyExcludeFromCollections: true
 ---
 
 <pre>
-  buildVersion: {{ buildinfo.buildVersion }}
-  buildDateMs: {{ buildinfo.buildDateMs }}
-  buildDateStr: {{ buildinfo.buildDateStr }}
-  buildCounter: {{ buildinfo.buildCounter }}
+  generated: <span title="{{ generated | date }}">{{ generated | date('nice') }}</span>
 </pre>
 
 <table class="sortable"><thead>

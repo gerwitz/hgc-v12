@@ -20,6 +20,10 @@ export default function(eleventyConfig) {
 
   eleventyConfig.setQuietMode(true);
 
+  eleventyConfig.addGlobalData('generated', () => {
+    return new Date();
+  });
+
   eleventyConfig.addWatchTarget("./src/css/");
 
   eleventyConfig.setDataDeepMerge(true);
