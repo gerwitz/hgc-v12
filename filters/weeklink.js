@@ -4,8 +4,8 @@ import NunjucksLib from "nunjucks";
 
 export const weeklink = (date) => {
   if (date instanceof Date) {
-    thisweek = moment(date).startOf('isoWeek');
-    weeknum = thisweek.diff(genesis, 'weeks');
+    var thisweek = moment(date).startOf('isoWeek');
+    var weeknum = thisweek.diff(genesis, 'weeks');
   } else { // assume it's a number
     weeknum = parseInt(date);
   }

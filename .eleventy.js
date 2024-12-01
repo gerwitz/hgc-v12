@@ -1,8 +1,8 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import nbspFilter from "eleventy-nbsp-filter";
+import eleventySass from "@11tyrocks/eleventy-plugin-sass-lightningcss";
 
-import sass from "sass";
-
+// import sass from "sass";
 import markdownIt from "markdown-it";
 import markdownItFootnote from "markdown-it-footnote-here";
 import markdownItAttribution from "markdown-it-attribution";
@@ -26,6 +26,7 @@ export default function(eleventyConfig) {
 
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
+  eleventyConfig.addPlugin(eleventySass);
 
   // custom collections
   for (const [name, collection] of Object.entries(collections)) {
@@ -120,21 +121,21 @@ export default function(eleventyConfig) {
   markdownLib.linkify.set({ fuzzyLink: false }); // don't turn simple domains into links
   eleventyConfig.setLibrary("md", markdownLib);
 
-	eleventyConfig.addTemplateFormats("scss");
-  // Creates the extension for use
-  eleventyConfig.addExtension("scss", {
-    outputFileExtension: "css", // optional, default: "html"
+	// eleventyConfig.addTemplateFormats("scss");
+  // // Creates the extension for use
+  // eleventyConfig.addExtension("scss", {
+  //   outputFileExtension: "css", // optional, default: "html"
 
-    // `compile` is called once per .scss file in the input directory
-    compile: async function (inputContent) {
-      let result = sass.compileString(inputContent);
+  //   // `compile` is called once per .scss file in the input directory
+  //   compile: async function (inputContent) {
+  //     let result = sass.compileString(inputContent);
 
-      // This is the render function, `data` is the full data cascade
-      return async (data) => {
-        return result.css;
-      };
-    },
-  });
+  //     // This is the render function, `data` is the full data cascade
+  //     return async (data) => {
+  //       return result.css;
+  //     };
+  //   },
+  // });
 
 
   eleventyConfig.addPassthroughCopy("src/**/*.gif");
