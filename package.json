@@ -1,12 +1,12 @@
 {
   "name": "hans.gerwitz.com",
-  "version": "12.0.2",
+  "version": "12.1.1",
   "description": "Personal website",
   "author": "Hans Gerwitz",
   "license": "CC-BY-4.0",
   "type": "module",
   "scripts": {
-    "build": "npx @11ty/eleventy",
+    "build": "gen-build-info src/_data && npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve"
   },
   "repository": {
@@ -39,6 +39,7 @@
   "devDependencies": {
     "dictionary-en": "^3.2.0",
     "dictionary-nl": "^1.6.0",
+    "generate-build-info": "^0.0.3",
     "textlint": "^12.1.1",
     "textlint-rule-spelling": "^0.3.0",
     "textlint-rule-write-good": "^2.0.0"
