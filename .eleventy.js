@@ -1,6 +1,14 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import nbspFilter from "eleventy-nbsp-filter";
 
+import markdownIt from "markdown-it";
+import markdownItFootnote from "markdown-it-footnote-here";
+import markdownItAttribution from "markdown-it-attribution";
+import markdownItImplicitFigures from 'markdown-it-implicit-figures';
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItDeflist from 'markdown-it-deflist';
+import markdownItLinkAttributes from 'markdown-it-link-attributes';
+
 import * as collections from "./collections/index.js";
 import * as filters from "./filters/index.js";
 import * as shortcodes from "./shortcodes/index.js";
@@ -54,13 +62,6 @@ export default function(eleventyConfig) {
   });
 
   // manually configure markdown-it
-  let markdownIt = require("markdown-it");
-  let markdownItFootnote = require("markdown-it-footnote-here");
-  let markdownItAttribution = require("markdown-it-attribution");
-  let markdownItImplicitFigures = require('markdown-it-implicit-figures');
-  let markdownItAnchor = require("markdown-it-anchor");
-  let markdownItDeflist = require('markdown-it-deflist');
-  let markdownItLinkAttributes = require('markdown-it-link-attributes');
   let options = {
     html: true,
     linkify: true,
