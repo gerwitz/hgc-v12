@@ -1,6 +1,8 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import nbspFilter from "eleventy-nbsp-filter";
 
+import sass from "sass";
+
 import markdownIt from "markdown-it";
 import markdownItFootnote from "markdown-it-footnote-here";
 import markdownItAttribution from "markdown-it-attribution";
@@ -27,12 +29,14 @@ export default function(eleventyConfig) {
 
   // custom collections
   for (const [name, collection] of Object.entries(collections)) {
+    console.log("Adding collection: "+name);
     eleventyConfig.addCollection(name, collection);
   }
 
   // template filters
   for (const [name, filter] of Object.entries(filters)) {
-    eleventyConfig.addCollection(name, filter);
+    console.log("Adding filter: "+name);
+    eleventyConfig.addFilter(name, filter);
   }
 
   const numberOfWordsToJoin = 2;
@@ -41,7 +45,8 @@ export default function(eleventyConfig) {
 
   // shortcodes
   for (const [name, filter] of Object.entries(shortcodes)) {
-    eleventyConfig.addCollection(name, filter);
+    console.log("Adding shortcode: "+name);
+    eleventyConfig.addShortcode(name, filter);
   }
 
   // 🌲
@@ -114,6 +119,23 @@ export default function(eleventyConfig) {
   markdownLib.renderer.rules.footnote_close = () => ('</aside>');
   markdownLib.linkify.set({ fuzzyLink: false }); // don't turn simple domains into links
   eleventyConfig.setLibrary("md", markdownLib);
+
+	eleventyConfig.addTemplateFormats("scss");
+  // Creates the extension for use
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: "css", // optional, default: "html"
+
+    // `compile` is called once per .scss file in the input directory
+    compile: async function (inputContent) {
+      let result = sass.compileString(inputContent);
+
+      // This is the render function, `data` is the full data cascade
+      return async (data) => {
+        return result.css;
+      };
+    },
+  });
+
 
   eleventyConfig.addPassthroughCopy("src/**/*.gif");
   eleventyConfig.addPassthroughCopy("src/**/*.jpg");
