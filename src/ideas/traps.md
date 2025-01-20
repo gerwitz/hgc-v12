@@ -2,6 +2,8 @@
 title: Cognition Traps
 ---
 
+(See also [heuristic traps](https://ecampusontario.pressbooks.pub/rmjdm/chapter/heuristic-traps/))
+
 We seek and retain knowledge that fits our stories, and center those stories on individuals.
 
 It's well understood that we humans are imperfect thinkers. We started refining reason long ago and [inventory our common mistakes](https://yourlogicalfallacyis.com/). When we started applying scientific thought, it also became popular to consider our cognitive biases.
