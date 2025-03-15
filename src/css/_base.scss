@@ -39,8 +39,8 @@ body {
   line-height: 1.6rem;
 }
 .pale {
-  margin-left: 128px;
-  margin-right: 128px;
+  margin-left: $pale-margin;
+  margin-right: $pale-margin;
 }
 .dexter {
   // left of pale
@@ -171,6 +171,7 @@ section, div {
   //   box-shadow: none;
   // }
 
+
   .footer-topnav {
     position: relative;
     width: 100%;
@@ -252,5 +253,24 @@ section, div {
 
     font-size: small;
     font-style: italic;
+
+    // for footer hit counter
+    .hitcounter {
+      clear: both;
+
+      padding: 0;
+      margin: 0;
+
+      &:hover {
+        // background-color: $page-color;
+        box-shadow: none;
+        text-decoration: none;
+      }
+
+      img {
+        // display: inline;
+        border: solid 1px $text-color;
+      }
+    }
   }
 }
