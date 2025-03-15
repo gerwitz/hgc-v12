@@ -29,7 +29,7 @@ Some posts are added to the repo with [Micropub](https://micropub.net/) via an i
 
 This site is hosted by Netlify, who serves it to you via CloudFlare's CDN. By [their privacy policy](https://www.cloudflare.com/en-gb/privacypolicy/) they serve as a GDPR data processor. You can read [how they preserve your privacy](https://blog.cloudflare.com/privacy-first-web-analytics/#what-does-privacy-first-mean).
 
-Although not intended for tracking, any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp]  If you use search, the Lunr script is loaded from [unpkg](https://unpkg.com/). [Lunr](https://lunrjs.com/) is open source and has no reason to log activity. Still, the requests to unpkg.com present a "leak surface" so worth disclosing.
+Since March 2025, I'm using [hits.sh](https://hits.sh) to add a counter at the bottom of each page. This and any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp]  If you use search, the Lunr script is loaded from [unpkg](https://unpkg.com/). [Lunr](https://lunrjs.com/) is open source and has no reason to log activity. Still, the requests to unpkg.com present a "leak surface" so are worth disclosing.
 
 [^itp]: Your exposure depends on how [privacy-mature](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) your browser is, of course.
 
