@@ -1,7 +1,7 @@
 ---
 title: "Bengaluru for Shannon's work"
 date: 2024-07-18
-tripit:
+tripit: b07c22e1-c399-9000-0001-000014fd42bc
 nights: 11
 modes: ["air"]
 flights:

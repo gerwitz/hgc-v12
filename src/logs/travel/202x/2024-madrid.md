@@ -1,7 +1,7 @@
 ---
 title: "Madrid for Canonical sprints"
 date: 2024-07-07
-tripit:
+tripit: 51652cc3-677e-9000-0001-000014dac95c
 nights: 5
 modes: ["air"]
 flights:
