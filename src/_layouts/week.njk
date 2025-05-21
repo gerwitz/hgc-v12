@@ -27,7 +27,7 @@ eleventyComputed:
       </div>
     </header>
 
-    {{ content | safe }}
+    {# {{ content | safe }} #}
 
     {% for event in collections.weeklyEvents[week.weeknum] %}
     {% if loop.first %}
