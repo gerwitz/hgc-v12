@@ -1,4 +1,4 @@
-@import "_variables";
+@use "_variables" as variables;
 
 // sidenotes are <aside> after the <p> that references them
 // so <p> floats left and <aside> floats right
@@ -8,11 +8,11 @@ article > p, article > ul {
   float: left;
   clear: left;
   width: 100%;
-  @media ($bp-liminal) {
-    width: $textwidth-simple;
+  @media (variables.$bp-liminal) {
+    width: variables.$textwidth-simple;
   }
-  @media ($bp-full) {
-    width: $textwidth-sidenotes;
+  @media (variables.$bp-full) {
+    width: variables.$textwidth-sidenotes;
   }
 
   a.sidenote-ref {
@@ -21,19 +21,19 @@ article > p, article > ul {
     line-height: 0;
     font-size: .83em;
 
-    color: $meta-color;
+  color: variables.$meta-color;
 
     pointer-events: inherit;
     cursor: pointer;
 
     text-decoration: none;
     &:hover {
-      color: $accent-color;
+  color: variables.$accent-color;
       background-color: inherit;
       box-shadow: none;
     }
 
-    @media ($bp-full) {
+  @media (variables.$bp-full) {
       pointer-events: none;
       cursor: default;
     }
@@ -46,13 +46,13 @@ article > p, article > ul {
   padding-top: 0.75em;
   float: left;
   width: 100%;
-  @media ($bp-liminal) {
-    width: $textwidth-simple;
+  @media (variables.$bp-liminal) {
+    width: variables.$textwidth-simple;
   }
-  @media ($bp-full) {
+  @media (variables.$bp-full) {
     float: right;
     clear: right;
-    width: #{100% - $textwidth-sidenotes};
+    width: #{100% - variables.$textwidth-sidenotes};
     padding-left: 3rem;
 
     margin-top: 1em; // to match article > *+*
@@ -62,14 +62,14 @@ article > p, article > ul {
   font-size: 1.0rem;
   vertical-align: baseline;
 
-  font-family: $base-font;
-  font-size: $textwidth-sidenotes;
+  font-family: variables.$base-font;
+  font-size: variables.$textwidth-sidenotes;
   line-height: 1.0rem;
   padding-left: 1rem;
   .sidenote-ref {
     float: left;
     margin-left: -1.0rem;
-    color: $meta-color;
+  color: variables.$meta-color;
   }
   P {
     clear: none;

@@ -1,14 +1,16 @@
+@use "_variables" as variables;
+
 html {
   font-family: sans-serif;
   font-size: 14pt;
-  font-weight: $regular-font-weight;
+  font-weight: variables.$regular-font-weight;
   -webkit-text-size-adjust: 100%;
   font-variant-numeric: oldstyle-nums proportional-nums;
 }
 
 h1,h2,h3 {
-  font-family: $title-font;
-  font-weight: $title-font-weight;
+  font-family: variables.$title-font;
+  font-weight: variables.$title-font-weight;
   font-variant-numeric: lining-nums proportional-nums;
   // font-variant-alternates: stylistic(2);
 }
@@ -28,9 +30,9 @@ h3 {
   font-size: 1.3rem;
 }
 
-p {
-  font-family: $copy-font;
-}
+ p {
+   font-family: variables.$copy-font;
+ }
 
 /*div*/.epigraph {
   margin: 4rem 0;

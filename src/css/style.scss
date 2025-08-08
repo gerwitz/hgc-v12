@@ -1,29 +1,27 @@
-@import '_variables';
-@import '_reset';
-@import '_fonts';
+@use '_variables' as variables;
 
-@import '_base';
-@import '_typography';
-@import '_timeline';
-@import '_sidenotes';
+@use '_base';
+@use '_typography';
+@use '_timeline';
+@use '_sidenotes';
 
 // CSS variables for runtime
 
 :root {
-  --page-color: #{$page-color};
-  --text-color: #{$text-color};
-  --heading-color: #{$heading-color};
-  --meta-color: #{$meta-color};
-  --accent-color: #{$accent-color};
+  --page-color: #{variables.$page-color};
+  --text-color: #{variables.$text-color};
+  --heading-color: #{variables.$heading-color};
+  --meta-color: #{variables.$meta-color};
+  --accent-color: #{variables.$accent-color};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --page-color: #{$dark-page-color};
-    --text-color: #{$dark-text-color};
-    --heading-color: #{$dark-text-color};
-    --meta-color: #{$dark-text-color};
-    --accent-color: #{$accent-color};
+    --page-color: #{variables.$dark-page-color};
+    --text-color: #{variables.$dark-text-color};
+    --heading-color: #{variables.$dark-text-color};
+    --meta-color: #{variables.$dark-text-color};
+    --accent-color: #{variables.$accent-color};
   }
 }
 
@@ -100,7 +98,7 @@ figure {
   }
 }
 figcaption {
-  font-family: $base-font;
+  font-family: variables.$base-font;
   font-size: 80%;
   line-height: 1.3rem;
 
@@ -135,7 +133,7 @@ div.hidden {
 a {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: $accent-color;
+  text-decoration-color: variables.$accent-color;
 
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -146,7 +144,7 @@ a {
 }
 
 .internal  {
-  font-family: $title-font;
+  font-family: variables.$title-font;
   padding-top: 3px; // STIX Two otherwise uses entire line height
 }
 // a.internal  {
@@ -154,17 +152,17 @@ a {
 // }
 .internal::before {
   content: '\29F8'; // a bigger slash
-  color: $accent-color;
-  font-weight: $bold-font-weight;
+  color: variables.$accent-color;
+  font-weight: variables.$bold-font-weight;
 }
 a.internal:hover::before {
-  color: $page-color;
+  color: variables.$page-color;
 }
 
 a:hover {
-  color: $page-color;
-  background-color: $accent-color;
-  box-shadow: 0 0 0.5rem 0.5rem $page-color;
+  color: variables.$page-color;
+  background-color: variables.$accent-color;
+  box-shadow: 0 0 0.5rem 0.5rem variables.$page-color;
 }
 
 a.sticker {
@@ -172,7 +170,7 @@ a.sticker {
 }
 
 a:hover.sticker {
-  border-color: $accent-color;
+  border-color: variables.$accent-color;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -221,8 +219,8 @@ dd {
 
 // metadata
 .meta {
-  font-family: $base-font;
-  font-weight: $light-font-weight;
+  font-family: variables.$base-font;
+    font-weight: variables.$light-font-weight;
   color: var(--meta-color);
 
   font-variant-numeric: lining-nums proportional-nums;
@@ -247,8 +245,8 @@ dd {
 .writing-headline {
   font-size: 1.3rem;
 
-  font-family: $title-font;
-  font-weight: $bold-font-weight;
+  font-family: variables.$title-font;
+  font-weight: variables.$bold-font-weight;
 }
 
 // weeks list
@@ -264,21 +262,21 @@ body.weeks-index {
 // maps
 svg.map {
   .pin {
-    fill: $accent-color;
+  fill: variables.$accent-color;
     stroke: none;
   }
   .h3cell {
-    fill: $accent-color;
-    stroke: $accent-color;
+  fill: variables.$accent-color;
+  stroke: variables.$accent-color;
   }
 }
 
 // sugar
 ::-moz-selection {
-  background-color: $accent-color;
-  color: $page-color;
+  background-color: variables.$accent-color;
+  color: variables.$page-color;
 }
 ::selection {
-  background-color: $accent-color;
-  color: $page-color;
+  background-color: variables.$accent-color;
+  color: variables.$page-color;
 }

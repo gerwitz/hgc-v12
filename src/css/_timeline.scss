@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-@import "_variables";
+@use "_variables" as variables;
 
 $timelineLeft: 100px;
 $timelineLine: 4px;

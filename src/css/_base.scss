@@ -1,4 +1,4 @@
-@import "_variables";
+@use "_variables" as variables;
 
 // BIG GRID
 
@@ -8,7 +8,7 @@ body {
   margin: 0;
   display: grid;
   // grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr min($pale-size, 100%) 1fr;
+  grid-template-columns: 1fr min(variables.$pale-size, 100%) 1fr;
 }
 .pale {
   grid-column: 2;
@@ -34,13 +34,13 @@ body {
 body {
   background: var(--page-color);
   color: var(--text-color);
-  font-family: $base-font;
+  font-family: variables.$base-font;
   font-size: 1rem;
   line-height: 1.6rem;
 }
 .pale {
-  margin-left: $pale-margin;
-  margin-right: $pale-margin;
+  margin-left: variables.$pale-margin;
+  margin-right: variables.$pale-margin;
 }
 .dexter {
   // left of pale
@@ -78,7 +78,7 @@ body {
 
   .site-title {
     svg * {
-      fill: $accent-color;
+  fill: variables.$accent-color;
     }
     // color: $text-color;
     // font-family: $title-font;
@@ -93,7 +93,7 @@ body {
   }
 
   a.site-title:hover {
-    background-color: $accent-color;
+  background-color: variables.$accent-color;
     color: var(--page-color);
     svg * {
       fill: var(--page-color);
@@ -146,7 +146,7 @@ section, div {
     border: none;
     background: none;
     svg * {
-      stroke: $accent-color;
+  stroke: variables.$accent-color;
     }
   }
 }
@@ -154,7 +154,7 @@ section, div {
 /// FOOTER
 
 .main-footer {
-  // background-color: $accent-color;
+  // background-color: variables.$accent-color;
   // color: $page-color;
 
   padding-top: 16px;
@@ -166,7 +166,7 @@ section, div {
   //   text-decoration: none;
   // }
   // a:hover {
-  //   color: $accent-color;
+  //   color: variables.$accent-color;
   //   background-color: $page-color;
   //   box-shadow: none;
   // }
@@ -180,14 +180,14 @@ section, div {
     .homelink {
       display: inline-block;
       padding-top: 4px;
-      font-weight: $bold-font-weight;
+  font-weight: variables.$bold-font-weight;
       text-decoration: none;
 
       svg * {
-        fill: $page-color;
+  fill: variables.$page-color;
       }
       &:hover svg * {
-        fill: $accent-color;
+  fill: variables.$accent-color;
       }
     }
 
@@ -214,10 +214,10 @@ section, div {
     .internal::before {
       content: '/';
       // color: $page-color;
-      font-weight: $bold-font-weight;
+  font-weight: variables.$bold-font-weight;
     }
     // a.internal:hover::before {
-    //   color: $accent-color;
+  //   color: variables.$accent-color;
     // }
 
     & > dl {
@@ -230,7 +230,7 @@ section, div {
       }
       dd {
         display: none;
-        @media ($bp-liminal) {
+  @media (variables.$bp-liminal) {
           display: inherit;
           clear:right;
           padding-bottom: 8px;
@@ -269,7 +269,7 @@ section, div {
 
       img {
         // display: inline;
-        border: solid 1px $text-color;
+  border: solid 1px variables.$text-color;
       }
     }
   }
