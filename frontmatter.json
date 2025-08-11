@@ -2,6 +2,147 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.taxonomy.contentTypes": [
     {
+      "name": "week",
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        }
+      ]
+    },
+    {
+      "name": "writing",
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Tags",
+          "name": "content-tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "draft"
+        }
+      ]
+    },
+    {
+      "name": "note",
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Tags",
+          "name": "content-tags",
+          "type": "tags"
+        },
+        {
+          "title": "updated",
+          "name": "updated",
+          "type": "datetime"
+        },
+        {
+          "title": "mp-syndicate-to",
+          "name": "mp-syndicate-to",
+          "type": "choice",
+          "choices": [
+            "https://fedi.gerwitz.com/@hans"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "project",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Date",
+          "name": "date",
+          "type": "datetime",
+          "isPublishDate": true
+        },
+        {
+          "title": "Tags",
+          "name": "content-tags",
+          "type": "tags"
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "draft"
+        }
+      ]
+    },
+    {
+      "name": "list",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "Tags",
+          "name": "content-tags",
+          "type": "tags"
+        }
+    {
       "name": "default",
       "pageBundle": false,
       "previewPath": "yyyy/MM/dd",
@@ -58,11 +199,19 @@
       "previewPath": "weeks",
       "fields": [
         {
-          "title": "Publishing date",
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Date",
           "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
+          "type": "datetime"
+        },
+        {
+          "title": "Tags",
+          "name": "content-tags",
+          "type": "tags"
         }
       ]
     }
@@ -73,20 +222,68 @@
     {
       "title": "weeks",
       "path": "[[workspace]]/src/weeks",
-      "excludeSubdir": false
+      "excludeSubdir": false,
+      "filePrefix": "{{date|yyyy}}/",
+      "contentTypes": [
+        "week"
+      ]
     },
     {
       "title": "writing",
       "path": "[[workspace]]/src/writing",
       "excludeSubdir": false,
-      "filePrefix": "yyyy-MM-dd",
-      "contentTypes": "writing"
+      "filePrefix": "{{date|yyyy}}/{{date|yyyy-MM-dd}}",
+      "contentTypes": [
+        "writing"
+      ]
     },
     {
       "title": "notes",
-      "path": "[[workspace]]/src/notes"
+      "path": "[[workspace]]/src/notes",
+      "excludeSubdir": false,
+      "filePrefix": "{{date|yyyy}}/{{date|yyyy-MM-dd}}",
+      "contentTypes": [
+        "note"
+      ]
+    },
+    {
+      "title": "projects",
+      "path": "[[workspace]]/src/projects",
+      "excludeSubdir": false,
+      "contentTypes": [
+        "project"
+      ]
+    },
+    {
+      "title": "lists",
+      "path": "[[workspace]]/src/lists",
+      "excludeSubdir": false,
+      "contentTypes": [
+        "list"
+      ]
+    },
+    {
+      "title": "logs",
+      "path": "[[workspace]]/src/logs",
+      "excludeSubdir": false,
+      "contentTypes": [
+        "log"
+      ]
+    },
+    {
+      "title": "media",
+      "path": "[[workspace]]/src/media",
+      "excludeSubdir": false,
+      "contentTypes": [
+        "media"
+      ]
     }
   ],
   "frontMatter.taxonomy.alignFilename": true,
-  "frontMatter.dashboard.openOnStart": true
+  "frontMatter.taxonomy.commaSeparatedFields": [
+    "content-tags"
+  ],
+  "frontMatter.dashboard.openOnStart": false,
+  "frontMatter.website.host": "https://hans.gerwitz.com",
+  "frontMatter.panel.openOnSupportedFile": false
 }
