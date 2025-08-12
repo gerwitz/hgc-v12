@@ -1,8 +1,12 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import nbspFilter from "eleventy-nbsp-filter";
+import path from "path";
 
-// Sass plugin removed - now using regular CSS
-// import sass from "sass";
+// import lightningCss from "lightningcss";
+import browserslist from "browserslist";
+import { browserslistToTargets, bundle } from "lightningcss";
+const broswerTargets = browserslistToTargets(browserslist("> 0.2% and not dead"));
+
 import markdownIt from "markdown-it";
 import markdownItFootnote from "markdown-it-footnote-here";
 import markdownItAttribution from "markdown-it-attribution";
@@ -30,7 +34,33 @@ export default function(eleventyConfig) {
 
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
-  // Sass plugin removed - now using regular CSS
+
+  // Process CSS with LightningCSS
+  eleventyConfig.addTemplateFormats("css");
+  eleventyConfig.addExtension("css", {
+    outputFileExtension: "css",
+    compile: async function (_inputContent, inputPath) {
+      let parsed = path.parse(inputPath);
+      if (parsed.name.startsWith("_")) {
+        return;
+      }
+
+      let targets = browserslistToTargets(browserslist("> 0.2% and not dead"));
+
+      return async () => {
+        let { code, map } = await bundle({
+          filename: inputPath,
+          minify: true,
+          sourceMap: false,
+          targets,
+          drafts: {
+            nesting: true
+          },
+        });
+        return code;
+      };
+    },
+  });
 
   // custom collections
   for (const [name, collection] of Object.entries(collections)) {
@@ -124,23 +154,6 @@ export default function(eleventyConfig) {
   markdownLib.renderer.rules.footnote_close = () => ('</aside>');
   markdownLib.linkify.set({ fuzzyLink: false }); // don't turn simple domains into links
   eleventyConfig.setLibrary("md", markdownLib);
-
-	// eleventyConfig.addTemplateFormats("scss");
-  // // Creates the extension for use
-  // eleventyConfig.addExtension("scss", {
-  //   outputFileExtension: "css", // optional, default: "html"
-
-  //   // `compile` is called once per .scss file in the input directory
-  //   compile: async function (inputContent) {
-  //     let result = sass.compileString(inputContent);
-
-  //     // This is the render function, `data` is the full data cascade
-  //     return async (data) => {
-  //       return result.css;
-  //     };
-  //   },
-  // });
-
 
   eleventyConfig.addPassthroughCopy("src/**/*.gif");
   eleventyConfig.addPassthroughCopy("src/**/*.jpg");
