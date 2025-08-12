@@ -1,7 +1,7 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import nbspFilter from "eleventy-nbsp-filter";
-import eleventySass from "@11tyrocks/eleventy-plugin-sass-lightningcss";
 
+// Sass plugin removed - now using regular CSS
 // import sass from "sass";
 import markdownIt from "markdown-it";
 import markdownItFootnote from "markdown-it-footnote-here";
@@ -30,7 +30,7 @@ export default function(eleventyConfig) {
 
   // plugins
   eleventyConfig.addPlugin(pluginRss); // used only for absoluting URLs
-  eleventyConfig.addPlugin(eleventySass);
+  // Sass plugin removed - now using regular CSS
 
   // custom collections
   for (const [name, collection] of Object.entries(collections)) {
@@ -154,6 +154,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"src/_meta": "/"});
   // eleventyConfig.addPassthroughCopy({"src/_meta/favicon": "/favicon"});
   eleventyConfig.addPassthroughCopy("src/css/fonts/*");
+  eleventyConfig.addPassthroughCopy("src/css/*.css");
 
   return {
     dir: {

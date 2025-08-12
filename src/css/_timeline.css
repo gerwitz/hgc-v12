@@ -1,0 +1,102 @@
+/* Timeline styles - converted from Sass */
+
+/* Timeline constants - converted from Sass variables */
+:root {
+  --timeline-left: 100px;
+  --timeline-line: 4px;
+  --timeline-dot: 24px;
+  --timeline-padding: 48px;
+}
+
+.timeline .toggles input {
+  -webkit-transform: translateZ(0);
+}
+
+.timeline ol {
+  list-style-type: none;
+  position: relative;
+  margin-left: var(--timeline-left);
+  padding-left: var(--timeline-padding);
+}
+
+.timeline ol::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--timeline-dot) / 2);
+  left: calc(var(--timeline-line) * -2);
+  width: var(--timeline-line);
+  height: 100%;
+  background: linear-gradient(var(--page-color) 0, var(--text-color) 18px, var(--text-color) 100%);
+  /* border-left: solid var(--timeline-line) var(--text-color); */
+}
+
+.timeline ol li {
+  position: relative;
+  width: 100%;
+}
+
+.timeline ol li time {
+  position: absolute;
+  width: calc(var(--timeline-left) - var(--timeline-padding));
+  left: calc(var(--timeline-left) * -1 - var(--timeline-line) - var(--timeline-padding));
+  text-align: right;
+  padding-right: var(--timeline-padding);
+  opacity: 0.0;
+  transition: opacity .5s ease-in;
+}
+
+.timeline ol li time.first {
+  opacity: 1.0;
+}
+
+.timeline ol li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(var(--timeline-dot) - (var(--timeline-line) * 2));
+  height: calc(var(--timeline-dot) - (var(--timeline-line) * 2));
+  left: calc(var(--timeline-padding) * -1 - var(--timeline-line) / 2 - var(--timeline-dot) / 2);
+  margin-top: calc(var(--timeline-dot) / -2); /* this could be improved to align with text rather than line */
+  top: 50%;
+  border: var(--timeline-line) solid var(--text-color);
+  border-radius: 50%;
+  background-color: var(--page-color);
+  transition: background-color .5s ease-in;
+}
+
+.timeline ol li:hover:before {
+  background-color: var(--text-color);
+  transition: background-color .5s ease-out;
+}
+
+.timeline ol li p {
+  display: inline;
+}
+
+.timeline ol li .map-link {
+  opacity: 0.0;
+  transition: opacity .5s ease-in;
+}
+
+.timeline ol li:hover .map-link {
+  opacity: 1.0;
+  transition: opacity .5s ease-out;
+}
+
+.timeline ol li a {
+  text-decoration: none;
+  display: inline;
+  /* .map-preview {
+    position: absolute;
+    right: 0px;
+    opacity: 0.0;
+  }
+  &:hover .map-preview {
+    opacity: 1.0;
+  } */
+}
+
+/* reverse gets the extra line at top */
+.timeline.reverse ol::before {
+  top: calc(var(--timeline-dot) / -2);
+}

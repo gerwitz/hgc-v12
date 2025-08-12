@@ -1,0 +1,285 @@
+/* Main stylesheet - converted from Sass */
+
+/* Import all component stylesheets */
+@import '_variables.css';
+@import '_base.css';
+@import '_typography.css';
+@import '_timeline.css';
+@import '_sidenotes.css';
+
+/* CSS variables for runtime - these are now in _variables.css but keeping here for compatibility */
+:root {
+  --page-color: hsl(0, 0%, 99%);
+  --text-color: hsl(0, 0%, 5%);
+  --heading-color: hsl(140, 7%, 25%);
+  --meta-color: hsl(140, 7%, 25%);
+  --accent-color: hsl(140, 100%, 25%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-color: hsl(135, 7%, 12%);
+    --text-color: hsl(0, 0%, 100%);
+    --heading-color: hsl(0, 0%, 100%);
+    --meta-color: hsl(0, 0%, 100%);
+    --accent-color: hsl(140, 100%, 25%);
+  }
+}
+
+/* basics */
+* {
+  box-sizing: border-box;
+  font-kerning: auto;
+}
+
+p {
+  position: relative;
+  margin-bottom: 1rem;
+
+  /* https://clagnut.com/blog/2395/ */
+  hyphens: auto;
+  hyphenate-limit-chars: 10 5 4;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 5;
+  -webkit-hyphenate-limit-after: 4;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 10 5 4;
+}
+
+a {
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  color: var(--heading-color);
+}
+
+article blockquote {
+  padding-left: 15px;
+}
+
+article blockquote *:last-child {
+  margin-bottom: 0;
+}
+
+*:not(figure.quotation) > blockquote {
+  /* markdown plugin will create bare blockquotes if there is no citation */
+  border-left: 0.3em solid;
+  border-color: var(--accent-color);
+}
+
+figure.quotation {
+  padding-left: 1em;
+  border-left: 0.3em solid;
+  border-color: var(--accent-color);
+}
+
+figure.quotation blockquote {
+  margin: 0;
+}
+
+figure.quotation figcaption {
+  text-align: left;
+}
+
+figure.quotation figcaption::before {
+  content: '— ';
+}
+
+/* p + footer {
+  margin-top: -1.5rem; // because p has a margin-bottom of 2rem
+} */
+
+figure {
+  /* margin: 1rem 0 2rem; */
+  padding: 0;
+  position: relative;
+}
+
+figure iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-family: var(--base-font);
+  font-size: 80%;
+  line-height: 1.3rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+hr {
+  background: #111;
+  border: 0;
+  height: 1px;
+  margin: 4rem 0;
+  width: 100%;
+}
+
+pre {
+  font-size: 90%;
+  margin-left: 2.5%;
+  overflow-x: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+div.hidden {
+  display: none;
+}
+
+/* links */
+a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent-color);
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+  position: relative; /* for box-shadow on :hover */
+}
+
+.internal {
+  font-family: var(--title-font);
+  padding-top: 3px; /* STIX Two otherwise uses entire line height */
+}
+
+/* a.internal {
+  font-weight: var(--bold-font-weight);
+} */
+
+.internal::before {
+  content: '\29F8'; /* a bigger slash */
+  color: var(--accent-color);
+  font-weight: var(--bold-font-weight);
+}
+
+a.internal:hover::before {
+  color: var(--page-color);
+}
+
+a:hover {
+  color: var(--page-color);
+  background-color: var(--accent-color);
+  box-shadow: 0 0 0.5rem 0.5rem var(--page-color);
+}
+
+a.sticker {
+  display: inline-block;
+}
+
+a:hover.sticker {
+  border-color: var(--accent-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  a, a:hover {
+    color: inherit;
+    background-color: inherit;
+    box-shadow: none;
+    text-decoration-color: inherit;
+  }
+  
+  a:hover {
+    text-decoration-thickness: 3px;
+  }
+  
+  .internal::before {
+    color: inherit;
+  }
+  
+  a.internal:hover::before {
+    color: inherit;
+  }
+}
+
+dt {
+  clear: left;
+  float: left;
+  min-width: 25%;
+  padding-bottom: 8px;
+}
+
+dd {
+  clear: right;
+  padding-bottom: 8px;
+}
+
+/* feed lists */
+.feed-item {
+  margin-top: 3.9rem;
+}
+
+.feed-item *:first-child *:last-child {
+  margin-bottom: 0;
+}
+
+.feed-item .meta {
+  clear: left;
+  margin-bottom: 8px;
+}
+
+/* metadata */
+.meta {
+  font-family: var(--base-font);
+  font-weight: var(--light-font-weight);
+  color: var(--meta-color);
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+.meta a {
+  text-decoration-color: var(--meta-color);
+}
+
+.signature {
+  border-top: solid 1px var(--meta-color);
+  padding-top: 1.0rem;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-style: italic;
+}
+
+.signature a.internal {
+  font-weight: inherit;
+}
+
+/* feed links */
+.writing-headline {
+  font-size: 1.3rem;
+  font-family: var(--title-font);
+  font-weight: var(--bold-font-weight);
+}
+
+/* weeks list */
+body.weeks-index ol {
+  padding-left: 0;
+}
+
+body.weeks-index ol li {
+  list-style-type: none;
+}
+
+/* maps */
+svg.map .pin {
+  fill: var(--accent-color);
+  stroke: none;
+}
+
+svg.map .h3cell {
+  fill: var(--accent-color);
+  stroke: var(--accent-color);
+}
+
+/* sugar */
+::-moz-selection {
+  background-color: var(--accent-color);
+  color: var(--page-color);
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: var(--page-color);
+}

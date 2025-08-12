@@ -1,0 +1,99 @@
+/* Sidenotes styles - converted from Sass */
+
+/* sidenotes are <aside> after the <p> that references them
+   so <p> floats left and <aside> floats right */
+
+/* make room for sidenotes */
+article > p,
+article > ul {
+  float: left;
+  clear: left;
+  width: 100%;
+}
+
+@media (min-width: 768px) { /* bp-liminal */
+  article > p,
+  article > ul {
+    width: var(--textwidth-simple);
+  }
+}
+
+@media (min-width: 960px) { /* bp-full */
+  article > p,
+  article > ul {
+    width: var(--textwidth-sidenotes);
+  }
+}
+
+article > p a.sidenote-ref,
+article > ul a.sidenote-ref {
+  /* <sup>ish */
+  vertical-align: super;
+  line-height: 0;
+  font-size: .83em;
+  color: var(--meta-color);
+  pointer-events: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+article > p a.sidenote-ref:hover,
+article > ul a.sidenote-ref:hover {
+  color: var(--accent-color);
+  background-color: inherit;
+  box-shadow: none;
+}
+
+@media (min-width: 960px) { /* bp-full */
+  article > p a.sidenote-ref,
+  article > ul a.sidenote-ref {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.sidenote {
+  position: relative;
+  padding-top: 0.75em;
+  float: left;
+  width: 100%;
+  font-size: 1.0rem;
+  vertical-align: baseline;
+  font-family: var(--base-font);
+  font-size: var(--textwidth-sidenotes);
+  line-height: 1.0rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) { /* bp-liminal */
+  .sidenote {
+    width: var(--textwidth-simple);
+  }
+}
+
+@media (min-width: 960px) { /* bp-full */
+  .sidenote {
+    float: right;
+    clear: right;
+    width: calc(100% - var(--textwidth-sidenotes));
+    padding-left: 3rem;
+    margin-top: 1em; /* to match article > *+* */
+    /* margin-bottom: 1.96rem; */
+  }
+}
+
+.sidenote .sidenote-ref {
+  float: left;
+  margin-left: -1.0rem;
+  color: var(--meta-color);
+}
+
+.sidenote p {
+  clear: none;
+}
+
+/* but now we have to prevent everything from collapsing */
+article > *,
+footer {
+  clear: both;
+}

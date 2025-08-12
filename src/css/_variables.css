@@ -1,0 +1,48 @@
+/* CSS Variables - converted from Sass */
+
+:root {
+  /* Breakpoints */
+  --pale-size: 960px;
+  --pale-margin: 6vw;
+  --textwidth-simple: 80%;
+  --textwidth-sidenotes: 66%;
+  --bp-liminal-value: 768px; /* 960px * 0.80 */
+  --bp-full-value: 960px;
+
+  /* Colors */
+  --page-color: hsl(0, 0%, 99%);
+  --dark-page-color: hsl(135, 7%, 12%);
+  --text-color: hsl(0, 0%, 5%);
+  --dark-text-color: hsl(0, 0%, 100%);
+  --heading-color: hsl(140, 7%, 25%);
+  --meta-color: hsl(140, 7%, 25%);
+  --accent-color: hsl(140, 100%, 25%); /* #00802B */
+  /* initial search found brick databases using #00852B and #00802B
+     later #237841 is more common
+     lego.com uses #458441, #3D8828, and #058A0B for backgrounds
+     #237841 is nice, but a bit dull. #00802B wins
+     (very close to Prismacolor 908 - dark green) */
+
+  /* Font */
+  --base-font: 'Source Sans', sans-serif;
+  --copy-font: 'STIX Two Text', serif;
+  --title-font: 'Source Sans', sans-serif;
+
+  --light-font-weight: 200;
+  --regular-font-weight: 400;
+  --bold-font-weight: 700;
+  --title-font-weight: 700;
+
+  /* Transitions - using standard transition property */
+  --transition-duration: 0.3s;
+  --transition-timing: ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-color: var(--dark-page-color);
+    --text-color: var(--dark-text-color);
+    --heading-color: var(--dark-text-color);
+    --meta-color: var(--dark-text-color);
+  }
+}

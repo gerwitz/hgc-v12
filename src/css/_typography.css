@@ -1,48 +1,51 @@
-@use "_variables" as variables;
+/* Typography styles - converted from Sass */
 
 html {
   font-family: sans-serif;
   font-size: 14pt;
-  font-weight: variables.$regular-font-weight;
+  font-weight: var(--regular-font-weight);
   -webkit-text-size-adjust: 100%;
   font-variant-numeric: oldstyle-nums proportional-nums;
 }
 
-h1,h2,h3 {
-  font-family: variables.$title-font;
-  font-weight: variables.$title-font-weight;
+h1, h2, h3 {
+  font-family: var(--title-font);
+  font-weight: var(--title-font-weight);
   font-variant-numeric: lining-nums proportional-nums;
-  // font-variant-alternates: stylistic(2);
+  /* font-variant-alternates: stylistic(2); */
 }
+
 h1 {
   font-size: 3.5rem;
   line-height: 4rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 h2 {
   font-size: 1.6875rem;
   line-height: 2.4rem;
   margin-top: 4rem;
   margin-bottom: .8rem;
 }
+
 h3 {
   font-size: 1.3rem;
 }
 
- p {
-   font-family: variables.$copy-font;
- }
+p {
+  font-family: var(--copy-font);
+}
 
-/*div*/.epigraph {
+/* div */.epigraph {
   margin: 4rem 0;
+}
 
-  blockquote {
-      font-style: italic;
-      margin: 2rem 0;
+.epigraph blockquote {
+  font-style: italic;
+  margin: 2rem 0;
+}
 
-      footer {
-          font-style: normal;
-      }
-  }
+.epigraph blockquote footer {
+  font-style: normal;
 }
