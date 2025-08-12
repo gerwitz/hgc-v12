@@ -1,10 +1,10 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import nbspFilter from "eleventy-nbsp-filter";
 import path from "path";
+import fs from "fs";
 
-// import lightningCss from "lightningcss";
 import browserslist from "browserslist";
-import { browserslistToTargets, bundle } from "lightningcss";
+import { browserslistToTargets, bundleAsync } from "lightningcss";
 const broswerTargets = browserslistToTargets(browserslist("> 0.2% and not dead"));
 
 import markdownIt from "markdown-it";
@@ -39,7 +39,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
     outputFileExtension: "css",
-    compile: async function (_inputContent, inputPath) {
+    compile: async function (inputContent, inputPath) {
       let parsed = path.parse(inputPath);
       if (parsed.name.startsWith("_")) {
         return;
@@ -48,16 +48,41 @@ export default function(eleventyConfig) {
       let targets = browserslistToTargets(browserslist("> 0.2% and not dead"));
 
       return async () => {
-        let { code, map } = await bundle({
-          filename: inputPath,
-          minify: true,
-          sourceMap: false,
-          targets,
-          drafts: {
-            nesting: true
-          },
-        });
-        return code;
+        try {
+          let { code } = await bundleAsync({
+            filename: inputPath,
+            minify: true,
+            sourceMap: false,
+            targets,
+            include: 1, // Include @import statements
+            resolver: {
+              async read(file) {
+                try {
+                  return fs.readFileSync(file, 'utf8');
+                } catch (err) {
+                  console.error(`Failed to read CSS file: ${file}`, err);
+                  throw err;
+                }
+              },
+              async resolve(specifier, from) {
+                try {
+                  // Handle relative imports
+                  return path.resolve(path.dirname(from), specifier);
+                } catch (err) {
+                  console.error(`Failed to resolve CSS import: ${specifier} from ${from}`, err);
+                  throw err;
+                }
+              }
+            },
+            drafts: {
+              nesting: true
+            },
+          });
+          return code.toString();
+        } catch (err) {
+          console.error(`Error processing CSS file ${inputPath}:`, err);
+          return inputContent; // fallback to original content
+        }
       };
     },
   });
