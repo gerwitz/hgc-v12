@@ -183,15 +183,15 @@ a:hover.sticker {
     box-shadow: none;
     text-decoration-color: inherit;
   }
-  
+
   a:hover {
     text-decoration-thickness: 3px;
   }
-  
+
   .internal::before {
     color: inherit;
   }
-  
+
   a.internal:hover::before {
     color: inherit;
   }
@@ -276,10 +276,10 @@ svg.map .h3cell {
 /* sugar */
 ::-moz-selection {
   background-color: var(--accent-color);
-  color: var(--page-color);
+  color: var(--dark-text-color);
 }
 
 ::selection {
   background-color: var(--accent-color);
-  color: var(--page-color);
+  color: var(--dark-text-color);
 }
