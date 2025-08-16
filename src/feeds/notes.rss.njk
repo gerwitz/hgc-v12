@@ -26,7 +26,7 @@ eleventyImport:
       <link>{{ absolutePostUrl }}</link>
       <guid>{{ absolutePostUrl }}</guid>
       <pubDate>{{ post.date | date('ddd, DD MMM YYYY HH:mm:ss ZZ') }}</pubDate>
-      <description>{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+      <description>{% if post.type == 'post' %}{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}{% else %}{{ post.template.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}{% endif %}</description>
     </item>
 
     {% endfor -%}

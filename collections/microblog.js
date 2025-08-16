@@ -21,7 +21,22 @@ export const microblog = (collection) => {
       }
     });
 
-  var full = notes
+  var processedNotes = notes
+    .map(function(item) {
+      return {
+        type: 'note',
+        inputPath: item.inputPath,
+        fileSlug: item.fileSlug,
+        outputPath: item.outputPath,
+        url: item.url,
+        date: item.date,
+        title: item.data.title,
+        data: item.data,
+        template: item
+      };
+    });
+
+  var full = processedNotes
     .concat(headlines);
 
   // most recent first
