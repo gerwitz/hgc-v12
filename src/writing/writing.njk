@@ -10,6 +10,7 @@ eleventyExcludeFromCollections: true
   Purely personal posts are not listed here, but can be found under <a href="/writing/personal" class="internal">writing/personal</a>
 </div>
 
+{% set pages = collections.writing | filterByCategories(['work','culture']) %}
 <ul>
 {%- for page in collections.writing | reverse -%}
   <li>

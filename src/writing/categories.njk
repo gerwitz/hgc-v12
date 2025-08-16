@@ -15,7 +15,7 @@ eleventyComputed:
   title: "{{ category | capitalize }} posts"
 ---
 
-{% set pages = collections.writing | filterByCategory(category) %}
+{% set pages = collections.writing | filterByCategories([category]) %}
 {# {% set pages = collections.writing %} #}
 
 <ul>

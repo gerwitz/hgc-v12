@@ -1,0 +1,10 @@
+{% set pages = collections.writing | filterByCategories(['hexmap']) %}
+{# {% set pages = collections.writing %} #}
+
+<ul>
+{%- for page in pages | reverse -%}
+  <li>
+    <a href="{{ page.url }}">{{ page.data.title }}</a>
+  </li>
+{%- endfor -%}
+</ul>
