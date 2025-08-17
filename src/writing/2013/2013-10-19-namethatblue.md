@@ -10,10 +10,10 @@ content-tags:
 ---
 
 <p>
-	<a href="http://namethatblue.com/">Name That Blue</a> is catching on, and I predict in the next few days will be all over design fandom. So I present the following reference, taken directly from Colin Gourlay's code. Sorry, Colin.
+	<a href="http://namethatblue.com/" class="external">Name That Blue</a> is catching on, and I predict in the next few days will be all over design fandom. So I present the following reference, taken directly from Colin Gourlay's code. Sorry, Colin.
 </p>
 <p>
-	This was prompted by <a href="http://shannonethomas.com/">Shannon</a>'s refined eye, which objected to the choice for <a href="http://vimeo.com/">Vimeo</a>. Indeed, it seems <a href="http://brandcolors.net/">BrandColors</a> has an outdated blue for them.
+	This was prompted by <a href="http://shannonethomas.com/" class="external">Shannon</a>'s refined eye, which objected to the choice for <a href="http://vimeo.com/" class="external">Vimeo</a>. Indeed, it seems <a href="http://brandcolors.net/" class="external">BrandColors</a> has an outdated blue for them.
 </p>
 
 <p>

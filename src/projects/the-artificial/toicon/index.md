@@ -37,5 +37,5 @@ So, I can't justify further development and am taking the site offline to preven
 	 M15,15.5c0,1.933-1.343,3.5-3,3.5s-3-1.567-3-3.5s1.343-3.5,3-3.5S15,13.567,15,15.5z M23,15.5c0,1.933-1.343,3.5-3,3.5
 	s-3-1.567-3-3.5s1.343-3.5,3-3.5S23,13.567,23,15.5z"></path>
 </svg>
-<figcaption><em>to die</em> from the series <em>Lines and Angles</em> by Shannon E Thomas on <a href="https:///www.toicon.com/">to [icon]</a>. Licensed CC-BY 4.0</figcaption>
+<figcaption><em>to die</em> from the series <em>Lines and Angles</em> by Shannon E Thomas on <a href="https:///www.toicon.com/" class="external">to [icon]</a>. Licensed CC-BY 4.0</figcaption>
 </figure>
