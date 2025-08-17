@@ -152,16 +152,6 @@ a {
   font-weight: var(--bold-font-weight);
 } */
 
-.internal::before {
-  content: '\29F8'; /* a bigger slash */
-  color: var(--accent-color);
-  font-weight: var(--bold-font-weight);
-}
-
-a.internal:hover::before {
-  color: var(--page-color);
-}
-
 a:hover {
   color: var(--page-color);
   background-color: var(--accent-color);
@@ -186,14 +176,6 @@ a:hover.sticker {
 
   a:hover {
     text-decoration-thickness: 3px;
-  }
-
-  .internal::before {
-    color: inherit;
-  }
-
-  a.internal:hover::before {
-    color: inherit;
   }
 }
 

@@ -32,10 +32,10 @@ eleventyExcludeFromCollections: true
     This site is a messy garden of content, and I haven't designed a home page for this version. Deal with it.
   </p>
   <p>
-    You can learn about me at <a href="/about/" class="internal">about</a>, browse here via the links below, or <a href="https://bsky.app/profile/gerwitz.com" rel="me noreferrer nofollow">find me on Bluesky</a>.
+    You can learn about me at <a href="/about/" class="internal">/about</a>, browse here via the links below, or <a href="https://bsky.app/profile/gerwitz.com" rel="me noreferrer nofollow">find me on Bluesky</a>.
   </p>
 {#
-  <h2>Recently in <a href="/notes/" class="internal">notes</a></h2>
+  <h2>Recently in <a href="/notes/" class="internal">/notes</a></h2>
   {% set noteslist = collections.notes | reverse | limit(3) %}
   {% for item in noteslist %}
     <article>

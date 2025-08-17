@@ -14,7 +14,7 @@ export const navpath = (path, crumbPath) => {
     }
   }
   else {
-    link = '<a class="internal" href="/' + path + '/">' + path + '</a>';
+    link = '<a class="internal" href="/' + path + '/">/' + path + '</a>';
   }
 
   return new NunjucksLib.runtime.SafeString(link);

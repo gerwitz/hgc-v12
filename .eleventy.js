@@ -153,7 +153,15 @@ export default function(eleventyConfig) {
           return href.match(/^https?:\/\//);
         },
         attrs: {
-          class: "external-link",
+          class: "external",
+        },
+      },
+      {
+        matcher(href) {
+          return href.match(/^[./](.*)$/);
+        },
+        attrs: {
+          class: "internal",
         },
       },
       {
@@ -161,7 +169,7 @@ export default function(eleventyConfig) {
           return href.match(/^[./](.*)\/$/);
         },
         attrs: {
-          class: "index-link",
+          class: "index",
         },
       },
     ])

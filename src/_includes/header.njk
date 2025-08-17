@@ -12,10 +12,10 @@
   {% endif %}
   {% for crumb in breadcrumbs %}
     {% if loop.last %}
-      <span class="internal">{{ crumb }}</a>
+      <span class="internal">/{{ crumb }}</a>
     {% else %}
       {% set crumbPath = crumbPath + crumb + '/' %}
-      <a class="internal" href="{{ crumbPath }}">{{ crumb }}</a>
+      <a class="internal" href="{{ crumbPath }}">/{{ crumb }}</a>
     {% endif %}
   {% endfor %}
 {% endif %}
