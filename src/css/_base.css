@@ -195,11 +195,6 @@ div.emphasis > p {
   padding-bottom: 18px;
 }
 
-.main-footer .sitemap .internal::before {
-  content: '/';
-  font-weight: var(--bold-font-weight);
-}
-
 .main-footer .sitemap > dl {
   width: 50%;
 }
