@@ -23,7 +23,7 @@
   content: '';
   position: absolute;
   top: calc(var(--timeline-dot) / 2);
-  left: calc(var(--timeline-line) * -2);
+  left: calc(var(--timeline-line) * -1);
   width: var(--timeline-line);
   height: 100%;
   background: linear-gradient(var(--page-color) 0, var(--text-color) 18px, var(--text-color) 100%);
