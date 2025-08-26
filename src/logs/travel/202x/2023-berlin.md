@@ -21,4 +21,4 @@ destinations:
     geo: [52.52726, 13.42355]
 ---
 
-Gathered my team and our frontend development colleagues for 3 days. Shannon and I came a couple of days early to see She Wants Revenge and dine at [Cookies Cream](https://cookiescream.com/).
+Gathered my team and our frontend development colleagues for 3 days. Shannon and I came a couple of days early to see [She Wants Revenge](https://www.shewantsrevenge.com/) and dine at [Cookies Cream](https://cookiescream.com/).
