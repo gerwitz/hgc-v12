@@ -1,6 +1,6 @@
 import {parseHTML} from "linkedom";
 import d3 from "d3";
-import fs from "fs";
+import { getLand } from "./land.js";
 
 export const map = (input) => {
 
@@ -33,7 +33,7 @@ export const map = (input) => {
 
   const path = d3.geoPath(projection);
 
-  var land_geojson = JSON.parse(fs.readFileSync('eleventy/shortcodes/land.geojson'));
+  const land_geojson = getLand();
 
   svg.selectAll('path')
     .data(land_geojson.features)
