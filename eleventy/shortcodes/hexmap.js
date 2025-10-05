@@ -22,7 +22,7 @@ export const hexmap = (input) => {
   var projection = d3.geoEqualEarth();
   var pathProjection = d3.geoPath(projection);
 
-  var land_geojson = JSON.parse(fs.readFileSync('shortcodes/land.geojson'));
+  var land_geojson = JSON.parse(fs.readFileSync('eleventy/shortcodes/land.geojson'));
 
   projection.fitExtent([[0,0],[width,height]], land_geojson);
 

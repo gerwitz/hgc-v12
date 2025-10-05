@@ -2,7 +2,7 @@
 
 import moment from "moment";
 
-import { genesisMoment, weekStartMoment } from "../eleventy/week.js";
+import { genesisMoment, weekStartMoment } from "../week.js";
 
 export const weeks = (collection) => {
   const weeknotes = collection.getFilteredByTag("weeknotes");

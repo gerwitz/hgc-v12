@@ -1,6 +1,6 @@
 import NunjucksLib from "nunjucks";
 
-import { genesisMoment, isoThursdayForWeek } from "../eleventy/week.js";
+import { genesisMoment, isoThursdayForWeek } from "../week.js";
 
 const moonPhase = 2551443; // == seconds in a lunar phase
 const moonAtGenesis = 1210000; // == approx moon age in seconds on genesis

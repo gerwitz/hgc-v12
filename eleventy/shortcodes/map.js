@@ -33,7 +33,7 @@ export const map = (input) => {
 
   const path = d3.geoPath(projection);
 
-  var land_geojson = JSON.parse(fs.readFileSync('shortcodes/land.geojson'));
+  var land_geojson = JSON.parse(fs.readFileSync('eleventy/shortcodes/land.geojson'));
 
   svg.selectAll('path')
     .data(land_geojson.features)

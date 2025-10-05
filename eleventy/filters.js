@@ -1,4 +1,4 @@
-import * as filters from "../filters/index.js";
+import * as filters from "./filters/index.js";
 
 export default function filtersPlugin(eleventyConfig, options = {}) {
   for (const [name, filter] of Object.entries(filters)) {

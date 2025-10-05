@@ -1,4 +1,4 @@
-import { weekNumberFromDate } from "../eleventy/week.js";
+import { weekNumberFromDate } from "../week.js";
 
 export const weeklyEvents = (collection) => {
   const eventsByWeek = {};

@@ -1,4 +1,4 @@
-import * as shortcodes from "../shortcodes/index.js";
+import * as shortcodes from "./shortcodes/index.js";
 
 export default function shortcodesPlugin(eleventyConfig, options = {}) {
   const { inputDir = "src" } = options;

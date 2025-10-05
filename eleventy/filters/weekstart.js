@@ -1,3 +1,3 @@
-import { weekStartMoment } from "../eleventy/week.js";
+import { weekStartMoment } from "../week.js";
 
 export const weekstart = (weeknum) => weekStartMoment(weeknum);
