@@ -1,6 +1,3 @@
-import moment from "moment";
+import { weekStartMoment } from "../eleventy/week.js";
 
-export const weekstart = (weeknum) => {
-  const genesis = moment([1974, 2, 4]);
-  return genesis.add(weeknum, 'weeks');
-}
+export const weekstart = (weeknum) => weekStartMoment(weeknum);

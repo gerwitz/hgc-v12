@@ -2,38 +2,33 @@
 
 import moment from "moment";
 
-export const weeks = (collection) => {
-  var weeknotes = collection.getFilteredByTag('weeknotes');
-  const genesis = moment([1974, 2, 4]); // == moment([1974, 2, 9]).startOf('isoWeek');
-  var current = moment().diff(genesis, 'weeks');
+import { genesisMoment, weekStartMoment } from "../eleventy/week.js";
 
-  // create a hashtable of default weeks
-  var allWeeks = new Map();
-  for (var i = 0; i < current; i++) {
+export const weeks = (collection) => {
+  const weeknotes = collection.getFilteredByTag("weeknotes");
+  const currentWeek = moment().diff(genesisMoment(), "weeks");
+
+  const allWeeks = new Map();
+  for (let i = 0; i < currentWeek; i += 1) {
     allWeeks.set(i, {
       weeknum: i,
-      date: genesis.add(i, 'weeks'),
+      date: weekStartMoment(i),
       fileSlug: i.toString(),
-      content: '<p><em>There are no comments for this week.</em></p>',
+      content: "<p><em>There are no comments for this week.</em></p>",
     });
   }
 
-  // overwrite with weeknotes templates
   for (const template of weeknotes) {
-    var weeknum = 1 * template.fileSlug;
-    // restore weeknum property
+    const weeknum = Number(template.fileSlug);
     template.weeknum = weeknum;
     allWeeks.set(weeknum, template);
   }
 
-  // TODO: we could proatively weave in other collections, instead of maintaining the awkward weeknum hashmaps
-
-  // overwrite current week to hide notes-in-progress
-  allWeeks.set(current, {
+  allWeeks.set(currentWeek, {
     current: true,
-    weeknum: current,
-    fileSlug: current.toString(),
-    content: '<p>It was still '+moment().format('dddd')+' of this week when the site was last published. Maybe you want <a href="/weeks/'+(current-1)+'/">last week</a>?</p>'
+    weeknum: currentWeek,
+    fileSlug: currentWeek.toString(),
+    content: `<p>It was still ${moment().format("dddd")} of this week when the site was last published. Maybe you want <a href="/weeks/${currentWeek - 1}/">last week</a>?</p>`,
   });
 
   return Array.from(allWeeks.values());

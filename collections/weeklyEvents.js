@@ -1,19 +1,17 @@
-import moment from "moment";
+import { weekNumberFromDate } from "../eleventy/week.js";
 
 export const weeklyEvents = (collection) => {
-  const genesis = moment([1974, 2, 4]); // == moment([1974, 2, 9]).startOf('isoWeek');
-  var weeklyEvents = {};
+  const eventsByWeek = {};
 
-  collection.getFilteredByTag('events').forEach(function(item) {
-    var itemWeek = moment(item.date).startOf('isoWeek');
-    var weekNum = itemWeek.diff(genesis, 'weeks');
+  collection.getFilteredByTag("events").forEach((item) => {
+    const weekNum = weekNumberFromDate(item.date);
 
-    if (weekNum in weeklyEvents) {
-      weeklyEvents[weekNum].push(item);
+    if (weekNum in eventsByWeek) {
+      eventsByWeek[weekNum].push(item);
     } else {
-      weeklyEvents[weekNum] = [item];
+      eventsByWeek[weekNum] = [item];
     }
   });
 
-  return weeklyEvents;
+  return eventsByWeek;
 };
