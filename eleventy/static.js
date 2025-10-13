@@ -9,7 +9,6 @@ const passthroughGlobs = [
   "src/projects/**/*.pde",
   "src/projects/**/*.json",
   "src/css/fonts/*",
-  "src/css/*.css",
 ];
 
 export default function staticAssetsPlugin(eleventyConfig) {
