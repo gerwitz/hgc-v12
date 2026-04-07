@@ -5,7 +5,7 @@ applyTo: "**"
 
 ## Project Overview
 
-**hans.gerwitz.com** is a personal website for Hans Gerwitz, built with Eleventy (v3) and deployed via Coolify.
+**hans.gerwitz.com** is a personal website for Hans Gerwitz, built with Eleventy (v4) and deployed via Coolify.
 
 - Production: `hans.gerwitz.com`
 - Static site generated from Nunjucks templates and Markdown

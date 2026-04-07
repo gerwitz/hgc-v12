@@ -2,6 +2,9 @@ import NunjucksLib from"nunjucks";
 import moment from "moment";
 import from from "twix";
 
+// Format a date for use in templates.
+// format: 'iso8601' → ISO string; 'nice' → <time> element with "Month Dth, YYYY";
+//         'weekstarted' → <time> element with week date range; otherwise any moment.js format string.
 export const date = (date, format) => {
   var theDate = moment(date);
   if( format === 'iso8601' ) {
