@@ -7,6 +7,14 @@ server
   root /usr/share/nginx/html;
   index index.html;
 
+  # Lightweight endpoint for Docker health checks.
+  location = /healthz
+  {
+    access_log off;
+    add_header Content-Type text/plain;
+    return 200 "ok\n";
+  }
+
   # Serve generated static files from Eleventy output.
   location /
   {
