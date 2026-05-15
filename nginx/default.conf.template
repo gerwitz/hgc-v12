@@ -18,7 +18,7 @@ server
   # Serve generated static files from Eleventy output.
   location /
   {
-    try_files $uri $uri/ =404;
+    try_files $uri $uri/index.html =404;
   }
 
   # Proxy media assets to S3-compatible object storage.
