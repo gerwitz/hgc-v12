@@ -1,0 +1,27 @@
+# Git and local metadata
+.git
+.gitignore
+.github
+.vscode
+.claude
+.frontmatter
+.DS_Store
+
+# Dependencies and build artifacts
+node_modules
+_site
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local caches and temporary files
+.cache
+.tmp
+tmp
+*.swp
+*.swo
+
+# Documentation and editor-only files not needed for runtime image
+AGENTS.md
+frontmatter.json

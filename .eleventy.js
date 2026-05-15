@@ -9,12 +9,35 @@ import shortcodesPlugin from "./eleventy/shortcodes.js";
 import staticAssetsPlugin from "./eleventy/static.js";
 
 const INPUT_DIR = "src";
+const MEDIA_PATH_PREFIX = "/media/";
+const MEDIA_ORIGIN = process.env.MEDIA_ORIGIN;
 const NBSP_MIN_WORDS = 2;
 const NBSP_MAX_LENGTH = 12;
 
 export default function configure(eleventyConfig) {
   eleventyConfig.setQuietMode(true);
   eleventyConfig.setDataDeepMerge(true);
+
+  if (MEDIA_ORIGIN) {
+    eleventyConfig.setServerOptions({
+      middleware: [
+        (request, response, next) => {
+          if (request.url.startsWith(MEDIA_PATH_PREFIX)) {
+            const mediaPath = request.url.slice(MEDIA_PATH_PREFIX.length);
+            const mediaUrl = new URL(mediaPath, MEDIA_ORIGIN);
+
+            response.writeHead(302, {
+              Location: mediaUrl.toString(),
+            });
+            response.end();
+            return;
+          }
+
+          next();
+        },
+      ],
+    });
+  }
 
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(cssPlugin, { inputDir: INPUT_DIR });
@@ -28,7 +51,7 @@ export default function configure(eleventyConfig) {
   eleventyConfig.addPlugin(markdownPlugin);
   eleventyConfig.addPlugin(staticAssetsPlugin);
 
-  eleventyConfig.addGlobalData('generated', () => {
+  eleventyConfig.addGlobalData("generated", () => {
     return new Date();
   });
 

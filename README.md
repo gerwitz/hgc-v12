@@ -11,6 +11,28 @@ Source files are in `/src` and site is built to `/_site` for deployment.
 To set up, from the root directory: `npm run build`
 To start a test server: `npm run start`
 
+For local development, requests under `/media/*` can be redirected to the production media bucket by setting `MEDIA_ORIGIN` before starting Eleventy. For example:
+
+`MEDIA_ORIGIN=https://your-media-host.example npm run start`
+
+This keeps content URLs site-relative, such as `/media/example.jpg`, while loading media from the bucket during local development. The `/media/` prefix is removed when redirecting, so `/media/example.jpg` redirects to `https://your-media-host.example/example.jpg`.
+
+## Deployment (Coolify)
+
+This project is configured for Dockerfile-based deployment in Coolify.
+
+- Build source: `Dockerfile`
+- Runtime server: Nginx
+- Generated site path: `/_site` copied to `/usr/share/nginx/html`
+
+Media requests under `/media/*` are proxied by Nginx to an S3-compatible origin, using the `MEDIA_ORIGIN_HOST` environment variable.
+
+Set this in Coolify application environment variables, for example:
+
+`MEDIA_ORIGIN_HOST=your-bucket.s3.fr-par.scw.cloud`
+
+With this configuration, browser URLs remain same-origin (for example `/media/example.jpg`) while content is fetched from the object storage backend.
+
 ## Standards
 
 Javascript is 100% optional. CSS is also optional, but without it everything will be ugly.

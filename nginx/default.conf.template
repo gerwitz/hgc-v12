@@ -1,0 +1,45 @@
+server
+{
+  listen 80;
+  listen [::]:80;
+  server_name _;
+
+  root /usr/share/nginx/html;
+  index index.html;
+
+  # Serve generated static files from Eleventy output.
+  location /
+  {
+    try_files $uri $uri/ =404;
+  }
+
+  # Proxy media assets to S3-compatible object storage.
+  # Example: MEDIA_ORIGIN_HOST=bucket.s3.nl-ams.scw.cloud
+  # Browser URL stays same-origin: /media/*
+  location ^~ /media/
+  {
+    proxy_http_version 1.1;
+    proxy_set_header Host ${MEDIA_ORIGIN_HOST};
+    proxy_set_header Connection "";
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    proxy_hide_header x-amz-id-2;
+    proxy_hide_header x-amz-request-id;
+    proxy_hide_header x-amz-version-id;
+    proxy_hide_header Cache-Control;
+    proxy_hide_header Expires;
+
+    add_header Cache-Control "public, max-age=31536000, immutable" always;
+
+    proxy_pass https://${MEDIA_ORIGIN_HOST};
+  }
+
+  # Use the generated 404 page for local static misses.
+  error_page 404 /404.html;
+  location = /404.html
+  {
+    internal;
+  }
+}
