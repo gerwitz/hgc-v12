@@ -11,6 +11,12 @@ Source files are in `/src` and site is built to `/_site` for deployment.
 To set up, from the root directory: `npm run build`
 To start a test server: `npm run start`
 
+Some expensive generated assets are committed to the repository so deployment builds do not need to recreate them. Before committing changes that affect travel maps, run:
+
+`npm run generate:maps`
+
+This writes generated SVG map fragments to `src/_generated/maps/`. The normal Eleventy build reads those files and inlines them into pages. If a required map asset is missing, the build will generate it and print a warning, but that fallback is slower and should not be relied on for deployment.
+
 For local development, requests under `/media/*` can be redirected to the production media bucket by setting `MEDIA_ORIGIN` before starting Eleventy. For example:
 
 `MEDIA_ORIGIN=https://your-media-host.example npm run start`

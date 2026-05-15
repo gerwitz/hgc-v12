@@ -6,8 +6,9 @@
   "license": "CC-BY-4.0",
   "type": "module",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "generate:maps": "eleventy --quiet"
   },
   "repository": {
     "type": "git",

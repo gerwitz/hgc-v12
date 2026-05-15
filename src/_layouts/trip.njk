@@ -16,7 +16,7 @@ permalink: "/logs/travel/{{ page.fileSlug }}/index.html"
   {{ content | safe }}
 
   <div>
-    {% map geojson %}
+    {% map geojson, page.fileSlug %}
   </div>
 
   <ol>
