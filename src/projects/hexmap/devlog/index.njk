@@ -1,0 +1,16 @@
+---
+title: "Hexmap: Devlog"
+---
+
+{% set pages = collections.hexmapDevlog %}
+
+<ul>
+{%- for page in pages | reverse -%}
+  <li>
+    <a href="{{ page.url }}">{{ page.data.title }}</a>
+  </li>
+{%- endfor -%}
+</ul>
+<p>
+  You can also read about the Hexmap origin story at <a class="internal" href="../motivation">../motivation</a>.
+</p>

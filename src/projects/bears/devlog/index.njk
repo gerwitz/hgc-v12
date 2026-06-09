@@ -1,0 +1,13 @@
+---
+title: "Bears: Devlog"
+---
+
+{% set pages = collections.bearsDevlog %}
+
+<ul>
+{%- for page in pages | reverse -%}
+  <li>
+    <a href="{{ page.url }}">{{ page.data.title }}</a>
+  </li>
+{%- endfor -%}
+</ul>
