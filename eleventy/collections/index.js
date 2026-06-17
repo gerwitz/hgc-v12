@@ -1,7 +1,5 @@
-export { bearsDevlog } from "./bearsDevlog.js";
 export { content } from "./content.js";
 export { epitaphs } from "./epitaphs.js";
-export { hexmapDevlog } from "./hexmapDevlog.js";
 export { microblog } from "./microblog.js";
 export { posts } from "./posts.js";
 export { weeklyEvents } from "./weeklyEvents.js";
