@@ -3,8 +3,9 @@ export default {
     // Use a local tag collection for devlog entries while keeping index page out.
     tags: (data) => {
       const inheritedTags = Array.isArray(data.tags) ? data.tags : [];
+      const isIndexPage = data.page.filePathStem.endsWith("/index");
 
-      if (data.page.fileSlug === "index") {
+      if (isIndexPage) {
         return inheritedTags;
       }
 
@@ -12,7 +13,9 @@ export default {
     },
     // Keep the devlog index at /projects/bears/devlog/ and entries beneath it.
     permalink: (data) => {
-      if (data.page.fileSlug === "index") {
+      const isIndexPage = data.page.filePathStem.endsWith("/index");
+
+      if (isIndexPage) {
         return "/projects/bears/devlog/";
       }
 
@@ -21,8 +24,9 @@ export default {
     // Use project-specific breadcrumbs for devlog entries.
     breadcrumbs: (data) => {
       const crumbs = ["projects", "bears", "devlog"];
+      const isIndexPage = data.page.filePathStem.endsWith("/index");
 
-      if (data.page.fileSlug !== "index") {
+      if (!isIndexPage) {
         crumbs.push(data.page.fileSlug);
       }
 
