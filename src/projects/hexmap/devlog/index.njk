@@ -6,9 +6,11 @@ title: "Hexmap: Devlog"
 
 <ul>
 {%- for page in pages | reverse -%}
+  {%- if page.url != "/projects/hexmap/devlog/" -%}
   <li>
     <a href="{{ page.url }}">{{ page.data.title }}</a>
   </li>
+  {%- endif -%}
 {%- endfor -%}
 </ul>
 <p>

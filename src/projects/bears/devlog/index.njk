@@ -6,8 +6,10 @@ title: "Bears: Devlog"
 
 <ul>
 {%- for page in pages | reverse -%}
+  {%- if page.url != "/projects/bears/devlog/" -%}
   <li>
     <a href="{{ page.url }}">{{ page.data.title }}</a>
   </li>
+  {%- endif -%}
 {%- endfor -%}
 </ul>
