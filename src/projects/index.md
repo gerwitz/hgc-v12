@@ -6,7 +6,9 @@ layout: index
 
 Welcome to my laboratory, home to the finest [braincrack](https://www.youtube.com/watch?v=0sHCQWjTrJ8) including:
 
-* Ceramics (2022)
+* [Bear Den](./bears/) (2025-)
+* [Hexmap](./hexmap/) (2025)
+* Ceramics (2022-)
 * [Sitewriter](https://github.com/gerwitz/sitewriter/) (2018-2022)
 * [Rails wiki](./the-artificial/wiki/) (2014-2018)
 * [to \[icon\]](./the-artificial/toicon/) (2014-2018)
