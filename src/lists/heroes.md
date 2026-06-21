@@ -50,3 +50,7 @@ subtitle: People who inspire
 ## Historical
 
 * Thaddeus Stevens
+
+## Fellows
+
+* [Jerry Gretzinger](https://www.jerrysmap.com/the-map), as [described by his partner, Meg](https://www.youtube.com/watch?v=Is8N7B9b0GQ&t=1700s)
