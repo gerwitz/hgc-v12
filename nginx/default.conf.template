@@ -18,6 +18,11 @@ server
   # Serve generated static files from Eleventy output.
   location /
   {
+    if (-d $request_filename)
+    {
+      rewrite ^(.+[^/])$ $1/ permanent;
+    }
+
     try_files $uri $uri/index.html =404;
   }
 

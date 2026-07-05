@@ -7,6 +7,7 @@ import filtersPlugin from "./eleventy/filters.js";
 import markdownPlugin from "./eleventy/markdown.js";
 import shortcodesPlugin from "./eleventy/shortcodes.js";
 import staticAssetsPlugin from "./eleventy/static.js";
+import urlsPlugin from "./eleventy/urls.js";
 
 const INPUT_DIR = "src";
 const MEDIA_PATH_PREFIX = "/media/";
@@ -50,6 +51,7 @@ export default function configure(eleventyConfig) {
   eleventyConfig.addPlugin(shortcodesPlugin, { inputDir: INPUT_DIR });
   eleventyConfig.addPlugin(markdownPlugin);
   eleventyConfig.addPlugin(staticAssetsPlugin);
+  eleventyConfig.addPlugin(urlsPlugin);
 
   eleventyConfig.addGlobalData("generated", () => {
     return new Date();

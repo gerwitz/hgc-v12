@@ -8,6 +8,7 @@ permalink: "_redirects"
 
 {% set thisweek = collections.weeks[collections.weeks.length - 2] %}
 /now                        {{ thisweek.url }}                302
+/now/                       {{ thisweek.url }}                302
 
 # Federation via Akkoma
 /.well-known/host-meta*      https://fedi.gerwitz.com/.well-known/host-meta:splat 301
