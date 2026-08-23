@@ -9,6 +9,10 @@ npm start       # build, serve with livereload on port 8080
 npm run build   # single build to /_site
 ```
 
+## Browser testing
+
+Use Eleventy’s development server (`npm start`) for browser-based checks. Open the site at `http://localhost:8080/` rather than loading generated files through `file://`, because the output uses root-relative asset URLs such as `/css/...`.
+
 ## Architecture
 
 Source in `/src/`, build output in `/_site/`. Custom Eleventy configuration in `/eleventy/` as discrete plugins loaded in `.eleventy.js`:

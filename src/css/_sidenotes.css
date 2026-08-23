@@ -3,26 +3,12 @@
 /* sidenotes are <aside> after the <p> that references them
    so <p> floats left and <aside> floats right */
 
-/* make room for sidenotes */
-article > p,
-article > ul {
+/* Keep all primary article content in the content column. */
+article > :not(.sidenote) {
   float: left;
   clear: left;
-  width: 100%;
-}
-
-@media (min-width: 768px) { /* bp-liminal */
-  article > p,
-  article > ul {
-    width: var(--textwidth-simple);
-  }
-}
-
-@media (min-width: 960px) { /* bp-full */
-  article > p,
-  article > ul {
-    width: var(--textwidth-sidenotes);
-  }
+  width: var(--content-width);
+  max-width: 100%;
 }
 
 article > p a.sidenote-ref,
@@ -44,7 +30,7 @@ article > ul a.sidenote-ref:hover {
   box-shadow: none;
 }
 
-@media (min-width: 960px) { /* bp-full */
+@media (min-width: 780px) { /* sidebar fits beside the content column */
   article > p a.sidenote-ref,
   article > ul a.sidenote-ref {
     pointer-events: none;
@@ -57,35 +43,46 @@ article > ul a.sidenote-ref:hover {
   padding-top: 0.75em;
   float: left;
   width: 100%;
-  font-size: 1.0rem;
+  font-size: 1rem;
   vertical-align: baseline;
   font-family: var(--base-font);
-  font-size: var(--textwidth-sidenotes);
-  line-height: 1.0rem;
+  line-height: 1rem;
   padding-left: 1rem;
-}
-
-@media (min-width: 768px) { /* bp-liminal */
-  .sidenote {
-    width: var(--textwidth-simple);
-  }
-}
-
-@media (min-width: 960px) { /* bp-full */
-  .sidenote {
-    float: right;
-    clear: right;
-    width: calc(100% - var(--textwidth-sidenotes));
-    padding-left: 3rem;
-    margin-top: 1em; /* to match article > *+* */
-    /* margin-bottom: 1.96rem; */
-  }
 }
 
 .sidenote .sidenote-ref {
   float: left;
-  margin-left: -1.0rem;
+  margin-left: -1rem;
   color: var(--meta-color);
+}
+
+@media (min-width: 780px) { /* sidebar fits beside the content column */
+  .sidenote {
+    display: grid;
+    grid-template-columns: var(--sidenote-column-padding) var(--sidenote-width);
+    align-items: baseline;
+    float: right;
+    clear: right;
+    width: var(--sidenote-column-width);
+    padding: 0;
+    margin-top: 1em; /* to match article > * + * */
+  }
+
+  .sidenote .sidenote-ref {
+    grid-column: 1;
+    float: none;
+    margin-left: 0;
+    padding-right: 1em;
+    text-align: right;
+  }
+
+  .sidenote > p {
+    grid-column: 2;
+  }
+
+  .sidenote > p:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .sidenote p {
