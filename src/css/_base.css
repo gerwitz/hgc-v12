@@ -237,7 +237,8 @@ body {
   }
 
   .fineprint {
-    padding-left: 12px;
+    padding-right: 12px;
+    text-align: right;
 
     outline: 2px solid var(--text-color); /* outer border */
     background-color: var(--text-color);

@@ -99,14 +99,6 @@ h4 {
   -webkit-font-smoothing: none;
 }
 
-section.emphasis > p,
-div.emphasis > p {
-  font-size: larger;
-  .path {
-    font-size: larger;
-  }
-}
-
 article blockquote {
   padding-left: 15px;
 }
@@ -168,6 +160,10 @@ a {
   -webkit-font-smoothing: none;
   margin-right: -4px;
   margin-left: -4px;
+}
+
+.main-footer .homelink {
+  font-family: var(--meta-font);
 }
 
 a:hover {
