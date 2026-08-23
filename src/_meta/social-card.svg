@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Hans Gerwitz</title>
+  <desc id="description">Personal web site of Hans Gerwitz. Since 1994.</desc>
+  <rect width="1200" height="630" fill="#1c211e"/>
+  <rect x="0" width="24" height="630" fill="#00852b"/>
+  <rect x="72" y="136" width="6" height="358" fill="#00852b"/>
+  <text x="128" y="278" fill="#ffffff" font-family="Georgia, serif" font-size="88" font-weight="700">Hans Gerwitz</text>
+  <text x="134" y="350" fill="#d7ddd9" font-family="Arial, sans-serif" font-size="34" letter-spacing="1">PERSONAL WEB SITE · SINCE 1994</text>
+  <text x="134" y="443" fill="#84b990" font-family="Arial, sans-serif" font-size="28">hans.gerwitz.com</text>
+
+</svg>
