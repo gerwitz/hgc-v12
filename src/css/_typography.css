@@ -1,49 +1,224 @@
-/* Typography styles - converted from Sass */
+/* Typography and local font faces */
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-weight: 400 700;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('./fonts/AtkinsonHyperlegibleNextVF-Variable.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('./fonts/SourceSans3VF-Roman.otf.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans';
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('./fonts/SourceSans3VF-Italic.otf.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Monaco 9';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/monaco-9.woff2') format('woff2');
+}
 
 html {
-  font-family: sans-serif;
-  font-size: 14pt;
+  font-family: var(--base-font);
+  font-size: var(--base-font-size);
   font-weight: var(--regular-font-weight);
   -webkit-text-size-adjust: 100%;
   font-variant-numeric: oldstyle-nums proportional-nums;
 }
 
-h1, h2, h3 {
-  font-family: var(--title-font);
-  font-weight: var(--title-font-weight);
+* {
+  font-kerning: auto;
+}
+
+p {
+  position: relative;
+  margin-bottom: 1rem;
+  font-family: var(--copy-font);
+
+  /* https://clagnut.com/blog/2395/ */
+  hyphens: auto;
+  hyphenate-limit-chars: 10 5 4;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 5;
+  -webkit-hyphenate-limit-after: 4;
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 10 5 4;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--heading-font, var(--title-font));
+  font-weight: var(--heading-font-weight, var(--title-font-weight));
   font-variant-numeric: lining-nums proportional-nums;
-  /* font-variant-alternates: stylistic(2); */
+}
+
+h1, h2, h3, h4 {
+  color: var(--heading-color);
 }
 
 h1 {
-  font-size: 3.5rem;
-  line-height: 4rem;
+  font-size: calc(3.5rem * var(--heading-scale, 1));
+  line-height: calc(4rem * var(--heading-leading, 1));
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.6875rem;
-  line-height: 2.4rem;
+  font-size: calc(1.6875rem * var(--heading-scale, 1));
+  line-height: calc(2.4rem * var(--heading-leading, 1));
   margin-top: 4rem;
   margin-bottom: .8rem;
 }
 
 h3 {
+  font-size: calc(1.3rem * var(--heading-scale, 1));
+  line-height: var(--heading-leading, normal);
+}
+
+h4 {
+  line-height: var(--heading-leading, normal);
+}
+
+.main-header .breadcrumb,
+.main-header .breadcrumb * {
+  font-family: var(--meta-font);
+  font-size: 32px;
+  line-height: 32px;
+  -webkit-font-smoothing: none;
+}
+
+section.emphasis > p,
+div.emphasis > p {
+  font-size: larger;
+}
+
+article blockquote {
+  padding-left: 15px;
+}
+
+article blockquote *:last-child {
+  margin-bottom: 0;
+}
+
+*:not(figure.quotation) > blockquote {
+  /* Markdown renders bare blockquotes without a citation. */
+  border-left: 0.3em solid var(--accent-color);
+}
+
+figure.quotation {
+  padding-left: 1em;
+  border-left: 0.3em solid var(--accent-color);
+}
+
+figure.quotation blockquote {
+  margin: 0;
+}
+
+figure.quotation figcaption {
+  text-align: left;
+}
+
+figure.quotation figcaption::before {
+  content: '— ';
+}
+
+figcaption {
+  padding: 0.5rem;
+  font-family: var(--base-font);
+  font-size: 80%;
+  line-height: 1.3rem;
+  text-align: center;
+}
+
+pre {
+  font-size: 90%;
+}
+
+a {
+  color: inherit;
+  position: relative; /* for box-shadow on hover */
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  margin-right: -0.25rem;
+  margin-left: -0.25rem;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent-color);
+}
+
+.path {
+  font-family: var(--meta-font);
+  font-size: 24px;
+  line-height: 24px;
+  -webkit-font-smoothing: none;
+  margin-right: -4px;
+  margin-left: -4px;
+}
+
+a:hover {
+  color: var(--page-color);
+  background-color: var(--accent-color);
+  box-shadow: 0 0 0.5rem 0.5rem var(--page-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  a, a:hover {
+    color: inherit;
+    background-color: inherit;
+    box-shadow: none;
+    text-decoration-color: inherit;
+  }
+
+  a:hover {
+    text-decoration-thickness: 3px;
+  }
+}
+
+.meta {
+  font-family: var(--meta-font);
+  font-weight: var(--light-font-weight);
+  color: var(--meta-color);
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+.meta a {
+  text-decoration-color: var(--meta-color);
+}
+
+.colophon {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-style: italic;
+}
+
+.colophon a.internal {
+  font-weight: inherit;
+}
+
+.writing-headline {
+  font-family: var(--title-font);
   font-size: 1.3rem;
+  font-weight: var(--bold-font-weight);
 }
 
-p {
-  font-family: var(--copy-font);
-}
-
-/* div */.epigraph {
+.epigraph {
   margin: 4rem 0;
 }
 
 .epigraph blockquote {
-  font-style: italic;
   margin: 2rem 0;
+  font-style: italic;
 }
 
 .epigraph blockquote footer {

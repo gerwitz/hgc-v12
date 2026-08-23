@@ -26,10 +26,21 @@
      (very close to Prismacolor 908 - dark green) */
 
   /* Font */
-  --base-font: 'Source Sans', sans-serif;
-  --copy-font: 'STIX Two Text', serif;
+  --base-font: 'Atkinson Hyperlegible', sans-serif;
+  --copy-font: 'Atkinson Hyperlegible', sans-serif;
+  --meta-font: 'Monaco 9', monospace;
   --title-font: 'Source Sans', sans-serif;
+  --sidenote-font: 'Source Sans', sans-serif;
+  --sidenote-font-size: 10pt;
+  --sidenote-font-weight: 400;
+  --sidenote-leading: 1.4;
+  --heading-font: 'Source Sans', sans-serif;
+  --heading-font-weight: 700;
+  --heading-scale: 1;
+  --heading-leading: 1;
 
+  --base-font-size: 14pt;
+  --base-leading: 1.5;
   --light-font-weight: 200;
   --regular-font-weight: 400;
   --bold-font-weight: 700;

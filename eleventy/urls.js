@@ -105,6 +105,15 @@ function normalizeDocumentUrls(content)
     }
   }
 
+  for (const link of document.querySelectorAll("a.internal"))
+  {
+    if (link.textContent.trim().startsWith("/") && !link.classList.contains("path"))
+    {
+      link.classList.add("path");
+      hasChanges = true;
+    }
+  }
+
   return hasChanges ? document.toString() : content;
 }
 

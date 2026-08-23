@@ -40,14 +40,11 @@ article > ul a.sidenote-ref:hover {
 
 .sidenote {
   position: relative;
-  padding-top: 0.75em;
-  float: left;
-  width: 100%;
-  font-size: 1rem;
+  font-size: var(--sidenote-font-size, 1rem);
+  font-weight: var(--sidenote-font-weight, var(--regular-font-weight));
   vertical-align: baseline;
-  font-family: var(--base-font);
-  line-height: 1rem;
-  padding-left: 1rem;
+  font-family: var(--sidenote-font, var(--base-font));
+  line-height: var(--sidenote-leading, var(--base-leading));
 }
 
 .sidenote .sidenote-ref {
@@ -81,12 +78,14 @@ article > ul a.sidenote-ref:hover {
   }
 
   .sidenote > p:first-of-type {
-    margin-top: 0;
+    margin-top: 0.75em;
   }
 }
 
 .sidenote p {
   clear: none;
+  font-family: var(--sidenote-font, var(--base-font));
+  font-weight: var(--sidenote-font-weight, var(--regular-font-weight));
 }
 
 /* but now we have to prevent everything from collapsing */

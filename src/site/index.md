@@ -15,8 +15,6 @@ You may think of it as my book of shadows, commonplace book, [digital garden](ht
 
 The current [design](/site/design) is version 12 of my web presence; the past is documented at [/site/history](/site/history/).
 
-<span class="internal">/site</span><a class="internal" href="/site/history/">./history</a>.
-
 ## Colophon
 
 [This site is designed to last](https://jeffhuang.com/designed_to_last/).
