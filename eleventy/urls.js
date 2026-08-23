@@ -1,18 +1,16 @@
-import { parseHTML } from "linkedom";
 
 const INTERNAL_HOSTS = new Set([
   "hans.gerwitz.com",
   "www.hans.gerwitz.com",
 ]);
 
-const URL_ATTRIBUTES = [
-  ["a[href]", "href"],
-  ["area[href]", "href"],
-  ["form[action]", "action"],
-];
 
 const DATED_CONTENT_PATH_PATTERN = /^\/\d{4}\/\d{2}\/\d{2}\/[^/.]+$/;
 const SCHEME_PATTERN = /^[a-z][a-z0-9+.-]*:/i;
+const HTML_TAG_PATTERN = /<(a|area|form)(?=[\s/>])(?:[^>"']|"[^"]*"|'[^']*')*>/gi;
+const URL_ATTRIBUTE_PATTERN = /(\s(?:href|action)\s*=\s*)(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+))/gi;
+const ANCHOR_PATTERN = /<a(?=[\s/>])((?:[^>"']|"[^"]*"|'[^']*')*)>([\s\S]*?)<\/a\s*>/gi;
+const CLASS_ATTRIBUTE_PATTERN = /(\sclass\s*=\s*)(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+))/i;
 
 function splitSuffix(url)
 {
@@ -86,35 +84,87 @@ function normalizeUrl(url)
   return normalizePath(url);
 }
 
+function getNormalizedTag(tag, elementName)
+{
+  const attributeName = elementName === "form" ? "action" : "href";
+
+  return tag.replace(URL_ATTRIBUTE_PATTERN, (match, prefix, doubleQuotedUrl, singleQuotedUrl, unquotedUrl) =>
+  {
+    if (!prefix.toLowerCase().includes(attributeName))
+    {
+      return match;
+    }
+
+    const url = doubleQuotedUrl ?? singleQuotedUrl ?? unquotedUrl;
+    const normalizedUrl = normalizeUrl(url);
+    if (normalizedUrl === url)
+    {
+      return match;
+    }
+
+    if (doubleQuotedUrl !== undefined)
+    {
+      return `${prefix}"${normalizedUrl}"`;
+    }
+
+    if (singleQuotedUrl !== undefined)
+    {
+      return `${prefix}'${normalizedUrl}'`;
+    }
+
+    return `${prefix}${normalizedUrl}`;
+  });
+}
+
+function getPathClassAnchor(anchor, attributes, content)
+{
+  const classMatch = attributes.match(CLASS_ATTRIBUTE_PATTERN);
+  if (!classMatch)
+  {
+    return anchor;
+  }
+
+  const classNames = classMatch[2] ?? classMatch[3] ?? classMatch[4];
+  if (!classNames.split(/\s+/).includes("internal") || classNames.split(/\s+/).includes("path"))
+  {
+    return anchor;
+  }
+
+  const linkText = content.replace(/<[^>]*>/g, "").trim();
+  if (!linkText.startsWith("/"))
+  {
+    return anchor;
+  }
+
+  const updatedAttributes = attributes.replace(CLASS_ATTRIBUTE_PATTERN, (match, prefix, doubleQuotedClasses, singleQuotedClasses, unquotedClasses) =>
+  {
+    const classes = doubleQuotedClasses ?? singleQuotedClasses ?? unquotedClasses;
+    const updatedClasses = `${classes} path`;
+
+    if (doubleQuotedClasses !== undefined)
+    {
+      return `${prefix}"${updatedClasses}"`;
+    }
+
+    if (singleQuotedClasses !== undefined)
+    {
+      return `${prefix}'${updatedClasses}'`;
+    }
+
+    return `${prefix}${updatedClasses}`;
+  });
+
+  return `<a${updatedAttributes}>${content}</a>`;
+}
+
 function normalizeDocumentUrls(content)
 {
-  const { document } = parseHTML(content);
-  let hasChanges = false;
-
-  for (const [selector, attribute] of URL_ATTRIBUTES)
+  const normalizedUrls = content.replace(HTML_TAG_PATTERN, (tag, elementName) =>
   {
-    for (const element of document.querySelectorAll(selector))
-    {
-      const url = element.getAttribute(attribute);
-      const normalizedUrl = normalizeUrl(url);
-      if (normalizedUrl !== url)
-      {
-        element.setAttribute(attribute, normalizedUrl);
-        hasChanges = true;
-      }
-    }
-  }
+    return getNormalizedTag(tag, elementName.toLowerCase());
+  });
 
-  for (const link of document.querySelectorAll("a.internal"))
-  {
-    if (link.textContent.trim().startsWith("/") && !link.classList.contains("path"))
-    {
-      link.classList.add("path");
-      hasChanges = true;
-    }
-  }
-
-  return hasChanges ? document.toString() : content;
+  return normalizedUrls.replace(ANCHOR_PATTERN, getPathClassAnchor);
 }
 
 export default function urlsPlugin(eleventyConfig)
