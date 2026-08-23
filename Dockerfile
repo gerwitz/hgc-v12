@@ -8,6 +8,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
 COPY . .
+ENV ELEVENTY_ENV=production
 RUN npm run build
 
 FROM nginx:1.27-alpine AS runtime
