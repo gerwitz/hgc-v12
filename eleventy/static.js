@@ -3,7 +3,7 @@ const passthroughGlobs = [
   "src/**/*.jpg",
   "src/**/*.jpeg",
   "src/**/*.png",
-  "src/**/*.svg",
+  "src/!(_generated)/**/*.svg",
   "src/**/*.pdf",
   "src/projects/**/*.js",
   "src/projects/**/*.pde",
