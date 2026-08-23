@@ -102,6 +102,9 @@ h4 {
 section.emphasis > p,
 div.emphasis > p {
   font-size: larger;
+  .path {
+    font-size: larger;
+  }
 }
 
 article blockquote {

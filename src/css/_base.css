@@ -196,9 +196,9 @@ body {
 
 /* FOOTER */
 
-.main-footer,
 .main-footer::before {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIHWP8DwQMQMDIyAiiGJjAJBIBEgargCrEVAEAbIMIAowlqhMAAAAASUVORK5CYII=) repeat;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVRIDWP8DwQMQMDIyAiiGJjAJBIBEgargCrEVAEAbIMIAowlqhMAAAAASUVORK5CYII=) repeat;
+  border-top: 2px solid var(--text-color);
 }
 
 .main-footer {
