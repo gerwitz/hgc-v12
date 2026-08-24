@@ -62,6 +62,7 @@ h1, h2, h3, h4 {
   font-family: var(--heading-font, var(--title-font));
   font-weight: var(--heading-font-weight, var(--title-font-weight));
   font-variant-numeric: lining-nums proportional-nums;
+  transform: translateX(var(--heading-optical-offset, 0));
 }
 
 h1, h2, h3, h4 {
