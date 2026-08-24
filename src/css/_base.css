@@ -165,6 +165,7 @@ body {
   position: relative;
   width: 190px;
   height: 26px;
+  margin-right: 4px;
 }
 
 .search-form input {
@@ -172,22 +173,45 @@ body {
   height: 100%;
   border-radius: 15px;
   border: none;
-  padding: 0 2px 0 30px;
+  padding: 0 30px 0 10px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 5;
+
+  text-align: right;
+
+  &:focus {
+    outline-color: var(--accent-color);
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+body.root .search-form input {
+  padding: 0 10px 0 30px;
+  position: absolute;
+  top: 0;
+  left: 6;
+  z-index: 5;
+
+  text-align: left;
 }
 
 .search-form button {
   position: absolute;
   top: 2px;
-  left: 4px;
+  right: 0px;
   height: 26px;
   width: 26px;
   z-index: 10;
   border: none;
   background: none;
+}
+
+body.root .search-form button {
+  left: 6px;
 }
 
 .search-form button svg * {
@@ -251,6 +275,9 @@ body {
 }
 
 .main-footer .footer-topnav {
+  padding-left: 0;
+  padding-right: 0;
+
   display: flex;
   align-items: center;
   width: 100%;
@@ -259,11 +286,11 @@ body {
 
 .main-footer .footer-topnav .homelink {
   display: inline-block;
-  height: 26px;
-  padding: 0;
+  height: 32px;
   margin: 0;
-  font-weight: var(--bold-font-weight);
-  line-height: 26px;
+  padding: 0 12px 0 12px;
+  font-size: 32px;
+  line-height: 32px;
   text-decoration: none;
 }
 
@@ -299,19 +326,26 @@ body {
 .main-footer .sitemap > dl {
   width: 50%;
   margin: 0;
+
+  line-height: 32px;
 }
 
 .main-footer .sitemap > dl dt {
   clear: left;
   float: left;
   min-width: 25%;
-  padding-bottom: 8px;
+  padding-bottom: 0;
+
+  font-size: 32px;
 }
 
 .main-footer .sitemap > dl dd {
   display: none;
   clear: right;
-  padding-bottom: 8px;
+  padding-bottom: 0;
+
+  font-size: 14px;
+  transform: translateY(4px);
 }
 
 @media (min-width: 768px) { /* bp-liminal */
