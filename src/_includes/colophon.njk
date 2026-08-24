@@ -4,9 +4,8 @@
     {% if external -%}
     on <a href="{{external}}">{{ external | hostname }}</a>
     {%- endif %}
-    in {{ page.date | date('MMMM YYYY') }} during {{ page.date | weeklink }}.
+    in {{ page.date | date('MMMM YYYY') }} during {{ page.date | weeklink | safe }}.
   </p><p>
     For more, you should follow me <a href="https://bsky.app/@gerwitz.com" rel="me noreferrer nofollow" class="external">on Bluesky</a>.
-  </p>
   </p>
 </div>
