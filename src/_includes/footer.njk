@@ -18,36 +18,36 @@
 
 <div class="sitemap">
   <dl class="published">
-    <dt>{{ "writing" | navpath(data.breadcrumbs) }}</dt>
+    <dt>{{ "writing" | navpath(data.breadcrumbs) | safe }}</dt>
     <dd>{{ collections.writing | length }} blog posts</dd>
 
-    <dt>{{ "notes" | navpath(data.breadcrumbs) }}</dt>
+    <dt>{{ "notes" | navpath(data.breadcrumbs) | safe }}</dt>
     <dd>{{ collections.notes | length }} short notes</dd>
 
-    <dt>{{ "projects" | navpath(data.breadcrumbs) }}</dt>
+    <dt>{{ "projects" | navpath(data.breadcrumbs) | safe }}</dt>
     <dd>Documented projects</dd>
 {#
-    <dt>{{ "ideas" | navpath(data.breadcrumbs) }}</dt>
+    <dt>{{ "ideas" | navpath(data.breadcrumbs) | safe }}</dt>
     <dd>Opinions on things</dd>
  #}
-    <dt>{{ "lists" | navpath(data.breadcrumbs) }}</dt>
+    <dt>{{ "lists" | navpath(data.breadcrumbs) | safe }}</dt>
     <dd>Other lists</dd>
   </dl>
 
   <dl class="personal">
-    <dt>{{ "about" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "about" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
     <dd>About me</dd>
 
-    <dt>{{ "logs" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "logs" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
     <dd>Personal history</dd>
 {#
-    <dt>{{ "weeks" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "weeks" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
     <dd>Weeknotes</dd>
  #}
-    <dt>{{ "site" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "site" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
     <dd>About this site</dd>
 
-    <dt>{{ "follow" | navpath(eleventyComputed.crumbtrail) }}</dt>
+    <dt>{{ "follow" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
     <dd>How to follow me</dd>
   </dl>
 </div>
