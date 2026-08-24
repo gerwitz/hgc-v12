@@ -5,6 +5,9 @@
   "author": "Hans Gerwitz",
   "license": "CC-BY-4.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.15"
+  },
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
