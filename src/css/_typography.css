@@ -102,7 +102,12 @@ h4 {
 }
 
 article blockquote {
+  margin-left: 0;
   padding-left: 15px;
+}
+
+article blockquote *:first-child {
+  margin-top: 0;
 }
 
 article blockquote *:last-child {
