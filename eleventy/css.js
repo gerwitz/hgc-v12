@@ -137,7 +137,7 @@ export default function cssPlugin(eleventyConfig, options = {})
   const cssRoot = path.join(process.cwd(), inputDir, "css");
   const generateSourceMaps = process.env.ELEVENTY_ENV !== "production";
 
-  eleventyConfig.addWatchTarget(`./${inputDir}/css/`);
+  eleventyConfig.addWatchTarget(`./${inputDir}/css/**/*.css`);
 
   eleventyConfig.on("eleventy.before", async () =>
   {
