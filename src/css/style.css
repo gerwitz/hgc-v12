@@ -6,6 +6,7 @@
 @import '_typography.css';
 @import '_timeline.css';
 @import '_sidenotes.css';
+@import '_lightbox.css';
 
 /* CSS variables for runtime - these are now in _variables.css but keeping here for compatibility */
 :root {

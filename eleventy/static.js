@@ -6,6 +6,7 @@ const passthroughGlobs = [
   "src/!(_generated)/**/*.svg",
   "src/**/*.pdf",
   "src/projects/**/*.js",
+  "src/js/**/*.js",
   "src/projects/**/*.pde",
   "src/projects/**/*.json",
   "src/css/fonts/*",
