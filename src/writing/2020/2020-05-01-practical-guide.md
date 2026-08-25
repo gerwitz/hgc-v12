@@ -8,7 +8,8 @@ content-tags:
 - design
 - book
 - theartificial
-external: https://linkedin.com/pulse/author-hans-gerwitz
+crossposts:
+- https://linkedin.com/pulse/author-hans-gerwitz
 ---
 
 ![The Practical Guide to Experience Design](/media/2020-04/practical-guide.jpg)

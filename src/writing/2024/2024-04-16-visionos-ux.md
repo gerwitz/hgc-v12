@@ -5,7 +5,8 @@ categories:
 content-tags:
 - apple
 - tech
-external: https://www.linkedin.com/pulse/visionos-experience-hans-gerwitz-5heac
+crossposts:
+- https://www.linkedin.com/pulse/visionos-experience-hans-gerwitz-5heac
 ---
 
 I previously shared my [initial impressions of the Apple Vision Pro](https://hans.gerwitz.com/2024/02/18/vision-pro.html) but recommend [Hugo Barra’s take](https://hugo.blog/2024/03/11/vision-pro/) if you’re interested in the state of the product. I don't need to add any more “it’s impressive but too heavy/expensive" takes to the world.

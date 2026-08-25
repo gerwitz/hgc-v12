@@ -9,7 +9,8 @@ content-tags:
 - advertising
 - government
 - google
-external: https://safelyignored.com/google-incentives
+crossposts:
+- https://safelyignored.com/google-incentives
 ---
 
 > Google’s mission is to organize the world’s information and make it universally accessible and useful.

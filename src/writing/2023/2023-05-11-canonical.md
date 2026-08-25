@@ -5,7 +5,8 @@ categories:
 content-tags:
 - design
 - canonical
-external: https://www.linkedin.com/posts/gerwitz_design-opensourcesoftware-activity-7062431456370778113-EQkN
+crossposts:
+- https://www.linkedin.com/posts/gerwitz_design-opensourcesoftware-activity-7062431456370778113-EQkN
 ---
 
 I have joined [Canonical](https://canonical.com/) as Head of Design. We are a private company that seeks to make open source software available to everyone, best known for the Ubuntu Linux distribution.

@@ -8,7 +8,8 @@ content-tags:
 - design
 - bauhaus
 - brand
-external: https://theartificial.com/blog/2018/06/07/the-artificial-genesis.html
+crossposts:
+- https://theartificial.com/blog/2018/06/07/the-artificial-genesis.html
 ---
 
 The story of why we created The Artificial is oft-told but hasn't been written. Let's correct that!

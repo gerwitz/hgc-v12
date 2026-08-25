@@ -7,7 +7,8 @@ content-tags:
 - politics
 - capitalism
 - socialism
-external: https://medium.com/@gerwitz/post-capitalism-politics-7ee8dbe09a90
+crossposts:
+- https://medium.com/@gerwitz/post-capitalism-politics-7ee8dbe09a90
 ---
 
 In a [thoughtful piece at Vox](https://www.vox.com/the-big-idea/2017/7/18/15992226/neoliberalism-chait-austerity-democratic-party-sanders-clinton), Mike Konczal outlines how US politics shifted right in the 1980s and that only now the Democratic Party is finding its way back. For decades, "socialism" and "welfare" were bad words that evoked the failure of Soviet communism, and the success of the United States was ascribed to libertarian capitalism.

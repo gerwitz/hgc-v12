@@ -7,7 +7,8 @@ content-tags:
 - tech
 - ar
 - apple
-external: https://safelyignored.com/apple-slam
+crossposts:
+- https://safelyignored.com/apple-slam
 ---
 
 The usual pre-WWDC buzz is in full swing.

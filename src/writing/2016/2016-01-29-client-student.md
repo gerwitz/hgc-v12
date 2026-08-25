@@ -7,7 +7,8 @@ content-tags:
 - service
 - learning
 - business
-external: https://medium.com/@gerwitz/fc033a1752df
+crossposts:
+- https://medium.com/@gerwitz/fc033a1752df
 ---
 
 > Your role in a company isn’t to just be the designer of products; Your role is to be a designer of that company, to help it become the company that has the ability to make the products you aspire to make.

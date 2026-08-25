@@ -9,7 +9,8 @@ content-tags:
 - society
 - government
 - history
-external: httpss://medium.com/history-repeats/25d694a035ce
+crossposts:
+- httpss://medium.com/history-repeats/25d694a035ce
 ---
 
 > What about advertising’s role in financing such a project?

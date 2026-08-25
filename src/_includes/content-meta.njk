@@ -1,17 +1,17 @@
 {% set relatedSource = related.sources[page.url] %}
 {% set isDatedContent = bodyClass == "writing" or bodyClass == "note" %}
-{% set hasSyndication = syndication and syndication.length %}
+{% set hasCrossposts = crossposts and crossposts.length %}
 {% set hasRelatedContent = relatedSource and relatedSource.related.length %}
-{% if isDatedContent or hasSyndication or hasRelatedContent %}
+{% if isDatedContent or hasCrossposts or hasRelatedContent %}
 <div class="content-meta">
   {% if isDatedContent %}
   <div>
     {{ title }} was posted {{ page.date | date("MMMM YYYY") }}
     during {{ page.date | weeklink | safe }}
-    {%- if hasSyndication %}
+    {%- if hasCrossposts %}
       also on:
       <ul>
-        {% for target in syndication -%}
+        {% for target in crossposts -%}
           <li><a href="{{ target }}">{{ target | hostname }}</a></li>
         {%- endfor %}
       </ul>

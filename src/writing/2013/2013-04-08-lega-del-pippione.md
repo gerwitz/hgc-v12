@@ -6,7 +6,8 @@ categories:
 content-tags:
 - history
 - science
-external: https://medium.com/history-repeats/7ee3bcf10e4c
+crossposts:
+- https://medium.com/history-repeats/7ee3bcf10e4c
 ---
 
 It is common knowledge that in 1633 that Galileo was tried for heresy by the Church. Also well known is the subject area -- he had just published _[Dialogue Concerning the Two Chief World Systems][dialog]_, espousing a Copernican view of Earth's motion, contrary to contemporary interpretation of scripture.
