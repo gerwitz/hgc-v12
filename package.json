@@ -11,7 +11,9 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
-    "generate:maps": "eleventy --quiet"
+    "generate:maps": "eleventy --quiet",
+    "related": "node --env-file-if-exists=.env eleventy/related-content.js",
+    "related:check": "node eleventy/related-content.js --dry-run"
   },
   "repository": {
     "type": "git",

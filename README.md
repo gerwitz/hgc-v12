@@ -23,6 +23,14 @@ For local development, requests under `/media/*` can be redirected to the produc
 
 This keeps content URLs site-relative, such as `/media/example.jpg`, while loading media from the bucket during local development. The `/media/` prefix is removed when redirecting, so `/media/example.jpg` redirects to `https://your-media-host.example/example.jpg`.
 
+### Related content
+
+Related-content data and its OpenAI embedding cache are committed so normal and deployment builds do not make API requests. To refresh them after changing searchable content, run:
+
+`OPENAI_API_KEY=... npm run related`
+
+Use `npm run related:check` to list the eligible content without requesting embeddings. The generator writes `eleventy/related-content-cache.json` and `src/_data/related.json`; commit both files with the related content changes.
+
 ## Deployment (Coolify)
 
 This project is configured for Dockerfile-based deployment in Coolify.
