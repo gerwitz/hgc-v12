@@ -115,7 +115,7 @@ dd {
   div {
     width: 100%;
     margin-top: 12px;
-    outline: 2px solid var(--text-color); /* outer border */
+    outline: 2px dotted var(--text-color); /* outer border */
 
     padding: 6px 12px;
   }
