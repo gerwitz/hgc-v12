@@ -101,16 +101,19 @@ h4 {
   -webkit-font-smoothing: none;
 }
 
-article blockquote {
+article blockquote,
+.feed-item blockquote {
   margin-left: 0;
   padding-left: 15px;
 }
 
-article blockquote *:first-child {
+article blockquote *:first-child,
+.feed-item blockquote *:first-child {
   margin-top: 0;
 }
 
-article blockquote *:last-child {
+article blockquote *:last-child,
+.feed-item blockquote *:last-child {
   margin-bottom: 0;
 }
 
