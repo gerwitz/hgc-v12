@@ -108,18 +108,27 @@ dd {
 /* META */
 
 .content-meta {
-  width: 100%;
+  width: var(--content-width);
+  max-width: 100%;
 
   margin-top: 32px;
-  padding-right: 6px;
 
-  div {
+  > div {
     width: 100%;
     margin-top: 12px;
     outline: 2px dotted var(--text-color); /* outer border */
 
     padding: 6px 12px;
   }
+}
+
+.content-meta-separator {
+  width: calc(100% + 24px);
+  height: 0;
+  margin: 6px -12px;
+  border: 0;
+  border-top: 2px dotted var(--text-color);
+  background: none;
 }
 
 /* weeks list */

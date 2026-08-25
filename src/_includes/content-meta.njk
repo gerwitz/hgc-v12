@@ -4,8 +4,8 @@
 {% set hasRelatedContent = relatedSource and relatedSource.related.length %}
 {% if isDatedContent or hasCrossposts or hasRelatedContent %}
 <div class="content-meta">
-  {% if isDatedContent %}
   <div>
+    {% if isDatedContent %}
     Posted during {{ page.date | weeklink | safe }} ({{ page.date | date("MMMM YYYY") }})
     {%- if hasCrossposts -%}
       , also on:
@@ -15,20 +15,24 @@
         {%- endfor %}
       </ul>
     {% endif %}
-  </div>
-  {% endif %}
+    {% endif %}
 
-  {% if hasRelatedContent %}
-  <div class="related-content">
-    Related pages:
-    <ul>
-    {% for item in relatedSource.related %}
-      <li class="{{ item.kind }}" data-score="{{ item.score }}">
-        <a href="{{ item.url }}">{{ item.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
+    {% if isDatedContent and hasRelatedContent %}
+    <hr class="content-meta-separator">
+    {% endif %}
+
+    {% if hasRelatedContent %}
+    <section class="related-content">
+      Related pages:
+      <ul>
+      {% for item in relatedSource.related %}
+        <li class="{{ item.kind }}" data-score="{{ item.score }}">
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
   </div>
-  {% endif %}
 </div>
 {% endif %}

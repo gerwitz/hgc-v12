@@ -181,6 +181,8 @@ body {
 
   text-align: right;
 
+  background-color: transparent;
+
   &:focus {
     outline-color: var(--accent-color);
     &::placeholder {
@@ -227,8 +229,8 @@ body.root .search-form button {
 
 .main-footer {
   padding-top: 16px;
-  margin-top: 12px;
-  padding-right: 6px;
+  margin-top: 24px;
+  padding-right: 0px;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
@@ -266,11 +268,11 @@ body.root .search-form button {
     text-align: right;
 
     outline: 2px solid var(--text-color); /* outer border */
-    background-color: var(--text-color);
-    color: var(--page-color);
+    background-color: var(--dark-page-color);
+    color: var(--dark-text-color);
 
     a {
-      color: var(--page-color);
+      color: var(--dark-text-color);
     }
   }
 }
@@ -318,10 +320,55 @@ body.root .search-form button {
 }
 
 .main-footer .sitemap {
+  position: relative;
   display: flow-root;
   width: 100%;
   clear: both;
-  margin-top: 12px;
+  margin-top: 16px;
+}
+
+.main-footer .accessory {
+  display: none;
+}
+
+@media (min-width: 780px) {
+  .main-footer > .sitemap {
+    width: calc(100% - 144px);
+    max-width: none;
+    margin-left: 144px;
+  }
+
+  .main-footer .accessory {
+    position: absolute;
+    top: 0;
+    left: -144px;
+    display: block;
+    width: 128px;
+    height: 152px;
+    outline: 2px solid var(--text-color);
+    background-color: var(--page-color);
+  }
+}
+
+.main-footer .accessory-screen {
+  width: 128px;
+  height: 128px;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.main-footer .accessory-name {
+  display: grid;
+  width: 128px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  color: var(--text-color);
+  font-family: var(--meta-font);
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .main-footer .sitemap > dl {
