@@ -227,7 +227,8 @@ body.root .search-form button {
 
 .main-footer {
   padding-top: 16px;
-  margin-top: 36px;
+  margin-top: 12px;
+  padding-right: 6px;
   font-variant-numeric: lining-nums proportional-nums;
 }
 

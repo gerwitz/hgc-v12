@@ -6,22 +6,22 @@
 <div class="content-meta">
   {% if isDatedContent %}
   <div>
-    I posted this in {{ page.date | date("MMMM YYYY") }} during {{ page.date | weeklink | safe }}.
-  </div>
-  {% endif %}
-
-  {% if hasSyndication %}
-  <div>
-    This was posted on
-    {% for target in syndication -%}
-      {% if not loop.first %}{% if loop.last %}{% if loop.length > 2 %}, and {% else %} and {% endif %}{% else %}, {% endif %}{% endif -%}
-      <a href="{{ target }}">{{ target | hostname }}</a>
-    {%- endfor %}.
+    {{ title }} was posted {{ page.date | date("MMMM YYYY") }}
+    during {{ page.date | weeklink | safe }}
+    {%- if hasSyndication %}
+      also on:
+      <ul>
+        {% for target in syndication -%}
+          <li><a href="{{ target }}">{{ target | hostname }}</a></li>
+        {%- endfor %}
+      </ul>
+    {%- else -%}.{% endif -%}
   </div>
   {% endif %}
 
   {% if hasRelatedContent %}
   <div class="related-content">
+    Related pages:
     <ul>
     {% for item in relatedSource.related %}
       <li class="{{ item.kind }}" data-score="{{ item.score }}">

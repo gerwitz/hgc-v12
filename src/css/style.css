@@ -104,10 +104,20 @@ dd {
   margin-bottom: 8px;
 }
 
-/* metadata */
+/* META */
+
 .content-meta {
-  border-top: solid 1px var(--meta-color);
-  padding-top: 1.0rem;
+  width: 100%;
+
+  padding-right: 6px;
+
+  div {
+    width: 100%;
+    margin-top: 12px;
+    outline: 2px solid var(--text-color); /* outer border */
+
+    padding: 2px 12px;
+  }
 }
 
 /* weeks list */

@@ -4,7 +4,7 @@
    so <p> floats left and <aside> floats right */
 
 /* Keep all primary article content in the content column. */
-article > :not(.sidenote) {
+article > :not(aside) {
   float: left;
   clear: left;
   width: var(--content-width);
