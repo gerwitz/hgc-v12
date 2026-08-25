@@ -2,7 +2,7 @@
 title: Downsizing the Monkeysphere
 categories:
 - personal
-content-tags:
+topics:
 - me
 ---
 

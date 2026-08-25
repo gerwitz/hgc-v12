@@ -2,7 +2,7 @@
 title: Hacker Mind
 categories:
 - work
-content-tags:
+topics:
 - code
 - business
 - design

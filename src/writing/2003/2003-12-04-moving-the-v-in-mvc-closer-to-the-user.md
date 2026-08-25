@@ -2,7 +2,7 @@
 title: Moving the V in MVC closer to the user
 categories:
 - work
-content-tags:
+topics:
 - architecture
 - web
 ---

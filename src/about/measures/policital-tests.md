@@ -2,7 +2,7 @@
 title: Political Tests
 categories:
 - personal
-content-tags:
+topics:
 - politics
 - quantself
 ---
@@ -37,4 +37,3 @@ See also the [Slate Red or Blue][13] test from the exciting election season of 2
 The [Moral Politics][14] test says -3.5 on the Moral Order axis and -2 on the Moral Rules axis as of 2005-09-09.
 
    [14]: http://www.moral-politics.com/xPolitics.aspx?action=Test&choice=Long
-

@@ -2,7 +2,7 @@
 title: Monster Trucks
 categories:
 - personal
-content-tags:
+topics:
 - culture
 - personal
 - stlouis

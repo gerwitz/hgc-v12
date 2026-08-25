@@ -2,7 +2,7 @@
 title: Bloviating on separation of powers
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - usa
 - bush

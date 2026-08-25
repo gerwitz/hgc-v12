@@ -2,7 +2,7 @@
 title: mediaARTS
 categories:
 - culture
-content-tags:
+topics:
 - stlouis
 ---
 

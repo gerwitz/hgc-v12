@@ -2,7 +2,7 @@
 title: Instant Buzz
 categories:
 - work
-content-tags:
+topics:
 - culture
 - idea
 - marketing

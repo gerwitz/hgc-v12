@@ -2,7 +2,7 @@
 title: Support Harris for Palestine
 categories:
 - culture
-content-tags:
+topics:
 - us
 - politics
 ---

@@ -2,7 +2,7 @@
 title: Mortality
 categories:
 - personal
-content-tags:
+topics:
 - family
 - cancer
 ---

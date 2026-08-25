@@ -2,7 +2,7 @@
 title: The iPod is dead, long live the iPod!
 categories:
 - personal
-content-tags:
+topics:
 - apple
 ---
 

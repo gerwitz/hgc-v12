@@ -2,7 +2,7 @@
 title: Disregard
 categories:
 - work
-content-tags:
+topics:
 - cluetrain
 - business
 - personal

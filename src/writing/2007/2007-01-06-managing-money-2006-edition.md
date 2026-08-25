@@ -2,7 +2,7 @@
 title: Managing Money, 2006 Edition
 categories:
 - personal
-content-tags:
+topics:
 - me
 - finance
 ---

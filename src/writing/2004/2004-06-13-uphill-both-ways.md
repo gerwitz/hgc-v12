@@ -2,7 +2,7 @@
 title: Uphill both ways
 categories:
 - personal
-content-tags:
+topics:
 - cycling
 ---
 

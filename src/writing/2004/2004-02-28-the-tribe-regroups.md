@@ -2,7 +2,7 @@
 title: The tribe regroups
 categories:
 - personal
-content-tags:
+topics:
 - cycling
 ---
 

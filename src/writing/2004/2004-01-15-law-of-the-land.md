@@ -2,7 +2,7 @@
 title: Law of the land
 categories:
 - culture
-content-tags:
+topics:
 - science
 - wisdom
 ---

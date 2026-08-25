@@ -2,7 +2,7 @@
 title: Fidget-Friendly
 categories:
 - work
-content-tags:
+topics:
 - technology
 - hardware
 - stuff

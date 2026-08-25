@@ -2,7 +2,7 @@
 title: Why we ride
 categories:
 - personal
-content-tags:
+topics:
 - cycling
 - charity
 ---

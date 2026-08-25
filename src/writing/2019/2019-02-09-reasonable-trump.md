@@ -2,7 +2,7 @@
 title: The Reasonable Trump Administration
 categories:
 - culture
-content-tags: [usa, politics, news, trump]
+topics: [usa, politics, news, trump]
 ---
 
 Twice a day, the White House publishes a news summary via email, with the current edition on their website, under the banner of [_West Wing Reads_](https://www.whitehouse.gov/westwingreads/).

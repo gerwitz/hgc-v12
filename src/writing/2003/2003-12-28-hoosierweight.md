@@ -2,7 +2,7 @@
 title: Hoosierweight
 categories:
 - culture
-content-tags:
+topics:
 - stlouis
 ---
 

@@ -3,7 +3,7 @@ title: Eurovisualizing
 abstract: Using a popularity contest to play with datavis.
 categories:
 - work
-content-tags:
+topics:
 - datavis
 - javascript
 ---

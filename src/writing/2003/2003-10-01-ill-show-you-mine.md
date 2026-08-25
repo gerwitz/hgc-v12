@@ -2,7 +2,7 @@
 title: I'll show you mine...
 categories:
 - personal
-content-tags:
+topics:
 - tools
 - mac
 ---

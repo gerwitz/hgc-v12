@@ -2,7 +2,7 @@
 title: Eating raw fish
 categories:
 - personal
-content-tags:
+topics:
 - stlouis
 ---
 

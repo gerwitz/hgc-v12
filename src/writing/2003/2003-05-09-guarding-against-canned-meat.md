@@ -2,7 +2,7 @@
 title: Guarding against canned meat
 categories:
 - personal
-content-tags:
+topics:
 - funny
 - spam
 ---

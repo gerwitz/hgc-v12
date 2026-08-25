@@ -2,7 +2,7 @@
 title: Laszlo opens for business
 categories:
 - work
-content-tags:
+topics:
 - web
 ---
 

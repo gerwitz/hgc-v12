@@ -2,7 +2,7 @@
 title: Twenty Years Ago
 categories:
 - personal
-content-tags:
+topics:
 - history
 ---
 

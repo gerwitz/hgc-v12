@@ -2,7 +2,7 @@
 title: Facebook Yelps
 categories:
 - work
-content-tags:
+topics:
 - business
 - technology
 - marketing

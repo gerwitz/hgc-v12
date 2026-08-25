@@ -4,7 +4,7 @@ abstract: In praise of effective genius heroes.
 categories:
 - culture
 - personal
-content-tags:
+topics:
 - film
 - technology
 ---

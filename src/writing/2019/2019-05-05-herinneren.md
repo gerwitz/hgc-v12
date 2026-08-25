@@ -2,7 +2,7 @@
 title: Mokum’s Broken Heart
 date: 2019-05-05
 categories: [culture]
-content-tags:
+topics:
 - netherlands
 - amsterdam
 - war

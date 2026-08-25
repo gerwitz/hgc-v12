@@ -3,7 +3,7 @@ title: First post!
 abstract: Now, with content!
 categories:
 - meta
-content-tags:
+topics:
 - blogging
 ---
 

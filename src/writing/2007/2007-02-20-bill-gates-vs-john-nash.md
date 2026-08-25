@@ -2,7 +2,7 @@
 title: Bill Gates vs. John Nash
 categories:
 - work
-content-tags:
+topics:
 - apple
 - business
 - marketing

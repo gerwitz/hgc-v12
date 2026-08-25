@@ -3,7 +3,7 @@ title: WordPress It Is
 categories:
 - meta
 - work
-content-tags:
+topics:
 - cms
 - web
 ---

@@ -2,7 +2,7 @@
 title: Rendered With Ink
 categories:
 - personal
-content-tags:
+topics:
 - business
 - media
 - personal

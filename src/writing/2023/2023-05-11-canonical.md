@@ -2,7 +2,7 @@
 title: Canonical Design
 categories:
 - work
-content-tags:
+topics:
 - design
 - canonical
 crossposts:

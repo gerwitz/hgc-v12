@@ -2,7 +2,7 @@
 title: A More Realistic Desktop Metaphor
 categories:
 - work
-content-tags:
+topics:
 - design
 - technology
 - apple

@@ -2,7 +2,7 @@
 title: Konfabulated
 categories:
 - work
-content-tags:
+topics:
 - platforms
 ---
 

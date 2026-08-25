@@ -2,7 +2,7 @@
 title: Personality Tests
 categories:
 - personal
-content-tags:
+topics:
 - personality
 - quantself
 ---

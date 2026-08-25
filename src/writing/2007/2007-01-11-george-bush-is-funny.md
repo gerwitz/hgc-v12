@@ -2,7 +2,7 @@
 title: George Bush is Funny
 categories:
 - culture
-content-tags:
+topics:
 - funny
 - language
 - politics

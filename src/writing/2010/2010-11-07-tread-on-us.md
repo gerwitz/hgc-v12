@@ -2,7 +2,7 @@
 title: Tread on Us
 categories:
 - culture
-content-tags:
+topics:
 - history
 - politics
 - fave

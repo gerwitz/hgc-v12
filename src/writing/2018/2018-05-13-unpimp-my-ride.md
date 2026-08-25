@@ -3,7 +3,7 @@ title: More Stealth
 abstract: "My ride has been unpimped."
 categories:
 - personal
-content-tags:
+topics:
 - cycling
 ---
 

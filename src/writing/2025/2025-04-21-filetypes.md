@@ -2,7 +2,7 @@
 title: Opening a file in 2025
 categories:
 - work
-content-tags:
+topics:
 - apple
 - ux
 ---

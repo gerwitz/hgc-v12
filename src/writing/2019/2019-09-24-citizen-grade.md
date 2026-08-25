@@ -2,7 +2,7 @@
 title: What Grade of Citizen Are You?
 categories:
 - culture
-content-tags:
+topics:
 - guns
 - usa
 - law

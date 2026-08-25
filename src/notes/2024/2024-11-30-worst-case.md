@@ -1,6 +1,6 @@
 ---
 date: 2024-11-30
-content-tags:
+topics:
 - ai
 - culture
 ---

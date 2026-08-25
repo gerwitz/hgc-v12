@@ -2,7 +2,7 @@
 title: phobia-com v6 beta
 categories:
 - meta
-content-tags:
+topics:
 - technology
 ---
 

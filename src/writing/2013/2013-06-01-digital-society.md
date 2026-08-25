@@ -3,7 +3,7 @@ title: Digital Society
 abstract: Our struggle with wielding technology’s power is not new.
 categories:
 - culture
-content-tags:
+topics:
 - technology
 - labor
 - society

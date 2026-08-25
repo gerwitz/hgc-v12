@@ -2,7 +2,7 @@
 title: This Blog is Now Safely Ignored
 categories:
 - meta
-content-tags:
+topics:
 - blogging
 - marketing
 - meta

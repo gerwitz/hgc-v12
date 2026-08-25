@@ -1,6 +1,6 @@
 ---
 date: 2025-07-14
-content-tags:
+topics:
 - hexmap
 - ai
 ---

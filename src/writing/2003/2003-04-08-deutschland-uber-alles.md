@@ -3,7 +3,7 @@ title: Deutschland uber alles
 abstract: If I don't agree with every action America takes, my loyalty must lie elsewhere.
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - war
 ---

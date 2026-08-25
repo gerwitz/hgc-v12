@@ -3,7 +3,7 @@ title: Growing Into Naiveté
 categories:
 - culture
 - personal
-content-tags:
+topics:
 - fave
 - politics
 - stlouis

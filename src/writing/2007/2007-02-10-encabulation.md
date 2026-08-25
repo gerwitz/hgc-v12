@@ -4,7 +4,7 @@ abstract: We're not good enough at software to poke fun at ourselves yet.
 categories:
 - work
 - culture
-content-tags:
+topics:
 - technology
 - funny
 - history

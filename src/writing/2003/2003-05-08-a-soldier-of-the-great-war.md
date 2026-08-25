@@ -2,7 +2,7 @@
 title: A Soldier of the Great War
 categories:
 - personal
-content-tags:
+topics:
 - book
 ---
 

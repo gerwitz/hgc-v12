@@ -2,7 +2,7 @@
 title: "Artificial Conscience"
 categories:
 - work
-content-tags:
+topics:
 - ai
 - philosophy
 - ethics

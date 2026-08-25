@@ -2,7 +2,7 @@
 title: Yippee Kai Aye
 categories:
 - personal
-content-tags:
+topics:
 - travel
 ---
 

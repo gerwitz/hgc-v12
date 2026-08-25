@@ -2,7 +2,7 @@
 title: Inspiration
 categories:
 - work
-content-tags:
+topics:
 - apple
 - design
 - nintendo

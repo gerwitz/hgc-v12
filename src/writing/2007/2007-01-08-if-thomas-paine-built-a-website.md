@@ -2,7 +2,7 @@
 title: If Thomas Paine Built a Website
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - aside
 ---

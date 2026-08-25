@@ -2,7 +2,7 @@
 title: "All Hail Freret IX"
 categories:
 - personal
-content-tags:
+topics:
 - kreweoffreret
 - nola
 - mardigras

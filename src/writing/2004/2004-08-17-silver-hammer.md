@@ -2,7 +2,7 @@
 title: Silver Hammer
 categories:
 - culture
-content-tags:
+topics:
 - aside
 ---
 

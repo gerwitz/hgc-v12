@@ -2,7 +2,7 @@
 title: Implicit assertions
 categories:
 - work
-content-tags:
+topics:
 - code
 - development
 - tools

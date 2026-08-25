@@ -2,7 +2,7 @@
 title: Clickhunting
 categories:
 - work
-content-tags:
+topics:
 - technology
 - Design
 - ui

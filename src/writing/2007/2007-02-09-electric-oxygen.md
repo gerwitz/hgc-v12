@@ -2,7 +2,7 @@
 title: Electric Oxygen
 categories:
 - personal
-content-tags:
+topics:
 - culture
 - scooter
 - shopping

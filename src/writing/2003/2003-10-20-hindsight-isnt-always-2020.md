@@ -2,7 +2,7 @@
 title: "Hindsight isn't always 20/20"
 categories:
 - culture
-content-tags:
+topics:
 - usa
 - war
 - politics

@@ -2,7 +2,7 @@
 title: The News in the Netherlands
 categories:
 - culture
-content-tags:
+topics:
 - usa
 - netherlands
 - history

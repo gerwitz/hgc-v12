@@ -3,7 +3,7 @@ title: Communal mythic experience
 categories:
 - personal
 - culture
-content-tags:
+topics:
 - sublime
 - experience
 ---

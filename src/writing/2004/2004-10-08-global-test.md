@@ -2,7 +2,7 @@
 title: Global Test
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - bush
 ---

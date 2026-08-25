@@ -2,7 +2,7 @@
 title: How Marketing Will Save Itself
 categories:
 - work
-content-tags:
+topics:
 - business
 - marketing
 - media

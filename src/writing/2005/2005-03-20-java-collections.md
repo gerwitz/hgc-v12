@@ -2,7 +2,7 @@
 title: Java Collections
 categories:
 - work
-content-tags:
+topics:
 - technology
 - java
 ---

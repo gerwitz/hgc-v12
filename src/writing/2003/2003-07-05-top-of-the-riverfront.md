@@ -2,7 +2,7 @@
 title: Top of the Riverfront
 categories:
 - personal
-content-tags:
+topics:
 - stlouis
 ---
 

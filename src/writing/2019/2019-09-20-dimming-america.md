@@ -2,7 +2,7 @@
 title: Making America Dim Again
 categories:
 - culture
-content-tags:
+topics:
 - usa
 - politics
 - technology

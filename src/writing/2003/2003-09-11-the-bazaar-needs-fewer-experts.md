@@ -3,7 +3,7 @@ title: The bazaar needs fewer experts
 categories:
 - culture
 - work
-content-tags:
+topics:
 - community
 - programming
 - learning

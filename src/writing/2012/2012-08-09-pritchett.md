@@ -3,7 +3,7 @@ title: Scared
 abstract: a paragraph-by-paragraph translation of Lou Pritchett
 categories:
 - culture
-content-tags:
+topics:
 - politics
 ---
 

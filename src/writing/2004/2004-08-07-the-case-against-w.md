@@ -2,7 +2,7 @@
 title: The Case Against W
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - usa
 - bush

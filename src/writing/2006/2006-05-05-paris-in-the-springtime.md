@@ -2,7 +2,7 @@
 title: Paris in the Springtime
 categories:
 - personal
-content-tags:
+topics:
 - travel
 ---
 

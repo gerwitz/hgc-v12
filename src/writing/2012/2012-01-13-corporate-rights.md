@@ -3,7 +3,7 @@ title: Corporate Rights
 categories:
 - work
 - culture
-content-tags:
+topics:
 - business
 - politics
 - rights

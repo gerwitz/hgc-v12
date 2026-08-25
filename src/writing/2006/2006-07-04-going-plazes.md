@@ -2,7 +2,7 @@
 title: Going Plazes
 categories:
 - work
-content-tags:
+topics:
 - geo
 - web
 - business

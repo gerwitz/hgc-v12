@@ -2,7 +2,7 @@
 title: ranked voting
 categories:
 - culture
-content-tags:
+topics:
 - government
 - politics
 - voting

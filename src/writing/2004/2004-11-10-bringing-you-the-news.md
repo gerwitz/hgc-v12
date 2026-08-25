@@ -2,7 +2,7 @@
 title: Bringing you the news
 categories:
 - culture
-content-tags:
+topics:
 - news
 - aside
 ---

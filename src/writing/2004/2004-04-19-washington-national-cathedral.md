@@ -2,7 +2,7 @@
 title: Washington National Cathedral
 categories:
 - personal
-content-tags:
+topics:
 - travel
 ---
 

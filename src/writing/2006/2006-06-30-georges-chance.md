@@ -2,7 +2,7 @@
 title: George's Chance
 categories:
 - personal
-content-tags:
+topics:
 - cycling
 ---
 

@@ -2,7 +2,7 @@
 title: Participatory Budgets
 categories:
 - culture
-content-tags:
+topics:
 - city
 - amsterdam
 - economics

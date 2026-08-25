@@ -2,7 +2,7 @@
 title: Feline Nirvana
 categories:
 - uncategorized
-content-tags:
+topics:
 - tagless
 ---
 

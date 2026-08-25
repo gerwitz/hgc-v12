@@ -2,7 +2,7 @@
 title: Scripting
 categories:
 - work
-content-tags:
+topics:
 - programming
 - web
 ---

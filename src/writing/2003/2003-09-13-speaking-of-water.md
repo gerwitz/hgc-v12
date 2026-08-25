@@ -2,7 +2,7 @@
 title: Speaking of water...
 categories:
 - culture
-content-tags:
+topics:
 - health
 - medicine
 - food

@@ -2,7 +2,7 @@
 title: "First Week with Apple Vision Pro"
 categories:
 - work
-content-tags:
+topics:
 - apple
 - tech
 ---

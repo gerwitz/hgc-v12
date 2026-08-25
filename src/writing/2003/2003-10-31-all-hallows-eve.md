@@ -2,7 +2,7 @@
 title: All Hallow's Eve
 categories:
 - culture
-content-tags:
+topics:
 - corporate
 ---
 

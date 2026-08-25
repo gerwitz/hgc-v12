@@ -3,7 +3,7 @@ title: Camera phones and enterprise security
 categories:
 - work
 - culture
-content-tags:
+topics:
 - security
 ---
 

@@ -2,7 +2,7 @@
 title: Arlington
 categories:
 - personal
-content-tags:
+topics:
 - travel
 ---
 

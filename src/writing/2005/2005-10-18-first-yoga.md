@@ -2,7 +2,7 @@
 title: First Yoga
 categories:
 - uncategorized
-content-tags:
+topics:
 - tagless
 ---
 

@@ -42,7 +42,7 @@
         },
         {
           "title": "Tags",
-          "name": "content-tags",
+          "name": "topics",
           "type": "tags"
         },
         {
@@ -70,7 +70,7 @@
         },
         {
           "title": "Tags",
-          "name": "content-tags",
+          "name": "topics",
           "type": "tags"
         },
         {
@@ -105,7 +105,7 @@
         },
         {
           "title": "Tags",
-          "name": "content-tags",
+          "name": "topics",
           "type": "tags"
         }
       ]
@@ -176,7 +176,7 @@
   ],
   "frontMatter.taxonomy.alignFilename": true,
   "frontMatter.taxonomy.commaSeparatedFields": [
-    "content-tags"
+    "topics"
   ],
   "frontMatter.dashboard.openOnStart": false,
   "frontMatter.website.host": "https://hans.gerwitz.com",

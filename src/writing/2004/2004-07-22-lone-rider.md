@@ -2,7 +2,7 @@
 title: Lone rider
 categories:
 - culture
-content-tags:
+topics:
 - cycling
 ---
 

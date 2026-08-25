@@ -3,7 +3,7 @@ title: What's Next For The Left?
 abstract: Yes, neoliberalism sucks. What else?
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - capitalism
 - socialism

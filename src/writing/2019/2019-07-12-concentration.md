@@ -2,7 +2,7 @@
 title: Wie die Pilze nach dem Regen
 categories:
 - culture
-content-tags: [politics, oppression, natherlands, usa]
+topics: [politics, oppression, natherlands, usa]
 ---
 
 In 1938, the Netherlands saw an influx of Jewish refugees, who were migrating to escape rising antisemitism in Germany. In 1939, [Camp Westerbork](https://kampwesterbork.nl/) began welcoming these families with a place to live.[^mandatory] By all accounts it was meant to be hospitable and was, with reasonable space and facilities. It was also, by definition, a concentration camp.

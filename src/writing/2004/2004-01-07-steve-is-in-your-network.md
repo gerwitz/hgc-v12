@@ -2,7 +2,7 @@
 title: Steve is in your network
 categories:
 - personal
-content-tags:
+topics:
 - apple
 - linkedin
 ---

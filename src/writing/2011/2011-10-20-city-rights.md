@@ -2,7 +2,7 @@
 title: City Rights
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - urban
 - fave

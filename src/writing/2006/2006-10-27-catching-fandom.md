@@ -2,7 +2,7 @@
 title: Catching Fandom
 categories:
 - personal
-content-tags:
+topics:
 - sports
 - stlouis
 - me

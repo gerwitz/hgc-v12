@@ -3,7 +3,7 @@ title: "If It Must Be Paper…"
 abstract: The recent boarding pass redesign meme fails to actually redesign.
 categories:
 - work
-content-tags:
+topics:
 - design
 - visualization
 - ia

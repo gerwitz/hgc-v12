@@ -2,7 +2,7 @@
 title: I Believe in Mocking
 categories:
 - culture
-content-tags:
+topics:
 - philosophy
 - language
 - naturalism

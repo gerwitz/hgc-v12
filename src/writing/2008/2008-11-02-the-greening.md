@@ -4,7 +4,7 @@ abstract: The grass is greener out west.
 categories:
 - culture
 - personal
-content-tags:
+topics:
 - seattle
 ---
 

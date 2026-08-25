@@ -3,7 +3,7 @@ title: The Anosognosic Phone
 abstract: Dunning and Kruger say I must be missing something.
 categories:
 - work
-content-tags:
+topics:
 - phone
 - technology
 - manufacturing

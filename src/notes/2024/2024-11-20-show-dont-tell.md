@@ -1,6 +1,6 @@
 ---
 date: 2024-11-20
-content-tags:
+topics:
 - ai
 - programming
 ---

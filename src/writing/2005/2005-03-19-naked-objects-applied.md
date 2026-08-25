@@ -2,7 +2,7 @@
 title: Naked Objects Applied
 categories:
 - work
-content-tags:
+topics:
 - tech
 - java
 - programming

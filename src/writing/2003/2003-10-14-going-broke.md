@@ -2,7 +2,7 @@
 title: Going broke
 categories:
 - culture
-content-tags:
+topics:
 - childless
 ---
 

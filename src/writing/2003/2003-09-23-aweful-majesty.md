@@ -2,7 +2,7 @@
 title: Aweful majesty
 categories:
 - culture
-content-tags:
+topics:
 - travel
 - geology
 ---

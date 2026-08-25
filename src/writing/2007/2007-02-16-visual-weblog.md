@@ -2,7 +2,7 @@
 title: Visual Weblog
 categories:
 - work
-content-tags:
+topics:
 - design
 - aside
 - idea

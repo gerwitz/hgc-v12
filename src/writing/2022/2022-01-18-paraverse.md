@@ -2,7 +2,7 @@
 title: "The Paraverse"
 categories:
 - culture
-content-tags:
+topics:
 - metaverse
 - facebook
 - language

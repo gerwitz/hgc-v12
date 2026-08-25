@@ -3,7 +3,7 @@ title: Time and Value
 abstract: A game for someone else.
 categories:
 - culture
-content-tags:
+topics:
 - gaming
 - time
 crossposts:

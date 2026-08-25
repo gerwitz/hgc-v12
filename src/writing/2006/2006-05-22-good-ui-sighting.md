@@ -2,7 +2,7 @@
 title: Good UI Sighting
 categories:
 - work
-content-tags:
+topics:
 - technology
 - design
 - ui

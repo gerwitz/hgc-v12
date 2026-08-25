@@ -2,7 +2,7 @@
 title: "COVID-19: Life So Far"
 categories:
 - personal
-content-tags:
+topics:
 - covid
 ---
 

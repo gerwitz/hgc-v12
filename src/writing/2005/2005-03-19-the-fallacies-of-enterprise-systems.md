@@ -2,7 +2,7 @@
 title: The Fallacies of Enterprise Systems
 categories:
 - work
-content-tags:
+topics:
 - technology
 - java
 - programming

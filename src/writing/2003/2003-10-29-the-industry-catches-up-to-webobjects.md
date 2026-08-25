@@ -2,7 +2,7 @@
 title: The industry catches up to WebObjects
 categories:
 - work
-content-tags:
+topics:
 - web
 - architecture
 - mvc

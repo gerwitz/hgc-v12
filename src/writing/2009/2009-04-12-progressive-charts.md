@@ -2,7 +2,7 @@
 title: Progressive Charts
 categories:
 - work
-content-tags:
+topics:
 - technology
 - code
 - web

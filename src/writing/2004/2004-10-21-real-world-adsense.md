@@ -2,7 +2,7 @@
 title: Real-world AdSense
 categories:
 - work
-content-tags:
+topics:
 - advertising
 ---
 

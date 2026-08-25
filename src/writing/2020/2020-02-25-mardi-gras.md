@@ -2,7 +2,7 @@
 title: "Happy Mardi Gras!"
 categories:
 - personal
-content-tags:
+topics:
 - kreweoffreret
 - nola
 - mardigras

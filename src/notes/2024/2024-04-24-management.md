@@ -1,6 +1,6 @@
 ---
 date: 2024-04-24
-content-tags:
+topics:
 - ai
 ---
 

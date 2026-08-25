@@ -2,7 +2,7 @@
 title: Information Management, version 2
 categories:
 - work
-content-tags:
+topics:
 - ux
 - design
 - semantic

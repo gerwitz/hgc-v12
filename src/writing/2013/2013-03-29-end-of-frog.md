@@ -4,7 +4,7 @@ abstract: Shannon and I are unemployed.
 categories:
 - personal
 - work
-content-tags:
+topics:
 - amsterdam
 comments: off
 ---

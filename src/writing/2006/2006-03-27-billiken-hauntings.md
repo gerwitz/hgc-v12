@@ -2,7 +2,7 @@
 title: Billiken Hauntings
 categories:
 - uncategorized
-content-tags:
+topics:
 - tagless
 ---
 

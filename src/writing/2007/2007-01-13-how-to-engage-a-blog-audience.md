@@ -1,6 +1,6 @@
 ---
 title: How to Engage a Blog Audience
-content-tags:
+topics:
 - marketing
 ---
 

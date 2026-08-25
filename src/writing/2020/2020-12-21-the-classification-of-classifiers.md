@@ -2,7 +2,7 @@
 title: The Classification of Classifiers
 categories:
 - work
-content-tags:
+topics:
 - data
 - government
 - algorithm

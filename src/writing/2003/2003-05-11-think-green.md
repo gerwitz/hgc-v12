@@ -2,7 +2,7 @@
 title: Think green
 categories:
 - culture
-content-tags:
+topics:
 - branding
 ---
 

@@ -4,7 +4,7 @@ abstract: The history of a popular quote seems to lead from Knuth to Hoare to Di
 categories:
 - culture
 - work
-content-tags:
+topics:
 - history
 - programming
 - popular

@@ -2,7 +2,7 @@
 title: Aesthetic geography
 categories:
 - personal
-content-tags:
+topics:
 - travel
 ---
 

@@ -3,7 +3,7 @@ title: "About the Author"
 categories:
 - work
 - personal
-content-tags:
+topics:
 - shannon
 - design
 - book

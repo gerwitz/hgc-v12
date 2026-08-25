@@ -2,7 +2,7 @@
 title: Emerald impressions
 categories:
 - personal
-content-tags:
+topics:
 - travel
 - seattle
 ---

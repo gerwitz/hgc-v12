@@ -2,7 +2,7 @@
 title: Serendipity on a Cone
 categories:
 - personal
-content-tags:
+topics:
 - aside
 - religion
 ---

@@ -32,7 +32,7 @@ class LunrIndex {
       builder.add({
         ref: index,
         title: doc.data.title,
-        tags: doc.data["content-tags"],
+        tags: doc.data["topics"],
         content: doc.content
       });
     });

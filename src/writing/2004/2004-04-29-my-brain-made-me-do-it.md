@@ -2,7 +2,7 @@
 title: My brain made me do it
 categories:
 - culture
-content-tags:
+topics:
 - psychology
 - addiction
 ---

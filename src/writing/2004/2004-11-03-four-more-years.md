@@ -2,7 +2,7 @@
 title: Four more years
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - usa
 - bush

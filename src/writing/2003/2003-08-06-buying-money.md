@@ -2,7 +2,7 @@
 title: Buying money
 categories:
 - culture
-content-tags:
+topics:
 - funny
 - aside
 ---

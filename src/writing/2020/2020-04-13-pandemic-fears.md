@@ -2,7 +2,7 @@
 title: "Pandemic Fears"
 categories:
 - culture
-content-tags:
+topics:
 - usa
 - eu
 - covid

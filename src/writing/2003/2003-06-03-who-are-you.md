@@ -3,7 +3,7 @@ title: Who are you
 abstract: '...it appears naive to consider "you" as a wrinkly grapefruit of neural tissue'
 categories:
 - culture
-content-tags:
+topics:
 - philosophy
 - self
 - psychology

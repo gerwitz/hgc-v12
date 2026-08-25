@@ -2,7 +2,7 @@
 title: XML Access Objects
 categories:
 - work
-content-tags:
+topics:
 - xml
 - web
 ---

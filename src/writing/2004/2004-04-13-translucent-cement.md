@@ -2,7 +2,7 @@
 title: Translucent cement
 categories:
 - personal
-content-tags:
+topics:
 - idea
 - technology
 - architecture

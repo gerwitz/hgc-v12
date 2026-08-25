@@ -2,7 +2,7 @@
 title: OpenID Has It Right
 categories:
 - uncategorized
-content-tags:
+topics:
 - tagless
 ---
 

@@ -2,7 +2,7 @@
 title: Cartoon Justice
 categories:
 - culture
-content-tags:
+topics:
 - aside
 - politics
 ---

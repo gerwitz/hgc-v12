@@ -2,7 +2,7 @@
 title: Lost Century
 categories:
 - culture
-content-tags:
+topics:
 - stlouis
 - architecture
 - history

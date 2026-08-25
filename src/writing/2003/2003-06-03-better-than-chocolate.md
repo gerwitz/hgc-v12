@@ -2,7 +2,7 @@
 title: Better than chocolate
 categories:
 - personal
-content-tags:
+topics:
 - sin
 - food
 ---

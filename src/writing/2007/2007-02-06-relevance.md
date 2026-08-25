@@ -2,7 +2,7 @@
 title: Relevance
 categories:
 - personal
-content-tags:
+topics:
 - me
 - media
 - personal

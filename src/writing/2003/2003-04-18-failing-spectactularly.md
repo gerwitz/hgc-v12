@@ -3,7 +3,7 @@ title: Failing spectactularly
 abstract: Don't let your UI leak.
 categories:
 - work
-content-tags:
+topics:
 - aside
 - technology
 - design

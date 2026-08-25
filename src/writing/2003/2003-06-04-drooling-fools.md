@@ -2,7 +2,7 @@
 title: Drooling fools
 categories:
 - personal
-content-tags:
+topics:
 - music
 - aside
 ---

@@ -3,7 +3,7 @@ title: Om Asatoma Sadgamaya (ॐ असतो मा सद्गमय)
 abstract: Popular criticism of The Matrix Revolutions overlooks the philosophy.
 categories:
 - culture
-content-tags:
+topics:
 - media
 - mind
 - philosophy

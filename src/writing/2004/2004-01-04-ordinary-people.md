@@ -2,7 +2,7 @@
 title: Ordinary People
 categories:
 - work
-content-tags:
+topics:
 - code
 - development
 - design

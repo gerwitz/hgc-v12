@@ -2,7 +2,7 @@
 title: Open minds
 categories:
 - culture
-content-tags:
+topics:
 - mind
 - memory
 - learning

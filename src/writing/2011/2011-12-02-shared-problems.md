@@ -2,7 +2,7 @@
 title: Shared Problems
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - occupy
 - society

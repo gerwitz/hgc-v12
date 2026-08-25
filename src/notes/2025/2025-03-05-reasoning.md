@@ -1,6 +1,6 @@
 ---
 date: 2025-03-05
-content-tags:
+topics:
 - ai
 - psychology
 ---

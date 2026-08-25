@@ -2,7 +2,7 @@
 title: London wrap-up
 categories:
 - personal
-content-tags:
+topics:
 - travel
 ---
 

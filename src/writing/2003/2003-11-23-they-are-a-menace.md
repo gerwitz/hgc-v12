@@ -2,7 +2,7 @@
 title: They are a menace
 categories:
 - culture
-content-tags:
+topics:
 - tolerance
 - society
 - diversity

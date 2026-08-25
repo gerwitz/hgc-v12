@@ -2,7 +2,7 @@
 title: Oh, did we forget to mention
 categories:
 - culture
-content-tags:
+topics:
 - government
 - economy
 - usa

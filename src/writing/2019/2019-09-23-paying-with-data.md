@@ -3,7 +3,7 @@ title: Signing Away Our Health Data
 categories:
 - culture
 - work
-content-tags:
+topics:
 - privacy
 - health
 - data

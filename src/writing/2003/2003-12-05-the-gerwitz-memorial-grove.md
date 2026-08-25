@@ -2,7 +2,7 @@
 title: The Gerwitz Memorial Grove
 categories:
 - personal
-content-tags:
+topics:
 - trees
 - nature
 ---

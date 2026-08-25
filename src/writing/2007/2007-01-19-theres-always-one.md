@@ -2,7 +2,7 @@
 title: There's always one
 categories:
 - personal
-content-tags:
+topics:
 - personal
 - rant
 ---

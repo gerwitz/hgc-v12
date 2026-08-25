@@ -2,7 +2,7 @@
 title: Did your vote count
 categories:
 - culture
-content-tags:
+topics:
 - usa
 - voting
 - government

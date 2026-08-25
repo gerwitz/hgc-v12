@@ -2,7 +2,7 @@
 title: Zabriskie Sbandons
 categories:
 - personal
-content-tags:
+topics:
 - cycling
 ---
 

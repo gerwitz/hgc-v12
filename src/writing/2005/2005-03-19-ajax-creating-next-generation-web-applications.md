@@ -2,7 +2,7 @@
 title: AJaX
 categories:
 - work
-content-tags:
+topics:
 - technology
 - programming
 - web

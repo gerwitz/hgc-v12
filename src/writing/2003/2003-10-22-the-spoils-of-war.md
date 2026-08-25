@@ -2,7 +2,7 @@
 title: The spoils of war
 categories:
 - culture
-content-tags:
+topics:
 - aside
 ---
 

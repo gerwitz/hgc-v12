@@ -2,7 +2,7 @@
 title: "The Great American Culture War"
 categories:
 - culture
-content-tags:
+topics:
 - usa
 - politics
 ---

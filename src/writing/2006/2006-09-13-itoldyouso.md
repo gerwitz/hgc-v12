@@ -2,7 +2,7 @@
 title: iToldYouSo
 categories:
 - work
-content-tags:
+topics:
 - technology
 - apple
 ---

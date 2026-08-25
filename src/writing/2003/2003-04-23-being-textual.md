@@ -3,7 +3,7 @@ title: Being Textual
 abstract: Humans like reading, too.
 categories:
 - work
-content-tags:
+topics:
 - programming
 ---
 

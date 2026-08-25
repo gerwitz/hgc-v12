@@ -2,7 +2,7 @@
 title: Coming of age
 categories:
 - personal
-content-tags:
+topics:
 - travel
 - aside
 ---

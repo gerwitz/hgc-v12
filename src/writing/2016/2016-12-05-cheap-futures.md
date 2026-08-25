@@ -3,7 +3,7 @@ title: Cheap Futures
 abstract: "Shallow thinking richly presented"
 categories:
 - work
-content-tags:
+topics:
 - futures
 - design
 crossposts:

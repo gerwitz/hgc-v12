@@ -1,6 +1,6 @@
 ---
 title: Comprehensive Interaction Design
-content-tags:
+topics:
 - marketing
 ---
 

@@ -2,7 +2,7 @@
 title: Linguistic divinity
 categories:
 - personal
-content-tags:
+topics:
 - measurement
 - language
 ---

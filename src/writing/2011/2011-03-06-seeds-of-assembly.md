@@ -3,7 +3,7 @@ title: Seeds of Assembly
 categories:
 - personal
 - culture
-content-tags:
+topics:
 - design
 - emergence
 - nature

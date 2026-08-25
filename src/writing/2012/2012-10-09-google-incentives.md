@@ -4,7 +4,7 @@ abstract: Advertising compromises search.
 categories:
 - work
 - culture
-content-tags:
+topics:
 - business
 - advertising
 - government

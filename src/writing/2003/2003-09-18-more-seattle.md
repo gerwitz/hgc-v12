@@ -2,7 +2,7 @@
 title: More Seattle
 categories:
 - personal
-content-tags:
+topics:
 - travel
 - seattle
 - fave

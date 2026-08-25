@@ -3,7 +3,7 @@ title: "NRS: a proto-RIA"
 abstract: Client servers communicating with server servers through clients
 categories:
 - work
-content-tags:
+topics:
 - web
 - architecture
 ---

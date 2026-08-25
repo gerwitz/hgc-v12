@@ -3,7 +3,7 @@ title: 2004 Presidential candidates
 categories:
 - culture
 - personal
-content-tags:
+topics:
 - me
 - politics
 ---

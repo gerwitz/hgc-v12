@@ -2,7 +2,7 @@
 title: SpamBayes at work
 categories:
 - work
-content-tags:
+topics:
 - email
 - aside
 ---

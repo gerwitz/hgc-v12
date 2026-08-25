@@ -3,7 +3,7 @@ title: House Music
 categories:
 - personal
 - culture
-content-tags:
+topics:
 - amsterdam
 - nola
 - music

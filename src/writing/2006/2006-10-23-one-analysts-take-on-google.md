@@ -3,7 +3,7 @@ title: One Analyst's Take on Google
 categories:
 - culture
 - work
-content-tags:
+topics:
 - aside
 - funny
 - google

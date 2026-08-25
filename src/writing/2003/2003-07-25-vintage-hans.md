@@ -3,7 +3,7 @@ title: Vintage Hans
 categories:
 - meta
 - personal
-content-tags:
+topics:
 - history
 epitaph: has been online for a while
 ---

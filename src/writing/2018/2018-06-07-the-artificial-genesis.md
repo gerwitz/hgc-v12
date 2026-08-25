@@ -3,7 +3,7 @@ title: 'The Artificial Genesis'
 abstract: "The story of why we created The Artificial"
 categories:
 - work
-content-tags:
+topics:
 - theartificial
 - design
 - bauhaus

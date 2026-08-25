@@ -2,7 +2,7 @@
 title: Embarrassing Vegas
 categories:
 - culture
-content-tags:
+topics:
 - marketing
 ---
 

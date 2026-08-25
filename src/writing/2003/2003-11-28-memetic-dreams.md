@@ -2,7 +2,7 @@
 title: Memetic dreams
 categories:
 - personal
-content-tags:
+topics:
 - information
 - reading
 - fave

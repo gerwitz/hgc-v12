@@ -1,6 +1,6 @@
 ---
 title: 'Cringely: How to Think Creatively'
-content-tags:
+topics:
 - marketing
 ---
 

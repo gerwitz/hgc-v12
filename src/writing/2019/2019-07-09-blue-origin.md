@@ -2,7 +2,7 @@
 title: Jeff's High Frontier
 categories:
 - culture
-content-tags: [space, future, amazon]
+topics: [space, future, amazon]
 ---
 
 At space industry conference [SATELLITE](https://2019.satshow.com/) in May, Jeff Bezos did the billionaire-with-a-vision thing and unveiled Blue Origin's lunar lander. As is routine, the internet tweeted hot takes of his [presentation](https://www.youtube.com/watch?v=GQ98hGUe6FM) nearly in realtime, not even taking the time to let him finish, much less spend a moment thinking about it.

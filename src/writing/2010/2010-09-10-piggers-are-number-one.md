@@ -2,7 +2,7 @@
 title: Piggers Are Number One
 categories:
 - culture
-content-tags:
+topics:
 - aside
 - quote
 - funny

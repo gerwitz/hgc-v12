@@ -2,7 +2,7 @@
 title: Apple Fitness
 categories:
 - personal
-content-tags:
+topics:
 - apple
 - media
 - health

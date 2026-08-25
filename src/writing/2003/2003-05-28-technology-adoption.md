@@ -2,7 +2,7 @@
 title: Technology adoption
 categories:
 - work
-content-tags:
+topics:
 - technology
 - design
 ---

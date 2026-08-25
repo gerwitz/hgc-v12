@@ -2,7 +2,7 @@
 title: Where the humans are in charge
 categories:
 - work
-content-tags:
+topics:
 - aside
 - technology
 ---

@@ -2,7 +2,7 @@
 title: Programming is Brain Surgery
 categories:
 - work
-content-tags:
+topics:
 - aside
 - programming
 ---

@@ -2,7 +2,7 @@
 title: Terrorized by Gullibility
 categories:
 - culture
-content-tags:
+topics:
 - media
 - funny
 - law

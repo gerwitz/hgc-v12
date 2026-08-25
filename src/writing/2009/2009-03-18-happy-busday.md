@@ -3,7 +3,7 @@ title: Happy Busday!
 abstract: First annual Bus Driver Appreciation Day declared success.
 categories:
 - culture
-content-tags:
+topics:
 - seattle
 - transportation
 - urban

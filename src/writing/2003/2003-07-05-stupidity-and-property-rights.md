@@ -2,7 +2,7 @@
 title: Stupidity and property rights
 categories:
 - culture
-content-tags:
+topics:
 - landuse
 - politics
 - stlouis

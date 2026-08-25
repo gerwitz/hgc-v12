@@ -2,7 +2,7 @@
 title: Simple stuff
 categories:
 - culture
-content-tags:
+topics:
 - consumption
 ---
 

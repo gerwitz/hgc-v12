@@ -3,7 +3,7 @@ title: Against everyone
 abstract: I don't agree with (this) war, but that doesn't mean I'm against defense.
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - war
 epitaph: is almost a pacifist

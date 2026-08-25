@@ -3,7 +3,7 @@ title: A Sad Day for Primates
 categories:
 - culture
 - personal
-content-tags:
+topics:
 - stlouis
 ---
 

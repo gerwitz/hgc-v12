@@ -3,7 +3,7 @@ title: Retromining
 categories:
 - work
 - culture
-content-tags:
+topics:
 - business
 - technology
 - gaming

@@ -2,7 +2,7 @@
 title: Is he against life, or against liberty?
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - usa
 - abortion

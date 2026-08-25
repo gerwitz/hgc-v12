@@ -2,7 +2,7 @@
 title: Paris wrap-up
 categories:
 - personal
-content-tags:
+topics:
 - travel
 ---
 

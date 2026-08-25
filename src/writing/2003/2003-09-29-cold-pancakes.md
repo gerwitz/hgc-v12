@@ -2,7 +2,7 @@
 title: Cold pancakes
 categories:
 - personal
-content-tags:
+topics:
 - cycling
 ---
 

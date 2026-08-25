@@ -2,7 +2,7 @@
 title: Welcome to the light
 categories:
 - work
-content-tags:
+topics:
 - apple
 ---
 

@@ -3,7 +3,7 @@ title: Why Google Bought Motorola
 abstract: It is too obvious why Google wanted Motorola.
 categories:
 - work
-content-tags:
+topics:
 - business
 - tech
 - google

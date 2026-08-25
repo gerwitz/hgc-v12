@@ -1,6 +1,6 @@
 ---
 date: 2024-02-26
-content-tags:
+topics:
 - military
 - ai
 ---

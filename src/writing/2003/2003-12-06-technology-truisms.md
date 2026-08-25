@@ -2,7 +2,7 @@
 title: Technology truisms
 categories:
 - work
-content-tags:
+topics:
 - aside
 ---
 

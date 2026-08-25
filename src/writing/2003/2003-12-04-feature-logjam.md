@@ -2,7 +2,7 @@
 title: Feature logjam
 categories:
 - work
-content-tags:
+topics:
 - pm
 - agile
 - management

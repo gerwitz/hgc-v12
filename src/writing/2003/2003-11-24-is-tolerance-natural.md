@@ -2,7 +2,7 @@
 title: Is tolerance natural
 categories:
 - culture
-content-tags:
+topics:
 - tolerance
 - society
 - psychology

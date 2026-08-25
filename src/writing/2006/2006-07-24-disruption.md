@@ -2,7 +2,7 @@
 title: Disruption
 categories:
 - work
-content-tags:
+topics:
 - business
 - marketing
 - web

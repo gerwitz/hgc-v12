@@ -1,6 +1,6 @@
 ---
 title: My Thoughts on the iPhone
-content-tags:
+topics:
 - marketing
 ---
 

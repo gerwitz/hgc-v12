@@ -2,7 +2,7 @@
 title: Unpersuaded
 categories:
 - culture
-content-tags:
+topics:
 - media
 date: 2024-03-24T14:10:47.126+01:00
 ---
@@ -20,4 +20,3 @@ But they certainly have shifted over time. I don't know if Yascha has radicalize
 It's become laborious, so I'm removing them from rotation and looking for new on-the-edge-of-my-bubble feeds.
 
 [^names]: The name must be a nod towards _Reason_, eh?
-

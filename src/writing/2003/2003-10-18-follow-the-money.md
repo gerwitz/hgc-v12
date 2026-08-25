@@ -2,7 +2,7 @@
 title: Follow the money
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - usa
 - data

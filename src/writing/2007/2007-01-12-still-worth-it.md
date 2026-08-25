@@ -2,7 +2,7 @@
 title: Still Worth It
 categories:
 - personal
-content-tags:
+topics:
 - me
 - aside
 ---

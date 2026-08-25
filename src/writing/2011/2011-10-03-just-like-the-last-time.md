@@ -2,7 +2,7 @@
 title: Just Like the Last Time
 categories:
 - work
-content-tags:
+topics:
 - business
 - apple
 - mobile

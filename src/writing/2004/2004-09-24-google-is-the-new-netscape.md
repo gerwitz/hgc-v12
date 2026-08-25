@@ -2,7 +2,7 @@
 title: Google is the new Netscape
 categories:
 - work
-content-tags:
+topics:
 - web
 - google
 - fave

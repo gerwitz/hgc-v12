@@ -2,7 +2,7 @@
 title: The triumph of reason
 categories:
 - personal
-content-tags:
+topics:
 - debate
 ---
 

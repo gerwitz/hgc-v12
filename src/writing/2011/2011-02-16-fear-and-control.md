@@ -3,7 +3,7 @@ title: Fear and Control
 categories:
 - culture
 - work
-content-tags:
+topics:
 - tech
 - business
 - society

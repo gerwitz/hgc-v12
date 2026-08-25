@@ -2,7 +2,7 @@
 title: Slate Red or Blue
 categories:
 - personal
-content-tags:
+topics:
 - measurement
 - politics
 ---

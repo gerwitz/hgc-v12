@@ -3,7 +3,7 @@ title: Clients Are Students
 abstract: "Our obligation to teach"
 categories:
 - work
-content-tags:
+topics:
 - service
 - learning
 - business

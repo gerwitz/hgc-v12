@@ -2,7 +2,7 @@
 title: Otis Lives
 categories:
 - personal
-content-tags:
+topics:
 - friends
 - me
 ---

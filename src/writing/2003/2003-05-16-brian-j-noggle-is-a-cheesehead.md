@@ -2,7 +2,7 @@
 title: Brian J- Noggle is a cheesehead
 categories:
 - personal
-content-tags:
+topics:
 - funny
 - google
 - aside

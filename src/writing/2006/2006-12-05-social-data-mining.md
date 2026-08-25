@@ -2,7 +2,7 @@
 title: Social Data Mining
 categories:
 - work
-content-tags:
+topics:
 - technology
 - software
 - web

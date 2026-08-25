@@ -3,7 +3,7 @@ title: Temporal Binding
 abstract: There is no clock.
 categories:
 - culture
-content-tags:
+topics:
 - mind
 - networks
 - waves

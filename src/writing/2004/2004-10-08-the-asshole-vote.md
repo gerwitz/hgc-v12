@@ -2,7 +2,7 @@
 title: The Asshole Vote
 categories:
 - culture
-content-tags:
+topics:
 - politics
 - bush
 ---

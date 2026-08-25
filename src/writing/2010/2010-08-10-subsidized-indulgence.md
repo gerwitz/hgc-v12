@@ -2,7 +2,7 @@
 title: Subsidized Indulgence
 categories:
 - culture
-content-tags:
+topics:
 - fave
 - politics
 - transportation

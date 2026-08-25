@@ -2,7 +2,7 @@
 title: Social market crash
 categories:
 - work
-content-tags:
+topics:
 - web
 - indieweb
 ---

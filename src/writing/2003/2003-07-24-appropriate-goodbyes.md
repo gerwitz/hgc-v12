@@ -2,7 +2,7 @@
 title: Appropriate goodbyes
 categories:
 - personal
-content-tags:
+topics:
 - death
 - aside
 ---

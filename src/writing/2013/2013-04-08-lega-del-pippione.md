@@ -3,7 +3,7 @@ title: Galileo vs. the League of Pigeons
 abstract: Don't let the pigeons keep you down.
 categories:
 - culture
-content-tags:
+topics:
 - history
 - science
 crossposts:

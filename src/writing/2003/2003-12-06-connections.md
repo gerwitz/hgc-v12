@@ -2,7 +2,7 @@
 title: Connections
 categories:
 - work
-content-tags:
+topics:
 - project
 - personality
 - data

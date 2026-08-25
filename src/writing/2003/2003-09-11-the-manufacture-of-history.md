@@ -2,7 +2,7 @@
 title: The manufacture of history
 categories:
 - culture
-content-tags:
+topics:
 - journalism
 - history
 - quote

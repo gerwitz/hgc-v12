@@ -2,7 +2,7 @@
 title: It depends on what you mean by "citizen"
 categories:
 - culture
-content-tags:
+topics:
 - media
 - politics
 - aside

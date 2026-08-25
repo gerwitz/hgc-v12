@@ -2,7 +2,7 @@
 title: Masochism
 categories:
 - personal
-content-tags:
+topics:
 - cycling
 ---
 

@@ -2,7 +2,7 @@
 title: Craftsmanship
 categories:
 - work
-content-tags:
+topics:
 - craftsmanship
 - aside
 ---

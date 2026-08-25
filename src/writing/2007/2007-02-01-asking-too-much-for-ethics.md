@@ -2,7 +2,7 @@
 title: Asking Too Much for Ethics
 categories:
 - culture
-content-tags:
+topics:
 - aside
 - cycling
 - politics

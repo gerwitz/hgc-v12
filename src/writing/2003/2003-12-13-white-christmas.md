@@ -2,7 +2,7 @@
 title: White Christmas
 categories:
 - culture
-content-tags:
+topics:
 - stlouis
 - christmas
 ---

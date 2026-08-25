@@ -3,7 +3,7 @@ title: Snelfiets
 abstract: Our fast bikes have joined us in Holland.
 categories:
 - personal
-content-tags:
+topics:
 - cycling
 - shannon
 ---

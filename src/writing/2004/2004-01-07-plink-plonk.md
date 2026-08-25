@@ -2,7 +2,7 @@
 title: Plink, plonk
 categories:
 - work
-content-tags:
+topics:
 - indieweb
 ---
 

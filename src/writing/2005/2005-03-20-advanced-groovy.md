@@ -2,7 +2,7 @@
 title: Advanced Groovy
 categories:
 - work
-content-tags:
+topics:
 - java
 - programming
 ---
