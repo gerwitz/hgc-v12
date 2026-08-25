@@ -80,7 +80,7 @@ h1 {
 h2 {
   font-size: calc(1.6875rem * var(--heading-scale, 1));
   line-height: calc(2.4rem * var(--heading-leading, 1));
-  margin-top: 4rem;
+  margin-top: 1rem;
   margin-bottom: .8rem;
 }
 
@@ -167,14 +167,33 @@ a {
   -webkit-font-smoothing: none;
 }
 
-.main-footer .homelink {
-  font-family: var(--meta-font);
-}
-
 a:hover {
   color: var(--page-color);
   background-color: var(--accent-color);
   box-shadow: 0 0 0.5rem 0.5rem var(--page-color);
+}
+
+
+.main-footer .sitemap > dl {
+  line-height: var(--footer-path-font-size);
+
+  dt {
+    font-size: var(--footer-path-font-size);
+  }
+
+  dd {
+    font-size: var(--footer-meta-font-size);
+    transform: translateY(4px);
+  }
+}
+
+.main-footer .homelink {
+  font-family: var(--meta-font);
+  -webkit-font-smoothing: none;
+
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -202,6 +221,7 @@ a:hover {
 }
 
 .content-meta {
+  font-size: var(--footer-meta-font-size);
   font-variant-numeric: lining-nums proportional-nums;
 }
 

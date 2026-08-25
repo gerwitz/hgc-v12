@@ -91,6 +91,6 @@ I can imagine doing it, though, which might seem dystopian. Michael Sacasas worr
 
 I already put my attention into cyberspace when I have my phone out. To put on a mask makes it explicit to both myself and others that I've done so. I find this an improvement, actually, as I'm so conscious of my presence when it is on, and especially feel the reconnection with reality upon taking it off.
 
-# The Future
+## The Future
 
 It will be fun to re-read this in 10 years. I hope by then spatial computing is mainstream and expect we’ll have a common language of interactions. I think we’ll be grateful for the foundation Apple’s set with hand gestures, gaze focus, and avatars, even if they are all imperfect today.

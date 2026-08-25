@@ -287,11 +287,11 @@ body.root .search-form button {
 
 .main-footer .footer-topnav .homelink {
   display: inline-block;
-  height: 32px;
+  height: var(--footer-path-font-size);
   margin: 0;
   padding: 0 12px 0 12px;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: var(--footer-path-font-size);
+  line-height: var(--footer-path-font-size);
   text-decoration: none;
 }
 
@@ -327,8 +327,6 @@ body.root .search-form button {
 .main-footer .sitemap > dl {
   width: 50%;
   margin: 0;
-
-  line-height: 32px;
 }
 
 .main-footer .sitemap > dl dt {
@@ -336,8 +334,6 @@ body.root .search-form button {
   float: left;
   min-width: 25%;
   padding-bottom: 0;
-
-  font-size: 32px;
 }
 
 .main-footer .sitemap > dl dd {
@@ -345,7 +341,6 @@ body.root .search-form button {
   clear: right;
   padding-bottom: 0;
 
-  font-size: 14px;
   transform: translateY(4px);
 }
 
