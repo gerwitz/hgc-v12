@@ -105,7 +105,7 @@ dd {
 }
 
 /* metadata */
-.colophon {
+.content-meta {
   border-top: solid 1px var(--meta-color);
   padding-top: 1.0rem;
 }

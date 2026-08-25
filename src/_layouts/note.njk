@@ -10,8 +10,6 @@ permalink: "/{{ page.date | date('YYYY/MM/DD') }}/{{ page.fileSlug }}.html"
     {{ content | safe }}
   <div>
 
-  {% include "colophon.njk" %}
-
-  {% include "related.njk" %}
+  {% include "content-meta.njk" %}
 
 </article>

@@ -201,12 +201,12 @@ a:hover {
   text-decoration-color: var(--meta-color);
 }
 
-.colophon {
+.content-meta {
   font-variant-numeric: lining-nums proportional-nums;
   font-style: italic;
 }
 
-.colophon a.internal {
+.content-meta a.internal {
   font-weight: inherit;
 }
 
