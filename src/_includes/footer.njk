@@ -50,9 +50,10 @@
     <dt>{{ "follow" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
     <dd>Where to find me</dd>
   </dl>
-  <div class="accessory">
-    <div class="accessory-screen" aria-hidden="true"></div>
-    <a class="accessory-name" href="/">hans.gerwitz.com</a>
+  {% set cartridge = "orbital" %}
+  <div class="toy">
+    {% include "../toys/pico-8/player.njk" %}
+    <a class="toy-name" href="/">{{ cartridge }}</a>
   </div>
 </div>
 

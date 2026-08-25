@@ -327,8 +327,9 @@ body.root .search-form button {
   margin-top: 16px;
 }
 
-.main-footer .accessory {
+.main-footer .toy {
   display: none;
+  line-height: 0;
 }
 
 @media (min-width: 780px) {
@@ -338,7 +339,7 @@ body.root .search-form button {
     margin-left: 144px;
   }
 
-  .main-footer .accessory {
+  .main-footer .toy {
     position: absolute;
     top: 0;
     left: -144px;
@@ -350,13 +351,20 @@ body.root .search-form button {
   }
 }
 
-.main-footer .accessory-screen {
+.main-footer .toy-screen {
   width: 128px;
   height: 128px;
   border-bottom: 2px solid var(--text-color);
 }
 
-.main-footer .accessory-name {
+.main-footer .pico-8-player {
+  display: block;
+  width: 128px;
+  height: 128px;
+  image-rendering: pixelated;
+}
+
+.main-footer .toy-name {
   display: grid;
   width: 128px;
   height: 24px;
