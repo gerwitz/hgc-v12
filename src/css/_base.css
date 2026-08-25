@@ -345,8 +345,22 @@ body.root .search-form button {
 }
 
 @media (min-width: 768px) { /* bp-liminal */
+  .main-footer .sitemap > dl {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
+  .main-footer .sitemap > dl dt {
+    clear: none;
+    float: none;
+    min-width: 0;
+  }
+
   .main-footer .sitemap > dl dd {
-    display: inherit;
+    display: block;
+    min-width: 0;
+    margin-left: 0;
   }
 }
 
