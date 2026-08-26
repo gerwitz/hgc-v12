@@ -1,0 +1,65 @@
+---
+layout: false
+permalink: /toys/embed/
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html,
+      body,
+      canvas,
+      #toy-root {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        display: block;
+        background: #000;
+        image-rendering: pixelated;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      (() => {
+        const parameters = new URLSearchParams(window.location.search);
+        const type = parameters.get("type");
+        const scriptPath = parameters.get("script");
+        const size = parameters.get("size") === "256" ? 256 : 128;
+        const scriptPattern = /^\/toys\/([a-z0-9-]+)\/\1\.js$/;
+
+        if (!scriptPath || !scriptPattern.test(scriptPath)) {
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.src = scriptPath;
+
+        if (type === "pico8") {
+          const canvas = document.createElement("canvas");
+          canvas.width = 128;
+          canvas.height = 128;
+          canvas.style.width = `${size}px`;
+          canvas.style.height = `${size}px`;
+          document.body.append(canvas);
+          window.Module = { canvas };
+          document.head.append(script);
+          return;
+        }
+
+        if (type === "vanilla") {
+          const root = document.createElement("div");
+          root.id = "toy-root";
+          document.body.append(root);
+          window.toy = { element: root, size };
+          document.head.append(script);
+        }
+      })();
+    </script>
+  </body>
+</html>

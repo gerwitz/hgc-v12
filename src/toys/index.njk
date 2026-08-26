@@ -1,0 +1,24 @@
+---
+title: Toys
+layout: index
+bodyClass: toys-index
+override:tags: []
+eleventyExcludeFromCollections: true
+---
+
+<p>These are small experiments and games.</p>
+
+<div class="toy-gallery">
+  <ul class="toy-grid">
+  {% for toy in collections.toys %}
+    {% set toyEmbed = toy.data.toyEmbed %}
+    {% set toySize = 128 %}
+    {% set toyTitle = toy.data.title %}
+    <li class="toy-card">
+      {% include "toy-player.njk" %}
+      <span class="toy-card-name">{{ toy.data.title }}</span>
+      <a class="toy-card-link" href="{{ toy.url }}" aria-label="View {{ toy.data.title }}"></a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>

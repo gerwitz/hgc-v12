@@ -7,6 +7,7 @@
 @import '_timeline.css';
 @import '_sidenotes.css';
 @import '_lightbox.css';
+@import '_toys.css';
 
 /* CSS variables for runtime - these are now in _variables.css but keeping here for compatibility */
 :root {
@@ -115,19 +116,19 @@ dd {
 
   > div {
     width: 100%;
-    margin-top: 12px;
-    outline: 2px dotted var(--text-color); /* outer border */
+    margin-top: var(--footer-panel-padding);
+    outline: var(--outline-width) dotted var(--text-color); /* outer border */
 
-    padding: 6px 12px;
+    padding: var(--content-meta-padding-block) var(--footer-panel-padding);
   }
 }
 
 .content-meta-separator {
-  width: calc(100% + 24px);
+  width: calc(100% + var(--footer-panel-padding) + var(--footer-panel-padding));
   height: 0;
-  margin: 6px -12px;
+  margin: var(--content-meta-padding-block) calc(-1 * var(--footer-panel-padding));
   border: 0;
-  border-top: 2px dotted var(--text-color);
+  border-top: var(--outline-width) dotted var(--text-color);
   background: none;
 }
 

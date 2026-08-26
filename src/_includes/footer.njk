@@ -50,11 +50,41 @@
     <dt>{{ "follow" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
     <dd>Where to find me</dd>
   </dl>
-  {% set cartridge = "orbital" %}
-  <div class="toy">
-    {% include "../toys/pico-8/player.njk" %}
-    <a class="toy-name" href="/">{{ cartridge }}</a>
-  </div>
+  <div class="toy" data-footer-toy></div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const footerToy = document.querySelector("[data-footer-toy]");
+      const availableToys = [
+      {% for toy in collections.toys %}
+        {
+          title: {{ toy.data.title | json | safe }},
+          url: {{ toy.url | json | safe }},
+          embed: {{ toy.data.toyEmbed | json | safe }},
+        },
+      {% endfor %}
+      ];
+
+      if (!footerToy || !availableToys.length) {
+        return;
+      }
+
+      const toy = availableToys[Math.floor(Math.random() * availableToys.length)];
+      const screen = document.createElement("div");
+      const embed = document.createElement("iframe");
+      const name = document.createElement("a");
+
+      screen.className = "toy-screen";
+      embed.className = "toy-embed";
+      embed.src = `${toy.embed}&size=128`;
+      embed.title = `${toy.title} toy`;
+      name.className = "toy-name";
+      name.href = toy.url;
+      name.textContent = toy.title;
+
+      screen.append(embed);
+      footerToy.append(screen, name);
+    }, { once: true });
+  </script>
 </div>
 
 <div class="fineprint">

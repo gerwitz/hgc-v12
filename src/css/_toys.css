@@ -1,0 +1,120 @@
+body.toys-index .main > .content {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: var(--pale-width);
+}
+
+.toy-gallery {
+  width: fit-content;
+  max-width: 100%;
+  margin: 1rem 0;
+  padding: var(--footer-section-gap);
+  outline: var(--outline-width) solid var(--text-color);
+  background: var(--checkerboard-background);
+}
+
+.toy-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--toy-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toy-card {
+  position: relative;
+  width: var(--toy-screen-size);
+  height: var(--toy-height);
+  margin: 0;
+  overflow: hidden;
+  outline: var(--outline-width) solid var(--text-color);
+  background-color: var(--text-color);
+}
+
+.toy-card:hover,
+.toy-card:focus-within {
+  outline-color: var(--highlight-color);
+}
+
+.toy-card:hover .toy-card-name,
+.toy-card:focus-within .toy-card-name {
+  background-color: var(--highlight-color);
+}
+
+.toy-card .toy-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--toy-screen-size);
+  height: var(--toy-screen-size);
+  overflow: hidden;
+  background-color: var(--text-color);
+  font-size: 0;
+  line-height: 0;
+}
+
+.toy-card .toy-embed {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: var(--toy-screen-size);
+  height: var(--toy-screen-size);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+.toy-card-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  width: var(--toy-screen-size);
+  height: var(--toy-name-height);
+  margin: 0;
+  padding: 0;
+  border-top: var(--outline-width) solid var(--text-color);
+  background-color: var(--page-color);
+  place-items: center;
+  color: var(--text-color);
+  font-family: var(--meta-font);
+  font-size: var(--toy-name-font-size);
+  line-height: var(--toy-name-font-size);
+  text-align: center;
+}
+
+.toy-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toy-page .toy-player {
+  width: var(--toy-page-screen-size);
+  height: var(--toy-page-screen-size);
+  margin: 1rem 0;
+}
+
+.toy-page .toy-screen {
+  position: relative;
+  width: var(--toy-page-screen-size);
+  height: var(--toy-page-screen-size);
+  overflow: hidden;
+  background-color: var(--text-color);
+}
+
+.toy-page .toy-embed {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: var(--toy-page-screen-size);
+  height: var(--toy-page-screen-size);
+  image-rendering: pixelated;
+}

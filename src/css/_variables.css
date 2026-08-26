@@ -7,8 +7,28 @@
   --sidenote-width: 200px;
   --sidenote-column-padding: 46px;
   --sidenote-column-width: calc(var(--sidenote-width) + var(--sidenote-column-padding));
-  --left-margin: clamp(32px, calc(100vw - 790px), 128px);
+  --pale-width: calc(var(--content-width) + var(--sidenote-column-width));
+  --gutter-width: 32px;
+  --narrow-gutter-width: 12px;
+  --left-margin: clamp(var(--gutter-width), calc(100vw - var(--pale-width) - var(--gutter-width)), 128px);
   --right-margin: 10px;
+
+  /* Shared visual treatment */
+  --outline-width: 2px;
+  --checkerboard-background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIHWP8DwQMQMDIyAiiGJjAJBIBEgargCrEVAEAbIMIAowlqhMAAAAASUVORK5CYII=) repeat;
+
+  /* Footer and toy geometry */
+  --footer-panel-padding: 12px;
+  --footer-section-gap: 16px;
+  --footer-margin-top: 24px;
+  --content-meta-padding-block: 6px;
+  --toy-screen-size: 128px;
+  --toy-name-height: 24px;
+  --toy-height: calc(var(--toy-screen-size) + var(--toy-name-height));
+  --toy-gap: 16px;
+  --toy-slot-size: calc(var(--toy-height) + var(--toy-gap));
+  --toy-name-font-size: 18px;
+  --toy-page-screen-size: calc(var(--toy-screen-size) + var(--toy-screen-size));
 
 
   /* Colors */
@@ -19,6 +39,7 @@
   --heading-color: hsl(140, 7%, 25%);
   --meta-color: hsl(140, 7%, 25%);
   --accent-color: hsl(140, 100%, 25%); /* #00802B */
+  --highlight-color: var(--accent-color);
   /* initial search found brick databases using #00852B and #00802B
      later #237841 is more common
      lego.com uses #458441, #3D8828, and #058A0B for backgrounds

@@ -7,7 +7,7 @@ const passthroughGlobs = [
   "src/**/*.pdf",
   "src/projects/**/*.js",
   "src/js/**/*.js",
-  "src/toys/**/*.js",
+  "src/toys/*/*.js",
   "src/projects/**/*.pde",
   "src/projects/**/*.json",
   "src/css/fonts/*",

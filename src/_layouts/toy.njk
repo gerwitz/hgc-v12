@@ -1,0 +1,18 @@
+---
+layout: base
+bodyClass: toy
+---
+
+<article class="toy-page">
+  <h1>{{ title }}</h1>
+
+  <div class="toy-player">
+    {% set toySize = 256 %}
+    {% set toyTitle = title %}
+    {% include "toy-player.njk" %}
+  </div>
+
+  {{ content | safe }}
+
+  {% include "content-meta.njk" %}
+</article>
