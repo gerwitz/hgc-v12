@@ -357,7 +357,8 @@ body.root .search-form button {
     width: 128px;
     height: 152px;
     outline: 2px solid var(--text-color);
-    background-color: var(--page-color);
+    overflow: hidden;
+    background-color: var(--text-color);
   }
 }
 
@@ -367,14 +368,21 @@ body.root .search-form button {
   left: 0;
   width: 128px;
   height: 128px;
+  overflow: hidden;
+  background-color: var(--text-color);
   font-size: 0;
   line-height: 0;
 }
 
 .main-footer .pico-8-player {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 128px;
   height: 128px;
+  margin: 0;
+  padding: 0;
+  border: 0;
   image-rendering: pixelated;
 }
 
@@ -388,6 +396,7 @@ body.root .search-form button {
   margin: 0;
   padding: 0;
   border-top: 2px solid var(--text-color);
+  background-color: var(--page-color);
   place-items: center;
   color: var(--text-color);
   font-family: var(--meta-font);
