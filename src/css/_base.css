@@ -9,7 +9,7 @@ body {
   margin: 0;
   display: grid;
   /* grid-template-rows: auto 1fr auto; */
-  grid-template-columns: var(--left-margin) calc(var(--content-width) + var(--sidenote-column-width)) minmax(var(--right-margin), 1fr);
+  grid-template-columns: var(--left-margin) calc(var(--content-width) + var(--sidenote-column-width)) minmax(32px, 1fr);
 }
 
 .dexter {
@@ -234,9 +234,9 @@ body.root .search-form button {
   font-variant-numeric: lining-nums proportional-nums;
 }
 
-@media (max-width: 779px) {
+@media (max-width: 821px) {
   body {
-    grid-template-columns: 12px minmax(0, var(--content-width)) minmax(var(--right-margin), 1fr);
+    grid-template-columns: var(--left-margin) minmax(0, var(--content-width)) minmax(var(--left-margin), 1fr);
   }
 
   .pale {
@@ -250,6 +250,16 @@ body.root .search-form button {
 
   .main > article {
     grid-column: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --left-margin: max(12px, calc((100vw - var(--content-width)) / 2));
+  }
+
+  body {
+    grid-template-columns: var(--left-margin) minmax(0, var(--content-width)) var(--left-margin);
   }
 }
 
@@ -332,7 +342,7 @@ body.root .search-form button {
   line-height: 0;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 822px) {
   .main-footer > .sitemap {
     width: calc(100% - 144px);
     max-width: none;
@@ -352,9 +362,13 @@ body.root .search-form button {
 }
 
 .main-footer .toy-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 128px;
   height: 128px;
-  border-bottom: 2px solid var(--text-color);
+  font-size: 0;
+  line-height: 0;
 }
 
 .main-footer .pico-8-player {
@@ -365,18 +379,26 @@ body.root .search-form button {
 }
 
 .main-footer .toy-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: grid;
   width: 128px;
   height: 24px;
   margin: 0;
   padding: 0;
+  border-top: 2px solid var(--text-color);
   place-items: center;
   color: var(--text-color);
   font-family: var(--meta-font);
   font-size: 18px;
   line-height: 18px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: underline;
+
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .main-footer .sitemap > dl {

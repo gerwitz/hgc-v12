@@ -30,7 +30,7 @@ article > ul a.sidenote-ref:hover {
   box-shadow: none;
 }
 
-@media (min-width: 780px) { /* sidebar fits beside the content column */
+@media (min-width: 822px) { /* sidebar fits beside the content column */
   article > p a.sidenote-ref,
   article > ul a.sidenote-ref {
     pointer-events: none;
@@ -53,7 +53,7 @@ article > ul a.sidenote-ref:hover {
   color: var(--meta-color);
 }
 
-@media (min-width: 780px) { /* sidebar fits beside the content column */
+@media (min-width: 822px) { /* sidebar fits beside the content column */
   .sidenote {
     display: grid;
     grid-template-columns: var(--sidenote-column-padding) var(--sidenote-width);
