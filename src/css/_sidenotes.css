@@ -67,7 +67,9 @@ article > ul a.sidenote-ref:hover {
 
   .sidenote .sidenote-ref {
     grid-column: 1;
+    align-self: start;
     float: none;
+    margin-top: 0.75em;
     margin-left: 0;
     padding-right: 1em;
     text-align: right;
@@ -86,6 +88,13 @@ article > ul a.sidenote-ref:hover {
   clear: none;
   font-family: var(--sidenote-font, var(--base-font));
   font-weight: var(--sidenote-font-weight, var(--regular-font-weight));
+}
+
+.sidenote img,
+.sidenote svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* but now we have to prevent everything from collapsing */

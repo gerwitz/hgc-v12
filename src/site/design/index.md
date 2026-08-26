@@ -15,11 +15,7 @@ Body copy is set in _Atkinson Hyperlegible_, designed by [Applied Design](https:
 
 The pixelated paths are rendered in[Monaco 9](https://fontstruct.com/fontstructions/show/1744750/monaco-4-4) based on the original by [Susan Kare](https://kareprints.com/pages/about) and used under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 
-The logo glyph[^logo] is [LEGO part #2435][tree]. As a child I was fascinated with the [larger version][big tree] of this part as a manufactured object. I also spent a lot of time in forests and many of my friends were trees. (I previously used the [Unicode tree glyph][unicode], <span role="img" aria-label="tree">&#x1F332;&#xFE0E;</span> but this simple dingbat has been lost to creeping emojification.)
-
-[tree]: https://www.bricklink.com/v2/catalog/catalogitem.page?P=2435
-[big tree]: https://www.bricklink.com/v2/catalog/catalogitem.page?P=3471
-[unicode]: https://unicode-table.com/en/1F332/
+The logo glyph[^logo] is [LEGO part #2435][tree]. You can learn why at <a class="internal path">/site/design/tree</a>.
 
 [^logo]: {% tree 99 %}
 
