@@ -16,76 +16,80 @@
   {% endif %}
 </div>
 
-<div class="sitemap">
-  <dl class="published">
-    <dt>{{ "writing" | navpath(data.breadcrumbs) | safe }}</dt>
-    <dd>{{ collections.writing | length }} blog posts</dd>
-
-    <dt>{{ "notes" | navpath(data.breadcrumbs) | safe }}</dt>
-    <dd>{{ collections.notes | length }} short notes</dd>
-
-    <dt>{{ "projects" | navpath(data.breadcrumbs) | safe }}</dt>
-    <dd>Documented projects</dd>
-{#
-    <dt>{{ "ideas" | navpath(data.breadcrumbs) | safe }}</dt>
-    <dd>Opinions on things</dd>
- #}
-    <dt>{{ "lists" | navpath(data.breadcrumbs) | safe }}</dt>
-    <dd>Other lists</dd>
-  </dl>
-
-  <dl class="personal">
-    <dt>{{ "about" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
-    <dd>About me</dd>
-
-    <dt>{{ "logs" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
-    <dd>Personal history</dd>
-{#
-    <dt>{{ "weeks" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
-    <dd>Weeknotes</dd>
- #}
-    <dt>{{ "site" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
-    <dd>About this site</dd>
-
-    <dt>{{ "follow" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
-    <dd>Where to find me</dd>
-  </dl>
+<div class="footer-content">
   <div class="toy" data-footer-toy></div>
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const footerToy = document.querySelector("[data-footer-toy]");
-      const availableToys = [
-      {% for toy in collections.toys %}
-        {
-          title: {{ toy.data.title | json | safe }},
-          url: {{ toy.url | json | safe }},
-          embed: {{ toy.data.toyEmbed | json | safe }},
-        },
-      {% endfor %}
-      ];
 
-      if (!footerToy || !availableToys.length) {
-        return;
-      }
+  <div class="sitemap">
+    <dl class="published">
+      <dt>{{ "writing" | navpath(data.breadcrumbs) | safe }}</dt>
+      <dd>{{ collections.writing | length }} blog posts</dd>
 
-      const toy = availableToys[Math.floor(Math.random() * availableToys.length)];
-      const screen = document.createElement("div");
-      const embed = document.createElement("iframe");
-      const name = document.createElement("a");
+      <dt>{{ "notes" | navpath(data.breadcrumbs) | safe }}</dt>
+      <dd>{{ collections.notes | length }} short notes</dd>
 
-      screen.className = "toy-screen";
-      embed.className = "toy-embed";
-      embed.src = `${toy.embed}&size=128`;
-      embed.title = `${toy.title} toy`;
-      name.className = "toy-name";
-      name.href = toy.url;
-      name.textContent = toy.title;
+      <dt>{{ "projects" | navpath(data.breadcrumbs) | safe }}</dt>
+      <dd>Documented projects</dd>
+{#
+      <dt>{{ "ideas" | navpath(data.breadcrumbs) | safe }}</dt>
+      <dd>Opinions on things</dd>
+ #}
+      <dt>{{ "lists" | navpath(data.breadcrumbs) | safe }}</dt>
+      <dd>Other lists</dd>
+    </dl>
 
-      screen.append(embed);
-      footerToy.append(screen, name);
-    }, { once: true });
-  </script>
+    <dl class="personal">
+      <dt>{{ "about" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
+      <dd>About me</dd>
+
+      <dt>{{ "logs" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
+      <dd>Personal history</dd>
+{#
+      <dt>{{ "weeks" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
+      <dd>Weeknotes</dd>
+ #}
+      <dt>{{ "site" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
+      <dd>About this site</dd>
+
+      <dt>{{ "follow" | navpath(eleventyComputed.crumbtrail) | safe }}</dt>
+      <dd>Where to find me</dd>
+    </dl>
+  </div>
 </div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const footerToy = document.querySelector("[data-footer-toy]");
+    const availableToys = [
+    {% for toy in collections.toys %}
+      {
+        title: {{ toy.data.title | json | safe }},
+        url: {{ toy.url | json | safe }},
+        embed: {{ toy.data.toyEmbed | json | safe }},
+      },
+    {% endfor %}
+    ];
+
+    if (!footerToy || !availableToys.length) {
+      return;
+    }
+
+    const toy = availableToys[Math.floor(Math.random() * availableToys.length)];
+    const screen = document.createElement("div");
+    const embed = document.createElement("iframe");
+    const name = document.createElement("a");
+
+    screen.className = "toy-screen";
+    embed.className = "toy-embed";
+    embed.src = `${toy.embed}&size=128`;
+    embed.title = `${toy.title} toy`;
+    name.className = "toy-name";
+    name.href = toy.url;
+    name.textContent = toy.title;
+
+    screen.append(embed);
+    footerToy.append(screen, name);
+  }, { once: true });
+</script>
 
 <div class="fineprint">
   original contents <a href="/site/#rights" rel="license">licensed CC-BY-4.0</a>

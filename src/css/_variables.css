@@ -25,8 +25,7 @@
   --toy-screen-size: 128px;
   --toy-name-height: 24px;
   --toy-height: calc(var(--toy-screen-size) + var(--toy-name-height));
-  --toy-gap: 16px;
-  --toy-slot-size: calc(var(--toy-height) + var(--toy-gap));
+
   --toy-name-font-size: 18px;
   --toy-page-screen-size: calc(var(--toy-screen-size) + var(--toy-screen-size));
 

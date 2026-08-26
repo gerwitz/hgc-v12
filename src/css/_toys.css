@@ -16,7 +16,7 @@ body.toys-index .main > .content {
 .toy-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--toy-gap);
+  gap: var(--footer-section-gap);
   margin: 0;
   padding: 0;
   list-style: none;
