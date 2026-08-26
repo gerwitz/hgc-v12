@@ -392,9 +392,12 @@ body.root .search-form button {
   position: absolute;
   bottom: 0;
   left: 0;
-  display: grid;
+  display: flex;
   width: var(--toy-screen-size);
   height: var(--toy-name-height);
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
   margin: 0;
   padding: 0;
   border-top: var(--outline-width) solid var(--text-color);
@@ -405,11 +408,13 @@ body.root .search-form button {
   font-size: var(--toy-name-font-size);
   line-height: var(--toy-name-font-size);
   text-align: center;
-  text-decoration: underline;
+}
 
-  &:hover {
-    box-shadow: none;
-  }
+.main-footer .toy-name a {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  box-shadow: none;
 }
 
 .main-footer .sitemap > dl {

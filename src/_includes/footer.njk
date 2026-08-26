@@ -61,11 +61,14 @@
     const footerToy = document.querySelector("[data-footer-toy]");
     const availableToys = [
     {% for toy in collections.toys %}
+      {% if toy.url != page.url %}
       {
         title: {{ toy.data.title | json | safe }},
+        slug: {{ toy.data.toySlug | json | safe }},
         url: {{ toy.url | json | safe }},
         embed: {{ toy.data.toyEmbed | json | safe }},
       },
+      {% endif %}
     {% endfor %}
     ];
 
@@ -76,16 +79,21 @@
     const toy = availableToys[Math.floor(Math.random() * availableToys.length)];
     const screen = document.createElement("div");
     const embed = document.createElement("iframe");
-    const name = document.createElement("a");
+    const name = document.createElement("div");
+    const toysLink = document.createElement("a");
+    const toyLink = document.createElement("a");
 
     screen.className = "toy-screen";
     embed.className = "toy-embed";
     embed.src = `${toy.embed}&size=128`;
-    embed.title = `${toy.title} toy`;
+    embed.title = `${toy.title}`;
     name.className = "toy-name";
-    name.href = toy.url;
-    name.textContent = toy.title;
+    toysLink.href = "/toys/";
+    toysLink.textContent = "/toys";
+    toyLink.href = toy.url;
+    toyLink.textContent = `/${toy.slug}`;
 
+    name.append(toysLink, toyLink);
     screen.append(embed);
     footerToy.append(screen, name);
   }, { once: true });
