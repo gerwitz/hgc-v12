@@ -4,15 +4,27 @@ bodyClass: toy
 ---
 
 <article class="toy-page">
-  <h1>{{ title }}</h1>
-
-  <div class="toy-player">
-    {% set toySize = 256 %}
-    {% set toyTitle = title %}
-    {% include "toy-player.njk" %}
+  <div class="toy-profile">
+    <div class="toy-player">
+      {% set toySize = 256 %}
+      {% set toyTitle = title %}
+      {% include "toy-player.njk" %}
+    </div>
+    <h1>{{ title }}</h1>
+    <div class="toy-type">
+      {% if type == "pico8" %}
+        PICO-8
+      {% elif type == "p5js" %}
+        p5.js
+      {% else %}
+        <em>unknown</em>
+      {% endif %}
+    </div>
+    <div class="toy-description">
+      {{ description | safe }}
+    </div>
   </div>
 
   {{ content | safe }}
 
-  {% include "content-meta.njk" %}
 </article>
