@@ -2,7 +2,9 @@
 {% set isDatedContent = bodyClass == "writing" or bodyClass == "note" %}
 {% set hasCrossposts = crossposts and crossposts.length %}
 {% set hasRelatedContent = relatedSource and relatedSource.related.length %}
-{% if isDatedContent or hasCrossposts or hasRelatedContent %}
+{% set knownTopics = topics | filterKnownTopics(collections.topics) %}
+{% set hasKnownTopics = knownTopics.length %}
+{% if isDatedContent or hasCrossposts or hasRelatedContent or hasKnownTopics %}
 <div class="content-meta">
   <div>
     {% if isDatedContent %}
@@ -32,6 +34,22 @@
       {% endfor %}
       </ul>
     </section>
+    {% endif %}
+
+    {% if hasKnownTopics %}
+      {% if isDatedContent or hasRelatedContent %}
+      <hr class="content-meta-separator">
+      {% endif %}
+      <section class="content-topics">
+        Topics:
+        <ul>
+        {% for topic in collections.topics %}
+          {% if topic.data.topicSlug in knownTopics %}
+          <li><a href="{{ topic.url }}">{{ topic.data.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      </section>
     {% endif %}
   </div>
 </div>

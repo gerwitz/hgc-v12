@@ -1,0 +1,19 @@
+---
+title: All topics
+layout: index
+override:tags: []
+eleventyExcludeFromCollections: true
+---
+
+<ul>
+{% for topic in collections.allTopics %}
+  <li>
+    {% if topic.url %}
+    <a href="{{ topic.url }}">{{ topic.title }}</a>
+    {% else %}
+    {{ topic.title }}
+    {% endif %}
+    ({{ topic.count }})
+  </li>
+{% endfor %}
+</ul>

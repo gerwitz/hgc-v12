@@ -1,6 +1,7 @@
 export { cssmin } from "./cssmin.js";
 export { date } from "./date.js";
 export { filterByCategories } from "./filterbycategories.js";
+export { filterByTopics, filterKnownTopics } from "./filterbytopics.js";
 export { hostname } from "./hostname.js";
 export { json } from "./json.js";
 export { limit } from "./limit.js";

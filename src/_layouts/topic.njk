@@ -1,0 +1,21 @@
+---
+layout: base
+bodyClass: topic
+---
+
+<article>
+  <h1>{{ title }}</h1>
+
+  {{ content | safe }}
+
+  {% set pages = collections.topicContent | filterByTopics([topicSlug]) %}
+  <h2>Content</h2>
+  <ul>
+  {% for item in pages %}
+    <li>
+      <a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a>
+      {% if item.topicDate %}({{ item.topicDate | date("MMMM Do, YYYY") }}){% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</article>
