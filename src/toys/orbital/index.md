@@ -9,4 +9,4 @@ In my [computer lab job](/logs/events/1994-slu-cis/) I often left a Mac running 
 
 I've tried many times to find that original screensaver, to no avail. I once recreated it faithfully (to my memory) in Processing, but lost that code. So when I wanted to learn PICO-8, it was an obvious exercise, and when I posted it [on the BBS](https://www.lexaloffle.com/bbs/?tid=55142) it was gratifying to find others also entranced.
 
-It looks high-resolution thanks to a rather clever antialiasing technice from [Felice Enellen](https://bsky.app/profile/feliceenellen.bsky.social).
+It looks higher-resolution thanks to a rather clever antialiasing technique from [Felice Enellen](https://bsky.app/profile/feliceenellen.bsky.social).
