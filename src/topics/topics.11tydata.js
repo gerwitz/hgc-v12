@@ -7,8 +7,8 @@ export default {
         return ["topics"];
       }
 
-      return ["topics", data.page.fileSlug];
+      return ["topics", data.topicEntry?.slug || data.page.fileSlug];
     },
-    topicSlug: (data) => data.page.fileSlug,
+    topicSlug: (data) => data.topicEntry?.slug || data.page.fileSlug,
   },
 };

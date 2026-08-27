@@ -8,9 +8,8 @@ const getTopicDate = (item) => {
   return hasExplicitDate(item) ? item.date : null;
 };
 
-export const topicContent = (collection) => {
-  return collection
-    .getAll()
+export const getTopicContent = (items) => {
+  return items
     .filter(isContent)
     .filter((item) => Array.isArray(item.data.topics) && item.data.topics.length)
     .map((item) => {
@@ -32,4 +31,8 @@ export const topicContent = (collection) => {
 
       return (first.data.title || first.fileSlug).localeCompare(second.data.title || second.fileSlug);
     });
+};
+
+export const topicContent = (collection) => {
+  return getTopicContent(collection.getAll());
 };

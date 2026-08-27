@@ -7,13 +7,6 @@ eleventyExcludeFromCollections: true
 
 <ul>
 {% for topic in collections.allTopics %}
-  <li>
-    {% if topic.url %}
-    <a href="{{ topic.url }}">{{ topic.title }}</a>
-    {% else %}
-    {{ topic.title }}
-    {% endif %}
-    ({{ topic.count }})
-  </li>
+  <li><a href="{{ topic.url }}">{{ topic.title }}</a> ({{ topic.count }})</li>
 {% endfor %}
 </ul>

@@ -61,8 +61,16 @@ export const allTopics = (collection) => {
         count: counts.get(slug) || 0,
         slug,
         title: topic?.data.title || slug,
-        url: topic?.url,
+        url: topic?.url || `/topics/${slug}/`,
       };
     })
     .sort(sortTopics);
+};
+
+export const unknownTopics = (collection) => {
+  const knownTopicSlugs = new Set(
+    getKnownTopicPages(collection).map((topic) => getTopicSlug(topic)),
+  );
+
+  return allTopics(collection).filter((topic) => !knownTopicSlugs.has(topic.slug));
 };

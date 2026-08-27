@@ -4,7 +4,7 @@ export { microblog } from "./microblog.js";
 export { posts } from "./posts.js";
 export { toys } from "./toys.js";
 export { topicContent } from "./topicContent.js";
-export { allTopics, knownTopics } from "./topics.js";
+export { allTopics, knownTopics, unknownTopics } from "./topics.js";
 export { weeklyEvents } from "./weeklyEvents.js";
 export { weeklyNotes } from "./weeklyNotes.js";
 export { weeklyWriting } from "./weeklyWriting.js";

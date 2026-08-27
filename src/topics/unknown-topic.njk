@@ -1,0 +1,12 @@
+---
+pagination:
+  data: collections.unknownTopics
+  size: 1
+  alias: topicEntry
+layout: topic
+override:tags: []
+eleventyExcludeFromCollections: true
+permalink: /topics/{{ topicEntry.slug }}/
+eleventyComputed:
+  title: "{{ topicEntry.title }}"
+---

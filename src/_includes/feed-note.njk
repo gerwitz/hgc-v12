@@ -1,6 +1,6 @@
 <div class="feed-item note">
   <div class="meta">
-    <a href="{{ item.url }}">{{ item.date | date('MMMM Do, YYYY') }}</a>
+    <a href="{{ item.url }}">{{ item.data.title }}</a>
   </div>
   <div class="note-content">
     {{ item.content | safe }}
