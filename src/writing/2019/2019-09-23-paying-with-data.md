@@ -10,7 +10,7 @@ topics:
 ---
 
 > Even if companies are transparent with their data policies, most people don’t bother reading them, especially when they’re in the middle of a mental health crisis.
-> - [Dana G Smith for STAT](https://www.statnews.com/2019/09/20/mental-health-apps-capture-sensitive-data/)
+> -- [Dana G Smith for STAT](https://www.statnews.com/2019/09/20/mental-health-apps-capture-sensitive-data/)
 
 It is not enough to declare your intended use of personal data in a EULA. Even if you've translated your terms and conditions into human-readable language.
 

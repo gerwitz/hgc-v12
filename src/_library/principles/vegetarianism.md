@@ -5,7 +5,7 @@ title: Vegetarianism
 ---
 
 > making the transition to a plant-based diet may be the most effective way an individual can stop climate change
-> - [Project Drawdown](https://www.drawdown.org/solutions/food/plant-rich-diet)
+> -- [Project Drawdown](https://www.drawdown.org/solutions/food/plant-rich-diet)
 
 In 1998, I gave up meat on accident.
 

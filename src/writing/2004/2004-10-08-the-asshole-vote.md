@@ -9,7 +9,7 @@ topics:
 
 > The best way to defend America is to stay on the offensive.
 >
-> - [George W. Bush, 2004 St. Louis debate][1]
+> -- [George W. Bush, 2004 St. Louis debate][1]
 
    [1]: http://www.debates.org/pages/trans2004a.html
 

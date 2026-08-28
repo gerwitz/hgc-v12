@@ -12,7 +12,7 @@ crossposts:
 ---
 
 > Your role in a company isn’t to just be the designer of products; Your role is to be a designer of that company, to help it become the company that has the ability to make the products you aspire to make.
-> - Mike Kruzeniski, [Jony’s Patience](https://medium.com/@mkruz/jony-s-patience-670d5a3dc128), 20 March 2015
+> -- Mike Kruzeniski, [Jony’s Patience](https://medium.com/@mkruz/jony-s-patience-670d5a3dc128), 20 March 2015
 
 This advice from Mike Kruzeniski ought to be heeded by agencies, as well. You may have a contract that only scopes the design/development of a specific product, but taking on this role comes with some obligation, in the moral sense, to help your client learn from the experience.
 

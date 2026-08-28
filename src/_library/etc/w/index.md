@@ -26,7 +26,7 @@ See also [George's resume][4], [100 Facts and 1 Opinion][5].
   * deficit, deficit, deficit
 
 > In one term, he has wiped away one of the Republican Party's most appealing characteristics--its concern for fiscal discipline
-> - [Elaine Kamarck][7]
+> -- [Elaine Kamarck][7]
 
    [7]: http://www.washingtonmonthly.com/features/2004/0409.kamarck.html
 
@@ -40,7 +40,7 @@ See also [George's resume][4], [100 Facts and 1 Opinion][5].
 > - **49** Percentage of Americans in April 2004 who found that their taxes had actually gone up since Bush took office.
 > ...
 > - **$30,858** Amount Bush himself saved in taxes in 2003.
-> – [The Independent][independent]
+> -- [The Independent][independent]
 
 [independent]: http://news.independent.co.uk/world/americas/story.jsp?story=557746
 
@@ -83,7 +83,7 @@ See also [George's resume][4], [100 Facts and 1 Opinion][5].
 ### manipulation of public sympathy to support preconceived actions
 
 > Of course the people don't want war. But after all, it's the leaders of the country who determine the policy, and it's always a simple matter to drag the people along whether it's a democracy, a fascist dictatorship, or a parliament, or a communist dictatorship. Voice or no voice, the people can always be brought to the bidding of the leaders. That is easy. All you have to do is tell them they are being attacked, and denounce the pacifists for lack of patriotism, and exposing the country to greater danger.
-> – [Hermann Goering - Nazi Reichsmarshall,  Luftwaffe-Chief][16]
+> -- [Hermann Goering - Nazi Reichsmarshall,  Luftwaffe-Chief][16]
 
    [16]: http://www.snopes.com/quotes/goering.htm
 
@@ -95,7 +95,7 @@ See also [George's resume][4], [100 Facts and 1 Opinion][5].
 > - **83** Number of times Bush mentioned Saddam, Iraq, or regime (as in change) in his three State of the Union addresses.
 > ...
 > - **0** Number of memorial services for the returned dead that Bush has attended since the beginning of the war.
-> – [The Independent][independent]
+> -- [The Independent][independent]
 
 ### squandering of natural resources
 
@@ -104,13 +104,13 @@ See also [George's resume][4], [100 Facts and 1 Opinion][5].
 > - **50** Percentage decline in civil penalties for environmental crimes since Bush took office.
 > - **$6.1m** Amount the EPA historically valued each human life when conducting economic analyses of proposed regulations.
 > - **$3.7m** Amount the EPA valued each human life when conducting analyses of proposed regulations during the Bush administration.
-> – [The Independent][independent]
+> -- [The Independent][independent]
 
 ### MIA
 
 > - **28** Number of vacation days Bush took in August 2001, the month he received a 6 August Presidential Daily Briefing headed "Osama bin Laden Determined to Strike US Targets."
 > - **500** Number of days Bush has spent all or part of his time away from the White House at his ranch in Crawford, Texas, his parents' retreat in Kennebunkport, Maine, or Camp David as of 1 April 2004.
-> – [The Independent][independent]
+> -- [The Independent][independent]
 
 ### single party dominance
 

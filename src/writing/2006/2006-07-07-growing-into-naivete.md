@@ -14,7 +14,7 @@ topics:
    [1]: http://www.ngcrc.com/
 
 > "In order to understand any subculture, be it al Qaeda, witches, devil worshippers or gangs, you have to be able to know their own language," Knox said.
-> - Associated Press, [Street gangs get Web-savvy][2]
+> -- Associated Press, [Street gangs get Web-savvy][2]
 
 During [high school][3], I knew a good number of witches, mostly adherents of "eclectic" [Wicca][4], [oft-misunderstood][5] as evil merely for not being Christian.  Of course, they were actually the most harmless and loving teenagers you could hope to find, but we did wear a lot of black, and could sometimes even be found engaging in small rituals honoring nature, without a copy of the Bible in sight to lend legitimacy.
 

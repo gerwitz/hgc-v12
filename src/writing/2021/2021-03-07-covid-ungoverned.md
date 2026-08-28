@@ -10,7 +10,7 @@ topics:
 
 > We zijn geen kinderspeeltuin, ik wil niet de baas spelen hier.
 > [We are not a children’s playground, I do not want to play boss here.]
-> – Prime Minister Mark Rutte, [8 May 2020](https://nos.nl/l/2333233)
+> -- Prime Minister Mark Rutte, [8 May 2020](https://nos.nl/l/2333233)
 
 The Dutch are very libertine and so is their government. It is difficult, both culturally and procedurally, to limit people’s freedom. A core rationale for this is that the public can be trusted to _doe normaal_ and behave responsibly.
 
