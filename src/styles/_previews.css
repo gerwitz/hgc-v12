@@ -1,4 +1,20 @@
 /* Shared presentation for compact, metadata, and summary previews. */
+.preview-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.25em;
+  vertical-align: -0.125em;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+
+.preview-large .preview-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .preview > * {
   float: none;
   clear: none;

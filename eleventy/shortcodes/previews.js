@@ -22,8 +22,44 @@ const getPreviewItem = (context, itemOrUrl, shortcodeName) => {
   return itemOrUrl;
 };
 
+const WRITING_ICON_NAMES = new Set(["work", "culture", "personal"]);
+
+const getPreviewIconName = (item) => {
+  const tags = Array.isArray(item.data.tags) ? item.data.tags : [];
+
+  if (tags.includes("notes"))
+  {
+    return "note";
+  }
+
+  if (tags.includes("logs"))
+  {
+    return "log";
+  }
+
+  if (tags.includes("projects"))
+  {
+    return "project";
+  }
+
+  if (tags.includes("lists"))
+  {
+    return "list";
+  }
+
+  if (tags.includes("writing"))
+  {
+    const categories = Array.isArray(item.data.categories) ? item.data.categories : [];
+    return categories.find((category) => WRITING_ICON_NAMES.has(category)) || "other";
+  }
+
+  return "other";
+};
+
 const renderPreview = function(templateName, itemOrUrl, shortcodeName) {
   const item = getPreviewItem(this, itemOrUrl, shortcodeName);
+
+  item.data.previewIconName = getPreviewIconName(item);
 
   return this.env.render(templateName, {
     ...this.ctx,

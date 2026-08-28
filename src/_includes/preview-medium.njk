@@ -1,6 +1,7 @@
 {% set previewTitle = item.data.title or item.fileSlug %}
+{# Keep this icon markup in sync with the icon mapping in eleventy/shortcodes/previews.js. #}
 <article class="preview preview-medium">
-  <h3><a href="{{ item.url }}">{{ previewTitle }}</a></h3>
+  <h3><img class="preview-icon" src="/styles/icons/{{ item.data.previewIconName or 'other' }}.png" alt="" aria-hidden="true"><a href="{{ item.url }}">{{ previewTitle }}</a></h3>
   {% if item.data.contentDate or item.data.wordCount %}
   <p class="preview-meta">
     {% if item.data.contentDate %}

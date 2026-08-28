@@ -1,6 +1,8 @@
 ---
 title: Styles Proofsheet
 layout: page
+topics:
+- design
 eleventyExcludeFromCollections: true
 ---
 
@@ -44,6 +46,29 @@ eleventyExcludeFromCollections: true
 
 <h3>Heading 3</h3>
 
-<p>Duis nec pulvinar libero. Pellentesque sed finibus nisi, sit amet ornare eros. Vestibulum non dolor tortor. Nulla semper dolor eu consequat molestie. Curabitur posuere risus est, eget luctus orci porta et. Sed mollis libero sapien, vel tristique justo facilisis eu. In pharetra pretium ipsum, sit amet finibus sem ultricies vel. Nunc facilisis aliquet convallis. Integer aliquet dictum ante vel egestas.</p>
+<p>Duis nec pulvinar libero. Pellentesque sed finibus nisi, sit amet ornare eros. Vestibulum non dolor tortor. Nulla semper dolor eu consequat molestie. Curabitur posuere risus est, eget luctus orci, fringilla porta justo. Pellentesque viverra justo nibh. Vestibulum vitae molestie diam. Aenean sagittis eros vitae condimentum bibendum.</p>
 
-{% include "content-meta.njk" %}
+<h2>Icons</h2>
+<ul>
+  <li><img class="preview-icon" src="/styles/icons/note.png" alt="">Notes</li>
+  <li><img class="preview-icon" src="/styles/icons/log.png" alt="">Logs</li>
+  <li><img class="preview-icon" src="/styles/icons/project.png" alt="">Projects</li>
+  <li><img class="preview-icon" src="/styles/icons/list.png" alt="">Lists</li>
+  <li><img class="preview-icon" src="/styles/icons/other.png" alt="">Other</li>
+  <li><img class="preview-icon" src="/styles/icons/work.png" alt="">Writing: work</li>
+  <li><img class="preview-icon" src="/styles/icons/culture.png" alt="">Writing: culture</li>
+  <li><img class="preview-icon" src="/styles/icons/personal.png" alt="">Writing: personal</li>
+</ul>
+
+<h2>Previews</h2>
+
+<h3>Small preview</h3>
+{% previewSmall "/2025/08/18/nielsen.html" %}
+
+<h3>Medium preview</h3>
+{% previewMedium "/projects/hexmap/" %}
+
+<h3>Large preview</h3>
+{% previewLarge "/2025/04/21/filetypes.html" %}
+
+<h2>Content metadata</h2>

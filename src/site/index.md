@@ -25,15 +25,19 @@ Some posts are added to the repo with [Micropub](https://micropub.net/) via an i
 
 ## Surveillance
 
-This site is hosted by Netlify, who serves it to you via CloudFlare's CDN. By [their privacy policy](https://www.cloudflare.com/en-gb/privacypolicy/) they serve as a GDPR data processor. You can read [how they preserve your privacy](https://blog.cloudflare.com/privacy-first-web-analytics/#what-does-privacy-first-mean).
+This site is served via a VPS (virtual private server) on Hetzner, from their Helsinki data center. I trust they are not intercepting traffic or compromising the container I run inside that VPS.
 
-Since March 2025, I'm using [hits.sh](https://hits.sh) to add a counter at the bottom of each page. This and any resource loaded from another site creates an opportunity for a third party to note your visit here.[^itp]  If you use search, the Lunr script is loaded from [unpkg](https://unpkg.com/). [Lunr](https://lunrjs.com/) is open source and has no reason to log activity. Still, the requests to unpkg.com present a "leak surface" so are worth disclosing.
+I no longer use Cloudflare as a CDN because I don't like how much of a monopoly they're forming, and there isn't enough traffic to worry anyway.
+
+If you use search, the Lunr script is loaded from [unpkg](https://unpkg.com/). [Lunr](https://lunrjs.com/) is open source and has no reason to log activity. Still, the requests to unpkg.com present a "leak surface" so are worth disclosing.[^itp]
 
 [^itp]: Your exposure depends on how [privacy-mature](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) your browser is, of course.
 
+That's it! I don't have any analytics "pixels" or drop cookies or whatever.
+
 ## Rights
 
-All original work on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">hans.gerwitz.com</span> is licensed by <a xmlns:cc="http://creativecommons.org/ns#" href="https://hans.gerwitz.com/" property="cc:attributionName" rel="cc:attributionURL">Hans Gerwitz</a> under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+All original work on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">hans.gerwitz.com</span> is copyrighted by me, <a xmlns:cc="http://creativecommons.org/ns#" href="https://hans.gerwitz.com/" property="cc:attributionName" rel="cc:attributionURL">Hans Gerwitz</a>, and licensed by  under the <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 ## &c
 

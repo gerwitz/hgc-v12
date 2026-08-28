@@ -275,7 +275,6 @@ body.root .search-form button {
 
   .fineprint {
     padding-right: var(--footer-panel-padding);
-    text-align: right;
 
     outline: var(--outline-width) solid var(--text-color); /* outer border */
     background-color: var(--dark-page-color);
@@ -471,4 +470,10 @@ body.root .search-form button {
   clear: both;
   margin-top: 18px;
   font-size: small;
+  .copyright {
+    float: left;
+  }
+  .copyleft {
+    text-align: right;
+  }
 }
