@@ -468,12 +468,20 @@ body.root .search-form button {
 
 .main-footer .fineprint {
   clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1rem;
   margin-top: 18px;
   font-size: small;
-  .copyright {
-    float: left;
-  }
+
+  .copyright,
   .copyleft {
+    white-space: nowrap;
+  }
+
+  .copyleft {
+    margin-left: auto;
     text-align: right;
   }
 }
