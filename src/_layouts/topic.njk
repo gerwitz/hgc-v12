@@ -13,8 +13,7 @@ bodyClass: topic
   <ul>
   {% for item in pages %}
     <li>
-      <a href="{{ item.url }}">{{ item.data.title or item.fileSlug }}</a>
-      {% if item.topicDate %}({{ item.topicDate | date("MMMM Do, YYYY") }}){% endif %}
+      {% previewMedium item %}
     </li>
   {% endfor %}
   </ul>

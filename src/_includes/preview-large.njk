@@ -2,12 +2,12 @@
 {% set previewSummary = item.data.preview.summary or item.data.abstract or item.data.description or item.data.subtitle %}
 <article class="preview preview-large">
   <h3><a href="{{ item.url }}">{{ previewTitle }}</a></h3>
-  {% if item.data.date or item.data.wordCount %}
+  {% if item.data.contentDate or item.data.wordCount %}
   <p class="preview-meta">
-    {% if item.data.date %}
-    <time datetime="{{ item.data.date | date('iso8601') }}">{{ item.data.date | date('MMMM Do, YYYY') }}</time>
+    {% if item.data.contentDate %}
+    <time datetime="{{ item.data.contentDate | date('iso8601') }}">{{ item.data.contentDate | date('MMMM Do, YYYY') }}</time>
     {% endif %}
-    {% if item.data.date and item.data.wordCount %} · {% endif %}
+    {% if item.data.contentDate and item.data.wordCount %} · {% endif %}
     {% if item.data.wordCount %}{{ item.data.wordCount }} words{% endif %}
   </p>
   {% endif %}

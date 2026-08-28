@@ -14,6 +14,7 @@ const MEDIA_PATH_PREFIX = "/media/";
 const MEDIA_ORIGIN = process.env.MEDIA_ORIGIN;
 const NBSP_MIN_WORDS = 2;
 const NBSP_MAX_LENGTH = 12;
+const DATED_CONTENT_PATH = /\/\d{4}-\d{2}-\d{2}-/;
 
 export default function configure(eleventyConfig) {
   eleventyConfig.setQuietMode(true);
@@ -55,6 +56,20 @@ export default function configure(eleventyConfig) {
 
   eleventyConfig.addGlobalData("generated", () => {
     return new Date();
+  });
+
+  // Expose dates that are intentional content metadata, not filesystem defaults.
+  eleventyConfig.addGlobalData("eleventyComputed.contentDate", () => {
+    return (data) => {
+      const hasFrontMatterDate = Boolean(data.date);
+      const hasDateInFilename = DATED_CONTENT_PATH.test(data.page.inputPath);
+
+      if (!hasFrontMatterDate && !hasDateInFilename) {
+        return null;
+      }
+
+      return data.page.date;
+    };
   });
 
   return {
