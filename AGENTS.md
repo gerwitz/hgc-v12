@@ -11,7 +11,7 @@ npm run build   # single build to /_site
 
 ## Browser testing
 
-Use Eleventy’s development server (`npm start`) for browser-based checks. Open the site at `http://localhost:8080/` rather than loading generated files through `file://`, because the output uses root-relative asset URLs such as `/css/...`.
+Use Eleventy’s development server (`npm start`) for browser-based checks. Open the site at `http://localhost:8080/` rather than loading generated files through `file://`, because the output uses root-relative asset URLs such as `/styles/...`.
 
 ## Architecture
 

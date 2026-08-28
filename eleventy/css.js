@@ -79,7 +79,7 @@ async function buildCssBundles({ cssRoot, outputDir, generateSourceMaps })
   {
     const parsed = path.parse(inputPath);
     const relativeDirectory = toPosixPath(path.relative(cssRoot, parsed.dir));
-    const outputDirectory = relativeDirectory ? `css/${relativeDirectory}` : "css";
+    const outputDirectory = relativeDirectory ? `styles/${relativeDirectory}` : "styles";
     const outputDirectoryOnDisk = path.join(outputDir, outputDirectory);
 
     try
@@ -121,7 +121,7 @@ async function buildCssBundles({ cssRoot, outputDir, generateSourceMaps })
         fs.writeFileSync(`${fullOutputPath}.map`, map);
       }
 
-      const manifestKey = `css/${relativeDirectory ? `${relativeDirectory}/` : ""}${parsed.base}`;
+      const manifestKey = `styles/${relativeDirectory ? `${relativeDirectory}/` : ""}${parsed.base}`;
       manifest.set(`/${toPosixPath(manifestKey)}`, `/${toPosixPath(outputPathRelative)}`);
     }
     catch (error)
@@ -134,10 +134,10 @@ async function buildCssBundles({ cssRoot, outputDir, generateSourceMaps })
 export default function cssPlugin(eleventyConfig, options = {})
 {
   const { inputDir = "src", outputDir = "_site" } = options;
-  const cssRoot = path.join(process.cwd(), inputDir, "css");
+  const cssRoot = path.join(process.cwd(), inputDir, "styles");
   const generateSourceMaps = process.env.ELEVENTY_ENV !== "production";
 
-  eleventyConfig.addWatchTarget(`./${inputDir}/css/**/*.css`);
+  eleventyConfig.addWatchTarget(`./${inputDir}/styles/**/*.css`);
 
   eleventyConfig.on("eleventy.before", async () =>
   {
@@ -147,7 +147,7 @@ export default function cssPlugin(eleventyConfig, options = {})
   eleventyConfig.addGlobalData("assetPaths", () =>
   {
     return {
-      css: Object.fromEntries(manifest),
+      styles: Object.fromEntries(manifest),
     };
   });
 }
