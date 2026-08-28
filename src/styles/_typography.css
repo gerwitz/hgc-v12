@@ -71,26 +71,27 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: calc(3.5rem * var(--heading-scale, 1));
-  line-height: calc(4rem * var(--heading-leading, 1));
+  font-size: calc(1.953125rem * var(--heading-scale, 1));
+  line-height: calc(2.34375rem * var(--heading-leading, 1));
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: calc(1.6875rem * var(--heading-scale, 1));
-  line-height: calc(2.4rem * var(--heading-leading, 1));
+  font-size: calc(1.5625rem * var(--heading-scale, 1));
+  line-height: calc(1.875rem * var(--heading-leading, 1));
   margin-top: 1rem;
   margin-bottom: .8rem;
 }
 
 h3 {
-  font-size: calc(1.3rem * var(--heading-scale, 1));
-  line-height: var(--heading-leading, normal);
+  font-size: calc(1.25rem * var(--heading-scale, 1));
+  line-height: calc(1.5rem * var(--heading-leading, 1));
 }
 
 h4 {
-  line-height: var(--heading-leading, normal);
+  font-size: calc(1rem * var(--heading-scale, 1));
+  line-height: calc(1.25rem * var(--heading-leading, 1));
 }
 
 .main-header .breadcrumb,
