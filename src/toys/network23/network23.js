@@ -4,7 +4,7 @@
   // Painted at half the 128px screen and upscaled by the embed's pixelated rendering, so each
   // speck of snow is a chunky 2x2 block rather than a single CSS pixel.
   const RESOLUTION = 64;
-  const FRAME_INTERVAL = 1000 / 24;
+  const FRAME_INTERVAL = 1000 / 10;
 
   const root = window.toy && window.toy.element;
 
