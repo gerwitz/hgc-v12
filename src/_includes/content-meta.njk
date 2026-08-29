@@ -1,14 +1,15 @@
+{# Keep src/site/styles.njk's content metadata sample in sync with this template and test the proofsheet after changes. #}
 {% set relatedSource = related.sources[page.url] %}
 {% set isDatedContent = bodyClass == "writing" or bodyClass == "note" %}
 {% set hasCrossposts = crossposts and crossposts.length %}
 {% set hasRelatedContent = relatedSource and relatedSource.related.length %}
 {% set knownTopics = topics | filterKnownTopics(collections.topics) %}
 {% set hasKnownTopics = knownTopics.length %}
-{% if isDatedContent or hasCrossposts or hasRelatedContent or hasKnownTopics %}
+{% if isDatedContent or hasRelatedContent %}
 <div class="content-meta">
   <div>
     {% if isDatedContent %}
-    Posted during {{ page.date | weeklink | safe }} ({{ page.date | date("MMMM YYYY") }})
+    Posted{% if hasKnownTopics %} to {% for topicSlug in knownTopics %}{% if not loop.first %}{% if loop.last and knownTopics.length > 2 %}, {% endif %}{% if loop.last %}and {% else %}, {% endif %}{% endif %}{% for topic in collections.topics %}{% if topic.data.topicSlug == topicSlug %}<a href="{{ topic.url }}">{{ topic.data.title }}</a>{% endif %}{% endfor %}{% endfor %}{% endif %} during {{ page.date | weeklink | safe }} ({{ page.date | date("MMMM YYYY") }})
     {%- if hasCrossposts -%}
       , also on:
       <ul>
@@ -36,21 +37,6 @@
     </section>
     {% endif %}
 
-    {% if hasKnownTopics %}
-      {% if isDatedContent or hasRelatedContent %}
-      <hr class="content-meta-separator">
-      {% endif %}
-      <section class="content-topics">
-        Topics:
-        <ul>
-        {% for topic in collections.topics %}
-          {% if topic.data.topicSlug in knownTopics %}
-          <li><a href="{{ topic.url }}">{{ topic.data.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-        </ul>
-      </section>
-    {% endif %}
   </div>
 </div>
 {% endif %}
