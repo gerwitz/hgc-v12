@@ -264,6 +264,8 @@ body.root .search-form button {
 }
 
 .main-footer {
+  container-type: inline-size;
+
   .footer-topnav, .sitemap {
     /*box-sizing: border-box;*/
 
@@ -287,6 +289,7 @@ body.root .search-form button {
 }
 
 .main-footer .footer-topnav {
+  position: relative;
   padding-left: 0;
   padding-right: 0;
 
@@ -326,6 +329,27 @@ body.root .search-form button {
   position: relative;
   right: auto;
   bottom: auto;
+
+  input {
+    color: var(--text-color);
+
+    &:focus {
+      background-color: var(--page-color);
+    }
+  }
+}
+
+@container (max-width: 410px) {
+  .main-footer .footer-topnav form {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    z-index: 1;
+  }
+
+  .main-footer .footer-topnav .homelink + form {
+    margin-left: 0;
+  }
 }
 
 .main-footer .footer-content {
