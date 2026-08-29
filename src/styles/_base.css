@@ -397,6 +397,8 @@ body.root .search-form button {
   background-color: var(--text-color);
   font-size: 0;
   line-height: 0;
+  /* A toy is played with in place, never navigated to. */
+  cursor: default;
 }
 
 .main-footer .toy-embed {

@@ -40,6 +40,7 @@ body.toys-index .main > .content {
 .toy-card:hover .toy-card-name,
 .toy-card:focus-within .toy-card-name {
   background-color: var(--highlight-color);
+  border-top-color: var(--highlight-color);
 }
 
 .toy-card .toy-screen {

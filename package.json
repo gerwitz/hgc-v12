@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "eleventy",
+    "test": "node --test test/*.test.js",
     "start": "eleventy --serve",
     "generate:maps": "eleventy --quiet",
     "related": "node --env-file-if-exists=.env eleventy/related-content.js",

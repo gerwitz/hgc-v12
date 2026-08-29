@@ -59,6 +59,14 @@
 <script>
   window.addEventListener("DOMContentLoaded", () => {
     const footerToy = document.querySelector("[data-footer-toy]");
+    {% if page.url == "/toys/" %}
+    // The index tunes to a channel that has no profile page of its own.
+    const toy = {
+      title: "Network 23",
+      caption: "NO CARRIER",
+      embed: "/toys/embed/?type=vanilla&script=/toys/network23/network23.js",
+    };
+    {% else %}
     const availableToys = [
     {% for toy in collections.toys %}
       {% if toy.url != page.url %}
@@ -72,28 +80,37 @@
     {% endfor %}
     ];
 
-    if (!footerToy || !availableToys.length) {
+    const toy = availableToys[Math.floor(Math.random() * availableToys.length)];
+    {% endif %}
+
+    if (!footerToy || !toy) {
       return;
     }
 
-    const toy = availableToys[Math.floor(Math.random() * availableToys.length)];
     const screen = document.createElement("div");
     const embed = document.createElement("iframe");
     const name = document.createElement("div");
-    const toysLink = document.createElement("a");
-    const toyLink = document.createElement("a");
 
     screen.className = "toy-screen";
     embed.className = "toy-embed";
     embed.src = `${toy.embed}&size=128`;
     embed.title = `${toy.title}`;
     name.className = "toy-name";
-    toysLink.href = "/toys/";
-    toysLink.textContent = "/toys";
-    toyLink.href = toy.url;
-    toyLink.textContent = `/${toy.slug}`;
 
-    name.append(toysLink, toyLink);
+    if (toy.caption) {
+      name.textContent = toy.caption;
+    } else {
+      const toysLink = document.createElement("a");
+      const toyLink = document.createElement("a");
+
+      toysLink.href = "/toys/";
+      toysLink.textContent = "/toys";
+      toyLink.href = toy.url;
+      toyLink.textContent = `/${toy.slug}`;
+
+      name.append(toysLink, toyLink);
+    }
+
     screen.append(embed);
     footerToy.append(screen, name);
   }, { once: true });
