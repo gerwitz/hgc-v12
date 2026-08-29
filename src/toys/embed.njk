@@ -41,6 +41,10 @@ eleventyExcludeFromCollections: true
         script.src = scriptPath;
 
         if (type === "pico8") {
+          // PICO-8 gracefully skips audio initialization when Web Audio is unavailable.
+          window.AudioContext = undefined;
+          window.webkitAudioContext = undefined;
+
           const canvas = document.createElement("canvas");
           canvas.width = 128;
           canvas.height = 128;
