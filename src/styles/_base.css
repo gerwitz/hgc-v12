@@ -203,21 +203,20 @@ body.root .search-form input {
 
 .search-form button {
   position: absolute;
-  top: 2px;
+  top: 0;
   right: 0px;
-  height: 26px;
+  height: 100%;
   width: 26px;
   z-index: 10;
   border: none;
-  background: none;
+  /* 9px art at 2x, same black-on-alpha mask as .preview-icon. */
+  background-color: var(--text-color);
+  image-rendering: pixelated;
+  mask: url("/styles/icons/search.png") center / 18px 18px no-repeat;
 }
 
 body.root .search-form button {
   left: 6px;
-}
-
-.search-form button svg * {
-  stroke: var(--accent-color);
 }
 
 /* FOOTER */
@@ -276,6 +275,7 @@ body.root .search-form button {
   }
 
   .fineprint {
+    padding-left: var(--footer-panel-padding);
     padding-right: var(--footer-panel-padding);
 
     outline: var(--outline-width) solid var(--text-color); /* outer border */
