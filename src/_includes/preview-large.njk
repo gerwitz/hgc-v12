@@ -2,7 +2,7 @@
 {% set previewSummary = item.data.preview.summary or item.data.abstract or item.data.description or item.data.subtitle %}
 {# Keep this icon markup in sync with the icon mapping in eleventy/shortcodes/previews.js. #}
 <article class="preview preview-large">
-  <h3><img class="preview-icon" src="/styles/icons/{{ item.data.previewIconName or 'other' }}.png" alt="" aria-hidden="true"><a href="{{ item.url }}">{{ previewTitle }}</a></h3>
+  <h3><span class="preview-icon" aria-hidden="true" style="--preview-icon: url('/styles/icons/{{ item.data.previewIconName or 'other' }}.png')"></span><a href="{{ item.url }}">{{ previewTitle }}</a></h3>
   {% if item.data.contentDate or item.data.wordCount %}
   <p class="preview-meta">
     {% if item.data.contentDate %}

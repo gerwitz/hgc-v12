@@ -1,3 +1,3 @@
 {% set previewTitle = item.data.title or item.fileSlug %}
 {# Keep this icon markup in sync with the icon mapping in eleventy/shortcodes/previews.js. #}
-<a class="preview preview-small" href="{{ item.url }}"><img class="preview-icon" src="/styles/icons/{{ item.data.previewIconName or 'other' }}.png" alt="" aria-hidden="true">{{ previewTitle }}</a>
+<a class="preview preview-small" href="{{ item.url }}"><span class="preview-icon" aria-hidden="true" style="--preview-icon: url('/styles/icons/{{ item.data.previewIconName or 'other' }}.png')"></span>{{ previewTitle }}</a>
