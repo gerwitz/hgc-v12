@@ -95,21 +95,32 @@ body {
 }
 
 .main-header {
-  padding-top: 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding-top: var(--header-padding-top);
   padding-bottom: 3rem;
   font-size: 1rem;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
+/* Drop the inset the global link styles add, so each box measures exactly
+   the tree or the crumb text it holds. */
 .main-header .site-title,
-.main-header .breadcrumb {
-  display: inline-block;
-  bottom: 0;
+.main-header .breadcrumb > * {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
+.main-header .breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+}
 
-.main-header .site-title {
-  padding-top: 5px;
+.main-header .site-title svg {
+  display: block; /* no inline descender space under the tree */
 }
 
 .main-header .site-title svg * {
@@ -125,11 +136,16 @@ body {
   fill: var(--page-color);
 }
 
-.main-header .breadcrumb * {
-  border: none;
-  margin-left: 18px;
-  display: block;
-  float: left;
+/* The tree hangs in the dexter, 12px clear of the content column, so the
+   breadcrumb starts at the content edge. Any narrower and the dexter cannot
+   hold the tree with both of its margins, so it rejoins the pale:
+   758 (pale) + 32 (gutter) + 12 + 21 (tree at 32px tall) + 12 = 835. */
+@media (min-width: 835px) {
+  .main-header .site-title {
+    position: absolute;
+    top: var(--header-padding-top);
+    right: calc(100% + 12px);
+  }
 }
 
 .font-controls,
