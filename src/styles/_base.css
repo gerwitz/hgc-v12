@@ -213,14 +213,21 @@ body {
   }
 }
 
-body.root .search-form input {
-  padding: 0 10px 0 30px;
-  position: absolute;
-  top: 0;
-  left: 6;
-  z-index: 5;
+body.root {
+  header {
+    margin-top: 32px;
+    margin-bottom: 56px;
+  }
 
-  text-align: left;
+  .search-form input {
+    padding: 0 10px 0 30px;
+    position: absolute;
+    top: 0;
+    left: 6;
+    z-index: 5;
+
+    text-align: left;
+  }
 }
 
 .search-form button {

@@ -7,7 +7,7 @@ topics:
 - service
 - learning
 - business
-crossposts:
+syndication:
 - https://medium.com/@gerwitz/fc033a1752df
 ---
 

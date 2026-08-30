@@ -6,7 +6,7 @@ categories:
 topics:
 - gaming
 - time
-crossposts:
+syndication:
 - https://safelyignored.com/a-game-for-someone-else/
 ---
 

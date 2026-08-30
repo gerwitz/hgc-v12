@@ -8,7 +8,7 @@ topics:
 - web
 - standards
 - humor
-crossposts:
+syndication:
 - https://safelyignored.com/open-committee
 ---
 

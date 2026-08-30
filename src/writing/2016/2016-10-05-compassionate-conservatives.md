@@ -6,7 +6,7 @@ categories:
 topics:
 - trump
 - politics
-crossposts:
+syndication:
 - https://safelyignored.com/compassionate-conservatives
 ---
 

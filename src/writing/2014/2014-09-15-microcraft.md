@@ -7,7 +7,7 @@ topics:
 - gaming
 - business
 - microsoft
-crossposts:
+syndication:
 - https://theartificial.com/blog/2014/09/15/microcraft.html
 ---
 

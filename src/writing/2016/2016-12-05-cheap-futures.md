@@ -6,7 +6,7 @@ categories:
 topics:
 - futures
 - design
-crossposts:
+syndication:
 - https://safelyignored.com/cheap-futures
 ---
 

@@ -5,7 +5,7 @@ categories:
 topics:
 - design
 - canonical
-crossposts:
+syndication:
 - https://www.linkedin.com/posts/gerwitz_design-opensourcesoftware-activity-7062431456370778113-EQkN
 ---
 

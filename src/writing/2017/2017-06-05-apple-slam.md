@@ -7,7 +7,7 @@ topics:
 - tech
 - ar
 - apple
-crossposts:
+syndication:
 - https://safelyignored.com/apple-slam
 ---
 

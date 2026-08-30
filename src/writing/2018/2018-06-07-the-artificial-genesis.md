@@ -8,7 +8,7 @@ topics:
 - design
 - bauhaus
 - brand
-crossposts:
+syndication:
 - https://theartificial.com/blog/2018/06/07/the-artificial-genesis.html
 ---
 

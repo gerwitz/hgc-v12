@@ -7,7 +7,7 @@ topics:
 - data
 - environment
 - behavior
-crossposts:
+syndication:
 - https://safelyignored.com/data-shame
 ---
 

@@ -9,7 +9,7 @@ topics:
 - society
 - government
 - history
-crossposts:
+syndication:
 - httpss://medium.com/history-repeats/25d694a035ce
 ---
 

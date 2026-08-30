@@ -6,7 +6,7 @@ categories:
 topics:
 - history
 - science
-crossposts:
+syndication:
 - https://medium.com/history-repeats/7ee3bcf10e4c
 ---
 

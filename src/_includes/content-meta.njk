@@ -1,7 +1,7 @@
 {# Keep src/site/styles.njk's content metadata sample in sync with this template and test the proofsheet after changes. #}
 {% set relatedSource = related.sources[page.url] %}
 {% set isDatedContent = bodyClass == "writing" or bodyClass == "note" %}
-{% set hasCrossposts = crossposts and crossposts.length %}
+{% set hasCrossposts = syndication and syndication.length %}
 {% set hasRelatedContent = relatedSource and relatedSource.related.length %}
 {% set knownTopics = topics | filterKnownTopics(collections.topics) %}
 {% set hasKnownTopics = knownTopics.length %}
@@ -13,7 +13,7 @@
     {%- if hasCrossposts -%}
       , also on:
       <ul>
-        {% for target in crossposts -%}
+        {% for target in syndication -%}
           <li><a href="{{ target }}">{{ target | hostname }}</a></li>
         {%- endfor %}
       </ul>

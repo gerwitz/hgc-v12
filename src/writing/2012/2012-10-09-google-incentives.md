@@ -9,7 +9,7 @@ topics:
 - advertising
 - government
 - google
-crossposts:
+syndication:
 - https://safelyignored.com/google-incentives
 ---
 

@@ -8,7 +8,7 @@ topics:
 - race
 - christmas
 - amsterdam
-crossposts:
+syndication:
 - https://medium.com/p/9be771434f1e
 ---
 

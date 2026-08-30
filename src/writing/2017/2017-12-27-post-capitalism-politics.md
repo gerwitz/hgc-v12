@@ -7,7 +7,7 @@ topics:
 - politics
 - capitalism
 - socialism
-crossposts:
+syndication:
 - https://medium.com/@gerwitz/post-capitalism-politics-7ee8dbe09a90
 ---
 

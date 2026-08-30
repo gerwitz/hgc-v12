@@ -8,7 +8,7 @@ topics:
 - design
 - book
 - theartificial
-crossposts:
+syndication:
 - https://linkedin.com/pulse/author-hans-gerwitz
 ---
 

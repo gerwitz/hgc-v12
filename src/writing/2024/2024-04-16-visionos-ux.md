@@ -5,7 +5,7 @@ categories:
 topics:
 - apple
 - tech
-crossposts:
+syndication:
 - https://www.linkedin.com/pulse/visionos-experience-hans-gerwitz-5heac
 ---
 

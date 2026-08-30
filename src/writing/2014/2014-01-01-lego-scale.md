@@ -5,7 +5,7 @@ categories:
 - culture
 topics:
 - lego
-crossposts:
+syndication:
 - https://safelyignored.com/lego-scale
 ---
 

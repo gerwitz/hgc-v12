@@ -7,7 +7,7 @@ topics:
 - business
 - tech
 - google
-crossposts:
+syndication:
 - https://safelyignored.com/why-google-bought-motorola
 ---
 

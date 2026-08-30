@@ -7,7 +7,7 @@ topics:
 - 3dp
 - law
 - diy
-crossposts:
+syndication:
 - https://safelyignored.com/disrupt-it-yourself/
 ---
 
