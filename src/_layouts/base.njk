@@ -59,9 +59,11 @@
   <body class="{{ bodyClass }}">
     <div class="dexter"></div>
     <div class="pale">
+      {%- if page.url != '/' -%}
       <header class="main-header">
         {% include "header.njk" %}
       </header>
+      {%- endif -%}
       <div class="main">
         {% block content %}
         {{ content | safe }}
