@@ -66,6 +66,7 @@ body.toys-index .main > .content {
   border: 0;
   pointer-events: none;
   image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 .toy-card-name {

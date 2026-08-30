@@ -5,8 +5,8 @@
   height: 16px;
   margin-right: 0.25em;
   vertical-align: -0.125em;
-  image-rendering: crisp-edges;
   image-rendering: pixelated;
+  image-rendering: crisp-edges;
   /* The art is black on alpha, so it masks a fill rather than being drawn directly. */
   background-color: var(--text-color);
   mask: var(--preview-icon, url("/styles/icons/other.png")) center / contain no-repeat;
