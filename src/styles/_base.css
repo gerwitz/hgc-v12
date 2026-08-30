@@ -104,19 +104,25 @@ body {
   font-variant-numeric: lining-nums proportional-nums;
 }
 
-/* Drop the inset the global link styles add, so each box measures exactly
-   the tree or the crumb text it holds. */
-.main-header .site-title,
-.main-header .breadcrumb > * {
-  margin: 0;
-  padding: 0;
-  border: none;
+/* Pad the hover target out around the tree; the negative margin cancels the
+   padding so the glyph itself does not move, in either layout. */
+.main-header .site-title {
+  margin: -8px;
+  padding: 8px;
 }
 
 .main-header .breadcrumb {
   display: flex;
   flex-wrap: wrap;
   gap: 0 18px;
+}
+
+/* Drop the inset the global link styles add, so each crumb box measures
+   exactly its text. */
+.main-header .breadcrumb > * {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .main-header .site-title svg {
@@ -136,15 +142,15 @@ body {
   fill: var(--page-color);
 }
 
-/* The tree hangs in the dexter, 12px clear of the content column, so the
+/* The tree hangs in the dexter, 16px clear of the content column, so the
    breadcrumb starts at the content edge. Any narrower and the dexter cannot
    hold the tree with both of its margins, so it rejoins the pale:
-   758 (pale) + 32 (gutter) + 12 + 21 (tree at 32px tall) + 12 = 835. */
-@media (min-width: 835px) {
+   758 (pale) + 32 (gutter) + 16 + 21 (tree at 32px tall) + 16 = 843. */
+@media (min-width: 843px) {
   .main-header .site-title {
     position: absolute;
-    top: var(--header-padding-top);
-    right: calc(100% + 12px);
+    top: calc(var(--header-padding-top) - 2px);
+    right: calc(100% + 16px);
   }
 }
 

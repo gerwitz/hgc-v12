@@ -1,5 +1,5 @@
 ---
-title: 10PRINT
+title: 10 PRINT
 type: pico8
 year: 2023
 ---
