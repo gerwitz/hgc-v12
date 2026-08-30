@@ -215,8 +215,8 @@ body {
 
 body.root {
   header {
-    margin-top: 56px;
-    margin-bottom: 56px;
+    margin-top: 96px;
+    margin-bottom: 32px;
   }
 
   .search-form input {
