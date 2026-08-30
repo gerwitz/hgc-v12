@@ -97,6 +97,19 @@ article > ul a.sidenote-ref:hover {
   height: auto;
 }
 
+/* Decoration parked in the sidenote column, indented like sidenote text. It is
+   not content, so it leaves with the column rather than reflowing into it. */
+.main > .marginal {
+  grid-column: 2;
+  margin-left: var(--sidenote-column-padding);
+}
+
+@media (max-width: 821px) { /* no sidebar beside the content column */
+  .main > .marginal {
+    display: none;
+  }
+}
+
 /* but now we have to prevent everything from collapsing */
 article > *,
 footer {
