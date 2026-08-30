@@ -29,7 +29,7 @@
   const snow = (now = performance.now()) => {
     if (now - painted >= FRAME_INTERVAL) {
       for (let pixel = 0; pixel < pixels.length; pixel += 1) {
-        pixels[pixel] = Math.random() < 0.5 ? 0xff333333 : 0xffcccccc;
+        pixels[pixel] = Math.random() < 0.5 ? 0xff111111 : 0xffeeeeee;
       }
 
       context.putImageData(frame, 0, 0);
