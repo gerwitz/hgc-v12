@@ -106,9 +106,9 @@ body {
 
 /* Pad the hover target out around the tree; the negative margin cancels the
    padding so the glyph itself does not move, in either layout. */
-.main-header .site-title {
-  margin: -8px;
-  padding: 8px;
+.main-header .site-logo {
+  margin: 0px;
+  padding: 4px;
 }
 
 .main-header .breadcrumb {
@@ -125,20 +125,20 @@ body {
   border: none;
 }
 
-.main-header .site-title svg {
+.main-header .site-logo svg {
   display: block; /* no inline descender space under the tree */
 }
 
-.main-header .site-title svg * {
+.main-header .site-logo svg * {
   fill: var(--accent-color);
 }
 
-.main-header a.site-title:hover {
+.main-header a.site-logo:hover {
   background-color: var(--accent-color);
   color: var(--page-color);
 }
 
-.main-header a.site-title:hover svg * {
+.main-header a.site-logo:hover svg * {
   fill: var(--page-color);
 }
 
@@ -147,7 +147,7 @@ body {
    hold the tree with both of its margins, so it rejoins the pale:
    758 (pale) + 32 (gutter) + 16 + 21 (tree at 32px tall) + 16 = 843. */
 @media (min-width: 843px) {
-  .main-header .site-title {
+  .main-header .site-logo {
     position: absolute;
     top: calc(var(--header-padding-top) - 2px);
     right: calc(100% + 16px);
@@ -215,7 +215,7 @@ body {
 
 body.root {
   header {
-    margin-top: 32px;
+    margin-top: 56px;
     margin-bottom: 56px;
   }
 
