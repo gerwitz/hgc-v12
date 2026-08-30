@@ -399,7 +399,7 @@ body.root .search-form button {
 }
 
 @media (min-width: 822px) {
-  .main-footer .footer-content {
+  .main-footer .footer-content:has(.toy) {
     display: grid;
     grid-template-columns: var(--toy-screen-size) minmax(0, 1fr);
     gap: var(--footer-section-gap);

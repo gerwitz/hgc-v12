@@ -17,7 +17,9 @@
 </div>
 
 <div class="footer-content">
+  {% if page.url != '/' -%}
   <div class="toy" data-footer-toy></div>
+  {%- endif %}
 
   <div class="sitemap">
     <dl class="published">
