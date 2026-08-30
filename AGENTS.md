@@ -57,6 +57,7 @@ Core utilities in `eleventy/week.js`:
 | navpath            | `{{ page \| navpath }}`                     | breadcrumb array |
 | parents            | `{{ page \| parents }}`                     | ancestor pages |
 | hostname           | `{{ url \| hostname }}`                     | extracts hostname from URL |
+| isdirectory        | `{{ path \| isdirectory }}`                 | true when pages are published beneath the path |
 | json               | `{{ obj \| json }}`                         | JSON.stringify |
 | limit              | `{{ arr \| limit(n) }}`                     | first N items |
 | cssmin             | `{{ css \| cssmin }}`                       | minify a CSS string |

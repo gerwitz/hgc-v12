@@ -103,6 +103,26 @@ h4 {
   text-underline-offset: 2px;
 }
 
+/* A link's underline is not drawn through an atomic inline box, which is the
+   only way to keep it off the separator. */
+.main-header .breadcrumb .slash {
+  display: inline-block;
+}
+
+/* The underline is the whole hover affordance here, in place of the highlight
+   links get elsewhere. Only the line is switched, so thickness, color, and
+   offset still cascade. */
+.main-header .breadcrumb a {
+  text-decoration-line: none;
+
+  &:hover {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration-line: underline;
+  }
+}
+
 article blockquote,
 .feed-item blockquote {
   margin-left: 0;

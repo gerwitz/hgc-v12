@@ -3,6 +3,7 @@ import nbspFilter from "eleventy-nbsp-filter";
 
 import collectionsPlugin from "./eleventy/collections.js";
 import cssPlugin from "./eleventy/css.js";
+import directoriesPlugin from "./eleventy/directories.js";
 import filtersPlugin from "./eleventy/filters.js";
 import markdownPlugin from "./eleventy/markdown.js";
 import shortcodesPlugin from "./eleventy/shortcodes.js";
@@ -53,6 +54,7 @@ export default function configure(eleventyConfig) {
   eleventyConfig.addPlugin(markdownPlugin);
   eleventyConfig.addPlugin(staticAssetsPlugin);
   eleventyConfig.addPlugin(urlsPlugin);
+  eleventyConfig.addPlugin(directoriesPlugin);
 
   eleventyConfig.addGlobalData("generated", () => {
     return new Date();

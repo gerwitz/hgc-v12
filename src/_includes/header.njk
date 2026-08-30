@@ -1,24 +1,29 @@
 {# .main-header .pale #}
 {% if page.url == '/' %}
 <span class="site-title">{% tree 32 %}</span>
-<div class="breadcrumb">
-<!--  <span>hans.gerwitz.com</span> -->
 {% else %}
 <a class="site-title" href="/" aria-label="home page">{% tree 32 %}</a>
+{% endif %}
 <div class="breadcrumb">
-  {% set crumbPath = '/' %}
+  {% if page.url == '/' %}
+    <span class="internal">/</span>
+  {% else %}
+    <a class="internal path" href="/"><span class="slash">/</span></a>
+  {% endif %}
   {% if not breadcrumbs %}
     {% set breadcrumbs = page.url.split('/').slice(1,-1) %}
   {% endif %}
+  {% set crumbPath = '/' %}
   {% for crumb in breadcrumbs %}
+    {% set crumbPath = crumbPath + crumb + '/' %}
     {% if loop.last %}
-      <span class="internal">/{{ crumb }}</a>
+      {# Ancestors above are always directories; this one only earns the
+         trailing slash if pages are published beneath it. #}
+      <span class="internal">{{ crumb }}{{ '/' if (crumbPath | isdirectory) else '' }}</span>
     {% else %}
-      {% set crumbPath = crumbPath + crumb + '/' %}
-      <a class="internal" href="{{ crumbPath }}">/{{ crumb }}</a>
+      <a class="internal path" href="{{ crumbPath }}">{{ crumb }}<span class="slash">/</span></a>
     {% endif %}
   {% endfor %}
-{% endif %}
 </div>
 <!--
 <div class="font-controls">
