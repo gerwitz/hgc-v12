@@ -4,7 +4,7 @@ epitaph: sometimes makes things
 layout: index
 ---
 
-Welcome to my laboratory, home to the finest [braincrack](https://www.youtube.com/watch?v=0sHCQWjTrJ8) including:
+Welcome to my laboratory, home to the finest [braincrack](https://www.youtube.com/watch?v=0sHCQWjTrJ8). I publish notes and artifacts here mostly to have URLs to share.
 
 * [Pixel toys](/toys) (2026–)
 * [Bear Den](./bears/) (2025–)

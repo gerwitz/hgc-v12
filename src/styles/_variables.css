@@ -33,7 +33,7 @@
 
   /* Colors */
   --page-color: hsl(0, 0%, 99%);
-  --dark-page-color: hsl(135, 7%, 12%);
+  --dark-page-color: hsl(135, 7%, 12%); /* 1C211D */
   --text-color: hsl(0, 0%, 5%);
   --dark-text-color: hsl(0, 0%, 100%);
   --heading-color: hsl(140, 7%, 25%);
