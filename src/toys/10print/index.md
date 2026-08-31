@@ -2,6 +2,7 @@
 title: 10 PRINT
 type: pico8
 year: 2023
+description: "<p>quilt of truchet tiles with random changes</p><p>20 lines of Lua, 2 sprites</p>"
 ---
 
 "[10 PRINT](https://10print.org/)" is a sort of _Hello, world_ in the generative arts world. I somehow was unaware of it even though I spent a bit of time building demos on the Commodore 64; probably this was because I learned BASIC on the Apple II where it wasn't as commonly referenced.
