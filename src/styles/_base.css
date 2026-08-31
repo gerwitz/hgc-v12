@@ -219,6 +219,10 @@ body.root {
     margin-bottom: 32px;
   }
 
+  img {
+    border: var(--outline-width) solid var(--text-color);
+  }
+
   .search-form input {
     padding: 0 10px 0 30px;
     position: absolute;
