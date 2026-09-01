@@ -1,0 +1,4 @@
+/* TEAM */
+Author: Hans Gerwitz
+Site: hans.gerwitz.com
+Location: Amsterdam, Netherlands
