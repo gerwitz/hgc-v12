@@ -18,6 +18,7 @@ ENV NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx/conf.d
 ENV MEDIA_ORIGIN_HOST=your-bucket.s3.fr-par.scw.cloud
 
 COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
+COPY nginx/redirects.conf /etc/nginx/redirects.conf
 COPY --from=build /app/_site /usr/share/nginx/html
 
 EXPOSE 80

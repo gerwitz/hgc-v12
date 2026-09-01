@@ -15,6 +15,8 @@ server
     return 200 "ok\n";
   }
 
+  include /etc/nginx/redirects.conf;
+
   # Serve generated static files from Eleventy output.
   location /
   {
