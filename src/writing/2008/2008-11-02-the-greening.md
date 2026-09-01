@@ -1,6 +1,6 @@
 ---
 title: The Greening
-abstract: The grass is greener out west.
+subtitle: The grass is greener out west.
 categories:
 - culture
 - personal

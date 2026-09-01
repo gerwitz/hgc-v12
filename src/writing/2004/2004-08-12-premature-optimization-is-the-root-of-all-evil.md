@@ -1,6 +1,6 @@
 ---
 title: Premature optimization is the root of all evil
-abstract: The history of a popular quote seems to lead from Knuth to Hoare to Dijkstra.
+subtitle: The history of a popular quote seems to lead from Knuth to Hoare to Dijkstra.
 categories:
 - culture
 - work

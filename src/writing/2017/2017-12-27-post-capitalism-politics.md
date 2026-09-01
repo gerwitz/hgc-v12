@@ -1,6 +1,6 @@
 ---
 title: What's Next For The Left?
-abstract: Yes, neoliberalism sucks. What else?
+subtitle: Yes, neoliberalism sucks. What else?
 categories:
 - culture
 topics:

@@ -1,6 +1,6 @@
 ---
 title: Encabulation
-abstract: We're not good enough at software to poke fun at ourselves yet.
+subtitle: We're not good enough at software to poke fun at ourselves yet.
 categories:
 - work
 - culture

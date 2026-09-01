@@ -1,6 +1,6 @@
 ---
 title: Real Business
-abstract: Maturity means never having to adapt.
+subtitle: Maturity means never having to adapt.
 categories:
 - work
 - culture

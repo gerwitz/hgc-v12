@@ -1,6 +1,6 @@
 ---
 title: Microsoft and Minecraft
-abstract: Let's hope Microsoft doesn't Bungie Minecraft.
+subtitle: Let's hope Microsoft doesn't Bungie Minecraft.
 categories:
 - work
 topics:

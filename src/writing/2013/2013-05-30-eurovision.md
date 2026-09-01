@@ -1,6 +1,6 @@
 ---
 title: Eurovisualizing
-abstract: Using a popularity contest to play with datavis.
+subtitle: Using a popularity contest to play with datavis.
 categories:
 - work
 topics:

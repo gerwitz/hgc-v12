@@ -1,6 +1,6 @@
 ---
 title: Be Rude On Purpose
-abstract: How are we supposed to react?
+subtitle: How are we supposed to react?
 categories:
 - culture
 topics: [usa, politics, nazis, civility]

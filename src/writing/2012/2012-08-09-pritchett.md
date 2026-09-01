@@ -1,6 +1,6 @@
 ---
 title: Scared
-abstract: a paragraph-by-paragraph translation of Lou Pritchett
+subtitle: a paragraph-by-paragraph translation of Lou Pritchett
 categories:
 - culture
 topics:

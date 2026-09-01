@@ -1,6 +1,6 @@
 ---
 title: First post!
-abstract: Now, with content!
+subtitle: Now, with content!
 categories:
 - meta
 topics:

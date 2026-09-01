@@ -1,6 +1,6 @@
 ---
 title: Planes Rather Than Trains
-abstract: Amtrak FAIL
+subtitle: Amtrak FAIL
 categories:
 - personal
 topics:

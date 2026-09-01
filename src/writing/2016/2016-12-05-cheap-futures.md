@@ -1,6 +1,6 @@
 ---
 title: Cheap Futures
-abstract: "Shallow thinking richly presented"
+subtitle: "Shallow thinking richly presented"
 categories:
 - work
 topics:

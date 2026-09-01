@@ -1,6 +1,6 @@
 ---
 title: Time and Value
-abstract: A game for someone else.
+subtitle: A game for someone else.
 categories:
 - culture
 topics:

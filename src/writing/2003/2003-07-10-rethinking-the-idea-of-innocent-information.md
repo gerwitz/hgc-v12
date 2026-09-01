@@ -1,6 +1,6 @@
 ---
 title: '"Rethinking the idea of innocent information"'
-abstract: Secrecy is our security, we will be safe in obscurity.
+subtitle: Secrecy is our security, we will be safe in obscurity.
 categories:
 - culture
 topics:

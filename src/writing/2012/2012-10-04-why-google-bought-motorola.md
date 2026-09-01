@@ -1,6 +1,6 @@
 ---
 title: Why Google Bought Motorola
-abstract: It is too obvious why Google wanted Motorola.
+subtitle: It is too obvious why Google wanted Motorola.
 categories:
 - work
 topics:

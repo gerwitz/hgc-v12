@@ -1,6 +1,6 @@
 ---
 title: Name That Blue
-abstract: A cheatsheet
+subtitle: A cheatsheet
 categories:
 - work
 topics:

@@ -1,6 +1,6 @@
 ---
 title: Conspiracy
-abstract: "Making excuses for RIM: why it's good that the Storm sucks."
+subtitle: "Making excuses for RIM: why it's good that the Storm sucks."
 categories:
 - work
 topics:

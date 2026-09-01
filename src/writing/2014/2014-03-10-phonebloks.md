@@ -1,6 +1,6 @@
 ---
 title: The Anosognosic Phone
-abstract: Dunning and Kruger say I must be missing something.
+subtitle: Dunning and Kruger say I must be missing something.
 categories:
 - work
 topics:

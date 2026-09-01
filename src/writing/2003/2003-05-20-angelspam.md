@@ -1,6 +1,6 @@
 ---
 title: Angelspam
-abstract: A neologism for well-intentioned forwards.
+subtitle: A neologism for well-intentioned forwards.
 categories:
 - culture
 topics:

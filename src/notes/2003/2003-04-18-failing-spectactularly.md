@@ -1,6 +1,5 @@
 ---
-subtitle: Failing spectactularly
-abstract: Don't let your UI leak.
+subtitle: Don't let your UI leak.
 categories:
 - work
 topics:

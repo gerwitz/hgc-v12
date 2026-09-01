@@ -1,6 +1,6 @@
 ---
 title: LEGO Scale
-abstract: A single 1x1 LEGO brick represents about 350mm.
+subtitle: A single 1x1 LEGO brick represents about 350mm.
 categories:
 - culture
 topics:

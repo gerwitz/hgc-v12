@@ -1,6 +1,6 @@
 ---
 title: Disrupt It Yourself
-abstract: 3D printed guns are about guns, not printers.
+subtitle: 3D printed guns are about guns, not printers.
 categories:
 - culture
 topics:

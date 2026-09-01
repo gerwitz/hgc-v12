@@ -1,6 +1,6 @@
 ---
 title: Tools in the Brain-Attic
-abstract: In praise of effective genius heroes.
+subtitle: In praise of effective genius heroes.
 categories:
 - culture
 - personal

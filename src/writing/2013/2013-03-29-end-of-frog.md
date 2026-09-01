@@ -1,6 +1,6 @@
 ---
 title: EOF
-abstract: Shannon and I are unemployed.
+subtitle: Shannon and I are unemployed.
 categories:
 - personal
 - work

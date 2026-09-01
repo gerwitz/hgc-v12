@@ -1,6 +1,6 @@
 ---
 title: Data Shaming
-abstract: Maybe we need a little less privacy.
+subtitle: Maybe we need a little less privacy.
 categories:
 - culture
 topics:

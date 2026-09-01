@@ -1,6 +1,6 @@
 ---
 title: Intoxicated Pachyderms
-abstract: Please don't step on me.
+subtitle: Please don't step on me.
 categories:
 - culture
 topics:

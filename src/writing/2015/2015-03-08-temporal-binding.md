@@ -1,6 +1,6 @@
 ---
 title: Temporal Binding
-abstract: There is no clock.
+subtitle: There is no clock.
 categories:
 - culture
 topics:

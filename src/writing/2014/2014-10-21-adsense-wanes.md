@@ -1,6 +1,6 @@
 ---
 title: Propping Up Adsense
-abstract: Google's soft spot
+subtitle: Google's soft spot
 categories:
 - work
 topics:

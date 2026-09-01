@@ -1,6 +1,6 @@
 ---
 title: 'The Artificial Genesis'
-abstract: "The story of why we created The Artificial"
+subtitle: "The story of why we created The Artificial"
 categories:
 - work
 topics:

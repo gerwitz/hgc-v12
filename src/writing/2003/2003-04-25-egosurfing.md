@@ -1,6 +1,6 @@
 ---
 title: Egosurfing
-abstract: You cannot prove I was in Montana in the 1930s.
+subtitle: You cannot prove I was in Montana in the 1930s.
 categories:
 - personal
 topics:

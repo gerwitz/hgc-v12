@@ -1,6 +1,6 @@
 ---
 title: Open Committee
-abstract: 8.8 million lines of code!
+subtitle: 8.8 million lines of code!
 categories:
 - work
 - culture

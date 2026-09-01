@@ -1,6 +1,6 @@
 ---
 title: "If It Must Be Paper…"
-abstract: The recent boarding pass redesign meme fails to actually redesign.
+subtitle: The recent boarding pass redesign meme fails to actually redesign.
 categories:
 - work
 topics:

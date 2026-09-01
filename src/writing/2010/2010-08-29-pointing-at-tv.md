@@ -1,6 +1,6 @@
 ---
 title: Pointing at the TV
-abstract: You can't reach your TV, so you can't touch it.  Why would we expect touch-oriented
+subtitle: You can't reach your TV, so you can't touch it.  Why would we expect touch-oriented
   UI to work?
 categories:
 - work

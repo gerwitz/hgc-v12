@@ -1,6 +1,6 @@
 ---
 title: Immortality
-abstract: '...it''s pleasurable to cast a line into the future, no matter how tenuously.'
+subtitle: '...it''s pleasurable to cast a line into the future, no matter how tenuously.'
 categories:
 - culture
 topics:

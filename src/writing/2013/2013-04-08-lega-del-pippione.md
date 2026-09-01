@@ -1,6 +1,6 @@
 ---
 title: Galileo vs. the League of Pigeons
-abstract: Don't let the pigeons keep you down.
+subtitle: Don't let the pigeons keep you down.
 categories:
 - culture
 topics:

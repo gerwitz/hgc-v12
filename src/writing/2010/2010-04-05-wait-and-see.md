@@ -1,6 +1,6 @@
 ---
 title: Wait and See
-abstract: "”We never say never, but we have no current plans“ to develop a version of Office for the Apple iPad"
+subtitle: "”We never say never, but we have no current plans“ to develop a version of Office for the Apple iPad"
 categories:
 - work
 topics:

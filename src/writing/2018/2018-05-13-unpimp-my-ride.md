@@ -1,6 +1,6 @@
 ---
 title: More Stealth
-abstract: "My ride has been unpimped."
+subtitle: "My ride has been unpimped."
 categories:
 - personal
 topics:

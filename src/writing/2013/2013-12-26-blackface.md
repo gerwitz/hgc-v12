@@ -1,6 +1,6 @@
 ---
 title: Zwartgeschminkte
-abstract: The Dutch wear blackface in imitation of winter storms, or ravens, or Moorish
+subtitle: The Dutch wear blackface in imitation of winter storms, or ravens, or Moorish
   servents, or chimney soot.
 categories:
 - culture

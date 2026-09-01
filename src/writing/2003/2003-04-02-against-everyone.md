@@ -1,6 +1,6 @@
 ---
 title: Against everyone
-abstract: I don't agree with (this) war, but that doesn't mean I'm against defense.
+subtitle: I don't agree with (this) war, but that doesn't mean I'm against defense.
 categories:
 - culture
 topics:

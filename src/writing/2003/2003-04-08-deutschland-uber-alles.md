@@ -1,6 +1,6 @@
 ---
 title: Deutschland uber alles
-abstract: If I don't agree with every action America takes, my loyalty must lie elsewhere.
+subtitle: If I don't agree with every action America takes, my loyalty must lie elsewhere.
 categories:
 - culture
 topics:

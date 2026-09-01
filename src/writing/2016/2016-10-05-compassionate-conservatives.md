@@ -1,6 +1,6 @@
 ---
 title: To My Compassionate Conservative Friends
-abstract: "Please talk to me."
+subtitle: "Please talk to me."
 categories:
 - culture
 topics:

@@ -1,6 +1,6 @@
 ---
 title: Clients Are Students
-abstract: "Our obligation to teach"
+subtitle: "Our obligation to teach"
 categories:
 - work
 topics:

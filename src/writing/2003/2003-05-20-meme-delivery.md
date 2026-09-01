@@ -1,6 +1,6 @@
 ---
 title: Meme delivery
-abstract: I judge messages by the effort put into generating them.
+subtitle: I judge messages by the effort put into generating them.
 categories:
 - culture
 topics:

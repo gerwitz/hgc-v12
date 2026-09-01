@@ -1,6 +1,5 @@
 ---
 subtitle: Bloodletting Went Wild Here
-abstract: plausibility via superstructures of technical complication
 categories:
 - culture
 - work

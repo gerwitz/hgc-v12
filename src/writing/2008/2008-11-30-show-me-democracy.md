@@ -1,6 +1,6 @@
 ---
 title: Show Me Democracy
-abstract: So what if one state casts 11 electoral votes based on uneven distribution
+subtitle: So what if one state casts 11 electoral votes based on uneven distribution
   of election resources?
 categories:
 - culture

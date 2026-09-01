@@ -1,6 +1,6 @@
 ---
 title: Personal LAN
-abstract: Shouldn't technology be user-centered?
+subtitle: Shouldn't technology be user-centered?
 categories:
 - work
 topics:
