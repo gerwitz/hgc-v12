@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% set title = title or "Untitled" %}
-    {% set description = meta_description or "Personal website of Hans Gerwitz" %}
+    {% set description = "I " + confession if confession else meta_description or "Personal website of Hans Gerwitz" %}
     {% set url = external or "https://hans.gerwitz.com" + page.url %}
     {% set image = "https://hans.gerwitz.com/opengraph.png" %}
     <meta name="author" content="Hans Gerwitz">
