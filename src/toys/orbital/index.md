@@ -2,7 +2,7 @@
 title: Orbital
 type: pico8
 year: 2023
-description: "<p>7-body gravity simulator</p><p>168 lines of Lua, no sprites</p>"
+toy_description: "<p>7-body gravity simulator</p><p>168 lines of Lua, no sprites</p>"
 ---
 
 In my [computer lab job](/logs/events/1994-slu-cis/) I often left a Mac running a screensaver that was a very simple physics simulation. Even on the computers of the day, it was a simple thing—not an impressive tech demo. But it could mesmerize me as I just watched it while using the phone.

@@ -45,9 +45,9 @@ export default {
       return crumbs;
     },
     // Let individual pages override this generated description.
-    meta_description: (data) => {
-      if (data.meta_description || data.layout !== "writing") {
-        return data.meta_description;
+    description: (data) => {
+      if (data.description || data.layout !== "writing") {
+        return data.description;
       }
 
       const wordCount = countWords(data.page.rawInput);
