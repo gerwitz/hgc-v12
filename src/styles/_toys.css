@@ -125,7 +125,7 @@ body.toys-index .main > .content {
     flex: 0 0 var(--toy-page-screen-size);
     width: var(--toy-page-screen-size);
     height: var(--toy-page-screen-size);
-    border-left: var(--outline-width) solid var(--text-color);
+    outline: var(--outline-width) solid var(--text-color);
 
     .toy-screen {
       position: relative;
