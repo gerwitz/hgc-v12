@@ -1,3 +1,7 @@
+import moment from "moment";
+
+const PROJECT_NAME = "Hexmap";
+
 export default {
   tags: ["hexmapDevlog"],
   eleventyComputed: {
@@ -21,6 +25,13 @@ export default {
       }
 
       return crumbs;
+    },
+    description: (data) => {
+      if (data.description || data.page.filePathStem.endsWith("/index") || !data.page.date) {
+        return data.description;
+      }
+
+      return `${PROJECT_NAME} devlog, ${moment(data.page.date).format("DD MMM YYYY")}`;
     },
   },
 };

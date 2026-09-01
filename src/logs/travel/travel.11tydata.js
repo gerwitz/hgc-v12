@@ -28,6 +28,19 @@ export default {
       return pins;
 
     },
+    "description": data => {
+      if (data.description || data.page.fileSlug == "travel") {
+        return data.description;
+      }
+
+      const destinations = (data.destinations || []).map(destination => destination.title);
+
+      if (!data.nights || !destinations.length) {
+        return undefined;
+      }
+
+      return `${data.nights} night${data.nights == 1 ? "" : "s"} in ${destinations.join(", ")}`;
+    },
     "geojson" : data => {
       var geojson = {
         type: "FeatureCollection",

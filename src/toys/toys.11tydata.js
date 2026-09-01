@@ -15,6 +15,13 @@ export default {
     },
     toySlug: (data) => getToySlug(data),
     toyType: (data) => data.type,
+    description: (data) => {
+      if (data.description || data.layout === "index" || !data.type) {
+        return data.description;
+      }
+
+      return `${data.type} pixel toy`;
+    },
     toyScript: (data) => {
       const toyName = getToySlug(data);
       return `/toys/${toyName}/${toyName}.js`;

@@ -46,8 +46,8 @@ export default {
     },
     // Let individual pages override this generated description.
     description: (data) => {
-      if (data.description || data.layout !== "writing") {
-        return data.description;
+      if (data.description || data.subtitle || data.layout !== "writing") {
+        return data.description || data.subtitle;
       }
 
       const wordCount = countWords(data.page.rawInput);
