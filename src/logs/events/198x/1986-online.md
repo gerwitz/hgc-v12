@@ -3,7 +3,7 @@ title: Began online life
 date: 1986-03-09
 week: 626
 type: geek
-epitaph: grew up online
+confession: grew up online
 ---
 
 For my 12th birthday, my godfather [&quot;Mad&quot; Tony](https://hans.gerwitz.com/2015/04/21/mad-tony.html) gifted me with an Applied Engineering DataLink 1200 modem.

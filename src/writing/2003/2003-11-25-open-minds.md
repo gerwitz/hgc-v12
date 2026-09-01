@@ -7,7 +7,7 @@ topics:
 - memory
 - learning
 - diversity
-epitaph: forgets a lot
+confession: forgets a lot
 ---
 
 The provocative bigfoot ponders [why being open minded might be an impediment to learning][1].  He's clearly trying to provoke me, but I'm too weak to resist.

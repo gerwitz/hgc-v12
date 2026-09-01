@@ -1,6 +1,6 @@
 ---
 title: Laboratory
-epitaph: sometimes makes things
+confession: sometimes makes things
 layout: index
 ---
 

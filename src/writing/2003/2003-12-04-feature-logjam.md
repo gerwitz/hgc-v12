@@ -6,7 +6,7 @@ topics:
 - pm
 - agile
 - management
-epitaph: was agile before it was cool
+confession: was agile before it was cool
 ---
 
 Recently, we've been encountering an [antipattern][1] I'll call feature logjam (Scott Johnson calls it [too many

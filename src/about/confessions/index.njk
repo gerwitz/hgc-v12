@@ -1,0 +1,15 @@
+---
+title: Confessions
+layout: index
+override:tags: []
+permalink: /confessions/index.html
+eleventyExcludeFromCollections: true
+---
+
+<ul>
+{%- for page in collections.confessions -%}
+  <li>
+    Hans <a href="{{ page.url }}">{{ page.data.confession }}</a>.
+  </li>
+{%- endfor -%}
+</ul>

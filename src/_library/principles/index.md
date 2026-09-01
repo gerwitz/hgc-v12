@@ -1,6 +1,6 @@
 ---
 title: Life stance
-epitaph: believes in a few things
+confession: believes in a few things
 ---
 
 This is an attempt to document my personal ideology. That is, the beliefs I hold most strongly.
@@ -40,4 +40,3 @@ Deep Ecologist means I find value in complex "living" things for their own sake.
 Communalist is very related but in the social sphere. I believe human cooperation does not scale well, so it is best for us to focus on peace and prosperity in local contexts and then between contexts, rather than define and enforce shared rules for everyone, everywhere.
 
 ---
-

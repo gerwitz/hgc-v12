@@ -77,7 +77,7 @@ All visualizations are server-side rendered via linkedom — no client-side Java
 
 ## Collections available in templates
 
-`posts`, `weeks`, `notes`, `writing`, `content` (search index), `microblog`, `epitaphs`, `weeklyNotes`, `weeklyWriting`, `weeklyEvents`
+`posts`, `weeks`, `notes`, `writing`, `content` (search index), `microblog`, `confession`, `weeklyNotes`, `weeklyWriting`, `weeklyEvents`
 
 ## Coding conventions
 

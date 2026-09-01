@@ -1,6 +1,6 @@
 ---
 title: Wonders of the World
-epitaph: finds the world amazing
+confession: finds the world amazing
 ---
 
 Some discoveries in life continue to amaze me long after the initial reward.

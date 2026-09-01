@@ -1,5 +1,5 @@
 ---
-epitaph: "remains akratic"
+confession: "remains akratic"
 ---
 
 Being logically minded, consequentialism has always appealed to me. But Peter Singer's global utilitarianism feels too far. I feel it is right to "unfairly" prioritize my neighbors, family, and friends.

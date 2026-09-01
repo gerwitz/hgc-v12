@@ -1,5 +1,5 @@
 export { content } from "./content.js";
-export { epitaphs } from "./epitaphs.js";
+export { confessions } from "./confessions.js";
 export { microblog } from "./microblog.js";
 export { posts } from "./posts.js";
 export { toys } from "./toys.js";
