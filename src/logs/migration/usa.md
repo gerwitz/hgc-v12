@@ -1,7 +1,6 @@
 ---
 title: USA
 subtitle: Or, why I hate America
-confession: is an American emigrant
 ---
 
 [Cars over people](https://www.theatlantic.com/ideas/archive/2019/07/car-crashes-arent-always-unavoidable/592447/)

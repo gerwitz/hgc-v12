@@ -5,7 +5,7 @@ categories:
 - personal
 topics:
 - history
-confession: has been online for a while
+confession: have been online for a while
 ---
 
 The [Internet Archive][1] has a record of my first webpage, circa [May 13th,

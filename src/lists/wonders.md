@@ -1,6 +1,6 @@
 ---
 title: Wonders of the World
-confession: finds the world amazing
+confession: find the world amazing
 ---
 
 Some discoveries in life continue to amaze me long after the initial reward.

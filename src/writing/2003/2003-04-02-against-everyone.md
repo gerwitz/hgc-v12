@@ -6,7 +6,7 @@ categories:
 topics:
 - politics
 - war
-confession: is almost a pacifist
+confession: am almost a pacifist
 ---
 
 Posted by moi at [insteadofwar.org][1]:

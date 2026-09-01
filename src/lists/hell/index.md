@@ -1,7 +1,7 @@
 ---
 title: The Circles of Hell
 subtitle: We all have our own special Hell
-confession: holds a grudge
+confession: can hold a grudge
 ---
 
 This is who I expect to meet on my tour of the circles of Hell.

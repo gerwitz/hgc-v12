@@ -9,7 +9,7 @@ topics:
 - philosophy
 - popular
 - consciousness
-confession: over-analyzes things
+confession: over-analyze things
 ---
 
 There has been a lot of whining about _[The Matrix Revolutions][1]_.  Even those that appreciate the action complain that this was a weak resolution for a [philosophically][2] [compelling][3] story.  Of course, these [whiners][4] are missing the point.

@@ -1,6 +1,6 @@
 ---
 title: Life stance
-confession: believes in a few things
+confession: believe in a few things
 ---
 
 This is an attempt to document my personal ideology. That is, the beliefs I hold most strongly.

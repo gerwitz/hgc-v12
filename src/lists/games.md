@@ -1,7 +1,7 @@
 ---
 title: Timepass
 subtitle: A hall of fame for games that have wasted substantial time
-confession: does not always use his time wisely
+confession: do not always use my time wisely
 ---
 
 * Two Dots

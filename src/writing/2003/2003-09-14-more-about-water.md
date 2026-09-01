@@ -6,7 +6,7 @@ topics:
 - travel
 - sustainability
 - landuse
-confession: is an unrepentant umarell
+confession: am an unrepentant umarell
 ---
 
 I write this sitting in the Phoenix airport, where America West has seen fit to deposit me en route to Seattle.  Ah, the glorious efficiencies of the hub-and-spoke model.

@@ -1,6 +1,6 @@
 ---
 title: Quirks
-confession: is flawed
+confession: am flawed
 ---
 
 I am remarkably average. Generally, I fit the measurements of the archetypical Caucasian man that most of the world is design to accomodate. It's really quite convenient.

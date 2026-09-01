@@ -1,6 +1,6 @@
 ---
 title: Laboratory
-confession: sometimes makes things
+confession: sometime make things
 layout: index
 ---
 
