@@ -4,7 +4,6 @@ categories:
 - culture
 topics:
 - usa
-draft: true
 ---
 
 With all the hubbub about America 250, I’ve wondered how old my new nation is. But it’s been a struggle to choose a date.
