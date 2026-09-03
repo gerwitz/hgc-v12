@@ -6,127 +6,107 @@ eleventyExcludeFromCollections: true
 
 <form action="?" method="get">
   <div class="search-form" role="search">
-    <input type="text" aria-label="Search this site" placeholder="Search this site" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" name="q">
-    <button type="submit" aria-label="search"></button>
+    <input type="search" aria-label="Search this site" placeholder="Search this site" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" name="q">
+    <button type="submit" aria-label="Search"></button>
   </div>
 </form>
 
-<section id="search-results">
+<section id="search-results" aria-live="polite">
   <p class="message"></p>
   <div class="results"></div>
 </section>
 
+<script type="module">
+  const queryElement = document.querySelector(".search-form input");
+  const messageElement = document.querySelector("#search-results .message");
+  const resultsElement = document.querySelector("#search-results .results");
+  const query = new URLSearchParams(window.location.search).get("q")?.trim();
 
-<script src="https://unpkg.com/lunr/lunr.js"></script>
-<script>
-  // only good for n < 100
-  function ordinal(n) {
-    var sfx = ["th","st","nd","rd"];
-    return n + (sfx[(n-20)%10] || sfx[n] || sfx[0]);
-  }
+  const showMessage = (message) =>
+  {
+    messageElement.textContent = message;
+  };
 
-  var monthNames = new Array("January","February","March","April","May"," June","July","August","September","October","November","December");
-  function monthName(n) {
-    return(monthNames[n]);
-  }
+  const showResults = (results) =>
+  {
+    const list = document.createElement("ol");
+    list.className = "article-list";
 
-  var queryEl = document.querySelector('.search-form input');
-  function updateQuery(query) {
-    queryEl.value = query;
-  }
+    for (const result of results)
+    {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      const title = document.createElement("span");
+      title.className = "title";
+      title.textContent = result.meta.title || "Untitled";
+      link.href = result.url;
+      link.append(title);
+      item.append(link);
 
-  var messageEl = document.querySelector('#search-results .message');
-  var resultsEl = document.querySelector('#search-results .results');
-  function display(message, results) {
-    messageEl.innerHTML = message;
-    resultsEl.innerHTML = results;
-  }
+      if (result.meta.date)
+      {
+        const date = document.createElement("span");
+        date.className = "meta";
+        date.textContent = ` (${new Date(result.meta.date).toLocaleDateString("en-US", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        })})`;
+        item.append(date);
+      }
 
-  var lunrIndex;
-  var lunrMap;
-  var currentQuery;
+      if (result.meta.summary)
+      {
+        const summary = document.createElement("p");
+        summary.textContent = result.meta.summary;
+        item.append(summary);
+      }
 
-  function executeSearch(data) {
-    lunrIndex = lunr.Index.load(data.index);
-    lunrMap = data.map;
-    var results = lunrIndex.search(currentQuery);
-    if (results.length > 0) {
-    var list = '<ol class="article-list">';
-      results.forEach(function(result, index) {
-        page = lunrMap[Number(result.ref)];
-        list += '<li><a href="'+page.url+'">' +
-          '<span class="title">'+page.title+'<\/span>' +
-          '<\/a>';
-        if (page.meta) {
-          list += ' <span class="meta">('+page.meta+')<\/span>';
-        }
-        list += '<\/li>';
+      list.append(item);
+    }
+
+    resultsElement.replaceChildren(list);
+  };
+
+  const search = async () =>
+  {
+    if (!query)
+    {
+      return;
+    }
+
+    queryElement.value = query;
+    showMessage("Loading…");
+
+    try
+    {
+      const pagefind = await import("/pagefind/pagefind.js");
+      await pagefind.options({
+        ranking: {
+          metaWeights: {
+            title: 5,
+            topics: 3,
+          },
+        },
       });
-      list += '<\/ol>';
-      display(results.length+' results:', list);
+      const response = await pagefind.search(query);
+      const results = await Promise.all(response.results.map((result) => result.data()));
+
+      if (!results.length)
+      {
+        showMessage("No results, sorry.");
+        return;
+      }
+
+      showMessage(`${results.length} ${results.length === 1 ? "result" : "results"}:`);
+      showResults(results);
     }
-    else {
-      display('No results, sorry.', '');
+    catch (error)
+    {
+      console.error(error);
+      showMessage("Unable to load the search index.");
     }
-  }
+  };
 
-  function fetchIndex() {
-    display('Loading','&#8230;');
-
-    var request = new XMLHttpRequest();
-
-    request.addEventListener("progress", updateProgress);
-    request.addEventListener("load", transferComplete);
-    request.addEventListener("error", transferFailed);
-
-    request.open('GET', '/search/lunr.json', true);
-
-    request.send();
-  }
-
-  function updateProgress(e) {
-    if (e.lengthComputable) {
-      var percentComplete = e.loaded / e.total * 100;
-      display('Loading', MAth.round(percentComplete) + '%');
-    } else {
-      display('Loading', '&#8230;&#8230;');
-    }
-  }
-
-  function transferFailed() {
-    display('<span class="error">Unable to download index.</span>', '');
-  }
-
-  function transferComplete(e) {
-    var request = e.currentTarget;
-    if (request.status >= 200 && request.status < 400) {
-      // Success!
-      var data = JSON.parse(request.responseText);
-      executeSearch(data)
-    } else {
-      display('<span class="error">Unable to download index.</span>', 'Error '+request.status);
-    }
-  }
-
-  // parse querystring value
-  function paramValue(query_param) {
-    var results = new RegExp('[\\?&]' + query_param + '=([^&#]*)').exec(window.location.href);
-    return results ? results[1] : false;
-  }
-
-  function ready() {
-    display('', '');
-    if (paramValue('q')) {
-      currentQuery = paramValue('q');
-      updateQuery(currentQuery);
-      fetchIndex(currentQuery);
-    }
-  }
-
-  // when document is loaded, go!
-  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-    ready();
-  } else {
-    document.addEventListener('DOMContentLoaded', ready);
-  }
+  search();
 </script>

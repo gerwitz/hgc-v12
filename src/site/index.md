@@ -29,11 +29,7 @@ This site is served via a VPS (virtual private server) on Hetzner, from their He
 
 I no longer use Cloudflare as a CDN because I don't like how much of a monopoly they're forming, and there isn't enough traffic to worry anyway.
 
-If you use search, the Lunr script is loaded from [unpkg](https://unpkg.com/). [Lunr](https://lunrjs.com/) is open source and has no reason to log activity. Still, the requests to unpkg.com present a "leak surface" so are worth disclosing.[^itp]
-
-[^itp]: Your exposure depends on how [privacy-mature](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) your browser is, of course.
-
-That's it! I don't have any analytics "pixels" or drop cookies or whatever.
+That's it! I don't have any analytics "pixels" or drop cookies or whatever. Fonts and scripts are served from my static server. I've made a concerted effort to exclude any third parties; there is no reason for anyone else to be involved in you reading my site.
 
 ## Rights
 
