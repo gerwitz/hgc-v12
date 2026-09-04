@@ -222,16 +222,16 @@ body.root {
   img {
     border: var(--outline-width) solid var(--text-color);
   }
+}
 
-  .search-form input {
-    padding: 0 10px 0 30px;
-    position: absolute;
-    top: 0;
-    left: 6;
-    z-index: 5;
+.search-form.home input {
+  padding: 0 10px 0 30px;
+  position: absolute;
+  top: 0;
+  left: 6;
+  z-index: 5;
 
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .search-form button {
@@ -249,7 +249,7 @@ body.root {
   mask: url("/styles/icons/search.png") center / 18px 18px no-repeat;
 }
 
-body.root .search-form button {
+.search-form.home button {
   left: 6px;
 }
 
@@ -299,7 +299,7 @@ body.root .search-form button {
 .main-footer {
   container-type: inline-size;
 
-  .footer-topnav, .sitemap {
+  .sitemap {
     /*box-sizing: border-box;*/
 
     padding: var(--footer-panel-padding);
@@ -322,15 +322,17 @@ body.root .search-form button {
   }
 }
 
-.main-footer .footer-topnav {
+.footer-topnav {
   position: relative;
-  padding-left: 0;
-  padding-right: 0;
+  padding: var(--footer-panel-padding) 0;
 
   display: flex;
   align-items: center;
   width: 100%;
   height: 32px;
+
+  outline: var(--outline-width) solid var(--text-color); /* outer border */
+  background-color: var(--page-color);
 }
 
 .main-footer .footer-topnav .homelink {
@@ -351,7 +353,7 @@ body.root .search-form button {
   fill: var(--accent-color);
 }
 
-.main-footer .footer-topnav form {
+.footer-topnav form {
   flex: 0 0 auto;
 }
 
@@ -359,7 +361,7 @@ body.root .search-form button {
   margin-left: auto;
 }
 
-.main-footer .footer-topnav .search-form {
+.footer-topnav .search-form {
   position: relative;
   right: auto;
   bottom: auto;

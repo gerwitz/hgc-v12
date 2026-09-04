@@ -107,6 +107,14 @@ dd {
   margin-bottom: 8px;
 }
 
+/* SEARCH RESULTS */
+
+#search-results .preview-large {
+  margin: var(--footer-panel-padding) 0 0;
+  padding: var(--content-meta-padding-block) var(--footer-panel-padding);
+  outline: var(--outline-width) dotted var(--text-color); /* outer border */
+}
+
 /* META */
 
 .content-meta {
