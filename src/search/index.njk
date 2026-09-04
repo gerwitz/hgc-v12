@@ -27,45 +27,89 @@ eleventyExcludeFromCollections: true
     messageElement.textContent = message;
   };
 
+  const formatDate = (value) =>
+  {
+    const date = new Date(value);
+    const day = date.getDate();
+    const tens = day % 100;
+    const suffix = tens >= 11 && tens <= 13
+      ? "th"
+      : ["th", "st", "nd", "rd"][day % 10] || "th";
+
+    return `${date.toLocaleDateString("en-US", { month: "long" })} ${day}${suffix}, ${date.getFullYear()}`;
+  };
+
   const showResults = (results) =>
   {
-    const list = document.createElement("ol");
-    list.className = "article-list";
+    const previews = document.createDocumentFragment();
+    const iconNames = new Set(["culture", "list", "log", "note", "other", "personal", "project", "work"]);
 
     for (const result of results)
     {
-      const item = document.createElement("li");
+      const preview = document.createElement("article");
+      const heading = document.createElement("h3");
+      const icon = document.createElement("span");
       const link = document.createElement("a");
-      const title = document.createElement("span");
-      title.className = "title";
-      title.textContent = result.meta.title || "Untitled";
+      const iconName = iconNames.has(result.meta.icon) ? result.meta.icon : "other";
+      preview.className = "preview preview-large";
+      icon.className = "preview-icon";
+      icon.setAttribute("aria-hidden", "true");
+      icon.style.setProperty("--preview-icon", `url('/styles/icons/${iconName}.png')`);
       link.href = result.url;
-      link.append(title);
-      item.append(link);
+      link.textContent = result.meta.title || "Untitled";
+      heading.append(icon, link);
+      preview.append(heading);
 
-      if (result.meta.date)
+      if (result.meta.date || result.meta.wordCount)
       {
-        const date = document.createElement("span");
-        date.className = "meta";
-        date.textContent = ` (${new Date(result.meta.date).toLocaleDateString("en-US", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        })})`;
-        item.append(date);
+        const metadata = document.createElement("p");
+        metadata.className = "preview-meta";
+
+        if (result.meta.date)
+        {
+          const time = document.createElement("time");
+          time.dateTime = result.meta.date;
+          time.textContent = formatDate(result.meta.date);
+          metadata.append(time);
+        }
+
+        if (result.meta.date && result.meta.wordCount)
+        {
+          metadata.append(" · ");
+        }
+
+        if (result.meta.wordCount)
+        {
+          metadata.append(`${result.meta.wordCount} words`);
+        }
+
+        preview.append(metadata);
       }
 
-      if (result.meta.summary)
+      const fallbackSummary = result.meta.description || (result.meta.date ? formatDate(result.meta.date) : "");
+      const hasRenderedExcerpt = result.meta.hasBody === "true" && result.excerpt;
+      if (hasRenderedExcerpt || fallbackSummary)
       {
         const summary = document.createElement("p");
-        summary.textContent = result.meta.summary;
-        item.append(summary);
+        summary.className = "preview-summary";
+
+        if (hasRenderedExcerpt)
+        {
+          // Pagefind escapes indexed HTML before adding safe match-highlighting markup.
+          summary.innerHTML = result.excerpt;
+        }
+        else
+        {
+          summary.textContent = fallbackSummary;
+        }
+
+        preview.append(summary);
       }
 
-      list.append(item);
+      previews.append(preview);
     }
 
-    resultsElement.replaceChildren(list);
+    resultsElement.replaceChildren(previews);
   };
 
   const search = async () =>
@@ -84,8 +128,16 @@ eleventyExcludeFromCollections: true
       await pagefind.options({
         ranking: {
           metaWeights: {
+            categories: 1.5,
+            date: 0,
+            description: 1,
+            hasBody: 0,
+            icon: 0,
+            kind: 1,
+            neighbors: 0.35,
             title: 5,
             topics: 3,
+            wordCount: 0,
           },
         },
       });

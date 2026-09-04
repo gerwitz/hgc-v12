@@ -64,3 +64,47 @@ test("topics are normalized for stable relationships", () => {
 
   assert.deepEqual(record.topics, ["design", "interfaces"]);
 });
+
+test("Markdown search bodies contain rendered labels rather than Markdown URLs", () => {
+  const record = createContentRecord(createResult({
+    rawInput: "---\ntitle: Example page\n---\n\nRead [the label](https://example.com/private-path). ![A photograph](/media/private-name.jpg)",
+  }), MODEL);
+
+  assert.match(record.searchBodyHtml, /<a href="https:\/\/example\.com\/private-path"/);
+  assert.match(record.searchBodyHtml, />the label<\/a>/);
+  assert.match(record.searchBodyHtml, /<img src="\/media\/private-name\.jpg" alt="A photograph"/);
+  assert.doesNotMatch(record.searchBodyHtml, /\[the label\]/);
+});
+
+test("non-Markdown records provide metadata without a search body", () => {
+  const record = createContentRecord(createResult({
+    data: {
+      ...createResult().data,
+      description: "Dining experiences",
+    },
+    inputPath: "./src/logs/dining/index.njk",
+    rawInput: "{% for privateItem in privateCollection %}{{ privateItem.secret }}{% endfor %}",
+    url: "/logs/dining/",
+  }), MODEL);
+
+  assert.equal(record.description, "Dining experiences");
+  assert.equal(record.searchBodyHtml, "");
+});
+
+test("generated week pages use their source Markdown fragment", () => {
+  const record = createContentRecord(createResult({
+    data: {
+      searchBodyHtml: "<p>A rendered week note.</p>",
+      title: "Week 2700",
+      topics: ["weeknotes"],
+    },
+    inputPath: "./src/weeks/page.njk",
+    rawInput: "{{ week.content | safe }}",
+    url: "/weeks/2700/",
+  }), MODEL);
+
+  assert.equal(record.title, "Week 2700");
+  assert.equal(record.searchBodyHtml, "<p>A rendered week note.</p>");
+  assert.match(record.embeddingText, /A rendered week note\./);
+  assert.doesNotMatch(record.embeddingText, /week\.content/);
+});

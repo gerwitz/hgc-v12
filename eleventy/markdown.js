@@ -33,7 +33,7 @@ const linkAttributeConfigs = [
   },
 ];
 
-export default function markdownPlugin(eleventyConfig) {
+export const createMarkdownLibrary = () => {
   const options = {
     html: true,
     linkify: true,
@@ -74,5 +74,9 @@ export default function markdownPlugin(eleventyConfig) {
   markdownLib.renderer.rules.footnote_close = () => "</aside>";
   markdownLib.linkify.set({ fuzzyLink: false });
 
-  eleventyConfig.setLibrary("md", markdownLib);
+  return markdownLib;
+};
+
+export default function markdownPlugin(eleventyConfig) {
+  eleventyConfig.setLibrary("md", createMarkdownLibrary());
 }

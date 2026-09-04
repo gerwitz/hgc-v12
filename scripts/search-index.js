@@ -1,15 +1,14 @@
-import { readFile } from "node:fs/promises";
+import { readFile, rm } from "node:fs/promises";
 
 import * as pagefind from "pagefind";
 
-import { getContentRecords } from "./content-records.js";
+import { getContentRecords } from "../eleventy/content-records.js";
 
 const OUTPUT_PATH = "_site/pagefind";
 const RELATED_DATA_PATH = "src/_data/related.json";
 const MODEL = process.env.OPENAI_EMBEDDING_MODEL || "text-embedding-3-small";
 const MAXIMUM_NEIGHBORS = 5;
 const MINIMUM_PROPAGATION_SCORE = 0.65;
-const MAXIMUM_SUMMARY_CHARACTERS = 240;
 
 const escapeHtml = (value) => {
   return String(value)
@@ -19,14 +18,6 @@ const escapeHtml = (value) => {
     .replace(/"/g, "&quot;");
 };
 
-const getSummary = (text) => {
-  if (text.length <= MAXIMUM_SUMMARY_CHARACTERS)
-  {
-    return text;
-  }
-
-  return `${text.slice(0, MAXIMUM_SUMMARY_CHARACTERS).replace(/\s+\S*$/, "")}…`;
-};
 
 const getNeighborVocabulary = (record, relatedData) => {
   const relationships = relatedData.sources?.[record.url]?.related || [];
@@ -47,23 +38,27 @@ const getNeighborVocabulary = (record, relatedData) => {
 };
 
 const createSearchDocument = (record, relatedData) => {
+  const categories = record.categories.join(" ");
   const topics = record.topics.join(" ");
   const neighborVocabulary = getNeighborVocabulary(record, relatedData);
   return `<!doctype html>
 <html lang="en">
 <head>
   <title data-pagefind-meta="title">${escapeHtml(record.title)}</title>
-  <meta data-pagefind-meta="summary[content]" name="summary" content="${escapeHtml(getSummary(record.text))}">
+  <meta data-pagefind-meta="categories[content]" name="categories" content="${escapeHtml(categories)}">
+  <meta data-pagefind-meta="description[content]" name="description" content="${escapeHtml(record.description || "")}">
   <meta data-pagefind-meta="kind[content]" name="kind" content="${escapeHtml(record.kind)}">
   <meta data-pagefind-meta="date[content]" name="date" content="${escapeHtml(record.contentDate || "")}">
+  <meta data-pagefind-meta="hasBody[content]" name="hasBody" content="${record.searchBodyHtml ? "true" : "false"}">
+  <meta data-pagefind-meta="icon[content]" name="icon" content="${escapeHtml(record.previewIconName)}">
+  <meta data-pagefind-meta="neighbors[content]" name="neighbors" content="${escapeHtml(neighborVocabulary)}">
   <meta data-pagefind-meta="topics[content]" name="topics" content="${escapeHtml(topics)}">
+  <meta data-pagefind-meta="wordCount[content]" name="wordCount" content="${escapeHtml(record.wordCount || "")}">
 </head>
 <body>
   <main data-pagefind-body>
     <h1>${escapeHtml(record.title)}</h1>
-    <div>${escapeHtml(record.text)}</div>
-    <div data-pagefind-weight="3">${escapeHtml(topics)}</div>
-    <div data-pagefind-weight="0.35">${escapeHtml(neighborVocabulary)}</div>
+    ${record.searchBodyHtml}
   </main>
 </body>
 </html>`;
@@ -74,6 +69,8 @@ const main = async () => {
     getContentRecords(MODEL),
     readFile(RELATED_DATA_PATH, "utf8").then(JSON.parse),
   ]);
+  await rm(OUTPUT_PATH, { force: true, recursive: true });
+
   const { index, errors: createErrors } = await pagefind.createIndex({
     forceLanguage: "en",
     verbose: false,

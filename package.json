@@ -13,9 +13,9 @@
     "test": "node --test test/*.test.js",
     "start": "eleventy --serve",
     "generate:maps": "eleventy --quiet",
-    "related": "node --env-file-if-exists=.env eleventy/related-content.js",
-    "related:check": "node eleventy/related-content.js --dry-run",
-    "search:index": "node eleventy/search-index.js"
+    "related": "node --env-file-if-exists=.env scripts/related-content.js",
+    "related:check": "node scripts/related-content.js --dry-run",
+    "search:index": "node scripts/search-index.js"
   },
   "repository": {
     "type": "git",

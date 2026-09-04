@@ -1,11 +1,11 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-import { getContentRecords } from "./content-records.js";
-import { createRelatedData, updateRelatedGraph } from "./related-graph.js";
+import { getContentRecords } from "../eleventy/content-records.js";
+import { createRelatedData, updateRelatedGraph } from "../eleventy/related-graph.js";
 
-const CACHE_PATH = "eleventy/related-content-cache.json";
+const CACHE_PATH = "generated/related-content-cache.json";
 const RELATED_DATA_PATH = "src/_data/related.json";
-const GRAPH_CACHE_PATH = "eleventy/related-graph-cache.json";
+const GRAPH_CACHE_PATH = "generated/related-graph-cache.json";
 const MODEL = process.env.OPENAI_EMBEDDING_MODEL || "text-embedding-3-small";
 
 const EMBEDDING_BATCH_SIZE = 64;

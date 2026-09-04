@@ -29,7 +29,7 @@ Related-content data and its OpenAI embedding cache are committed so normal and 
 
 `OPENAI_API_KEY=... npm run related`
 
-Use `npm run related:check` to list the eligible content without requesting embeddings. The generator writes `eleventy/related-content-cache.json` and `src/_data/related.json`; commit both files with the related content changes.
+Use `npm run related:check` to list the eligible content without requesting embeddings. The generator writes `generated/related-content-cache.json`, `generated/related-graph-cache.json`, and `src/_data/related.json`; commit these files with the related content changes.
 
 ## Deployment (Coolify)
 

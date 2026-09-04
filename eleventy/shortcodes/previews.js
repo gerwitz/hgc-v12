@@ -24,7 +24,7 @@ const getPreviewItem = (context, itemOrUrl, shortcodeName) => {
 
 const WRITING_ICON_NAMES = new Set(["work", "culture", "personal"]);
 
-const getPreviewIconName = (item) => {
+export const getPreviewIconName = (item) => {
   const tags = Array.isArray(item.data.tags) ? item.data.tags : [];
 
   if (tags.includes("notes"))

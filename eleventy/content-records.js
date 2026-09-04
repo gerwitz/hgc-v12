@@ -3,10 +3,13 @@ import path from "node:path";
 
 import Eleventy from "@11ty/eleventy";
 
+import { createMarkdownLibrary } from "./markdown.js";
+
 const EMBEDDING_INPUT_VERSION = 1;
 const RELATIONSHIP_INPUT_VERSION = 1;
 const PRESENTATION_INPUT_VERSION = 1;
 const MAXIMUM_EMBEDDING_CHARACTERS = 12000;
+const markdownLibrary = createMarkdownLibrary();
 
 const hashValue = (value) => {
   return createHash("sha256").update(JSON.stringify(value)).digest("hex");
@@ -15,6 +18,11 @@ const hashValue = (value) => {
 const extractFrontMatter = (rawInput) => {
   const match = rawInput.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
   return match ? match[1] : "";
+};
+
+const extractFrontMatterValue = (frontMatter, key) => {
+  const match = frontMatter.match(new RegExp(`^${key}:\\s*["']?([^\\n"']+)["']?\\s*$`, "m"));
+  return match ? match[1].trim() : null;
 };
 
 const extractCategories = (frontMatter) => {
@@ -34,10 +42,12 @@ const extractCategories = (frontMatter) => {
     : [];
 };
 
-const extractArticleText = (rawInput) => {
-  const withoutFrontMatter = rawInput.replace(/^---\s*\n[\s\S]*?\n---\s*\n?/, "");
+const removeFrontMatter = (rawInput) => {
+  return rawInput.replace(/^---\s*\n[\s\S]*?\n---\s*\n?/, "");
+};
 
-  return withoutFrontMatter
+const extractArticleText = (rawInput) => {
+  return removeFrontMatter(rawInput)
     .replace(/\{[%#][\s\S]*?[%#]\}/g, " ")
     .replace(/<[^>]*>/g, " ")
     .replace(/!?(\[[^\]]*\])\([^)]*\)/g, "$1")
@@ -91,9 +101,19 @@ const normalizeTopics = (topics) => {
 export const createContentRecord = (result, model) => {
   const frontMatter = extractFrontMatter(result.rawInput);
   const kind = getKind(result.inputPath);
-  const categories = kind === "writing" ? extractCategories(frontMatter) : [];
-  const text = extractArticleText(result.rawInput);
-  const title = extractTitle(result.content, result.inputPath);
+  const categories = Array.isArray(result.data?.categories)
+    ? result.data.categories
+    : kind === "writing" ? extractCategories(frontMatter) : [];
+  const isMarkdown = result.inputPath.endsWith(".md");
+  const title = result.data?.title || extractTitle(result.content, result.inputPath);
+  const searchBodyHtml = result.data?.searchBodyHtml || (isMarkdown
+    ? markdownLibrary.render(removeFrontMatter(result.rawInput))
+    : "");
+  const text = result.data?.searchBodyHtml
+    ? stripHtml(result.data.searchBodyHtml)
+    : isMarkdown
+      ? extractArticleText(result.rawInput)
+      : result.data?.description || "";
   const topics = normalizeTopics(result.data?.topics);
   const embeddingText = [
     `Title: ${title}`,
@@ -116,24 +136,31 @@ export const createContentRecord = (result, model) => {
   });
   const presentationHash = hashValue({
     date: result.data?.contentDate || null,
+    description: result.data?.description || null,
+    previewIconName: result.data?.previewIconName || "other",
     title,
     url: result.url,
     version: PRESENTATION_INPUT_VERSION,
+    wordCount: result.data?.wordCount || null,
   });
 
   return {
     categories,
     contentDate: result.data?.contentDate || null,
+    description: result.data?.description || null,
     embeddingText,
     inputPath: result.inputPath,
     kind,
     presentationHash,
+    previewIconName: result.data?.previewIconName || "other",
     relationshipHash,
+    searchBodyHtml,
     text,
     textHash,
     title,
     topics,
     url: result.url,
+    wordCount: result.data?.wordCount || null,
   };
 };
 
@@ -150,13 +177,35 @@ export const getContentRecords = async (model) => {
   const metadataByUrl = new Map(
     JSON.parse(manifest.content).map((metadata) => [metadata.url, metadata]),
   );
+  const outputCountsByInputPath = results.reduce((counts, result) => {
+    counts.set(result.inputPath, (counts.get(result.inputPath) || 0) + 1);
+    return counts;
+  }, new Map());
+  const isMetadataOnlyPage = (result) => {
+    return !result.inputPath.endsWith(".md")
+      && result.url
+      && result.url !== "/search/"
+      && outputCountsByInputPath.get(result.inputPath) === 1
+      && typeof result.content === "string"
+      && /<html[\s>]/i.test(result.content)
+      && /<h1[\s>]/i.test(result.content);
+  };
 
   return results
-    .filter((result) => metadataByUrl.has(result.url))
+    .filter((result) => metadataByUrl.has(result.url) || isMetadataOnlyPage(result))
     .filter((result) => typeof result.rawInput === "string" && typeof result.content === "string")
-    .map((result) => createContentRecord({
-      ...result,
-      data: metadataByUrl.get(result.url),
-    }, model))
+    .map((result) => {
+      const frontMatter = extractFrontMatter(result.rawInput);
+      const metadata = metadataByUrl.get(result.url) || {
+        description: extractFrontMatterValue(frontMatter, "description")
+          || extractFrontMatterValue(frontMatter, "subtitle"),
+        url: result.url,
+      };
+
+      return createContentRecord({
+        ...result,
+        data: metadata,
+      }, model);
+    })
     .filter((record) => record.url && record.embeddingText);
 };
