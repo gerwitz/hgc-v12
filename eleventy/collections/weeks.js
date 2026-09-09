@@ -20,6 +20,11 @@ export const weeks = (collection) => {
 
   for (const template of weeknotes) {
     const weeknum = Number(template.fileSlug);
+    const canonicalUrl = `/weeks/${weeknum}/`;
+
+    // Weeknote Markdown is non-rendering source for the paginated week page.
+    // Give collection consumers the URL of that canonical rendered page.
+    template.url = canonicalUrl;
     template.weeknum = weeknum;
     allWeeks.set(weeknum, template);
   }
