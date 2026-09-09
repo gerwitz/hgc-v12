@@ -1,9 +1,10 @@
 ---
 pagination:
-  data: collections.weeks
+  data: collections.emptyWeeks
   size: 1
   alias: week
 layout: week
+override:tags: []
 eleventyComputed:
   title: "Week {{ week.weeknum }}"
   date: {{ week.date }}

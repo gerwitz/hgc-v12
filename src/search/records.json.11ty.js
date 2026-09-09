@@ -12,23 +12,7 @@ export default class SearchRecords {
   render(data)
   {
     const searchableMarkdown = data.collections.searchable
-      .filter((item) => item.inputPath.endsWith(".md"))
-      .map((item) => {
-        if (!item.data.tags?.includes("weeknotes"))
-        {
-          return item;
-        }
-
-        return {
-          ...item,
-          data: {
-            ...item.data,
-            searchBodyHtml: item.content,
-            title: `Week ${item.fileSlug}`,
-          },
-          url: `/weeks/${item.fileSlug}/`,
-        };
-      });
+      .filter((item) => item.inputPath.endsWith(".md"));
     const metadataOnlyPages = data.collections.all.filter((item) => {
       return !item.inputPath.endsWith(".md")
         && item.url

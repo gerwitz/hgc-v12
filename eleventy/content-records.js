@@ -191,7 +191,7 @@ export const getContentRecords = async (model) => {
       && /<h1[\s>]/i.test(result.content);
   };
 
-  const records = results
+  return results
     .filter((result) => metadataByUrl.has(result.url) || isMetadataOnlyPage(result))
     .filter((result) => typeof result.rawInput === "string" && typeof result.content === "string")
     .map((result) => {
@@ -208,7 +208,4 @@ export const getContentRecords = async (model) => {
       }, model);
     })
     .filter((record) => record.url && record.embeddingText);
-
-  // Multiple Eleventy inputs can represent one canonical page. Index each URL once.
-  return Array.from(new Map(records.map((record) => [record.url, record])).values());
 };

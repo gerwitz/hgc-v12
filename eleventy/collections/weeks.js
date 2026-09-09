@@ -1,40 +1,56 @@
-// every. single. week.
+// Every week for the woven archive, whether or not it has an authored weeknote.
 
 import moment from "moment";
 
 import { genesisMoment, weekStartMoment } from "../week.js";
 
-export const weeks = (collection) => {
+const getWeeks = (collection) => {
   const weeknotes = collection.getFilteredByTag("weeknotes");
   const currentWeek = moment().diff(genesisMoment(), "weeks");
+  const weeksByNumber = new Map();
 
-  const allWeeks = new Map();
-  for (let i = 0; i < currentWeek; i += 1) {
-    allWeeks.set(i, {
-      weeknum: i,
-      date: weekStartMoment(i),
-      fileSlug: i.toString(),
+  for (let weekNumber = 0; weekNumber < currentWeek; weekNumber += 1) {
+    weeksByNumber.set(weekNumber, {
+      weeknum: weekNumber,
+      date: weekStartMoment(weekNumber),
+      fileSlug: weekNumber.toString(),
+      url: `/weeks/${weekNumber}/`,
       content: "<p><em>There are no comments for this week.</em></p>",
+      empty: true,
     });
   }
 
-  for (const template of weeknotes) {
-    const weeknum = Number(template.fileSlug);
-    const canonicalUrl = `/weeks/${weeknum}/`;
+  for (const weeknote of weeknotes) {
+    const weekNumber = Number(weeknote.fileSlug);
 
-    // Weeknote Markdown is non-rendering source for the paginated week page.
-    // Give collection consumers the URL of that canonical rendered page.
-    template.url = canonicalUrl;
-    template.weeknum = weeknum;
-    allWeeks.set(weeknum, template);
+    weeksByNumber.set(weekNumber, {
+      weeknum: weekNumber,
+      date: weekStartMoment(weekNumber),
+      fileSlug: weekNumber.toString(),
+      url: weeknote.url,
+      empty: false,
+      current: weekNumber === currentWeek,
+      weeknote,
+    });
   }
 
-  allWeeks.set(currentWeek, {
-    current: true,
-    weeknum: currentWeek,
-    fileSlug: currentWeek.toString(),
-    content: `<p>It was still ${moment().format("dddd")} of this week when the site was last published. Maybe you want <a href="/weeks/${currentWeek - 1}/">last week</a>?</p>`,
-  });
+  if (!weeksByNumber.has(currentWeek)) {
+    weeksByNumber.set(currentWeek, {
+      current: true,
+      weeknum: currentWeek,
+      date: weekStartMoment(currentWeek),
+      fileSlug: currentWeek.toString(),
+      url: `/weeks/${currentWeek}/`,
+      content: `<p>It was still ${moment().format("dddd")} of this week when the site was last published. Maybe you want <a href="/weeks/${currentWeek - 1}/">last week</a>?</p>`,
+      empty: true,
+    });
+  }
 
-  return Array.from(allWeeks.values());
+  return Array.from(weeksByNumber.values());
+};
+
+export const weeks = (collection) => getWeeks(collection);
+
+export const emptyWeeks = (collection) => {
+  return getWeeks(collection).filter((week) => week.empty);
 };
