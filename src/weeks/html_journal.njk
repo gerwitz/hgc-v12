@@ -1,0 +1,18 @@
+---
+title: Hans Gerwitz’s weeknotes
+layout: index
+override:tags: []
+eleventyExcludeFromCollections: true
+permalink: /weeks/journal.html
+---
+
+The last 16 weeks, for use as an <a href="https://journal.miso.town/">HTML Journal</a>:
+
+{% set recentWeeknotes = collections.weeknotes | reverse | limit(16) %}
+{% for weeknote in recentWeeknotes %}
+<article>
+  <h2>{{ weeknote.data.contentDate | date("YYYY-MM-DD") }}</h2>
+  {{ weeknote.content | safe }}
+</article>
+
+{% endfor %}

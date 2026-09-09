@@ -2,7 +2,7 @@ import moment from "moment";
 
 import { genesisMoment } from "../../eleventy/week.js";
 
-const isIndexPage = (data) => data.page.filePathStem.endsWith("/index");
+const isAuthoredWeeknote = (data) => data.page.inputPath.endsWith(".md");
 
 const getWeekNumber = (data) => Number(data.page.fileSlug);
 
@@ -11,23 +11,23 @@ export default {
   tags: ["weeknotes", "searchable"],
   eleventyComputed: {
     title: (data) => {
-      if (isIndexPage(data)) {
-        return data.title;
+      if (data.week || isAuthoredWeeknote(data)) {
+        const weekNumber = data.week?.weeknum ?? getWeekNumber(data);
+        return `Week ${weekNumber}`;
       }
 
-      const weekNumber = data.week?.weeknum ?? getWeekNumber(data);
-      return `Week ${weekNumber}`;
+      return data.title;
     },
     permalink: (data) => {
-      if (isIndexPage(data)) {
-        return data.permalink;
+      if (data.week || isAuthoredWeeknote(data)) {
+        const weekSlug = data.week?.fileSlug || data.page.fileSlug;
+        return `/weeks/${weekSlug}/`;
       }
 
-      const weekSlug = data.week?.fileSlug || data.page.fileSlug;
-      return `/weeks/${weekSlug}/`;
+      return data.permalink;
     },
     week: (data) => {
-      if (isIndexPage(data) || data.week) {
+      if (data.week || !isAuthoredWeeknote(data)) {
         return data.week;
       }
 
