@@ -9,6 +9,7 @@
 @import '_previews.css';
 @import '_lightbox.css';
 @import '_toys.css';
+@import '_work.css';
 
 /* CSS variables for runtime - these are now in _variables.css but keeping here for compatibility */
 :root {

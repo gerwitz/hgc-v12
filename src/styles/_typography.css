@@ -59,6 +59,11 @@ p {
   -ms-hyphenate-limit-chars: 10 5 4;
 }
 
+ul {
+  list-style-type: disc;
+  padding-left: 0;
+}
+
 h1, h2, h3, h4 {
   font-family: var(--heading-font, var(--title-font));
   font-weight: var(--heading-font-weight, var(--title-font-weight));

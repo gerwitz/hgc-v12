@@ -1,0 +1,135 @@
+/* Work history index and role detail pages. */
+
+.work-introduction {
+  max-width: 38rem;
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+}
+
+.work-history {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-position {
+  border-top: var(--outline-width) solid var(--text-color);
+}
+
+.work-position:last-child {
+  border-bottom: var(--outline-width) solid var(--text-color);
+}
+
+.work-position-link {
+  display: grid;
+  padding: 2rem 0 2.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.work-position-link:hover {
+  background: transparent;
+  color: inherit;
+}
+
+.work-position-link:hover h2 {
+  color: var(--accent-color);
+}
+
+
+.work-position-main h2,
+.work-detail-header h1 {
+  margin: 0;
+}
+
+.work-period,
+.work-location,
+.work-company {
+  color: var(--meta-color);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.work-period,
+.work-location {
+  margin: 0;
+  font-size: .9rem;
+}
+
+.work-company {
+  margin: 0 0 .5rem;
+  font-weight: 600;
+}
+
+.work-position-meta {
+  padding-top: .15rem;
+}
+
+.work-headline {
+  margin-bottom: .75rem;
+  font-weight: 600;
+}
+
+.work-highlights {
+  margin-top: .75rem;
+}
+
+.work-highlights li + li {
+  margin-top: .4rem;
+}
+
+.work-detail-header {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.work-detail > .main .work-headline {
+  font-size: 1.2rem;
+}
+
+/* Reverse the standard content/sidenote proportions for the work index. */
+@media (min-width: 822px) {
+  .work-index .main > article {
+    display: grid;
+    grid-template-columns: var(--sidenote-column-width) var(--content-width);
+  }
+
+  .work-index .main > article > * {
+    float: none;
+    clear: none;
+    width: auto;
+    max-width: none;
+  }
+
+  .work-index .main > article > h1,
+  .work-index .work-introduction {
+    grid-column: 2;
+  }
+
+  .work-index .work-history {
+    grid-column: 1 / -1;
+  }
+
+  .work-index .work-position-link {
+    grid-template-columns: var(--sidenote-column-width) var(--content-width);
+  }
+
+  .work-index .work-position-meta {
+    padding-right: var(--sidenote-column-padding);
+    text-align: right;
+  }
+}
+
+@media (max-width: 821px) {
+  .work-position-link {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .work-detail-header {
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+}

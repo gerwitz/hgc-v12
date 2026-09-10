@@ -1,0 +1,36 @@
+---
+title: Work
+layout: index
+bodyClass: page work-index
+override:tags: []
+eleventyExcludeFromCollections: true
+---
+
+<p class="work-introduction">Cross-functional leader with a strong record of building effective, empowered teams, positioning design as a strategic partner, and balancing product depth and reach.</p>
+
+<ol class="work-history">
+{% for position in collections.work | reverse %}
+  <li class="work-position">
+    <a href="{{ position.page.url }}" class="work-position-link">
+      <div class="work-position-meta">
+        <p class="work-company">{{ position.data.company }}</p>
+        <p class="work-period">
+          <time datetime="{{ position.data.startDate | date('iso8601') }}">{{ position.data.startDate | date('YYYY') }}</time>–{% if position.data.endDate %}<time datetime="{{ position.data.endDate | date('iso8601') }}">{{ position.data.endDate | date('YYYY') }}</time>{% else %}present{% endif %}
+        </p>
+        <p class="work-location">{{ position.data.location }}</p>
+      </div>
+      <div class="work-position-main">
+        <h2>{{ position.data.role }}</h2>
+        <p class="work-headline">{{ position.data.headline }}</p>
+        {% if position.data.highlights.length %}
+        <ul class="work-highlights">
+        {% for highlight in position.data.highlights %}
+          <li>{{ highlight }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </a>
+  </li>
+{% endfor %}
+</ol>

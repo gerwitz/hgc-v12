@@ -1,0 +1,31 @@
+---
+layout: base
+bodyClass: page work-detail
+---
+
+<article>
+<header class="work-detail-header">
+  <div class="work-position-meta">
+    <p class="work-company"><a href="{{ url }}" class="external">{{ company }}</a></p>
+    <p class="work-period">
+      <time datetime="{{ startDate | date('iso8601') }}">{{ startDate | date('MMMM YYYY') }}</time>–{% if endDate %}<time datetime="{{ endDate | date('iso8601') }}">{{ endDate | date('MMMM YYYY') }}</time>{% else %}present{% endif %}
+    </p>
+    <p class="work-location">{{ location }}</p>
+  </div>
+  <div>
+    <h1>{{ role }}</h1>
+  </div>
+</header>
+
+<p class="work-headline">{{ headline }}</p>
+
+{% if highlights.length %}
+<ul class="work-highlights">
+{% for highlight in highlights %}
+  <li>{{ highlight }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{{ content | safe }}
+</article>
