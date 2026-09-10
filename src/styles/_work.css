@@ -1,23 +1,9 @@
 /* Work history index and role detail pages. */
 
-.work-introduction {
-  max-width: 38rem;
-  margin-bottom: 4rem;
-  font-size: 1.2rem;
-}
-
 .work-history {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.work-position {
-  border-top: var(--outline-width) solid var(--text-color);
-}
-
-.work-position:last-child {
-  border-bottom: var(--outline-width) solid var(--text-color);
 }
 
 .work-position-link {

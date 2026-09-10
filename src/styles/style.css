@@ -124,6 +124,10 @@ dd {
 
   margin-top: 32px;
 
+  > ul {
+    list-style-type: none;
+  }
+
   > div {
     width: 100%;
     margin-top: var(--footer-panel-padding);
