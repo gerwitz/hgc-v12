@@ -1,8 +1,9 @@
 {# Keep src/site/styles.njk's content metadata sample in sync with this template and test the proofsheet after changes. #}
 {% set relatedSource = related.sources[page.url] %}
+{% set relatedItems = relatedSource.related | filterExistingRelated(collections.all) if relatedSource else [] %}
 {% set isDatedContent = bodyClass == "writing" or bodyClass == "note" %}
 {% set hasCrossposts = syndication and syndication.length %}
-{% set hasRelatedContent = relatedSource and relatedSource.related.length %}
+{% set hasRelatedContent = relatedItems.length %}
 {% set knownTopics = topics | filterKnownTopics(collections.topics) %}
 {% set hasKnownTopics = knownTopics.length %}
 {% if isDatedContent or hasRelatedContent %}
@@ -28,7 +29,7 @@
     <section class="related-content">
       Related pages:
       <ul>
-      {% for item in relatedSource.related %}
+      {% for item in relatedItems %}
         <li class="{{ item.kind }}" data-score="{{ item.score }}">
           <a href="{{ item.url }}">{{ item.title }}</a>
         </li>
