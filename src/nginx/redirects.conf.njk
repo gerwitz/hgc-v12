@@ -1,0 +1,35 @@
+---
+permalink: nginx/redirects.conf
+eleventyExcludeFromCollections: true
+---
+# Historic public URLs.
+location ~ ^/library/records/(.*)$
+{
+  return 301 /logs/appearances/$1;
+}
+
+location ~ ^/library/projects/(.*)$
+{
+  return 301 /projects/$1;
+}
+
+location ~ ^/uses/(.*)$
+{
+  return 301 /lists/objects/$1;
+}
+
+{% set thisweek = collections.weeks[collections.weeks.length - 2] %}
+location = /now
+{
+  return 302 {{ thisweek.url }};
+}
+
+location = /now/
+{
+  return 302 {{ thisweek.url }};
+}
+
+location = /work
+{
+  return 301 /logs/work/;
+}
