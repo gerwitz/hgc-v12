@@ -4,4 +4,4 @@ slug: i-guess-it-s-my-turn
 ---
 I guess it’s my turn. 🦠
 
-![](https://hans.gerwitz.com/media/2022-02/07-143507-image._46bf.png)
+![](https://hans.gerwitz.com/assets/2022-02/07-143507-image._46bf.png)

@@ -12,7 +12,7 @@ syndication:
 - https://linkedin.com/pulse/author-hans-gerwitz
 ---
 
-![The Practical Guide to Experience Design](/media/2020-04/practical-guide.jpg)
+![The Practical Guide to Experience Design](/assets/2020-04/practical-guide.jpg)
 
 Shannon E. Thomas has published _[The Practical Guide to Experience Design](https://practical.guide/)_ and I am excited. I may be biased because we've been partners for years, but let me explain why I believe _this_ book by _this_ person is important.
 

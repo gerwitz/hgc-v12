@@ -13,7 +13,7 @@ Monday was King's Day, usually the biggest party in Amsterdam. This year, of cou
 
 [^woning]: The pun doesn't translate well, but it's as if _livingroom_ rhymed with _king_.
 
-![BiJaBiKi](/media/2020-04/oranje-binnentuin.jpeg)
+![BiJaBiKi](/assets/2020-04/oranje-binnentuin.jpeg)
 
 After the planned party was over, somehow [my barber](https://partyflock.nl/artist/97950:Nass-Mea) showed up at another balcony with his full DJ rig and mixed dance tracks for a few hours. The party escalated, with people jumping from balcony to balcony. Until the police came; I guess all the young ready-to-party women and couples in the courtyard didn't represent everyone on the block.
 

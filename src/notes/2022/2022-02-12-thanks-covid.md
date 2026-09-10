@@ -4,4 +4,4 @@ slug: thanks-covid
 ---
 Thanks, covid.
 
-![](https://hans.gerwitz.com/media/2022-02/12-140029-image._f1df.png)
+![](https://hans.gerwitz.com/assets/2022-02/12-140029-image._f1df.png)

@@ -14,7 +14,7 @@ On our last trip to Seattle, Shannon and I brought back our [road bikes](/lists/
 The Dutch tracks are a pleasure to use, and who can complain about riding to the sea? But comparing the elevation profile against my typical Seattle experience makes me worry for the future of my climbing strength.
 
 Seattle:
-![Seattle](/media/2014-04-22-snelfiets/seattle.png)
+![Seattle](/assets/2014-04-22-snelfiets/seattle.png)
 
 Amsterdam:
-![Amsterdam](/media/2014-04-22-snelfiets/amsterdam.png)
+![Amsterdam](/assets/2014-04-22-snelfiets/amsterdam.png)

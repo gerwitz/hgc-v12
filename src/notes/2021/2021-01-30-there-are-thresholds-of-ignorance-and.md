@@ -6,6 +6,6 @@ There are thresholds of ignorance and violence that are dangerous, and advocatin
 
 We need to keep talking about whether "cancel culture" sets them too low, but if you deny they exist you have crossed the ignorance threshold.
 
-![Marjorie Taylor Green, photo by Jonathan Ernst for Reuters](/media/2021-01/greene.jpg)
+![Marjorie Taylor Green, photo by Jonathan Ernst for Reuters](/assets/2021-01/greene.jpg)
 
 

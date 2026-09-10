@@ -6,4 +6,4 @@ Amsterdam is in constant flux. Almost 3% of the city’s population is coming or
 
 (To read this chart, “geboorteovershot" is births, “buitenlands” is foreign, and “binnenlands" is domestic. Source: OIS)
 
-![](https://hans.gerwitz.com/media/2019-06/17-143537-bevolking._261a.png)
+![](https://hans.gerwitz.com/assets/2019-06/17-143537-bevolking._261a.png)

@@ -4,5 +4,5 @@ slug: r-i-p-chuck-peddle-https
 ---
 R.I.P. Chuck Peddle
 
-![](https://hans.gerwitz.com/media/2019-12/25-153044-6502._111c.png)
+![](https://hans.gerwitz.com/assets/2019-12/25-153044-6502._111c.png)
 

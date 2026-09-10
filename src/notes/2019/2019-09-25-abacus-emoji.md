@@ -4,4 +4,4 @@ slug: abacus-emoji
 ---
 iOS 13.1 just fixed the abacus emoji. Here's how to read the new one. (Apple was founded on April 1, 1976.)
 
-![abacus](https://hans.gerwitz.com/media/2019-09/abacus.gif)
+![abacus](https://hans.gerwitz.com/assets/2019-09/abacus.gif)

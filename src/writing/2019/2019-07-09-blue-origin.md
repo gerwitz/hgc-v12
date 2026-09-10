@@ -17,7 +17,7 @@ I understand his ambitions in the context of the [Space Studies Institute](http:
 - We need to make beautiful, enjoyable space habitats if we're going to live there. This means nature, which requires scale.
 
 <figure>
-<img src="/media/2019-07-09-blue-origin/rickguidice.jpg" alt="Stanford Torus">
+<img src="/assets/2019-07-09-blue-origin/rickguidice.jpg" alt="Stanford Torus">
 <span class="margin note">One of the classic <a href="http://www.rickguidice.com/nasaart/nasaarti.html">Rick Guidice illustrations</a>from 1975.</span>
 </figure>
 

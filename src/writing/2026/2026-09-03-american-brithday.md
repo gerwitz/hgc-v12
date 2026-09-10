@@ -16,7 +16,7 @@ As a good citizen of the heartland, I of course grew up celebrating the 4th of J
 
 [^trump]: Also “anniversary” and sometimes [both](https://www.whitehouse.gov/presidential-actions/2025/01/celebrating-americas-250th-birthday/), as is the 47th administration’s confused manner.
 
-![Dad posing with me at the [American Freedom Train](https://en.wikipedia.org/wiki/American_Freedom_Train_(1975%E2%80%931976)) in St. Louis](/media/2026-09/SP4449.jpeg)
+![Dad posing with me at the [American Freedom Train](https://en.wikipedia.org/wiki/American_Freedom_Train_(1975%E2%80%931976)) in St. Louis](/assets/2026-09/SP4449.jpeg)
 
 So now I’m wondering if I am comfortable calling the Declaration of Independence’s semiquincentennial the 250th birthday of the United States. Maybe it’s reasonable, as Indonesia celebrates their proclamation of independence from the Netherlands.
 
