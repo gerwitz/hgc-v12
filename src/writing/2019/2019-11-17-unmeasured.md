@@ -13,7 +13,7 @@ When I migrated this site to [Wordpress in 2006](/2006/04/09/wordpress-it-is.htm
 
 Today, I would prefer to not know who is visiting this site. I'm aware my "audience" is small in any venue, and a personal web site is hardly a major media outlet. I no longer  expect even friends and family will read anything here unless it is also cross-posted to some social netework. This encourages me to focus on posting here for my own benefit.
 
-So I have removed Google Analytics and I'm not replacing it. The only way I will notice traffic to this site as currently configured is if Netlify informs me I'm over their 100GB monthly bandwidth quota.
+So I have removed Google Analytics and am not replacing it. The only way I will notice traffic to this site as currently configured is if Netlify informs me I'm over their 100GB monthly bandwidth quota.
 
 In case I regret this in the future, though, here were the "top performing" posts to this point:
 
