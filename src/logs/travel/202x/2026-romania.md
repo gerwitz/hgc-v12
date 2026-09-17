@@ -68,4 +68,4 @@ destinations:
     geo: [44.43394, 26.09887]
 ---
 
-A friend of Shannon's got married outside her hometown in Romania, so we made a big trip of it by starting with night trains. First to Vienna for dinner with another friend, then to Bucharest for a fancy meal and light touristing. Finally, a normal train up to the north, near the Ukrainian border, to stay with a large group of Amsterdammers for the wedding celebrations.
+A friend of Shannon's got married outside her hometown in Romania, so we made a big trip of it by starting with night trains. First to Vienna for dinner with another friend, then to Bucharest for a [fancy meal](/logs/dining/2026-le-bistrot-francais) and light touristing. Finally, a normal train up to the north, near the Ukrainian border, to stay with a large group of Amsterdammers for the wedding celebrations.
