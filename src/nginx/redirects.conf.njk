@@ -13,6 +13,16 @@ location ~ ^/library/projects/(.*)$
   return 301 /projects/$1;
 }
 
+location = /uses
+{
+  return 301 /lists/things/;
+}
+
+location = /uses/
+{
+  return 301 /lists/things/;
+}
+
 location ~ ^/uses/(.*)$
 {
   return 301 /lists/objects/$1;

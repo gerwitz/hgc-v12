@@ -13,7 +13,7 @@ You may think of it as my book of shadows, commonplace book, [digital garden](ht
 
 [^blog]: Like [Joel Hooks](https://joelhooks.com/digital-garden), I no longer like to call it a blog.
 
-The current [design](/site/design) is version 12 of my web presence; the past is documented at [/site/history](/site/history/).
+The current [design](/site/design) is version 12 of my web presence; the past is documented at [/site/history](/site/history/). The [URL structure](/sitemap/) has remained fairly stable.
 
 ## Colophon
 
