@@ -30,4 +30,6 @@ subtitle: The tools I have used to access cyberspace
 - MacBook Pro 13" touchbar (Philips)
 - MacBook Pro 13" M1 (Philips - barely usable with only 8GB RAM)
 - MacBook Air M2
-- MacBook Pro 14 (Philips)
+- MacBook Pro 14" (Philips)
+- System76 Lemur Pro (for Canonical)
+- MacBook Pro 14" (Quillbot)

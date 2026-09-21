@@ -1,33 +1,32 @@
 ---
-title: Stuff
+title: Things
 ---
 
-<!--
-  https://aaronparecki.com/life-stack/
- -->
+While most of the luxuries of life are logged under [travel](/logs/travel/), [dining](/logs/dining/), or [projects](/projects/), I do like to buy nice things. If I find myself wanted to share the joy with others, I'll add it here to recommend to the world.
 
-Stuff I find important enough to reference or recommend:
+The fads of sharing your "setup" or maintaining a `/uses` page come and go, and I've always found them a bit too airline-magazine consumeristic.[^aaronpk] Yet, here's mine. My rationale is in line with the rest of this site: I find is helpful to document my life. With that in mind, not everything listed here is meant to be relevant in the present.
 
-## Digital
+[^aaronpk]: To be fair, some such as Aaron Parecki's [life stack](https://aaronparecki.com/life-stack/) have really helped me find useful tools.
 
-This site's stack:
-- [Eleventy](https://www.11ty.dev/) to build
-- [Netlify](https://www.netlify.com/) to serve
-- [IndieKit](https://getindiekit.com/) to post, indyweb-style
-- [Akkoma](https://akkoma.social/) to connect to the social fediverse
+## Digital Life
 
-[Visual Code Studio](https://code.visualstudio.com/)
+### Computer
 
-[1Password](https://1password.com/)
+Naturally, my primary computer is a very important part of my life so I'm starting a log at [/logs/computers](/logs/computers/). I think the PowerBook Duo and NeXTstation stand out as favorites.
 
-[iA Writer](https://ia.net/writer)
+Currently, I love my M2 MacBook Air (2022). I wish I could get the matte display from my work MacBook Pro (2025), but the form factor is just so nice.
 
-[Working Copy](https://workingcopyapp.com/)
+I've been an on-and-off iPad user. There have been times when I used an 11" iPad Pro with a keyboard/trackpad case as my daily driver, especially with reoutine train commutes and a cellular connection. But I keep comping back to macOS.
 
-## Hardware
+### PDA
 
-- 2022 M2 MacBook Air (14" M1 MacBook Pro at work)
-- 11" iPad Pro is increasingly my go-to at both work and home.
+There have been other companion devices in my life since the first Palm Pilot. I got a used Newton MessagePad and really thought they were under-rated, but like the Apple Vision Pro, no amount of amazing engineering could make up for it just being too big and heavy for the use case.
+
+I was slow to have a cell phone, but loved my Motorola PEBL and only gave it up when I could replace both it and my beloved Palm V with a Treo. Then the iPhone happened and I've been replacing those roughly every other year, with fond memories of the 4, 5, and X. I'm very unhappy about how big they've grown.
+
+### Watch
+
+Loved the Pebble, but was happy to replace it and Fitbit clip with an Apple Watch. I keep upgrading those, but none are special; they work as advertised, mostly by reducing the amount of time I glance at my phone.
 
 ## Carry Kit
 
@@ -35,18 +34,10 @@ This site's stack:
 
 Around Christmas of 2014, I bought a Framelet from [Matthijs Ariens](https://www.demeneer.nl/). It was an experiment in manufacturing and he decided it couldn't be made and sold profitably. I think it's the best of many, many wallets I've tried, though.
 
-### Phone
-
-I've been carrying pocket computers for ages, and since 2007 they've been iPhones. Today it's an iPhone 13 Pro, which is too big.
-
-### Watch
-
-Apple Watch (Series 4)
-
 ### Headphones
 
 Commuting and calls: Airpods Pro
-Sport cycling: Powerbeats Pro
+Sport cycling: Shokz OpenRun Pro 2
 Inflight plugins: [Urbanears Kransen](https://headfonics.com/2013/11/the-kransen-iem-by-urbanears/) (sadly discontinued)
 
 ### Belt
@@ -61,10 +52,8 @@ I found a [Bison belt](https://bisondesigns.com/products/30mm-catch-and-release&
 
 [VanMoof](https://www.vanmoof.com/en_nl/bikes/standard-step-in)
 
-## Home
-
-[Philips IconiQ](https://ifdesign.com/en/winner-ranking/project/iconiq-wetdry-shaver/180839)
-
 ## History
 
-[Boombox](./boombox/)
+After a decade of use, the battery in my [Philips IconiQ](https://ifdesign.com/en/winner-ranking/project/iconiq-wetdry-shaver/180839) died and I changed to the flagship Braun razor. It works well, has a _slightly_ more pleasant buzz, and shaves closer. But I miss the IconiQ's form factor. It was a delight to hold and use.
+
+I still fondly remember my [childhood boombox](./boombox/).

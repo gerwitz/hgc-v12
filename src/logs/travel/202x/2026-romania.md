@@ -16,6 +16,10 @@ trains:
     date: 2026-09-17
     from: bucharest
     to: suceava
+  -
+    date: 2026-09-20
+    from: suceava
+    to: iasi
 flights:
   -
     date: 2026-09-21
