@@ -5,24 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {% set origin = "https://hans.gerwitz.com" %}
     {% set title = title or "Untitled" %}
     {% set description = description or ("I " + confession if confession else "Personal website of Hans Gerwitz") %}
-    {% set url = external or "https://hans.gerwitz.com" + page.url %}
-    {% set image = "https://hans.gerwitz.com/opengraph.png" %}
+    {% set url = external or origin + page.url %}
+    {% set isArticle = bodyClass == "writing" %}
+    {% set image = sharing.image if sharing and sharing.image else origin + "/opengraph.png" %}
+    {% if image[0] == "/" %}
+      {% set image = origin + image %}
+    {% endif %}
+    {% set imageAlt = sharing.alt if sharing and sharing.alt else title if sharing and sharing.image else "Hans Gerwitz’s personal website" %}
     <meta name="author" content="Hans Gerwitz">
     <meta name="description" content="{{ description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="{{ 'article' if isArticle else 'website' }}">
     <meta property="og:url" content="{{ url }}">
     <meta property="og:locale" content="en_NL">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:image" content="{{ image }}">
+    {% if sharing and sharing.image %}
+      {% if sharing.width %}<meta property="og:image:width" content="{{ sharing.width }}">{% endif %}
+      {% if sharing.height %}<meta property="og:image:height" content="{{ sharing.height }}">{% endif %}
+      {% if sharing.type %}<meta property="og:image:type" content="{{ sharing.type }}">{% endif %}
+    {% else %}
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="Hans Gerwitz’s personal website">
+    {% endif %}
+    <meta property="og:image:alt" content="{{ imageAlt }}">
+    {% if isArticle %}
+    <meta property="article:published_time" content="{{ page.date | date('iso8601') }}">
+    {% if updated %}<meta property="article:modified_time" content="{{ updated | date('iso8601') }}">{% endif %}
+    <meta property="article:author" content="{{ origin }}/">
+    {% if categories and categories.length %}<meta property="article:section" content="{{ categories[0] }}">{% endif %}
+    {% for topic in topics or [] %}<meta property="article:tag" content="{{ topic }}">{% endfor %}
+    {% endif %}
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@gerwitz">
@@ -31,7 +50,7 @@
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image" content="{{ image }}">
-    <meta name="twitter:image:alt" content="Hans Gerwitz’s personal website">
+    <meta name="twitter:image:alt" content="{{ imageAlt }}">
     <link rel="canonical" href="{{ url }}">
 
     <!-- favicon, etc. -->
