@@ -1,0 +1,11 @@
+---
+pagination:
+  data: collections.notes
+  size: 1
+  alias: entry
+permalink: "/editions/gemini{{ entry.url | geminiPath }}"
+eleventyExcludeFromCollections: true
+---
+# {{ entry.data.title }}
+
+{{ entry.page.rawInput | gemtext(entry.url, gemini, collections.writing, collections.notes) | safe }}

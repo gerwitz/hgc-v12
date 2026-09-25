@@ -1,0 +1,19 @@
+---
+pagination:
+  data: collections.writing
+  size: 1
+  alias: entry
+permalink: "/editions/gemini{{ entry.url | geminiPath }}"
+eleventyExcludeFromCollections: true
+---
+# {{ entry.data.title }}
+
+{{ entry.page.rawInput | gemtext(entry.url, gemini, collections.writing, collections.notes) | safe }}
+
+## About this post
+
+Posted during week {{ entry.date | weeknum }} ({{ entry.date | date("MMMM YYYY") }}).
+
+=> https://hans.gerwitz.com{{ entry.url }} View on the web
+=> /writing/index.gmi More writing
+=> /index.gmi Capsule home
