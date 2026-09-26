@@ -5,6 +5,7 @@ export { filterExistingRelated } from "./filterexistingrelated.js";
 export { filterByTopics, filterKnownTopics } from "./filterbytopics.js";
 export { geminiPath, markdownToGemtext as gemtext } from "../gemtext.js";
 export { hostname } from "./hostname.js";
+export { htmlText } from "./htmltext.js";
 export { json } from "./json.js";
 export { limit } from "./limit.js";
 export { log } from "./log.js";

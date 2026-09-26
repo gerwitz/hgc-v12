@@ -5,5 +5,5 @@ eleventyExcludeFromCollections: true
 # Writing
 
 {% for entry in collections.writing | reverse %}
-=> {{ entry.url | geminiPath }} {{ entry.data.title }}
+=> {{ entry.url | geminiPath }} {{ entry.data.title | htmlText | safe }}
 {% endfor %}

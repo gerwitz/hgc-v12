@@ -6,7 +6,7 @@ pagination:
 permalink: "/editions/gemini{{ entry.url | geminiPath }}"
 eleventyExcludeFromCollections: true
 ---
-# {{ entry.data.title }}
+# {{ entry.data.title | htmlText | safe }}
 
 {{ entry.page.rawInput | gemtext(entry.url, gemini, collections.writing, collections.notes) | safe }}
 
