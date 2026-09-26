@@ -3,6 +3,7 @@ export { date } from "./date.js";
 export { filterByCategories } from "./filterbycategories.js";
 export { filterExistingRelated } from "./filterexistingrelated.js";
 export { filterByTopics, filterKnownTopics } from "./filterbytopics.js";
+export { geminiPath, markdownToGemtext as gemtext } from "../gemtext.js";
 export { hostname } from "./hostname.js";
 export { json } from "./json.js";
 export { limit } from "./limit.js";

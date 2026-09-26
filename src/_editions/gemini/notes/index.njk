@@ -1,0 +1,9 @@
+---
+permalink: /editions/gemini/notes/index.gmi
+eleventyExcludeFromCollections: true
+---
+# Notes
+
+{% for entry in collections.notes | reverse %}
+=> {{ entry.url | geminiPath }} {{ entry.data.title }}
+{% endfor %}
