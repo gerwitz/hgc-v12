@@ -36,10 +36,10 @@ Use `npm run related:check` to list the eligible content without requesting embe
 This project is configured for Dockerfile-based deployment in Coolify.
 
 - Build source: `Dockerfile`
-- Runtime base image: `ghcr.io/gerwitz/smolhost`
+- Runtime base image: `ghcr.io/gerwitz/calmserve`
 - Runtime servers: Nginx, Gemini, and Spartan
 - Generated site path: `/_site` copied to `/usr/share/nginx/html`
-- Generated Gemini path: `/_site/editions/gemini` copied to `/srv/smallweb`
+- Generated Gemini path: `/_site/editions/gemini` copied to `/srv/calmserve`
 
 Media requests under `/media/*` are proxied by Nginx to an S3-compatible origin, using the `MEDIA_ORIGIN_HOST` environment variable.
 
@@ -53,14 +53,14 @@ The same media origin is used by the Gemini and Spartan service. Expose containe
 port `1965` for Gemini and map the public Spartan port `300` to container port
 `3000`.
 
-Persist `/var/lib/smallweb/certificates` as a Coolify volume. Gemini clients
+Persist `/var/lib/calmserve/certificates` as a Coolify volume. Gemini clients
 trust the self-signed certificate across visits, so replacing it during every
 deployment would cause certificate warnings.
 
-The `smolhost` image is maintained in the
-[`gerwitz/smolhost`](https://github.com/gerwitz/smolhost) repository. It must be
+The `calmserve` image is maintained in the
+[`gerwitz/calmserve`](https://github.com/gerwitz/calmserve) repository. It must be
 publicly readable in GitHub Container Registry, or Coolify must be configured
-with registry credentials. The site Docker build accepts `SMOLHOST_IMAGE` as a
+with registry credentials. The site Docker build accepts `CALMSERVE_IMAGE` as a
 build argument when a specific image tag or digest should be used instead of
 `latest`.
 

@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 
-ARG SMOLHOST_IMAGE=ghcr.io/gerwitz/smolhost:latest
+ARG CALMSERVE_IMAGE=ghcr.io/gerwitz/calmserve:latest
 
 FROM node:22.15-alpine AS build
 
@@ -13,14 +13,14 @@ COPY . .
 ENV ELEVENTY_ENV=production
 RUN npm run build
 
-FROM ${SMOLHOST_IMAGE} AS runtime
+FROM ${CALMSERVE_IMAGE} AS runtime
 
 ENV MEDIA_ORIGIN_HOST=your-bucket.s3.fr-par.scw.cloud
 
 COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
 COPY --from=build /app/_site/nginx/redirects.conf /etc/nginx/redirects.conf
 COPY --from=build /app/_site /usr/share/nginx/html
-COPY --from=build /app/_site/editions/gemini /srv/smallweb
+COPY --from=build /app/_site/editions/gemini /srv/calmserve
 
 EXPOSE 80 1965 3000
 
