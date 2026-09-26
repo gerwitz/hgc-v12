@@ -68,16 +68,16 @@ const renderPreview = function(templateName, itemOrUrl, shortcodeName) {
 };
 
 // Render a compact linked preview for an item or canonical permalink.
-export function previewSmall(itemOrUrl) {
-  return renderPreview.call(this, "preview-small.njk", itemOrUrl, "previewSmall");
+export function previewsmall(itemOrUrl) {
+  return renderPreview.call(this, "preview-small.njk", itemOrUrl, "previewsmall");
 }
 
 // Render a title and available metadata for an item or canonical permalink.
-export function previewMedium(itemOrUrl) {
-  return renderPreview.call(this, "preview-medium.njk", itemOrUrl, "previewMedium");
+export function previewmedium(itemOrUrl) {
+  return renderPreview.call(this, "preview-medium.njk", itemOrUrl, "previewmedium");
 }
 
 // Render a title, available metadata, and summary for an item or canonical permalink.
-export function previewLarge(itemOrUrl) {
-  return renderPreview.call(this, "preview-large.njk", itemOrUrl, "previewLarge");
+export function previewlarge(itemOrUrl) {
+  return renderPreview.call(this, "preview-large.njk", itemOrUrl, "previewlarge");
 }
