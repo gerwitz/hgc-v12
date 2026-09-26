@@ -36,8 +36,10 @@ Use `npm run related:check` to list the eligible content without requesting embe
 This project is configured for Dockerfile-based deployment in Coolify.
 
 - Build source: `Dockerfile`
-- Runtime server: Nginx
+- Runtime base image: `ghcr.io/gerwitz/smolhost`
+- Runtime servers: Nginx, Gemini, and Spartan
 - Generated site path: `/_site` copied to `/usr/share/nginx/html`
+- Generated Gemini path: `/_site/editions/gemini` copied to `/srv/smallweb`
 
 Media requests under `/media/*` are proxied by Nginx to an S3-compatible origin, using the `MEDIA_ORIGIN_HOST` environment variable.
 
@@ -46,6 +48,21 @@ Set this in Coolify application environment variables, for example:
 `MEDIA_ORIGIN_HOST=your-bucket.s3.fr-par.scw.cloud`
 
 With this configuration, browser URLs remain same-origin (for example `/media/example.jpg`) while content is fetched from the object storage backend.
+
+The same media origin is used by the Gemini and Spartan service. Expose container
+port `1965` for Gemini and map the public Spartan port `300` to container port
+`3000`.
+
+Persist `/var/lib/smallweb/certificates` as a Coolify volume. Gemini clients
+trust the self-signed certificate across visits, so replacing it during every
+deployment would cause certificate warnings.
+
+The `smolhost` image is maintained in the
+[`gerwitz/smolhost`](https://github.com/gerwitz/smolhost) repository. It must be
+publicly readable in GitHub Container Registry, or Coolify must be configured
+with registry credentials. The site Docker build accepts `SMOLHOST_IMAGE` as a
+build argument when a specific image tag or digest should be used instead of
+`latest`.
 
 ## Standards
 

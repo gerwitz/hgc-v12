@@ -14,7 +14,10 @@
     {% if image[0] == "/" %}
       {% set image = origin + image %}
     {% endif %}
-    {% set imageAlt = sharing.alt if sharing and sharing.alt else title if sharing and sharing.image else "Hans Gerwitz’s personal website" %}
+    {% set imageAlt = "Hans Gerwitz’s personal website" -%}
+    {% if sharing and sharing.image -%}
+      {% set imageAlt = sharing.alt or title -%}
+    {% endif %}
     <meta name="author" content="Hans Gerwitz">
     <meta name="description" content="{{ description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
