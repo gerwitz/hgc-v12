@@ -31,6 +31,54 @@ test("converts Markdown structure directly to gemtext", () => {
   );
 });
 
+test("renders link-only list items as Gemtext links", () => {
+  const source = [
+    "- [Stickers](brands/)",
+    "- [Stuff](things/ \"Things to recommend\")",
+    "- [*Elementary* Lessons](lessons/)",
+    "",
+    "Read [more](more.html).",
+  ].join("\n");
+  const configuration = { collections: ["lists"] };
+  const lists = [
+    { url: "/lists/brands/" },
+    { url: "/lists/things/" },
+    { url: "/lists/lessons/" },
+  ];
+
+  assert.equal(
+    markdownToGemtext(source, "/lists/", configuration, { lists }),
+    [
+      "=> /lists/brands/index.gmi Stickers",
+      "=> /lists/things/index.gmi Things to recommend",
+      "=> /lists/lessons/index.gmi Elementary Lessons",
+      "",
+      "Read more(1).",
+      "=> https://hans.gerwitz.com/lists/more.html (1) more",
+      "",
+    ].join("\n"),
+  );
+});
+
+test("keeps prose and multiple links in list items", () => {
+  const source = [
+    "- Read [Stickers](brands/)",
+    "- [Stickers](brands/) or [Stuff](things/)",
+  ].join("\n");
+
+  assert.equal(
+    markdownToGemtext(source, "/lists/"),
+    [
+      "* Read Stickers(1)",
+      "=> https://hans.gerwitz.com/lists/brands/ (1) Stickers",
+      "* Stickers(2) or Stuff(3)",
+      "=> https://hans.gerwitz.com/lists/brands/ (2) Stickers",
+      "=> https://hans.gerwitz.com/lists/things/ (3) Stuff",
+      "",
+    ].join("\n"),
+  );
+});
+
 test("moves Markdown links onto gemtext link lines", () => {
   const source = "Read [my writing](/writing/) or [an example](https://example.com/).";
 

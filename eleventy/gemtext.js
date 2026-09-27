@@ -163,6 +163,38 @@ const renderInlineBlock = (token, context, prefix = "") => {
   return parts.join("\n");
 };
 
+const renderLinkOnlyListItem = (tokens, openIndex, closeIndex, context) => {
+  const itemTokens = tokens.slice(openIndex + 1, closeIndex);
+
+  if (itemTokens.length !== 3
+    || itemTokens[0].type !== "paragraph_open"
+    || itemTokens[1].type !== "inline"
+    || itemTokens[2].type !== "paragraph_close") {
+    return null;
+  }
+
+  const inlineTokens = itemTokens[1].children || [];
+
+  if (inlineTokens[0]?.type !== "link_open"
+    || inlineTokens.at(-1)?.type !== "link_close"
+    || matchingCloseIndex(inlineTokens, 0) !== inlineTokens.length - 1
+    || inlineTokens.slice(1, -1).some((token) => ["link_open", "image", "footnote_ref"].includes(token.type))) {
+    return null;
+  }
+
+  const url = editionUrl(inlineTokens[0].attrGet("href"), context);
+
+  if (!url) {
+    return null;
+  }
+
+  const title = normalizeText(inlineTokens[0].attrGet("title") || "");
+  const text = renderInline(inlineTokens.slice(1, -1), context).text;
+
+  // A direct Gemtext link needs no numbered reference or duplicate bullet text.
+  return `=> ${url} ${title || text || url}`;
+};
+
 const renderList = (tokens, openIndex, closeIndex, context) => {
   const items = [];
 
@@ -172,6 +204,14 @@ const renderList = (tokens, openIndex, closeIndex, context) => {
     }
 
     const itemCloseIndex = matchingCloseIndex(tokens, index);
+    const link = renderLinkOnlyListItem(tokens, index, itemCloseIndex, context);
+
+    if (link) {
+      items.push(link);
+      index = itemCloseIndex;
+      continue;
+    }
+
     const content = renderBlocks(tokens, context, index + 1, itemCloseIndex);
     const lines = content.split("\n");
     const firstTextIndex = lines.findIndex((line) => line && !line.startsWith("=>"));

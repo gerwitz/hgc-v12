@@ -38,10 +38,11 @@ test("lists index reuses the web introduction and its selected links", () => {
   const index = render("content.njk", pages[0]);
 
   assert.match(index, /We like lists because we don’t want to die\./);
-  assert.match(index, /=> \/lists\/brands\/index\.gmi \(\d+\) Stickers/);
-  assert.match(index, /=> \/lists\/things\/index\.gmi \(\d+\) Stuff/);
+  assert.match(index, /=> \/lists\/brands\/index\.gmi Stickers/);
+  assert.match(index, /=> \/lists\/things\/index\.gmi Stuff/);
   assert.doesNotMatch(index, /=> \/lists\/bozos\/index\.gmi/);
   assert.doesNotMatch(index, /=> \/lists\/brands\/lego\/index\.gmi/);
+  assert.doesNotMatch(index, /\* Stickers/);
   assert.doesNotMatch(index, /=> \/lists\/index\.gmi More lists/);
   assert.doesNotMatch(index, /\n{3,}/);
   assert.match(index, /\n\n=> \/index\.gmi Capsule home\n$/);
