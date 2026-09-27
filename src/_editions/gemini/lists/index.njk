@@ -1,0 +1,11 @@
+---
+permalink: /editions/gemini/lists/index.gmi
+eleventyExcludeFromCollections: true
+---
+# Lists
+
+{% for entry in collections.lists %}
+=> {{ entry.url | geminiPath }} {{ (entry.data.title or entry.page.fileSlug) | plaintext | safe }}
+{% endfor %}
+
+=> /index.gmi Capsule home

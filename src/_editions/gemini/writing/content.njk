@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
 ---
 # {{ entry.data.title | plaintext | safe }}
 
-{{ entry.page.rawInput | gemtext(entry.url, gemini, collections.writing, collections.notes) | safe }}
+{{ entry.page.rawInput | gemtext(entry.url, gemini, collections) | safe }}
 
 ## About this post
 

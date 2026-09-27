@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections.about
+  size: 1
+  alias: entry
+permalink: "/editions/gemini{{ entry.url | geminiPath }}"
+eleventyExcludeFromCollections: true
+---
+# {{ entry.data.title | plaintext | safe }}
+
+{{ entry.page.rawInput | gemtext(entry.url, gemini, collections) | safe }}
+{% if entry.url == "/about/" %}
+## More about me
+
+{% for page in collections.about %}
+{% if page.url != "/about/" %}
+=> {{ page.url | geminiPath }} {{ page.data.title | plaintext | safe }}
+{% endif %}
+{% endfor %}
+{% else %}
+=> /about/index.gmi About me
+{% endif %}
+=> /index.gmi Capsule home

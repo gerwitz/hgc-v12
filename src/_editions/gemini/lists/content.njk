@@ -1,11 +1,14 @@
 ---
 pagination:
-  data: collections.notes
+  data: collections.lists
   size: 1
   alias: entry
 permalink: "/editions/gemini{{ entry.url | geminiPath }}"
 eleventyExcludeFromCollections: true
 ---
-# {{ entry.data.title | plaintext | safe }}
+# {{ (entry.data.title or entry.page.fileSlug) | plaintext | safe }}
 
 {{ entry.page.rawInput | gemtext(entry.url, gemini, collections) | safe }}
+
+=> /lists/index.gmi More lists
+=> /index.gmi Capsule home

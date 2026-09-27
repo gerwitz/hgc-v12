@@ -295,8 +295,8 @@ const withoutFrontMatter = (source) => {
 const createRenderingContext = (sourceUrl, configuration, collections) => {
   const editionRoutes = new Set(configuration.routes || []);
 
-  for (const collection of collections) {
-    for (const item of collection || []) {
+  for (const collectionName of configuration.collections || []) {
+    for (const item of collections[collectionName] || []) {
       if (item.url) {
         editionRoutes.add(item.url);
       }
@@ -316,7 +316,7 @@ export const markdownToGemtext = (
   source,
   sourceUrl = "/",
   configuration = {},
-  ...collections
+  collections = {}
 ) => {
   const tokens = markdown.parse(withoutFrontMatter(source || ""), {});
   const context = createRenderingContext(sourceUrl, configuration, collections);

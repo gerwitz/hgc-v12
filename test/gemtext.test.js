@@ -65,6 +65,7 @@ test("maps only known edition routes to Gemini and uses link titles", () => {
   ].join(" ");
   const configuration = {
     routes: ["/notes/"],
+    collections: ["writing"],
     webOrigin: "https://hans.gerwitz.com",
   };
   const writing = [
@@ -74,12 +75,35 @@ test("maps only known edition routes to Gemini and uses link titles", () => {
   ];
 
   assert.equal(
-    markdownToGemtext(source, "/writing/current.html", configuration, writing),
+    markdownToGemtext(source, "/writing/current.html", configuration, { writing }),
     [
       "Read the neighbor(1), browse notes(2), or visit about(3).",
       "=> /writing/neighbor.gmi (1) Neighbor title",
       "=> /notes/index.gmi (2) notes",
       "=> https://hans.gerwitz.com/about/ (3) about",
+      "",
+    ].join("\n"),
+  );
+});
+
+test("maps static page collections to Gemini routes", () => {
+  const source = "See [about](/about/), [lists](/lists/), [things](/lists/things/), and [web only](/web-only/).";
+  const configuration = {
+    routes: ["/about/", "/lists/"],
+    collections: ["about", "lists"],
+  };
+  const about = [{ url: "/about/flaws/" }];
+  const lists = [{ url: "/lists/things/" }];
+  const webOnly = [{ url: "/web-only/" }];
+
+  assert.equal(
+    markdownToGemtext(source, "/", configuration, { about, lists, webOnly }),
+    [
+      "See about(1), lists(2), things(3), and web only(4).",
+      "=> /about/index.gmi (1) about",
+      "=> /lists/index.gmi (2) lists",
+      "=> /lists/things/index.gmi (3) things",
+      "=> https://hans.gerwitz.com/web-only/ (4) web only",
       "",
     ].join("\n"),
   );
