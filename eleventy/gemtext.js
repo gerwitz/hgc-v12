@@ -31,8 +31,8 @@ const editionUrl = (value, context) => {
 const renderLinks = (links) => {
   return links
     .map(({ label, number, url }) => {
-      const linkLabel = label && label !== url ? ` ${label}` : "";
-      return `=> ${url} (${number})${linkLabel}`;
+      // The reference number needs a following label or Gemtext treats it as the title.
+      return `=> ${url} (${number}) ${label || url}`;
     })
     .join("\n");
 };

@@ -45,6 +45,19 @@ test("moves Markdown links onto gemtext link lines", () => {
   );
 });
 
+test("shows auto-linked URLs after the reference number", () => {
+  const source = "This is the most important new website of recent memory: https://industrystandard.tools/ seeks to share what products professionals prefer, without fluff or advertising.";
+
+  assert.equal(
+    markdownToGemtext(source),
+    [
+      "This is the most important new website of recent memory: https://industrystandard.tools/(1) seeks to share what products professionals prefer, without fluff or advertising.",
+      "=> https://industrystandard.tools/ (1) https://industrystandard.tools/",
+      "",
+    ].join("\n"),
+  );
+});
+
 test("maps only known edition routes to Gemini and uses link titles", () => {
   const source = [
     "Read the [neighbor](neighbor.html \"Neighbor title\"),",
