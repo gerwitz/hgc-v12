@@ -9,15 +9,15 @@ eleventyExcludeFromCollections: true
 # {{ entry.data.title | plaintext | safe }}
 
 {{ entry.page.rawInput | gemtext(entry.url, gemini, collections) | safe }}
-{% if entry.url == "/about/" %}
+{% if entry.url == "/about/" -%}
 ## More about me
 
-{% for page in collections.about %}
-{% if page.url != "/about/" %}
+{% for page in collections.about -%}
+{% if page.url != "/about/" -%}
 => {{ page.url | geminiPath }} {{ page.data.title | plaintext | safe }}
-{% endif %}
+{% endif -%}
 {% endfor %}
-{% else %}
+{% else -%}
 => /about/index.gmi About me
-{% endif %}
+{% endif -%}
 => /index.gmi Capsule home

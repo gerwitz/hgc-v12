@@ -20,7 +20,7 @@ const render = (filename, entry) => {
   const environment = new nunjucks.Environment();
   environment.addFilter("geminiPath", geminiPath);
   environment.addFilter("plaintext", (value) => value);
-  environment.addFilter("gemtext", () => "");
+  environment.addFilter("gemtext", () => "Body.\n");
 
   return environment.renderString(template, { collections: { lists: pages }, entry });
 };
@@ -32,6 +32,8 @@ test("lists index links to top-level pages, not their descendants", () => {
   assert.match(index, /=> \/lists\/things\/index\.gmi Things/);
   assert.doesNotMatch(index, /=> \/lists\/brands\/lego\/index\.gmi/);
   assert.doesNotMatch(index, /=> \/lists\/things\/aethos\/index\.gmi/);
+  assert.doesNotMatch(index, /\n{3,}/);
+  assert.match(index, /\n\n=> \/index\.gmi Capsule home\n$/);
 });
 
 test("list pages link to their direct children only", () => {
@@ -39,4 +41,6 @@ test("list pages link to their direct children only", () => {
 
   assert.match(brands, /=> \/lists\/brands\/lego\/index\.gmi lego/);
   assert.doesNotMatch(brands, /=> \/lists\/things\/aethos\/index\.gmi/);
+  assert.doesNotMatch(brands, /\n{3,}/);
+  assert.match(brands, /Body\.\n\n=> \/lists\/brands\/lego\/index\.gmi lego\n/);
 });

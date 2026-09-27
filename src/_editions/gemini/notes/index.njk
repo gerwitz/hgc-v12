@@ -4,6 +4,6 @@ eleventyExcludeFromCollections: true
 ---
 # Notes
 
-{% for entry in collections.notes | reverse %}
+{% for entry in collections.notes | reverse -%}
 => {{ entry.url | geminiPath }} {{ entry.data.title | plaintext | safe }}
-{% endfor %}
+{% endfor -%}

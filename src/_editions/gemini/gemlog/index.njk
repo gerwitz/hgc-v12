@@ -5,8 +5,7 @@ eleventyExcludeFromCollections: true
 # Hans Gerwitz's gemlog
 ## Notes and longer writing from hans.gerwitz.com
 
-{% for entry in collections.microblog %}
+{% for entry in collections.microblog -%}
 => {{ entry.url | geminiPath }} {{ entry.date | date("YYYY-MM-DD") }} - {{ entry.title | plaintext | safe }}
 {% endfor %}
-
 => /index.gmi Capsule home
