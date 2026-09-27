@@ -2,7 +2,7 @@
 title: Lists
 subtitle: The Celestial Emporium of Benevolent Knowledge
 layout: index
-eleventyExcludeFromCollections: true
+override:tags: [lists]
 ---
 
 > We like lists because we don't want to die.
