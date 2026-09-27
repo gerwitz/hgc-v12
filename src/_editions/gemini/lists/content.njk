@@ -10,5 +10,11 @@ eleventyExcludeFromCollections: true
 
 {{ entry.page.rawInput | gemtext(entry.url, gemini, collections) | safe }}
 
+{% for page in collections.lists %}
+{% if page.url.indexOf(entry.url) == 0 and page.url.indexOf("/", entry.url.length) == page.url.length - 1 %}
+=> {{ page.url | geminiPath }} {{ (page.data.title or page.page.fileSlug) | plaintext | safe }}
+{% endif %}
+{% endfor %}
+
 => /lists/index.gmi More lists
 => /index.gmi Capsule home
