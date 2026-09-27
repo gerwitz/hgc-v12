@@ -8,6 +8,8 @@ eleventyExcludeFromCollections: true
   generated: <span title="{{ generated | date }}">{{ generated | date('nice') | safe }}</span>
 </pre>
 
+<img src="https://hans.gerwitz.com/.well-known/calmserve/updated.svg" alt="calmserve update badge">
+
 {% for group in contentGroups %}
 <details>
   <summary>{{ group.title }} ({{ group.items.length }})</summary>
