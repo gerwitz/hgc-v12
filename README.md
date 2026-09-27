@@ -1,6 +1,10 @@
 # hans.gerwitz.com
 
+![production timestamp badge](https://hans.gerwitz.com/.well-known/calmserve/updated.svg)
+
 This is an [Eleventy](https://www.11ty.dev/) project that builds https://hans.gerwitz.com/
+
+The repository is a mix of site-building code, which may be authored with AI, and content, which is human-crafted.
 
 Most page content is in markdown parsed by [markdown-it](https://github.com/markdown-it/markdown-it), layout templates and more complex pages use [Nunjucks](https://mozilla.github.io/nunjucks/).
 
@@ -53,9 +57,15 @@ The same media origin is used by the Gemini and Spartan service. Expose containe
 port `1965` for Gemini and map the public Spartan port `300` to container port
 `3000`.
 
-Persist `/var/lib/calmserve/certificates` as a Coolify volume. Gemini clients
-trust the self-signed certificate across visits, so replacing it during every
-deployment would cause certificate warnings.
+In the Coolify application's persistent storage settings, add a volume mounted
+at `/var/lib/calmserve/certificates` before deploying. The Dockerfile cannot
+configure Coolify's persistent storage; a Dockerfile `VOLUME` declaration alone
+does not ensure the same volume is reused across deployments. Keep this mount
+attached to the application so `cert.pem` and `key.pem` survive container
+replacement. Gemini clients trust the self-signed certificate across visits, so
+losing these files causes certificate warnings. If the previous certificate and
+key are available, restore both to the volume to retain existing client trust;
+otherwise clients must accept the new certificate once.
 
 The `calmserve` image is maintained in the
 [`gerwitz/calmserve`](https://github.com/gerwitz/calmserve) repository. It must be
