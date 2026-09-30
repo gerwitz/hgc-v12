@@ -6,7 +6,6 @@ topics:
 - ai
 - design
 - ux
-draft: true
 ---
 
 Just a few years ago, UX[^ux] designers were still enjoying the credibility our field has enjoyed ever since Apple added “design is how it works” to accepted business wisdom. Recently, though, _AI_ changed from a magical technology that makes recommendations useful and pedometers accurate into a technological magic that makes software feel like talking to humans. That has made many people question why we should bother with GUI. Isn’t flawless search better than browsing menus? Why bother learning a tool when you can just speak about it to an expert who wields it for you? What purpose is there to defining workflows and making controls visible if we can just infer what users are trying to do?
@@ -27,9 +26,9 @@ Apple may have been right to quip that “most computer screens look like the de
 
 The mediation of a GUI concealed the system from its user. This might have served to bring more people into computer use, but it wasn’t worth the tradeoff that prevented real proficiency.
 
-We weren’t wrong about the risks! But we also engaged in some tribalism, and there was more than a little machismo in the mix.[^womens-work] To become an expert with a CLI requires building mental models and much memorizing. That can be something to be  and lead to resentment of “dumbing down” the art to enable newcomers.
+We weren’t wrong about the risks! But we also engaged in some tribalism, and there was more than a little machismo in the mix.[^womens-work] To become an expert with a CLI requires building mental models and much memorizing. That can be a source of pride and lead to resentment of “dumbing down” the art to enable newcomers.
 
-[^womens-work]: The machismo was, and continues to be, quite ironic considering the [origins of digital computing](https://news.sparkfun.com/6411).)
+[^womens-work]: The machismo was, and continues to be, quite ironic considering the [origins of digital computing](https://news.sparkfun.com/6411).
 
 CLIs continue to have unique value and we were right to question the hiding of their power. But many adherents, then and now, can be motivated by prideful gatekeeping.
 
@@ -45,7 +44,7 @@ The new anti-visual argument seems to be that users need not learn anything. Jus
 
 Yet as frictionless as natural language chat _feels_, it is still an interface that mediates our interaction with the machine. CLI gave us precision, formality, and reproducibility. GUI brought strong affordances, powerful spatial metaphors, and visible state with clear and recoverable actions.
 
-So far, our chat interfaces are replacing these with obscurity. Context and state are implicit or fuzzy, capabilities are opaque with ambiguous boundaries, and trying to reliably reproduce work is so hard there are new professions being imagined to “engineer” some certainty out of it all.
+So far, our chat interfaces are replacing these with obscurity. Context and state are implicit or fuzzy, capabilities are opaque with ambiguous boundaries, and trying to reliably reproduce work is so hard there are new professions being imagined to “engineer” some certainty out of it all. Complexity is not being reduced, it is only being hidden well enough to give product builders false hope.
 
 ## The New Graybeards
 
@@ -65,131 +64,30 @@ Their critique of GUI is not unfounded; doing it well is hard. That’s why the 
 
 ## False Comforts
 
-Simplicity cannot be layered atop complexity. Effective use of a system often requires learning many concepts and how they relate to each other, as well as understanding what actions you can take as a user.
+Simplicity is not easily layered atop complexity. Effective use of a system often requires learning many concepts and how they relate to each other, as well as understanding what actions you can take as a user.
 
 Ideally, the system is well-architected and maps to user expectations, with actions that represent their needs. If that’s true and the GUI is nonetheless difficult to use, the interface has failed and ought to be renovated.
 
-But the system might not be as fit-for-purpose as the builders hoped. Maybe there are more concepts than really necessary or the relationships don’t map well to the objectives. The available actions might be insufficient, too extensive, or ambiguous. It’s possible a frontend might be devised that nonetheless can map to a usable abstraction; this is hard work but not uncommon in “well designed” (from the outside) software.
+But the system might not be as fit-for-purpose as the builders hoped. Maybe there are more concepts than really necessary or the relationships don’t map well to the objectives. The available actions might be insufficient, too extensive, or ambiguous. It’s possible a frontend might be devised that nonetheless can map to a usable abstraction; this is hard work yet not uncommon in “well designed” (from the outside) software.
 
-But that work is not avoided by adding a natural language abstraction with an LLM.
+That work cannot be avoided by adding a natural language abstraction with an LLM. A remapping of the system to a user-oriented concept model may become a part of the work deploying an AI-enabled chat interface, but if it is avoided the resulting bot will frustrate users like a poorly-trained frontline employee might.
 
+Even if the system is elegant and matches user needs well, a GUI may be poorly designed and confuse users with insufficient feedback or visibility of state, fail to manage the user’s attention through necessary workflows, or hamper discoverability of its capabilities. Naively implementing AI tooling to address these UX problems may look like a friction-reducing success, but will fall apart in real-world conditions when users need to handle edge cases or failure conditions, look for deterministic reassurance, or overlook system capabilities.
 
-does not automatically reduce their complexity or mismatch. A
+## Pretending
 
- All of the chat UIs being added to 
+I think what bothered me enough to start this rant was not merely the design-dismissive attitude of some immature product builders.[^dismissive] The really disturbing phenomenon is a new posture that borrows the aesthetic of technical seriousness, with dark-mode TUIs and 8-bit dithering, without respect for the crafts of _either_ systems engineering or HCI. New tools that enable them to build something that seems to work and looks polished have amplified the Dunning-Kruger effect.
 
-On the engineering side, sustainable software still requires:
+[^dismissive]: As an engineer that migrated to design, I’m quite accustomed to defending the work of UX and ergonomics.
 
-- architecture
+But it’s not only these prompt-jockeys that I’m worried about. Many highly-competent engineers and even product managers have taken to assuming that UX is now a solved problem because we can easily put a chat UI on anything.
 
-- debugging
+The original CLI graybeards may have fetishized technical knowledge and confused difficulty with maturity, but they valued explicit precision and transparency. In waving away concerns about usability with exhortations to RTFM, they at least were challenging users to join them.
 
-- maintenance
+The new chatheads seem keen to avoid thinking about users altogether. Give them a synthetic representative to talk to and there’s no need to worry about all those things designers go on about. The friction is not actually eliminated, but is transformed into communication and much more easily ignored.
 
-- data modeling
+## Users Still Exist
 
-- reliability
+Our beautiful software has always been complicated by messy human users. In resisting the rise of GUI, the skeptics hoped to avoid addressing the challenge. By slapping a chatbot on every interface, the new text-advocates believe the magic of AI can address it for them.
 
-- security
-
-- performance judgment
-
-- operational understanding
-
-On the UX side, effective tools still require:
-
-- feedback
-
-- error recovery
-
-- state visibility
-
-- trust calibration
-
-- attention and memory design
-
-- workflow understanding
-
-- discoverability
-
-- humane failure modes
-
-Key line:
-
-> Complexity has not disappeared. It has moved below the abstraction boundary.
-
-Explain the consequence:
-
-- the user may feel less friction
-
-- but someone, or some system, still has to manage the complexity
-
-- if that management is hidden, users may have less ability to inspect, correct, or understand failures
-
-## X. Final Contrast: Old Elitism and New Complacency
-
-
-> The new posture borrows the aesthetic of technical seriousness without always preserving the older respect for explicit systems understanding.
-
-
-Draw the essay’s final distinction.
-
-The old CLI culture could be elitist and exclusionary, but it respected rigor.
-
-Old CLI nerds:
-
-- fetishized expertise
-
-- sometimes confused difficulty with value
-
-- but valued precision, explicitness, and composability
-
-- admitted that power required skill
-
-Some chat triumphalists:
-
-- inherit disdain for interface friction
-
-- dismiss design and HCI as obsolete
-
-- mistake ease of prompting for the irrelevance of expertise
-
-- confuse delegation with understanding
-
-- outsource rigor while preserving the feeling of mastery
-
-Avoid calling this laziness. The more precise critique is:
-
-- seduction by frictionless invocation
-
-- abstraction mistaken for disappearance
-
-- confidence without inspectability
-
-- mastery as a feeling rather than a discipline
-
-## XI. Conclusion: Mediation Never Ends
-
-The lesson is not that GUI skepticism was right.
-
-Nor is it that chat interfaces are doomed.
-
-The lesson is that each interface wave tempts people to believe:
-
-- now mediation is over
-
-- now users can simply express what they want
-
-- now old disciplines can be discarded
-
-- now friction has been solved rather than moved
-
-But the real work never disappears. It changes form.
-
-Closing formulation:
-
-> GUI did not eliminate the need to understand users. Chat will not eliminate the need to understand systems.
-
-Optional final sentence:
-
-> The future of interface design is not the disappearance of mediation, but the responsibility to decide what should be visible, what may be hidden, and who pays the price when hidden complexity fails.
+The unfortunate truth is that systems which engage with humans will always need to be concerned with the user’s mental models. There are many situations where a chat UI is legitimately helpful and much GUI can be replaced with it. But it is not a panacea, and applying it well still requires thought and empathy. Designers need not fear for their craft.
