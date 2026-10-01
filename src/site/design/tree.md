@@ -7,7 +7,7 @@ The glyph[^logo] I use as a logo is based on [LEGO part #2435][tree]. It has acc
 
 [^logo]: {% tree 99 %}
 
-[tree]: https://www.bricklink.com/v2/catalog/catalogitem.page?P=2435
+[tree]: https://brickarchitect.com/parts/2435
 
 I never intended to have a logo, unless you count a childhood fascination with drawing Sierpiński triangles. But when Dustin Curtis [invited me to Svbtle](https://gerwitz.svbtle.com/first), he asked me to choose a unicode character and color. I selected the [Evergreen Tree at point U+1F332][unicode], <span role="img" aria-label="tree">&#x1F332;&#xFE0E;</span>, which in the days before creeping emojification rendered as a simple single-color graphic and looked nice in [classic HTML green](https://www.color-hex.com/color/008000). I was living in Seattle at the time and inspired by the Doug flag of [Free Cascadia][cascadia].
 

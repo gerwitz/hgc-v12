@@ -15,7 +15,7 @@ Body copy is set in _Atkinson Hyperlegible_, designed by [Applied Design](https:
 
 The pixelated paths are rendered in[Monaco 9](https://fontstruct.com/fontstructions/show/1744750/monaco-4-4) based on the original by [Susan Kare](https://kareprints.com/pages/about) and used under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 
-The logo glyph[^logo] is [LEGO part #2435][tree]. You can learn why at <a class="internal path">/site/design/tree</a>.
+The logo glyph[^logo] represents a LEGO part but also much more. You can learn what it means to me at <a class="internal path" href="/site/design/tree/">/site/design/tree</a>.
 
 [^logo]: {% tree 99 %}
 
@@ -23,6 +23,6 @@ The logo glyph[^logo] is [LEGO part #2435][tree]. You can learn why at <a class=
 
 It wouldn’t be quite right to call it brutalism, because the modernists were reacting against nostalgia and, to be honest, there is a lot of nostalgia for an earlier internet in my motivation. Moreover, the word has been [embarassingly misappropriated](http://www.brutalistwebdesign.com/) by the web design community, though [David Copeland gets it](https://brutalist-web.design/).
 
-I certainly like to [flatter myself with references to the Bauhaus](https://hans.gerwitz.com/2018/06/07/the-artificial-genesis.html#digital-design-needs-a-bauhaus) implying analogies between HTML and plywood. But I don’t think it appropriate to use the name of that school for a mere style. Even if it were, the aesthetics of those practitioners generally included more whimsy than I’m expressing here.
+I certainly like to [flatter myself with references to the Bauhaus](https://hans.gerwitz.com/2018/06/07/the-artificial-genesis.html#digital-design-needs-a-bauhaus) implying analogies between HTML and plywood. But I don’t think it appropriate to use the name of that school for a mere style. Even if it were, the aesthetics of those practitioners generally included more whimsy and less nostalgia than I’m expressing here.
 
 So it shall go nameless.
