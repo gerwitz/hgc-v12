@@ -5,6 +5,7 @@ import test from "node:test";
 import nunjucks from "nunjucks";
 
 import { date } from "../eleventy/filters/date.js";
+import { tinylogDate } from "../eleventy/filters/tinylogdate.js";
 import { geminiPath, markdownToGemtext } from "../eleventy/gemtext.js";
 
 const entries = Array.from({ length: 60 }, (_, index) => ({
@@ -20,6 +21,7 @@ const renderFeed = (name, collections, configuration = {}) => {
     .replace(/^---\n[\s\S]*?\n---\n/, "");
   const environment = new nunjucks.Environment();
   environment.addFilter("date", date);
+  environment.addFilter("tinylogDate", tinylogDate);
   environment.addFilter("geminiPath", geminiPath);
   environment.addFilter("plaintext", (value) => value);
   environment.addFilter("limit", (items, count) => items.slice(0, count));
@@ -51,6 +53,7 @@ test("tinylog renders the newest 20 notes with valid timestamps and body heading
   assert.equal(output.split("\n").filter((line) => line.startsWith("# ")).length, 1);
   assert.match(output, /### Body heading/);
   assert.match(output, /### Another heading/);
+  assert.match(output, /## 2026-03-01 12:00 \+0100/);
   assert.match(output, /Note 59\./);
   assert.match(output, /Note 40\./);
   assert.doesNotMatch(output, /Note 39\./);

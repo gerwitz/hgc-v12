@@ -12,7 +12,7 @@ author: Hans Gerwitz
 avatar: 🌲 (:tree:, U+1F332)
 
 {% for entry in collections.notes | reverse | limit(20) %}
-## {{ entry.date | date("YYYY-MM-DD HH:mm ZZ") }}
+## {{ entry | tinylogDate }}
 {{ entry.page.rawInput | gemtext(entry.url, gemini, collections) | trim | safe }}
 
 {% endfor -%}
