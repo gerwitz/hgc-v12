@@ -1,19 +1,21 @@
 ---
 pagination:
-  data: collections.writing
+  data: collections.gemlog
   size: 1
   alias: entry
-permalink: "/editions/gemini{{ entry.url | geminiPath }}"
+permalink: "/editions/gemini{{ entry.geminiUrl }}"
 eleventyExcludeFromCollections: true
 ---
 # {{ entry.data.title | plaintext | safe }}
 
-{{ entry.page.rawInput | gemtext(entry.url, gemini, collections) | safe }}
+{{ entry.page.rawInput | gemtext(entry.geminiUrl if "gemposts" in entry.data.tags else entry.url, gemini, collections) | safe }}
 
 ## About this post
 
 Posted during week {{ entry.date | weeknum }} ({{ entry.date | date("MMMM YYYY") }}).
 
+{% if "writing" in entry.data.tags %}
 => https://hans.gerwitz.com{{ entry.url }} View on the web
-=> /writing/index.gmi More writing
+{% endif %}
+=> /posts/ More posts
 => /index.gmi Capsule home

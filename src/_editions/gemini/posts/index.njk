@@ -1,0 +1,9 @@
+---
+permalink: /editions/gemini/posts/index.gmi
+eleventyExcludeFromCollections: true
+---
+# Posts
+
+{% for entry in collections.gemlog | reverse -%}
+=> {{ entry.geminiUrl }} {{ entry.date | date("YYYY-MM-DD") }} - {{ entry.data.title | plaintext | safe }}
+{% endfor -%}

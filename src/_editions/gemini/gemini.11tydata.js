@@ -1,10 +1,13 @@
 export default {
   gemini: {
     webOrigin: "https://hans.gerwitz.com",
-    collections: ["writing", "notes", "about", "lists"],
+    collections: ["gemlog", "notes", "about", "lists"],
+    routeAliases: {
+      "/writing/": "/posts/",
+    },
     routes: [
       "/",
-      "/writing/",
+      "/posts/",
       "/notes/",
       "/about/",
       "/lists/",

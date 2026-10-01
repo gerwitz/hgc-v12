@@ -1,9 +1,0 @@
----
-permalink: /editions/gemini/writing/index.gmi
-eleventyExcludeFromCollections: true
----
-# Writing
-
-{% for entry in collections.writing | reverse -%}
-=> {{ entry.url | geminiPath }} {{ entry.data.title | plaintext | safe }}
-{% endfor -%}

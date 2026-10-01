@@ -8,9 +8,10 @@ import { date } from "../eleventy/filters/date.js";
 import { geminiPath, markdownToGemtext } from "../eleventy/gemtext.js";
 
 const entries = Array.from({ length: 60 }, (_, index) => ({
-  url: `/writing/entry-${index}.html`,
+  url: index === 59 ? false : `/writing/entry-${index}.html`,
+  geminiUrl: `/posts/2026-01-01-entry-${index}.gmi`,
   date: new Date(Date.UTC(2026, 0, index + 1)),
-  data: { title: `Entry ${index}` },
+  data: { title: `Entry ${index}`, tags: [index === 59 ? "gemposts" : "writing"] },
   page: { rawInput: `# Body heading\n\nNote ${index}.\n\n## Another heading\n` },
 }));
 
@@ -30,19 +31,20 @@ const renderFeed = (name, collections, configuration = {}) => {
   });
 };
 
-test("gemlog lists only the newest 50 writing entries and links to the archive", () => {
-  const output = renderFeed("gemlog", { writing: entries, notes: entries });
-  const links = output.split("\n").filter((line) => line.startsWith("=> /writing/entry-"));
+test("gemlog lists only the newest 50 merged posts and links to the archive", () => {
+  const output = renderFeed("gemlog", { gemlog: entries, notes: entries });
+  const links = output.split("\n").filter((line) => line.startsWith("=> /posts/2026-01-01-entry-"));
 
   assert.equal(links.length, 50);
   assert.match(links[0], /entry-59\.gmi/);
   assert.match(links.at(-1), /entry-10\.gmi/);
-  assert.match(output, /=> \/writing\/ All writing\n$/);
+  assert.match(output, /=> \/posts\/ \/posts - all 60 posts/);
+  assert.match(output, /=> \/notes\/ \/notes - all 60 untitled notes/);
 });
 
 test("tinylog renders the newest 20 notes with valid timestamps and body headings", () => {
   const output = renderFeed("tinylog", { notes: entries }, { minimumHeadingLevel: 3 });
-  const headings = output.split("\n").filter((line) => line.startsWith("## "));
+  const headings = output.split("\n").filter((line) => line.startsWith("## ") && line !== "## Archives");
 
   assert.equal(headings.length, 20);
   assert.ok(headings.every((heading) => /^## \d{4}-\d{2}-\d{2} \d{2}:\d{2} [+-]\d{4}$/.test(heading)));

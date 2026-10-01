@@ -94,6 +94,10 @@ Quotes are rendered by [markdown-it-attribution](https://github.com/dweidner/mar
 
 `/writing` contains **posts** that include a title and publication date. They are published to dated URLs. Often they are PESOS (manually).
 
+`/gemposts` contains titled **capsule posts**, published only in Gemini. Author them in `src/gemposts/YYYY-MM-DD-slug.md` with a `title`, an optional explicit `date` (otherwise inferred from the filename), and a Markdown body. They join writing in `collections.gemlog`; the existing web `collections.posts` is unchanged.
+
+The capsule publishes both writing and gemposts at `/posts/YYYY-MM-DD-slug.gmi`. `/gemlog/` lists the newest 50, and `/posts/` is the complete archive. The build generates `editions/gemini/redirects.json` to redirect former Gemini writing URLs. Deploy a rebuilt `calmserve` image with redirect-map support before deploying this URL change.
+
 `/notes` contains short **notes** that are identified primarily by publication time. They are published to dated URLs. They are generally tweet-length, but there is no formal limits on their content. They are usually posted via [IndieKit](https://getindiekit.com). They are POSSE to Micro.blog and Twitter (via an RSS feed).
 
 `/media` contains attachments to dated content (posts and notes), often uploaded via IndieKit.

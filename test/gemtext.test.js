@@ -134,6 +134,35 @@ test("maps only known edition routes to Gemini and uses link titles", () => {
   );
 });
 
+test("maps merged posts to canonical capsule URLs while preserving query and fragment", () => {
+  const configuration = {
+    collections: ["gemlog"],
+    routes: ["/posts/"],
+    routeAliases: { "/writing/": "/posts/" },
+  };
+  const gemlog = [
+    { url: "/writing/neighbor.html", geminiUrl: "/posts/2026-09-01-neighbor.gmi" },
+    { url: false, geminiUrl: "/posts/2026-09-02-capsule.gmi" },
+  ];
+  const source = "- [Neighbor](neighbor.html?view=full#section)\n- [Archive](/writing/)\n- [Capsule](/posts/2026-09-02-capsule.gmi)";
+
+  assert.equal(
+    markdownToGemtext(source, "/writing/current.html", configuration, { gemlog }),
+    [
+      "=> /posts/2026-09-01-neighbor.gmi?view=full#section Neighbor",
+      "=> /posts/ Archive",
+      "=> /posts/2026-09-02-capsule.gmi Capsule",
+      "",
+    ].join("\n"),
+  );
+
+  assert.equal(
+    markdownToGemtext("- [Neighbor](2026-09-01-neighbor.gmi)\n- [This section](#section)",
+      "/posts/2026-09-02-capsule.gmi", configuration, { gemlog }),
+    "=> /posts/2026-09-01-neighbor.gmi Neighbor\n=> /posts/2026-09-02-capsule.gmi#section This section\n",
+  );
+});
+
 test("maps static page collections to Gemini routes", () => {
   const source = "See [about](/about/), [lists](/lists/), [things](/lists/things/), and [web only](/web-only/).";
   const configuration = {

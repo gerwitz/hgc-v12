@@ -21,6 +21,13 @@ const editionUrl = (value, context) => {
     return value;
   }
 
+  const mappedUrl = context.editionUrls.get(webUrl.pathname);
+
+  if (mappedUrl)
+  {
+    return `${mappedUrl}${webUrl.search}${webUrl.hash}`;
+  }
+
   if (!context.editionRoutes.has(webUrl.pathname)) {
     return webUrl.toString();
   }
@@ -334,17 +341,30 @@ const withoutFrontMatter = (source) => {
 
 const createRenderingContext = (sourceUrl, configuration, collections) => {
   const editionRoutes = new Set(configuration.routes || []);
+  const editionUrls = new Map(Object.entries(configuration.routeAliases || {}));
 
   for (const collectionName of configuration.collections || []) {
     for (const item of collections[collectionName] || []) {
       if (item.url) {
         editionRoutes.add(item.url);
       }
+
+      // Capsule posts have canonical URLs independent of web publication paths.
+      if (item.geminiUrl)
+      {
+        editionUrls.set(item.geminiUrl, item.geminiUrl);
+
+        if (item.url)
+        {
+          editionUrls.set(item.url, item.geminiUrl);
+        }
+      }
     }
   }
 
   return {
     editionRoutes,
+    editionUrls,
     footnoteNumbers: new Map(),
     minimumHeadingLevel: configuration.minimumHeadingLevel || 1,
     nextReferenceNumber: 1,

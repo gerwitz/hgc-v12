@@ -5,11 +5,11 @@ eleventyExcludeFromCollections: true
 # Gemlog
 ## Recent posts
 
-{% for entry in collections.writing | reverse | limit(50) -%}
-=> {{ entry.url | geminiPath }} {{ entry.date | date("YYYY-MM-DD") }} - {{ entry.data.title | plaintext | safe }}
+{% for entry in collections.gemlog | reverse | limit(50) -%}
+=> {{ entry.geminiUrl }} {{ entry.date | date("YYYY-MM-DD") }} - {{ entry.data.title | plaintext | safe }}
 {% endfor %}
 
 ## Archives
 
-=> /writing/ /writing - all {{ collections.writing | length }} articles
+=> /posts/ /posts - all {{ collections.gemlog | length }} posts
 => /notes/ /notes - all {{ collections.notes | length }} untitled notes
