@@ -350,7 +350,7 @@ const renderReferences = (context) => {
   }
 
   const headingLevel = Math.max(2, context.minimumHeadingLevel);
-  return `${"#".repeat(headingLevel)} Footnotes\n\n${entries.join("\n")}`;
+  return `${"#".repeat(headingLevel)} \n${entries.join("\n")}`;
 };
 
 const withoutFrontMatter = (source) => {
