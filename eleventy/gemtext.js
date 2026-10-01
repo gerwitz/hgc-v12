@@ -35,18 +35,12 @@ const editionUrl = (value, context) => {
   return `${geminiPath(webUrl.pathname)}${webUrl.search}${webUrl.hash}`;
 };
 
-const renderLinks = (links) => {
-  return links
-    .map(({ label, number, url }) => {
-      // The reference number needs a following label or Gemtext treats it as the title.
-      return `=> ${url} (${number}) ${label || url}`;
-    })
-    .join("\n");
-};
+const superscriptNumber = (number) => String(number)
+  .replace(/\d/g, (digit) => "⁰¹²³⁴⁵⁶⁷⁸⁹"[Number(digit)]);
 
-const nextReferenceNumber = (context) => {
-  const number = context.nextReferenceNumber;
-  context.nextReferenceNumber += 1;
+const addReference = (context, reference) => {
+  const number = context.references.length + 1;
+  context.references.push({ ...reference, number });
   return number;
 };
 
@@ -54,7 +48,7 @@ const footnoteNumber = (token, context) => {
   const id = token.meta?.id ?? 0;
 
   if (!context.footnoteNumbers.has(id)) {
-    context.footnoteNumbers.set(id, nextReferenceNumber(context));
+    context.footnoteNumbers.set(id, addReference(context, { footnoteId: id }));
   }
 
   return context.footnoteNumbers.get(id);
@@ -76,7 +70,6 @@ const matchingCloseIndex = (tokens, openIndex) => {
 
 const renderInline = (tokens, context) => {
   let text = "";
-  const links = [];
 
   for (let index = 0; index < tokens.length; index += 1) {
     const token = tokens[index];
@@ -97,17 +90,15 @@ const renderInline = (tokens, context) => {
       const anchorText = normalizeText(rendered.text);
       const linkTitle = normalizeText(token.attrGet("title") || "");
       const url = editionUrl(token.attrGet("href"), context);
-      const number = nextReferenceNumber(context);
+      text += anchorText;
 
-      text += `${anchorText}(${number})`;
-      links.push(...rendered.links);
-
-      if (url) {
-        links.push({
+      if (url)
+      {
+        const number = addReference(context, {
           label: linkTitle || anchorText || url,
-          number,
           url,
         });
+        text += superscriptNumber(number);
       }
 
       index = closeIndex;
@@ -118,23 +109,22 @@ const renderInline = (tokens, context) => {
       const anchorText = token.content || "Image";
       const linkTitle = normalizeText(token.attrGet("title") || "");
       const url = editionUrl(token.attrGet("src"), context);
-      const number = nextReferenceNumber(context);
+      text += anchorText;
 
-      text += `${anchorText}(${number})`;
-
-      if (url) {
-        links.push({
+      if (url)
+      {
+        const number = addReference(context, {
           label: linkTitle || anchorText,
-          number,
           url,
         });
+        text += superscriptNumber(number);
       }
 
       continue;
     }
 
     if (token.type === "footnote_ref") {
-      text += `(${footnoteNumber(token, context)})`;
+      text += superscriptNumber(footnoteNumber(token, context));
       continue;
     }
 
@@ -150,37 +140,15 @@ const renderInline = (tokens, context) => {
   }
 
   return {
-    links,
     text: normalizeText(text),
   };
 };
 
-const renderInlineBlock = (token, context, prefix = "") => {
-  const rendered = renderInline(token.children || [], context);
-  const parts = [];
-
-  if (rendered.text) {
-    parts.push(`${prefix}${rendered.text}`);
-  }
-
-  if (rendered.links.length) {
-    parts.push(renderLinks(rendered.links));
-  }
-
-  return parts.join("\n");
+const renderInlineBlock = (token, context) => {
+  return renderInline(token.children || [], context).text;
 };
 
-const renderLinkOnlyListItem = (tokens, openIndex, closeIndex, context) => {
-  const itemTokens = tokens.slice(openIndex + 1, closeIndex);
-
-  if (itemTokens.length !== 3
-    || itemTokens[0].type !== "paragraph_open"
-    || itemTokens[1].type !== "inline"
-    || itemTokens[2].type !== "paragraph_close") {
-    return null;
-  }
-
-  const inlineTokens = itemTokens[1].children || [];
+const renderLinkOnlyInline = (inlineTokens, context, labelPrefix = "") => {
 
   if (inlineTokens[0]?.type !== "link_open"
     || inlineTokens.at(-1)?.type !== "link_close"
@@ -198,8 +166,23 @@ const renderLinkOnlyListItem = (tokens, openIndex, closeIndex, context) => {
   const title = normalizeText(inlineTokens[0].attrGet("title") || "");
   const text = renderInline(inlineTokens.slice(1, -1), context).text;
 
-  // A direct Gemtext link needs no numbered reference or duplicate bullet text.
-  return `=> ${url} ${title || text || url}`;
+  // A standalone link needs neither a reference number nor a duplicate text line.
+  const label = title || text || url;
+  return label === url && !labelPrefix ? `=> ${url}` : `=> ${url} ${labelPrefix}${label}`;
+};
+
+const renderLinkOnlyListItem = (tokens, openIndex, closeIndex, context) => {
+  const itemTokens = tokens.slice(openIndex + 1, closeIndex);
+
+  if (itemTokens.length !== 3
+    || itemTokens[0].type !== "paragraph_open"
+    || itemTokens[1].type !== "inline"
+    || itemTokens[2].type !== "paragraph_close")
+  {
+    return null;
+  }
+
+  return renderLinkOnlyInline(itemTokens[1].children || [], context);
 };
 
 const renderList = (tokens, openIndex, closeIndex, context) => {
@@ -266,7 +249,9 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length)
     }
 
     if (token.type === "paragraph_open") {
-      blocks.push(renderInlineBlock(tokens[index + 1], context));
+      const inlineToken = tokens[index + 1];
+      blocks.push(renderLinkOnlyInline(inlineToken.children || [], context)
+        || renderInlineBlock(inlineToken, context));
       index += 2;
       continue;
     }
@@ -305,10 +290,11 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length)
       continue;
     }
 
-    if (token.type === "footnote_open") {
+    if (token.type === "footnote_open")
+    {
       const closeIndex = matchingCloseIndex(tokens, index);
-      const content = renderBlocks(tokens, context, index + 1, closeIndex);
-      blocks.push(`(${footnoteNumber(token, context)}) ${content}`);
+      // Definitions may occur before later prose; defer their references until the body is complete.
+      context.footnotes.set(token.meta?.id ?? 0, tokens.slice(index + 1, closeIndex));
       index = closeIndex;
       continue;
     }
@@ -327,12 +313,44 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length)
     }
 
     if (token.type === "blockquote_attribution_open") {
-      blocks.push(`— ${renderInlineBlock(tokens[index + 1], context)}`);
+      const inlineToken = tokens[index + 1];
+      blocks.push(renderLinkOnlyInline(inlineToken.children || [], context, "— ")
+        || `— ${renderInlineBlock(inlineToken, context)}`);
       index += 2;
     }
   }
 
   return blocks.filter(Boolean).join("\n\n");
+};
+
+const renderReferences = (context) => {
+  const entries = [];
+
+  // Rendering textual notes may append links; array iteration includes those new references.
+  for (const reference of context.references)
+  {
+    const number = superscriptNumber(reference.number);
+
+    if (reference.url)
+    {
+      entries.push(`=> ${reference.url} ${number} ${reference.label || reference.url}`);
+    }
+    else
+    {
+      const content = renderBlocks(context.footnotes.get(reference.footnoteId) || [], context);
+      // Structural Gemtext markers must stay at the beginning of their lines.
+      const separator = /^(?:=> |#|\* |> |```)/.test(content) ? "\n" : " ";
+      entries.push(`${number}${separator}${content}`);
+    }
+  }
+
+  if (!entries.length)
+  {
+    return "";
+  }
+
+  const headingLevel = Math.max(2, context.minimumHeadingLevel);
+  return `${"#".repeat(headingLevel)} Footnotes\n\n${entries.join("\n")}`;
 };
 
 const withoutFrontMatter = (source) => {
@@ -366,8 +384,9 @@ const createRenderingContext = (sourceUrl, configuration, collections) => {
     editionRoutes,
     editionUrls,
     footnoteNumbers: new Map(),
+    footnotes: new Map(),
     minimumHeadingLevel: configuration.minimumHeadingLevel || 1,
-    nextReferenceNumber: 1,
+    references: [],
     sourceUrl,
     webOrigin: configuration.webOrigin || DEFAULT_WEB_ORIGIN,
   };
@@ -382,7 +401,10 @@ export const markdownToGemtext = (
   const tokens = markdown.parse(withoutFrontMatter(source || ""), {});
   const context = createRenderingContext(sourceUrl, configuration, collections);
 
-  return `${renderBlocks(tokens, context).trim()}\n`;
+  const body = renderBlocks(tokens, context).trim();
+  const references = renderReferences(context);
+
+  return `${[body, references].filter(Boolean).join("\n\n")}\n`;
 };
 
 export const geminiPath = (url) => {
