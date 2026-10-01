@@ -1,6 +1,5 @@
 ---
 title: Semantic search without runtime semantics
-draft: true
 categories:
 - work
 topics:
