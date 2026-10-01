@@ -2,10 +2,14 @@
 permalink: /editions/gemini/gemlog/index.gmi
 eleventyExcludeFromCollections: true
 ---
-# Hans Gerwitz's gemlog
-## Notes and longer writing from hans.gerwitz.com
+# Gemlog
+## Recent posts
 
-{% for entry in collections.microblog -%}
-=> {{ entry.url | geminiPath }} {{ entry.date | date("YYYY-MM-DD") }} - {{ entry.title | plaintext | safe }}
+{% for entry in collections.writing | reverse | limit(50) -%}
+=> {{ entry.url | geminiPath }} {{ entry.date | date("YYYY-MM-DD") }} - {{ entry.data.title | plaintext | safe }}
 {% endfor %}
-=> /index.gmi Capsule home
+
+## Archives
+
+=> /writing/ /writing - all {{ collections.writing | length }} articles
+=> /notes/ /notes - all {{ collections.notes | length }} untitled notes

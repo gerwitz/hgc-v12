@@ -252,7 +252,7 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length)
     const token = tokens[index];
 
     if (token.type === "heading_open") {
-      const level = Number(token.tag.slice(1));
+      const level = Math.max(Number(token.tag.slice(1)), context.minimumHeadingLevel);
       blocks.push(`${"#".repeat(level)} ${renderInlineBlock(tokens[index + 1], context)}`);
       index += 2;
       continue;
@@ -346,6 +346,7 @@ const createRenderingContext = (sourceUrl, configuration, collections) => {
   return {
     editionRoutes,
     footnoteNumbers: new Map(),
+    minimumHeadingLevel: configuration.minimumHeadingLevel || 1,
     nextReferenceNumber: 1,
     sourceUrl,
     webOrigin: configuration.webOrigin || DEFAULT_WEB_ORIGIN,
