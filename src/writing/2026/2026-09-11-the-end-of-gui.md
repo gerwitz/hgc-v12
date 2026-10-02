@@ -1,5 +1,5 @@
 ---
-title: “The End of GUI”
+title: "The End of GUI"
 categories:
 - work
 topics:
