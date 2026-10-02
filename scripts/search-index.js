@@ -1,4 +1,5 @@
 import { readFile, rm } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 
 import * as pagefind from "pagefind";
 
@@ -19,10 +20,13 @@ const escapeHtml = (value) => {
 };
 
 
-const getNeighborVocabulary = (record, relatedData) => {
+export const getNeighborVocabulary = (record, relatedData, currentUrls) =>
+{
   const relationships = relatedData.sources?.[record.url]?.related || [];
 
   return relationships
+    // Stale relationships must not contribute vocabulary or consume a neighbor slot.
+    .filter((relationship) => currentUrls.has(relationship.url))
     .filter((relationship) => relationship.score >= MINIMUM_PROPAGATION_SCORE)
     .filter((relationship) => {
       return relationship.semanticScore === undefined || relationship.semanticScore >= MINIMUM_PROPAGATION_SCORE;
@@ -37,10 +41,11 @@ const getNeighborVocabulary = (record, relatedData) => {
     .join(" ");
 };
 
-const createSearchDocument = (record, relatedData) => {
+export const createSearchDocument = (record, relatedData, currentUrls) =>
+{
   const categories = record.categories.join(" ");
   const topics = record.topics.join(" ");
-  const neighborVocabulary = getNeighborVocabulary(record, relatedData);
+  const neighborVocabulary = getNeighborVocabulary(record, relatedData, currentUrls);
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -69,6 +74,7 @@ const main = async () => {
     readBuiltContentRecords(),
     readFile(RELATED_DATA_PATH, "utf8").then(JSON.parse),
   ]);
+  const currentUrls = new Set(records.map((record) => record.url));
   await rm(OUTPUT_PATH, { force: true, recursive: true });
 
   const { index, errors: createErrors } = await pagefind.createIndex({
@@ -84,7 +90,7 @@ const main = async () => {
   for (const record of records)
   {
     const { errors } = await index.addHTMLFile({
-      content: createSearchDocument(record, relatedData),
+      content: createSearchDocument(record, relatedData, currentUrls),
       url: record.url,
     });
 
@@ -106,7 +112,11 @@ const main = async () => {
   console.log(`Wrote Pagefind index for ${records.length} content entries.`);
 };
 
-main().catch((error) => {
-  console.error(error.message);
-  process.exitCode = 1;
-});
+if (process.argv[1] === fileURLToPath(import.meta.url))
+{
+  main().catch((error) =>
+  {
+    console.error(error.message);
+    process.exitCode = 1;
+  });
+}
