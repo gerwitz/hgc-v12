@@ -337,6 +337,7 @@ body.root {
 
 .main-footer .footer-topnav .homelink {
   display: inline-block;
+  flex-shrink: 0;
   height: var(--footer-path-font-size);
   margin: 0;
   padding: 0 12px 0 12px;
@@ -357,8 +358,15 @@ body.root {
   flex: 0 0 auto;
 }
 
-.main-footer .footer-topnav .homelink + form {
-  margin-left: auto;
+.main-footer .footer-topnav form {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-right: 4px;
+}
+
+.main-footer .footer-topnav .search-form {
+  width: 100%;
+  margin-right: 0;
 }
 
 .footer-topnav .search-form {
@@ -372,19 +380,6 @@ body.root {
     &:focus {
       background-color: var(--page-color);
     }
-  }
-}
-
-@container (max-width: 410px) {
-  .main-footer .footer-topnav form {
-    position: absolute;
-    top: 3px;
-    right: 0;
-    z-index: 1;
-  }
-
-  .main-footer .footer-topnav .homelink + form {
-    margin-left: 0;
   }
 }
 
