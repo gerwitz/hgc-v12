@@ -3,7 +3,7 @@ title: Site History
 layout: page
 ---
 
-Though I had profiles on various BBSes and servers as early as 1986, I didn't establish my first web page until 1994 when [Nyx](http://www.nyx.net/history.html) established userpages.[^ncsa] Mine featured my [geek code](http://www.geekcode.com/).
+Though I had profiles on various BBSes and servers as early as 1986, I didn't establish my first web page until 1994 when [Nyx](http://www.nyx.net/history.html) established userpages.[^ncsa] Mine featured my [geek code](http://www.geekcode.xyz/).
 
 [^ncsa]: Yes, that was before Netscape. I used NCSA Mosaic on Macintosh and Lynx on OSF/1 AXP (the Unix on our school's DEC Alpha).
 
