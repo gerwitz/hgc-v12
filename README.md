@@ -15,6 +15,8 @@ Source files are in `/src` and site is built to `/_site` for deployment.
 To set up, from the root directory: `npm run build`
 To start a test server: `npm run start`
 
+`npm run build` renders the site once, then creates the Pagefind search index using the same canonical content records used by related-content generation. A successful full Eleventy build writes those records to the ignored, private `.cache/content-records.json` artifact, outside the deployed `_site` directory. `npm run search:index` can rebuild the index from that artifact without rendering the site again; after source changes, run a full build first. Failed or incremental filesystem builds invalidate the artifact rather than leaving stale or partial records available.
+
 Some expensive generated assets are committed to the repository so deployment builds do not need to recreate them. Before committing changes that affect travel maps, run:
 
 `npm run generate:maps`
@@ -32,6 +34,8 @@ This keeps content URLs site-relative, such as `/media/example.jpg`, while loadi
 Related-content data and its OpenAI embedding cache are committed so normal and deployment builds do not make API requests. To refresh them after changing searchable content, run:
 
 `OPENAI_API_KEY=... npm run related`
+
+Related-content commands always extract fresh records from the current sources, rather than trusting the previous build artifact. Search and related-content generation share content selection, text extraction, and metadata; search also uses high-confidence related titles and topics as neighbor vocabulary.
 
 Use `npm run related:check` to list the eligible content without requesting embeddings. The generator writes `generated/related-content-cache.json`, `generated/related-graph-cache.json`, and `src/_data/related.json`; commit these files with the related content changes.
 

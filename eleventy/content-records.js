@@ -1,9 +1,12 @@
 import { createHash } from "node:crypto";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import Eleventy from "@11ty/eleventy";
-
 import { createMarkdownLibrary } from "./markdown.js";
+import { getPreviewIconName } from "./shortcodes/previews.js";
+
+const CONTENT_RECORDS_PATH = ".cache/content-records.json";
+const CONTENT_RECORDS_VERSION = 1;
 
 const EMBEDDING_INPUT_VERSION = 1;
 const RELATIONSHIP_INPUT_VERSION = 1;
@@ -164,18 +167,41 @@ export const createContentRecord = (result, model) => {
   };
 };
 
-export const getContentRecords = async (model) => {
-  const eleventy = new Eleventy("src", "_site", { configPath: ".eleventy.js" });
-  const results = await eleventy.toJSON();
-  const manifest = results.find((result) => result.inputPath.endsWith("search/records.json.11ty.js"));
-
-  if (!manifest)
+// Both build-time capture and standalone extraction use this eligibility manifest.
+export const getContentMetadata = (collections) =>
+{
+  const searchableMarkdown = collections.searchable
+    .filter((item) => item.inputPath.endsWith(".md"));
+  const metadataOnlyPages = collections.all.filter((item) =>
   {
-    throw new Error("Could not find the canonical search-record manifest.");
-  }
+    return !item.inputPath.endsWith(".md")
+      && item.url
+      && (item.data.title || item.data.description || item.data.subtitle);
+  });
+  const itemsByUrl = new Map(
+    [...searchableMarkdown, ...metadataOnlyPages].map((item) => [item.url, item]),
+  );
 
+  return Array.from(itemsByUrl.values()).map((item) =>
+  {
+    return {
+      categories: item.data.categories || [],
+      contentDate: item.data.contentDate || null,
+      description: item.data.description || item.data.subtitle || null,
+      previewIconName: getPreviewIconName(item),
+      searchBodyHtml: item.data.searchBodyHtml || null,
+      title: item.data.title || null,
+      topics: item.data.topics || [],
+      url: item.url,
+      wordCount: item.data.wordCount || null,
+    };
+  });
+};
+
+export const createContentRecords = (results, metadata, model) =>
+{
   const metadataByUrl = new Map(
-    JSON.parse(manifest.content).map((metadata) => [metadata.url, metadata]),
+    metadata.map((item) => [item.url, item]),
   );
   const outputCountsByInputPath = results.reduce((counts, result) => {
     counts.set(result.inputPath, (counts.get(result.inputPath) || 0) + 1);
@@ -209,3 +235,83 @@ export const getContentRecords = async (model) => {
     })
     .filter((record) => record.url && record.embeddingText);
 };
+
+// Related-content updates deliberately extract fresh sources rather than trust a prior build.
+export const getContentRecords = async (model) =>
+{
+  const { default: Eleventy } = await import("@11ty/eleventy");
+  const eleventy = new Eleventy("src", "_site", { configPath: ".eleventy.js" });
+  const results = await eleventy.toJSON();
+  const manifest = results.find((result) => result.inputPath.endsWith("search/records.json.11ty.js"));
+
+  if (!manifest)
+  {
+    throw new Error("Could not find the canonical search-record manifest.");
+  }
+
+  return createContentRecords(results, JSON.parse(manifest.content), model);
+};
+
+export const readBuiltContentRecords = async (filePath = CONTENT_RECORDS_PATH) =>
+{
+  let artifact;
+
+  try
+  {
+    artifact = JSON.parse(await readFile(filePath, "utf8"));
+  }
+  catch (error)
+  {
+    if (error.code === "ENOENT")
+    {
+      throw new Error(`Missing build content records at ${filePath}. Run a full Eleventy build before npm run search:index.`);
+    }
+
+    throw error;
+  }
+
+  if (artifact.version !== CONTENT_RECORDS_VERSION || !Array.isArray(artifact.records))
+  {
+    throw new Error(`Unsupported build content records at ${filePath}. Run a full Eleventy build to refresh them.`);
+  }
+
+  return artifact.records;
+};
+
+export default function contentRecordsPlugin(eleventyConfig, options = {})
+{
+  const { filePath = CONTENT_RECORDS_PATH } = options;
+  const model = process.env.OPENAI_EMBEDDING_MODEL || "text-embedding-3-small";
+  let collections;
+
+  // Retain collection-item references so metadata is read after computed data resolves.
+  eleventyConfig.addCollection("contentRecordSources", (collection) =>
+  {
+    collections = {
+      all: collection.getAll(),
+      searchable: collection.getFilteredByTag("searchable"),
+    };
+    return [];
+  });
+
+  eleventyConfig.on("eleventy.before", async ({ outputMode }) =>
+  {
+    if (outputMode === "fs")
+    {
+      // Failed or partial builds must not leave an older artifact looking current.
+      await rm(filePath, { force: true });
+    }
+  });
+
+  eleventyConfig.on("eleventy.after", async ({ outputMode, incremental, results }) =>
+  {
+    if (outputMode !== "fs" || incremental)
+    {
+      return;
+    }
+
+    const records = createContentRecords(results, getContentMetadata(collections), model);
+    await mkdir(path.dirname(filePath), { recursive: true });
+    await writeFile(filePath, JSON.stringify({ version: CONTENT_RECORDS_VERSION, records }));
+  });
+}

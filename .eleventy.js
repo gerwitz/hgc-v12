@@ -2,6 +2,7 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import nbspFilter from "eleventy-nbsp-filter";
 
 import collectionsPlugin from "./eleventy/collections.js";
+import contentRecordsPlugin from "./eleventy/content-records.js";
 import cssPlugin from "./eleventy/css.js";
 import directoriesPlugin from "./eleventy/directories.js";
 import filtersPlugin from "./eleventy/filters.js";
@@ -45,6 +46,7 @@ export default function configure(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(cssPlugin, { inputDir: INPUT_DIR });
   eleventyConfig.addPlugin(collectionsPlugin);
+  eleventyConfig.addPlugin(contentRecordsPlugin);
   eleventyConfig.addPlugin(filtersPlugin, {
     extraFilters: {
       nbsp: nbspFilter(NBSP_MIN_WORDS, NBSP_MAX_LENGTH),

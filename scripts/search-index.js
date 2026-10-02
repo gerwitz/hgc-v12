@@ -2,11 +2,11 @@ import { readFile, rm } from "node:fs/promises";
 
 import * as pagefind from "pagefind";
 
-import { getContentRecords } from "../eleventy/content-records.js";
+import { readBuiltContentRecords } from "../eleventy/content-records.js";
 
 const OUTPUT_PATH = "_site/pagefind";
 const RELATED_DATA_PATH = "src/_data/related.json";
-const MODEL = process.env.OPENAI_EMBEDDING_MODEL || "text-embedding-3-small";
+
 const MAXIMUM_NEIGHBORS = 5;
 const MINIMUM_PROPAGATION_SCORE = 0.65;
 
@@ -66,7 +66,7 @@ const createSearchDocument = (record, relatedData) => {
 
 const main = async () => {
   const [records, relatedData] = await Promise.all([
-    getContentRecords(MODEL),
+    readBuiltContentRecords(),
     readFile(RELATED_DATA_PATH, "utf8").then(JSON.parse),
   ]);
   await rm(OUTPUT_PATH, { force: true, recursive: true });
