@@ -53,6 +53,7 @@ export const createSearchDocument = (record, relatedData, currentUrls) =>
   <meta data-pagefind-meta="categories[content]" name="categories" content="${escapeHtml(categories)}">
   <meta data-pagefind-meta="description[content]" name="description" content="${escapeHtml(record.description || "")}">
   <meta data-pagefind-meta="kind[content]" name="kind" content="${escapeHtml(record.kind)}">
+  <meta data-pagefind-meta="destination[content]" name="destination" content="${escapeHtml(record.url)}">
   <meta data-pagefind-meta="date[content]" name="date" content="${escapeHtml(record.contentDate || "")}">
   <meta data-pagefind-meta="hasBody[content]" name="hasBody" content="${record.searchBodyHtml ? "true" : "false"}">
   <meta data-pagefind-meta="icon[content]" name="icon" content="${escapeHtml(record.previewIconName)}">

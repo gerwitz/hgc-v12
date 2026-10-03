@@ -190,6 +190,13 @@ a {
   text-decoration-color: var(--accent-color);
 }
 
+/* Keep the Gemini marker decorative where CSS alternative text is supported. */
+a.gemini-link::before {
+  content: "♊︎";
+  content: "♊︎" / "";
+  margin-inline-end: 0.25em;
+}
+
 .path {
   font-family: var(--meta-font);
   font-size: 24px;

@@ -11,6 +11,7 @@ import { content } from "../eleventy/collections/content.js";
 import { gemlog } from "../eleventy/collections/gemlog.js";
 import { posts } from "../eleventy/collections/posts.js";
 import { topicContent } from "../eleventy/collections/topicContent.js";
+import contentRecordsPlugin, { readBuiltContentRecords } from "../eleventy/content-records.js";
 import { date } from "../eleventy/filters/date.js";
 import { plaintext } from "../eleventy/filters/plaintext.js";
 import { weeknum } from "../eleventy/filters/weeknum.js";
@@ -167,6 +168,7 @@ Unpublished ${DRAFT_SLUG} body.
       configuration.setQuietMode(true);
       configuration.setDataDeepMerge(true);
       configuration.addPlugin(markdownPlugin);
+      configuration.addPlugin(contentRecordsPlugin, { filePath: path.join(directory, "content-records.json") });
       configuration.addFilter("date", date);
       configuration.addFilter("plaintext", plaintext);
       configuration.addFilter("weeknum", weeknum);
@@ -192,6 +194,7 @@ Unpublished ${DRAFT_SLUG} body.
   return {
     output,
     read: (filename) => readFile(path.join(output, filename), "utf8"),
+    readRecords: () => readBuiltContentRecords(path.join(directory, "content-records.json")),
   };
 };
 
@@ -327,7 +330,7 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
     assert.deepEqual(metadata.confessions.map((entry) => entry.title), [writing.title]);
   });
 
-  await context.test("gemposts do not inherit writing or web search/related metadata", async () => {
+  await context.test("gemposts join the shared corpus without inheriting writing metadata or web publication", async () => {
     assert.equal(metadata.gemposts.length, ENTRY_COUNT / 2);
 
     for (const entry of metadata.gemposts)
@@ -352,10 +355,19 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
     assert.ok(metadata.topicContent.some((entry) => entry.url === writing.webUrl));
     assert.ok(metadata.searchable.some((entry) => entry.url === writing.webUrl));
     const searchRecords = JSON.parse(await fixture.read("fixture-search.json"));
-    assert.equal(searchRecords.length, ENTRY_COUNT / 2);
+    assert.equal(searchRecords.length, ENTRY_COUNT);
     assert.deepEqual(searchRecords.map((entry) => entry.url).sort(),
-      entries.filter((entry) => entry.kind === "writing").map((entry) => entry.webUrl).sort());
-    assert.ok(searchRecords.every((entry) => !entry.title.includes("gemposts")));
+      entries.map((entry) => entry.kind === "writing" ? entry.webUrl : `gemini://hans.gerwitz.com${entry.geminiUrl}`).sort());
+    assert.ok(searchRecords.every((entry) => entry.title !== DRAFT_TITLE));
+
+    const records = await fixture.readRecords();
+    assert.equal(records.length, ENTRY_COUNT);
+    const gempostRecord = records.find((entry) => entry.url === `gemini://hans.gerwitz.com${gempost.geminiUrl}`);
+    assert.equal(gempostRecord.title, gempost.title);
+    assert.match(gempostRecord.searchBodyHtml, /<strong>fixture-01<\/strong>/);
+    assert.match(gempostRecord.embeddingText, /Fixture body for/);
+    assert.deepEqual(gempostRecord.topics, ["fixture-topic"]);
+    assert.ok(records.every((entry) => entry.title !== DRAFT_TITLE));
 
     const files = await outputFiles(fixture.output);
     assert.ok(files.every((filename) => !path.relative(fixture.output, filename).startsWith(`gemposts${path.sep}`)));
