@@ -212,6 +212,42 @@ test("build capture reads resolved metadata and round-trips canonical records pr
   await assert.rejects(readBuiltContentRecords(filePath), /Run a full Eleventy build/);
 });
 
+test("Gemini-only posts retain distinct URLs and bodies in both extraction paths", () =>
+{
+  const collections = createCollections();
+  const gempost = (slug, draft = false) =>
+  {
+    return {
+      inputPath: `./src/gemposts/2026-01-02-${slug}.md`,
+      fileSlug: slug,
+      date: new Date("2026-01-02T12:00:00Z"),
+      url: false,
+      page: { rawInput: `---\ntitle: ${slug}\n---\n\nBody for ${slug}.` },
+      data: { title: slug, tags: ["gemposts"], topics: ["Gemini"], draft },
+    };
+  };
+  const first = gempost("first");
+  const second = gempost("second");
+  collections.all.push(first, second, gempost("draft", true));
+  const metadata = getContentMetadata(collections);
+  const builtRecords = createContentRecords([], metadata, MODEL);
+  const jsonRecords = createContentRecords([first, second].map((item) =>
+  {
+    return { inputPath: item.inputPath, rawInput: item.page.rawInput, url: false, content: "unused rendered HTML" };
+  }), metadata, MODEL);
+
+  assert.deepEqual(jsonRecords, builtRecords);
+  assert.deepEqual(builtRecords.map((item) => item.url), [
+    "gemini://hans.gerwitz.com/posts/2026-01-02-first.gmi",
+    "gemini://hans.gerwitz.com/posts/2026-01-02-second.gmi",
+  ]);
+  assert.ok(builtRecords.every((item) => item.kind === "gemposts"));
+  assert.match(builtRecords[0].searchBodyHtml, /Body for first/);
+  assert.match(builtRecords[1].embeddingText, /Body for second/);
+  assert.deepEqual(builtRecords[0].topics, ["gemini"]);
+  assert.notEqual(builtRecords[0].textHash, builtRecords[1].textHash);
+});
+
 test("unsupported build artifacts request a fresh full build", async (context) =>
 {
   const directory = await mkdtemp(path.join(os.tmpdir(), "hgc-records-"));

@@ -5,6 +5,11 @@ export const geminiPostPath = (entry) => {
   return `/posts/${moment(entry.date).format("YYYY-MM-DD")}-${entry.fileSlug}.gmi`;
 };
 
+export const geminiPostUrl = (entry) =>
+{
+  return new URL(geminiPostPath(entry), "gemini://hans.gerwitz.com").href;
+};
+
 export const gemlog = (collection) => {
   return collection.getFilteredByTags("writing")
       .concat(collection.getFilteredByTags("gemposts"))

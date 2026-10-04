@@ -4,11 +4,9 @@ layout: page
 eleventyExcludeFromCollections: true
 ---
 
-<pre>
-  generated: <span title="{{ generated | date }}">{{ generated | date('nice') | safe }}</span>
-</pre>
-
-<img src="https://hans.gerwitz.com/.well-known/calmserve/updated.svg" alt="calmserve update badge" style="width: auto;">
+<p>
+  <img src="https://hans.gerwitz.com/.well-known/calmserve/updated.svg" alt="calmserve update badge" style="width: auto;">
+</p>
 
 {% for group in contentGroups %}
 <details>
@@ -26,7 +24,7 @@ eleventyExcludeFromCollections: true
       <tr>
         {% if group.hasDatedItems %}<td>{% if item.data.contentDate %}{{ item.data.contentDate | date("YYYY-MM-DD") }}{% endif %}</td>{% endif %}
         <td>{{ item.data.title or item.fileSlug }}</td>
-        <td><a href="{{ item.url }}">{{ item.url }}</a></td>
+        <td><a href="{{ item.url }}"{% if item.url.startsWith("gemini://") %} class="gemini-link" title="Gemini-only post"{% endif %}>{{ item.url }}</a></td>
       </tr>
     {% endfor %}
     </tbody>

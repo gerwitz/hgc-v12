@@ -2,11 +2,12 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { geminiPostUrl } from "./collections/gemlog.js";
 import { createMarkdownLibrary } from "./markdown.js";
 import { getPreviewIconName } from "./shortcodes/previews.js";
 
 const CONTENT_RECORDS_PATH = ".cache/content-records.json";
-const CONTENT_RECORDS_VERSION = 1;
+const CONTENT_RECORDS_VERSION = 2;
 
 const EMBEDDING_INPUT_VERSION = 1;
 const RELATIONSHIP_INPUT_VERSION = 1;
@@ -178,21 +179,32 @@ export const getContentMetadata = (collections) =>
       && item.url
       && (item.data.title || item.data.description || item.data.subtitle);
   });
+  const gemposts = collections.all.filter((item) =>
+  {
+    return item.data.tags?.includes("gemposts") && item.data.draft !== true;
+  });
   const itemsByUrl = new Map(
-    [...searchableMarkdown, ...metadataOnlyPages].map((item) => [item.url, item]),
+    [...searchableMarkdown, ...metadataOnlyPages, ...gemposts].map((item) =>
+    {
+      return [item.data.tags?.includes("gemposts") ? geminiPostUrl(item) : item.url, item];
+    }),
   );
 
-  return Array.from(itemsByUrl.values()).map((item) =>
+  return Array.from(itemsByUrl.entries()).map(([url, item]) =>
   {
+    const isGempost = item.data.tags?.includes("gemposts");
+
     return {
+      // Gemini-only sources are not returned by filesystem builds (permalink: false).
+      ...(isGempost ? { inputPath: item.inputPath, rawInput: item.page.rawInput } : {}),
       categories: item.data.categories || [],
-      contentDate: item.data.contentDate || null,
+      contentDate: item.data.contentDate || (isGempost ? item.date : null),
       description: item.data.description || item.data.subtitle || null,
       previewIconName: getPreviewIconName(item),
       searchBodyHtml: item.data.searchBodyHtml || null,
       title: item.data.title || null,
       topics: item.data.topics || [],
-      url: item.url,
+      url,
       wordCount: item.data.wordCount || null,
     };
   });
@@ -217,7 +229,11 @@ export const createContentRecords = (results, metadata, model) =>
       && /<h1[\s>]/i.test(result.content);
   };
 
-  return results
+  const gempostResults = metadata
+    .filter((item) => item.inputPath?.endsWith(".md") && item.url.startsWith("gemini:"))
+    .map((item) => ({ ...item, content: "" }));
+
+  return [...results, ...gempostResults]
     .filter((result) => metadataByUrl.has(result.url) || isMetadataOnlyPage(result))
     .filter((result) => typeof result.rawInput === "string" && typeof result.content === "string")
     .map((result) => {

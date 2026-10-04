@@ -35,7 +35,7 @@ Related-content data and its OpenAI embedding cache are committed so normal and 
 
 `OPENAI_API_KEY=... npm run related`
 
-Related-content commands always extract fresh records from the current sources, rather than trusting the previous build artifact. Search and related-content generation share content selection, text extraction, and metadata; search also uses high-confidence related titles and topics as neighbor vocabulary.
+Related-content commands always extract fresh records from the current sources, rather than trusting the previous build artifact. Search and related-content generation share content selection, text extraction, and metadata; search also uses high-confidence related titles and topics as neighbor vocabulary. Published `gemposts` join both corpora with canonical `gemini://hans.gerwitz.com/posts/…gmi` destinations, while drafts remain excluded and no web counterparts are generated. Search results and related links to these posts use the `gemini-link` class with a prefixed Gemini symbol; following them requires a Gemini protocol handler. Refresh the embedding data with `npm run related` after adding gemposts, then rebuild the site to publish their relationships.
 
 Use `npm run related:check` to list the eligible content without requesting embeddings. The generator writes `generated/related-content-cache.json`, `generated/related-graph-cache.json`, and `src/_data/related.json`; commit these files with the related content changes.
 

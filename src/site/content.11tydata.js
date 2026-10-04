@@ -1,5 +1,8 @@
+import { geminiPostUrl } from "../../eleventy/collections/gemlog.js";
+
 const contentTypes = [
   ["about", "About"],
+  ["gemposts", "Gemposts"],
   ["ideas", "Ideas"],
   ["lists", "Lists"],
   ["notes", "Notes"],
@@ -57,6 +60,21 @@ const getContentGroups = (items) => {
 
 export default {
   eleventyComputed: {
-    contentGroups: (data) => getContentGroups(data.collections.searchable),
+    contentGroups: (data) =>
+    {
+      // Gemini-only posts join the search corpus without a web permalink.
+      const gemposts = (data.collections.gemposts || [])
+        .filter((item) => item.data.draft !== true)
+        .map((item) => ({
+          ...item,
+          url: geminiPostUrl(item),
+          data: {
+            ...item.data,
+            contentDate: item.data.contentDate || item.date,
+          },
+        }));
+
+      return getContentGroups([...data.collections.searchable, ...gemposts]);
+    },
   },
 };

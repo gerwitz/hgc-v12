@@ -31,7 +31,7 @@
       <ul>
       {% for item in relatedItems %}
         <li class="{{ item.kind }}" data-score="{{ item.score }}">
-          <a href="{{ item.url }}">{{ item.title }}</a>
+          <a href="{{ item.url }}"{% if item.url.startsWith("gemini:") %} class="gemini-link" title="Gemini-only post"{% endif %}>{{ item.title }}</a>
         </li>
       {% endfor %}
       </ul>
