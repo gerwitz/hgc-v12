@@ -225,10 +225,10 @@ body.root {
 }
 
 .search-form.home input {
-  padding: 0 10px 0 30px;
+  padding: 0 10px 0 36px;
   position: absolute;
   top: 0;
-  left: 6;
+  left: 0;
   z-index: 5;
 
   text-align: left;
