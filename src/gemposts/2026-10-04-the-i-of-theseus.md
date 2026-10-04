@@ -1,12 +1,12 @@
 ---
-date: 2026-10-04T21:44:32.275+02:00
+date: 2026-10-04T21:44:34.273+02:00
 title: The "I" of Theseus
+updated: 2026-10-04T21:56:24.073+02:00
 ---
 
+=> gemini://gemini.madsweeney.me/articles/2026-09-19-the-ship-of-theseus-has-a-mind.gmi "The Ship of Theseus Has a Mind" from Mad Sweeney
 
-=> gemini://gemini.madsweeney.me/articles/2026-09-19-the-ship-of-theseus-has-a-mind.gmi
-
-I enjoyed this post by Mad Sweeney and of course agree with their "conclusion" that the Ship of Theseus thought experiment is about the names we give "things", which are really patterns with discernible continuity through time.
+I enjoyed this post and of course agree with their "conclusion" that the Ship of Theseus thought experiment is about the names we give "things", which are really patterns with discernible continuity through time.
 
 But this is what sticks with me:
 > The problem is that a brain, unlike a server, is the kind of thing that might have an inside.
