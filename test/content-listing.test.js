@@ -66,3 +66,19 @@ test("content listing renders Gemini links and dates without changing web links"
   assert.match(document.querySelector("tbody").textContent, /2026-01-02/);
   assert.equal(document.querySelector('a[href="/writing/"]').hasAttribute("class"), false);
 });
+
+
+test("content listing does not read premature template content", () =>
+{
+  const gempost = createGempost("Capsule", "2026-01-02");
+  Object.defineProperty(gempost, "templateContent", {
+    enumerable: true,
+    get: () =>
+    {
+      throw new Error("Tried to use templateContent too early");
+    },
+  });
+
+  const groups = getGroups([gempost]);
+  assert.equal(groups[0].items[0].url, "gemini://hans.gerwitz.com/posts/2026-01-02-capsule.gmi");
+});

@@ -66,7 +66,8 @@ export default {
       const gemposts = (data.collections.gemposts || [])
         .filter((item) => item.data.draft !== true)
         .map((item) => ({
-          ...item,
+          // Collection items have lazy content getters; do not spread them here.
+          fileSlug: item.fileSlug,
           url: geminiPostUrl(item),
           data: {
             ...item.data,
