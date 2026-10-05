@@ -35,6 +35,27 @@ const editionUrl = (value, context) => {
   return `${geminiPath(webUrl.pathname)}${webUrl.search}${webUrl.hash}`;
 };
 
+const renderFigure = (token, context) =>
+{
+  const image = (token.children || []).find((child) => child.type === "image");
+
+  if (!image)
+  {
+    return renderInlineBlock(token, context);
+  }
+
+  const source = image.attrGet("src");
+  const webUrl = new URL(source, new URL(context.sourceUrl, context.webOrigin));
+  // Calmserve serves the same media paths over Gemini; do not map them to .gmi.
+  const url = webUrl.origin === new URL(context.webOrigin).origin
+    && webUrl.pathname.startsWith("/media/")
+    ? `gemini://${webUrl.hostname}${webUrl.pathname}${webUrl.search}${webUrl.hash}`
+    : editionUrl(source, context);
+  const label = normalizeText(image.attrGet("title") || image.content || "Image");
+
+  return `=> ${url} ${label}`;
+};
+
 const superscriptNumber = (number) => String(number)
   .replace(/\d/g, (digit) => "⁰¹²³⁴⁵⁶⁷⁸⁹"[Number(digit)]);
 
@@ -245,6 +266,13 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length)
       const level = Math.max(Number(token.tag.slice(1)), context.minimumHeadingLevel);
       blocks.push(`${"#".repeat(level)} ${renderInlineBlock(tokens[index + 1], context)}`);
       index += 2;
+      continue;
+    }
+
+    if (token.type === "figure_open")
+    {
+      blocks.push(renderFigure(tokens[index + 1], context));
+      index = matchingCloseIndex(tokens, index);
       continue;
     }
 

@@ -233,33 +233,69 @@ test("maps static page collections to Gemini routes", () => {
   );
 });
 
-test("defers standalone figure links to the footer", () => {
-  const source = '![Diagram](/media/diagram.png "Full diagram")';
+test("renders standalone figures in place with Gemini media links", () => {
+  const source = [
+    "Before [a link](https://example.com/).",
+    "",
+    '![Diagram](/media/diagram.png "Full diagram")',
+    "",
+    "After the figure.",
+  ].join("\n");
 
   assert.equal(
     markdownToGemtext(source),
     [
-      "Diagram¹",
+      "Before a link¹.",
+      "",
+      "=> gemini://hans.gerwitz.com/media/diagram.png Full diagram",
+      "",
+      "After the figure.",
       "",
       "## Footnotes",
       "",
-      "=> https://hans.gerwitz.com/media/diagram.png ¹ Full diagram",
+      "=> https://example.com/ ¹ a link",
       "",
     ].join("\n"),
   );
 });
 
-test("labels deferred standalone figures without alternative text", () => {
-  const source = "![](https://images.example/image.jpg)";
-
+test("labels standalone figures without alternative text and preserves external URLs", () => {
   assert.equal(
-    markdownToGemtext(source),
+    markdownToGemtext("![](https://images.example/image.jpg)"),
+    "=> https://images.example/image.jpg Image\n",
+  );
+});
+
+test("resolves relative and same-origin figure media URLs without changing extensions", () => {
+  for (const source of [
+    "![Caption](../../media/photo.jpg?size=full#detail)",
+    "![Caption](https://hans.gerwitz.com/media/photo.jpg?size=full#detail)",
+    "![Caption](gemini://hans.gerwitz.com/media/photo.jpg?size=full#detail)",
+  ])
+  {
+    assert.equal(
+      markdownToGemtext(source, "/posts/example.gmi"),
+      "=> gemini://hans.gerwitz.com/media/photo.jpg?size=full#detail Caption\n",
+    );
+  }
+});
+
+test("uses the configured capsule hostname for standalone media figures", () => {
+  assert.equal(
+    markdownToGemtext("![Caption](/media/photo.jpg)", "/", { webOrigin: "https://capsule.example" }),
+    "=> gemini://capsule.example/media/photo.jpg Caption\n",
+  );
+});
+
+test("keeps inline images among ordinary footer references", () => {
+  assert.equal(
+    markdownToGemtext("Before ![Icon](/media/icon.png) after."),
     [
-      "Image¹",
+      "Before Icon¹ after.",
       "",
       "## Footnotes",
       "",
-      "=> https://images.example/image.jpg ¹ Image",
+      "=> https://hans.gerwitz.com/media/icon.png ¹ Icon",
       "",
     ].join("\n"),
   );
