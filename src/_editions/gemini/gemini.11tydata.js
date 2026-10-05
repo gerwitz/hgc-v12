@@ -18,11 +18,13 @@ export default {
     webOrigin: "https://hans.gerwitz.com",
     collections: ["gemlog", "notes", "about", "lists"],
     routeAliases: {
-      "/writing/": "/posts/",
+      "/writing/": "/gemlog/archive/",
+      "/posts/": "/gemlog/archive/",
     },
     routes: [
       "/",
-      "/posts/",
+      "/gemlog/",
+      "/gemlog/archive/",
       "/notes/",
       "/about/",
       "/lists/",

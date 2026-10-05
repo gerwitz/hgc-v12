@@ -150,9 +150,12 @@ title: Nunjucks probe
     assert.equal(favicon, "🌲\n");
     const redirects = await read("redirects.json");
     assert.deepEqual(JSON.parse(redirects), {
-      "/writing": "/posts/",
-      "/writing/": "/posts/",
-      "/writing/index.gmi": "/posts/",
+      "/writing": "/gemlog/archive/",
+      "/writing/": "/gemlog/archive/",
+      "/writing/index.gmi": "/gemlog/archive/",
+      "/posts": "/gemlog/archive/",
+      "/posts/": "/gemlog/archive/",
+      "/posts/index.gmi": "/gemlog/archive/",
     });
     assert.ok(!redirects.includes(FOOTER));
   });

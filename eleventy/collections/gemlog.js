@@ -2,7 +2,7 @@ import moment from "moment";
 
 // Keep capsule publication identity independent of an entry's web permalink.
 export const geminiPostPath = (entry) => {
-  return `/posts/${moment(entry.date).format("YYYY-MM-DD")}-${entry.fileSlug}.gmi`;
+  return `/gemlog/${moment(entry.date).format("YYYY-MM-DD")}-${entry.fileSlug}.gmi`;
 };
 
 export const geminiPostUrl = (entry) =>
@@ -21,6 +21,7 @@ export const gemlog = (collection) => {
       page: entry.page,
       url: entry.url,
       geminiUrl: geminiPostPath(entry),
+      geminiAliases: [geminiPostPath(entry).replace(/^\/gemlog\//, "/posts/")],
     }))
     .sort((first, second) => first.date - second.date
       || first.data.title.localeCompare(second.data.title));

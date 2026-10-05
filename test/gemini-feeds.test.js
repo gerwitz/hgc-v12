@@ -10,7 +10,7 @@ import { geminiPath, markdownToGemtext } from "../eleventy/gemtext.js";
 
 const entries = Array.from({ length: 60 }, (_, index) => ({
   url: index === 59 ? false : `/writing/entry-${index}.html`,
-  geminiUrl: `/posts/2026-01-01-entry-${index}.gmi`,
+  geminiUrl: `/gemlog/2026-01-01-entry-${index}.gmi`,
   date: new Date(Date.UTC(2026, 0, index + 1)),
   data: { title: `Entry ${index}`, tags: [index === 59 ? "gemposts" : "writing"] },
   page: { rawInput: `# Body heading\n\nNote ${index}.\n\n## Another heading\n` },
@@ -35,12 +35,12 @@ const renderFeed = (name, collections, configuration = {}) => {
 
 test("gemlog lists only the newest 50 merged posts and links to the archive", () => {
   const output = renderFeed("gemlog", { gemlog: entries, notes: entries });
-  const links = output.split("\n").filter((line) => line.startsWith("=> /posts/2026-01-01-entry-"));
+  const links = output.split("\n").filter((line) => line.startsWith("=> /gemlog/2026-01-01-entry-"));
 
   assert.equal(links.length, 50);
   assert.match(links[0], /entry-59\.gmi/);
   assert.match(links.at(-1), /entry-10\.gmi/);
-  assert.match(output, /=> \/posts\/ \/posts - all 60 posts/);
+  assert.match(output, /=> \/gemlog\/archive\/ \/gemlog\/archive - all 60 posts/);
   assert.match(output, /=> \/notes\/ \/notes - all 60 untitled notes/);
 });
 

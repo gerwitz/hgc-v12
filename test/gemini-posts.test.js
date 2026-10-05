@@ -32,12 +32,12 @@ const createEntries = () => Array.from({ length: ENTRY_COUNT }, (_, index) => {
     published,
     title: `Test ${kind} ${index}`,
     filename: `${published}-${slug}.md`,
-    geminiUrl: `/posts/${published}-${slug}.gmi`,
+    geminiUrl: `/gemlog/${published}-${slug}.gmi`,
     webUrl: `/writing/2026/${slug}/`,
   };
 });
 
-const postLinks = (output) => output.split("\n").filter((line) => line.startsWith("=> /posts/2026-"));
+const postLinks = (output) => output.split("\n").filter((line) => line.startsWith("=> /gemlog/2026-"));
 const expectedLink = (entry) => `=> ${entry.geminiUrl} ${entry.published} - ${entry.title}`;
 const assertFooter = (output) => {
   assert.match(output, /\n\n# Elsewhere\n=> \/ +Capsule home\n=> \/gemlog +Gemlog\n(?:=> https:\/\/[^\n]+ View on the web\n)?$/);
@@ -84,8 +84,8 @@ const createFixture = async (directory, entries) => {
     copy("writing/writing.11tydata.js"),
     copy("_editions/gemini/gemini.11tydata.js"),
     copy("_layouts/gemini.njk"),
-    copy("_editions/gemini/posts/content.njk"),
-    copy("_editions/gemini/posts/index.njk"),
+    copy("_editions/gemini/gemlog/content.njk"),
+    copy("_editions/gemini/gemlog/archive.njk"),
     copy("_editions/gemini/gemlog/index.njk"),
     save("_layouts/writing.njk", "<article>{{ content | safe }}</article>\n"),
   ]);
@@ -232,7 +232,7 @@ test("gemlog sorts same-date titles and de-duplicates entries with both tags wit
   assert.equal(result.filter((entry) => entry.data === shared.data).length, 1);
   assert.equal(result[2].page, shared.page);
   assert.equal(result[2].url, shared.url);
-  assert.equal(result[2].geminiUrl, "/posts/2026-01-02-bravo.gmi");
+  assert.equal(result[2].geminiUrl, "/gemlog/2026-01-02-bravo.gmi");
 });
 
 test("gemposts and writing integrate through the actual Gemini templates and directory data", async (context) => {
@@ -259,7 +259,7 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
     assert.match(output, /Fixture body for fixture-01\./);
     assert.match(output, /## About this post\n/);
     assert.match(output, /Posted during week \d+ \(January 2026\)\./);
-    assert.match(output, /=> \/posts\/ More posts/);
+    assert.match(output, /=> \/gemlog\/ More posts/);
     assert.doesNotMatch(output, /View on the web|<article>|<p>|<strong>|topics:|tags:|permalink:/);
 
     const files = await outputFiles(fixture.output);
@@ -276,6 +276,7 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
     const output = await fixture.read(`editions/gemini${writing.geminiUrl}`);
     assert.match(output, /^# Test writing 0\n/);
     assertFooter(output);
+    assert.match(output, /=> \/gemlog\/ More posts/);
     assert.match(output, /=> https:\/\/hans\.gerwitz\.com\/writing\/2026\/fixture-00\/ View on the web\n$/);
     assert.equal(output.split(" View on the web").length - 1, 1);
     assert.match(output, /=> https:\/\/hans\.gerwitz\.com\/writing\/2026\/fixture-00\/sibling\//);
@@ -286,33 +287,47 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
     const output = await fixture.read("editions/gemini/gemlog/index.gmi");
     assertFooter(output);
     assert.deepEqual(postLinks(output), entries.slice(-50).reverse().map(expectedLink));
-    assert.match(output, /=> \/posts\/ \/posts - all 54 posts/);
+    assert.match(output, /=> \/gemlog\/archive\/ \/gemlog\/archive - all 54 posts/);
     assert.match(output, /=> \/notes\/ \/notes - all 1 untitled notes/);
     assert.doesNotMatch(output, /Unrelated note|=> \/writing\//);
   });
 
   await context.test("the archive includes every mixed post newest first", async () => {
-    const output = await fixture.read("editions/gemini/posts/index.gmi");
+    const output = await fixture.read("editions/gemini/gemlog/archive/index.gmi");
     assert.match(output, /^# Posts\n/);
     assertFooter(output);
     assert.deepEqual(postLinks(output), entries.toReversed().map(expectedLink));
     assert.doesNotMatch(output, /Unrelated note|=> \/writing\//);
   });
 
-  await context.test("redirects preserve old writing capsule URLs without redirecting gemposts", async () => {
+  await context.test("redirects preserve legacy roots, every dated post, and writing capsule URLs", async () => {
     const redirects = JSON.parse(await fixture.read("editions/gemini/redirects.json"));
     const expected = {
-      "/writing": "/posts/",
-      "/writing/": "/posts/",
-      "/writing/index.gmi": "/posts/",
+      "/writing": "/gemlog/archive/",
+      "/writing/": "/gemlog/archive/",
+      "/writing/index.gmi": "/gemlog/archive/",
+      "/posts": "/gemlog/archive/",
+      "/posts/": "/gemlog/archive/",
+      "/posts/index.gmi": "/gemlog/archive/",
     };
 
-    for (const entry of entries.filter((entry) => entry.kind === "writing"))
+    for (const entry of entries)
     {
-      expected[`${entry.webUrl}index.gmi`] = entry.geminiUrl;
+      expected[`/posts/${entry.published}-${entry.slug}.gmi`] = entry.geminiUrl;
+
+      if (entry.kind === "writing")
+      {
+        expected[`${entry.webUrl}index.gmi`] = entry.geminiUrl;
+      }
     }
 
     assert.deepEqual(redirects, expected);
+  });
+
+  await context.test("no files are generated under the legacy posts directory", async () => {
+    const files = await outputFiles(fixture.output);
+    const legacyDirectory = path.join("editions", "gemini", "posts") + path.sep;
+    assert.ok(files.every((filename) => !path.relative(fixture.output, filename).startsWith(legacyDirectory)));
   });
 
   await context.test("a draft gempost is absent from collections and Gemini output", async () => {

@@ -11,7 +11,7 @@ So, I've set up this capsule as an output of my site's Eleventy build, which all
 => ./gemtext/ How I Render Markdown as Gemtext
 
 With this setup, even if I drift away from this civilization, my regular posts will still be shared here. Hopefully someone finds them, reaches out with a reaction, and reminds me of this more-cozy web. To futher encourage me to spend time here, I also added a new type of post:
-=> /posts/2026-10-04-first-post.gmi First (Gemini-exclusive) Post
+=> /gemlog/2026-10-04-first-post.gmi First (Gemini-exclusive) Post
 
 A few other places I'm leaving footprints in Geminispace:
 => gemini://tilde.club/~gerwitz/

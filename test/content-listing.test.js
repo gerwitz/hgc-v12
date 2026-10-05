@@ -33,8 +33,8 @@ test("content listing includes dated gemposts with canonical URLs but not drafts
   assert.deepEqual(groups.map((group) => group.title), ["Gemposts", "Writing"]);
   assert.equal(groups[0].hasDatedItems, true);
   assert.deepEqual(groups[0].items.map((item) => item.url), [
-    "gemini://hans.gerwitz.com/posts/2026-01-02-newer.gmi",
-    "gemini://hans.gerwitz.com/posts/2026-01-01-older.gmi",
+    "gemini://hans.gerwitz.com/gemlog/2026-01-02-newer.gmi",
+    "gemini://hans.gerwitz.com/gemlog/2026-01-01-older.gmi",
   ]);
   assert.equal(groups[0].items[0].data.contentDate, newer.date);
   assert.equal(groups[1].items[0], writing);
@@ -61,7 +61,7 @@ test("content listing renders Gemini links and dates without changing web links"
   const { document } = parseHTML(html);
   const geminiLink = document.querySelector("a.gemini-link");
 
-  assert.equal(geminiLink.getAttribute("href"), "gemini://hans.gerwitz.com/posts/2026-01-02-capsule.gmi");
+  assert.equal(geminiLink.getAttribute("href"), "gemini://hans.gerwitz.com/gemlog/2026-01-02-capsule.gmi");
   assert.equal(geminiLink.getAttribute("title"), "Gemini-only post");
   assert.match(document.querySelector("tbody").textContent, /2026-01-02/);
   assert.equal(document.querySelector('a[href="/writing/"]').hasAttribute("class"), false);
@@ -80,5 +80,5 @@ test("content listing does not read premature template content", () =>
   });
 
   const groups = getGroups([gempost]);
-  assert.equal(groups[0].items[0].url, "gemini://hans.gerwitz.com/posts/2026-01-02-capsule.gmi");
+  assert.equal(groups[0].items[0].url, "gemini://hans.gerwitz.com/gemlog/2026-01-02-capsule.gmi");
 });

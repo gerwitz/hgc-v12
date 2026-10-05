@@ -408,6 +408,11 @@ const createRenderingContext = (sourceUrl, configuration, collections) => {
       {
         editionUrls.set(item.geminiUrl, item.geminiUrl);
 
+        for (const alias of item.geminiAliases || [])
+        {
+          editionUrls.set(alias, item.geminiUrl);
+        }
+
         if (item.url)
         {
           editionUrls.set(item.url, item.geminiUrl);

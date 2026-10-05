@@ -13,13 +13,21 @@ export default class GeminiRedirects {
   render(data)
   {
     const redirects = {
-      "/writing": "/posts/",
-      "/writing/": "/posts/",
-      "/writing/index.gmi": "/posts/",
+      "/writing": "/gemlog/archive/",
+      "/writing/": "/gemlog/archive/",
+      "/writing/index.gmi": "/gemlog/archive/",
+      "/posts": "/gemlog/archive/",
+      "/posts/": "/gemlog/archive/",
+      "/posts/index.gmi": "/gemlog/archive/",
     };
 
     for (const entry of data.collections.gemlog)
     {
+      for (const alias of entry.geminiAliases || [])
+      {
+        redirects[alias] = entry.geminiUrl;
+      }
+
       if (entry.data.tags.includes("writing"))
       {
         redirects[geminiPath(entry.url)] = entry.geminiUrl;

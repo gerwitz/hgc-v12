@@ -35,7 +35,7 @@ Related-content data and its OpenAI embedding cache are committed so normal and 
 
 `OPENAI_API_KEY=... npm run related`
 
-Related-content commands always extract fresh records from the current sources, rather than trusting the previous build artifact. Search and related-content generation share content selection, text extraction, and metadata; search also uses high-confidence related titles and topics as neighbor vocabulary. Published `gemposts` join both corpora with canonical `gemini://hans.gerwitz.com/posts/…gmi` destinations, while drafts remain excluded and no web counterparts are generated. Search results and related links to these posts use the `gemini-link` class with a prefixed Gemini symbol; following them requires a Gemini protocol handler. Refresh the embedding data with `npm run related` after adding gemposts, then rebuild the site to publish their relationships.
+Related-content commands always extract fresh records from the current sources, rather than trusting the previous build artifact. Search and related-content generation share content selection, text extraction, and metadata; search also uses high-confidence related titles and topics as neighbor vocabulary. Published `gemposts` join both corpora with canonical `gemini://hans.gerwitz.com/gemlog/…gmi` destinations, while drafts remain excluded and no web counterparts are generated. Search results and related links to these posts use the `gemini-link` class with a prefixed Gemini symbol; following them requires a Gemini protocol handler. Refresh the embedding data with `npm run related` after adding gemposts, then rebuild the site to publish their relationships.
 
 Use `npm run related:check` to list the eligible content without requesting embeddings. The generator writes `generated/related-content-cache.json`, `generated/related-graph-cache.json`, and `src/_data/related.json`; commit these files with the related content changes.
 
@@ -100,7 +100,7 @@ Quotes are rendered by [markdown-it-attribution](https://github.com/dweidner/mar
 
 `/gemposts` contains titled **capsule posts**, published only in Gemini. Author them in `src/gemposts/YYYY-MM-DD-slug.md` with a `title`, an optional explicit `date` (otherwise inferred from the filename), and a Markdown body. They join writing in `collections.gemlog`; the existing web `collections.posts` is unchanged.
 
-The capsule publishes both writing and gemposts at `/posts/YYYY-MM-DD-slug.gmi`. `/gemlog/` lists the newest 50, and `/posts/` is the complete archive. The build generates `editions/gemini/redirects.json` to redirect former Gemini writing URLs. Deploy a rebuilt `calmserve` image with redirect-map support before deploying this URL change.
+The capsule publishes both writing and gemposts at `/gemlog/YYYY-MM-DD-slug.gmi`. `/gemlog/` lists the newest 50, and `/gemlog/archive/` is the complete archive. The build generates `editions/gemini/redirects.json` to redirect former `/posts/` and Gemini writing URLs. Deploy a rebuilt `calmserve` image with redirect-map support before deploying this URL change.
 
 `/notes` contains short **notes** that are identified primarily by publication time. They are published to dated URLs. They are generally tweet-length, but there is no formal limits on their content. They are usually posted via [IndieKit](https://getindiekit.com). They are POSSE to Micro.blog and Twitter (via an RSS feed).
 

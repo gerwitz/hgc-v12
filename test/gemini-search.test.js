@@ -41,11 +41,12 @@ const createGraphData = () =>
 test("related corpus uses canonical Gemini destinations and filters removed or draft posts", () =>
 {
   const related = createGraphData();
+  assert.equal(destination, "gemini://hans.gerwitz.com/gemlog/2026-01-02-capsule-post.gmi");
   assert.equal(related.sources["/web/"].related[0].url, destination);
   assert.equal(related.sources[destination].related[0].url, "/web/");
   const relationships = [
     ...related.sources["/web/"].related,
-    { url: "gemini://hans.gerwitz.com/posts/removed.gmi" },
+    { url: "gemini://hans.gerwitz.com/gemlog/removed.gmi" },
   ];
 
   assert.deepEqual(filterExistingRelated(relationships, [gempost]), [relationships[0]]);

@@ -238,8 +238,8 @@ test("Gemini-only posts retain distinct URLs and bodies in both extraction paths
 
   assert.deepEqual(jsonRecords, builtRecords);
   assert.deepEqual(builtRecords.map((item) => item.url), [
-    "gemini://hans.gerwitz.com/posts/2026-01-02-first.gmi",
-    "gemini://hans.gerwitz.com/posts/2026-01-02-second.gmi",
+    "gemini://hans.gerwitz.com/gemlog/2026-01-02-first.gmi",
+    "gemini://hans.gerwitz.com/gemlog/2026-01-02-second.gmi",
   ]);
   assert.ok(builtRecords.every((item) => item.kind === "gemposts"));
   assert.match(builtRecords[0].searchBodyHtml, /Body for first/);
