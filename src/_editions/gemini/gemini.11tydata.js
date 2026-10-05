@@ -25,6 +25,7 @@ export default {
       "/",
       "/gemlog/",
       "/gemlog/archive/",
+      "/gemlog/dsn/",
       "/notes/",
       "/about/",
       "/lists/",

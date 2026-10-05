@@ -26,3 +26,8 @@ export const gemlog = (collection) => {
     .sort((first, second) => first.date - second.date
       || first.data.title.localeCompare(second.data.title));
 };
+
+export const gemlogDsn = (collection) =>
+{
+  return gemlog(collection).filter((entry) => !(entry.data.categories || []).includes("work"));
+};
