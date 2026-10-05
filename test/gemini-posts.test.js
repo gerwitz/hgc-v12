@@ -40,7 +40,7 @@ const createEntries = () => Array.from({ length: ENTRY_COUNT }, (_, index) => {
 const postLinks = (output) => output.split("\n").filter((line) => line.startsWith("=> /posts/2026-"));
 const expectedLink = (entry) => `=> ${entry.geminiUrl} ${entry.published} - ${entry.title}`;
 const assertFooter = (output) => {
-  assert.match(output, /\n\n=> \/ Capsule home\n=> \/capsule\/ About this capsule\n$/);
+  assert.match(output, /\n\n# Elsewhere\n=> \/ +Capsule home\n=> \/gemlog +Gemlog\n(?:=> https:\/\/[^\n]+ View on the web\n)?$/);
   assert.equal(output.split("Capsule home").length - 1, 1);
 };
 
@@ -276,7 +276,8 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
     const output = await fixture.read(`editions/gemini${writing.geminiUrl}`);
     assert.match(output, /^# Test writing 0\n/);
     assertFooter(output);
-    assert.match(output, /=> https:\/\/hans\.gerwitz\.com\/writing\/2026\/fixture-00\/ View on the web/);
+    assert.match(output, /=> https:\/\/hans\.gerwitz\.com\/writing\/2026\/fixture-00\/ View on the web\n$/);
+    assert.equal(output.split(" View on the web").length - 1, 1);
     assert.match(output, /=> https:\/\/hans\.gerwitz\.com\/writing\/2026\/fixture-00\/sibling\//);
     assert.doesNotMatch(output, /<article>|<strong>/);
   });

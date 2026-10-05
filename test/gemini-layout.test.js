@@ -5,13 +5,41 @@ import path from "node:path";
 import test from "node:test";
 
 import Eleventy from "@11ty/eleventy";
+import nunjucks from "nunjucks";
 
-const FOOTER = "=> / Capsule home\n=> /capsule/ About this capsule\n";
+const FOOTER = "# Elsewhere\n=> /        Capsule home\n=> /gemlog  Gemlog\n";
 const assertFooter = (output) => {
   assert.ok(output.endsWith(`\n\n${FOOTER}`));
   assert.equal(output.split(FOOTER).length - 1, 1);
   assert.doesNotMatch(output, /=> \/index\.gmi Capsule home/);
+  assert.doesNotMatch(output, /^=> .* View on the web$/m);
 };
+
+test("the layout adds the original web entry URL as its last line", async () =>
+{
+  const layout = await readFile(new URL("../src/_layouts/gemini.njk", import.meta.url), "utf8");
+  const environment = new nunjucks.Environment();
+
+  for (const kind of ["writing", "notes", "about", "lists"])
+  {
+    const output = environment.renderString(layout, {
+      content: "# Body",
+      entry: { url: `/${kind}/example/` },
+      gemini: { webOrigin: "https://capsule.example" },
+    });
+    assert.equal(output, `# Body\n\n${FOOTER}=> https://capsule.example/${kind}/example/ View on the web\n`);
+  }
+
+  for (const entry of [undefined, { url: false, data: { tags: ["gemposts"] } }])
+  {
+    const output = environment.renderString(layout, {
+      content: "# Body",
+      entry,
+      gemini: { webOrigin: "https://capsule.example" },
+    });
+    assert.equal(output, `# Body\n\n${FOOTER}`);
+  }
+});
 
 test("Gemini sources inherit the shared layout while homepage and machine outputs opt out", async (context) => {
   const directory = await mkdtemp(path.join(tmpdir(), "hgc-gemini-layout-"));
