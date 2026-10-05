@@ -21,6 +21,7 @@ const DATED_CONTENT_PATH = /\/\d{4}-\d{2}-\d{2}-/;
 export default function configure(eleventyConfig) {
   eleventyConfig.setQuietMode(true);
   eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.addExtension("gmi", { key: "njk" });
 
   if (MEDIA_ORIGIN) {
     eleventyConfig.setServerOptions({
@@ -83,7 +84,7 @@ export default function configure(eleventyConfig) {
       includes: "/_includes",
       layouts: "/_layouts",
     },
-    templateFormats: ["html", "njk", "md", "11ty.js"],
+    templateFormats: ["html", "njk", "md", "gmi", "11ty.js"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     passthroughFileCopy: true,

@@ -1,4 +1,5 @@
 export default {
+  layout: "gemini",
   gemini: {
     webOrigin: "https://hans.gerwitz.com",
     collections: ["gemlog", "notes", "about", "lists"],
