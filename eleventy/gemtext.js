@@ -51,9 +51,20 @@ const renderFigure = (token, context) =>
     && webUrl.pathname.startsWith("/media/")
     ? `gemini://${webUrl.hostname}${webUrl.pathname}${webUrl.search}${webUrl.hash}`
     : editionUrl(source, context);
-  const label = normalizeText(image.attrGet("title") || image.content || "Image");
+  const inlineTokens = token.children || [];
+  const captionIndex = inlineTokens.findIndex((child) => child.type === "figcaption_open");
+  const captionTokens = captionIndex >= 0
+    ? inlineTokens.slice(captionIndex + 1, matchingCloseIndex(inlineTokens, captionIndex))
+    : image.children || [];
+  const firstCaptionReference = context.references.length;
+  const caption = renderInline(captionTokens, context).text;
+  // Keep reference numbers attached to the caption text, even if the image has a title.
+  const hasCaptionReferences = captionTokens.some((child) => ["link_open", "footnote_ref"].includes(child.type));
+  const label = normalizeText((hasCaptionReferences && caption)
+    || image.attrGet("title") || caption || image.content || "Image");
+  const references = renderReferences(context, context.references.slice(firstCaptionReference), false);
 
-  return `=> ${url} ${label}`;
+  return [`=> ${url} ${label}`, references].filter(Boolean).join("\n");
 };
 
 const superscriptNumber = (number) => String(number)
@@ -359,10 +370,10 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length,
   return blocks.filter(Boolean).join("\n\n");
 };
 
-const renderReferences = (context) => {
+const renderReferences = (context, references = context.references, includeHeading = true) => {
   const entries = [];
 
-  for (const reference of context.references.slice(context.emittedReferenceCount))
+  for (const reference of references.filter((reference) => !reference.emitted))
   {
     const number = superscriptNumber(reference.number);
 
@@ -377,6 +388,9 @@ const renderReferences = (context) => {
       const separator = /^(?:=> |#|\* |> |```)/.test(content) ? "\n" : " ";
       entries.push(`${number}${separator}${content}`);
     }
+
+    // Caption references can be emitted ahead of older, still-pending prose references.
+    reference.emitted = true;
   }
 
   if (!entries.length)
@@ -384,7 +398,11 @@ const renderReferences = (context) => {
     return "";
   }
 
-  context.emittedReferenceCount = context.references.length;
+  if (!includeHeading)
+  {
+    return entries.join("\n");
+  }
+
   const headingLevel = Math.max(2, context.minimumHeadingLevel);
   return `${"#".repeat(headingLevel)} Footnotes\n\n${entries.join("\n")}`;
 };
@@ -424,7 +442,7 @@ const createRenderingContext = (sourceUrl, configuration, collections) => {
   return {
     editionRoutes,
     editionUrls,
-    emittedReferenceCount: 0,
+
     footnoteNumbers: new Map(),
     footnotes: new Map(),
     minimumHeadingLevel: configuration.minimumHeadingLevel || 1,

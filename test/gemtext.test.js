@@ -269,6 +269,100 @@ test("renders standalone figures in place with Gemini media links", () => {
   );
 });
 
+test("renders links in standalone image captions immediately below the image", () =>
+{
+  const source = "![Dad posing with me at the [American Freedom Train](https://en.wikipedia.org/wiki/American_Freedom_Train_(1975%E2%80%931976)) in St. Louis](/assets/2026-09/SP4449.jpeg)";
+
+  assert.equal(
+    markdownToGemtext(source),
+    [
+      "=> https://hans.gerwitz.com/assets/2026-09/SP4449.jpeg Dad posing with me at the American Freedom Train¹ in St. Louis",
+      "=> https://en.wikipedia.org/wiki/American_Freedom_Train_(1975%E2%80%931976) ¹ American Freedom Train",
+      "",
+    ].join("\n"),
+  );
+});
+
+test("keeps caption links out of deferred prose references without resetting their numbering", () =>
+{
+  const source = [
+    "Before [first](https://example.com/first).",
+    "",
+    "![A [source](https://example.com/source) image](/media/image.png)",
+    "",
+    "After [last](https://example.com/last).",
+    "",
+    "## Next section",
+  ].join("\n");
+
+  assert.equal(
+    markdownToGemtext(source),
+    [
+      "Before first¹.",
+      "",
+      "=> gemini://hans.gerwitz.com/media/image.png A source² image",
+      "=> https://example.com/source ² source",
+      "",
+      "After last³.",
+      "",
+      "## Footnotes",
+      "",
+      "=> https://example.com/first ¹ first",
+      "=> https://example.com/last ³ last",
+      "",
+      "## Next section",
+      "",
+    ].join("\n"),
+  );
+});
+
+test("renders formatted captions with multiple links and capsule route mapping", () =>
+{
+  const source = "![A **diagram** of [notes](/notes/) and [sources](https://example.com/sources)](/media/diagram.png)";
+
+  assert.equal(
+    markdownToGemtext(source, "/", { routes: ["/notes/"] }),
+    [
+      "=> gemini://hans.gerwitz.com/media/diagram.png A diagram of notes¹ and sources²",
+      "=> /notes/index.gmi ¹ notes",
+      "=> https://example.com/sources ² sources",
+      "",
+    ].join("\n"),
+  );
+});
+
+test("retains linked caption text when the standalone image also has a title", () =>
+{
+  assert.equal(
+    markdownToGemtext('![A [source](https://example.com/source)](/media/image.png "Image title")'),
+    "=> gemini://hans.gerwitz.com/media/image.png A source¹\n=> https://example.com/source ¹ source\n",
+  );
+});
+
+test("emits caption links within cached footnotes without duplicating or losing pending references", () =>
+{
+  const source = [
+    "Read [first](https://example.com/first). Note.[^detail]",
+    "",
+    "## Next",
+    "",
+    "Read [last](https://example.com/last). Again.[^detail]",
+    "",
+    "[^detail]: A [note link](https://example.com/note).",
+    "",
+    "    ![A [caption](https://example.com/caption)](/media/image.png)",
+  ].join("\n");
+  const output = markdownToGemtext(source);
+
+  assert.match(output, /^Read first¹\. Note\.²\n/);
+  assert.match(output, /² A note link³\./);
+  assert.ok(output.includes("=> gemini://hans.gerwitz.com/media/image.png A caption⁴\n=> https://example.com/caption ⁴ caption"));
+  assert.equal(output.split("=> https://example.com/caption").length - 1, 1);
+  assert.ok(output.includes("=> https://example.com/note ³ note link\n\n## Next"));
+  assert.ok(output.includes("Read last⁵. Again.²"));
+  assert.ok(output.endsWith("=> https://example.com/last ⁵ last\n"));
+});
+
 test("labels standalone figures without alternative text and preserves external URLs", () => {
   assert.equal(
     markdownToGemtext("![](https://images.example/image.jpg)"),

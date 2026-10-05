@@ -25,9 +25,9 @@ Another case is when a link occupies an entire paragraph or list item. In both c
 
 ## Images
 
-When I include an image, it's generally as a standalone "paragraph". In this case, they are rendered as a link line in place, labeled with the specified table (again, rarely) or caption/alt text (thankfully more common).
+When I include an image, it's generally as a standalone "paragraph". In this case, they are rendered as a link line in place, labeled with the specified table (again, rarely) or caption/alt text (thankfully more common). One of the worst edge cases is when the caption includes a link: that becomes a numbered reference with the embedded link placed immediately below the image link. Sheesh.
 
-If they are local, a `gemini:` URL is used, so clients like Lagrange can offer to render it within the document.
+If an image link is local, a `gemini:` URL is used, so clients like Lagrange can offer to render it within the document.
 
 In the rare case that an image is included within a Markdown paragraph, it is treated like any other link.
 
