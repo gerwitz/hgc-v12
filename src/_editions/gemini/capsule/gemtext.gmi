@@ -1,0 +1,40 @@
+# How I Render Markdown as Gemtext
+
+Thankfully, when I moved to static site generators in 2012, I converted nearly all pages to Markdown files. This makes translating to Gemtext relatively simple, but there are a bunch of specific decisions I had to make while vibe-coding the renderer:
+=> https://github.com/gerwitz/hgc-v12/blob/main/eleventy/gemtext.js gemtext.js
+
+## Links and asides
+
+The most obvious problem was inline links and asides ("footnotes" rendered as sidenotes in my HTML). Both are given superscript references and added as their own lines at the end of each body section (before any heading lines).
+
+One special case is for links *within* asides. These are numbered immediately after the containing footnotes, so they appear immediately below them. It's easier to show the output than explain:
+
+```
+This needs a source.¹ And this deserves exposition.³
+
+## Footnotes
+
+¹ See the source².
+=> https://plato.stanford.edu/ ² the source
+³ There is more to say about this.
+```
+
+Also, in the rare cases I specify a title for a link, it is used for rendering rather than the anchor text.
+
+Another case is when a link occupies an entire paragraph or list item. In both cases, they are rendered in place without a reference number.
+
+## Images
+
+When I include an image, it's generally as a standalone "paragraph". In this case, they are rendered as a link line in place, labeled with the specified table (again, rarely) or caption/alt text (thankfully more common).
+
+If they are local, a `gemini:` URL is used, so clients like Lagrange can offer to render it within the document.
+
+In the rare case that an image is included within a Markdown paragraph, it is treated like any other link.
+
+Simple to say but hard to implement without LLM help is the way internal links are recognized as available for a `gemini:` URL or not. It seems to be working well and only content that's *only* available via HTTP will link to the web site.
+
+## &c
+
+Much of Markdown can be simply transcribed (headings, quotations, code blocks, inline formatting.) Lists become spec-compliant bullet lists, and of course YAML frontmatter is omitted.
+
+Embedded HTML is actually parsed for reduction to simple text. I'm sure this breaks on some edge cases, but I haven't tested thoroughly enough to find them.
