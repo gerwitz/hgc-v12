@@ -4,4 +4,5 @@
 {% if entry and entry.url %}=> {{ gemini.webOrigin }}{{ entry.url }} This document on the World Wide Web
 {% endif -%}
 => /        Capsule home
-=> /gemlog  Gemlog
+{% if page.url != "/editions/gemini/gemlog/index.gmi" %}=> /gemlog  Gemlog
+{% endif -%}

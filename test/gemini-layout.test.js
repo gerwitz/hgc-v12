@@ -15,6 +15,29 @@ const assertFooter = (output) => {
   assert.doesNotMatch(output, /^=> .* View on the web$/m);
 };
 
+test("the layout suppresses the Gemlog link only on the Gemlog index", async () =>
+{
+  const layout = await readFile(new URL("../src/_layouts/gemini.njk", import.meta.url), "utf8");
+  const environment = new nunjucks.Environment();
+  const render = (url) => environment.renderString(layout, {
+    content: "# Body",
+    page: { url },
+  });
+
+  const index = render("/editions/gemini/gemlog/index.gmi");
+  assert.doesNotMatch(index, /^=> \/gemlog\s+Gemlog$/m);
+  assert.match(index, /^=> \/\s+Capsule home$/m);
+
+  for (const url of [
+    "/editions/gemini/gemlog/archive/index.gmi",
+    "/editions/gemini/gemlog/2026-10-04-first-post.gmi",
+    "/editions/gemini/capsule/index.gmi",
+  ])
+  {
+    assert.match(render(url), /^=> \/gemlog\s+Gemlog$/m);
+  }
+});
+
 test("the layout adds the original web entry URL as its last line", async () =>
 {
   const layout = await readFile(new URL("../src/_layouts/gemini.njk", import.meta.url), "utf8");

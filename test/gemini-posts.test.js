@@ -285,7 +285,8 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
 
   await context.test("the feed includes the newest 50 mixed posts and links to the complete archive", async () => {
     const output = await fixture.read("editions/gemini/gemlog/index.gmi");
-    assertFooter(output);
+    assert.doesNotMatch(output, /^=> \/gemlog\s+Gemlog$/m);
+    assert.match(output, /^=> \/\s+Capsule home$/m);
     assert.deepEqual(postLinks(output), entries.slice(-50).reverse().map(expectedLink));
     assert.match(output, /=> \/gemlog\/archive\/ \/gemlog\/archive - all 54 posts/);
     assert.match(output, /=> \/notes\/ \/notes - all 1 untitled notes/);

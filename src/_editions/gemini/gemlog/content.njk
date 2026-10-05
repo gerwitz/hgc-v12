@@ -10,9 +10,6 @@ permalink: "/editions/gemini{{ entry.geminiUrl }}"
 
 {{ entry.page.rawInput | gemtext(entry.geminiUrl if "gemposts" in entry.data.tags else entry.url, gemini, collections) | safe }}
 
-## About this post
+## About this post…
 
-Posted during week {{ entry.date | weeknum }} ({{ entry.date | date("MMMM YYYY") }}).
-
-
-=> /gemlog/ More posts
+This was posted during week {{ entry.date | weeknum }} ({{ entry.date | date("MMMM YYYY") }}).
