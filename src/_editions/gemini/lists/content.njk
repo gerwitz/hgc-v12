@@ -4,7 +4,7 @@ pagination:
   size: 1
   alias: entry
 permalink: "/editions/gemini{{ entry.url | geminiPath }}"
-eleventyExcludeFromCollections: true
+
 ---
 # {{ (entry.data.title or entry.page.fileSlug) | plaintext | safe }}
 

@@ -51,6 +51,7 @@ title: Nunjucks probe
   const redirectsModule = new URL("../src/_editions/gemini/redirects.11ty.js", import.meta.url).href;
   await save("_editions/gemini/redirects.11ty.js", `export { default } from ${JSON.stringify(redirectsModule)};\n`);
 
+  let collectedPages;
   const eleventy = new Eleventy(input, output, {
     configPath: false,
     config: (configuration) => {
@@ -58,11 +59,20 @@ title: Nunjucks probe
       configuration.addExtension("gmi", { key: "njk" });
       configuration.setTemplateFormats(["njk", "gmi", "11ty.js"]);
       configuration.setLayoutsDirectory("_layouts");
-      configuration.addCollection("gemlog", () => []);
+      configuration.addCollection("gemlog", (collection) =>
+      {
+        collectedPages = collection.getAll();
+        return [];
+      });
     },
   });
 
   await eleventy.write();
+
+  await context.test("directory data excludes all Gemini templates from collections", () =>
+  {
+    assert.deepEqual(collectedPages, []);
+  });
 
   await context.test("the gmi alias parses frontmatter and renders Nunjucks before the layout", async () => {
     const probe = await read("probe.gmi");

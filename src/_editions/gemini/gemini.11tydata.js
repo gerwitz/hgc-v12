@@ -1,5 +1,6 @@
 export default {
   layout: "gemini",
+  eleventyExcludeFromCollections: true,
   gemini: {
     webOrigin: "https://hans.gerwitz.com",
     collections: ["gemlog", "notes", "about", "lists"],

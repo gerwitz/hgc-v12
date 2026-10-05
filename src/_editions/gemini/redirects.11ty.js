@@ -6,7 +6,7 @@ export default class GeminiRedirects {
     return {
       permalink: "/editions/gemini/redirects.json",
       layout: false,
-      eleventyExcludeFromCollections: true,
+
     };
   }
 
