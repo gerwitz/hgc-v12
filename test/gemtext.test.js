@@ -543,6 +543,165 @@ test("numbers footnote-body links before later paragraphs regardless of definiti
   );
 });
 
+test("flushes footnotes and their links before headings of every level", () =>
+{
+  for (let level = 1; level <= 6; level += 1)
+  {
+    const heading = `${"#".repeat(level)} Next section`;
+    const source = [
+      "A note.[^detail] Read [first](https://example.com/first).",
+      "",
+      heading,
+      "",
+      "Read [last](https://example.com/last).",
+      "",
+      "[^detail]: Its [source](https://example.com/source).",
+    ].join("\n");
+
+    assert.equal(
+      markdownToGemtext(source),
+      [
+        "A note.¹ Read first³.",
+        "",
+        "## Footnotes",
+        "",
+        "¹ Its source².",
+        "=> https://example.com/source ² source",
+        "=> https://example.com/first ³ first",
+        "",
+        heading,
+        "",
+        "Read last⁴.",
+        "",
+        "## Footnotes",
+        "",
+        "=> https://example.com/last ⁴ last",
+        "",
+      ].join("\n"),
+    );
+  }
+});
+
+test("heading references belong to the following section and empty sections emit no footnotes", () =>
+{
+  const source = "# First [source](https://example.com/source)\n\n## Second\n\n### Third";
+
+  assert.equal(
+    markdownToGemtext(source),
+    [
+      "# First source¹",
+      "",
+      "## Footnotes",
+      "",
+      "=> https://example.com/source ¹ source",
+      "",
+      "## Second",
+      "",
+      "### Third",
+      "",
+    ].join("\n"),
+  );
+});
+
+test("repeated footnotes across sections are numbered and emitted only once", () =>
+{
+  const source = [
+    "First.[^detail]",
+    "",
+    "# Next",
+    "",
+    "Again.[^detail]",
+    "",
+    "## Last",
+    "",
+    "[^detail]: A [source](https://example.com/source).",
+  ].join("\n");
+
+  assert.equal(
+    markdownToGemtext(source),
+    [
+      "First.¹",
+      "",
+      "## Footnotes",
+      "",
+      "¹ A source².",
+      "=> https://example.com/source ² source",
+      "",
+      "# Next",
+      "",
+      "Again.¹",
+      "",
+      "## Last",
+      "",
+    ].join("\n"),
+  );
+});
+
+test("headings within footnotes do not flush incomplete cached notes or consume pending references", () =>
+{
+  const source = [
+    "A note.[^detail]",
+    "",
+    "# Next",
+    "",
+    "Read [more](https://example.com/more).",
+    "",
+    "[^detail]: Read [first](https://example.com/first).",
+    "",
+    "    ## Detail heading",
+    "",
+    "    Read [second](https://example.com/second).",
+  ].join("\n");
+
+  assert.equal(
+    markdownToGemtext(source),
+    [
+      "A note.¹",
+      "",
+      "## Footnotes",
+      "",
+      "¹ Read first².",
+      "",
+      "## Detail heading",
+      "",
+      "Read second³.",
+      "=> https://example.com/first ² first",
+      "=> https://example.com/second ³ second",
+      "",
+      "# Next",
+      "",
+      "Read more⁴.",
+      "",
+      "## Footnotes",
+      "",
+      "=> https://example.com/more ⁴ more",
+      "",
+    ].join("\n"),
+  );
+});
+
+test("flushes quote and list references outside their containers before the next heading", () =>
+{
+  const source = "> Read [quote](https://example.com/quote).\n\n- Read [item](https://example.com/item).\n\n## Next";
+
+  assert.equal(
+    markdownToGemtext(source),
+    [
+      "> Read quote¹.",
+      "",
+      "* Read item².",
+      "",
+      "## Footnotes",
+      "",
+      "=> https://example.com/quote ¹ quote",
+      "=> https://example.com/item ² item",
+      "",
+      "## Next",
+      "",
+    ].join("\n"),
+  );
+});
+
 test("uses Unicode superscript digits for single- and multi-digit reference numbers", () =>
 {
   const source = Array.from({ length: 11 }, (_, index) =>

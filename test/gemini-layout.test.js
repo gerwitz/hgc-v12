@@ -35,10 +35,13 @@ test("Gemini sources inherit the shared layout while homepage and machine output
     copy("_layouts/gemini.njk"),
     copy("_editions/gemini/gemini.11tydata.js"),
     copy("_editions/gemini/capsule/gemtext.gmi"),
+    copy("_editions/gemini/capsule/index.gmi"),
+    save("_editions/gemini/nested/index.gmi", "# Nested index\n"),
+    save("_editions/gemini/nested/page.gmi", "# Nested page\n"),
+    save("_editions/gemini/override.gmi", "---\npermalink: /editions/gemini/custom.gmi\n---\n# Explicit override\n"),
     copy("_editions/gemini/index.njk"),
     copy("_editions/gemini/favicon.njk"),
     save("_editions/gemini/probe.gmi", `---
-permalink: /editions/gemini/probe.gmi
 title: Nunjucks probe
 ---
 # {{ title }}
@@ -75,17 +78,31 @@ title: Nunjucks probe
   });
 
   await context.test("the gmi alias parses frontmatter and renders Nunjucks before the layout", async () => {
-    const probe = await read("probe.gmi");
+    const probe = await read("probe/index.gmi");
     assert.equal(probe, `# Nunjucks probe\n\n=> https://hans.gerwitz.com Website\n\n${FOOTER}`);
     assertFooter(probe);
   });
 
-  await context.test("the real Gemtext guide keeps its explicit permalink and plain-text content", async () => {
+  await context.test("frontmatter-free gmi files get directory-style capsule paths", async () =>
+  {
+    assert.equal(await read("nested/index.gmi"), `# Nested index\n\n${FOOTER}`);
+    assert.equal(await read("nested/page/index.gmi"), `# Nested page\n\n${FOOTER}`);
+    const capsule = await read("capsule/index.gmi");
+    assert.match(capsule, /^# About this capsule\n/);
+    assertFooter(capsule);
+  });
+
+  await context.test("explicit permalinks override the directory default", async () =>
+  {
+    assert.equal(await read("custom.gmi"), `# Explicit override\n\n${FOOTER}`);
+  });
+
+  await context.test("the real Gemtext guide keeps its published route and plain-text content", async () => {
     const guide = await read("capsule/gemtext/index.gmi");
     const source = await readFile(new URL("../src/_editions/gemini/capsule/gemtext.gmi", import.meta.url), "utf8");
     const body = source.replace(/^---\n[\s\S]*?\n---\n/, "").trim();
     assert.equal(guide, `${body}\n\n${FOOTER}`);
-    assert.match(guide, /^# From Markdown to Gemtext\n/);
+    assert.match(guide, /^# .+\n/);
     assert.doesNotMatch(guide, /<h1>|<p>|permalink:|eleventyExcludeFromCollections:/);
     assertFooter(guide);
   });

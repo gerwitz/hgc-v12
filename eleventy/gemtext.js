@@ -71,7 +71,8 @@ const footnoteNumber = (token, context) => {
   if (!context.footnoteNumbers.has(id)) {
     context.footnoteNumbers.set(id, addReference(context, { footnoteId: id }));
     // Reserve the note first, then number its links before later body references.
-    context.renderedFootnotes.set(id, renderBlocks(context.footnotes.get(id) || [], context));
+    const definition = context.footnotes.get(id) || [];
+        context.renderedFootnotes.set(id, renderBlocks(definition, context, 0, definition.length, false));
   }
 
   return context.footnoteNumbers.get(id);
@@ -225,7 +226,7 @@ const renderList = (tokens, openIndex, closeIndex, context) => {
       continue;
     }
 
-    const content = renderBlocks(tokens, context, index + 1, itemCloseIndex);
+    const content = renderBlocks(tokens, context, index + 1, itemCloseIndex, false);
     const lines = content.split("\n");
     const firstTextIndex = lines.findIndex((line) => line && !line.startsWith("=>"));
 
@@ -241,7 +242,7 @@ const renderList = (tokens, openIndex, closeIndex, context) => {
 };
 
 const renderBlockquote = (tokens, openIndex, closeIndex, context) => {
-  return renderBlocks(tokens, context, openIndex + 1, closeIndex)
+  return renderBlocks(tokens, context, openIndex + 1, closeIndex, false)
     .split("\n")
     .map((line) => {
       if (!line || line.startsWith("=>")) {
@@ -258,13 +259,19 @@ const renderHtmlBlock = (html) => {
   return normalizeText(document.body.textContent);
 };
 
-const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length) => {
+// Only document headings flush references, not headings inside cached notes or quoted/listed blocks.
+const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length, flushBeforeHeadings = true) => {
   const blocks = [];
 
   for (let index = startIndex; index < endIndex; index += 1) {
     const token = tokens[index];
 
     if (token.type === "heading_open") {
+      if (flushBeforeHeadings)
+      {
+        blocks.push(renderReferences(context));
+      }
+
       const level = Math.max(Number(token.tag.slice(1)), context.minimumHeadingLevel);
       blocks.push(`${"#".repeat(level)} ${renderInlineBlock(tokens[index + 1], context)}`);
       index += 2;
@@ -336,7 +343,7 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length)
 
     if (token.type === "dd_open") {
       const closeIndex = matchingCloseIndex(tokens, index);
-      blocks.push(renderBlocks(tokens, context, index + 1, closeIndex));
+      blocks.push(renderBlocks(tokens, context, index + 1, closeIndex, false));
       index = closeIndex;
       continue;
     }
@@ -355,8 +362,7 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length)
 const renderReferences = (context) => {
   const entries = [];
 
-
-  for (const reference of context.references)
+  for (const reference of context.references.slice(context.emittedReferenceCount))
   {
     const number = superscriptNumber(reference.number);
 
@@ -378,6 +384,7 @@ const renderReferences = (context) => {
     return "";
   }
 
+  context.emittedReferenceCount = context.references.length;
   const headingLevel = Math.max(2, context.minimumHeadingLevel);
   return `${"#".repeat(headingLevel)} Footnotes\n\n${entries.join("\n")}`;
 };
@@ -412,6 +419,7 @@ const createRenderingContext = (sourceUrl, configuration, collections) => {
   return {
     editionRoutes,
     editionUrls,
+    emittedReferenceCount: 0,
     footnoteNumbers: new Map(),
     footnotes: new Map(),
     minimumHeadingLevel: configuration.minimumHeadingLevel || 1,
