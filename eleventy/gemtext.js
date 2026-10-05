@@ -70,6 +70,8 @@ const footnoteNumber = (token, context) => {
 
   if (!context.footnoteNumbers.has(id)) {
     context.footnoteNumbers.set(id, addReference(context, { footnoteId: id }));
+    // Reserve the note first, then number its links before later body references.
+    context.renderedFootnotes.set(id, renderBlocks(context.footnotes.get(id) || [], context));
   }
 
   return context.footnoteNumbers.get(id);
@@ -321,8 +323,7 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length)
     if (token.type === "footnote_open")
     {
       const closeIndex = matchingCloseIndex(tokens, index);
-      // Definitions may occur before later prose; defer their references until the body is complete.
-      context.footnotes.set(token.meta?.id ?? 0, tokens.slice(index + 1, closeIndex));
+
       index = closeIndex;
       continue;
     }
@@ -354,7 +355,7 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length)
 const renderReferences = (context) => {
   const entries = [];
 
-  // Rendering textual notes may append links; array iteration includes those new references.
+
   for (const reference of context.references)
   {
     const number = superscriptNumber(reference.number);
@@ -365,7 +366,7 @@ const renderReferences = (context) => {
     }
     else
     {
-      const content = renderBlocks(context.footnotes.get(reference.footnoteId) || [], context);
+      const content = context.renderedFootnotes.get(reference.footnoteId) || "";
       // Structural Gemtext markers must stay at the beginning of their lines.
       const separator = /^(?:=> |#|\* |> |```)/.test(content) ? "\n" : " ";
       entries.push(`${number}${separator}${content}`);
@@ -415,6 +416,7 @@ const createRenderingContext = (sourceUrl, configuration, collections) => {
     footnotes: new Map(),
     minimumHeadingLevel: configuration.minimumHeadingLevel || 1,
     references: [],
+    renderedFootnotes: new Map(),
     sourceUrl,
     webOrigin: configuration.webOrigin || DEFAULT_WEB_ORIGIN,
   };
@@ -428,6 +430,16 @@ export const markdownToGemtext = (
 ) => {
   const tokens = markdown.parse(withoutFrontMatter(source || ""), {});
   const context = createRenderingContext(sourceUrl, configuration, collections);
+
+  // Definitions must be available when their first reference is encountered.
+  for (let index = 0; index < tokens.length; index += 1)
+  {
+    if (tokens[index].type === "footnote_open")
+    {
+      const closeIndex = matchingCloseIndex(tokens, index);
+      context.footnotes.set(tokens[index].meta?.id ?? 0, tokens.slice(index + 1, closeIndex));
+    }
+  }
 
   const body = renderBlocks(tokens, context).trim();
   const references = renderReferences(context);

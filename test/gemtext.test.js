@@ -312,13 +312,37 @@ test("shares ordered footer references between Markdown footnotes and their link
   assert.equal(
     markdownToGemtext(source),
     [
-      "A statement.¹ Another.²",
+      "A statement.¹ Another.³",
       "",
       "## Footnotes",
       "",
-      "¹ Its source³.",
-      "² More detail.",
-      "=> https://hans.gerwitz.com/source/ ³ source",
+      "¹ Its source².",
+      "=> https://hans.gerwitz.com/source/ ² source",
+      "³ More detail.",
+      "",
+    ].join("\n"),
+  );
+});
+
+test("numbers multiple footnote links once before later body references", () =>
+{
+  const source = [
+    "A note.[^detail] A [body link](https://example.com/body). Repeat.[^detail]",
+    "",
+    "[^detail]: Read [first](https://example.com/first) and [second](https://example.com/second).",
+  ].join("\n");
+
+  assert.equal(
+    markdownToGemtext(source),
+    [
+      "A note.¹ A body link⁴. Repeat.¹",
+      "",
+      "## Footnotes",
+      "",
+      "¹ Read first² and second³.",
+      "=> https://example.com/first ² first",
+      "=> https://example.com/second ³ second",
+      "=> https://example.com/body ⁴ body link",
       "",
     ].join("\n"),
   );
@@ -399,19 +423,19 @@ test("numbers mixed references by first body mention and emits repeated footnote
   assert.equal(
     markdownToGemtext(source),
     [
-      "Read first¹, then this note.² See diagram³.",
+      "Read first¹, then this note.² See diagram⁴.",
       "",
-      "Repeat.² Another note.⁴ Read last⁵.",
+      "Repeat.² Another note.⁵ Read last⁷.",
       "",
       "## Footnotes",
       "",
       "=> https://example.com/first ¹ first",
-      "² More detail⁶.",
-      "=> https://example.com/diagram.png ³ diagram",
-      "⁴ Another source⁷.",
-      "=> https://example.com/last ⁵ last",
-      "=> https://example.com/detail ⁶ detail",
-      "=> https://example.com/other ⁷ source",
+      "² More detail³.",
+      "=> https://example.com/detail ³ detail",
+      "=> https://example.com/diagram.png ⁴ diagram",
+      "⁵ Another source⁶.",
+      "=> https://example.com/other ⁶ source",
+      "=> https://example.com/last ⁷ last",
       "",
     ].join("\n"),
   );
@@ -439,11 +463,11 @@ test("preserves multiple blocks within a textual footnote in the shared footer",
   assert.equal(
     markdownToGemtext(source),
     [
-      "A statement.¹ Read more².",
+      "A statement.¹ Read more³.",
       "",
       "## Footnotes",
       "",
-      "¹ First paragraph with detail³.",
+      "¹ First paragraph with detail².",
       "",
       "Second paragraph.",
       "",
@@ -455,8 +479,8 @@ test("preserves multiple blocks within a textual footnote in the shared footer",
       "```",
       "Code example",
       "```",
-      "=> https://example.com/more ² more",
-      "=> https://example.com/detail ³ detail",
+      "=> https://example.com/detail ² detail",
+      "=> https://example.com/more ³ more",
       "",
     ].join("\n"),
   );
@@ -492,7 +516,7 @@ test("preserves direct links and code fences at the start of textual footnotes",
   );
 });
 
-test("defers footnote-body links even when definitions precede later body paragraphs", () =>
+test("numbers footnote-body links before later paragraphs regardless of definition placement", () =>
 {
   const source = [
     "A statement.[^detail]",
@@ -507,13 +531,13 @@ test("defers footnote-body links even when definitions precede later body paragr
     [
       "A statement.¹",
       "",
-      "A later link².",
+      "A later link³.",
       "",
       "## Footnotes",
       "",
-      "¹ More detail³.",
-      "=> https://example.com/later ² link",
-      "=> https://example.com/detail ³ detail",
+      "¹ More detail².",
+      "=> https://example.com/detail ² detail",
+      "=> https://example.com/later ³ link",
       "",
     ].join("\n"),
   );
