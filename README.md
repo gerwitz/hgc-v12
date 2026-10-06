@@ -78,6 +78,46 @@ with registry credentials. The site Docker build accepts `CALMSERVE_IMAGE` as a
 build argument when a specific image tag or digest should be used instead of
 `latest`.
 
+### Gemini notifications after deployment
+
+Maintain notification URLs in `src/_editions/gemini/pings.json`, beside the
+redirect generator. It is a JSON array of full `gemini://` URLs; an empty array
+disables notifications. The file is copied to `/opt/gemini-ping/pings.json`, not
+into the publicly served site or capsule. Avoid committing secret tokens.
+
+In the **production** Coolify application's **Configuration > General >
+Post-deployment command**, set:
+
+```sh
+node /opt/gemini-ping/gemini-ping.mjs /opt/gemini-ping/pings.json
+```
+
+Set the runtime environment variable `GEMINI_PING_ENABLED=true` for production
+only. Leave it unset or false for preview/development deployments. Coolify runs
+this command inside the newly deployed container after marking deployment
+complete; the runtime image includes Node for this one-shot client. Nothing
+invokes it during image builds, startup, or health checks.
+
+Before notifying endpoints, the client fetches
+`gemini://hans.gerwitz.com/gemlog/` and compares its body byte-for-byte with
+`/srv/calmserve/gemlog/index.gmi`. It sends no notifications while the public
+capsule is unavailable or still serving a different feed. Override
+`GEMINI_PING_READY_URL` and `GEMINI_PING_READY_FILE` together if needed.
+
+Requests use TLS without certificate verification, accept Gemini 2x responses,
+and follow at most three Gemini redirects. Requests have a five-second timeout;
+network errors, temporary 4x responses, and stale readiness content get up to two
+retries one second apart. Endpoint failures are logged without failing the hook;
+configuration errors exit nonzero. Notifications are best-effort and retries can
+repeat a request. If the new feed is unchanged, the readiness comparison cannot
+distinguish old and new containers, but the advertised content is already live.
+
+Validate configuration locally without making requests:
+
+```sh
+npm run gemini:ping -- --dry-run
+```
+
 ## Standards
 
 Javascript is 100% optional. CSS is also optional, but without it everything will be ugly.

@@ -29,5 +29,6 @@ export const gemlog = (collection) => {
 
 export const gemlogDsn = (collection) =>
 {
-  return gemlog(collection).filter((entry) => !(entry.data.categories || []).includes("work"));
+  return gemlog(collection).filter((entry) =>
+    !["work", "meta"].some((category) => (entry.data.categories || []).includes(category)));
 };

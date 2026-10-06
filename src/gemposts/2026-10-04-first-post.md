@@ -2,6 +2,8 @@
 date: 2026-10-04T17:26:06.266+02:00
 title: First Post
 updated: 2026-10-04T17:47:38.648+02:00
+categories:
+  - meta
 ---
 
 If I have set up everything correctly, this post will be visible in my Gemini capsule, but not my web site. It was created using Micropub (via IndieKit) but instead of using a traditional indieweb type like 'article' or 'note', it is a 'gempost'.

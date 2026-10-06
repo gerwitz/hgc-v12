@@ -45,7 +45,7 @@ test("gemlog lists only the newest 50 merged posts and links to the archive", ()
   assert.match(output, /=> \/notes\/ \/notes - all 60 untitled notes/);
 });
 
-test("DSN lists the newest 50 non-work posts after filtering both Writing and gemposts", () =>
+test("DSN lists the newest 50 posts excluding work and meta from both Writing and gemposts", () =>
 {
   const sourceEntries = Array.from({ length: 90 }, (_, index) => ({
     ...entries[index % entries.length],
@@ -54,7 +54,9 @@ test("DSN lists the newest 50 non-work posts after filtering both Writing and ge
     data: {
       title: `Entry ${index}`,
       tags: [index % 2 === 0 ? "writing" : "gemposts"],
-      categories: index % 3 === 0 ? ["culture", "work"] : index % 5 === 0 ? undefined : ["personal"],
+      categories: index % 3 === 0
+        ? ["culture", index % 6 === 0 ? "work" : "meta"]
+        : index % 5 === 0 ? undefined : ["personal"],
     },
   }));
   const collection = {
@@ -65,6 +67,8 @@ test("DSN lists the newest 50 non-work posts after filtering both Writing and ge
   const links = output.split("\n").filter((line) => /^=> \/gemlog\/\d{4}-/.test(line));
 
   assert.equal(filtered.length, 60);
+  assert.ok(filtered.every((entry) =>
+    !["work", "meta"].some((category) => (entry.data.categories || []).includes(category))));
   assert.ok(filtered.some((entry) => !entry.data.categories));
   assert.ok(filtered.some((entry) => entry.data.tags.includes("gemposts")));
   assert.equal(links.length, 50);
@@ -75,11 +79,15 @@ test("DSN lists the newest 50 non-work posts after filtering both Writing and ge
   assert.doesNotMatch(output, / - Entry (?:0|3|87)\n/);
 });
 
-test("DSN handles an entirely work-category collection", () =>
+test("DSN excludes work, meta, and posts belonging to both categories", () =>
 {
   const collection = {
     getFilteredByTags: (tag) => tag === "writing"
-      ? [{ ...entries[0], fileSlug: "work", data: { title: "Work", categories: ["work"] } }]
+      ? [["work"], ["meta"], ["work", "meta"]].map((categories, index) => ({
+        ...entries[index],
+        fileSlug: `excluded-${index}`,
+        data: { title: `Excluded ${index}`, categories },
+      }))
       : [],
   };
   const filtered = gemlogDsn(collection);

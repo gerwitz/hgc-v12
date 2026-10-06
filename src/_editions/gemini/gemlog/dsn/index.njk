@@ -3,12 +3,12 @@ permalink: /editions/gemini/gemlog/dsn/index.gmi
 
 ---
 # Hans Gerwitz's Gemlog — DSN
-## Recent posts (excluding work)
+## Recent posts (excluding tech)
 
-This is a special unlinked feed for use with the DSN Antenna.
+This is a special unlinked feed meant for use with the DSN Antenna.
 => gemini://gemini.smallweb.space/antenna/ DSN Antenna
 
-That antenna has a "no tech" policy. Thus, this feed omits any post that's in the "work" category, which might exclude some purely business content but should avoid anything that's mostly about technology.
+That antenna has a "no tech" policy. Thus, this feed omits any post that's in the "work" or "meta" categories, which might exclude some purely business content but should avoid anything that's mostly about technology.
 
 {% for entry in collections.gemlogDsn | reverse | limit(50) -%}
 => {{ entry.geminiUrl }} {{ entry.date | date("YYYY-MM-DD") }} - {{ entry.data.title | plaintext | safe }}
