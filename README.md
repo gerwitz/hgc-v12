@@ -29,6 +29,35 @@ For local development, requests under `/media/*` can be redirected to the produc
 
 This keeps content URLs site-relative, such as `/media/example.jpg`, while loading media from the bucket during local development. The `/media/` prefix is removed when redirecting, so `/media/example.jpg` redirects to `https://your-media-host.example/example.jpg`.
 
+### Everything RSS and publication dates
+
+`/feeds/everything.rss` includes exactly the sources listed at `/site/content/`,
+including published gemposts with their Gemini destinations. It includes every
+entry, newest first, with stable URL-based GUIDs and existing summaries.
+
+An item's RSS `pubDate` uses, in order:
+
+1. Explicit `updated` front matter, when present.
+2. An authored `date` or the date in its filename.
+3. The Git author date of the file's first addition, following renames.
+
+Git modification times and filesystem timestamps are not used. `updated`
+overrides the publication date even when it is earlier. This feed does not
+change the site's existing content-date displays. Untracked local files without
+an intentional date remain listed but omit `pubDate` until committed; invalid
+`updated` values fail the build. Some readers update an existing stable-GUID item
+rather than marking it unread again when its date changes.
+
+Eleventy generates Git creation metadata automatically, cached by commit in the
+ignored `generated/content-dates.json`. `npm run dates:generate` can prepare
+this metadata independently. No Coolify hook or setting is needed:
+the Docker build stage includes `.git` and Git, and fetches the exact checkout's
+missing ancestors if history is shallow. SSH-style origin URLs are converted to
+HTTPS for that fetch. This assumes the origin is publicly readable; private
+repositories require build-time credentials. Missing history fails clearly
+rather than substituting checkout dates. Git history and the metadata cache are
+not copied into the runtime image or public site.
+
 ### Related content
 
 Related-content data and its OpenAI embedding cache are committed so normal and deployment builds do not make API requests. To refresh them after changing searchable content, run:

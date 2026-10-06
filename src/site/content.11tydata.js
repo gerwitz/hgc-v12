@@ -1,4 +1,4 @@
-import { geminiPostUrl } from "../../eleventy/collections/gemlog.js";
+import { getContentSources } from "../../eleventy/content-listing.js";
 
 const contentTypes = [
   ["about", "About"],
@@ -62,20 +62,27 @@ export default {
   eleventyComputed: {
     contentGroups: (data) =>
     {
-      // Gemini-only posts join the search corpus without a web permalink.
-      const gemposts = (data.collections.gemposts || [])
-        .filter((item) => item.data.draft !== true)
-        .map((item) => ({
-          // Collection items have lazy content getters; do not spread them here.
+      const items = getContentSources(data.collections).map((item) =>
+      {
+        if (typeof item.url !== "string" || !item.url.startsWith("gemini://"))
+        {
+          return item;
+        }
+
+        // Preserve the listing's Gemini display dates without changing source metadata.
+        return {
+          inputPath: item.inputPath,
+          date: item.date,
           fileSlug: item.fileSlug,
-          url: geminiPostUrl(item),
+          url: item.url,
           data: {
             ...item.data,
             contentDate: item.data.contentDate || item.date,
           },
-        }));
+        };
+      });
 
-      return getContentGroups([...data.collections.searchable, ...gemposts]);
+      return getContentGroups(items);
     },
   },
 };

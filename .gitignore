@@ -1,6 +1,7 @@
 /node_modules
 /_site
 /.cache
+/generated/content-dates.json
 /.frontmatter
 /.env
 .DS_Store
