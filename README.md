@@ -78,25 +78,23 @@ with registry credentials. The site Docker build accepts `CALMSERVE_IMAGE` as a
 build argument when a specific image tag or digest should be used instead of
 `latest`.
 
-### Gemini notifications after deployment
+### Gemini notifications when the container becomes ready
 
 Maintain notification URLs in `src/_editions/gemini/pings.json`, beside the
 redirect generator. It is a JSON array of full `gemini://` URLs; an empty array
 disables notifications. The file is copied to `/opt/gemini-ping/pings.json`, not
 into the publicly served site or capsule. Avoid committing secret tokens.
 
-In the **production** Coolify application's **Configuration > General >
-Post-deployment command**, set:
+No Coolify deployment command or enabling environment variable is needed. On
+container startup, `scripts/start-site.sh` launches a one-shot background
+notifier and then executes Calmserve's existing startup script under tini. The
+notifier waits for HTTP, Gemini, and Spartan health checks to pass before running
+the ping client. It makes up to 30 local readiness checks, two seconds apart;
+notifications never block startup or interrupt the servers.
 
-```sh
-node /opt/gemini-ping/gemini-ping.mjs /opt/gemini-ping/pings.json
-```
-
-Set the runtime environment variable `GEMINI_PING_ENABLED=true` for production
-only. Leave it unset or false for preview/development deployments. Coolify runs
-this command inside the newly deployed container after marking deployment
-complete; the runtime image includes Node for this one-shot client. Nothing
-invokes it during image builds, startup, or health checks.
+Output appears in the container's normal logs. Image builds, local npm builds,
+and recurring Docker health checks do not send notifications. Remove any
+previous Coolify post-deployment ping command to avoid invoking the client twice.
 
 Before notifying endpoints, the client fetches
 `gemini://hans.gerwitz.com/gemlog/` and compares its body byte-for-byte with
@@ -107,9 +105,15 @@ capsule is unavailable or still serving a different feed. Override
 Requests use TLS without certificate verification, accept Gemini 2x responses,
 and follow at most three Gemini redirects. Requests have a five-second timeout;
 network errors, temporary 4x responses, and stale readiness content get up to two
-retries one second apart. Endpoint failures are logged without failing the hook;
-configuration errors exit nonzero. Notifications are best-effort and retries can
-repeat a request. If the new feed is unchanged, the readiness comparison cannot
+retries one second apart. Endpoint failures and configuration errors are logged
+without affecting the running servers. Notifications are best-effort and retries
+can repeat a request.
+
+This is a container-readiness trigger, not a deployment-platform completion
+hook. Restarts also attempt notification. A development or preview container
+with the same feed as production can notify as well: the public-content check
+confirms content availability, not deployment identity. An empty endpoint list
+is the off switch. If the feed is unchanged, the readiness comparison cannot
 distinguish old and new containers, but the advertised content is already live.
 
 Validate configuration locally without making requests:

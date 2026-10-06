@@ -260,11 +260,6 @@ const main = async () =>
     throw new Error("Usage: node gemini-ping.mjs [config.json] [--dry-run]");
   }
 
-  if (!dryRun && process.env.GEMINI_PING_ENABLED !== "true")
-  {
-    console.log("Gemini pings disabled; set GEMINI_PING_ENABLED=true only for production deployments.");
-    return;
-  }
 
   const endpoints = await loadEndpoints(paths[0] || DEFAULT_CONFIG);
   if (dryRun)

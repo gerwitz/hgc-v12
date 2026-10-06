@@ -17,15 +17,18 @@ FROM ${CALMSERVE_IMAGE} AS runtime
 
 ENV MEDIA_ORIGIN_HOST=your-bucket.s3.fr-par.scw.cloud
 
-# Coolify executes the opt-in post-deployment command inside this container.
+# The startup wrapper runs notifications independently after readiness checks.
 RUN apk add --no-cache nodejs
 COPY scripts/gemini-ping.mjs /opt/gemini-ping/gemini-ping.mjs
 COPY src/_editions/gemini/pings.json /opt/gemini-ping/pings.json
+COPY --chmod=755 scripts/start-site.sh /usr/local/bin/start-site
 
 COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
 COPY --from=build /app/_site/nginx/redirects.conf /etc/nginx/redirects.conf
 COPY --from=build /app/_site /usr/share/nginx/html
 COPY --from=build /app/_site/editions/gemini /srv/calmserve
+
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/start-site"]
 
 EXPOSE 80 1965 3000
 

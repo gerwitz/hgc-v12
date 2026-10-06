@@ -1,9 +1,12 @@
 import assert from 'node:assert/strict';
+import { execFile } from 'node:child_process';
 import { EventEmitter } from 'node:events';
 import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
+import { fileURLToPath } from 'node:url';
+import { promisify } from 'node:util';
 import { geminiRequest, loadEndpoints, pingAfterDeployment } from '../scripts/gemini-ping.mjs';
 
 const readyUrl = 'gemini://public.example.invalid/ready.txt';
@@ -90,6 +93,18 @@ const createDeployment = (request, overrides = {}) => ({
   sleep: async () => {},
   logger,
   ...overrides
+});
+
+test('the CLI runs without any enabling environment variable', async () =>
+{
+  await withEndpointsFile('[]', async (filePath) =>
+  {
+    const { stdout } = await promisify(execFile)(process.execPath, [
+      fileURLToPath(new URL('../scripts/gemini-ping.mjs', import.meta.url)),
+      filePath,
+    ], { env: {} });
+    assert.match(stdout, /No Gemini ping endpoints configured; nothing to do\./);
+  });
 });
 
 test('loadEndpoints accepts an empty array', async () =>
