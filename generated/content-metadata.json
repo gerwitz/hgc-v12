@@ -21992,6 +21992,25 @@
       "relationshipHash": "22a7d5c71832e4f01c5649ab03834579160bfdda519fe70949b08b4551c21b43",
       "presentationHash": "e9782c460c29352ff69afc47c4c98d18356b7e936a57cfed2d0274162aaa1717"
     },
+    "/2026/10/07/gemposts.html": {
+      "inputPath": "src/writing/2026/2026-10-07-gemposts.md",
+      "title": "Multinet post formats",
+      "kind": "writing",
+      "categories": [
+        "meta"
+      ],
+      "topics": [
+        "gemproto",
+        "indieweb"
+      ],
+      "contentDate": "2026-10-07T00:00:00.000Z",
+      "description": "232 words",
+      "previewIconName": "other",
+      "wordCount": null,
+      "textHash": "ce57fae0bb3c6fbbd98f04f66a613def9bb5bcc2ec15067631aed107ab632043",
+      "relationshipHash": "24c4b8f3c26fdf472fb98fbbb278f5b000245ed7b4f7dcd021ecbc0210a61211",
+      "presentationHash": "34f8111c7351ea39e00c322703d2916c8806d90638a88382eba25d2515c013b0"
+    },
     "/404.html": {
       "inputPath": "src/404.html",
       "title": "404",
@@ -29803,6 +29822,6 @@
       "presentationHash": "04a40fc032260f7a0e40995506c76d494d39e5a9ee897107adc466bea1770fbd"
     }
   },
-  "inputHash": "474e9c5d403d6cd0d2885387db256c00f7d565a03763b60de733c0b5e2322c77",
+  "inputHash": "6492429259016776c3069b3c5e0c5fd8bcee8cbde2b5cca05252e19f227e0024",
   "embeddingModel": "text-embedding-3-small"
 }
