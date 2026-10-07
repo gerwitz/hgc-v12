@@ -1,4 +1,7 @@
-# Local metadata (Git history is intentionally available to the build stage)
+# Git and local metadata
+.git
+.githooks
+.env
 .gitignore
 .github
 .vscode
@@ -15,7 +18,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Local caches and temporary files
-generated/content-dates.json
+
 .cache
 .tmp
 tmp

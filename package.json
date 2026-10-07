@@ -12,12 +12,15 @@
     "build": "eleventy && npm run search:index",
     "test": "node --test test/*.test.js",
     "start": "eleventy --serve",
-    "generate:maps": "eleventy --quiet",
-    "related": "node --env-file-if-exists=.env scripts/related-content.js",
+    "generate:maps": "npm run content:prepare",
+    "related": "npm run content:prepare",
     "related:check": "node scripts/related-content.js --dry-run",
     "search:index": "node scripts/search-index.js",
     "gemini:ping": "node scripts/gemini-ping.mjs",
-    "dates:generate": "node scripts/git-dates.mjs"
+    "content:prepare": "node --env-file-if-exists=.env scripts/prepare-content.mjs",
+    "content:check": "node --env-file-if-exists=.env scripts/prepare-content.mjs --check",
+    "hooks:install": "node scripts/install-hooks.mjs",
+    "prepare": "node --input-type=module -e \"import { existsSync } from 'node:fs'; if (existsSync('scripts/install-hooks.mjs')) await (await import('./scripts/install-hooks.mjs')).installHooks();\""
   },
   "repository": {
     "type": "git",

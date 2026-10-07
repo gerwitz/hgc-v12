@@ -17,11 +17,34 @@ To start a test server: `npm run start`
 
 `npm run build` renders the site once, then creates the Pagefind search index using the same canonical content records used by related-content generation. A successful full Eleventy build writes those records to the ignored, private `.cache/content-records.json` artifact, outside the deployed `_site` directory. `npm run search:index` can rebuild the index from that artifact without rendering the site again; after source changes, run a full build first. Failed or incremental filesystem builds invalidate the artifact rather than leaving stale or partial records available.
 
-Some expensive generated assets are committed to the repository so deployment builds do not need to recreate them. Before committing changes that affect travel maps, run:
+### Author-time preparation
 
-`npm run generate:maps`
+Stage your source edits, then run `npm run content:prepare`, or let the pre-commit
+hook run it automatically. This is the single preparation step for the content
+catalog, creation dates, required map SVGs, embeddings, and related-content data.
+The command uses an isolated snapshot of the Git index, not unrelated unstaged
+work, and stages only its generated artifacts. Preparation failures block the
+commit; caught publication errors roll back generated changes. Dirty, deleted,
+or untracked generated files must be staged or restored before replacement.
 
-This writes generated SVG map fragments to `src/_generated/maps/`. The normal Eleventy build reads those files and inlines them into pages. If a required map asset is missing, the build will generate it and print a warning, but that fallback is slower and should not be relied on for deployment.
+Local `npm install` / `npm ci` installs the versioned hooks when no existing hooks
+would be replaced. For an already-installed checkout, run `npm run hooks:install`.
+Custom hooks are preserved; chain `.githooks/pre-commit` and `.githooks/pre-push`
+into them if needed. Docker dependency installation does
+not install hooks or run preparation.
+
+Pre-commit prepares and stages artifacts for the same commit; no follow-up commit
+is created. Use ordinary staged commits: `git add -p` and unstaged hunks are
+supported, but `git commit --only` and pathspec commits are rejected before
+preparation. Pre-push checks the committed catalog against committed sources and
+requires the main generated artifacts, ignoring newer staged/unstaged edits.
+`npm run content:check` performs that same offline check.
+
+The preparation step loads the optional local `.env`. New or changed embedding
+inputs require `OPENAI_API_KEY` and are sent to OpenAI; cached vectors are reused,
+and dates-only changes do not request embeddings. Existing `generate:maps` and
+`related` commands are compatibility aliases for the single preparation step.
+Normal builds consume the committed artifacts without Git or API calls.
 
 For local development, requests under `/media/*` can be redirected to the production media bucket by setting `MEDIA_ORIGIN` before starting Eleventy. For example:
 
@@ -39,34 +62,41 @@ An item's RSS `pubDate` uses, in order:
 
 1. Explicit `updated` front matter, when present.
 2. An authored `date` or the date in its filename.
-3. The Git author date of the file's first addition, following renames.
+3. The catalog's preserved creation date.
 
 Git modification times and filesystem timestamps are not used. `updated`
 overrides the publication date even when it is earlier. This feed does not
-change the site's existing content-date displays. Untracked local files without
-an intentional date remain listed but omit `pubDate` until committed; invalid
+change the site's existing content-date displays. Sources without an intentional
+date or prepared catalog record remain listed but omit `pubDate`; invalid
 `updated` values fail the build. Some readers update an existing stable-GUID item
 rather than marking it unread again when its date changes.
 
-Eleventy generates Git creation metadata automatically, cached by commit in the
-ignored `generated/content-dates.json`. `npm run dates:generate` can prepare
-this metadata independently. No Coolify hook or setting is needed:
-the Docker build stage includes `.git` and Git, and fetches the exact checkout's
-missing ancestors if history is shallow. SSH-style origin URLs are converted to
-HTTPS for that fetch. This assumes the origin is publicly readable; private
-repositories require build-time credentials. Missing history fails clearly
-rather than substituting checkout dates. Git history and the metadata cache are
-not copied into the runtime image or public site.
+Creation dates and shared metadata live in committed
+`generated/content-metadata.json`. Existing sources are backfilled from full Git
+history; genuinely new staged sources use a timestamp captured when preparation
+starts. Committed dates are preserved, including across staged renames. A failed
+commit attempt does not permanently fix a new source's timestamp. This is an
+initial-preparation timestamp for new files, not an exact future Git author date.
+
+Eleventy reads the catalog without executing Git. Docker excludes `.git` and
+requires no source-availability or cloning setting in Coolify. Missing or invalid
+catalogs fail clearly with preparation instructions. The catalog is not served
+publicly; only its relevant values appear in generated pages and feeds.
 
 ### Related content
 
-Related-content data and its OpenAI embedding cache are committed so normal and deployment builds do not make API requests. To refresh them after changing searchable content, run:
+Related-content artifacts are committed so normal and deployment builds do not
+make API requests. `npm run content:prepare` refreshes them alongside the shared
+catalog and maps.
 
-`OPENAI_API_KEY=... npm run related`
+Related-content commands always extract fresh records from the current sources, rather than trusting the previous build artifact. Search and related-content generation share content selection, text extraction, and metadata; search also uses high-confidence related titles and topics as neighbor vocabulary. Published `gemposts` join both corpora with canonical `gemini://hans.gerwitz.com/gemlog/…gmi` destinations, while drafts remain excluded and no web counterparts are generated. Search results and related links to these posts use the `gemini-link` class with a prefixed Gemini symbol; following them requires a Gemini protocol handler. Prepare after staging gemposts, then rebuild the site to publish their relationships.
 
-Related-content commands always extract fresh records from the current sources, rather than trusting the previous build artifact. Search and related-content generation share content selection, text extraction, and metadata; search also uses high-confidence related titles and topics as neighbor vocabulary. Published `gemposts` join both corpora with canonical `gemini://hans.gerwitz.com/gemlog/…gmi` destinations, while drafts remain excluded and no web counterparts are generated. Search results and related links to these posts use the `gemini-link` class with a prefixed Gemini symbol; following them requires a Gemini protocol handler. Refresh the embedding data with `npm run related` after adding gemposts, then rebuild the site to publish their relationships.
-
-Use `npm run related:check` to list the eligible content without requesting embeddings. The generator writes `generated/related-content-cache.json`, `generated/related-graph-cache.json`, and `src/_data/related.json`; commit these files with the related content changes.
+Use `npm run related:check` to list eligible content without requesting embeddings.
+The shared catalog stores source facts and current record metadata; the embedding
+cache stores only model/hash-addressed vectors, and the graph cache stores its
+incremental relationship state. Preparation stages `generated/content-metadata.json`,
+`generated/related-content-cache.json`, `generated/related-graph-cache.json`,
+`src/_data/related.json`, and required `src/_generated/maps/` artifacts.
 
 ## Deployment (Coolify)
 

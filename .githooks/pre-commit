@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Prepare only the staged source snapshot; failures block the source commit.
+exec npm run content:prepare

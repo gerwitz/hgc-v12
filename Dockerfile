@@ -6,8 +6,6 @@ FROM node:22.15-alpine AS build
 
 WORKDIR /app
 
-# Git is needed only while building publication-date metadata, never in the runtime image.
-RUN apk add --no-cache git
 
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
