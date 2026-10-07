@@ -23,28 +23,32 @@ Stage your source edits, then run `npm run content:prepare`, or let the pre-comm
 hook run it automatically. This is the single preparation step for the content
 catalog, creation dates, required map SVGs, embeddings, and related-content data.
 The command uses an isolated snapshot of the Git index, not unrelated unstaged
-work, and stages only its generated artifacts. Preparation failures block the
-commit; caught publication errors roll back generated changes. Dirty, deleted,
-or untracked generated files must be staged or restored before replacement.
+work, and stages only its generated artifacts. Preparation is best-effort in the
+pre-commit hook: failures warn but do not block commits or pushes. The explicit
+command still reports errors; caught publication errors roll back generated
+changes. Dirty, deleted, or untracked generated files must be staged or restored
+before replacement.
 
 Local `npm install` / `npm ci` installs the versioned hooks when no existing hooks
 would be replaced. For an already-installed checkout, run `npm run hooks:install`.
-Custom hooks are preserved; chain `.githooks/pre-commit` and `.githooks/pre-push`
-into them if needed. Docker dependency installation does
+Custom hooks are preserved; chain `.githooks/pre-commit` into them if needed. Docker dependency installation does
 not install hooks or run preparation.
 
-Pre-commit prepares and stages artifacts for the same commit; no follow-up commit
-is created. Use ordinary staged commits: `git add -p` and unstaged hunks are
-supported, but `git commit --only` and pathspec commits are rejected before
-preparation. Pre-push checks the committed catalog against committed sources and
-requires the main generated artifacts, ignoring newer staged/unstaged edits.
-`npm run content:check` performs that same offline check.
+Pre-commit attempts to prepare and stage artifacts for the same commit; no
+follow-up commit is created. Ordinary staged commits and `git add -p` are
+supported. For `git commit --only` or pathspec commits, preparation warns and
+skips rather than risking index corruption. There is no pre-push preparation
+gate. `npm run content:check` is an optional offline diagnostic, not a publishing
+requirement.
 
 The preparation step loads the optional local `.env`. New or changed embedding
 inputs require `OPENAI_API_KEY` and are sent to OpenAI; cached vectors are reused,
 and dates-only changes do not request embeddings. Existing `generate:maps` and
 `related` commands are compatibility aliases for the single preparation step.
-Normal builds consume the committed artifacts without Git or API calls.
+Normal builds consume whatever committed artifacts are available without Git or
+API calls. Content added directly to the repository is still published and
+indexed; uncatalogued content gets an RSS date estimate, and missing embeddings
+simply mean no new related-content suggestions until local preparation runs.
 
 For local development, requests under `/media/*` can be redirected to the production media bucket by setting `MEDIA_ORIGIN` before starting Eleventy. For example:
 
@@ -63,11 +67,12 @@ An item's RSS `pubDate` uses, in order:
 1. Explicit `updated` front matter, when present.
 2. An authored `date` or the date in its filename.
 3. The catalog's preserved creation date.
+4. The current build timestamp, as an estimate for uncatalogued content.
 
 Git modification times and filesystem timestamps are not used. `updated`
 overrides the publication date even when it is earlier. This feed does not
-change the site's existing content-date displays. Sources without an intentional
-date or prepared catalog record remain listed but omit `pubDate`; invalid
+change the site's existing content-date displays. An estimated date can advance
+on subsequent builds until a local preparation records a creation date; invalid
 `updated` values fail the build. Some readers update an existing stable-GUID item
 rather than marking it unread again when its date changes.
 
@@ -80,7 +85,8 @@ initial-preparation timestamp for new files, not an exact future Git author date
 
 Eleventy reads the catalog without executing Git. Docker excludes `.git` and
 requires no source-availability or cloning setting in Coolify. Missing or invalid
-catalogs fail clearly with preparation instructions. The catalog is not served
+catalogs warn and fall back to estimated dates instead of failing deployment.
+The catalog is not served
 publicly; only its relevant values appear in generated pages and feeds.
 
 ### Related content

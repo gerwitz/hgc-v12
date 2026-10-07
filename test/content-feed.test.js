@@ -298,6 +298,35 @@ test("undated untracked sources remain in RSS without item or channel pubDate", 
   assert.equal(renderFeed({ searchable: [] }).items.length, 0);
 });
 
+test("build-time estimates fill only uncatalogued dates without overriding known or explicit dates", () =>
+{
+  const known = createWebItem("known");
+  const explicit = createWebItem("explicit", { date: "2020-01-01", updated: "2025-01-01" });
+  const unknown = createWebItem("new-bot-content");
+  const generated = new Date("2026-10-07T12:00:00Z");
+  const feed = feedData.eleventyComputed.contentFeed({
+    collections: { searchable: [known, explicit, unknown] },
+    gitDates: { "src/ideas/known.md": "2001-02-03T04:05:06Z" },
+    generated,
+  });
+  const dates = Object.fromEntries(feed.map((item) => [item.title, item.pubDate]));
+
+  assert.equal(dates["known"], "Sat, 03 Feb 2001 04:05:06 GMT");
+  assert.equal(dates["explicit"], "Wed, 01 Jan 2025 00:00:00 GMT");
+  assert.equal(dates["new-bot-content"], generated.toUTCString());
+});
+
+test("a missing date catalog still produces a dated feed for all content", () =>
+{
+  const generated = new Date("2026-10-07T12:00:00Z");
+  const collections = { searchable: [createWebItem("new-idea")], gemposts: [createGempost("capsule")] };
+  const feed = feedData.eleventyComputed.contentFeed({ collections, generated });
+
+  assert.equal(feed.length, 2);
+  assert.ok(feed.every((item) => item.pubDate));
+  assert.equal(feed.find((item) => item.title === "new-idea").pubDate, generated.toUTCString());
+});
+
 test("invalid explicit updated throws an actionable source-specific error instead of falling back", () =>
 {
   for (const updated of ["invalid", "", "2026-13-99", "2026-02-30", "2025-02-29", null, true, 42, new Date("invalid")])

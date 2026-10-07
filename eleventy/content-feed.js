@@ -42,13 +42,13 @@ const getPublicationDate = (item, gitDates) =>
     || parseDate(gitDates[inputPath]);
 };
 
-export const getContentFeedItems = (collections, gitDates = {}) =>
+export const getContentFeedItems = (collections, gitDates = {}, fallbackDate) =>
 {
   return getContentSources(collections)
     .map((item) =>
     {
       const url = new URL(item.url, SITE_URL).href;
-      const date = getPublicationDate(item, gitDates);
+      const date = getPublicationDate(item, gitDates) || parseDate(fallbackDate);
 
       return {
         title: item.data.title || item.fileSlug,

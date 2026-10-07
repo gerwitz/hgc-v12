@@ -24,8 +24,8 @@ const OTHER_SOURCE_PATH = "src/ideas/other.md";
 const NEW_SOURCE_PATH = "src/ideas/new.md";
 const MAP_PATH = "src/_generated/maps/x.svg";
 const OUTPUTS = [CATALOG_PATH, "generated/related-content-cache.json", "generated/related-graph-cache.json", "src/_data/related.json"];
-const HOOKS = ["pre-commit", "pre-push"];
-const EXISTING_HOOKS = [...HOOKS, "post-commit"];
+const HOOKS = ["pre-commit"];
+const EXISTING_HOOKS = [...HOOKS, "pre-push", "post-commit"];
 const quietLogger = { log: () => {}, warn: () => {} };
 const sourceContent = (body, title = "Example idea") => `---\ntitle: ${title}\ntags: [ideas, searchable]\ntopics: [design]\n---\n\n${body}\n`;
 
@@ -444,6 +444,32 @@ test("npm ci runs the prepare launcher without repository scripts or Git", { tim
   assert.equal(await optionalFile(path.join(repositoryPath, ".git")), null);
 });
 
+test("preparation failure does not block a commit or push without prepared artifacts", async (context) =>
+{
+  const { repositoryPath, workspacePath } = await createFixture(context);
+  await write(repositoryPath, "package.json", JSON.stringify({
+    type: "module",
+    scripts: { "content:prepare": "node -e \"console.error('Embedding key unavailable'); process.exit(1)\"" },
+  }));
+  await mkdir(path.join(repositoryPath, ".githooks"), { recursive: true });
+  await copyFile(new URL("../.githooks/pre-commit", import.meta.url), path.join(repositoryPath, ".githooks/pre-commit"));
+  await installHooks({ repositoryPath, logger: quietLogger });
+  await write(repositoryPath, SOURCE_PATH, sourceContent("Content published without preparation."));
+  await git(repositoryPath, ["add", "--", SOURCE_PATH]);
+  const { stderr } = await execute("git", [
+    "--no-pager", "-c", "core.hooksPath=.githooks", "-c", "commit.gpgSign=false",
+    "-c", "user.name=Content preparation test", "-c", "user.email=content@example.invalid",
+    "commit", "-m", "Publish despite preparation failure",
+  ], { cwd: repositoryPath, env: process.env, timeout: 20000 });
+  assert.match(stderr, /continuing with cached related data/);
+  assert.match(await git(repositoryPath, ["show", `HEAD:${SOURCE_PATH}`]), /Content published without preparation/);
+  assert.equal(await optionalFile(path.join(repositoryPath, ".githooks/pre-push")), null);
+
+  const remote = path.join(workspacePath, "remote.git");
+  await git(repositoryPath, ["init", "--bare", "--template=", remote]);
+  await git(repositoryPath, ["-c", "core.hooksPath=.githooks", "push", remote, "HEAD:refs/heads/main"]);
+});
+
 // Copy only production code and miniature content; never primary generated metadata.
 const setupRealWorker = async (repositoryPath) =>
 {
@@ -517,7 +543,7 @@ const runRealPreparation = async (repositoryPath, environment, now) =>
   return JSON.parse(stdout.match(/^RESULT:(.+)$/m)[1]);
 };
 
-test("default worker reuses vectors for new dates; real pre-commit rejects --only and commits artifacts with staged hunks", { timeout: 120000 }, async (context) =>
+test("default worker reuses vectors for new dates and pre-commit prepares artifacts with staged hunks", { timeout: 120000 }, async (context) =>
 {
   const { repositoryPath } = await createFixture(context);
   const environment = await setupRealWorker(repositoryPath);
@@ -528,20 +554,10 @@ test("default worker reuses vectors for new dates; real pre-commit rejects --onl
   await write(repositoryPath, NEW_SOURCE_PATH, sourceContent("New staged design idea.", "New idea"));
   await git(repositoryPath, ["add", "--", SOURCE_PATH, NEW_SOURCE_PATH]);
   await write(repositoryPath, SOURCE_PATH, workingSource);
-  const before = await state(repositoryPath);
   const head = await git(repositoryPath, ["rev-parse", "HEAD"]);
   const sourceIndex = await git(repositoryPath, ["ls-files", "--stage", "--", "src/ideas"]);
   const hookCommit = (arguments_) => git(repositoryPath, ["-c", "core.hooksPath=.githooks", "commit", ...arguments_], environment);
-  await assert.rejects(hookCommit(["--only", "-m", "Unsupported only commit", "--", SOURCE_PATH]), (error) =>
-  {
-    assert.match(error.stdout + error.stderr, /--only/);
-    assert.match(error.stdout + error.stderr, /ordinary staged.*git commit/i);
-    return true;
-  });
-  assert.equal(await git(repositoryPath, ["rev-parse", "HEAD"]), head);
-  assert.deepEqual(await state(repositoryPath), before);
   const events = async () => (await readFile(environment.FIXTURE_FETCH_LOG, "utf8")).trim().split("\n").filter(Boolean).map((line) => JSON.parse(line));
-  assert.equal((await events()).filter((event) => event.cwd !== repositoryPath).length, 0);
   const first = await runRealPreparation(repositoryPath, environment, NOW);
   assert.deepEqual(first.changed.sort(), [...OUTPUTS].sort());
   const catalog = await readJson(repositoryPath, CATALOG_PATH);

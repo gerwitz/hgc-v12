@@ -1,4 +1,8 @@
 #!/bin/sh
 
-# Prepare only the staged source snapshot; failures block the source commit.
-exec npm run content:prepare
+# Preparation is best-effort; automated publishing must not depend on author tools.
+if ! npm run content:prepare
+then
+  echo "Content preparation failed; continuing with cached related data and build-time date fallbacks." >&2
+fi
+exit 0

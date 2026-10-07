@@ -76,6 +76,35 @@ test("catalog JSON round-trips and the Gitless loader exposes flat creation date
   assert.deepEqual(creationDates(buildContentCatalog()), {});
 });
 
+test("build date loading degrades to an empty catalog when the snapshot is missing or invalid", async (context) =>
+{
+  const warnings = [];
+  let invalid = false;
+  context.mock.method(console, "warn", (message) => warnings.push(message));
+  context.mock.method(fileSystem, "readFile", async () =>
+  {
+    if (invalid)
+    {
+      return "invalid JSON";
+    }
+    const error = new Error("Missing snapshot");
+    error.code = "ENOENT";
+    throw error;
+  });
+  syncBuiltinESMExports();
+  context.after(() =>
+  {
+    context.mock.restoreAll();
+    syncBuiltinESMExports();
+  });
+
+  assert.deepEqual(await loadDates(), {});
+  invalid = true;
+  assert.deepEqual(await loadDates(), {});
+  assert.equal(warnings.length, 2);
+  assert.ok(warnings.every((message) => message.includes("build-time date fallbacks")));
+});
+
 test("catalog metadata is whitelisted, normalized, sorted, and copied without changing hashes", () =>
 {
   const sources = {

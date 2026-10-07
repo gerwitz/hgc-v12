@@ -7,7 +7,7 @@ import { promisify } from "node:util";
 
 const execute = promisify(execFile);
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
-const HOOKS = ["pre-commit", "pre-push"];
+const HOOKS = ["pre-commit"];
 
 const exists = async (filePath) =>
 {
@@ -54,7 +54,7 @@ export const installHooks = async ({ repositoryPath = ROOT, logger = console } =
   if (!current)
   {
     const { stdout } = await execute("git", ["rev-parse", "--path-format=absolute", "--git-path", "hooks"], { cwd: repositoryPath });
-    for (const hook of [...HOOKS, "post-commit"])
+    for (const hook of [...HOOKS, "pre-push", "post-commit"])
     {
       if (await exists(path.join(stdout.trim(), hook)))
       {

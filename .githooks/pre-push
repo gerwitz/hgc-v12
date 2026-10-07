@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# Verify committed sources, not any newer staged or unstaged work.
-exec npm run content:check
