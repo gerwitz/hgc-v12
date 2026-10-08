@@ -143,48 +143,74 @@ with registry credentials. The site Docker build accepts `CALMSERVE_IMAGE` as a
 build argument when a specific image tag or digest should be used instead of
 `latest`.
 
-### Gemini notifications when the container becomes ready
+### Gemini and HTTP notifications when the container becomes ready
 
-Maintain notification URLs in `src/_editions/gemini/pings.json`, beside the
-redirect generator. It is a JSON array of full `gemini://` URLs; an empty array
-disables notifications. The file is copied to `/opt/gemini-ping/pings.json`, not
-into the publicly served site or capsule. Avoid committing secret tokens.
+Maintain endpoints in `src/_editions/gemini/pings.json`, beside the redirect
+generator. One JSON array supports `gemini://`, `http://`, and `https://` URLs;
+strings make GET requests. An empty array disables notifications. The file is
+copied privately to `/etc/calmserve/pings.json`, not into the public site.
 
-No Coolify deployment command or enabling environment variable is needed. On
-container startup, `scripts/start-site.sh` launches a one-shot background
-notifier and then executes Calmserve's existing startup script under tini. The
-notifier waits for HTTP, Gemini, and Spartan health checks to pass before running
-the ping client. It makes up to 30 local readiness checks, two seconds apart;
-notifications never block startup or interrupt the servers.
+HTTP webhooks can also specify a method, headers, and body. For example:
+
+```json
+[
+  "gemini://example.org/submit?gemini%3A%2F%2Fhans.gerwitz.com%2Fgemlog%2F",
+  "https://webhook.example.org/update?key=${WEBHOOK_API_KEY}",
+  {
+    "url": "https://webhook.example.org/events",
+    "method": "POST",
+    "headers": { "Authorization": "Bearer ${WEBHOOK_API_KEY}" },
+    "body": { "feed": "https://hans.gerwitz.com/feeds/everything.rss" }
+  }
+]
+```
+
+Set secret variables in the container's runtime environment. `${VARIABLE}`
+placeholders in URL paths or queries are percent-encoded as individual values;
+header/body placeholders are replaced verbatim, without shell evaluation or
+recursive expansion. Variables are not supported in URL hosts or schemes. A
+missing/empty variable skips only that endpoint. JSON bodies receive
+`application/json` unless a content type is supplied. Never commit actual keys.
+
+No Coolify hook or enabling flag is needed. Calmserve's startup script detects
+executable `/usr/local/bin/calmserve-notify`, waits for local HTTP, Gemini, and
+Spartan readiness, then invokes it once in the background. The site supplies
+`scripts/notify.mjs` at that path; it no longer has a separate startup wrapper.
+Calmserve retains process supervision and terminates the notifier on shutdown.
+Publish the updated Calmserve base image before building this site image; an
+outdated base fails the Docker build with an upgrade instruction.
 
 Output appears in the container's normal logs. Image builds, local npm builds,
 and recurring Docker health checks do not send notifications. Remove any
 previous Coolify post-deployment ping command to avoid invoking the client twice.
 
-Before notifying endpoints, the client fetches
-`gemini://hans.gerwitz.com/gemlog/` and compares its body byte-for-byte with
-`/srv/calmserve/gemlog/index.gmi`. It sends no notifications while the public
-capsule is unavailable or still serving a different feed. Override
-`GEMINI_PING_READY_URL` and `GEMINI_PING_READY_FILE` together if needed.
+The client compares the public
+`https://hans.gerwitz.com/.well-known/calmserve/updated.svg` byte-for-byte with its
+local copy. The badge includes the content-tree fingerprint, so notifications
+wait for the correct web-content version, not merely an unchanged Gemlog.
+Optional `PING_READY_URL`/`PING_READY_FILE` overrides are supported; the previous
+`GEMINI_PING_READY_URL`/`GEMINI_PING_READY_FILE` names remain aliases.
 
-Requests use TLS without certificate verification, accept Gemini 2x responses,
-and follow at most three Gemini redirects. Requests have a five-second timeout;
-network errors, temporary 4x responses, and stale readiness content get up to two
-retries one second apart. Endpoint failures and configuration errors are logged
-without affecting the running servers. Notifications are best-effort and retries
-can repeat a request.
+Gemini requests keep the existing self-signed-certificate policy and accept 2x
+responses. HTTP uses normal HTTPS certificate verification and accepts 2xx.
+Requests time out after five seconds. Gemini and HTTP GET requests retry network
+errors or temporary statuses up to twice; HTTP GET redirects stay on the same
+origin, and Gemini redirects remain Gemini-only, with at most three redirects.
+POST requests are neither automatically retried nor redirected, avoiding
+accidental duplicate webhook actions or secret forwarding. Endpoint failures
+never interrupt serving. Logs and dry runs omit URL paths, queries, and resolved
+secrets; missing-variable errors name the variable, never its value.
 
 This is a container-readiness trigger, not a deployment-platform completion
 hook. Restarts also attempt notification. A development or preview container
-with the same feed as production can notify as well: the public-content check
+with the same content as production can notify as well: the public-version check
 confirms content availability, not deployment identity. An empty endpoint list
-is the off switch. If the feed is unchanged, the readiness comparison cannot
-distinguish old and new containers, but the advertised content is already live.
+is the off switch. Identical content can be notified again on a restart.
 
 Validate configuration locally without making requests:
 
 ```sh
-npm run gemini:ping -- --dry-run
+npm run notify -- --dry-run
 ```
 
 ## Standards

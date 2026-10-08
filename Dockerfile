@@ -18,18 +18,17 @@ FROM ${CALMSERVE_IMAGE} AS runtime
 
 ENV MEDIA_ORIGIN_HOST=your-bucket.s3.fr-par.scw.cloud
 
-# The startup wrapper runs notifications independently after readiness checks.
+# Calmserve invokes this optional one-shot hook after its services become ready.
+RUN grep -q '/usr/local/bin/calmserve-notify' /usr/local/bin/start-calmserve || { echo 'Update CALMSERVE_IMAGE: this image requires the notification-hook startup support.' >&2; exit 1; }
 RUN apk add --no-cache nodejs
-COPY scripts/gemini-ping.mjs /opt/gemini-ping/gemini-ping.mjs
-COPY src/_editions/gemini/pings.json /opt/gemini-ping/pings.json
-COPY --chmod=755 scripts/start-site.sh /usr/local/bin/start-site
+COPY --chmod=755 scripts/notify.mjs /usr/local/bin/calmserve-notify
+COPY src/_editions/gemini/pings.json /etc/calmserve/pings.json
 
 COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
 COPY --from=build /app/_site/nginx/redirects.conf /etc/nginx/redirects.conf
 COPY --from=build /app/_site /usr/share/nginx/html
 COPY --from=build /app/_site/editions/gemini /srv/calmserve
 
-ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/start-site"]
 
 EXPOSE 80 1965 3000
 
