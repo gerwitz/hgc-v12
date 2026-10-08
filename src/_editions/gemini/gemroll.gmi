@@ -9,6 +9,8 @@ Here are some capsules I find interesting and either subscribe to or visit regul
 => gemini://skyjake.fi/ skyjake
 => gemini://midnight.pub/~iazia iazia
 => gemini://www.fosskers.ca/ Colin
+=> gemini://prabu.freeddns.org/ Prabuanand
+=> gemini://idiomdrottning.org/ idiomdrotting (Sandra)
 => gemini://adjb.smol.pub/ Adam DJ Brett
 => gemini://schreibfaultier.pollux.casa/ Jörg Rippel
 => gemini://kelaino.gemcities.com/ Kelaino
