@@ -1,0 +1,16 @@
+---
+updated: 2026-10-08
+---
+# Gemroll
+Here are some capsules I find interesting and either subscribe to or visit regularly:
+
+=> gemini://smallword.space/ mrrobinhood5
+=> gemini://calcuode.com/ Callum
+=> gemini://skyjake.fi/ skyjake
+=> gemini://midnight.pub/~iazia iazia
+=> gemini://www.fosskers.ca/ Colin
+=> gemini://adjb.smol.pub/ Adam DJ Brett
+=> gemini://schreibfaultier.pollux.casa/ Jörg Rippel
+=> gemini://kelaino.gemcities.com/ Kelaino
+=> gemini://larsthebear.me/ Lars the Bear (Kevin Boone)
+=> gemini://kdan.smol.pub/ kdan (Kevin)
