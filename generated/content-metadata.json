@@ -121,6 +121,10 @@
       "created": "2019-12-08T18:34:18+01:00",
       "origin": "git"
     },
+    "src/ideas/testing.md": {
+      "created": "2026-10-09T11:32:33.817Z",
+      "origin": "prepared"
+    },
     "src/ideas/theory-of-mind.md": {
       "created": "2019-08-14T22:57:28+02:00",
       "origin": "git"
@@ -22387,6 +22391,20 @@
       "relationshipHash": "9f00ef819b942fbe02d85df291e22b4b858ab4323658a5498174f6f5257e4e2b",
       "presentationHash": "df3e077feb91950569ac6a3e005f7b337a416dce89954150f0c9107c4980f0a7"
     },
+    "/ideas/testing/": {
+      "inputPath": "src/ideas/testing.md",
+      "title": "Limit Testing",
+      "kind": "ideas",
+      "categories": [],
+      "topics": [],
+      "contentDate": null,
+      "description": null,
+      "previewIconName": "other",
+      "wordCount": null,
+      "textHash": "093f3d72be74511950938dd0f9d34a231cea4c600f28def0c830f6487c14f3d5",
+      "relationshipHash": "be5581d4445c84c9b4044022af0a5c86b5ec19aa769019cf7f7b7ffd2ff26cb0",
+      "presentationHash": "eb296ba21402762e996d43688ebae0296513885f4fc6370e0246ce0e05058025"
+    },
     "/ideas/theory-of-mind/": {
       "inputPath": "src/ideas/theory-of-mind.md",
       "title": "Theory of Mind",
@@ -29834,8 +29852,22 @@
       "textHash": "7f229d54acf73dd70d39f3daece955807be3387a5164704bf222f6149c044778",
       "relationshipHash": "2ea115363ec614fc985f4656e0c66ca976ddc1c2d981038e7ae6146599fa1218",
       "presentationHash": "04a40fc032260f7a0e40995506c76d494d39e5a9ee897107adc466bea1770fbd"
+    },
+    "gemini://hans.gerwitz.com/gemlog/2026-10-09-no-atmosphere-in-geminispace.gmi": {
+      "inputPath": "src/gemposts/2026-10-09-no-atmosphere-in-geminispace.md",
+      "title": "No ATmosphere in Geminispace?",
+      "kind": "gemposts",
+      "categories": [],
+      "topics": [],
+      "contentDate": "2026-10-09T11:09:28.163Z",
+      "description": null,
+      "previewIconName": "other",
+      "wordCount": null,
+      "textHash": "ebd7d20c658a5008db439825f8d33a80ac4eb370d2bfd3ba39b0c1ffae7c88db",
+      "relationshipHash": "0b354ff9f164a823c496720da9a7938e28f5de26c52500f3dc3488214d926e34",
+      "presentationHash": "6632c6b093f691ae38ab3a5033049e24fe1225191c88fe5fa38609b3d24b47be"
     }
   },
-  "inputHash": "44f6c287151fffd6529467304c9e1237ededf128e5a4d62add04c5716adb1b09",
+  "inputHash": "050f0349c9d3f87d406c9dad551db43dfd7e2ef11be7f7336ed1f759b8bd3346",
   "embeddingModel": "text-embedding-3-small"
 }
