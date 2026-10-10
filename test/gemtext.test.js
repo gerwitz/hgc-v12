@@ -871,19 +871,19 @@ test("uses Unicode superscript digits for single- and multi-digit reference numb
   );
 });
 
-test("keeps the footer heading at level two unless the minimum heading level is three", () =>
+test("keeps the footer heading at level two unless the content heading floor is three", () =>
 {
   const source = "# A heading\n\nA statement.[^detail]\n\n[^detail]: More detail.";
   const cases = [
-    { minimumHeadingLevel: 1, bodyHeading: "# A heading", footerHeading: "## Footnotes" },
-    { minimumHeadingLevel: 2, bodyHeading: "## A heading", footerHeading: "## Footnotes" },
-    { minimumHeadingLevel: 3, bodyHeading: "### A heading", footerHeading: "### Footnotes" },
+    { contentHeadingFloor: 1, bodyHeading: "# A heading", footerHeading: "## Footnotes" },
+    { contentHeadingFloor: 2, bodyHeading: "## A heading", footerHeading: "## Footnotes" },
+    { contentHeadingFloor: 3, bodyHeading: "### A heading", footerHeading: "### Footnotes" },
   ];
 
-  for (const { minimumHeadingLevel, bodyHeading, footerHeading } of cases)
+  for (const { contentHeadingFloor, bodyHeading, footerHeading } of cases)
   {
     assert.equal(
-      markdownToGemtext(source, "/", { minimumHeadingLevel }),
+      markdownToGemtext(source, "/", { contentHeadingFloor }),
       [
         bodyHeading,
         "",
@@ -901,7 +901,7 @@ test("keeps the footer heading at level two unless the minimum heading level is 
 test("omits the footer when a document has no numbered references", () =>
 {
   assert.equal(
-    markdownToGemtext("# A heading\n\nA paragraph.", "/", { minimumHeadingLevel: 3 }),
+    markdownToGemtext("# A heading\n\nA paragraph.", "/", { contentHeadingFloor: 3 }),
     "### A heading\n\nA paragraph.\n",
   );
 });

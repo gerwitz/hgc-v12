@@ -285,7 +285,7 @@ const renderBlocks = (tokens, context, startIndex = 0, endIndex = tokens.length,
         blocks.push(renderReferences(context));
       }
 
-      const level = Math.max(Number(token.tag.slice(1)), context.minimumHeadingLevel);
+      const level = Math.max(Number(token.tag.slice(1)), context.contentHeadingFloor);
       blocks.push(`${"#".repeat(level)} ${renderInlineBlock(tokens[index + 1], context)}`);
       index += 2;
       continue;
@@ -405,7 +405,7 @@ const renderReferences = (context, references = context.references, includeHeadi
     return entries.join("\n");
   }
 
-  const headingLevel = Math.max(2, context.minimumHeadingLevel);
+  const headingLevel = Math.max(2, context.contentHeadingFloor);
   return `${"#".repeat(headingLevel)} Footnotes\n\n${entries.join("\n")}`;
 };
 
@@ -447,7 +447,7 @@ const createRenderingContext = (sourceUrl, configuration, collections) => {
 
     footnoteNumbers: new Map(),
     footnotes: new Map(),
-    minimumHeadingLevel: configuration.minimumHeadingLevel || 1,
+    contentHeadingFloor: configuration.contentHeadingFloor || 1,
     references: [],
     renderedFootnotes: new Map(),
     sourceUrl,

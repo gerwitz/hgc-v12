@@ -98,7 +98,7 @@ test("DSN excludes work, meta, and posts belonging to both categories", () =>
 });
 
 test("tinylog renders the newest 20 notes with valid timestamps and body headings", () => {
-  const output = renderFeed("tinylog", { notes: entries }, { minimumHeadingLevel: 3 });
+  const output = renderFeed("tinylog", { notes: entries }, { contentHeadingFloor: 3 });
   const headings = output.split("\n").filter((line) => line.startsWith("## ") && line !== "## Archives");
 
   assert.equal(headings.length, 20);

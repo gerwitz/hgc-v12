@@ -1,8 +1,8 @@
 ---
 permalink: /editions/gemini/tinylog/index.gmi
-
+layout: false
 gemini:
-  minimumHeadingLevel: 3
+  contentHeadingFloor: 3
 ---
 # Hans Gerwitz's Tinylog
 
@@ -16,7 +16,3 @@ avatar: 🌲 (:tree:, U+1F332)
 {{ entry.page.rawInput | gemtext(entry.url, gemini, collections) | trim | safe }}
 
 {% endfor -%}
-
-## Archives
-
-=> /notes/ /notes - all {{ collections.notes | length }} untitled posts

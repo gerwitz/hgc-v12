@@ -1,8 +1,10 @@
 ---
 permalink: /editions/gemini/notes/index.gmi
-
 ---
 # Notes
+
+To subscribe/aggregate, use:
+=> /tinylog/ /tinylog - recent notes
 
 {% for entry in collections.notes | reverse -%}
 => {{ entry.url | geminiPath }} {{ entry.data.title | plaintext | safe }}
