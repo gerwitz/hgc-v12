@@ -16,3 +16,5 @@ Here are some capsules I find interesting and either subscribe to or visit regul
 => gemini://kelaino.gemcities.com/ Kelaino
 => gemini://larsthebear.me/ Lars the Bear (Kevin Boone)
 => gemini://kdan.smol.pub/ kdan (Kevin)
+=> gemini://limpatzk.gemcities.com/gemlog/gemlog.gmi Limpatzk
+=> gemini://wilcosky.smol.pub/ Billy Wilcosky
