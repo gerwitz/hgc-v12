@@ -147,6 +147,43 @@ test("renders standalone labeled links directly without consuming reference numb
   );
 });
 
+test("preserves explicit Gemtext link lines without duplicate footnotes", () =>
+{
+  const source = [
+    "Richard asks:",
+    "=> gemini://deckzero.uk/2026-10-08-optimism What has happened to optimism?",
+    "A question about optimism.",
+    "",
+    "My reading list:",
+    "=> https://hardcover.app/books/the-ministry-for-the-future KSR - Ministry for the Future",
+    "=> https://hardcover.app/books/another-now Yanis Varoufakis - Another Now",
+    "=> https://example.com/",
+  ].join("\n");
+
+  assert.equal(markdownToGemtext(source), `${source}\n`);
+});
+
+test("explicit Gemtext links do not consume numbers for surrounding prose references", () =>
+{
+  const source = [
+    "Read [before](https://example.com/before).",
+    "=> https://example.com/direct Direct link",
+    "Read https://example.com/after next.",
+  ].join("\n");
+
+  assert.equal(markdownToGemtext(source), [
+    "Read before¹.",
+    "=> https://example.com/direct Direct link",
+    "Read https://example.com/after² next.",
+    "",
+    "## Footnotes",
+    "",
+    "=> https://example.com/before ¹ before",
+    "=> https://example.com/after ² https://example.com/after",
+    "",
+  ].join("\n"));
+});
+
 test("maps only known edition routes to Gemini and uses link titles", () => {
   const source = [
     "Read the [neighbor](neighbor.html \"Neighbor title\"),",

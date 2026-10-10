@@ -29855,7 +29855,7 @@
     },
     "gemini://hans.gerwitz.com/gemlog/2026-10-09-dc23a.gmi": {
       "inputPath": "src/gemposts/2026-10-09-dc23a.md",
-      "title": "2026-10-09-dc23a",
+      "title": "Global Optimism",
       "kind": "gemposts",
       "categories": [],
       "topics": [],
@@ -29863,9 +29863,9 @@
       "description": null,
       "previewIconName": "other",
       "wordCount": null,
-      "textHash": "3f66f765880d2fc80776adde83df7a70640bd8cedf46dcc35ca785695838bfa6",
-      "relationshipHash": "d0a1eb212e74ef97ea58dc77c86d3c03c82524bea0799ae8c92a5a2bd1b38beb",
-      "presentationHash": "5917c82c4685060f9cfe4c91ca5db6257314533c1802565d5e97b33e73c5a32d"
+      "textHash": "068bb42c7b249eb0008b3542ebb05a8a44b6a0f1b194a3c99b8546d9be2f0c4c",
+      "relationshipHash": "2b5735f88653a839ddf66e309881abbe3a193cca771016e4f4ccfbaa72abf620",
+      "presentationHash": "d61f94bc7405c09daca5c560ed9c8a9e8ca455eb7a124f44abca59bd1fcce520"
     },
     "gemini://hans.gerwitz.com/gemlog/2026-10-09-no-atmosphere-in-geminispace.gmi": {
       "inputPath": "src/gemposts/2026-10-09-no-atmosphere-in-geminispace.md",
@@ -29882,6 +29882,6 @@
       "presentationHash": "6632c6b093f691ae38ab3a5033049e24fe1225191c88fe5fa38609b3d24b47be"
     }
   },
-  "inputHash": "db5b637e69853112be653965d377f8b98df2cabc0143ebbcb17824099942ba69",
+  "inputHash": "8f08233f77f1e812e576f8bec8262c0c1a4e75c066ac8ebdd07b232a0497b58b",
   "embeddingModel": "text-embedding-3-small"
 }

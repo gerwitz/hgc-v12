@@ -123,11 +123,13 @@ const renderInline = (tokens, context) => {
       const closeIndex = matchingCloseIndex(tokens, index);
       const rendered = renderInline(tokens.slice(index + 1, closeIndex), context);
       const anchorText = normalizeText(rendered.text);
+      // An explicit Gemtext link already exposes its target on this line.
+      const isGemtextLink = token.markup === "linkify" && /(?:^|\n)=>[ \t]+$/.test(text);
       const linkTitle = normalizeText(token.attrGet("title") || "");
       const url = editionUrl(token.attrGet("href"), context);
       text += anchorText;
 
-      if (url)
+      if (url && !isGemtextLink)
       {
         const number = addReference(context, {
           label: linkTitle || anchorText || url,
