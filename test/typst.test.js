@@ -1,10 +1,14 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import test from "node:test";
 
 import nunjucks from "nunjucks";
 
 import { markdownToTypst, typstString } from "../eleventy/typst.js";
+import { compileTypst } from "../scripts/compile-typst.mjs";
 
 const render = markdownToTypst;
 
@@ -111,4 +115,59 @@ test("the initial Typst expression renders the real About source through its lay
   assert.ok(output.includes('#heading(level: 2)[#text("Contact")]'));
   assert.match(output, /#link\("mailto:[^"]+"\)\[#text\("email"\)\]/);
   assert.doesNotMatch(output, /<p>|&#109;|\{%|\{\{/);
+});
+
+test("compiles converted and native documents recursively and fails with no stale PDF", async (context) =>
+{
+  const directory = await mkdtemp(path.join(tmpdir(), "hgc-typst-"));
+  context.after(() => rm(directory, { recursive: true, force: true }));
+  await mkdir(path.join(directory, "nested"));
+  const source = render([
+    "## Compilation fixture",
+    "",
+    "**Bold**, *emphasis*, ~~strike~~, `code`, and a [link](https://example.com/).",
+    "",
+    "- Outer",
+    "  - Inner",
+    "",
+    "3. Ordered item",
+    "",
+    "> Quotation",
+    "",
+    "Term",
+    ": Definition",
+    "",
+    "| Name | Value |",
+    "| --- | --- |",
+    "| One | 1 |",
+    "",
+    "```js",
+    "const name = \"literal\";",
+    "```",
+    "",
+    "![A [caption](https://example.com/caption)](/media/photo.jpg)",
+    "",
+    "A note[^test] and again[^test].",
+    "",
+    "[^test]: Note with a [link](https://example.com/).",
+  ].join("\n"));
+  const nativePath = path.join(directory, "nested/native page.typ");
+  await writeFile(path.join(directory, "index.typ"), source);
+  await writeFile(nativePath, "= Native Typst\n\nA document.");
+
+  const outputs = await compileTypst(directory);
+  assert.deepEqual(outputs.map((output) => path.relative(directory, output)),
+    ["index.pdf", path.join("nested", "native page.pdf")]);
+
+  for (const output of outputs)
+  {
+    const pdf = await readFile(output);
+    assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
+    assert.ok(pdf.length > 1000);
+  }
+
+  assert.equal(await readFile(path.join(directory, "index.typ"), "utf8"), source);
+  await writeFile(nativePath, "#unknown-function()");
+  await assert.rejects(compileTypst(directory), /native page\.typ: Typst reported errors/);
+  await assert.rejects(readFile(nativePath.replace(/\.typ$/, ".pdf")), { code: "ENOENT" });
 });

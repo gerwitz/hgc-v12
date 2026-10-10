@@ -9,13 +9,14 @@
     "node": ">=22.15"
   },
   "scripts": {
-    "build": "eleventy && npm run search:index",
+    "build": "eleventy && npm run typst:compile && npm run search:index",
     "test": "node --test test/*.test.js",
     "start": "eleventy --serve",
     "generate:maps": "npm run content:prepare",
     "related": "npm run content:prepare",
     "related:check": "node scripts/related-content.js --dry-run",
     "search:index": "node scripts/search-index.js",
+    "typst:compile": "node scripts/compile-typst.mjs",
     "notify": "node scripts/notify.mjs src/_editions/gemini/pings.json",
     "gemini:ping": "npm run notify --",
     "content:prepare": "node --env-file-if-exists=.env scripts/prepare-content.mjs",
@@ -30,6 +31,7 @@
   "dependencies": {
     "@11ty/eleventy": "^4.0.0-alpha.10",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@myriaddreamin/typst-ts-node-compiler": "0.7.0",
     "browserslist": "^4.25.2",
     "core-js": "^3.36.0",
     "d3": "^6.7.0",

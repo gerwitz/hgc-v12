@@ -15,7 +15,24 @@ Source files are in `/src` and site is built to `/_site` for deployment.
 To set up, from the root directory: `npm run build`
 To start a test server: `npm run start`
 
-`npm run build` renders the site once, then creates the Pagefind search index using the same canonical content records used by related-content generation. A successful full Eleventy build writes those records to the ignored, private `.cache/content-records.json` artifact, outside the deployed `_site` directory. `npm run search:index` can rebuild the index from that artifact without rendering the site again; after source changes, run a full build first. Failed or incremental filesystem builds invalidate the artifact rather than leaving stale or partial records available.
+`npm run build` renders the site once, compiles the Typst expression to PDF, then creates the Pagefind search index using the same canonical content records used by related-content generation. A successful full Eleventy build writes those records to the ignored, private `.cache/content-records.json` artifact, outside the deployed `_site` directory. `npm run search:index` can rebuild the index from that artifact without rendering the site again; after source changes, run a full build first. Failed or incremental filesystem builds invalidate the artifact rather than leaving stale or partial records available.
+
+### Typst expression
+
+Native `.typ` templates in `src/_editions/typst/` use Nunjucks and the shared
+`src/_layouts/typst.njk` layout. The `typst` filter converts Markdown using the
+site's existing parser; the initial document uses the About page. Images are
+linked rather than embedded, and relative links resolve to the original web page.
+
+`npm run build` compiles every generated `.typ` file under `_site/editions/typst/`
+to a neighboring `.pdf`, retaining the source. The first document is published at
+`/editions/typst/index.pdf`, with source at `/editions/typst/index.typ`.
+`npm run typst:compile` recompiles the already-generated sources separately;
+`npm start` renders sources but does not refresh PDFs automatically.
+
+The native compiler and bundled fonts are installed through npm. No separate
+Typst CLI, Dockerfile changes, or Coolify settings are needed. Compilation errors
+fail the build with source diagnostics and remove the affected stale PDF.
 
 ### Author-time preparation
 
