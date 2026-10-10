@@ -13,6 +13,7 @@ export { navpath } from "./navpath.js";
 export { parents } from "./parents.js";
 export { plaintext } from "./plaintext.js";
 export { tinylogDate } from "./tinylogdate.js";
+export { markdownToTypst as typst, typstString } from "../typst.js";
 export { weeklink } from "./weeklink.js";
 export { weeknum } from "./weeknum.js";
 export { weekstart } from "./weekstart.js";

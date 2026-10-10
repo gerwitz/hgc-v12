@@ -1,0 +1,6 @@
+#set document(title: {{ (title or "Hans Gerwitz") | typstString | safe }}, author: "Hans Gerwitz")
+#set text(lang: "en")
+{% if title %}
+#heading(level: 1, {{ title | typstString | safe }})
+{% endif %}
+{{ content | trim | safe }}
