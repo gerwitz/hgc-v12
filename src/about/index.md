@@ -11,4 +11,4 @@ You can find some random things about me at [/about/confessions](/about/confessi
 
 ## Contact
 
-Send me an <a rel="me" href="&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#097;&#110;&#115;&#064;&#103;&#101;&#114;&#119;&#105;&#116;&#122;&#046;&#099;&#111;&#109;" title="since 1990">email</a>, reach out on  <a rel="me" href="http://bsky.app/@gerwitz.com" class="external">Bluesky</a>, or find me elsewhere in one of the places at [/follow](/follow).
+Send me an <a rel="me" href="&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#097;&#110;&#115;+spam&#064;&#103;&#101;&#114;&#119;&#105;&#116;&#122;&#046;&#099;&#111;&#109;?subject=Remove%20+spam%20from%20the%20address" title="since 1990">email</a>, reach out on  <a rel="me" href="http://bsky.app/@gerwitz.com" class="external">Bluesky</a>, or find me elsewhere in one of the places at [/follow](/follow).

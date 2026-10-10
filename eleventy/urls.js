@@ -1,3 +1,4 @@
+import { parseHTML } from "linkedom";
 
 const INTERNAL_HOSTS = new Set([
   "hans.gerwitz.com",
@@ -96,23 +97,30 @@ function getNormalizedTag(tag, elementName)
     }
 
     const url = doubleQuotedUrl ?? singleQuotedUrl ?? unquotedUrl;
-    const normalizedUrl = normalizeUrl(url);
-    if (normalizedUrl === url)
+    // Classify the browser's decoded URL, but retain obfuscation when it needs no change.
+    const decodedUrl = url.includes("&")
+      ? parseHTML(tag).document.querySelector(elementName)?.getAttribute(attributeName) ?? url
+      : url;
+    const normalizedUrl = normalizeUrl(decodedUrl);
+    if (normalizedUrl === decodedUrl)
     {
       return match;
     }
 
-    if (doubleQuotedUrl !== undefined)
-    {
-      return `${prefix}"${normalizedUrl}"`;
-    }
+    const escapedUrl = normalizedUrl
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
 
     if (singleQuotedUrl !== undefined)
     {
-      return `${prefix}'${normalizedUrl}'`;
+      return `${prefix}'${escapedUrl}'`;
     }
 
-    return `${prefix}${normalizedUrl}`;
+    // Quoting also keeps decoded whitespace safe in originally unquoted attributes.
+    return `${prefix}"${escapedUrl}"`;
   });
 }
 
