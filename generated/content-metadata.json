@@ -29853,6 +29853,20 @@
       "relationshipHash": "2ea115363ec614fc985f4656e0c66ca976ddc1c2d981038e7ae6146599fa1218",
       "presentationHash": "04a40fc032260f7a0e40995506c76d494d39e5a9ee897107adc466bea1770fbd"
     },
+    "gemini://hans.gerwitz.com/gemlog/2026-10-09-dc23a.gmi": {
+      "inputPath": "src/gemposts/2026-10-09-dc23a.md",
+      "title": "2026-10-09-dc23a",
+      "kind": "gemposts",
+      "categories": [],
+      "topics": [],
+      "contentDate": "2026-10-09T16:42:15.751Z",
+      "description": null,
+      "previewIconName": "other",
+      "wordCount": null,
+      "textHash": "3f66f765880d2fc80776adde83df7a70640bd8cedf46dcc35ca785695838bfa6",
+      "relationshipHash": "d0a1eb212e74ef97ea58dc77c86d3c03c82524bea0799ae8c92a5a2bd1b38beb",
+      "presentationHash": "5917c82c4685060f9cfe4c91ca5db6257314533c1802565d5e97b33e73c5a32d"
+    },
     "gemini://hans.gerwitz.com/gemlog/2026-10-09-no-atmosphere-in-geminispace.gmi": {
       "inputPath": "src/gemposts/2026-10-09-no-atmosphere-in-geminispace.md",
       "title": "No ATmosphere in Geminispace?",
@@ -29868,6 +29882,6 @@
       "presentationHash": "6632c6b093f691ae38ab3a5033049e24fe1225191c88fe5fa38609b3d24b47be"
     }
   },
-  "inputHash": "462aff0166a640dd25d5fd7cd65ba63e41ed8b335cd37d984c83cb0989f69046",
+  "inputHash": "db5b637e69853112be653965d377f8b98df2cabc0143ebbcb17824099942ba69",
   "embeddingModel": "text-embedding-3-small"
 }
