@@ -1,0 +1,566 @@
+# Pages CMS edits source files; Eleventy and the deployment pipeline stay unchanged.
+# Media uploads are intentionally omitted: /media/ is served from external object storage.
+# CMS commits do not run the local content:prepare hook or refresh generated artifacts.
+
+settings:
+  content:
+    # Keep frontmatter that is not represented by the editing forms.
+    merge: true
+
+components:
+  markdown-body:
+    label: Content
+    type: code
+    options:
+      format: markdown
+    description: Markdown source, including footnotes, HTML, and Nunjucks. No rich-text conversion.
+  timestamp:
+    type: string
+    default: ""
+    description: ISO 8601 date or timestamp. Leave blank to keep filename-based dates; retain existing precision and timezone.
+  topics:
+    label: Topics
+    type: string
+    list: true
+    description: Topic slugs, such as design or technology.
+  categories:
+    label: Categories
+    type: string
+    list: true
+
+content:
+  - name: writing
+    label: Writing
+    type: collection
+    path: src/writing
+    format: yaml-frontmatter
+    subfolders: true
+    description: Create inside the appropriate year folder. Set the filename to YYYY-MM-DD-slug.md; changing the date does not change the filename.
+    filename:
+      template: "{year}-{month}-{day}-new-post.md"
+      field: create
+    # Existing filenames determine URLs. This trial is for adding and editing, not renaming or deleting.
+    operations: &edit-operations
+      rename: false
+      delete: false
+    view:
+      primary: title
+      fields: [title, topics]
+      search: [title, subtitle, description, topics, categories, body]
+      sort: [title]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: subtitle
+        label: Subtitle
+        type: text
+      - name: description
+        label: Description
+        type: text
+      - name: date
+        label: Publication date
+        component: timestamp
+      - name: updated
+        label: Updated
+        component: timestamp
+      - name: categories
+        component: categories
+      - name: topics
+        component: topics
+      - name: draft
+        label: Draft
+        type: boolean
+        description: Exclude this entry from publication collections.
+      - name: body
+        component: markdown-body
+
+  - name: notes
+    label: Notes
+    type: collection
+    path: src/notes
+    format: yaml-frontmatter
+    subfolders: true
+    description: Create inside the appropriate year folder. Use YYYY-MM-DD-slug.md and an explicit timestamp when the publication time matters. Saving here does not publish through IndieKit.
+    filename:
+      template: "{year}-{month}-{day}-{hour}{minute}{second}.md"
+      field: create
+    operations: *edit-operations
+    view:
+      primary: body
+      fields: [body, date]
+      search: [body, subtitle, topics, categories]
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: date
+        label: Publication date and time
+        component: timestamp
+      - name: updated
+        label: Updated
+        component: timestamp
+      - name: subtitle
+        label: Subtitle
+        type: text
+      - name: categories
+        component: categories
+      - name: topics
+        component: topics
+      - name: body
+        component: markdown-body
+
+  - name: weeks
+    label: Weeknotes
+    type: collection
+    path: src/weeks
+    # Whole-file editing keeps filename-derived week numbers out of frontmatter.
+    format: code
+    subfolders: true
+    exclude: [_others.md]
+    description: Create inside the appropriate year folder and replace untitled.md with the numeric week filename, such as 2742.md. Include date frontmatter. Week numbers count from March 4, 1974, not ISO weeks.
+    filename:
+      template: untitled.md
+      field: create
+    operations: *edit-operations
+    view: &source-view
+      primary: name
+      sort: [name]
+      default:
+        sort: name
+        order: desc
+
+  - name: gemposts
+    label: Gemini posts
+    type: collection
+    path: src/gemposts
+    format: yaml-frontmatter
+    subfolders: false
+    description: Gemini-only posts. Use YYYY-MM-DD-slug.md directly in this folder, without a year subfolder.
+    filename:
+      template: "{year}-{month}-{day}-new-post.md"
+      field: create
+    operations: *edit-operations
+    view:
+      primary: title
+      fields: [title, date]
+      search: [title, topics, categories, body]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Publication date
+        component: timestamp
+      - name: updated
+        label: Updated
+        component: timestamp
+      - name: categories
+        component: categories
+      - name: topics
+        component: topics
+      - name: draft
+        label: Draft
+        type: boolean
+      - name: body
+        component: markdown-body
+
+  - name: pages
+    label: Permanent pages
+    type: group
+    items:
+      - name: about
+        label: About
+        type: collection
+        path: src/about
+        format: yaml-frontmatter
+        subfolders: true
+        filename: &page-filename
+          template: new-page.md
+          field: create
+        operations: *edit-operations
+        view: &page-view
+          primary: title
+          fields: [title, topics]
+          search: [title, subtitle, description, topics, body]
+          sort: [title]
+        fields: &page-fields
+          - name: title
+            label: Title
+            type: string
+          - name: subtitle
+            label: Subtitle
+            type: text
+          - name: description
+            label: Description
+            type: text
+          - name: date
+            label: Publication date
+            component: timestamp
+          - name: updated
+            label: Updated
+            component: timestamp
+          - name: topics
+            component: topics
+          - name: body
+            component: markdown-body
+      - name: ideas
+        label: Ideas
+        type: collection
+        path: src/ideas
+        format: yaml-frontmatter
+        subfolders: true
+        filename: *page-filename
+        operations: *edit-operations
+        view: *page-view
+        fields: *page-fields
+      - name: lists
+        label: Lists
+        type: collection
+        path: src/lists
+        format: yaml-frontmatter
+        subfolders: true
+        filename: *page-filename
+        operations: *edit-operations
+        view: *page-view
+        fields: *page-fields
+      - name: projects
+        label: Projects and devlogs
+        type: collection
+        path: src/projects
+        format: yaml-frontmatter
+        subfolders: true
+        description: Choose the existing project or devlog folder before creating a file. Devlogs use numeric filenames, such as 20.md; other pages often use index.md.
+        filename: *page-filename
+        operations: *edit-operations
+        view: *page-view
+        fields: *page-fields
+      - name: site
+        label: About this site
+        type: collection
+        path: src/site
+        format: yaml-frontmatter
+        subfolders: true
+        filename: *page-filename
+        operations: *edit-operations
+        view: *page-view
+        fields: *page-fields
+      - name: topics
+        label: Topic pages
+        type: collection
+        path: src/topics
+        format: yaml-frontmatter
+        subfolders: false
+        filename: *page-filename
+        operations: *edit-operations
+        view: *page-view
+        fields: *page-fields
+      - name: following
+        label: Following
+        type: file
+        path: src/following/index.md
+        format: yaml-frontmatter
+        fields: *page-fields
+      - name: toys
+        label: Toy descriptions
+        type: collection
+        path: src/toys
+        format: code
+        subfolders: true
+        filename: *page-filename
+        operations:
+          create: false
+          rename: false
+          delete: false
+        description: Edit existing descriptions as source. Adding a toy also requires code outside this CMS.
+        view: *source-view
+
+  - name: logs
+    label: Logs
+    type: group
+    items:
+      - name: dining
+        label: Dining
+        type: collection
+        path: src/logs/dining
+        format: yaml-frontmatter
+        subfolders: false
+        description: Preserve the existing YYYY-slug.md naming convention. Coordinates are latitude, then longitude.
+        filename:
+          template: "{year}-new-restaurant.md"
+          field: create
+        operations: *edit-operations
+        view:
+          primary: title
+          fields: [title, date]
+          search: [title, body]
+          sort: [date, title]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: title
+            label: Restaurant
+            type: string
+            required: true
+          - name: date
+            label: Visit date
+            component: timestamp
+          - name: url
+            label: Restaurant URL
+            type: string
+          - name: geo
+            label: Coordinates (latitude, longitude)
+            type: number
+            description: Leave empty, or enter latitude followed by longitude.
+            list:
+              max: 2
+              collapsible: false
+          - name: body
+            component: markdown-body
+      - name: events
+        label: Events
+        type: collection
+        path: src/logs/events
+        format: yaml-frontmatter
+        subfolders: true
+        description: Create inside the existing decade folder, such as 202x. Use YYYY-slug.md. Week numbers count from March 4, 1974.
+        filename:
+          template: "{year}-new-event.md"
+          field: create
+        operations: *edit-operations
+        view:
+          primary: title
+          fields: [title, date, type]
+          search: [title, location, type, body]
+          sort: [date, title]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: date
+            label: Event date
+            component: timestamp
+          - name: week
+            label: Week number
+            type: number
+          - name: type
+            label: Event type
+            type: string
+          - name: location
+            label: Location
+            type: string
+          - name: geo
+            label: Coordinates (latitude, longitude)
+            type: number
+            description: Leave empty, or enter latitude followed by longitude.
+            list:
+              max: 2
+              collapsible: false
+          - name: body
+            component: markdown-body
+      - name: travel
+        label: Travel
+        type: collection
+        path: src/logs/travel
+        # Nested destinations, transport records, and legacy IDs are edited together as source.
+        format: code
+        subfolders: true
+        description: Create inside the appropriate existing year or decade folder. Use YYYY-slug.md and preserve the destinations, flights, trains, and other frontmatter structures.
+        filename:
+          template: "{year}-new-trip.md"
+          field: create
+        operations: *edit-operations
+        view: *source-view
+      - name: work
+        label: Work
+        type: collection
+        path: src/logs/work
+        format: code
+        subfolders: false
+        description: Use YYYY-company.md. Preserve the company, role, startDate, endDate, headline, and highlights frontmatter.
+        filename:
+          template: "{year}-new-company.md"
+          field: create
+        operations: *edit-operations
+        view: *source-view
+      - name: other-logs
+        label: Other logs
+        type: collection
+        path: src/logs
+        format: yaml-frontmatter
+        subfolders: true
+        # Exclusions are exact directory names, not glob patterns.
+        exclude: [_paths, dining, events, travel, work]
+        filename: *page-filename
+        operations: *edit-operations
+        view: *page-view
+        fields: *page-fields
+
+  - name: data
+    label: Shared content
+    type: group
+    items:
+      - name: quotes
+        label: Quotes (YAML source)
+        type: file
+        path: src/_data/quotes.yaml
+        # Preserve root-list items with irregular keys and partial dates without schema reconstruction.
+        format: code
+
+  - name: template-pages
+    label: Template pages (source)
+    type: group
+    description: Whole-file editing for searchable HTML and Nunjucks pages. Keep their templates and frontmatter intact.
+    items:
+      - name: home
+        label: Home
+        type: file
+        path: src/index.njk
+        format: code
+      - name: not-found
+        label: Not found
+        type: file
+        path: src/404.html
+        format: code
+      - name: confessions
+        label: Confessions
+        type: file
+        path: src/about/confessions/index.njk
+        format: code
+      - name: assets-index
+        label: Assets
+        type: file
+        path: src/assets/index.njk
+        format: code
+      - name: feeds-index
+        label: Feeds
+        type: file
+        path: src/feeds/index.njk
+        format: code
+      - name: follow
+        label: Follow
+        type: file
+        path: src/follow/index.njk
+        format: code
+      - name: ideas-index
+        label: Ideas index
+        type: file
+        path: src/ideas/index.njk
+        format: code
+      - name: brands-index
+        label: Brands
+        type: file
+        path: src/lists/brands/index.html
+        format: code
+      - name: logs-index
+        label: Logs index
+        type: file
+        path: src/logs/index.njk
+        format: code
+      - name: dining-index
+        label: Dining index
+        type: file
+        path: src/logs/dining/index.njk
+        format: code
+      - name: events-index
+        label: Events index
+        type: file
+        path: src/logs/events/index.njk
+        format: code
+      - name: travel-index
+        label: Travel index
+        type: file
+        path: src/logs/travel/index.njk
+        format: code
+      - name: work-index
+        label: Work index
+        type: file
+        path: src/logs/work/index.njk
+        format: code
+      - name: bears-devlog-index
+        label: Bears devlog index
+        type: file
+        path: src/projects/bears/devlog/index.njk
+        format: code
+      - name: hexmap-devlog-index
+        label: Hexmap devlog index
+        type: file
+        path: src/projects/hexmap/devlog/index.njk
+        format: code
+      - name: eurovision-index
+        label: Eurovision
+        type: file
+        path: src/projects/eurovision-2013/index.html
+        format: code
+      - name: eurovision-matrix
+        label: Eurovision matrix
+        type: file
+        path: src/projects/eurovision-2013/matrix.html
+        format: code
+      - name: eurovision-network
+        label: Eurovision network
+        type: file
+        path: src/projects/eurovision-2013/network.html
+        format: code
+      - name: fur
+        label: Fur
+        type: file
+        path: src/projects/fur/index.html
+        format: code
+      - name: content-index
+        label: Content index
+        type: file
+        path: src/site/content.njk
+        format: code
+      - name: styles-page
+        label: Styles
+        type: file
+        path: src/site/styles.njk
+        format: code
+      - name: sitemap
+        label: Sitemap
+        type: file
+        path: src/sitemap.njk
+        format: code
+      - name: all-topics
+        label: All topics
+        type: file
+        path: src/topics/all.njk
+        format: code
+      - name: topics-index
+        label: Topics index
+        type: file
+        path: src/topics/index.njk
+        format: code
+      - name: toys-index
+        label: Toys index
+        type: file
+        path: src/toys/index.njk
+        format: code
+      - name: weeks-index
+        label: Weeks index
+        type: file
+        path: src/weeks/index.njk
+        format: code
+      - name: journal
+        label: Journal
+        type: file
+        path: src/weeks/html_journal.njk
+        format: code
+      - name: writing-index
+        label: Writing index
+        type: file
+        path: src/writing/writing.njk
+        format: code
