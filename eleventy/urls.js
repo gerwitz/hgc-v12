@@ -1,5 +1,7 @@
 import { parseHTML } from "linkedom";
 
+import { geminiLinkMarkup } from "../src/js/gemini-links.js";
+
 const INTERNAL_HOSTS = new Set([
   "hans.gerwitz.com",
   "www.hans.gerwitz.com",
@@ -172,7 +174,32 @@ function normalizeDocumentUrls(content)
     return getNormalizedTag(tag, elementName.toLowerCase());
   });
 
-  return normalizedUrls.replace(ANCHOR_PATTERN, getPathClassAnchor);
+  let geminiLinkIndex = 0;
+
+  return normalizedUrls.replace(ANCHOR_PATTERN, (anchor, attributes, anchorContent) =>
+  {
+    const normalizedAnchor = getPathClassAnchor(anchor, attributes, anchorContent);
+    const urlMatch = attributes.match(/\shref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+))/i);
+    const rawUrl = urlMatch?.[1] ?? urlMatch?.[2] ?? urlMatch?.[3] ?? "";
+    const href = rawUrl.includes("&")
+      ? parseHTML(anchor).document.querySelector("a")?.getAttribute("href") || ""
+      : rawUrl;
+
+    if (!/^gemini:/i.test(href))
+    {
+      return normalizedAnchor;
+    }
+
+    let id;
+
+    do
+    {
+      id = `gemini-link-options-${++geminiLinkIndex}`;
+    }
+    while (normalizedUrls.includes(`id="${id}"`));
+
+    return geminiLinkMarkup(normalizedAnchor, href, id);
+  });
 }
 
 export default function urlsPlugin(eleventyConfig)

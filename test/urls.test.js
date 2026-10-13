@@ -27,7 +27,7 @@ test("encoded schemes, external URLs, and fragments retain their original repres
   for (const url of [
     "&#x6d;ailto:person@example.com",
     "mailto&colon;person@example.com",
-    "&#103;emini://hans.gerwitz.com/gemlog/",
+
     "https&colon;//external.example/undated",
     "&#35;section",
     "//external.example/undated",
@@ -36,6 +36,42 @@ test("encoded schemes, external URLs, and fragments retain their original repres
     const html = `<a href="${url}">Link</a>`;
     assert.equal(render(html), html);
   }
+});
+
+test("Gemini links get separate accessible glyph controls and two-line options", () =>
+{
+  const source = '<a class="gemini-link" href="gemini://example.com:1966/post?q=one&amp;next=two#section">A post</a>';
+  const html = `<p><span id="gemini-link-options-1"></span>${source} and <a href="&#103;emini://example.com/other">Another</a> or <a href="/about">About</a>.</p>`;
+  const output = render(html);
+  const { document } = parseHTML(output);
+  const controls = document.querySelectorAll(".gemini-link-control");
+
+  assert.equal(controls.length, 2);
+  assert.ok(output.includes(source));
+  assert.ok(output.includes('href="&#103;emini://example.com/other"'));
+  assert.equal(document.querySelectorAll("p").length, 1);
+
+  for (const control of controls)
+  {
+    const trigger = control.querySelector("button");
+    const panel = control.querySelector("[popover]");
+    assert.equal(trigger.getAttribute("type"), "button");
+    assert.equal(trigger.getAttribute("popovertarget"), panel.id);
+    assert.equal(trigger.getAttribute("aria-label"), "Geminispace link options");
+    assert.equal(panel.children.length, 2);
+    assert.equal(panel.firstElementChild.textContent, "Geminispace link more info");
+    assert.equal(panel.lastElementChild.textContent, "view with Gemini browser view in proxy");
+  }
+
+  const panel = controls[0].querySelector("[popover]");
+  const links = panel.querySelectorAll("a");
+  assert.equal(links[0].getAttribute("href"), "/2026/10/07/gemposts.html");
+  assert.equal(links[1].getAttribute("href"), "gemini://example.com:1966/post?q=one&next=two#section");
+  assert.equal(links[2].getAttribute("href"), "https://portal.mozz.us/gemini/example.com:1966/post?q=one&next=two#section");
+  assert.equal(new Set(Array.from(controls, (control) => control.querySelector("[popover]").id)).size, 2);
+  assert.notEqual(panel.id, "gemini-link-options-1");
+  assert.equal(document.querySelector('a[href="/about/"]').closest(".gemini-link-wrapper"), null);
+  assert.equal(render(source, "feeds/everything.rss"), source);
 });
 
 test("internal paths still normalize without corrupting encoded query parameters", () =>

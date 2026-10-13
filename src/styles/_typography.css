@@ -190,11 +190,74 @@ a {
   text-decoration-color: var(--accent-color);
 }
 
-/* Keep the Gemini marker decorative where CSS alternative text is supported. */
-a.gemini-link::before {
-  content: "♊︎";
-  content: "♊︎" / "";
+.gemini-link-control {
+  display: inline;
+  position: relative;
+}
+
+.gemini-link-trigger {
+  min-width: 24px;
+  min-height: 24px;
   margin-inline-end: 0.25em;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.gemini-link-trigger:focus-visible {
+  outline: var(--outline-width) dotted var(--accent-color);
+  outline-offset: 2px;
+}
+
+.gemini-link-popover {
+  display: none;
+  position: absolute;
+  inset: 100% auto auto 0;
+  z-index: 10;
+  width: max-content;
+  max-width: calc(100vw - 16px);
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border: var(--outline-width) dotted var(--text-color);
+  background: var(--page-color);
+  color: var(--text-color);
+  font: var(--regular-font-weight) 0.875rem/1.5 var(--base-font);
+  text-align: left;
+}
+
+.gemini-link-popover > span {
+  display: block;
+}
+
+.gemini-link-popover a:hover {
+  box-shadow: none;
+}
+
+/* CSS supplies hover access without JavaScript; native popovers supply click access. */
+@media (hover: hover) {
+  .gemini-link-control:not([data-enhanced]):hover > .gemini-link-popover {
+    display: block;
+  }
+}
+
+@supports not selector(:popover-open) {
+  .gemini-link-control:focus-within > .gemini-link-popover {
+    display: block;
+  }
+}
+
+.gemini-link-popover:popover-open {
+  display: block;
+  position: fixed;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gemini-link-popover[data-positioned]:popover-open {
+  transform: none;
 }
 
 .path {
