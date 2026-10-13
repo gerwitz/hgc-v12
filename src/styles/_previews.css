@@ -70,3 +70,74 @@
 .preview-large .preview-summary {
   margin: 0.5rem 0 0;
 }
+
+.preview-large:has(> h3 > .gemini-link-wrapper) {
+  position: relative;
+  anchor-name: --gemini-preview;
+  anchor-scope: --gemini-preview;
+}
+
+.preview-large > h3:has(> .gemini-link-wrapper) {
+  /* The heading must not become the containing block for the card-wide overlay. */
+  transform: none;
+}
+
+.preview-large > h3:has(> .gemini-link-wrapper) > .preview-icon {
+  display: none;
+}
+
+.preview-large > h3 > .gemini-link-wrapper > .gemini-link-control {
+  position: static;
+}
+
+.preview-large > h3 > .gemini-link-wrapper .gemini-link-trigger {
+  position: relative;
+  z-index: 11;
+  font-size: 24px;
+  line-height: 24px;
+  vertical-align: -0.125em;
+}
+
+#search-results .preview-large {
+  --gemini-preview-inset: calc(-1 * var(--outline-width));
+}
+
+.preview-large > h3 > .gemini-link-wrapper .gemini-link-popover {
+  inset: var(--gemini-preview-inset, 0px);
+  width: auto;
+  height: auto;
+  max-width: none;
+  min-height: min-content;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.preview-large .gemini-link-popover[data-preview][data-open] {
+  display: flex;
+}
+
+@media (hover: hover) {
+  .preview-large > h3 > .gemini-link-wrapper > .gemini-link-control:not([data-enhanced]):hover > .gemini-link-popover {
+    display: flex;
+  }
+}
+
+/* Native click popovers retain a usable fallback without JavaScript or CSS anchors. */
+.preview-large > h3 > .gemini-link-wrapper .gemini-link-popover:popover-open {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  width: max-content;
+  max-width: calc(100vw - 16px);
+}
+
+@supports (anchor-scope: --gemini-preview) and (width: anchor-size(width)) {
+  .preview-large > h3 > .gemini-link-wrapper .gemini-link-popover:popover-open {
+    display: flex;
+    position-anchor: --gemini-preview;
+    inset: calc(anchor(top) + var(--gemini-preview-inset, 0px)) auto auto calc(anchor(left) + var(--gemini-preview-inset, 0px));
+    width: calc(anchor-size(width) - 2 * var(--gemini-preview-inset, 0px));
+    min-height: calc(anchor-size(height) - 2 * var(--gemini-preview-inset, 0px));
+    max-width: none;
+    transform: none;
+  }
+}

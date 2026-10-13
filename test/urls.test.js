@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
+import vm from "node:vm";
 
 import { parseHTML } from "linkedom";
 
@@ -72,6 +74,43 @@ test("Gemini links get separate accessible glyph controls and two-line options",
   assert.notEqual(panel.id, "gemini-link-options-1");
   assert.equal(document.querySelector('a[href="/about/"]').closest(".gemini-link-wrapper"), null);
   assert.equal(render(source, "feeds/everything.rss"), source);
+});
+
+test("boxed Gemini previews replace their contents without requiring native popover support", () =>
+{
+  const html = render('<article class="preview preview-large"><h3><span class="preview-icon"></span><a href="gemini://example.com/post">A post</a></h3><p>Summary</p></article><p><a href="gemini://example.com/inline">Inline</a></p>');
+  const { document, window } = parseHTML(`<html><body>${html}</body></html>`);
+  const events = {};
+  const source = readFileSync(new URL("../src/js/gemini-links.js", import.meta.url), "utf8")
+    .replace(/^export /gm, "");
+  vm.runInNewContext(source, {
+    document,
+    window: { addEventListener: (name, callback) => { events[name] = callback; } },
+    MutationObserver: window.MutationObserver,
+    URL,
+  });
+  const control = document.querySelector(".preview-large .gemini-link-control");
+  const trigger = control.querySelector("button");
+  const panel = control.querySelector(".gemini-link-popover");
+  const hover = new window.Event("pointerenter");
+  hover.pointerType = "mouse";
+
+  assert.ok(panel.hasAttribute("data-preview"));
+  assert.equal(panel.hasAttribute("popover"), false);
+  assert.equal(trigger.getAttribute("aria-controls"), panel.id);
+  control.dispatchEvent(hover);
+  assert.ok(panel.hasAttribute("data-open"));
+  assert.equal(trigger.getAttribute("aria-expanded"), "true");
+  trigger.click();
+  assert.ok(panel.hasAttribute("data-open"));
+  events.wheel();
+  assert.equal(panel.hasAttribute("data-open"), false);
+  assert.equal(trigger.getAttribute("aria-expanded"), "false");
+  trigger.click();
+  assert.ok(panel.hasAttribute("data-open"));
+  trigger.click();
+  assert.equal(panel.hasAttribute("data-open"), false);
+  assert.ok(document.querySelector("p .gemini-link-popover").hasAttribute("popover"));
 });
 
 test("internal paths still normalize without corrupting encoded query parameters", () =>

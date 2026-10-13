@@ -45,8 +45,9 @@ const enhanceGeminiLinks = () =>
     const { panel, trigger } = active;
     active = null;
     trigger.setAttribute("aria-expanded", "false");
+    delete panel.dataset.open;
 
-    if (panel.matches(":popover-open"))
+    if (panel.hasAttribute("popover") && panel.matches(":popover-open"))
     {
       panel.hidePopover();
     }
@@ -60,18 +61,25 @@ const enhanceGeminiLinks = () =>
       const panel = control.querySelector(".gemini-link-popover");
       const trigger = control.querySelector(".gemini-link-trigger");
       active = { control, panel, trigger, pinned };
-      panel.dataset.positioned = "";
-      panel.showPopover();
       trigger.setAttribute("aria-expanded", "true");
 
-      const origin = trigger.getBoundingClientRect();
-      const bounds = panel.getBoundingClientRect();
-      const left = Math.max(8, Math.min(origin.left, window.innerWidth - bounds.width - 8));
-      const top = origin.bottom + bounds.height <= window.innerHeight - 8
-        ? origin.bottom
-        : Math.max(8, origin.top - bounds.height);
-      panel.style.left = `${left}px`;
-      panel.style.top = `${top}px`;
+      if (panel.hasAttribute("data-preview"))
+      {
+        panel.dataset.open = "";
+      }
+      else
+      {
+        panel.dataset.positioned = "";
+        panel.showPopover();
+        const origin = trigger.getBoundingClientRect();
+        const bounds = panel.getBoundingClientRect();
+        const left = Math.max(8, Math.min(origin.left, window.innerWidth - bounds.width - 8));
+        const top = origin.bottom + bounds.height <= window.innerHeight - 8
+          ? origin.bottom
+          : Math.max(8, origin.top - bounds.height);
+        panel.style.left = `${left}px`;
+        panel.style.top = `${top}px`;
+      }
     }
     else if (pinned)
     {
@@ -118,7 +126,17 @@ const enhanceGeminiLinks = () =>
       const panel = control.querySelector(".gemini-link-popover");
       const trigger = control.querySelector(".gemini-link-trigger");
 
-      if (typeof panel.showPopover !== "function")
+      const preview = control.closest(".preview-large");
+      const isPreview = preview?.querySelector("h3 > .gemini-link-wrapper > .gemini-link-control") === control;
+
+      if (isPreview)
+      {
+        // A card-local overlay keeps the preview glyph above the replacement contents.
+        panel.removeAttribute("popover");
+        panel.dataset.preview = "";
+        trigger.setAttribute("aria-controls", panel.id);
+      }
+      else if (typeof panel.showPopover !== "function")
       {
         continue;
       }

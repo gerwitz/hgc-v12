@@ -221,7 +221,7 @@ a {
   max-width: calc(100vw - 16px);
   margin: 0;
   padding: 0.5rem 0.75rem;
-  border: var(--outline-width) dotted var(--text-color);
+  border: var(--outline-width) solid var(--text-color);
   background: var(--page-color);
   color: var(--text-color);
   font: var(--regular-font-weight) 0.875rem/1.5 var(--base-font);
