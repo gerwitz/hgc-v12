@@ -22029,6 +22029,27 @@
       "relationshipHash": "ebd3f5ea5e26623418e8dc8094ea22b0ece1f631c6e4e17e7c22c91337ac51fd",
       "presentationHash": "b979b483fd30fdfe5aa65a656e9bf35db178606f10af951063909fc096c69e91"
     },
+    "/2026/10/14/why-kolibri-matters.html": {
+      "inputPath": "src/writing/2026/2026-10-14-why-kolibri-matters.md",
+      "title": "Why Kolibri Matters",
+      "kind": "writing",
+      "categories": [
+        "work"
+      ],
+      "topics": [
+        "ai",
+        "ethics",
+        "europe",
+        "politics"
+      ],
+      "contentDate": "2026-10-14T00:00:00.000Z",
+      "description": "376 words",
+      "previewIconName": "work",
+      "wordCount": null,
+      "textHash": "2b325399358828e9d5bbf539637669d134e12f58ef8a3a2fb0bdd8ab0153b0ac",
+      "relationshipHash": "e79d900bf6e402d4fb0764480b379ea8874c23b91b0892a92f1009fd3e5e6694",
+      "presentationHash": "59cb21558aabc2e8cf20e303eb288eccdc8b89291aadff11c80875ffbeeb8d0f"
+    },
     "/404.html": {
       "inputPath": "src/404.html",
       "title": "404",
@@ -29882,6 +29903,6 @@
       "presentationHash": "6632c6b093f691ae38ab3a5033049e24fe1225191c88fe5fa38609b3d24b47be"
     }
   },
-  "inputHash": "418f41399f01cbc8a2404f6cfef129adc593a036cee114c47910a1f5690ac5cc",
+  "inputHash": "deaef790fb5082b8dd7f70b735533ae850915c173e539409b014418c2f5c2588",
   "embeddingModel": "text-embedding-3-small"
 }

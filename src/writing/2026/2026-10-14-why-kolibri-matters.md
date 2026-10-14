@@ -1,10 +1,13 @@
 ---
-date: 2026-10-14T00:01:15.386+02:00
 title: Why Kolibri Matters
-draft: true
+categories:
+- work
+topics:
+- ai
+- ethics
+- politics
+- europe
 ---
-
-# Why Kolibri Matters
 
 Earlier this month, Aleph Alpha released a new LLM, [Kolibri](https://aleph-alpha.com/en/kolibri/). It’s open-weights (with a permissive, business-friendly license) and was designed with a well-established architecture that should make it performant (“mixture of experts”).
 
@@ -28,4 +31,3 @@ The best example of that transparency is probably the detailed but accessible [t
 I appreciate the risks that would come with sharing too much detail about the training described above. Yet I hope we will learn more about the political judgement they are exercising and that other labs[^grok] will follow suit.
 
 [^grok]: Especially ~~SpaceXAI~~ SpaceXSI, who pioneered political alignment while training via distillation with models Musk deemed “too woke”.
-
