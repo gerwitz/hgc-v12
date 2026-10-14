@@ -1,6 +1,6 @@
 import corejs from "core-js";
 import {parseHTML} from "linkedom";
-import d3 from "d3";
+import * as d3 from "d3";
 import h3 from "h3-js";
 import { getLand } from "./land.js";
 

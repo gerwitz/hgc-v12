@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import d3 from "d3";
+import * as d3 from "d3";
 import { parseHTML } from "linkedom";
 
 import { getLand } from "./land.js";
