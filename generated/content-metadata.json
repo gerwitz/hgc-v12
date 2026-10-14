@@ -21365,15 +21365,20 @@
       "inputPath": "src/writing/2024/2024-10-02-then-they-came-for-the.md",
       "title": "Then they came for the teachers",
       "kind": "writing",
-      "categories": [],
-      "topics": [],
-      "contentDate": "2024-10-02T20:39:04.913Z",
+      "categories": [
+        "culture"
+      ],
+      "topics": [
+        "ai",
+        "education"
+      ],
+      "contentDate": "2024-10-02T00:00:00.000Z",
       "description": "93 words",
-      "previewIconName": "other",
+      "previewIconName": "culture",
       "wordCount": null,
-      "textHash": "789e2ee765dc881a7c6cae9211a9a7c79f105d6edda80940243e9f4a4a46275b",
-      "relationshipHash": "3a08fde298aefe2ee3a338903fa5d9166072e75c432a29623fbd52a9b6d82b05",
-      "presentationHash": "42a88a8f8069ec5154ccad389c18be2767854dd0f1e1ea518ebd21017f0599dc"
+      "textHash": "b5633ac5946852edebc9ed03f145e70ff9f263ee65037ae007d58235386d8b2d",
+      "relationshipHash": "4e06ad2dfdbd789edd7c484d6ab9562da2e7667ac5fbf35b450efe2ea28d5dea",
+      "presentationHash": "afa86f23ec73663f72acb410321f9fa937fbe662c0bb749629f37c32bf46a8bb"
     },
     "/2024/10/07/1.html": {
       "inputPath": "src/notes/2024/2024-10-07-1.md",
@@ -29903,6 +29908,6 @@
       "presentationHash": "6632c6b093f691ae38ab3a5033049e24fe1225191c88fe5fa38609b3d24b47be"
     }
   },
-  "inputHash": "7aed31596ff1780bc0f9209665373f7a65d0f28da42be45190fca70116f06c8e",
+  "inputHash": "afc309adb673355d26b58d79be7e3b27a64c272409ce296b1b72c7bb76caa801",
   "embeddingModel": "text-embedding-3-small"
 }

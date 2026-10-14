@@ -7,6 +7,8 @@ topics:
 - ethics
 - politics
 - europe
+syndication:
+- https://www.linkedin.com/posts/gerwitz_earlier-this-month-aleph-alpha-released-share-7516056602970406912-3Xqa/
 ---
 
 Earlier this month, Aleph Alpha released a new LLM, [Kolibri](https://aleph-alpha.com/en/kolibri/). It’s open-weights (with a permissive, business-friendly license) and was designed with a well-established architecture that should make it performant (“mixture of experts”).

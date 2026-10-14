@@ -1,6 +1,10 @@
 ---
-date: 2024-10-02T22:39:04.913+02:00
 title: Then they came for the teachers
+categories:
+- culture
+topics:
+- ai
+- education
 ---
 
 
@@ -9,5 +13,3 @@ Over the last year, I've seen several smart educators worrying generative AI wil
 Meanwhile, [Alan Jacobs bemoans his professorship being turned into a bullshit job](https://blog.ayjay.org/administrivia/).
 
 It all seems rather predictable. Which is more likely in late capitalism: will we make a concerted effort at social change and modify our expectations of educators, or will we optimize the business of schooling until they are expendable?
-
-
