@@ -22055,6 +22055,41 @@
       "relationshipHash": "e79d900bf6e402d4fb0764480b379ea8874c23b91b0892a92f1009fd3e5e6694",
       "presentationHash": "59cb21558aabc2e8cf20e303eb288eccdc8b89291aadff11c80875ffbeeb8d0f"
     },
+    "/2026/10/17/1.html": {
+      "inputPath": "src/notes/2026/2026-10-17-1.md",
+      "title": "Note from October 17th, 2026",
+      "kind": "notes",
+      "categories": [],
+      "topics": [],
+      "contentDate": "2026-10-17T19:19:29.476Z",
+      "description": "44 words",
+      "previewIconName": "note",
+      "wordCount": null,
+      "textHash": "c9300d1cc2af36730571647a5cc729749a722138fdc9bfa81478c709da86c369",
+      "relationshipHash": "1777156ad784a8a668898142ac9a6daa0ff5c5124935aee308dbf4ad889848cc",
+      "presentationHash": "9593bbe4c8454963d4f685c467922ea8e0e3129e0b0c8b8489824169f6a435ba"
+    },
+    "/2026/10/17/space-war.html": {
+      "inputPath": "src/writing/2026/2026-10-17-space-war.md",
+      "title": "The War Above",
+      "kind": "writing",
+      "categories": [
+        "culture"
+      ],
+      "topics": [
+        "politics",
+        "russia",
+        "space",
+        "war"
+      ],
+      "contentDate": "2026-10-17T00:00:00.000Z",
+      "description": "406 words",
+      "previewIconName": "culture",
+      "wordCount": null,
+      "textHash": "0ca8ec29af019f1971e0bf4291d63384dd2b6d3a0fffebe106a5857b82f783e4",
+      "relationshipHash": "c4f9966d8007c94e88278dba35bda73bef72b1b0e5ecc0b1e1ea1e2d6f0769a5",
+      "presentationHash": "90163cd55d0e70f0b15a49114cf529e9e0461e78f9c3fa0bc070925e4018a31a"
+    },
     "/404.html": {
       "inputPath": "src/404.html",
       "title": "404",
@@ -29908,6 +29943,6 @@
       "presentationHash": "6632c6b093f691ae38ab3a5033049e24fe1225191c88fe5fa38609b3d24b47be"
     }
   },
-  "inputHash": "afc309adb673355d26b58d79be7e3b27a64c272409ce296b1b72c7bb76caa801",
+  "inputHash": "d3db63de493b42c92152e5cacfeab68374c0583bd2ee94d9b06a3b69f8fedfe2",
   "embeddingModel": "text-embedding-3-small"
 }
