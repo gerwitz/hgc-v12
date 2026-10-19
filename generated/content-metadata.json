@@ -29942,20 +29942,6 @@
       "relationshipHash": "0b354ff9f164a823c496720da9a7938e28f5de26c52500f3dc3488214d926e34",
       "presentationHash": "6632c6b093f691ae38ab3a5033049e24fe1225191c88fe5fa38609b3d24b47be"
     },
-    "gemini://hans.gerwitz.com/gemlog/2026-10-18-2e218.gmi": {
-      "inputPath": "src/gemposts/2026-10-18-2e218.md",
-      "title": "2026-10-18-2e218",
-      "kind": "gemposts",
-      "categories": [],
-      "topics": [],
-      "contentDate": "2026-10-18T19:31:25.584Z",
-      "description": null,
-      "previewIconName": "other",
-      "wordCount": null,
-      "textHash": "e3be1d1f9f142c983a123ab2f990776e7f6eaa677515396dc8c4e0569cda2eb0",
-      "relationshipHash": "c92b8898bf46223fe6eb373b70698575f46dfc335fb8b028a0c5e1daf93e7e02",
-      "presentationHash": "dae900e4e1292f671c1003110f387f002380353ad03c630d9d35dcf6717d92c5"
-    },
     "gemini://hans.gerwitz.com/gemlog/2026-10-18-smol-servers.gmi": {
       "inputPath": "src/gemposts/2026-10-18-smol-servers.md",
       "title": "Smol Servers",
@@ -29971,6 +29957,6 @@
       "presentationHash": "2cd0fc371562ce99bf5b20a83059f4ddd8a46965b8af46cc81e0e6b20ecfee96"
     }
   },
-  "inputHash": "c1f007f7ab83502f2dde0672a5af443f91b0d0c0b74a3e038ff47ea244ffa492",
+  "inputHash": "cfa158e69c026273ed705857d4c296f9488ec4558aaa7953c488c5f08792b06a",
   "embeddingModel": "text-embedding-3-small"
 }
