@@ -6,6 +6,7 @@ Here are some capsules I find interesting and either subscribe to or visit regul
 
 => gemini://smallword.space/ mrrobinhood5
 => gemini://calcuode.com/ Callum
+=> gemini://zeniths.net/ Jackie
 => gemini://skyjake.fi/ skyjake
 => gemini://midnight.pub/~iazia iazia
 => gemini://www.fosskers.ca/ Colin
