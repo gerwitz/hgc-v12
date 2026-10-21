@@ -91,11 +91,21 @@ export const readImageMetadata = (filePath) =>
   return metadata;
 };
 
-const sourcePathForImage = (image) =>
+const sourcePathForImage = (image, inputPath) =>
 {
   if (typeof image !== "string")
   {
     return null;
+  }
+
+  if (!image.startsWith("/") && !image.match(/^[a-z][a-z0-9+.-]*:/i) && typeof inputPath === "string")
+  {
+    const relativePath = path.resolve(process.cwd(), path.dirname(inputPath), image);
+
+    if (existsSync(relativePath))
+    {
+      return relativePath;
+    }
   }
 
   let url;
@@ -122,9 +132,14 @@ const sourcePathForImage = (image) =>
   return candidates.find((candidate) => existsSync(candidate)) || null;
 };
 
-export const imageMetadata = (image) =>
+export const imageMetadata = (image, inputPath) =>
 {
-  const filePath = sourcePathForImage(image);
+  const filePath = sourcePathForImage(image, inputPath);
 
   return filePath ? readImageMetadata(filePath) : {};
+};
+
+export const socialImageUrl = (image, pageUrl) =>
+{
+  return new URL(image, new URL(pageUrl, SITE_ORIGIN)).href;
 };

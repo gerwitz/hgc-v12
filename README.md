@@ -36,7 +36,7 @@ fail the build with source diagnostics and remove the affected stale PDF.
 
 ### Social preview images
 
-Set `sharing.image` in a page’s front matter to use a custom Open Graph and Twitter preview image. For a local PNG, JPEG, or GIF published from `src/` (including the root files from `src/_meta/`), the build reads its width, height, and MIME type automatically. Externally hosted images and formats not copied by the site need explicit `sharing.width`, `sharing.height`, and `sharing.type` values.
+Set `sharing.image` in a page’s front matter to use a custom Open Graph and Twitter preview image. For a local PNG, JPEG, or GIF published from `src/` (including a file next to its source page or a root file from `src/_meta/`), the build reads its width, height, and MIME type automatically. The rendered image URL is absolute. Externally hosted images and formats not copied by the site need explicit `sharing.width`, `sharing.height`, and `sharing.type` values.
 
 ```yaml
 sharing:

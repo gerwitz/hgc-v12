@@ -1,3 +1,28 @@
+{% set origin = "https://hans.gerwitz.com" -%}
+{% set title = title or "Untitled" -%}
+{% set description = description or ("I " + confession if confession else "Personal website of Hans Gerwitz") -%}
+{% set url = external or origin + page.url -%}
+{% set isArticle = bodyClass == "writing" -%}
+{% set image = sharing.image if sharing and sharing.image else origin + "/opengraph.png" -%}
+{% set imageMetadata = {} -%}
+{% set imageWidth = false -%}
+{% set imageHeight = false -%}
+{% set imageType = false -%}
+{% if sharing and sharing.image -%}
+{% set imageMetadata = sharing.image | imageMetadata(page.inputPath) -%}
+{% set imageWidth = sharing.width or imageMetadata.width -%}
+{% set imageHeight = sharing.height or imageMetadata.height -%}
+{% set imageType = sharing.type or imageMetadata.type -%}
+{% else -%}
+{% set imageWidth = 1200 -%}
+{% set imageHeight = 630 -%}
+{% set imageType = "image/png" -%}
+{% endif -%}
+{% set image = image | socialImageUrl(page.url) -%}
+{% set imageAlt = "Hans Gerwitz’s personal website" -%}
+{% if sharing and sharing.image -%}
+{% set imageAlt = sharing.alt or title -%}
+{% endif -%}
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,23 +30,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% set origin = "https://hans.gerwitz.com" %}
-    {% set title = title or "Untitled" %}
-    {% set description = description or ("I " + confession if confession else "Personal website of Hans Gerwitz") %}
-    {% set url = external or origin + page.url %}
-    {% set isArticle = bodyClass == "writing" %}
-    {% set image = sharing.image if sharing and sharing.image else origin + "/opengraph.png" %}
-    {% set imageMetadata = {} %}
-    {% if sharing and sharing.image %}
-      {% set imageMetadata = sharing.image | imageMetadata %}
-    {% endif %}
-    {% if image[0] == "/" %}
-      {% set image = origin + image %}
-    {% endif %}
-    {% set imageAlt = "Hans Gerwitz’s personal website" -%}
-    {% if sharing and sharing.image -%}
-      {% set imageAlt = sharing.alt or title -%}
-    {% endif %}
     <meta name="author" content="Hans Gerwitz">
     <meta name="description" content="{{ description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
@@ -32,23 +40,17 @@
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:image" content="{{ image }}">
-    {% if sharing and sharing.image %}
-      {% if sharing.width or imageMetadata.width %}<meta property="og:image:width" content="{{ sharing.width or imageMetadata.width }}">{% endif %}
-      {% if sharing.height or imageMetadata.height %}<meta property="og:image:height" content="{{ sharing.height or imageMetadata.height }}">{% endif %}
-      {% if sharing.type or imageMetadata.type %}<meta property="og:image:type" content="{{ sharing.type or imageMetadata.type }}">{% endif %}
-    {% else %}
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
-    {% endif %}
+    {% if imageWidth %}<meta property="og:image:width" content="{{ imageWidth }}">{% endif %}
+    {% if imageHeight %}<meta property="og:image:height" content="{{ imageHeight }}">{% endif %}
+    {% if imageType %}<meta property="og:image:type" content="{{ imageType }}">{% endif %}
     <meta property="og:image:alt" content="{{ imageAlt }}">
-    {% if isArticle %}
+    {% if isArticle -%}
     <meta property="article:published_time" content="{{ page.date | date('iso8601') }}">
     {% if updated %}<meta property="article:modified_time" content="{{ updated | date('iso8601') }}">{% endif %}
     <meta property="article:author" content="{{ origin }}/">
     {% if categories and categories.length %}<meta property="article:section" content="{{ categories[0] }}">{% endif %}
     {% for topic in topics or [] %}<meta property="article:tag" content="{{ topic }}">{% endfor %}
-    {% endif %}
+    {% endif -%}
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@gerwitz">
@@ -74,8 +76,8 @@
     <link rel="alternate" type="application/rss+xml" href="https://hans.gerwitz.com/feeds/notes.rss" title="Hans's Notes">
     {# <link rel="alternate" type="application/rss+xml" href="https://hans.gerwitz.com/feeds/writing.rss" title="Writings of Hans Gerwitz"> #}
 
-  {% set stylesheet = assetPaths.styles['/styles/style.css'] or '/styles/style.css' %}
-  <link rel="stylesheet" href="{{ stylesheet }}">
+    {% set stylesheet = assetPaths.styles['/styles/style.css'] or '/styles/style.css' -%}
+    <link rel="stylesheet" href="{{ stylesheet }}">
 
     {# <link rel="preload" href="/styles/fonts/SourceSans3VF-Roman.otf.woff2" as="font" type="font/woff2" crossorigin> #}
 
