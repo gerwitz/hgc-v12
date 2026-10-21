@@ -31,6 +31,10 @@ article > ul a.sidenote-ref:hover {
 }
 
 @media (min-width: 822px) { /* sidebar fits beside the content column */
+  article > figure.wide {
+    width: calc(var(--content-width) + var(--sidenote-column-width));
+  }
+
   article > p a.sidenote-ref,
   article > ul a.sidenote-ref {
     pointer-events: none;

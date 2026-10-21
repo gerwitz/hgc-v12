@@ -2489,6 +2489,10 @@
       "created": "2019-04-13T22:08:10+02:00",
       "origin": "git"
     },
+    "src/projects/road-cows/index.md": {
+      "created": "2026-10-21T12:43:00.050Z",
+      "origin": "prepared"
+    },
     "src/projects/the-artificial/index.md": {
       "created": "2020-03-15T23:10:25+01:00",
       "origin": "git"
@@ -12879,8 +12883,8 @@
       "description": "189 words",
       "previewIconName": "work",
       "wordCount": null,
-      "textHash": "c6e595d6b3d9c697fd536c07eedd0e170d10f1b3107e3f88f6d65655626c345e",
-      "relationshipHash": "c841666b71c76906893d025a3dfa77a1258881be4ee5fc280c6bdcbd6bcb3df2",
+      "textHash": "294eedb8f6510ac7abc0da02be7edd5b0d24f2ff245c4225947d0035b5722704",
+      "relationshipHash": "23a9eeb49e5ca3ae08440829404e1431a49600b9014015f2a14961a12744048b",
       "presentationHash": "3345459f2122039ca0ce0188be1823edd8249113bef9768d9f3e4e6d2c41ed69"
     },
     "/2009/12/29/tools-in-the-brain-attic.html": {
@@ -22826,8 +22830,8 @@
       "description": null,
       "previewIconName": "project",
       "wordCount": null,
-      "textHash": "08ff23e7139dd1514d8a008014e48423f9e15f39445a59568ad5c87d46dc3d68",
-      "relationshipHash": "1546725aee22998b3e2d9f5b76f31bbed17c0d42be894d6fed16403522ff7b10",
+      "textHash": "cc97339fc350754c423ec9b6fa316a463bbb451ef69b9402af6b682fd22152fa",
+      "relationshipHash": "446103c0d9b5d3bf912934b2e5100441a14da1c40db633719444a64760701b6e",
       "presentationHash": "9fa3424c8e78504e64eed77eccfc14674fcef1e065607a3240f083cfe11a6fd0"
     },
     "/projects/bears/": {
@@ -23344,8 +23348,8 @@
       "description": null,
       "previewIconName": "project",
       "wordCount": null,
-      "textHash": "5b95d4ab0974b2c4c2eb0cf346a0b4d79b189954174db19c33a6306de6282679",
-      "relationshipHash": "e60849740617ea17dc841c67044e77d874ff63f3e1ecfa50b2f8ce062a942213",
+      "textHash": "6459e1b15f5fae9b5724031057465e5392de970f8a45ba2fd2a532e1fd2a4551",
+      "relationshipHash": "77d14426f65f923105b1fc23e372ba77dd406c86c1ac50b2eeb1262e7b39e650",
       "presentationHash": "48d49e4be373a6a2c66b6f465e0dfcc35632f1c691c59c08a3497e820fea8668"
     },
     "/projects/hexmap/devlog/": {
@@ -23987,6 +23991,20 @@
       "textHash": "a25b896a65c33bdf4a3a5a4dba52e3fb059b73bacc95fd4f1a6160ebf21fda3a",
       "relationshipHash": "1d0b99e1e718a4f64aaa527cf92dc322f2d0b5e378c6a12bc8f65e7022309304",
       "presentationHash": "d52d7bee9c9ab1de47dd1805bd4f6ce334703947731447c7ab7701714f3bbbb8"
+    },
+    "/projects/road-cows/": {
+      "inputPath": "src/projects/road-cows/index.md",
+      "title": "Road Cows",
+      "kind": "projects",
+      "categories": [],
+      "topics": [],
+      "contentDate": "2026-10-20T00:00:00.000Z",
+      "description": null,
+      "previewIconName": "project",
+      "wordCount": null,
+      "textHash": "cb25299b0dc2e59c4a0690623ab7debfa153bde55ad04f5b6aae0a2002c48897",
+      "relationshipHash": "216a7b5dadadb4334bc759abe16d579db4c58ddf2d2774f9cd6997f9471e1f92",
+      "presentationHash": "c442bd7a9c90c2cf3e29872590ceb280fff885302c8fb0d4874f6a53b7bf46c1"
     },
     "/projects/the-artificial/": {
       "inputPath": "src/projects/the-artificial/index.md",
@@ -29955,8 +29973,36 @@
       "textHash": "7426fd38ef1da79af132919334f59031318e963e9baef5b1d6f84d682403ee7a",
       "relationshipHash": "f31e7ab2aafb7b12ffdc6b622fe2718c926a34d2902523bf35a4f3f495d21d9b",
       "presentationHash": "2cd0fc371562ce99bf5b20a83059f4ddd8a46965b8af46cc81e0e6b20ecfee96"
+    },
+    "gemini://hans.gerwitz.com/gemlog/2026-10-20-a-walk-through-amsterdam.gmi": {
+      "inputPath": "src/gemposts/2026-10-20-a-walk-through-amsterdam.md",
+      "title": "A walk through Amsterdam",
+      "kind": "gemposts",
+      "categories": [],
+      "topics": [],
+      "contentDate": "2026-10-20T19:18:27.427Z",
+      "description": null,
+      "previewIconName": "other",
+      "wordCount": null,
+      "textHash": "12d4d745a041805dc77b9eacb453904bd973bb010b466e1eaedd444516bf27ad",
+      "relationshipHash": "02172d6078728d4553dee0df6ec6f0ab282e934f9221e235032c24168b616603",
+      "presentationHash": "87cf1807ce5ad13d9dd0ebb432e7642b08b4c654345f2b6b8bb7438e0dd5e094"
+    },
+    "gemini://hans.gerwitz.com/gemlog/2026-10-20-failure-to-influence.gmi": {
+      "inputPath": "src/gemposts/2026-10-20-failure-to-influence.md",
+      "title": "Failure to Influence",
+      "kind": "gemposts",
+      "categories": [],
+      "topics": [],
+      "contentDate": "2026-10-20T09:00:36.488Z",
+      "description": null,
+      "previewIconName": "other",
+      "wordCount": null,
+      "textHash": "2a4ced9aac2a0102b59f196b57659c0de6244d61056702a51e4dd4996d47e294",
+      "relationshipHash": "10ab087991d88346c9942e6ea548adc7fc1e6987de1018c730bca3ce68bf250c",
+      "presentationHash": "0d01f194b4c79589f85b4111b5eebf6363bac571def30fc057a3546812624409"
     }
   },
-  "inputHash": "cfa158e69c026273ed705857d4c296f9488ec4558aaa7953c488c5f08792b06a",
+  "inputHash": "99fc3103fdf3ce11491b8aaadcdbf0d970724f67b5a92a2ee92550cebaf507f7",
   "embeddingModel": "text-embedding-3-small"
 }

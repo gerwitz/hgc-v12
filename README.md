@@ -34,6 +34,17 @@ The native compiler and bundled fonts are installed through npm. No separate
 Typst CLI, Dockerfile changes, or Coolify settings are needed. Compilation errors
 fail the build with source diagnostics and remove the affected stale PDF.
 
+### Wide images
+
+Pages and articles can use the sidenote column for a wide image on desktop screens. Use a semantic figure with the `wide` class; images without that class and images at narrower viewport widths remain in the content column.
+
+```html
+<figure class="wide">
+  <img src="/media/example.jpg" alt="Description of the image">
+  <figcaption>Optional caption.</figcaption>
+</figure>
+```
+
 ### Author-time preparation
 
 Stage your source edits, then run `npm run content:prepare`, or let the pre-commit

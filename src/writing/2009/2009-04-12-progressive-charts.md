@@ -21,5 +21,5 @@ So after letting the code age for 6 years, it's time to put it out there and hop
    [2]: http://www.infimum.dk/HTML/slantinfo.html
    [3]: https://hans.gerwitz.com/2003/05/11/of-standards-assholes-and-evolution.html
    [4]: http://meyerweb.com/eric/thoughts/2009/04/07/findings-of-the-a-list-apart-survey-2008/
-   [5]: http://gerwitz.github.com/progressive-charts/
+   [5]: http://gerwitz.github.io/progressive-charts/
    [6]: http://github.com/gerwitz/progressive-charts/

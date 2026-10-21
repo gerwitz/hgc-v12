@@ -6,10 +6,11 @@ layout: index
 
 Welcome to my laboratory, home to the finest [braincrack](https://www.youtube.com/watch?v=0sHCQWjTrJ8). I publish notes and artifacts here mostly to have URLs to share.
 
-* [Pixel toys](/toys) (2026–)
+* [Pixel toys](/toys/) (2026–)
 * [Bear Den](./bears/) (2025–)
-* [Hexmap](./hexmap/) (2025)
+* [Hexmap](./hexmap/) (2025–)
 * Ceramics (2022–)
+* [Road Cows](/road-cows/) (2026)
 * [Sitewriter](https://github.com/gerwitz/sitewriter/) (2018–2022)
 * [Rails wiki](./the-artificial/wiki/) (2014–2018)
 * [to \[icon\]](./the-artificial/toicon/) (2014–2018)
