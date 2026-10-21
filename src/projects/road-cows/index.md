@@ -1,6 +1,9 @@
 ---
 title: Road Cows
 date: 2026-10-20
+sharing:
+  image: preview.png
+  alt: Warning Cows
 ---
 
 When I moved to the Netherlands and started riding out into the countryside polders, I was amused to see the square-assed cows on warning signs at cattle crossings. This led to me paying more attention, and I then noticed the signs in India had quite different horns. My curiousity led me to find that the editors of Wikipedia had, of course, inventoried these [signs from around the world](https://commons.wikimedia.org/wiki/Category:SVG_warning_road_signs_–_cattle).
