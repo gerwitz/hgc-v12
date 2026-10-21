@@ -34,6 +34,16 @@ The native compiler and bundled fonts are installed through npm. No separate
 Typst CLI, Dockerfile changes, or Coolify settings are needed. Compilation errors
 fail the build with source diagnostics and remove the affected stale PDF.
 
+### Social preview images
+
+Set `sharing.image` in a page’s front matter to use a custom Open Graph and Twitter preview image. For a local PNG, JPEG, or GIF published from `src/` (including the root files from `src/_meta/`), the build reads its width, height, and MIME type automatically. Externally hosted images and formats not copied by the site need explicit `sharing.width`, `sharing.height`, and `sharing.type` values.
+
+```yaml
+sharing:
+  image: /assets/example/social-preview.png
+  alt: Description of the preview image.
+```
+
 ### Wide images
 
 Pages and articles can use the sidenote column for a wide image on desktop screens. Use a semantic figure with the `wide` class; images without that class and images at narrower viewport widths remain in the content column.

@@ -11,6 +11,10 @@
     {% set url = external or origin + page.url %}
     {% set isArticle = bodyClass == "writing" %}
     {% set image = sharing.image if sharing and sharing.image else origin + "/opengraph.png" %}
+    {% set imageMetadata = {} %}
+    {% if sharing and sharing.image %}
+      {% set imageMetadata = sharing.image | imageMetadata %}
+    {% endif %}
     {% if image[0] == "/" %}
       {% set image = origin + image %}
     {% endif %}
@@ -29,9 +33,9 @@
     <meta property="og:description" content="{{ description }}">
     <meta property="og:image" content="{{ image }}">
     {% if sharing and sharing.image %}
-      {% if sharing.width %}<meta property="og:image:width" content="{{ sharing.width }}">{% endif %}
-      {% if sharing.height %}<meta property="og:image:height" content="{{ sharing.height }}">{% endif %}
-      {% if sharing.type %}<meta property="og:image:type" content="{{ sharing.type }}">{% endif %}
+      {% if sharing.width or imageMetadata.width %}<meta property="og:image:width" content="{{ sharing.width or imageMetadata.width }}">{% endif %}
+      {% if sharing.height or imageMetadata.height %}<meta property="og:image:height" content="{{ sharing.height or imageMetadata.height }}">{% endif %}
+      {% if sharing.type or imageMetadata.type %}<meta property="og:image:type" content="{{ sharing.type or imageMetadata.type }}">{% endif %}
     {% else %}
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
