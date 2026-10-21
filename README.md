@@ -173,8 +173,7 @@ build argument when a specific image tag or digest should be used instead of
 
 ### Gemini and HTTP notifications when the container becomes ready
 
-Maintain endpoints in `src/_editions/gemini/pings.json`, beside the redirect
-generator. One JSON array supports `gemini://`, `http://`, and `https://` URLs;
+Maintain endpoints in `pings.json`. One JSON array supports `gemini://`, `http://`, and `https://` URLs;
 strings make GET requests. An empty array disables notifications. The file is
 copied privately to `/etc/calmserve/pings.json`, not into the public site.
 
@@ -199,6 +198,9 @@ header/body placeholders are replaced verbatim, without shell evaluation or
 recursive expansion. Variables are not supported in URL hosts or schemes. A
 missing/empty variable skips only that endpoint. JSON bodies receive
 `application/json` unless a content type is supplied. Never commit actual keys.
+
+The IndieKit notification uses `INDIEKIT_ACCESS_TOKEN`, which must be set as a
+secret Coolify environment variable to IndieKit's server access token.
 
 No Coolify hook or enabling flag is needed. Calmserve's startup script detects
 executable `/usr/local/bin/calmserve-notify`, waits for local HTTP, Gemini, and

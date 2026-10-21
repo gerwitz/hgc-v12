@@ -22,7 +22,7 @@ ENV MEDIA_ORIGIN_HOST=your-bucket.s3.fr-par.scw.cloud
 RUN grep -q '/usr/local/bin/calmserve-notify' /usr/local/bin/start-calmserve || { echo 'Update CALMSERVE_IMAGE: this image requires the notification-hook startup support.' >&2; exit 1; }
 RUN apk add --no-cache nodejs
 COPY --chmod=755 scripts/notify.mjs /usr/local/bin/calmserve-notify
-COPY src/_editions/gemini/pings.json /etc/calmserve/pings.json
+COPY pings.json /etc/calmserve/pings.json
 
 COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
 COPY --from=build /app/_site/nginx/redirects.conf /etc/nginx/redirects.conf

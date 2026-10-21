@@ -17,7 +17,7 @@
     "related:check": "node scripts/related-content.js --dry-run",
     "search:index": "node scripts/search-index.js",
     "typst:compile": "node scripts/compile-typst.mjs",
-    "notify": "node scripts/notify.mjs src/_editions/gemini/pings.json",
+    "notify": "node scripts/notify.mjs pings.json",
     "gemini:ping": "npm run notify --",
     "content:prepare": "node --env-file-if-exists=.env scripts/prepare-content.mjs",
     "content:check": "node --env-file-if-exists=.env scripts/prepare-content.mjs --check",
