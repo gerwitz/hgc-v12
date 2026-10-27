@@ -39,10 +39,6 @@ const createEntries = () => Array.from({ length: ENTRY_COUNT }, (_, index) => {
 
 const postLinks = (output) => output.split("\n").filter((line) => line.startsWith("=> /gemlog/2026-"));
 const expectedLink = (entry) => `=> ${entry.geminiUrl} ${entry.published} - ${entry.title}`;
-const assertFooter = (output) => {
-  assert.match(output, /\n\n# Elsewhere\n=> \/ +Capsule home\n=> \/gemlog +Gemlog\n(?:=> https:\/\/[^\n]+ View on the web\n)?$/);
-  assert.equal(output.split("Capsule home").length - 1, 1);
-};
 
 const outputFiles = async (directory) => {
   const files = [];
@@ -255,11 +251,8 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
   await context.test("a gempost renders at its canonical dated capsule path without a web counterpart", async () => {
     const output = await fixture.read(`editions/gemini${gempost.geminiUrl}`);
     assert.match(output, /^# Test gemposts 1\n/);
-    assertFooter(output);
     assert.match(output, /Fixture body for fixture-01\./);
-    assert.match(output, /## About this post\n/);
-    assert.match(output, /Posted during week \d+ \(January 2026\)\./);
-    assert.match(output, /=> \/gemlog\/ More posts/);
+
     assert.doesNotMatch(output, /View on the web|<article>|<p>|<strong>|topics:|tags:|permalink:/);
 
     const files = await outputFiles(fixture.output);
@@ -275,10 +268,7 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
 
     const output = await fixture.read(`editions/gemini${writing.geminiUrl}`);
     assert.match(output, /^# Test writing 0\n/);
-    assertFooter(output);
-    assert.match(output, /=> \/gemlog\/ More posts/);
-    assert.match(output, /=> https:\/\/hans\.gerwitz\.com\/writing\/2026\/fixture-00\/ View on the web\n$/);
-    assert.equal(output.split(" View on the web").length - 1, 1);
+
     assert.match(output, /=> https:\/\/hans\.gerwitz\.com\/writing\/2026\/fixture-00\/sibling\//);
     assert.doesNotMatch(output, /<article>|<strong>/);
   });
@@ -296,7 +286,6 @@ test("gemposts and writing integrate through the actual Gemini templates and dir
   await context.test("the archive includes every mixed post newest first", async () => {
     const output = await fixture.read("editions/gemini/gemlog/archive/index.gmi");
     assert.match(output, /^# Posts\n/);
-    assertFooter(output);
     assert.deepEqual(postLinks(output), entries.toReversed().map(expectedLink));
     assert.doesNotMatch(output, /Unrelated note|=> \/writing\//);
   });

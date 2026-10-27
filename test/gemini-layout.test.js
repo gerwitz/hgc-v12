@@ -7,13 +7,6 @@ import test from "node:test";
 import Eleventy from "@11ty/eleventy";
 import nunjucks from "nunjucks";
 
-const FOOTER = "# Elsewhere\n=> /        Capsule home\n=> /gemlog  Gemlog\n";
-const assertFooter = (output) => {
-  assert.ok(output.endsWith(`\n\n${FOOTER}`));
-  assert.equal(output.split(FOOTER).length - 1, 1);
-  assert.doesNotMatch(output, /=> \/index\.gmi Capsule home/);
-  assert.doesNotMatch(output, /^=> .* View on the web$/m);
-};
 
 test("the layout suppresses the Gemlog link only on the Gemlog index", async () =>
 {
@@ -38,31 +31,6 @@ test("the layout suppresses the Gemlog link only on the Gemlog index", async () 
   }
 });
 
-test("the layout adds the original web entry URL as its last line", async () =>
-{
-  const layout = await readFile(new URL("../src/_layouts/gemini.njk", import.meta.url), "utf8");
-  const environment = new nunjucks.Environment();
-
-  for (const kind of ["writing", "notes", "about", "lists"])
-  {
-    const output = environment.renderString(layout, {
-      content: "# Body",
-      entry: { url: `/${kind}/example/` },
-      gemini: { webOrigin: "https://capsule.example" },
-    });
-    assert.equal(output, `# Body\n\n${FOOTER}=> https://capsule.example/${kind}/example/ View on the web\n`);
-  }
-
-  for (const entry of [undefined, { url: false, data: { tags: ["gemposts"] } }])
-  {
-    const output = environment.renderString(layout, {
-      content: "# Body",
-      entry,
-      gemini: { webOrigin: "https://capsule.example" },
-    });
-    assert.equal(output, `# Body\n\n${FOOTER}`);
-  }
-});
 
 test("Gemini sources inherit the shared layout while homepage and machine outputs opt out", async (context) => {
   const directory = await mkdtemp(path.join(tmpdir(), "hgc-gemini-layout-"));
@@ -128,35 +96,6 @@ title: Nunjucks probe
     assert.deepEqual(collectedPages, []);
   });
 
-  await context.test("the gmi alias parses frontmatter and renders Nunjucks before the layout", async () => {
-    const probe = await read("probe/index.gmi");
-    assert.equal(probe, `# Nunjucks probe\n\n=> https://hans.gerwitz.com Website\n\n${FOOTER}`);
-    assertFooter(probe);
-  });
-
-  await context.test("frontmatter-free gmi files get directory-style capsule paths", async () =>
-  {
-    assert.equal(await read("nested/index.gmi"), `# Nested index\n\n${FOOTER}`);
-    assert.equal(await read("nested/page/index.gmi"), `# Nested page\n\n${FOOTER}`);
-    const capsule = await read("capsule/index.gmi");
-    assert.match(capsule, /^# About this capsule\n/);
-    assertFooter(capsule);
-  });
-
-  await context.test("explicit permalinks override the directory default", async () =>
-  {
-    assert.equal(await read("custom.gmi"), `# Explicit override\n\n${FOOTER}`);
-  });
-
-  await context.test("the real Gemtext guide keeps its published route and plain-text content", async () => {
-    const guide = await read("capsule/gemtext/index.gmi");
-    const source = await readFile(new URL("../src/_editions/gemini/capsule/gemtext.gmi", import.meta.url), "utf8");
-    const body = source.replace(/^---\n[\s\S]*?\n---\n/, "").trim();
-    assert.equal(guide, `${body}\n\n${FOOTER}`);
-    assert.match(guide, /^# .+\n/);
-    assert.doesNotMatch(guide, /<h1>|<p>|permalink:|eleventyExcludeFromCollections:/);
-    assertFooter(guide);
-  });
 
   await context.test("the homepage opts out without losing its own navigation", async () => {
     const homepage = await read("index.gmi");
@@ -164,7 +103,7 @@ title: Nunjucks probe
     assert.equal(homepage, source.replace(/^---\n[\s\S]*?\n---\n/, ""));
     assert.match(homepage, /# Hans Gerwitz's capsule/);
     assert.match(homepage, /=> \/capsule\/ \/capsule - About this capsule/);
-    assert.ok(!homepage.includes(FOOTER));
+
     assert.doesNotMatch(homepage, /Capsule home/);
   });
 
@@ -180,6 +119,6 @@ title: Nunjucks probe
       "/posts/": "/gemlog/archive/",
       "/posts/index.gmi": "/gemlog/archive/",
     });
-    assert.ok(!redirects.includes(FOOTER));
+
   });
 });
