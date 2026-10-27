@@ -52,7 +52,7 @@ test("tinylog falls back to the collection date at Amsterdam noon", () => {
 });
 
 test("tinylog rejects invalid authored dates with the source path", () => {
-  assert.throws(() => tinylogDate(note("not-a-date")), /Invalid tinylog date.*2026-10-01-example\.md/);
+  assert.throws(() => tinylogDate(note("not-a-date")), /Invalid note date.*2026-10-01-example\.md/);
 });
 
 test("the actual tinylog template preserves source offsets after Eleventy parses note dates", async (context) => {

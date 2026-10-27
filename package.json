@@ -32,6 +32,7 @@
     "@11ty/eleventy": "^4.0.0-alpha.10",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@myriaddreamin/typst-ts-node-compiler": "0.7.0",
+    "blakejs": "^1.2.1",
     "browserslist": "^4.29.3",
     "core-js": "^3.36.0",
     "d3": "^7.9.0",

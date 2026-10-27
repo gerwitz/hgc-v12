@@ -279,6 +279,8 @@ The capsule publishes both writing and gemposts at `/gemlog/YYYY-MM-DD-slug.gmi`
 
 `/notes` contains short **notes** that are identified primarily by publication time. They are published to dated URLs. They are generally tweet-length, but there is no formal limits on their content. They are usually posted via [IndieKit](https://getindiekit.com). They are POSSE to Micro.blog and Twitter (via an RSS feed).
 
+Notes are also exported as [twtxt](https://twtxt.dev/): `/twtxt.txt` contains the current calendar year's notes, and `/twtxt-YYYY.txt` contains each previous year with notes. Entries are oldest first, render inline Markdown links as `label <url>`, retain other Markdown, and encode internal line breaks as U+2028. The feeds form an archive-extension `prev` chain, using the main feed URL for hashes. Dates preserve authored timezone offsets; otherwise they use Amsterdam time, with noon assumed when no time is known. The current year follows Amsterdam time. Drafts and notes with `excludeFromFeed` are omitted.
+
 `/media` contains attachments to dated content (posts and notes), often uploaded via IndieKit.
 
 Almost everything else is a **page** meant to be permanent and fit within some sort of topic hierarchy.
