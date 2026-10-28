@@ -48,6 +48,34 @@ body {
   max-width: 100%;
 }
 
+/* Only the homepage reverses the columns; source order keeps the tree first on mobile. */
+@media (min-width: 822px) {
+  body.root .main {
+    grid-template-columns: var(--sidenote-column-width) var(--content-width);
+  }
+
+  body.root .main > header {
+    display: flex;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  body.root .main > header > p {
+    margin-block: 0;
+  }
+
+  body.root .main > header svg {
+    width: auto;
+    height: 128px;
+  }
+
+  body.root .main > .content {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
 .main-footer {
   grid-column: 1 / -1;
 }
@@ -214,10 +242,11 @@ body {
 }
 
 body.root {
-  header {
-    margin-top: 96px;
-    margin-bottom: 32px;
+  .main {
+    padding-top: 32px;
   }
+
+
 
   img {
     border: var(--outline-width) solid var(--text-color);
