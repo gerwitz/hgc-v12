@@ -46,6 +46,9 @@ export const createTwtxtFeeds = (notes, now = new Date()) =>
       "# nick = gerwitz",
       `# url = ${FEED_URL}`,
       "# description = Notes from Hans Gerwitz",
+      "# avatar = /favicon/tree.png",
+      "# link = Website https://hans.gerwitz.com/",
+      "# link = Gemini capsule gemini://hans.gerwitz.com/",
     ];
 
     if (lastEntry)
