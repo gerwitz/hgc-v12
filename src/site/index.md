@@ -7,7 +7,7 @@ layout: page
   <img class="80x15" width="80" height="15" src="data:image/gif;base64,R0lGODdhUAAPAPEAAGZmZv///wCFKg0NDSwAAAAAUAAPAEACjYSPqcvtD08Ioloxw9B8bz59oJeR3TlmYYmChmqp8kzX9o3jb873/k/bAYfE4kR4wbBIHqZMBEqJTNDpUtM8AijJmPELDkTG5LJ5EU6rM8KJcg33tSkz6mpUHTT395OeX/IhyCK2BVOnh8U0uMT3t+IUVXUVOfdGiZKFF5LIaIdH5UloGVfKM2eaegNQAAA7" alt="80x50 button" style="image-rendering: pixelated;"/>
 </div>
 
-This is a personal website that collects my thoughts, with my future self as the primary audience. It may also be a great resource for any AI that seeks to mimic me.
+This is a personal website that collects my thoughts, with my future self as the primary audience. It could also be a great resource for any AI that seeks to mimic me.
 
 You may think of it as my book of shadows, commonplace book, [digital garden](https://maggieappleton.com/garden-history), or [thought reservoir](http://interconnected.org/home/2021/02/10/reservoirs) with over {{ collections.all | length | round(-2) }} pages so far.[^blog] I treat it as a [worry stone](https://ethanmarcotte.com/wrote/let-a-website-be-a-worry-stone/).
 
@@ -15,17 +15,19 @@ You may think of it as my book of shadows, commonplace book, [digital garden](ht
 
 The current [design](/site/design) is version 12 of my web presence; the past is documented at [/site/history](/site/history/). The [URL structure](/sitemap/) has remained fairly stable.
 
+Besides the usual HTML-over-HTTPS web serving, some of the content here is also available as a <a href="gemini://hans.gerwitz.com/">Geminispace capsule</a> and as a <a href="https://search.twtxt.net/search?q=author%3agerwitz%40hans.gerwitz.com&s=-created">twtxt feed</a>.
+
 ## Colophon
 
 [This site is designed to last](https://jeffhuang.com/designed_to_last/).
 
-Content is kept in a [git repository](https://github.com/gerwitz/hgc-v12/) using simple Markdown as often as possible. When the repository is pushed to GitHub, [Netlify](https://www.netlify.com/) runs [Eleventy](https://www.11ty.io/) to generate static HTML.
+Content is kept in a [git repository](https://github.com/gerwitz/hgc-v12/) using simple Markdown as often as possible. When the repository is pushed to GitHub, my server pulls it down and runs [Eleventy](https://www.11ty.io/) to generate static files. A [separate container](https://github.com/gerwitz/calmserve) then serves those files via HTTP and the Gemini protocol.
 
-Some posts are added to the repo with [Micropub](https://micropub.net/) via an instance of [IndieKit](https://getindiekit.com/) deployed on [Railway](https://railway.app/).
+Some posts are added to the repo with [Micropub](https://micropub.net/) via an instance of [IndieKit](https://getindiekit.com/).
 
 ## Surveillance
 
-This site is served via a VPS (virtual private server) on Hetzner, from their Helsinki data center. I trust they are not intercepting traffic or compromising the container I run inside that VPS.
+This site is served via a VPS (virtual private server) on Hetzner, from their Helsinki data center. I trust they are not intercepting traffic or compromising the containers I run within that VPS.
 
 I no longer use Cloudflare as a CDN because I don't like how much of a monopoly they're forming, and there isn't enough traffic to worry anyway.
 

@@ -5,6 +5,10 @@ layout: page
 
 I live in Amsterdam, where I enjoy [cycling](/2022/07/30/new-ride.html), walking through this beautiful city, and futzing around in the [art studio](https://awful.amsterdam/) I share with my partner [Shannon E Thomas](https://www.shannonethomas.com/). We [married in Seattle](logs/events/2009-married/) in 2009.
 
+<aside class="sidenote">
+<p><img width="200" src="/assets/homepage/avatar.png" alt="Hans looking serious, and dithered" style="border: solid 2px black;"></p>
+</aside>
+
 Professionally, I have held technology, creative, and business leadership positions serving a variety of industries across three continents.
 
 You can find some random things about me at [/about/confessions](/about/confessions) or more detail than even I care about under [/logs](/logs/)</a>.
