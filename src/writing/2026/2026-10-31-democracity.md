@@ -1,0 +1,18 @@
+---
+date: 2026-10-31T21:13:02.957+01:00
+title: Democracity
+updated: 2026-10-31T21:21:31.952+01:00
+draft: true
+---
+
+I just rewatched Adam Curtis's _The Century of Self_ (having last seen it circa 10 years ago, when it was already a bit old) and still enjoy it. The narrative construction is excellent and the points that Curtis is making about changes in society, business, politics, and the social sciences are sound and might have been surprisingly insightful in 2002.
+
+But, especially at the start, the oversimplifying and attribution of intention to historic figures feels a bit overblown, if not hyperbolic. Like a Wikipedia page, the series is best treated as a jumping off point for further research.
+
+This time, I was intrigued by the loop-closing with a description of the Democracity diorama at the 1939 World's Fair. I associate that event with the Futurama exhibit that urbanists like myself love to hate, and the [beginning of the clip](https://www.youtube.com/watch?v=VouaAz5mQAs&t=3046s) even starts with a Futurama film title. So I thought perhaps this was a subset of that, or another name.
+
+But Democracity was, in fact, a separate installation. It may have even been higher profile, being hosted within the iconic Perisphere. The [Democracity booklet](http://www.1939nyworldsfair.com/ftp/democracity_booklet/1_democracity_booklet-singles.pdf) is an incredible read. It seems every bit as car-brained as Futurama, and sounds like a fever dream of naive techno-optimism.
+
+I've long been annoyed at the cross-discipline hubris of architects who think they are qualified to structure society, but now am saddened to add Henry Dreyfuss to their ranks. I consider him under-rated as one of the founders of design as a practice, but here he is overstepping and mistaking the complexity of social issues as mere complications that will be readily engineered away if we try hard enough.
+
+As my perspective on history has matured, I've learned to think of media events like the 1939 World's Fair in New York as representative rather than causal of their contemporary culture. But I still believe they had influence and their creators were not foolish to invest in them. It is fascinating to consider these deliberate efforts by corporate power to counter the rise of collective politics by shifting public opinion directly.
