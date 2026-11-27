@@ -2,7 +2,13 @@
 date: 2026-10-31T21:13:02.957+01:00
 title: Democracity
 updated: 2026-10-31T21:21:31.952+01:00
-draft: true
+categories:
+- culture
+topics:
+- usa
+- automotive
+- urban
+- history
 ---
 
 I just rewatched Adam Curtis's _The Century of Self_ (having last seen it circa 10 years ago, when it was already a bit old) and still enjoy it. The narrative construction is excellent and the points that Curtis is making about changes in society, business, politics, and the social sciences are sound and might have been surprisingly insightful in 2002.
